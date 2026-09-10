@@ -28,11 +28,12 @@ def design_system_directory(user_query: str) -> str:
     design systems, or finding prior art before designing something new."""
     query_vector = embed_query(user_query)
 
-    search_results = qdrant_client.search(
+    response = qdrant_client.query_points(
         collection_name=QDRANT_COLLECTION,
-        query_vector=query_vector,
+        query=query_vector,
         limit=3,
     )
+    search_results = response.points
 
     if not search_results:
         return "No matching design system documentation found."
