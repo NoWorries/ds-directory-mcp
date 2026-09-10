@@ -6,6 +6,9 @@ on:
     - cron: "0 3 * * 1"
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   reindex:
     runs-on: ubuntu-latest
@@ -24,3 +27,15 @@ jobs:
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
         run: python ingest.py --all
+
+      - name: Commit discovered resources back to systems.yaml
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet systems.yaml; then
+            git add systems.yaml
+            git commit -m "Auto-update discovered resources in systems.yaml [skip ci]"
+            git push
+          else
+            echo "No changes to systems.yaml"
+          fi
