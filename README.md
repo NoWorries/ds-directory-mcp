@@ -3,7 +3,7 @@
 Self-hosted, free-tier semantic search (RAG) + MCP server for **external** design system
 documentation. Replaces keyword-based search (e.g. Google Programmable Search) with
 intent-based vector search over design tokens, component architectures, and code
-patterns — exposed to any MCP-compatible AI assistant via one tool: `semantic_design_search`.
+patterns — exposed to any MCP-compatible AI assistant via one tool: `design_system_directory`.
 
 ## Scope: this is not the XUI MCP
 
@@ -57,7 +57,7 @@ chunks text (800 chars, 100 overlap), embeds each chunk, and upserts into the
 python server.py
 ```
 
-Serves `semantic_design_search(user_query: str)` over Streamable HTTP.
+Serves `design_system_directory(user_query: str)` over Streamable HTTP.
 
 ## Adding design systems
 

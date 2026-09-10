@@ -9,7 +9,7 @@ Semantic search (RAG) + MCP server over external design system documentation
 [Ingestion]              [Storage & Search]        [MCP Gateway]           [Consumption]
 ingest.py            ──> Qdrant Cloud          ──> server.py           ──> Claude / any MCP client
 (crawl, chunk,            (vector DB)               (FastMCP tool:          (interpreted answers)
- embed via Jina)                                     semantic_design_search)
+ embed via Jina)                                     design_system_directory)
      ▲
      │ scheduled by
 GitHub Actions
@@ -25,7 +25,7 @@ same Render host, for viewing raw matched chunks without going through an LLM.
 |---|---|
 | Ingestion script (crawl/chunk/embed/upsert) | ✅ built — [ingest.py](ingest.py) |
 | Systems registry | ✅ built — [systems.yaml](systems.yaml), 2 entries (Atlassian, Shopify Polaris) |
-| MCP server (`semantic_design_search`) | ✅ built — [server.py](server.py) |
+| MCP server (`design_system_directory`) | ✅ built — [server.py](server.py) |
 | Scheduled re-indexing | ✅ built — [.github/workflows/reindex.yml](.github/workflows/reindex.yml) |
 | Render deploy config | ✅ built — [render.yaml](render.yaml) |
 | Accounts/services provisioned | ⬜ **not started — this is the next step** |

@@ -1,7 +1,7 @@
 """
 Phase 3: MCP Gateway.
 
-Exposes semantic_design_search over Streamable HTTP so a conversational
+Exposes design_system_directory over Streamable HTTP so a conversational
 frontend or embedded agent can query the indexed design systems.
 """
 import os
@@ -20,7 +20,7 @@ qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
 
 @mcp.tool()
-def semantic_design_search(user_query: str) -> str:
+def design_system_directory(user_query: str) -> str:
     """Search the indexed design systems for component structures, patterns, tokens, or styles matching the query."""
     query_vector = embed_query(user_query)
 
