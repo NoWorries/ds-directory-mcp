@@ -21,7 +21,11 @@ qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
 @mcp.tool()
 def design_system_directory(user_query: str) -> str:
-    """Search the indexed design systems for component structures, patterns, tokens, or styles matching the query."""
+    """Semantic search over design systems' public docs (e.g. Atlassian, Shopify
+    Polaris, Material, Carbon) for component structures, patterns, tokens, or styles.
+
+    Use for cross-system research: "how does X handle Y", comparing patterns across
+    design systems, or finding prior art before designing something new."""
     query_vector = embed_query(user_query)
 
     search_results = qdrant_client.search(
