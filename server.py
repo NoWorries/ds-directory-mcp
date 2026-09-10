@@ -4,14 +4,18 @@ Phase 3: MCP Gateway.
 Exposes semantic_design_search over Streamable HTTP so a conversational
 frontend or embedded agent can query the indexed design systems.
 """
-
+import os
 from mcp.server.fastmcp import FastMCP
 from qdrant_client import QdrantClient
 
 from config import QDRANT_API_KEY, QDRANT_COLLECTION, QDRANT_URL
 from embeddings import embed_query
 
-mcp = FastMCP("DesignSystemKnowledgeBase")
+mcp = FastMCP(
+    "DesignSystemKnowledgeBase",
+    host="0.0.0.0",
+    port=int(os.environ.get("PORT", 8000)),
+)
 qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
 
