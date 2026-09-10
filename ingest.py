@@ -49,11 +49,15 @@ STRIP_TAGS = ["script", "style", "nav", "footer", "header", "noscript"]
 
 
 def ensure_collection(client: QdrantClient) -> None:
-    if client.collection_exists(QDRANT_COLLECTION):
-        return
-    client.create_collection(
+    if not client.collection_exists(QDRANT_COLLECTION):
+        client.create_collection(
+            collection_name=QDRANT_COLLECTION,
+            vectors_config=VectorParams(size=EMBEDDING_DIM, distance=Distance.COSINE),
+        )
+    client.create_payload_index(
         collection_name=QDRANT_COLLECTION,
-        vectors_config=VectorParams(size=EMBEDDING_DIM, distance=Distance.COSINE),
+        field_name="design_system_name",
+        field_schema=PayloadSchemaType.KEYWORD,
     )
 
 
