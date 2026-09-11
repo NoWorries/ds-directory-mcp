@@ -1,0 +1,92 @@
+name: Approve design system submission
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  approve:
+    if: github.event.label.name == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Add approved system to systems.yaml
+        id: approve
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: echo "$ISSUE_BODY" | python approve_submission.py
+
+      - name: Commit new registry entry
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add systems.yaml
+          git diff --quiet --cached || git commit -m "Add ${{ steps.approve.outputs.full_name }} to systems.yaml (approved via #${{ github.event.issue.number }})"
+          git push
+
+      - name: Ingest the newly approved system now
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+        run: python ingest.py --system "${{ steps.approve.outputs.full_name }}"
+
+      - name: Generate directory page
+        run: |
+          python generate_directory.py
+          python generate_components.py
+          python generate_systems.py
+
+      - name: Commit updated registry stats + directory page
+        run: |
+          git add systems.yaml directory.html pages_index.json components systems
+          git diff --quiet --cached || git commit -m "Update directory page after approving ${{ steps.approve.outputs.full_name }} [skip ci]"
+          git push
+
+      - name: Deploy directory page to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          mkdir -p site
+          cp directory.html site/index.html
+          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
+          if [ -d components ]; then cp -r components site/components; fi
+          if [ -d systems ]; then cp -r systems site/systems; fi
+          npx --yes netlify-cli deploy --dir=site --prod
+
+      - name: Comment and close the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "${{ github.event.issue.number }}" --body "✅ Approved and indexed — now live in \`systems.yaml\` and the directory page. Thanks for the contribution!"
+          gh issue close "${{ github.event.issue.number }}"
+
+      - name: Email the submitter, if they asked for one
+        if: steps.approve.outputs.notify_email != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "${{ steps.approve.outputs.full_name }} is now live in the Design System Directory"
+          to: ${{ steps.approve.outputs.notify_email }}
+          from: Design System Directory
+          body: |
+            Your submission, ${{ steps.approve.outputs.full_name }}, has been approved and indexed.
+
+            It's now searchable and listed in the directory page.
+
+            (This is a one-time notification — no mailing list, nothing stored beyond this issue.)

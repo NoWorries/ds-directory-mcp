@@ -1,0 +1,80 @@
+name: Reindex new design systems
+
+on:
+  schedule:
+    # Daily at 03:00 UTC — picks up any systems added to systems.yaml since the
+    # last run (never indexed before). reindex-full.yml (monthly) re-crawls everything.
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  reindex-new:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Ingest any never-before-indexed systems
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+        run: python ingest.py --new
+
+      - name: Generate static directory page
+        run: |
+          python generate_directory.py
+          python generate_components.py
+          python generate_systems.py
+
+      - name: Check crawl health (maintainer-facing only — not shown on the public page)
+        run: python check_crawl_health.py
+
+      - name: Open/update/close maintainer issue for low-coverage systems
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list --search "Crawl health: low-coverage systems in:title" --state open --json number --jq '.[0].number')
+          if [ -f health_report.md ]; then
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file health_report.md
+            else
+              gh issue create --title "Crawl health: low-coverage systems" --body-file health_report.md --label "crawl-health" || \
+              gh issue create --title "Crawl health: low-coverage systems" --body-file health_report.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All systems now have healthy crawl coverage — closing."
+          fi
+
+      - name: Commit discovered resources + directory page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add systems.yaml directory.html pages_index.json components systems
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-index new design systems + update directory page [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Deploy directory page to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          mkdir -p site
+          cp directory.html site/index.html
+          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
+          if [ -d components ]; then cp -r components site/components; fi
+          if [ -d systems ]; then cp -r systems site/systems; fi
+          npx --yes netlify-cli deploy --dir=site --prod

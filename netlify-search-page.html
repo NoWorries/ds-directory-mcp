@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System Search</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; color: #111; }
+  h1 { font-size: 1.4rem; }
+  #q { width: 100%; padding: 10px 12px; font-size: 1rem; box-sizing: border-box; border: 1px solid #ccc; border-radius: 6px; }
+  #results { margin-top: 24px; }
+  .result { padding: 16px 0; border-bottom: 1px solid #eee; }
+  .result .meta { font-size: 0.85rem; color: #666; margin-bottom: 6px; }
+  .result .meta a { color: #666; }
+  .result pre { white-space: pre-wrap; font-family: inherit; font-size: 0.95rem; background: #fafafa; padding: 10px; border-radius: 6px; }
+  .status { color: #666; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <h1>Design System Search</h1>
+  <p class="status">Semantic search across indexed external design systems' documentation.</p>
+  <input id="q" type="text" placeholder="e.g. table column resizing, disabled button states...">
+  <div id="results"></div>
+
+<script>
+  // Update this if the Render service URL changes.
+  const API_URL = "https://designsystems.onrender.com/search";
+
+  const input = document.getElementById("q");
+  const resultsEl = document.getElementById("results");
+  let debounceTimer;
+
+  input.addEventListener("input", () => {
+    clearTimeout(debounceTimer);
+    const query = input.value.trim();
+    if (!query) {
+      resultsEl.innerHTML = "";
+      return;
+    }
+    debounceTimer = setTimeout(() => runSearch(query), 400);
+  });
+
+  async function runSearch(query) {
+    resultsEl.innerHTML = '<p class="status">Searching… (first request may take up to a minute if the server was idle)</p>';
+    try {
+      const res = await fetch(`${API_URL}?q=${encodeURIComponent(query)}`);
+      const data = await res.json();
+      renderResults(data.results || []);
+    } catch (err) {
+      waitAndRetry(query, 10);
+    }
+  }
+
+  function waitAndRetry(query, seconds) {
+    if (seconds <= 0) {
+      resultsEl.innerHTML = '<p class="status">Retrying now…</p>';
+      runSearch(query);
+      return;
+    }
+    resultsEl.innerHTML = `<p class="status">Just warming up the search server — retrying in ${seconds}…</p>`;
+    setTimeout(() => waitAndRetry(query, seconds - 1), 1000);
+  }
+
+  function renderResults(results) {
+    if (!results.length) {
+      resultsEl.innerHTML = '<p class="status">No matches found.</p>';
+      return;
+    }
+    resultsEl.innerHTML = results.map(r => `
+      <div class="result">
+        <div class="meta">
+          <strong>${escapeHtml(r.design_system_name || "Unknown system")}</strong>
+          &middot; score ${r.score.toFixed(3)}
+          &middot; <a href="${escapeHtml(r.url || "#")}" target="_blank" rel="noopener">${escapeHtml(r.url || "")}</a>
+        </div>
+        <pre>${escapeHtml(r.text || "")}</pre>
+      </div>
+    `).join("");
+  }
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, c => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[c]));
+  }
+</script>
+</body>
+</html>

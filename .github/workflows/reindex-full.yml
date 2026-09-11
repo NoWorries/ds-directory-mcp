@@ -1,0 +1,86 @@
+name: Full reindex (all design systems)
+
+on:
+  schedule:
+    # 03:00 UTC on the 1st of each month — full re-crawl of every registered system,
+    # regardless of whether anything looks changed. reindex-new.yml (daily) covers
+    # newly added registry entries in between.
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force full re-crawl of every system, ignoring change detection"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  reindex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Re-ingest all registered design systems
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+        run: python ingest.py --all ${{ inputs.force && '--force' || '' }}
+
+      - name: Generate static directory page
+        run: |
+          python generate_directory.py
+          python generate_components.py
+          python generate_systems.py
+
+      - name: Check crawl health (maintainer-facing only — not shown on the public page)
+        run: python check_crawl_health.py
+
+      - name: Open/update/close maintainer issue for low-coverage systems
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list --search "Crawl health: low-coverage systems in:title" --state open --json number --jq '.[0].number')
+          if [ -f health_report.md ]; then
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file health_report.md
+            else
+              gh issue create --title "Crawl health: low-coverage systems" --body-file health_report.md --label "crawl-health" || \
+              gh issue create --title "Crawl health: low-coverage systems" --body-file health_report.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All systems now have healthy crawl coverage — closing."
+          fi
+
+      - name: Commit discovered resources + directory page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add systems.yaml directory.html pages_index.json components systems
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update discovered resources and directory page [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Deploy directory page to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          mkdir -p site
+          cp directory.html site/index.html
+          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
+          if [ -d components ]; then cp -r components site/components; fi
+          if [ -d systems ]; then cp -r systems site/systems; fi
+          npx --yes netlify-cli deploy --dir=site --prod

@@ -1,0 +1,39 @@
+name: Check new design system submission
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-submission:
+    if: contains(github.event.issue.labels.*.name, 'design-system-submission')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      # No Qdrant/Jina secrets passed to this job — the dry run never writes
+      # to the live index, so a bad or malicious submission can't touch it.
+      - name: Run dry-run crawl check
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: echo "$ISSUE_BODY" | python run_submission_check.py
+
+      - name: Post dry-run report as a comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue comment "${{ github.event.issue.number }}" --body-file dry_run_report.md
+
+      - name: Label as needs-review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue edit "${{ github.event.issue.number }}" --add-label "needs-review" || true

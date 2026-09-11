@@ -3,8 +3,9 @@ Phase 1: Scrape a design system's docs, chunk the text, embed it, and load it in
 
 Usage:
     python ingest.py <design_system_name> <start_url> [start_url2 ...]
-    python ingest.py --all                 # re-ingest every system in systems.yaml
-    python ingest.py --system "Shopify Polaris"   # re-ingest one entry from systems.yaml
+    python ingest.py --all [--force]              # re-ingest every system in systems.yaml
+    python ingest.py --new                        # only systems never indexed before
+    python ingest.py --system "Shopify Polaris" [--force]   # re-ingest one entry
 
 Example:
     python ingest.py "Atlassian Design System" https://atlassian.design/components
@@ -12,12 +13,24 @@ Example:
 Re-running for a design_system_name that's already indexed replaces its old chunks
 (deletes by that payload filter first), so scheduled re-ingestion doesn't accumulate
 stale duplicates as source docs change.
+
+Change detection (--all / --system, not --new): before crawling, does a cheap HEAD
+request on the first start_url and compares its ETag/Last-Modified header against
+what was stored last run. If unchanged, the whole crawl+embed is skipped. Many doc
+sites (especially SPAs) don't send either header — in that case there's no signal to
+compare, so it always re-crawls. This only checks the start_url, not every page, so
+it's a coarse "did the site's front door change" heuristic, not a guarantee nothing
+changed deeper in the site. Pass --force to bypass the check and always re-crawl.
 """
 
+from __future__ import annotations
+
+import json
 import re
 import sys
 import time
 import uuid
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -44,9 +57,10 @@ from config import (
     QDRANT_URL,
 )
 from embeddings import embed_texts
-from resources import classify_links, merge_resources, probe_well_known
+from resources import classify_links, enrich_resources, merge_resources, probe_well_known
 
 SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
+PAGES_INDEX_FILE = Path(__file__).parent / "pages_index.json"
 
 STRIP_TAGS = ["script", "style", "nav", "footer", "header", "noscript"]
 
@@ -135,17 +149,25 @@ def matches_include(url: str, include_patterns: list[str]) -> bool:
     return any(pattern in url for pattern in include_patterns)
 
 
+def extract_title(soup: BeautifulSoup, url: str) -> str:
+    if soup.title and soup.title.string and soup.title.string.strip():
+        return soup.title.string.strip()
+    return url
+
+
 def crawl(
     start_urls: list[str],
     max_pages: int = 30,
     include_patterns: list[str] | None = None,
     exclude_patterns: list[str] | None = None,
-) -> tuple[dict[str, str], set[str]]:
+) -> tuple[dict[str, str], set[str], dict[str, str]]:
     """Breadth-first crawl restricted to the start URLs' domain(s).
 
-    Returns ({url: text}, all_links_seen) — all_links_seen includes off-domain
-    links (GitHub, Storybook, Figma, etc.) for resource discovery, even though
-    only same-domain pages are actually crawled and embedded.
+    Returns ({url: text}, all_links_seen, {url: page_title}) — all_links_seen
+    includes off-domain links (GitHub, Storybook, Figma, etc.) for resource
+    discovery, even though only same-domain pages are actually crawled and
+    embedded. page_title lets a browsable "jump straight to this page" index
+    show something more useful than a bare URL.
 
     include_patterns: if given, only crawl URLs containing one of these substrings
     (start_urls themselves are always crawled regardless).
@@ -158,6 +180,7 @@ def crawl(
     to_visit = list(start_urls)
     visited: set[str] = set()
     pages: dict[str, str] = {}
+    page_titles: dict[str, str] = {}
     all_links_seen: set[str] = set()
 
     while to_visit and len(visited) < max_pages:
@@ -175,6 +198,7 @@ def crawl(
         text = extract_text(soup)
         if len(text) >= MIN_CONTENT_LENGTH:
             pages[url] = text
+            page_titles[url] = extract_title(soup, url)
         else:
             print(f"  skip (too little content): {url}")
 
@@ -190,7 +214,7 @@ def crawl(
                     continue
                 to_visit.append(link)
 
-    return pages, all_links_seen
+    return pages, all_links_seen, page_titles
 
 
 def load_registry() -> list[dict]:
@@ -201,10 +225,11 @@ def load_registry() -> list[dict]:
 REGISTRY_HEADER = (
     "# Registry of external design systems to crawl and index.\n"
     "# Add an entry per system: a name and one or more start URLs to crawl from.\n"
-    "# XUI is intentionally excluded — it has its own MCP server (xui-components-mcp).\n"
     "#\n"
-    "# 'resources' is auto-populated by ingest.py from links found while crawling —\n"
-    "# don't hand-edit it, your changes will be overwritten on the next run.\n"
+    "# 'resources', 'pages_indexed', 'etag', 'last_modified', 'last_checked', and any\n"
+    "# '*_meta' fields are auto-populated by ingest.py — don't hand-edit them, your\n"
+    "# changes will be overwritten on the next run. A missing 'pages_indexed' means\n"
+    "# the entry has never been indexed (picked up by `ingest.py --new`).\n"
 )
 
 
@@ -214,15 +239,68 @@ def save_registry(entries: list[dict]) -> None:
         yaml.dump(entries, f, sort_keys=False, allow_unicode=True, default_flow_style=False)
 
 
-def update_registry_resources(design_system_name: str, resources: dict[str, list[str]]) -> None:
-    if not resources:
-        return
+def update_pages_index(design_system_name: str, page_entries: list[dict]) -> None:
+    """Stores {url, title} for every page actually indexed, so the directory
+    page can offer a browsable list per system as an alternative to search."""
+    index = {}
+    if PAGES_INDEX_FILE.exists():
+        index = json.loads(PAGES_INDEX_FILE.read_text())
+    index[design_system_name] = sorted(page_entries, key=lambda p: p["title"].lower())
+    PAGES_INDEX_FILE.write_text(json.dumps(index, indent=2, ensure_ascii=False))
+
+
+def update_registry_fields(design_system_name: str, fields: dict) -> None:
     entries = load_registry()
     for entry in entries:
         if entry["name"] == design_system_name:
-            entry["resources"] = resources
+            entry.update({k: v for k, v in fields.items() if v is not None})
             break
     save_registry(entries)
+
+
+def update_registry_stats(
+    design_system_name: str,
+    pages_indexed: int,
+    resources: dict[str, list[str]],
+    enrichment: dict,
+) -> None:
+    fields = {"pages_indexed": pages_indexed}
+    if resources:
+        fields["resources"] = resources
+    if enrichment:
+        fields.update(enrichment)
+    update_registry_fields(design_system_name, fields)
+
+
+def fetch_change_signal(url: str) -> dict:
+    """ETag/Last-Modified for a URL, if the server sends them. Empty dict if neither
+    is available (common for SPA-rendered doc sites) or the request fails."""
+    headers = {"User-Agent": "ds-directory-mcp/1.0"}
+    try:
+        response = requests.head(url, timeout=10, allow_redirects=True, headers=headers)
+        if response.status_code >= 400:
+            response = requests.get(url, timeout=10, headers=headers)
+    except requests.RequestException:
+        return {}
+
+    signal = {}
+    if response.headers.get("ETag"):
+        signal["etag"] = response.headers["ETag"]
+    if response.headers.get("Last-Modified"):
+        signal["last_modified"] = response.headers["Last-Modified"]
+    return signal
+
+
+def content_unchanged(entry: dict, new_signal: dict) -> bool:
+    """True only if the server gave us a signal AND it matches what we stored last
+    time. No signal at all means we can't tell, so we always re-crawl in that case."""
+    if not new_signal:
+        return False
+    if entry.get("etag") and entry["etag"] == new_signal.get("etag"):
+        return True
+    if entry.get("last_modified") and entry["last_modified"] == new_signal.get("last_modified"):
+        return True
+    return False
 
 
 def delete_existing(client: QdrantClient, design_system_name: str) -> None:
@@ -245,7 +323,7 @@ def ingest(
     ensure_collection(client)
     delete_existing(client, design_system_name)
 
-    pages, all_links_seen = crawl(
+    pages, all_links_seen, page_titles = crawl(
         start_urls,
         max_pages=max_pages,
         include_patterns=include_patterns,
@@ -254,9 +332,13 @@ def ingest(
     print(f"\nFetched {len(pages)} pages. Chunking + embedding...")
 
     resources = merge_resources(classify_links(all_links_seen), probe_well_known(start_urls[0]))
+    enrichment = enrich_resources(resources)
     if resources:
         print(f"  discovered resources: {resources}")
-        update_registry_resources(design_system_name, resources)
+    if enrichment:
+        print(f"  enrichment: {enrichment}")
+    update_registry_stats(design_system_name, pages_indexed=len(pages), resources=resources, enrichment=enrichment)
+    update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in pages])
 
     for url, text in pages.items():
         chunks = chunk_text(text)
@@ -282,37 +364,63 @@ def ingest(
     print("\nDone.")
 
 
+def ingest_entry(entry: dict, force: bool = False) -> None:
+    start_urls = entry["start_urls"]
+    never_indexed = "pages_indexed" not in entry
+
+    if not force and not never_indexed:
+        new_signal = fetch_change_signal(start_urls[0])
+        if content_unchanged(entry, new_signal):
+            print(f"\n=== {entry['name']} === (no changes detected at {start_urls[0]}, skipping)")
+            update_registry_fields(entry["name"], {**new_signal, "last_checked": now_iso()})
+            return
+
+    print(f"\n=== {entry['name']} ===")
+    ingest(
+        design_system_name=entry["name"],
+        start_urls=start_urls,
+        max_pages=entry.get("max_pages", 30),
+        include_patterns=entry.get("include_patterns"),
+        exclude_patterns=entry.get("exclude_patterns"),
+    )
+    new_signal = fetch_change_signal(start_urls[0])
+    update_registry_fields(entry["name"], {**new_signal, "last_checked": now_iso()})
+
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
+    force = "--force" in args
+    args = [a for a in args if a != "--force"]
 
     if not args:
         print(__doc__)
         sys.exit(1)
 
-    def ingest_entry(entry: dict) -> None:
-        ingest(
-            design_system_name=entry["name"],
-            start_urls=entry["start_urls"],
-            max_pages=entry.get("max_pages", 30),
-            include_patterns=entry.get("include_patterns"),
-            exclude_patterns=entry.get("exclude_patterns"),
-        )
-
     if args[0] == "--all":
         for entry in load_registry():
-            print(f"\n=== {entry['name']} ===")
-            ingest_entry(entry)
+            ingest_entry(entry, force=force)
+
+    elif args[0] == "--new":
+        new_entries = [e for e in load_registry() if "pages_indexed" not in e]
+        if not new_entries:
+            print("No unindexed systems found — everything in systems.yaml has been indexed at least once.")
+        for entry in new_entries:
+            ingest_entry(entry, force=True)
 
     elif args[0] == "--system":
         if len(args) < 2:
-            print("Usage: python ingest.py --system \"<name from systems.yaml>\"")
+            print("Usage: python ingest.py --system \"<name from systems.yaml>\" [--force]")
             sys.exit(1)
         target_name = args[1]
         matches = [e for e in load_registry() if e["name"] == target_name]
         if not matches:
             print(f"No entry named {target_name!r} in systems.yaml")
             sys.exit(1)
-        ingest_entry(matches[0])
+        ingest_entry(matches[0], force=force)
 
     elif len(args) >= 2:
         ingest(design_system_name=args[0], start_urls=args[1:])

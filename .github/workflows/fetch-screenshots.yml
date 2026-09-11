@@ -1,0 +1,44 @@
+name: Fetch new site screenshots
+
+on:
+  schedule:
+    # 04:00 UTC on the 1st of every 3rd month — screenshots don't go stale like
+    # docs do, and this only fetches ones missing entirely, so a slow cadence is
+    # plenty. reindex-new.yml/reindex-full.yml stay unaffected by this schedule.
+    - cron: "0 4 1 */3 *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-fetch every system's screenshot, not just missing ones"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests PyYAML
+
+      - name: Fetch missing screenshots
+        run: python fetch_screenshots.py ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit new screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet screenshots/ || [ -n "$(git status --porcelain screenshots/)" ]; then
+            git add screenshots/
+            git commit -m "Add newly fetched site screenshots [skip ci]" || echo "Nothing to commit"
+            git push
+          else
+            echo "No new screenshots to commit"
+          fi

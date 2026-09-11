@@ -11,6 +11,7 @@ from pathlib import Path
 import yaml
 from mcp.server.fastmcp import FastMCP
 from qdrant_client import QdrantClient
+from qdrant_client.models import FieldCondition, Filter, MatchAny
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
@@ -55,10 +56,6 @@ def design_system_directory(user_query: str) -> str:
 
     Use for cross-system research: "how does X handle Y", comparing patterns across
     design systems, or finding prior art before designing something new.
-
-    Do NOT use for Xero's own XUI components — use the xui-components-mcp tools
-    (list_components / get_component_docs) instead, which have exact prop-level detail
-    that this semantic search does not.
     """
     query_vector = embed_query(user_query)
 
@@ -99,10 +96,20 @@ async def search(request: Request) -> JSONResponse:
     if not query:
         return JSONResponse({"error": "missing query param 'q'"}, status_code=400, headers=CORS_HEADERS)
 
+    # Optional: ?system=Name+A&system=Name+B to scope results to specific design
+    # systems (matches the multi-select filter on the directory page's search UI).
+    systems = [s for s in request.query_params.getlist("system") if s.strip()]
+    query_filter = (
+        Filter(must=[FieldCondition(key="design_system_name", match=MatchAny(any=systems))])
+        if systems
+        else None
+    )
+
     query_vector = embed_query(query)
     response = qdrant_client.query_points(
         collection_name=QDRANT_COLLECTION,
         query=query_vector,
+        query_filter=query_filter,
         limit=5,
     )
 

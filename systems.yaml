@@ -1,6 +1,5 @@
 # Registry of external design systems to crawl and index.
 # Add an entry per system: a name and one or more start URLs to crawl from.
-# XUI is intentionally excluded — it has its own MCP server (xui-components-mcp).
 
 - name: "Adeo — Mozaic Design System"
   start_urls:
@@ -38,6 +37,12 @@
 - name: "Atlassian — Atlassian Design System"
   start_urls:
     - https://atlassian.design/
+  max_pages: 150
+  include_patterns:
+    - /components/
+    - /patterns/
+    - /foundations/
+    - /content/
 - name: "Audi — Audi UI"
   start_urls:
     - https://www.audi.com/ci/en/guides/user-interface/introduction.html

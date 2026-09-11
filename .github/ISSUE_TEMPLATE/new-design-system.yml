@@ -1,0 +1,84 @@
+name: Submit a design system
+description: Suggest a design system to add to the directory's search index.
+title: "[New design system] "
+labels: ["design-system-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a design system! A bot will do a quick dry-run
+        check and post the results here — a maintainer reviews it and either
+        approves it (added + indexed automatically) or closes this issue.
+  - type: input
+    id: organization
+    attributes:
+      label: Organization name
+      placeholder: e.g. Adobe
+    validations:
+      required: true
+  - type: input
+    id: design_system_name
+    attributes:
+      label: Design system name
+      placeholder: e.g. Spectrum
+    validations:
+      required: true
+  - type: input
+    id: start_url
+    attributes:
+      label: Start URL
+      description: The main documentation/components page to start crawling from.
+      placeholder: https://spectrum.adobe.com/
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ### Optional extras
+        We auto-detect these while crawling, but if you already know them it
+        saves a step and helps the reviewer double-check.
+  - type: input
+    id: github_url
+    attributes:
+      label: GitHub repository (optional)
+      placeholder: https://github.com/org/repo
+    validations:
+      required: false
+  - type: input
+    id: storybook_url
+    attributes:
+      label: Storybook URL (optional)
+      placeholder: https://org.github.io/repo/storybook
+    validations:
+      required: false
+  - type: input
+    id: figma_url
+    attributes:
+      label: Figma file URL (optional)
+      placeholder: https://www.figma.com/file/...
+    validations:
+      required: false
+  - type: input
+    id: npm_url
+    attributes:
+      label: npm package (optional)
+      placeholder: https://www.npmjs.com/package/...
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else we should know? (optional)
+    validations:
+      required: false
+  - type: input
+    id: notify_email
+    attributes:
+      label: Email for approval notification (optional)
+      description: >-
+        Only used to email you once this is approved and published — not stored
+        anywhere else, and not required (you'll also get a GitHub notification
+        on this issue either way).
+      placeholder: you@example.com
+    validations:
+      required: false

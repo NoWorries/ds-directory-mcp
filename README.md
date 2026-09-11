@@ -5,19 +5,8 @@ documentation. Replaces keyword-based search (e.g. Google Programmable Search) w
 intent-based vector search over design tokens, component architectures, and code
 patterns — exposed to any MCP-compatible AI assistant via one tool: `design_system_directory`.
 
-## Scope: this is not the XUI MCP
-
-XUI already has its own structured, purpose-built MCP server (`xui-components-mcp` —
-`list_components`, `get_component_docs`). Use that for anything XUI: it knows props,
-variants, and exact component structure directly from the source.
-
-`ds-directory-mcp` covers everything XUI doesn't have a server for — Material, Atlassian,
-Shopify Polaris, Carbon, Ant Design, Fluent, etc. — useful for cross-system research
-("how do other systems handle X") and for informing XUI's own design decisions with
-outside context. Register both MCP servers with your assistant and let it pick the
-right one per query; don't index XUI here, and don't expect exact prop-level accuracy
-from this server the way you'd get from `xui-components-mcp` — this is semantic
-similarity search over crawled docs, not a structured component API.
+`ds-directory-mcp` covers — Material, Atlassian, Shopify Polaris, Carbon, Ant Design, Fluent, etc. — useful for cross-system research
+("how do other systems handle X") — this is semantic similarity search over crawled docs, not a structured component API.
 
 ## Architecture
 
@@ -44,7 +33,7 @@ similarity search over crawled docs, not a structured component API.
 ## Ingesting a design system
 
 ```bash
-python ingest.py "Xero XUI" https://xui.xero.com/components/button
+python ingest.py "Company" https://designsystem.company.com/components/button
 ```
 
 Crawls same-domain links from the given start URL(s), strips nav/footer/script noise,
@@ -71,7 +60,7 @@ python ingest.py --all                        # every entry in the registry
 
 Re-running a system deletes its previously indexed chunks first (matched by
 `design_system_name`), so re-ingestion replaces stale content instead of piling up
-duplicates. XUI is deliberately not registered here — see "Scope" above.
+duplicates.
 
 ## Automated re-indexing (GitHub Actions, free)
 

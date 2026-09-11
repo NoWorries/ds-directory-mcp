@@ -1,7 +1,6 @@
 # Plan: ds-directory-mcp
 
-Semantic search (RAG) + MCP server over external design system documentation
-(everything except XUI, which has its own `xui-components-mcp`).
+Semantic search (RAG) + MCP server over external design system documentation.
 
 ## Architecture
 

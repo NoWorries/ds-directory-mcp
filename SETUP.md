@@ -63,7 +63,7 @@ No new account needed here, just repo secrets — nothing else to sign up for.
    - `QDRANT_API_KEY`
    - `JINA_API_KEY`
 4. Deploy. Render will build (`pip install -r requirements.txt`) and run (`python server.py`).
-5. Copy the service's public URL (e.g. `https://ds-directory-mcp.onrender.com`) — this is
+5. Copy the service's public URL (e.g. `https://designsystems.onrender.com`) — this is
    what you'll point an MCP client at.
 
 Note: Render's free tier sleeps after ~15 min of no traffic; the next request cold-starts
