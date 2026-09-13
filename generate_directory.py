@@ -27,8 +27,8 @@ SCREENSHOTS_DIR = Path(__file__).parent / "screenshots"
 PAGES_INDEX_FILE = Path(__file__).parent / "pages_index.json"
 
 # Update if the Render service URL ever changes.
-MCP_URL = "https://ds-directory-mcp.onrender.com/mcp"
-SEARCH_API_URL = "https://ds-directory-mcp.onrender.com/search"
+MCP_URL = "https://designsystems.onrender.com/mcp"
+SEARCH_API_URL = "https://designsystems.onrender.com/search"
 MCP_INSTALL_COMMAND = f"claude mcp add ds-directory --transport http {MCP_URL}"
 
 # A system with fewer indexed pages than this either genuinely has a tiny docs
@@ -191,7 +191,7 @@ def render_page(entries: list[dict]) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Design System Directory</title>
+<title>Design Systems Directory</title>
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
@@ -316,6 +316,11 @@ def render_page(entries: list[dict]) -> str:
     font-family: "JetBrains Mono", monospace;
   }}
   td {{ padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }}
+  /* Skips layout/paint for off-screen rows entirely — the load-bearing fix for
+     hundreds of rows staying cheap without pagination or virtualization JS.
+     contain-intrinsic-size is a rough guess at row height so the page doesn't
+     jump around as rows are measured for the first time while scrolling. */
+  tbody tr {{ content-visibility: auto; contain-intrinsic-size: auto 46px; }}
   tbody tr:last-child td {{ border-bottom: none; }}
   tbody tr:hover td {{ background: var(--surface-sunken); }}
   .name-cell {{ min-width: 200px; }}
@@ -355,6 +360,7 @@ def render_page(entries: list[dict]) -> str:
   .card {{
     background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
     box-shadow: var(--shadow); display: flex; flex-direction: column;
+    content-visibility: auto; contain-intrinsic-size: auto 260px;
   }}
   .card .name-block {{ align-items: flex-start; }}
   .card-thumb-link {{ display: block; }}
@@ -369,11 +375,11 @@ def render_page(entries: list[dict]) -> str:
 </head>
 <body>
 <div class="page">
-  <p class="eyebrow">design-system-directory</p>
+  <p class="eyebrow">Design Systems Directory</p>
   <h1>Find what the community has already published</h1>
   <p class="subtitle">{len(entries_sorted)} external design systems, semantically searchable and cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
 
-  {routes_nav("system")}
+  {routes_nav("directory")}
 
   <section class="search-card" id="search">
     <h2 class="search-title">Search component patterns, tokens, and guidance across every indexed design system</h2>

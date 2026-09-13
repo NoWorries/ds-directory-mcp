@@ -101,7 +101,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(ds_name)} — Design System Directory</title>
+<title>{html.escape(ds_name)} — Design Systems Directory</title>
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
@@ -145,11 +145,11 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 </head>
 <body>
 <div class="page">
-  <p class="eyebrow"><a href="../directory.html">design-system-directory</a> / systems</p>
+  <p class="eyebrow"><a href="/">Design Systems Directory</a> / Systems</p>
   <div class="system-header">{favicon}<span class="org-label">{html.escape(org) if org else html.escape(domain)}</span></div>
   <h1>{html.escape(ds_name)}</h1>
   <p class="meta-line">{" · ".join(html.escape(m) for m in meta_parts)}</p>
-  {routes_nav("system", prefix="../")}
+  {routes_nav("directory")}
   {thumb_html}
 
   <dl class="freshness">

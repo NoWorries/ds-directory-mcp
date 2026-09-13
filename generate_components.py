@@ -74,7 +74,7 @@ def render_index_page(component_index: dict[str, list[dict]]) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Components — Design System Directory</title>
+<title>Components — Design Systems Directory</title>
 {HEAD}
   .jump-nav {{ display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 32px; font-family: "JetBrains Mono", monospace; font-size: 0.82rem; }}
   .jump-nav a {{ display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center; border-radius: 4px; text-decoration: none; color: var(--text-muted); }}
@@ -93,10 +93,10 @@ def render_index_page(component_index: dict[str, list[dict]]) -> str:
 </head>
 <body>
 <div class="page">
-  <p class="eyebrow"><a href="../directory.html">design-system-directory</a> / components</p>
+  <p class="eyebrow"><a href="/">Design Systems Directory</a> / Components</p>
   <h1>Browse by component</h1>
   <p class="subtitle">The same indexed design systems, entered by component name instead of by system or search query. Pick one to see which systems document it.</p>
-  {routes_nav("component", prefix="../")}
+  {routes_nav("components")}
   <nav class="jump-nav">{jump_links}</nav>
   {sections}
 </div>
@@ -117,7 +117,7 @@ def render_component_page(name: str, entries: list[dict]) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(name)} — Design System Directory</title>
+<title>{html.escape(name)} — Design Systems Directory</title>
 {HEAD}
   .system-list {{ list-style: none; margin: 0; padding: 0; }}
   .system-list li {{ display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }}
@@ -128,10 +128,10 @@ def render_component_page(name: str, entries: list[dict]) -> str:
 </head>
 <body>
 <div class="page">
-  <p class="eyebrow"><a href="../directory.html">design-system-directory</a> / <a href="index.html">components</a></p>
+  <p class="eyebrow"><a href="/">Design Systems Directory</a> / <a href="/components/index.html">Components</a></p>
   <h1>{html.escape(name)}</h1>
   <p class="subtitle">{len(entries)} indexed system{"s" if len(entries) != 1 else ""} document {html.escape(name).lower()} — click through to the actual page.</p>
-  {routes_nav("component", prefix="../")}
+  {routes_nav("components")}
   <ul class="system-list">{by_system}</ul>
 </div>
 </body>

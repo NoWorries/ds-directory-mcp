@@ -59,13 +59,15 @@ TOKENS_CSS = """
 """
 
 
-def routes_nav(current: str, prefix: str = "") -> str:
-    """prefix: relative path back to the repo root, e.g. "" from directory.html
-    itself, "../" from components/*.html or systems/*.html."""
+def routes_nav(current: str) -> str:
+    """Root-absolute paths on purpose: the home page deploys as index.html (not
+    directory.html — see the workflows' Netlify deploy step), so any relative
+    or "directory.html"-literal link breaks once live. "/" always resolves to
+    it correctly regardless of how deep the current page is nested."""
     return f"""
     <nav class="routes">
-      <a href="{prefix}directory.html" class="{'current' if current == 'system' else ''}">System-first</a>
-      <a href="{prefix}components/index.html" class="{'current' if current == 'component' else ''}">Component-first</a>
-      <a href="{prefix}directory.html#search" class="{'current' if current == 'search' else ''}">Search</a>
+      <a href="/" class="{'current' if current == 'directory' else ''}">Directory</a>
+      <a href="/components/index.html" class="{'current' if current == 'components' else ''}">Components</a>
+      <a href="/#search" class="{'current' if current == 'search' else ''}">Search</a>
     </nav>
     """
