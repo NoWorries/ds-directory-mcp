@@ -3,7 +3,7 @@ name: Full reindex (all design systems)
 on:
   schedule:
     # 03:00 UTC on the 1st of each month — full re-crawl of every registered system,
-    # regardless of whether anything looks changed. reindex-new.yml (daily) covers
+    # regardless of whether anything looks changed. reindex-new.yml (weekly) covers
     # newly added registry entries in between.
     - cron: "0 3 1 * *"
   workflow_dispatch:
@@ -17,8 +17,50 @@ permissions:
   contents: write
   issues: write
 
+env:
+  SHARD_COUNT: 4
+
 jobs:
-  reindex:
+  # Split into independent shards so a runner getting killed mid-run (cancellation,
+  # quota, transient infra issue) only loses one shard's work, not the whole
+  # 247-system run — this is what actually failed before, not a single job being
+  # too slow. Each shard writes straight to Qdrant (safe, no conflict across
+  # shards) and uploads its own systems.yaml/pages_index.json as an artifact;
+  # nothing is committed to git until the merge job combines them all.
+  reindex-shard:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Re-ingest this shard's systems
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+        run: python ingest.py --all --shard ${{ matrix.shard }}/${{ env.SHARD_COUNT }} ${{ inputs.force && '--force' || '' }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard }}
+          path: |
+            systems.yaml
+            pages_index.json
+          retention-days: 1
+
+  merge-and-deploy:
+    needs: reindex-shard
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,12 +71,13 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Re-ingest all registered design systems
-        env:
-          QDRANT_URL: ${{ secrets.QDRANT_URL }}
-          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
-          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-        run: python ingest.py --all ${{ inputs.force && '--force' || '' }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shards
+
+      - name: Merge shard results into systems.yaml + pages_index.json
+        run: python merge_shards.py ${{ env.SHARD_COUNT }}
 
       - name: Generate static directory page
         run: |

@@ -1,0 +1,57 @@
+name: Build and deploy site (no crawling)
+
+# Builds directory.html/components/systems purely from whatever is already in
+# systems.yaml + pages_index.json right now — no ingest.py, no Qdrant, no Jina.
+# Useful for: deploying a design/template change without waiting for a crawl,
+# recovering the site after a reindex run's build step failed partway through,
+# or just seeing the site in its current (even empty, pre-first-crawl) state.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - generate_directory.py
+      - generate_components.py
+      - generate_systems.py
+      - page_shell.py
+      - text_utils.py
+      - component_taxonomy.py
+      - slug.py
+      - systems.yaml
+      - pages_index.json
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Only PyYAML is needed to build the pages — requests/bs4/qdrant-client
+      # (the rest of requirements.txt) are for ingest.py's crawling, not this.
+      - run: pip install PyYAML
+
+      - name: Generate site pages from current systems.yaml/pages_index.json
+        run: |
+          python generate_directory.py
+          python generate_components.py
+          python generate_systems.py
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          mkdir -p site
+          cp directory.html site/index.html
+          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
+          if [ -d components ]; then cp -r components site/components; fi
+          if [ -d systems ]; then cp -r systems site/systems; fi
+          npx --yes netlify-cli deploy --dir=site --prod

@@ -2,9 +2,11 @@ name: Reindex new design systems
 
 on:
   schedule:
-    # Daily at 03:00 UTC — picks up any systems added to systems.yaml since the
-    # last run (never indexed before). reindex-full.yml (monthly) re-crawls everything.
-    - cron: "0 3 * * *"
+    # Weekly (Mondays) at 04:00 UTC — a safety net for anything added straight to
+    # systems.yaml by hand. Systems approved via the submission flow already get
+    # ingested immediately by submission-approve.yml, so this doesn't need to be
+    # daily. reindex-full.yml (monthly) re-crawls everything already indexed.
+    - cron: "0 4 * * 1"
   workflow_dispatch: {}
 
 permissions:

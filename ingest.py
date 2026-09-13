@@ -4,6 +4,7 @@ Phase 1: Scrape a design system's docs, chunk the text, embed it, and load it in
 Usage:
     python ingest.py <design_system_name> <start_url> [start_url2 ...]
     python ingest.py --all [--force]              # re-ingest every system in systems.yaml
+    python ingest.py --all --shard 1/4 [--force]  # ...but only entries at index i where i%4==1
     python ingest.py --new                        # only systems never indexed before
     python ingest.py --system "Shopify — Polaris" [--force]   # re-ingest one entry (org — design_system)
 
@@ -394,17 +395,38 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def parse_shard(args: list[str]) -> tuple[int, int] | None:
+    """--shard 1/4 means: process only entries at index i where i % 4 == 1.
+    Splitting a long --all run across parallel CI jobs so one runner getting
+    killed only loses its slice, not the whole 247-system run."""
+    for i, arg in enumerate(args):
+        if arg == "--shard" and i + 1 < len(args):
+            index_str, _, total_str = args[i + 1].partition("/")
+            return int(index_str), int(total_str)
+    return None
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     force = "--force" in args
     args = [a for a in args if a != "--force"]
+
+    shard = parse_shard(args)
+    if shard:
+        shard_index, shard_total = shard
+        shard_flag_pos = args.index("--shard")
+        args = args[:shard_flag_pos] + args[shard_flag_pos + 2:]
 
     if not args:
         print(__doc__)
         sys.exit(1)
 
     if args[0] == "--all":
-        for entry in load_registry():
+        entries = load_registry()
+        if shard:
+            entries = [e for i, e in enumerate(entries) if i % shard_total == shard_index]
+            print(f"Shard {shard_index}/{shard_total}: {len(entries)} of {len(load_registry())} systems")
+        for entry in entries:
             ingest_entry(entry, force=force)
 
     elif args[0] == "--new":
