@@ -19,6 +19,7 @@ import yaml
 
 from page_shell import FONT_LINK, TOKENS_CSS, routes_nav
 from slug import slugify
+from text_utils import full_name, split_org_name
 
 SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
 OUTPUT_FILE = Path(__file__).parent / "directory.html"
@@ -26,8 +27,8 @@ SCREENSHOTS_DIR = Path(__file__).parent / "screenshots"
 PAGES_INDEX_FILE = Path(__file__).parent / "pages_index.json"
 
 # Update if the Render service URL ever changes.
-MCP_URL = "https://designsystems.onrender.com/mcp"
-SEARCH_API_URL = "https://designsystems.onrender.com/search"
+MCP_URL = "https://ds-directory-mcp.onrender.com/mcp"
+SEARCH_API_URL = "https://ds-directory-mcp.onrender.com/search"
 MCP_INSTALL_COMMAND = f"claude mcp add ds-directory --transport http {MCP_URL}"
 
 # A system with fewer indexed pages than this either genuinely has a tiny docs
@@ -82,15 +83,6 @@ def find_low_coverage(entries: list[dict]) -> list[dict]:
     ]
 
 
-def split_org_name(name: str) -> tuple[str, str]:
-    """"Adobe — Spectrum" -> ("Adobe", "Spectrum"). Falls back to no org label
-    if the registry entry doesn't use the " — " separator (e.g. hand-added)."""
-    if " — " in name:
-        org, ds_name = name.split(" — ", 1)
-        return org.strip(), ds_name.strip()
-    return "", name
-
-
 def favicon_html(start_url: str | None) -> str:
     domain = urlparse(start_url).netloc if start_url else ""
     if not domain:
@@ -115,17 +107,17 @@ def found_count(entry: dict) -> int:
 
 
 def render_name_block(entry: dict, link_to_detail: bool = False) -> str:
-    org, ds_name = split_org_name(entry["name"])
+    org, ds_name = split_org_name(entry)
     favicon = favicon_html((entry.get("start_urls") or [None])[0])
     org_html = f'<span class="org">{html.escape(org)}</span>' if org else ""
     ds_name_html = html.escape(ds_name)
     if link_to_detail:
-        ds_name_html = f'<a href="systems/{slugify(entry["name"])}.html">{ds_name_html}</a>'
+        ds_name_html = f'<a href="systems/{slugify(full_name(entry))}.html">{ds_name_html}</a>'
     return f'<div class="name-block">{favicon}<div class="name-text">{org_html}<span class="ds-name">{ds_name_html}</span></div></div>'
 
 
 def render_row(entry: dict) -> str:
-    name_text = entry["name"]
+    name_text = full_name(entry)
     row_id = slugify(name_text)
     pages = entry.get("pages_indexed")
     pages_text = "—" if pages is None else str(pages)
@@ -156,7 +148,7 @@ def render_card(entry: dict) -> str:
     link through to the system's own detail page for everything else
     (resources, freshness, full page list). Cards are a preview, not a
     second copy of the full detail."""
-    name_text = entry["name"]
+    name_text = full_name(entry)
     start_url = (entry.get("start_urls") or [None])[0]
     detail_href = f"systems/{slugify(name_text)}.html"
 
@@ -182,7 +174,7 @@ def render_card(entry: dict) -> str:
 
 
 def render_page(entries: list[dict]) -> str:
-    entries_sorted = sorted(entries, key=lambda e: e["name"].lower())
+    entries_sorted = sorted(entries, key=lambda e: full_name(e).lower())
 
     # Column indices: 0 = name (text sort), 1 = pages (number), 2..2+len(COLUMNS)-1
     # = resource dots (found), last = found-count (number, pinned).
@@ -192,7 +184,7 @@ def render_page(entries: list[dict]) -> str:
     last_col = len(COLUMNS) + 2
     rows = "".join(render_row(e) for e in entries_sorted)
     cards = "".join(render_card(e) for e in entries_sorted)
-    system_names_json = json.dumps([e["name"] for e in entries_sorted])
+    system_names_json = json.dumps([full_name(e) for e in entries_sorted])
 
     return f"""<!doctype html>
 <html lang="en">

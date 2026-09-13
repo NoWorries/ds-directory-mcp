@@ -16,10 +16,10 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
-from generate_directory import COLUMNS, favicon_html, indexed_only, load_pages_index, load_systems, split_org_name, thumbnail_src
+from generate_directory import COLUMNS, favicon_html, indexed_only, load_pages_index, load_systems, thumbnail_src
 from page_shell import FONT_LINK, TOKENS_CSS, routes_nav
 from slug import slugify
-from text_utils import clean_title
+from text_utils import clean_title, full_name, split_org_name
 
 SYSTEMS_DIR = Path(__file__).parent / "systems"
 
@@ -67,8 +67,8 @@ def render_page_list(name: str, pages_index: dict) -> str:
 
 
 def render_system_page(entry: dict, pages_index: dict) -> str:
-    name_text = entry["name"]
-    org, ds_name = split_org_name(name_text)
+    name_text = full_name(entry)
+    org, ds_name = split_org_name(entry)
     start_url = (entry.get("start_urls") or [None])[0]
     favicon = favicon_html(start_url)
 
@@ -178,7 +178,7 @@ def main() -> None:
 
     SYSTEMS_DIR.mkdir(exist_ok=True)
     for entry in entries:
-        out_path = SYSTEMS_DIR / f"{slugify(entry['name'])}.html"
+        out_path = SYSTEMS_DIR / f"{slugify(full_name(entry))}.html"
         out_path.write_text(render_system_page(entry, pages_index))
 
     print(f"Wrote {len(entries)} system detail pages to {SYSTEMS_DIR}/")

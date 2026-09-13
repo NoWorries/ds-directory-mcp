@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 
 from generate_directory import LOW_COVERAGE_THRESHOLD, find_low_coverage, load_systems
+from text_utils import full_name
 
 REPORT_FILE = Path(__file__).parent / "health_report.md"
 
@@ -29,7 +30,7 @@ def render_report(low_coverage: list[dict]) -> str:
     for entry in low_coverage:
         pages = entry["pages_indexed"]
         start_url = (entry.get("start_urls") or [""])[0]
-        lines.append(f"- **{entry['name']}** — {pages} page{'s' if pages != 1 else ''} — {start_url}")
+        lines.append(f"- **{full_name(entry)}** — {pages} page{'s' if pages != 1 else ''} — {start_url}")
     return "\n".join(lines)
 
 

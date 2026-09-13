@@ -12,7 +12,8 @@ import sys
 
 from ingest import load_registry, save_registry
 from parse_issue_form import parse_issue_form
-from run_submission_check import build_full_name, submitter_provided_resources
+from run_submission_check import submitter_provided_resources
+from text_utils import full_name
 
 
 def main() -> None:
@@ -22,25 +23,26 @@ def main() -> None:
     org = fields.get("Organization name", "").strip()
     ds_name = fields.get("Design system name", "").strip()
     start_url = fields.get("Start URL", "").strip()
-    full_name = build_full_name(org, ds_name)
     notify_email = fields.get("Email for approval notification (optional)", "").strip()
 
     entries = load_registry()
-    if any(e["name"] == full_name for e in entries):
-        print(f"{full_name} already exists in systems.yaml — skipping.")
+    new_entry = {"organization": org, "design_system": ds_name, "start_urls": [start_url]}
+    display_name = full_name(new_entry)
+
+    if any(full_name(e) == display_name for e in entries):
+        print(f"{display_name} already exists in systems.yaml — skipping.")
     else:
-        entry = {"name": full_name, "start_urls": [start_url]}
         resources = submitter_provided_resources(fields)
         if resources:
-            entry["resources"] = resources
-        entries.append(entry)
+            new_entry["resources"] = resources
+        entries.append(new_entry)
         save_registry(entries)
-        print(f"Added {full_name} ({start_url}) to systems.yaml.")
+        print(f"Added {display_name} ({start_url}) to systems.yaml.")
 
     github_output = os.environ.get("GITHUB_OUTPUT")
     if github_output:
         with open(github_output, "a") as f:
-            f.write(f"full_name={full_name}\n")
+            f.write(f"full_name={display_name}\n")
             f.write(f"notify_email={notify_email}\n")
 
 

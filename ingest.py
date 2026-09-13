@@ -5,7 +5,7 @@ Usage:
     python ingest.py <design_system_name> <start_url> [start_url2 ...]
     python ingest.py --all [--force]              # re-ingest every system in systems.yaml
     python ingest.py --new                        # only systems never indexed before
-    python ingest.py --system "Shopify Polaris" [--force]   # re-ingest one entry
+    python ingest.py --system "Shopify — Polaris" [--force]   # re-ingest one entry (org — design_system)
 
 Example:
     python ingest.py "Atlassian Design System" https://atlassian.design/components
@@ -58,6 +58,7 @@ from config import (
 )
 from embeddings import embed_texts
 from resources import classify_links, enrich_resources, merge_resources, probe_well_known
+from text_utils import full_name
 
 SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
 PAGES_INDEX_FILE = Path(__file__).parent / "pages_index.json"
@@ -224,7 +225,8 @@ def load_registry() -> list[dict]:
 
 REGISTRY_HEADER = (
     "# Registry of external design systems to crawl and index.\n"
-    "# Add an entry per system: a name and one or more start URLs to crawl from.\n"
+    "# Add an entry per system: 'organization' (blank if there isn't a distinct one),\n"
+    "# 'design_system' name, and one or more start URLs to crawl from.\n"
     "#\n"
     "# 'resources', 'pages_indexed', 'etag', 'last_modified', 'last_checked', and any\n"
     "# '*_meta' fields are auto-populated by ingest.py — don't hand-edit them, your\n"
@@ -252,7 +254,7 @@ def update_pages_index(design_system_name: str, page_entries: list[dict]) -> Non
 def update_registry_fields(design_system_name: str, fields: dict) -> None:
     entries = load_registry()
     for entry in entries:
-        if entry["name"] == design_system_name:
+        if full_name(entry) == design_system_name:
             entry.update({k: v for k, v in fields.items() if v is not None})
             break
     save_registry(entries)
@@ -365,26 +367,27 @@ def ingest(
 
 
 def ingest_entry(entry: dict, force: bool = False) -> None:
+    name = full_name(entry)
     start_urls = entry["start_urls"]
     never_indexed = "pages_indexed" not in entry
 
     if not force and not never_indexed:
         new_signal = fetch_change_signal(start_urls[0])
         if content_unchanged(entry, new_signal):
-            print(f"\n=== {entry['name']} === (no changes detected at {start_urls[0]}, skipping)")
-            update_registry_fields(entry["name"], {**new_signal, "last_checked": now_iso()})
+            print(f"\n=== {name} === (no changes detected at {start_urls[0]}, skipping)")
+            update_registry_fields(name, {**new_signal, "last_checked": now_iso()})
             return
 
-    print(f"\n=== {entry['name']} ===")
+    print(f"\n=== {name} ===")
     ingest(
-        design_system_name=entry["name"],
+        design_system_name=name,
         start_urls=start_urls,
         max_pages=entry.get("max_pages", 30),
         include_patterns=entry.get("include_patterns"),
         exclude_patterns=entry.get("exclude_patterns"),
     )
     new_signal = fetch_change_signal(start_urls[0])
-    update_registry_fields(entry["name"], {**new_signal, "last_checked": now_iso()})
+    update_registry_fields(name, {**new_signal, "last_checked": now_iso()})
 
 
 def now_iso() -> str:
@@ -416,7 +419,7 @@ if __name__ == "__main__":
             print("Usage: python ingest.py --system \"<name from systems.yaml>\" [--force]")
             sys.exit(1)
         target_name = args[1]
-        matches = [e for e in load_registry() if e["name"] == target_name]
+        matches = [e for e in load_registry() if full_name(e) == target_name]
         if not matches:
             print(f"No entry named {target_name!r} in systems.yaml")
             sys.exit(1)

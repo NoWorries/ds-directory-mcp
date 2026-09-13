@@ -5,9 +5,6 @@ documentation. Replaces keyword-based search (e.g. Google Programmable Search) w
 intent-based vector search over design tokens, component architectures, and code
 patterns — exposed to any MCP-compatible AI assistant via one tool: `design_system_directory`.
 
-`ds-directory-mcp` covers — Material, Atlassian, Shopify Polaris, Carbon, Ant Design, Fluent, etc. — useful for cross-system research
-("how do other systems handle X") — this is semantic similarity search over crawled docs, not a structured component API.
-
 ## Architecture
 
 ```
@@ -33,7 +30,7 @@ patterns — exposed to any MCP-compatible AI assistant via one tool: `design_sy
 ## Ingesting a design system
 
 ```bash
-python ingest.py "Company" https://designsystem.company.com/components/button
+python ingest.py "Atlassian Design System" https://atlassian.design/components
 ```
 
 Crawls same-domain links from the given start URL(s), strips nav/footer/script noise,

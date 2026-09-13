@@ -17,6 +17,7 @@ from starlette.responses import JSONResponse
 
 from config import QDRANT_API_KEY, QDRANT_COLLECTION, QDRANT_URL
 from embeddings import embed_query
+from text_utils import full_name
 
 mcp = FastMCP(
     "DesignSystemKnowledgeBase",
@@ -44,14 +45,14 @@ def get_resources(design_system_name: str) -> dict:
     except FileNotFoundError:
         return {}
     for entry in entries:
-        if entry.get("name") == design_system_name:
+        if full_name(entry) == design_system_name:
             return entry.get("resources", {})
     return {}
 
 
 @mcp.tool()
 def design_system_directory(user_query: str) -> str:
-    """Semantic search over EXTERNAL design systems' public docs (e.g. Atlassian, Shopify
+    """Semantic search over external design systems' public docs (e.g. Atlassian, Shopify
     Polaris, Material, Carbon) for component structures, patterns, tokens, or styles.
 
     Use for cross-system research: "how does X handle Y", comparing patterns across

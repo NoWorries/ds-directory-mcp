@@ -1,750 +1,994 @@
-# Registry of external design systems to crawl and index.
-# Add an entry per system: a name and one or more start URLs to crawl from.
-
-- name: "Adeo — Mozaic Design System"
+- organization: Adeo
+  design_system: Mozaic Design System
   start_urls:
-    - https://mozaic.adeo.cloud/
-- name: "Adobe — Spectrum"
+  - https://mozaic.adeo.cloud/
+- organization: Adobe
+  design_system: Spectrum
   start_urls:
-    - https://spectrum.adobe.com/
-- name: "Alaska Airlines — Auro"
+  - https://spectrum.adobe.com/
+- organization: Alaska Airlines
+  design_system: Auro
   start_urls:
-    - https://auro.alaskaair.com/
-- name: "Altinn — Altinn Design System"
+  - https://auro.alaskaair.com/
+- organization: Altinn
+  design_system: Altinn Design System
   start_urls:
-    - https://docs.altinn.studio/
-- name: "Ant Financial — Ant Design"
+  - https://docs.altinn.studio/
+- organization: Ant Financial
+  design_system: Ant Design
   start_urls:
-    - https://ant.design/
-- name: "AOTU Labs — AT UIKIT"
+  - https://ant.design/
+- organization: AOTU Labs
+  design_system: AT UIKIT
   start_urls:
-    - https://at-ui.github.io/at-ui/#/en/
-- name: "Appear here — Bloom"
+  - https://at-ui.github.io/at-ui/#/en/
+- organization: Appear here
+  design_system: Bloom
   start_urls:
-    - https://bloom.appearhere.co.uk/
-- name: "Apple — Human Interface Guidelines"
+  - https://bloom.appearhere.co.uk/
+- organization: Apple
+  design_system: Human Interface Guidelines
   start_urls:
-    - https://developer.apple.com/design/human-interface-guidelines/
-- name: "Arbetsförmedlingen — Design system"
+  - https://developer.apple.com/design/human-interface-guidelines/
+- organization: Arbetsförmedlingen
+  design_system: Design system
   start_urls:
-    - https://designsystem.arbetsformedlingen.se/
-- name: "ArcGIS — Calcite"
+  - https://designsystem.arbetsformedlingen.se/
+- organization: ArcGIS
+  design_system: Calcite
   start_urls:
-    - https://developers.arcgis.com/calcite-design-system/
-- name: "Arts — Artsy Palette"
+  - https://developers.arcgis.com/calcite-design-system/
+- organization: Arts
+  design_system: Artsy Palette
   start_urls:
-    - https://palette.artsy.net/
-- name: "Atlassian — Atlassian Design System"
+  - https://palette.artsy.net/
+- organization: Atlassian
+  design_system: Atlassian Design System
   start_urls:
-    - https://atlassian.design/
+  - https://atlassian.design/
   max_pages: 150
   include_patterns:
-    - /components/
-    - /patterns/
-    - /foundations/
-    - /content/
-- name: "Audi — Audi UI"
+  - /components/
+  - /patterns/
+  - /foundations/
+  - /content/
+- organization: Audi
+  design_system: Audi UI
+  start_urls:
+  - https://www.audi.com/ci/en/guides/user-interface/introduction.html
+- organization: Australian Government, Department of Agriculture, Fisheries and Forestry
+  design_system: Agriculture Design System (AgDS)
+  start_urls:
+  - https://design-system.agriculture.gov.au/
+- organization: Australian Government, Department of Health
+  design_system: Health Design System
+  start_urls:
+  - https://designsystem.health.gov.au/
+- organization: Australian Open Source Community
+  design_system: GOLD Design System
+  start_urls:
+  - https://gold.designsystemau.org/
+- organization: AutoGuru
+  design_system: Overdrive
+  start_urls:
+  - https://overdrive.autoguru.io/
+- organization: Automattic
+  design_system: Wordpress.com design handbook
+  start_urls:
+  - https://dotcombrand.wordpress.com/
+- organization: AWS
+  design_system: Cloudscape Design System
+  start_urls:
+  - https://cloudscape.design/
+- organization: AWS Amplify
+  design_system: Amplify UI
+  start_urls:
+  - https://ui.docs.amplify.aws/
+- organization: Backbase
+  design_system: Design system
+  start_urls:
+  - https://designsystem.backbase.com/v2/web-components/
+- organization: Banco Santander
+  design_system: Flame Design System
+  start_urls:
+  - https://bancosantander.invisionapp.com/dsm/santander-group/flame-ds-santander/
+- organization: Barnardo's
+  design_system: Barnardo's Design System
+  start_urls:
+  - https://design-system.barnardos.org.uk/
+- organization: BBC
+  design_system: Global Experience Language (GEL)
+  start_urls:
+  - https://www.bbc.co.uk/gel/
+- organization: Benevity
+  design_system: Skyline
+  start_urls:
+  - https://skyline.benevity.org/
+- organization: Biings
+  design_system: Biings Design System
+  start_urls:
+  - https://biings.design/
+- organization: BLiP
+  design_system: UAI Design System
+  start_urls:
+  - https://design.blip.ai/uai-design-system/
+- organization: Brainly
+  design_system: Brainly Style Guide
+  start_urls:
+  - https://styleguide.brainly.com/
+- organization: Brainly
+  design_system: Design
+  start_urls:
+  - https://design.brainly.com/
+- organization: Bridge
+  design_system: Bold design system
+  start_urls:
+  - https://bold.bridge.ufsc.br/
+- organization: Brightcore
+  design_system: UI
+  start_urls:
+  - https://ui.britecore.com/
+- organization: Brighte
+  design_system: Spark Design System
+  start_urls:
+  - https://spark.brighte.com.au/
+- organization: British Gas
+  design_system: Nucleus Design System
+  start_urls:
+  - https://britishgas.design/
+- organization: BT
+  design_system: Arc
+  start_urls:
+  - https://arc.bt.com/
+- organization: Buildit
+  design_system: Gravity
+  start_urls:
+  - https://style.buildit.digital/
+- organization: BuzzFeed
+  design_system: Solid Style Guide
+  start_urls:
+  - https://solid.buzzfeed.com/
+- organization: Canonical
+  design_system: Vanilla framework
+  start_urls:
+  - https://vanillaframework.io/
+- organization: Catho
+  design_system: Quantum
+  start_urls:
+  - https://catho.github.io/quantum/
+- organization: censhare GmbH
+  design_system: Zen
+  start_urls:
+  - https://design.censhare.com/
+- organization: Chakra team
+  design_system: Chakra UI
+  start_urls:
+  - https://chakra-ui.com/
+- organization: City of Boston
+  design_system: Fleet
+  start_urls:
+  - https://patterns.boston.gov/
+- organization: Cloudflare
+  design_system: CF-UI
+  start_urls:
+  - https://cloudflare.github.io/cf-ui/
+- organization: Consumer Financial Protection Bureau
+  design_system: CFPB Design Manual
+  start_urls:
+  - https://cfpb.github.io/design-system/
+- organization: Contentful
+  design_system: Forma 36
+  start_urls:
+  - https://f36.contentful.com/
+- organization: Culture Amp
+  design_system: Kaizen
+  start_urls:
+  - https://cultureamp.design/
+- organization: Datadog
+  design_system: Druids
+  start_urls:
+  - https://druids.datadoghq.com/
+- organization: Decathlon
+  design_system: Design System - Vitamin
+  start_urls:
+  - https://decathlon.design/
+- organization: ''
+  design_system: Decentraland UI
+  start_urls:
+  - https://ui.decentraland.org/
+- organization: Design Language
+  design_system: E-Trade
+  start_urls:
+  - https://etrade.design/
+- organization: Discovery Education
+  design_system: Comet
+  start_urls:
+  - https://comet.discoveryeducation.com/
+- organization: Drawbotics
+  design_system: Drylus
+  start_urls:
+  - https://drawbotics.github.io/drylus/
+- organization: Duolingo
+  design_system: Design guidelines
+  start_urls:
+  - https://www.duolingo.com/design/
+- organization: Dynatrace
+  design_system: Barista
+  start_urls:
+  - https://barista.dynatrace.com/
+- organization: eBay
+  design_system: Playbook
+  start_urls:
+  - https://playbook.ebay.com/
+- organization: eBay
+  design_system: Skin
+  start_urls:
+  - https://ebay.github.io/skin/
+- organization: Elastic UI
+  design_system: Elastic UI Framework
+  start_urls:
+  - https://elastic.github.io/eui/
+- organization: Elia Group
+  design_system: Nova
+  start_urls:
+  - https://nova.eliagroup.io/
+- organization: ENGIE
+  design_system: Fluid
+  start_urls:
+  - https://www.engie.design/
+- organization: Enigma
+  design_system: Boundless
+  start_urls:
+  - https://boundless.js.org/
+- organization: Equinor
+  design_system: EDS
+  start_urls:
+  - https://eds.equinor.com/
+- organization: Estonia
+  design_system: Brand Estonia
+  start_urls:
+  - https://brand.estonia.ee/
+- organization: Eurostar
+  design_system: GLU
+  start_urls:
+  - https://style.eurostar.com/
+- organization: Family Search
+  design_system: Frontier
+  start_urls:
+  - https://www.familysearch.org/frontier/styleguide/
+- organization: Financial Times
+  design_system: Origami
+  start_urls:
+  - https://origami.ft.com/
+- organization: Finastra
+  design_system: Finastra Design System
+  start_urls:
+  - https://design.fusionfabric.cloud/
+- organization: Firefox
+  design_system: Photon Design System
+  start_urls:
+  - https://design.firefox.com/photon/
+- organization: Flexport
+  design_system: Latitude
+  start_urls:
+  - https://www.flexport.com/design/
+- organization: ''
+  design_system: Foundation
+  start_urls:
+  - https://get.foundation/
+- organization: Foyer
+  design_system: Foyer Design System
+  start_urls:
+  - https://design.foyer.lu/
+- organization: FutureLearn
+  design_system: FutureLearn Pattern Library
+  start_urls:
+  - https://storybook.futurelearn.com/
+- organization: GE
+  design_system: Edison Design System
+  start_urls:
+  - https://edisondesignsystem.com/
+- organization: General Electric
+  design_system: Predix Design System
+  start_urls:
+  - https://www.predix-ui.com/
+- organization: Github
+  design_system: Primer
+  start_urls:
+  - https://primer.style/
+- organization: GitLab
+  design_system: Pajamas Design System
+  start_urls:
+  - https://design.gitlab.com/
+- organization: GO-JEK
+  design_system: Asphalt
+  start_urls:
+  - https://asphalt.gojek.io/
+- organization: Goldman Sachs
+  design_system: Goldman Sachs Design System
+  start_urls:
+  - https://design.gs.com/home/
+- organization: GoodBarber
+  design_system: GoodBarber Design System
+  start_urls:
+  - https://www.goodbarber.com/uxdesign/
+- organization: Google
+  design_system: Material 2
+  start_urls:
+  - https://material.io/guidelines/#introduction-goals/
+- organization: Google
+  design_system: Material Design
+  start_urls:
+  - https://material.io/
+- organization: GOV.UK
+  design_system: GOV.UK Design System
+  start_urls:
+  - https://design-system.service.gov.uk/
+- organization: GOV.UK
+  design_system: GOV.UK Design System
+  start_urls:
+  - https://www.gov.uk/design-system/
+- organization: Government of Canada
+  design_system: Aurora Design System
+  start_urls:
+  - https://design.gccollab.ca/
+- organization: Government of Canada
+  design_system: Canada.ca design system
+  start_urls:
+  - https://www.canada.ca/en/government/about/design-system.html
+- organization: Gusto
+  design_system: Workbench
+  start_urls:
+  - https://workbench.gusto.com/
+- organization: Gympass
+  design_system: Yoga
+  start_urls:
+  - https://gympass.github.io/yoga/
+- organization: Halstack
+  design_system: Halstack Design System
+  start_urls:
+  - https://developer.dxc.com/design/
+- organization: Heartbeat
+  design_system: .pulse
+  start_urls:
+  - https://pulse.heartbeat.ua/
+- organization: Helios Design System
+  design_system: Hashicorp
+  start_urls:
+  - https://helios.hashicorp.design
+- organization: Help Scout
+  design_system: Help Scout Style Guide
+  start_urls:
+  - https://style.helpscout.com/
+- organization: Helsinki
+  design_system: Helsinki Design System
+  start_urls:
+  - https://hds.hel.fi/
+- organization: Heroku
+  design_system: Heroki Design
+  start_urls:
+  - https://design.herokai.com/
+- organization: Hewlett Packard
+  design_system: Grommet
+  start_urls:
+  - https://v2.grommet.io/
+- organization: Hewlett Packard
+  design_system: Grommet
+  start_urls:
+  - https://grommet.io/
+- organization: Hubspot
+  design_system: Canvas Design System
+  start_urls:
+  - https://canvas.hubspot.com/
+- organization: Hudl
+  design_system: Uniform
+  start_urls:
+  - https://uniform.hudl.com/
+- organization: IBM
+  design_system: Carbon Design System
+  start_urls:
+  - https://www.carbondesignsystem.com/
+- organization: IBM
+  design_system: IBM Design Language
+  start_urls:
+  - https://www.ibm.com/design/language/
+- organization: Indiana University
+  design_system: Rivet
+  start_urls:
+  - https://rivet.uits.iu.edu/
+- organization: Infor
+  design_system: Infor Design System
+  start_urls:
+  - https://design.infor.com/
+- organization: ING
+  design_system: Lion
+  start_urls:
+  - https://lion-web.netlify.app/
+- organization: Instacart
+  design_system: Snacks
+  start_urls:
+  - https://instacart.github.io/Snacks/
+- organization: Instructure Inc
+  design_system: Instructure UI
+  start_urls:
+  - https://instructure.design/
+- organization: Intuit
+  design_system: Design system
+  start_urls:
+  - https://design.intuit.com/quickbooks
+- organization: Intuit
+  design_system: QuickBooks Design System
+  start_urls:
+  - https://design.intuit.com/quickbooks/
+- organization: iStreamPlanet
+  design_system: Pebble Design System
+  start_urls:
+  - https://pebble.istreamplanet.net/
+- organization: Italian Public Administration
+  design_system: .it Designers Italy
+  start_urls:
+  - https://designers.italia.it/
+- organization: JetBrains
+  design_system: JetBrains Web UI
+  start_urls:
+  - https://jetbrains.github.io/ring-ui/
+- organization: JSTOR
+  design_system: Pharos
+  start_urls:
+  - https://pharos.jstor.org/
+- organization: Just Eat Takeaway
+  design_system: PIE
+  start_urls:
+  - https://pie.design/
+- organization: Kajabi
+  design_system: Sage
+  start_urls:
+  - https://sage.kajabi.com
+- organization: kickstart
+  design_system: kickstartDS
+  start_urls:
+  - https://www.kickstartds.com/
+- organization: Kiwi.com
+  design_system: Orbit
+  start_urls:
+  - https://orbit.kiwi/
+- organization: KoliBri
+  design_system: KoliBri - Public UI
+  start_urls:
+  - https://public-ui.github.io/
+- organization: ''
+  design_system: Kontur
+  start_urls:
+  - https://guides.kontur.ru/
+- organization: Latitude Financial
+  design_system: Basis Design System
+  start_urls:
+  - https://basis.now.sh/
+- organization: Liferay
+  design_system: Lexicon
+  start_urls:
+  - https://lexicondesign.io/
+- organization: LINE
+  design_system: LINE Design System
+  start_urls:
+  - https://designsystem.line.me/
+- organization: LocalTapiola
+  design_system: Duet
+  start_urls:
+  - https://www.duetds.com/
+- organization: Lonely Planet
+  design_system: Rizzo
+  start_urls:
+  - https://rizzo.lonelyplanet.com/
+- organization: Loom
+  design_system: Lens
+  start_urls:
+  - https://lens.loom.dev/
+- organization: Louder Than Ten
+  design_system: Manual
+  start_urls:
+  - https://www.louderthanten.com/manual/
+- organization: Mail.ru
+  design_system: Group Paradigm
+  start_urls:
+  - https://design.mail.ru/
+- organization: MailChimp
+  design_system: Mailchimp Content Styleguide
+  start_urls:
+  - https://styleguide.mailchimp.com/
+- organization: MailChimp
+  design_system: MailChimp Pattern Library
+  start_urls:
+  - https://ux.mailchimp.com/
+- organization: MailChimp
+  design_system: Mailchimp Patterns
+  start_urls:
+  - https://ux.mailchimp.com/patterns/
+- organization: ''
+  design_system: Mantine
+  start_urls:
+  - https://mantine.dev/
+- organization: Mapbox
+  design_system: Mapbox Base
+  start_urls:
+  - https://www.mapbox.com/base/
+- organization: Marvel
+  design_system: Marvel Styleguide
+  start_urls:
+  - https://marvelapp.com/styleguide/
+- organization: ''
+  design_system: Material 3
+  start_urls:
+  - https://m3.material.io/
+- organization: Materialize
+  design_system: Materialize CSS
+  start_urls:
+  - https://materializecss.com/
+- organization: Meetup
+  design_system: Swarm Design System
+  start_urls:
+  - https://meetup.github.io/swarm-design-system/
+- organization: Merck
+  design_system: Liquid
+  start_urls:
+  - https://www.emd.design/
+- organization: Mesosphere
+  design_system: CNVS
+  start_urls:
+  - https://mesosphere.github.io/cnvs/
+- organization: Microsoft
+  design_system: Fluent
+  start_urls:
+  - https://www.microsoft.com/design/fluent/
+- organization: Microsoft
+  design_system: Fluent UI
+  start_urls:
+  - https://developer.microsoft.com/en-us/fluentui#/
+- organization: Mixpanel
+  design_system: Mixpanel DS
+  start_urls:
+  - https://design.mixpanel.com/
+- organization: MongoDB
+  design_system: MongoDB Design System
+  start_urls:
+  - https://www.mongodb.design/
+- organization: MongoDB
+  design_system: MongoDB Design System
+  start_urls:
+  - https://mongodb.design/
+- organization: Monzo
+  design_system: Monzo Tone of Voice
+  start_urls:
+  - https://monzo.com/tone-of-voice/
+- organization: Morningstar
+  design_system: Morningstar Design System
+  start_urls:
+  - https://designsystem.morningstar.com/
+- organization: Mozilla
+  design_system: Protocol
+  start_urls:
+  - https://protocol.mozilla.org/
+- organization: Mozilla firefox
+  design_system: Acorn
+  start_urls:
+  - https://acorn.firefox.com/
+- organization: Mutual of Omaha
+  design_system: Digital Design Guide
+  start_urls:
+  - https://design.mutualofomaha.com/digital/
+- organization: MYOB
+  design_system: Feelix
+  start_urls:
+  - https://feelix.myob.com/
+- organization: NASA
+  design_system: NASA Web Design System
+  start_urls:
+  - https://github.com/bruffridge/nasawds/
+- organization: National Instruments
+  design_system: Fuse
+  start_urls:
+  - https://ni.github.io/design-system/
+- organization: NationBuilder
+  design_system: Radius
+  start_urls:
+  - https://www.nationbuilder.design/
+- organization: Neurodiversity
+  design_system: Design system
+  start_urls:
+  - https://neurodiversity.design/
+- organization: New York State
+  design_system: New York State Design System
+  start_urls:
+  - http://designsystem.ny.gov/
+- organization: New Zealand Government
+  design_system: New Zealand Government Design System (NZGDS)
+  start_urls:
+  - https://design-system-alpha.digital.govt.nz/
+- organization: New Zealand Ministry of Education
+  design_system: Design System
+  start_urls:
+  - https://designsystem.education.govt.nz/
+- organization: News UK
+  design_system: NewsKit
+  start_urls:
+  - https://www.newskit.co.uk/
+- organization: NHS.UK
+  design_system: Service Manual
+  start_urls:
+  - https://service-manual.nhs.uk/
+- organization: nib
+  design_system: Mesh Design System
+  start_urls:
+  - https://www.meshdesignsystem.com/
+- organization: Nordhealth
+  design_system: Nord Design System
+  start_urls:
+  - https://nordhealth.design/
+- organization: NS Dutch Railways
+  design_system: Tractie
+  start_urls:
+  - https://tractie.ns.nl/
+- organization: Nulogy
+  design_system: Nulogy Design System
+  start_urls:
+  - https://nulogy.design/
+- organization: OPower
+  design_system: OPattern
+  start_urls:
+  - https://ux.opower.com/opattern/
+- organization: Oracle
+  design_system: Alta
+  start_urls:
+  - https://www.oracle.com/webfolder/technetwork/jet/
+- organization: Oracle
+  design_system: Alta UI
+  start_urls:
+  - https://www.oracle.com/webfolder/ux/middleware/alta/index.html
+- organization: Oracle
+  design_system: Redwood
+  start_urls:
+  - https://redwood.oracle.com/
+- organization: Palantir
+  design_system: Blueprint
+  start_urls:
+  - https://blueprintjs.com/
+- organization: PAQT
+  design_system: Graphite Design System
+  start_urls:
+  - https://graphitedesignsystem.com/
+- organization: Patreon
+  design_system: Studio
+  start_urls:
+  - https://studio.patreon.com/
+- organization: ''
+  design_system: PatternFly
+  start_urls:
+  - https://www.patternfly.org/v4/
+- organization: Pega Digital
+  design_system: Bolt Design System
+  start_urls:
+  - https://boltdesignsystem.com/
+- organization: Pegasystems
+  design_system: Pega Cosmos
+  start_urls:
+  - https://design.pega.com/
+- organization: Pinterest
+  design_system: Gestalt
+  start_urls:
+  - https://pinterest.github.io/gestalt/#/
+- organization: Pivotal software
+  design_system: Pivotal UI
+  start_urls:
+  - https://styleguide.pivotal.io/
+- organization: Pluralsight
+  design_system: Pluralsight Design System
+  start_urls:
+  - https://design-system.pluralsight.com/
+- organization: Priceline
+  design_system: Priceline One
+  start_urls:
+  - https://pricelinelabs.github.io/design-system/
+- organization: Priceline
+  design_system: Priceline One
+  start_urls:
+  - https://priceline.github.io/design-system/
+- organization: Pusher
+  design_system: Chameleon
+  start_urls:
+  - https://pusher.github.io/chameleon/
+- organization: Quicken Loans
+  design_system: Spark Design System
+  start_urls:
+  - https://sparkdesignsystem.com/
+- organization: Radix
+  design_system: Radix UI
+  start_urls:
+  - https://www.radix-ui.com/
+- organization: ''
+  design_system: Rambler
+  start_urls:
+  - https://rambler-digital-solutions.github.io/rambler-ui/
+- organization: Rambler
+  design_system: Ratio
+  start_urls:
+  - https://ui-kit.rambler.ru/#/
+- organization: ''
+  design_system: React95
+  start_urls:
+  - https://react95.github.io/React95/
+- organization: Red Hat
+  design_system: Patternfly Design System
+  start_urls:
+  - https://www.patternfly.org/
+- organization: REI
+  design_system: Cedar
+  start_urls:
+  - https://rei.github.io/rei-cedar-docs/
+- organization: ''
+  design_system: Rendition
+  start_urls:
+  - https://balena-io-modules.github.io/rendition/
+- organization: ''
+  design_system: Reshaped
+  start_urls:
+  - https://reshaped.so/content/docs/getting-started/overview
+- organization: Royal Canin
+  design_system: Royal Canin's Design Language
+  start_urls:
+  - https://developer.royalcanin.com/
+- organization: Sainsbury's
+  design_system: Luna
+  start_urls:
+  - https://luna.sainsburys.co.uk/
+- organization: Salesforce
+  design_system: Lightning Design System
+  start_urls:
+  - https://www.lightningdesignsystem.com/
+- organization: Samsung
+  design_system: Tizen CircularUI
+  start_urls:
+  - https://developer.samsung.com/one-ui-watch-tizen/
+- organization: SAP
+  design_system: Fiori
+  start_urls:
+  - https://experience.sap.com/fiori-design-web/
+- organization: SAP
+  design_system: Fiori Fundamentals
+  start_urls:
+  - https://sap.github.io/fundamental/
+- organization: ''
+  design_system: SAP OpenUI
+  start_urls:
+  - https://sdk.openui5.org/controls/
+- organization: Scania
+  design_system: Tegel
+  start_urls:
+  - https://tegel.scania.com/
+- organization: ''
+  design_system: Scania Digital Design System
+  start_urls:
+  - https://tegel.scania.com/home/
+- organization: Seek
+  design_system: Braid Design System
+  start_urls:
+  - https://seek-oss.github.io/braid-design-system/
+- organization: Seek
+  design_system: Seek Style Guide
+  start_urls:
+  - https://seek-oss.github.io/seek-style-guide/
+- organization: Segment
+  design_system: Evergreen
+  start_urls:
+  - https://evergreen.segment.com/
+- organization: Semantic
+  design_system: Semantic UI
+  start_urls:
+  - https://semantic-ui.com/
+- organization: ''
+  design_system: Semi Design
+  start_urls:
+  - https://semi.design/en-US/
+- organization: Semrush
+  design_system: Intergalactic
+  start_urls:
+  - https://developer.semrush.com/intergalactic/
+- organization: ServiceNow
+  design_system: ServiceNow Design System
+  start_urls:
+  - https://styleguide.servicenow.com/#!/
+- organization: ServiceTitan
+  design_system: Anvil
+  start_urls:
+  - https://anvil.servicetitan.com/
+- organization: Shopify
+  design_system: Polaris
+  start_urls:
+  - https://polaris.shopify.com/
+- organization: ''
+  design_system: Siemens iX
+  start_urls:
+  - https://ix.siemens.io/
+- organization: ''
+  design_system: Singapore Government Design System
+  start_urls:
+  - https://www.designsystem.tech.gov.sg/
+- organization: Sipgate
+  design_system: pandaUI
+  start_urls:
+  - https://panda.sipgatedesign.com/
+- organization: SIS Gov UK
+  design_system: Intelligence Community Design System
+  start_urls:
+  - https://design.sis.gov.uk/
+- organization: ''
+  design_system: Sky Toolkit
+  start_urls:
+  - https://www.sky.com/toolkit/
+- organization: Skyscanner
+  design_system: Backpack
+  start_urls:
+  - https://skyscanner.design/
+- organization: Skyscanner
+  design_system: Backpack
+  start_urls:
+  - https://backpack.github.io/
+- organization: SpareBank 1
+  design_system: SpareBank 1 Designsystem
+  start_urls:
+  - https://design.sparebank1.no/
+- organization: Sprout Social
+  design_system: Seeds
+  start_urls:
+  - https://sproutsocial.com/seeds/
+- organization: Stack Overflow
+  design_system: Stacks
+  start_urls:
+  - https://stackoverflow.design/
+- organization: ''
+  design_system: Starbucks Style Guide
+  start_urls:
+  - https://www.starbucks.com/static/reference/styleguide/
+- organization: State of New South Wales
+  design_system: Digital NSW
+  start_urls:
+  - https://www.digital.nsw.gov.au/digital-design-system/
+- organization: StudyPortals
+  design_system: Styleguide
+  start_urls:
+  - https://styleguide.studyportals.com/
+- organization: Sumup
+  design_system: CircuitUI
+  start_urls:
+  - https://circuit.sumup.com/
+- organization: ''
+  design_system: Teambition Clarity Design
+  start_urls:
+  - https://design.teambition.com/
+- organization: Telefónica
+  design_system: Mística
+  start_urls:
+  - https://brandfactory.telefonica.com/mistica/
+- organization: Thumbtack
+  design_system: Thumbprint
+  start_urls:
+  - https://thumbprint.design/
+- organization: TOTVS
+  design_system: Portinari UI
+  start_urls:
+  - https://po-ui.io/
+- organization: ''
+  design_system: Transport for West Midlands
+  start_urls:
+  - https://designsystem.tfwm.org.uk/
+- organization: Trello
+  design_system: Nachos
+  start_urls:
+  - https://design.trello.com/
+- organization: Twilio
+  design_system: Paste
+  start_urls:
+  - https://paste.twilio.design/
+- organization: U.S. Department of Veterans Affairs
+  design_system: Design system
+  start_urls:
+  - https://design.va.gov/
+- organization: U.S. Government
+  design_system: U.S. Web Design System
   start_urls:
-    - https://www.audi.com/ci/en/guides/user-interface/introduction.html
-- name: "Australian Government, Department of Agriculture, Fisheries and Forestry — Agriculture Design System (AgDS)"
+  - https://designsystem.digital.gov/
+- organization: Uber
+  design_system: Base Web
   start_urls:
-    - https://design-system.agriculture.gov.au/
-- name: "Australian Government, Department of Health — Health Design System"
+  - https://baseweb.design/
+- organization: United States Centers for Medicare & Medicaid Services
+  design_system: CMS Design System
   start_urls:
-    - https://designsystem.health.gov.au/
-- name: "Australian Open Source Community — GOLD Design System"
+  - https://design.cms.gov/
+- organization: United States Patent and Trademark Office
+  design_system: USPTO UI Design Library
   start_urls:
-    - https://gold.designsystemau.org/
-- name: "AutoGuru — Overdrive"
+  - https://uspto.github.io/USPTO-Design-System/
+- organization: United States Space Force
+  design_system: Astro
   start_urls:
-    - https://overdrive.autoguru.io/
-- name: "Automattic — Wordpress.com design handbook"
+  - https://www.astrouxds.com/
+- organization: USAJobs
+  design_system: USA jobs design system
   start_urls:
-    - https://dotcombrand.wordpress.com/
-- name: "AWS — Cloudscape Design System"
+  - https://usajobs.github.io/design-system/
+- organization: uSwitch
+  design_system: uStyle
   start_urls:
-    - https://cloudscape.design/
-- name: "AWS Amplify — Amplify UI"
+  - https://ustyle.guide/
+- organization: Vercel
+  design_system: Geist
   start_urls:
-    - https://ui.docs.amplify.aws/
-- name: "Backbase — Design system"
+  - https://vercel.com/design/introduction/
+- organization: Vimeo
+  design_system: Vimeo Design System
   start_urls:
-    - https://designsystem.backbase.com/v2/web-components/
-- name: "Banco Santander — Flame Design System"
+  - https://vimeo.github.io/iris/
+- organization: VMware
+  design_system: Clarity Design System
   start_urls:
-    - https://bancosantander.invisionapp.com/dsm/santander-group/flame-ds-santander/
-- name: "Barnardo's — Barnardo's Design System"
+  - https://clarity.design/
+- organization: Volvo Cars Web Design System
+  design_system: Volvo
   start_urls:
-    - https://design-system.barnardos.org.uk/
-- name: "BBC — Global Experience Language (GEL)"
+  - https://developer.volvocars.com/design-system/web/
+- organization: VTEX
+  design_system: Styleguide
   start_urls:
-    - https://www.bbc.co.uk/gel/
-- name: "Benevity — Skyline"
+  - https://styleguide.vtex.com/
+- organization: ''
+  design_system: Vue Design System
   start_urls:
-    - https://skyline.benevity.org/
-- name: "Biings — Biings Design System"
+  - https://vueds.com/
+- organization: Washington Post
+  design_system: Washington Post Design System (WPDS)
   start_urls:
-    - https://biings.design/
-- name: "BLiP — UAI Design System"
+  - https://build.washingtonpost.com/
+- organization: Webex
+  design_system: Momentum Design System
   start_urls:
-    - https://design.blip.ai/uai-design-system/
-- name: "Brainly — Brainly Style Guide"
+  - https://momentum.design/
+- organization: Welcome to the Jungle
+  design_system: Welcome UI
   start_urls:
-    - https://styleguide.brainly.com/
-- name: "Brainly — Design"
+  - https://www.welcome-ui.com/
+- organization: Westpac
+  design_system: GEL
   start_urls:
-    - https://design.brainly.com/
-- name: "Bridge — Bold design system"
+  - https://gel.westpacgroup.com.au/
+- organization: WeWork
+  design_system: Ray
   start_urls:
-    - https://bold.bridge.ufsc.br/
-- name: "Brightcore — UI"
+  - https://ray.wework.com/
+- organization: Wise
+  design_system: Design system
   start_urls:
-    - https://ui.britecore.com/
-- name: "Brighte — Spark Design System"
+  - https://wise.design/
+- organization: Wonderbly
+  design_system: Lost My Name Design System
   start_urls:
-    - https://spark.brighte.com.au/
-- name: "British Gas — Nucleus Design System"
+  - https://design-system.lostmy.name/
+- organization: Wonderbly
+  design_system: Wonderbly Design System
   start_urls:
-    - https://britishgas.design/
-- name: "BT — Arc"
+  - https://design-system.wonderbly.com/
+- organization: Wonderflow
+  design_system: Wanda Design System
   start_urls:
-    - https://arc.bt.com/
-- name: "Buildit — Gravity"
+  - https://design.wonderflow.ai/
+- organization: Workday
+  design_system: Workday Canvas
   start_urls:
-    - https://style.buildit.digital/
-- name: "BuzzFeed — Solid Style Guide"
+  - https://design.workday.com/
+- organization: Yelp
+  design_system: Yelp Styleguide
   start_urls:
-    - https://solid.buzzfeed.com/
-- name: "Canonical — Vanilla framework"
+  - https://www.yelp.com/styleguide/
+- organization: Zendesk
+  design_system: Garden
   start_urls:
-    - https://vanillaframework.io/
-- name: "Catho — Quantum"
-  start_urls:
-    - https://catho.github.io/quantum/
-- name: "censhare GmbH — Zen"
-  start_urls:
-    - https://design.censhare.com/
-- name: "Chakra team — Chakra UI"
-  start_urls:
-    - https://chakra-ui.com/
-- name: "City of Boston — Fleet"
-  start_urls:
-    - https://patterns.boston.gov/
-- name: "Cloudflare — CF-UI"
-  start_urls:
-    - https://cloudflare.github.io/cf-ui/
-- name: "Consumer Financial Protection Bureau — CFPB Design Manual"
-  start_urls:
-    - https://cfpb.github.io/design-system/
-- name: "Contentful — Forma 36"
-  start_urls:
-    - https://f36.contentful.com/
-- name: "Culture Amp — Kaizen"
-  start_urls:
-    - https://cultureamp.design/
-- name: "Datadog — Druids"
-  start_urls:
-    - https://druids.datadoghq.com/
-- name: "Decathlon — Design System - Vitamin"
-  start_urls:
-    - https://decathlon.design/
-- name: "Decentraland UI"
-  start_urls:
-    - https://ui.decentraland.org/
-- name: "Design Language — E-Trade"
-  start_urls:
-    - https://etrade.design/
-- name: "Discovery Education — Comet"
-  start_urls:
-    - https://comet.discoveryeducation.com/
-- name: "Drawbotics — Drylus"
-  start_urls:
-    - https://drawbotics.github.io/drylus/
-- name: "Duolingo — Design guidelines"
-  start_urls:
-    - https://www.duolingo.com/design/
-- name: "Dynatrace — Barista"
-  start_urls:
-    - https://barista.dynatrace.com/
-- name: "eBay — Playbook"
-  start_urls:
-    - https://playbook.ebay.com/
-- name: "eBay — Skin"
-  start_urls:
-    - https://ebay.github.io/skin/
-- name: "Elastic UI — Elastic UI Framework"
-  start_urls:
-    - https://elastic.github.io/eui/
-- name: "Elia Group — Nova"
-  start_urls:
-    - https://nova.eliagroup.io/
-- name: "ENGIE — Fluid"
-  start_urls:
-    - https://www.engie.design/
-- name: "Enigma — Boundless"
-  start_urls:
-    - https://boundless.js.org/
-- name: "Equinor — EDS"
-  start_urls:
-    - https://eds.equinor.com/
-- name: "Estonia — Brand Estonia"
-  start_urls:
-    - https://brand.estonia.ee/
-- name: "Eurostar — GLU"
-  start_urls:
-    - https://style.eurostar.com/
-- name: "Family Search — Frontier"
-  start_urls:
-    - https://www.familysearch.org/frontier/styleguide/
-- name: "Financial Times — Origami"
-  start_urls:
-    - https://origami.ft.com/
-- name: "Finastra — Finastra Design System"
-  start_urls:
-    - https://design.fusionfabric.cloud/
-- name: "Firefox — Photon Design System"
-  start_urls:
-    - https://design.firefox.com/photon/
-- name: "Flexport — Latitude"
-  start_urls:
-    - https://www.flexport.com/design/
-- name: "Foundation"
-  start_urls:
-    - https://get.foundation/
-- name: "Foyer — Foyer Design System"
-  start_urls:
-    - https://design.foyer.lu/
-- name: "FutureLearn — FutureLearn Pattern Library"
-  start_urls:
-    - https://storybook.futurelearn.com/
-- name: "GE — Edison Design System"
-  start_urls:
-    - https://edisondesignsystem.com/
-- name: "General Electric — Predix Design System"
-  start_urls:
-    - https://www.predix-ui.com/
-- name: "Github — Primer"
-  start_urls:
-    - https://primer.style/
-- name: "GitLab — Pajamas Design System"
-  start_urls:
-    - https://design.gitlab.com/
-- name: "GO-JEK — Asphalt"
-  start_urls:
-    - https://asphalt.gojek.io/
-- name: "Goldman Sachs — Goldman Sachs Design System"
-  start_urls:
-    - https://design.gs.com/home/
-- name: "GoodBarber — GoodBarber Design System"
-  start_urls:
-    - https://www.goodbarber.com/uxdesign/
-- name: "Google — Material 2"
-  start_urls:
-    - https://material.io/guidelines/#introduction-goals/
-- name: "Google — Material Design"
-  start_urls:
-    - https://material.io/
-- name: "GOV.UK — GOV.UK Design System"
-  start_urls:
-    - https://design-system.service.gov.uk/
-- name: "GOV.UK — GOV.UK Design System"
-  start_urls:
-    - https://www.gov.uk/design-system/
-- name: "Government of Canada — Aurora Design System"
-  start_urls:
-    - https://design.gccollab.ca/
-- name: "Government of Canada — Canada.ca design system"
-  start_urls:
-    - https://www.canada.ca/en/government/about/design-system.html
-- name: "Gusto — Workbench"
-  start_urls:
-    - https://workbench.gusto.com/
-- name: "Gympass — Yoga"
-  start_urls:
-    - https://gympass.github.io/yoga/
-- name: "Halstack — Halstack Design System"
-  start_urls:
-    - https://developer.dxc.com/design/
-- name: "Heartbeat — .pulse"
-  start_urls:
-    - https://pulse.heartbeat.ua/
-- name: "Helios Design System — Hashicorp"
-  start_urls:
-    - https://helios.hashicorp.design
-- name: "Help Scout — Help Scout Style Guide"
-  start_urls:
-    - https://style.helpscout.com/
-- name: "Helsinki — Helsinki Design System"
-  start_urls:
-    - https://hds.hel.fi/
-- name: "Heroku — Heroki Design"
-  start_urls:
-    - https://design.herokai.com/
-- name: "Hewlett Packard — Grommet"
-  start_urls:
-    - https://v2.grommet.io/
-- name: "Hewlett Packard — Grommet"
-  start_urls:
-    - https://grommet.io/
-- name: "Hubspot — Canvas Design System"
-  start_urls:
-    - https://canvas.hubspot.com/
-- name: "Hudl — Uniform"
-  start_urls:
-    - https://uniform.hudl.com/
-- name: "IBM — Carbon Design System"
-  start_urls:
-    - https://www.carbondesignsystem.com/
-- name: "IBM — IBM Design Language"
-  start_urls:
-    - https://www.ibm.com/design/language/
-- name: "Indiana University — Rivet"
-  start_urls:
-    - https://rivet.uits.iu.edu/
-- name: "Infor — Infor Design System"
-  start_urls:
-    - https://design.infor.com/
-- name: "ING — Lion"
-  start_urls:
-    - https://lion-web.netlify.app/
-- name: "Instacart — Snacks"
-  start_urls:
-    - https://instacart.github.io/Snacks/
-- name: "Instructure Inc — Instructure UI"
-  start_urls:
-    - https://instructure.design/
-- name: "Intuit — Design system"
-  start_urls:
-    - https://design.intuit.com/quickbooks
-- name: "Intuit — QuickBooks Design System"
-  start_urls:
-    - https://design.intuit.com/quickbooks/
-- name: "iStreamPlanet — Pebble Design System"
-  start_urls:
-    - https://pebble.istreamplanet.net/
-- name: "Italian Public Administration — .it Designers Italy"
-  start_urls:
-    - https://designers.italia.it/
-- name: "JetBrains — JetBrains Web UI"
-  start_urls:
-    - https://jetbrains.github.io/ring-ui/
-- name: "JSTOR — Pharos"
-  start_urls:
-    - https://pharos.jstor.org/
-- name: "Just Eat Takeaway — PIE"
-  start_urls:
-    - https://pie.design/
-- name: "Kajabi — Sage"
-  start_urls:
-    - https://sage.kajabi.com
-- name: "kickstart — kickstartDS"
-  start_urls:
-    - https://www.kickstartds.com/
-- name: "Kiwi.com — Orbit"
-  start_urls:
-    - https://orbit.kiwi/
-- name: "KoliBri — KoliBri - Public UI"
-  start_urls:
-    - https://public-ui.github.io/
-- name: "Kontur"
-  start_urls:
-    - https://guides.kontur.ru/
-- name: "Latitude Financial — Basis Design System"
-  start_urls:
-    - https://basis.now.sh/
-- name: "Liferay — Lexicon"
-  start_urls:
-    - https://lexicondesign.io/
-- name: "LINE — LINE Design System"
-  start_urls:
-    - https://designsystem.line.me/
-- name: "LocalTapiola — Duet"
-  start_urls:
-    - https://www.duetds.com/
-- name: "Lonely Planet — Rizzo"
-  start_urls:
-    - https://rizzo.lonelyplanet.com/
-- name: "Loom — Lens"
-  start_urls:
-    - https://lens.loom.dev/
-- name: "Louder Than Ten — Manual"
-  start_urls:
-    - https://www.louderthanten.com/manual/
-- name: "Mail.ru — Group Paradigm"
-  start_urls:
-    - https://design.mail.ru/
-- name: "MailChimp — Mailchimp Content Styleguide"
-  start_urls:
-    - https://styleguide.mailchimp.com/
-- name: "MailChimp — MailChimp Pattern Library"
-  start_urls:
-    - https://ux.mailchimp.com/
-- name: "MailChimp — Mailchimp Patterns"
-  start_urls:
-    - https://ux.mailchimp.com/patterns/
-- name: "Mantine"
-  start_urls:
-    - https://mantine.dev/
-- name: "Mapbox — Mapbox Base"
-  start_urls:
-    - https://www.mapbox.com/base/
-- name: "Marvel — Marvel Styleguide"
-  start_urls:
-    - https://marvelapp.com/styleguide/
-- name: "Material 3"
-  start_urls:
-    - https://m3.material.io/
-- name: "Materialize — Materialize CSS"
-  start_urls:
-    - https://materializecss.com/
-- name: "Meetup — Swarm Design System"
-  start_urls:
-    - https://meetup.github.io/swarm-design-system/
-- name: "Merck — Liquid"
-  start_urls:
-    - https://www.emd.design/
-- name: "Mesosphere — CNVS"
-  start_urls:
-    - https://mesosphere.github.io/cnvs/
-- name: "Microsoft — Fluent"
-  start_urls:
-    - https://www.microsoft.com/design/fluent/
-- name: "Microsoft — Fluent UI"
-  start_urls:
-    - https://developer.microsoft.com/en-us/fluentui#/
-- name: "Mixpanel — Mixpanel DS"
-  start_urls:
-    - https://design.mixpanel.com/
-- name: "MongoDB — MongoDB Design System"
-  start_urls:
-    - https://www.mongodb.design/
-- name: "MongoDB — MongoDB Design System"
-  start_urls:
-    - https://mongodb.design/
-- name: "Monzo — Monzo Tone of Voice"
-  start_urls:
-    - https://monzo.com/tone-of-voice/
-- name: "Morningstar — Morningstar Design System"
-  start_urls:
-    - https://designsystem.morningstar.com/
-- name: "Mozilla — Protocol"
-  start_urls:
-    - https://protocol.mozilla.org/
-- name: "Mozilla firefox — Acorn"
-  start_urls:
-    - https://acorn.firefox.com/
-- name: "Mutual of Omaha — Digital Design Guide"
-  start_urls:
-    - https://design.mutualofomaha.com/digital/
-- name: "MYOB — Feelix"
-  start_urls:
-    - https://feelix.myob.com/
-- name: "NASA — NASA Web Design System"
-  start_urls:
-    - https://github.com/bruffridge/nasawds/
-- name: "National Instruments — Fuse"
-  start_urls:
-    - https://ni.github.io/design-system/
-- name: "NationBuilder — Radius"
-  start_urls:
-    - https://www.nationbuilder.design/
-- name: "Neurodiversity — Design system"
-  start_urls:
-    - https://neurodiversity.design/
-- name: "New York State — New York State Design System"
-  start_urls:
-    - http://designsystem.ny.gov/
-- name: "New Zealand Government — New Zealand Government Design System (NZGDS)"
-  start_urls:
-    - https://design-system-alpha.digital.govt.nz/
-- name: "New Zealand Ministry of Education — Design System"
-  start_urls:
-    - https://designsystem.education.govt.nz/
-- name: "News UK — NewsKit"
-  start_urls:
-    - https://www.newskit.co.uk/
-- name: "NHS.UK — Service Manual"
-  start_urls:
-    - https://service-manual.nhs.uk/
-- name: "nib — Mesh Design System"
-  start_urls:
-    - https://www.meshdesignsystem.com/
-- name: "Nordhealth — Nord Design System"
-  start_urls:
-    - https://nordhealth.design/
-- name: "NS Dutch Railways — Tractie"
-  start_urls:
-    - https://tractie.ns.nl/
-- name: "Nulogy — Nulogy Design System"
-  start_urls:
-    - https://nulogy.design/
-- name: "OPower — OPattern"
-  start_urls:
-    - https://ux.opower.com/opattern/
-- name: "Oracle — Alta"
-  start_urls:
-    - https://www.oracle.com/webfolder/technetwork/jet/
-- name: "Oracle — Alta UI"
-  start_urls:
-    - https://www.oracle.com/webfolder/ux/middleware/alta/index.html
-- name: "Oracle — Redwood"
-  start_urls:
-    - https://redwood.oracle.com/
-- name: "Palantir — Blueprint"
-  start_urls:
-    - https://blueprintjs.com/
-- name: "PAQT — Graphite Design System"
-  start_urls:
-    - https://graphitedesignsystem.com/
-- name: "Patreon — Studio"
-  start_urls:
-    - https://studio.patreon.com/
-- name: "PatternFly"
-  start_urls:
-    - https://www.patternfly.org/v4/
-- name: "Pega Digital — Bolt Design System"
-  start_urls:
-    - https://boltdesignsystem.com/
-- name: "Pegasystems — Pega Cosmos"
-  start_urls:
-    - https://design.pega.com/
-- name: "Pinterest — Gestalt"
-  start_urls:
-    - https://pinterest.github.io/gestalt/#/
-- name: "Pivotal software — Pivotal UI"
-  start_urls:
-    - https://styleguide.pivotal.io/
-- name: "Pluralsight — Pluralsight Design System"
-  start_urls:
-    - https://design-system.pluralsight.com/
-- name: "Priceline — Priceline One"
-  start_urls:
-    - https://pricelinelabs.github.io/design-system/
-- name: "Priceline — Priceline One"
-  start_urls:
-    - https://priceline.github.io/design-system/
-- name: "Pusher — Chameleon"
-  start_urls:
-    - https://pusher.github.io/chameleon/
-- name: "Quicken Loans — Spark Design System"
-  start_urls:
-    - https://sparkdesignsystem.com/
-- name: "Radix — Radix UI"
-  start_urls:
-    - https://www.radix-ui.com/
-- name: "Rambler"
-  start_urls:
-    - https://rambler-digital-solutions.github.io/rambler-ui/
-- name: "Rambler — Ratio"
-  start_urls:
-    - https://ui-kit.rambler.ru/#/
-- name: "React95"
-  start_urls:
-    - https://react95.github.io/React95/
-- name: "Red Hat — Patternfly Design System"
-  start_urls:
-    - https://www.patternfly.org/
-- name: "REI — Cedar"
-  start_urls:
-    - https://rei.github.io/rei-cedar-docs/
-- name: "Rendition"
-  start_urls:
-    - https://balena-io-modules.github.io/rendition/
-- name: "Reshaped"
-  start_urls:
-    - https://reshaped.so/content/docs/getting-started/overview
-- name: "Royal Canin — Royal Canin's Design Language"
-  start_urls:
-    - https://developer.royalcanin.com/
-- name: "Sainsbury's — Luna"
-  start_urls:
-    - https://luna.sainsburys.co.uk/
-- name: "Salesforce — Lightning Design System"
-  start_urls:
-    - https://www.lightningdesignsystem.com/
-- name: "Samsung — Tizen CircularUI"
-  start_urls:
-    - https://developer.samsung.com/one-ui-watch-tizen/
-- name: "SAP — Fiori"
-  start_urls:
-    - https://experience.sap.com/fiori-design-web/
-- name: "SAP — Fiori Fundamentals"
-  start_urls:
-    - https://sap.github.io/fundamental/
-- name: "SAP OpenUI"
-  start_urls:
-    - https://sdk.openui5.org/controls/
-- name: "Scania — Tegel"
-  start_urls:
-    - https://tegel.scania.com/
-- name: "Scania Digital Design System"
-  start_urls:
-    - https://tegel.scania.com/home/
-- name: "Seek — Braid Design System"
-  start_urls:
-    - https://seek-oss.github.io/braid-design-system/
-- name: "Seek — Seek Style Guide"
-  start_urls:
-    - https://seek-oss.github.io/seek-style-guide/
-- name: "Segment — Evergreen"
-  start_urls:
-    - https://evergreen.segment.com/
-- name: "Semantic — Semantic UI"
-  start_urls:
-    - https://semantic-ui.com/
-- name: "Semi Design"
-  start_urls:
-    - https://semi.design/en-US/
-- name: "Semrush — Intergalactic"
-  start_urls:
-    - https://developer.semrush.com/intergalactic/
-- name: "ServiceNow — ServiceNow Design System"
-  start_urls:
-    - https://styleguide.servicenow.com/#!/
-- name: "ServiceTitan — Anvil"
-  start_urls:
-    - https://anvil.servicetitan.com/
-- name: "Shopify — Polaris"
-  start_urls:
-    - https://polaris.shopify.com/
-- name: "Siemens iX"
-  start_urls:
-    - https://ix.siemens.io/
-- name: "Singapore Government Design System"
-  start_urls:
-    - https://www.designsystem.tech.gov.sg/
-- name: "Sipgate — pandaUI"
-  start_urls:
-    - https://panda.sipgatedesign.com/
-- name: "SIS Gov UK — Intelligence Community Design System"
-  start_urls:
-    - https://design.sis.gov.uk/
-- name: "Sky Toolkit"
-  start_urls:
-    - https://www.sky.com/toolkit/
-- name: "Skyscanner — Backpack"
-  start_urls:
-    - https://skyscanner.design/
-- name: "Skyscanner — Backpack"
-  start_urls:
-    - https://backpack.github.io/
-- name: "SpareBank 1 — SpareBank 1 Designsystem"
-  start_urls:
-    - https://design.sparebank1.no/
-- name: "Sprout Social — Seeds"
-  start_urls:
-    - https://sproutsocial.com/seeds/
-- name: "Stack Overflow — Stacks"
-  start_urls:
-    - https://stackoverflow.design/
-- name: "Starbucks Style Guide"
-  start_urls:
-    - https://www.starbucks.com/static/reference/styleguide/
-- name: "State of New South Wales — Digital NSW"
-  start_urls:
-    - https://www.digital.nsw.gov.au/digital-design-system/
-- name: "StudyPortals — Styleguide"
-  start_urls:
-    - https://styleguide.studyportals.com/
-- name: "Sumup — CircuitUI"
-  start_urls:
-    - https://circuit.sumup.com/
-- name: "Teambition Clarity Design"
-  start_urls:
-    - https://design.teambition.com/
-- name: "Telefónica — Mística"
-  start_urls:
-    - https://brandfactory.telefonica.com/mistica/
-- name: "Thumbtack — Thumbprint"
-  start_urls:
-    - https://thumbprint.design/
-- name: "TOTVS — Portinari UI"
-  start_urls:
-    - https://po-ui.io/
-- name: "Transport for West Midlands"
-  start_urls:
-    - https://designsystem.tfwm.org.uk/
-- name: "Trello — Nachos"
-  start_urls:
-    - https://design.trello.com/
-- name: "Twilio — Paste"
-  start_urls:
-    - https://paste.twilio.design/
-- name: "U.S. Department of Veterans Affairs — Design system"
-  start_urls:
-    - https://design.va.gov/
-- name: "U.S. Government — U.S. Web Design System"
-  start_urls:
-    - https://designsystem.digital.gov/
-- name: "Uber — Base Web"
-  start_urls:
-    - https://baseweb.design/
-- name: "United States Centers for Medicare & Medicaid Services — CMS Design System"
-  start_urls:
-    - https://design.cms.gov/
-- name: "United States Patent and Trademark Office — USPTO UI Design Library"
-  start_urls:
-    - https://uspto.github.io/USPTO-Design-System/
-- name: "United States Space Force — Astro"
-  start_urls:
-    - https://www.astrouxds.com/
-- name: "USAJobs — USA jobs design system"
-  start_urls:
-    - https://usajobs.github.io/design-system/
-- name: "uSwitch — uStyle"
-  start_urls:
-    - https://ustyle.guide/
-- name: "Vercel — Geist"
-  start_urls:
-    - https://vercel.com/design/introduction/
-- name: "Vimeo — Vimeo Design System"
-  start_urls:
-    - https://vimeo.github.io/iris/
-- name: "VMware — Clarity Design System"
-  start_urls:
-    - https://clarity.design/
-- name: "Volvo Cars Web Design System — Volvo"
-  start_urls:
-    - https://developer.volvocars.com/design-system/web/
-- name: "VTEX — Styleguide"
-  start_urls:
-    - https://styleguide.vtex.com/
-- name: "Vue Design System"
-  start_urls:
-    - https://vueds.com/
-- name: "Washington Post — Washington Post Design System (WPDS)"
-  start_urls:
-    - https://build.washingtonpost.com/
-- name: "Webex — Momentum Design System"
-  start_urls:
-    - https://momentum.design/
-- name: "Welcome to the Jungle — Welcome UI"
-  start_urls:
-    - https://www.welcome-ui.com/
-- name: "Westpac — GEL"
-  start_urls:
-    - https://gel.westpacgroup.com.au/
-- name: "WeWork — Ray"
-  start_urls:
-    - https://ray.wework.com/
-- name: "Wise — Design system"
-  start_urls:
-    - https://wise.design/
-- name: "Wonderbly — Lost My Name Design System"
-  start_urls:
-    - https://design-system.lostmy.name/
-- name: "Wonderbly — Wonderbly Design System"
-  start_urls:
-    - https://design-system.wonderbly.com/
-- name: "Wonderflow — Wanda Design System"
-  start_urls:
-    - https://design.wonderflow.ai/
-- name: "Workday — Workday Canvas"
-  start_urls:
-    - https://design.workday.com/
-- name: "Yelp — Yelp Styleguide"
-  start_urls:
-    - https://www.yelp.com/styleguide/
-- name: "Zendesk — Garden"
-  start_urls:
-    - https://garden.zendesk.com/
+  - https://garden.zendesk.com/

@@ -13,6 +13,8 @@ Usage:
     python fetch_screenshots.py --force   # re-fetch every system's screenshot
 """
 
+from __future__ import annotations
+
 import sys
 from pathlib import Path
 
@@ -20,6 +22,7 @@ import requests
 import yaml
 
 from slug import slugify
+from text_utils import full_name
 
 SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
 SCREENSHOTS_DIR = Path(__file__).parent / "screenshots"
@@ -51,17 +54,18 @@ def main(force: bool = False) -> None:
         if not start_url:
             continue
 
-        out_path = SCREENSHOTS_DIR / f"{slugify(entry['name'])}.jpg"
+        name = full_name(entry)
+        out_path = SCREENSHOTS_DIR / f"{slugify(name)}.jpg"
         if out_path.exists() and not force:
             continue
 
-        print(f"Fetching screenshot for {entry['name']} ({start_url})...")
+        print(f"Fetching screenshot for {name} ({start_url})...")
         content = fetch_screenshot(start_url)
         if content:
             out_path.write_bytes(content)
             fetched += 1
         else:
-            print(f"  no screenshot obtained for {entry['name']}")
+            print(f"  no screenshot obtained for {name}")
 
     print(f"\nDone. {fetched} new screenshot(s) fetched.")
 
