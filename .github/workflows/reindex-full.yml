@@ -50,7 +50,18 @@ jobs:
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
         run: python ingest.py --all --shard ${{ matrix.shard }}/${{ env.SHARD_COUNT }} ${{ inputs.force && '--force' || '' }}
 
-      - uses: actions/upload-artifact@v4
+      # if: always() is the whole point of sharding: ingest.py writes
+      # systems.yaml/pages_index.json incrementally (after each system, well
+      # before that system's embedding calls, which is where a Jina rate-limit
+      # or any other mid-run failure actually happens) — so by the time this
+      # shard's ingest step fails, the runner's local disk already reflects
+      # every system it got through. Without always(), a failed step skips
+      # every step after it by default, this upload never happens, and that
+      # already-crawled progress is discarded the moment the runner is torn
+      # down — which is exactly why sites that clearly got indexed (visible in
+      # the job log) never showed up after a rebuild.
+      - if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: shard-${{ matrix.shard }}
           path: |

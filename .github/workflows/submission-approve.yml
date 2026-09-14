@@ -42,7 +42,17 @@ jobs:
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
         run: python ingest.py --system "${{ steps.approve.outputs.full_name }}"
 
+      # if: always() on these three — ingest.py writes systems.yaml/
+      # pages_index.json right after crawling (before the embedding calls
+      # that are where a failure like a Jina rate-limit actually happens), so
+      # even if the ingest step above fails partway, this one system's
+      # updated pages_indexed/resources are already on disk. Without
+      # always(), a failed ingest step would skip straight past committing
+      # and deploying it, silently discarding that progress when the runner
+      # is torn down. "Comment and close"/the email below stay success-only
+      # on purpose — don't tell the submitter it's live if it isn't.
       - name: Generate directory page
+        if: always()
         run: |
           python generate_home.py
           python generate_directory.py
@@ -50,12 +60,14 @@ jobs:
           python generate_systems.py
 
       - name: Commit updated registry stats + directory page
+        if: always()
         run: |
           git add systems.yaml home.html directory.html pages_index.json components systems
           git diff --quiet --cached || git commit -m "Update directory page after approving ${{ steps.approve.outputs.full_name }} [skip ci]"
           git push
 
       - name: Deploy directory page to Netlify
+        if: always()
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

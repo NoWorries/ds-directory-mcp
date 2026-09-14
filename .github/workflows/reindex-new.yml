@@ -32,7 +32,18 @@ jobs:
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
         run: python ingest.py --new
 
+      # Every step below runs with if: always() — ingest.py writes
+      # systems.yaml/pages_index.json incrementally per system (well before
+      # that system's embedding calls, which is where a mid-run failure like
+      # a Jina rate-limit actually happens), so whatever the ingest step above
+      # got through before failing is already sitting on disk. Without
+      # always(), a failed step skips everything after it by default, so that
+      # progress would never get committed and would vanish when the runner
+      # is torn down — even though the job log clearly showed sites being
+      # indexed. This is what let a stalled/failing run silently discard
+      # already-completed work.
       - name: Generate static directory page
+        if: always()
         run: |
           python generate_home.py
           python generate_directory.py
@@ -40,9 +51,11 @@ jobs:
           python generate_systems.py
 
       - name: Check crawl health (maintainer-facing only — not shown on the public page)
+        if: always()
         run: python check_crawl_health.py
 
       - name: Open/update/close maintainer issue for low-coverage systems
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -59,6 +72,7 @@ jobs:
           fi
 
       - name: Commit discovered resources + directory page
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -71,6 +85,7 @@ jobs:
           fi
 
       - name: Deploy directory page to Netlify
+        if: always()
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
