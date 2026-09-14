@@ -128,19 +128,18 @@ def found_count(entry: dict) -> int:
     return sum(1 for key, _ in COLUMNS if resources.get(key))
 
 
-def render_name_block(entry: dict, link_to_detail: bool = False) -> str:
+def render_name_block(entry: dict) -> str:
     org, ds_name = split_org_name(entry)
     favicon = favicon_html((entry.get("start_urls") or [None])[0])
     org_html = f'<span class="org">{html.escape(org)}</span>' if org else ""
     ds_name_html = html.escape(ds_name)
-    if link_to_detail:
-        ds_name_html = f'<a href="systems/{slugify(full_name(entry))}.html">{ds_name_html}</a>'
     return f'<div class="name-block">{favicon}<div class="name-text">{org_html}<span class="ds-name">{ds_name_html}</span></div></div>'
 
 
 def render_row(entry: dict) -> str:
     name_text = full_name(entry)
     row_id = slugify(name_text)
+    detail_href = f"systems/{slugify(name_text)}.html"
     pages = entry.get("pages_indexed")
     pages_text = "—" if pages is None else str(pages)
     n_found = found_count(entry)
@@ -148,7 +147,10 @@ def render_row(entry: dict) -> str:
 
     return f"""
     <tr id="{row_id}" data-name="{html.escape(name_text.lower())}">
-      <td class="name-cell">{render_name_block(entry, link_to_detail=True)}</td>
+      <td class="name-cell">
+        {render_name_block(entry)}
+        <a class="view-details-link" href="{detail_href}">View details &rarr;</a>
+      </td>
       <td class="cell cell-pages" data-sort-value="{pages if pages is not None else -1}">{pages_text}</td>
       {cells}
       <td class="cell cell-found-count" data-sort-value="{n_found}">{n_found}/{len(COLUMNS)}</td>
@@ -185,7 +187,7 @@ def render_card(entry: dict) -> str:
     return f"""
     <a class="card" href="{detail_href}" data-name="{html.escape(name_text.lower())}">
       {thumb_html}
-      <div class="card-body">
+      <div class="card-body textured">
         {render_name_block(entry)}
         <div class="meta">{pages} pages indexed</div>
       </div>
@@ -214,18 +216,19 @@ def render_page(entries: list[dict]) -> str:
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
-  /* Breaks an element out of .page's max-width to span the full viewport,
-     while .page itself (and everything else on this page — heading, toolbar,
-     nav) stays at the normal reading width. Standard trick: since .page is
-     horizontally centered (margin: 0 auto), half its own width minus half the
-     viewport width is exactly the offset needed to reach the viewport edges,
-     regardless of how wide the viewport is. Re-adds the page's own side
-     padding so content lines up with the rest of the page at narrow widths. */
-  .full-bleed {{
-    width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
-    padding: 0 24px; box-sizing: border-box;
-  }}
-  .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
+  /* This page gets more breathing room than the shared PAGE_MAX_WIDTH since
+     the table has a lot of columns, but it's still a fixed, centered cap —
+     not an edge-to-edge breakout — so the table/grid below can only grow as
+     wide as they actually need (see table's width: auto below), never wider,
+     and everything (nav, heading, toolbar, table) shares the same margins
+     instead of the table alone reaching closer to the viewport edge. */
+  .page {{ max-width: 1320px; }}
+  /* inline-flex (not flex) so this row only takes the width its own controls
+     need — a block-level flex container instead stretches to the page's full
+     width and, combined with the old justify-content: space-between, pushed
+     the view toggle out to the far edge, decoupled from how wide the table
+     below it actually ends up (see table's width: auto above). */
+  .table-toolbar {{ display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
   .legend {{ font-size: 0.82rem; color: var(--text-faint); margin: 0 0 12px; }}
   #tableFilter {{
     padding: 8px 12px; font: inherit; font-size: 0.85rem; border: 1px solid var(--border);
@@ -250,6 +253,7 @@ def render_page(entries: list[dict]) -> str:
      visible once the local layer has scrolled out from under it, i.e. exactly
      when there's more table to the left/right than currently visible. */
   .table-wrap {{
+    display: inline-block; max-width: 100%; vertical-align: top;
     overflow-x: auto; border: 1px solid var(--border); border-radius: 10px;
     box-shadow: var(--shadow);
     background-color: var(--surface);
@@ -263,7 +267,7 @@ def render_page(entries: list[dict]) -> str:
     background-size: 24px 100%, 24px 100%, 10px 100%, 10px 100%;
     background-attachment: local, local, scroll, scroll;
   }}
-  table {{ border-collapse: collapse; width: 100%; font-size: 0.86rem; }}
+  table {{ border-collapse: collapse; width: auto; font-size: 0.86rem; }}
   th {{
     text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-weight: 600;
     white-space: nowrap; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em;
@@ -276,27 +280,29 @@ def render_page(entries: list[dict]) -> str:
      jump around as rows are measured for the first time while scrolling. */
   tbody tr {{ content-visibility: auto; contain-intrinsic-size: auto 46px; }}
   tbody tr:last-child td {{ border-bottom: none; }}
-  tbody tr:hover td {{ background: var(--surface-sunken); }}
   .name-cell {{ min-width: 200px; }}
   .name-block {{ display: flex; align-items: center; gap: 8px; }}
   .name-text {{ display: flex; flex-direction: column; line-height: 1.25; }}
   .org {{ font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); }}
   .ds-name {{ font-weight: 600; font-size: 0.92rem; }}
-  .ds-name a {{ color: inherit; text-decoration: none; }}
-  .ds-name a:hover {{ text-decoration: underline; }}
   .favicon {{ border-radius: 3px; flex: none; }}
   .meta {{ font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; font-variant-numeric: tabular-nums; font-family: "JetBrains Mono", monospace; }}
   .cell {{ text-align: center; font-variant-numeric: tabular-nums; }}
   .cell-pages {{ font-family: "JetBrains Mono", monospace; color: var(--text-muted); }}
   .cell-found a {{ color: var(--accent); text-decoration: none; display: inline-flex; }}
+  .cell-found a:hover {{ text-decoration: underline; text-underline-offset: 2px; }}
   .cell-none {{ color: var(--text-faint); }}
+  .view-details-link {{
+    display: inline-block; margin-top: 2px; font-size: 0.76rem; font-weight: 600;
+    text-decoration: none; text-underline-offset: 2px;
+  }}
+  .view-details-link:hover {{ text-decoration: underline; }}
   .cell-found-count {{
     font-family: "JetBrains Mono", monospace; font-weight: 600; color: var(--text);
     position: sticky; right: 0; background: var(--surface);
     box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25);
   }}
   th:last-child {{ position: sticky; right: 0; background: var(--surface); box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25); }}
-  tbody tr:hover td.cell-found-count {{ background: var(--surface-sunken); }}
   .badge {{
     background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px;
     font-size: 0.72rem; font-family: "JetBrains Mono", monospace; font-weight: 500;
@@ -347,7 +353,7 @@ def render_page(entries: list[dict]) -> str:
   </div>
   <p class="legend" id="listLegend">✓ = resource found and linked · — = none found · click a column header to sort</p>
 
-  <div class="table-wrap full-bleed" id="listView">
+  <div class="table-wrap" id="listView">
   <table id="directoryTable">
     <thead>
       <tr>
@@ -363,7 +369,7 @@ def render_page(entries: list[dict]) -> str:
   </table>
   </div>
 
-  <div class="cards-grid full-bleed" id="cardsGrid" hidden>
+  <div class="cards-grid" id="cardsGrid" hidden>
     {cards}
   </div>
 </div>

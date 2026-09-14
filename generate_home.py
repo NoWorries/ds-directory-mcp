@@ -105,6 +105,7 @@ def render_page(entries: list[dict]) -> str:
     display: flex; align-items: center; gap: 14px; background: var(--surface); border: 1px solid var(--border);
     border-radius: 12px; padding: 18px 20px; text-decoration: none; color: var(--text);
     box-shadow: var(--shadow); transition: border-color 0.15s, transform 0.15s;
+    overflow: hidden;
   }}
   .nav-card:hover {{ border-color: var(--accent); transform: translateY(-1px); }}
   .nav-card-icon {{
@@ -121,6 +122,7 @@ def render_page(entries: list[dict]) -> str:
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
     background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);
     border-radius: 12px; padding: 20px 24px; margin-bottom: 36px; box-shadow: var(--shadow);
+    overflow: hidden;
   }}
   .mcp-badge {{
     display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700;
@@ -133,6 +135,8 @@ def render_page(entries: list[dict]) -> str:
   .status-dot {{ display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: none; }}
   .status-dot.awake {{ background: #22c55e; }}
   .status-dot.sleeping {{ background: #f59e0b; }}
+  .status-dot.waking {{ background: var(--accent); animation: status-pulse 1s ease-in-out infinite; }}
+  @keyframes status-pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.35; }} }}
   .wake-button {{
     font: inherit; font-size: 0.76rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
     border: 1px solid var(--border); background: var(--surface); color: var(--accent); cursor: pointer;
@@ -177,7 +181,7 @@ def render_page(entries: list[dict]) -> str:
   </section>
 
   <div class="nav-cards">
-    <a class="nav-card" href="/directory.html">
+    <a class="nav-card textured" href="/directory.html">
       <span class="nav-card-icon">{GRID_ICON_SVG_LARGE}</span>
       <span class="nav-card-text">
         <h3>Browse all systems</h3>
@@ -185,7 +189,7 @@ def render_page(entries: list[dict]) -> str:
       </span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
-    <a class="nav-card" href="/components/index.html">
+    <a class="nav-card textured" href="/components/index.html">
       <span class="nav-card-icon">{PACKAGE_ICON_SVG}</span>
       <span class="nav-card-text">
         <h3>Browse by component</h3>
@@ -195,7 +199,7 @@ def render_page(entries: list[dict]) -> str:
     </a>
   </div>
 
-  <div class="mcp-bar">
+  <div class="mcp-bar textured">
     <div class="mcp-card-text">
       <span class="mcp-badge">MCP Server</span>
       <h2>Connect this to Claude (or any MCP-compatible client)</h2>
@@ -384,17 +388,12 @@ def render_page(entries: list[dict]) -> str:
       '<button type="button" class="wake-button" id="wakeButton">Wake it up</button>';
     const wakeButton = document.getElementById("wakeButton");
     if (wakeButton) {{
-      wakeButton.addEventListener("click", () => {{
-        if (waking) return;
-        waking = true;
-        wakeButton.disabled = true;
-        wakeButton.textContent = "Waking…";
-        checkMcpHealth().finally(() => {{ waking = false; }});
-      }});
+      wakeButton.addEventListener("click", () => wakeServer());
     }}
   }}
 
   async function checkMcpHealth() {{
+    if (waking) return; // wakeServer() owns mcpStatusEl until it finishes
     try {{
       const res = await fetch(HEALTH_URL, {{ signal: AbortSignal.timeout(3000) }});
       if (!res.ok) throw new Error("not ok");
@@ -403,6 +402,37 @@ def render_page(entries: list[dict]) -> str:
     }} catch (err) {{
       renderMcpStatus(false);
     }}
+  }}
+
+  // A single 3s-timeout health check (fine for the background poll) isn't
+  // enough to tell whether a click actually did anything — Render's real
+  // cold start is 30-60s, so the first probe after clicking almost always
+  // still fails and renderMcpStatus(false) would immediately overwrite the
+  // button with an identical-looking "sleeping" state, making the click feel
+  // like a no-op. Wake gets its own persistent, visibly-different state
+  // (pulsing dot, explicit "waking" copy) that survives across several
+  // retries instead of being wiped out by the first failed poll.
+  async function wakeServer() {{
+    if (waking) return;
+    waking = true;
+    mcpStatusEl.innerHTML = '<span class="status-dot waking"></span> Waking the server up… (usually takes 30-60s)';
+
+    const deadline = Date.now() + 75000;
+    while (Date.now() < deadline) {{
+      try {{
+        const res = await fetch(HEALTH_URL, {{ signal: AbortSignal.timeout(5000) }});
+        if (res.ok) {{
+          try {{ localStorage.setItem("mcp-last-awake", new Date().toISOString()); }} catch (err) {{ /* fine */ }}
+          waking = false;
+          renderMcpStatus(true);
+          return;
+        }}
+      }} catch (err) {{ /* still waking — keep polling until the deadline */ }}
+      await new Promise(resolve => setTimeout(resolve, 4000));
+    }}
+    waking = false;
+    mcpStatusEl.innerHTML = '<span class="status-dot sleeping"></span> Still not responding — it may need another try.';
+    setTimeout(() => renderMcpStatus(false), 2500);
   }}
 
   function startMcpPolling() {{

@@ -17,9 +17,9 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from generate_directory import COLUMNS, favicon_html, indexed_only, load_pages_index, load_systems, thumbnail_src
-from page_shell import FONT_LINK, TOKENS_CSS, routes_nav
+from page_shell import EXTERNAL_LINK_ICON_SVG, FONT_LINK, GITHUB_ICON_SVG, TOKENS_CSS, routes_nav
 from slug import slugify
-from text_utils import clean_title, full_name, split_org_name
+from text_utils import clean_title, dedupe_system_name, full_name, split_org_name
 
 SYSTEMS_DIR = Path(__file__).parent / "systems"
 
@@ -49,7 +49,8 @@ def render_resource_list(entry: dict) -> str:
     if not found:
         return '<p class="empty-note">No secondary resources discovered yet.</p>'
     items = "".join(
-        f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">{label}</a></li>'
+        f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">'
+        f'{GITHUB_ICON_SVG if label == "GitHub" else EXTERNAL_LINK_ICON_SVG} {label}</a></li>'
         for label, url in found
     )
     return f'<ul class="resource-list">{items}</ul>'
@@ -59,8 +60,17 @@ def render_page_list(name: str, pages_index: dict) -> str:
     pages = pages_index.get(name) or []
     if not pages:
         return '<p class="empty-note">No pages indexed yet.</p>'
+
+    def page_title(p: dict) -> str:
+        cleaned = clean_title(p["title"])
+        # A page whose title IS the system name (already shown in the H1
+        # above) would otherwise show as a link with no distinguishing label
+        # of its own — fall back to the raw cleaned title rather than an
+        # empty link.
+        return dedupe_system_name(cleaned, name) or cleaned
+
     items = "".join(
-        f'<li><a href="{html.escape(p["url"])}" target="_blank" rel="noopener">{html.escape(clean_title(p["title"]))}</a></li>'
+        f'<li><a href="{html.escape(p["url"])}" target="_blank" rel="noopener">{html.escape(page_title(p))}</a></li>'
         for p in sorted(pages, key=lambda p: clean_title(p["title"]).lower())
     )
     return f'<ul class="page-list">{items}</ul>'
@@ -130,9 +140,10 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   .resource-list, .page-list {{ list-style: none; margin: 0; padding: 0; }}
   .resource-list {{ display: flex; flex-wrap: wrap; gap: 8px; }}
   .resource-list li a {{
-    display: inline-block; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px;
-    text-decoration: none; font-size: 0.85rem; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border);
+    border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 500;
   }}
+  .resource-list li a svg {{ flex: none; }}
   .resource-list li a:hover {{ border-color: var(--accent); color: var(--accent); }}
   .page-list {{ columns: 2; column-gap: 24px; }}
   .page-list li {{ padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }}

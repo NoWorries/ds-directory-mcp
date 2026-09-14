@@ -19,7 +19,7 @@ from component_taxonomy import TAXONOMY
 from generate_directory import load_pages_index
 from page_shell import FONT_LINK, NAV_HEIGHT, TOKENS_CSS, routes_nav
 from slug import slugify
-from text_utils import clean_title
+from text_utils import clean_title, dedupe_system_name
 
 COMPONENTS_DIR = Path(__file__).parent / "components"
 
@@ -114,9 +114,13 @@ def render_sidebar(component_index: dict[str, list[dict]], current: str) -> str:
 
 
 def render_component_page(name: str, entries: list[dict], component_index: dict[str, list[dict]]) -> str:
+    def page_title_html(e: dict) -> str:
+        title = dedupe_system_name(clean_title(e["title"]), e["system"])
+        return f'<span class="page-title">{html.escape(title)}</span>' if title else ""
+
     by_system = "".join(
         f'<li><a href="{html.escape(e["url"])}" target="_blank" rel="noopener">{html.escape(e["system"])}</a> '
-        f'<span class="page-title">{html.escape(clean_title(e["title"]))}</span></li>'
+        f'{page_title_html(e)}</li>'
         for e in sorted(entries, key=lambda e: e["system"].lower())
     )
 
@@ -127,10 +131,9 @@ def render_component_page(name: str, entries: list[dict], component_index: dict[
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(name)} — Design Systems Directory</title>
 {HEAD}
-  .page.page-wide {{ max-width: 1240px; }}
-  .component-layout {{ display: flex; gap: 40px; align-items: flex-start; }}
+  .component-layout {{ display: flex; gap: 32px; align-items: flex-start; }}
   .component-sidebar {{
-    flex: 0 0 220px; position: sticky; top: calc({NAV_HEIGHT} + 24px);
+    flex: 0 0 190px; position: sticky; top: calc({NAV_HEIGHT} + 24px);
     max-height: calc(100vh - {NAV_HEIGHT} - 48px); overflow-y: auto;
     border-right: 1px solid var(--border); padding-right: 16px;
   }}
@@ -163,7 +166,7 @@ def render_component_page(name: str, entries: list[dict], component_index: dict[
 </head>
 <body>
 {routes_nav("components")}
-<div class="page page-wide">
+<div class="page">
   <div class="component-layout">
     {render_sidebar(component_index, name)}
     <div class="component-main">

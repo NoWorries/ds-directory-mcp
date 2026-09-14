@@ -27,6 +27,11 @@ TOKENS_CSS = f"""
     --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
     --accent: #1d4ed8; --accent-strong: #1638a8; --accent-soft: #e8edfc; --accent-soft-text: #1d4ed8;
     --shadow: 0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -10px rgba(15,23,42,0.14);
+    /* Faint fractal-noise grain (alpha-only, so it reads as texture rather
+       than color) — the shared look for .textured containers below. Kept as
+       a token so light/dark could each tune it without touching every
+       container's markup. */
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }}
   @media (prefers-color-scheme: dark) {{
     :root {{
@@ -37,6 +42,21 @@ TOKENS_CSS = f"""
     }}
   }}
   * {{ box-sizing: border-box; }}
+  /* A faint grain treatment for card-like containers (the MCP callout, nav
+     cards, grid cards) — applied via ::before so it layers over each
+     container's own background without fighting its other background-image
+     uses (e.g. a card's own thumbnail). Needs the container to have
+     `position: relative` (each usage sets it) and `overflow: hidden`
+     (usually already there) so it respects rounded corners instead of
+     bleeding past them. */
+  .textured {{ position: relative; }}
+  .textured::before {{
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background-image: var(--noise);
+    background-repeat: repeat;
+    opacity: 0.7;
+  }}
+  .textured > * {{ position: relative; }}
   body {{
     font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg); color: var(--text); margin: 0; padding: calc({NAV_HEIGHT} + 32px) 24px 80px;
@@ -104,10 +124,10 @@ TOKENS_CSS = f"""
 # icon-font/CDN dependency — the "class=feather..." attribute Feather ships
 # with is dropped since nothing here relies on it. width/height set per usage
 # site rather than baked in, so the same markup can be reused at different sizes.
-def _icon(path_markup: str, size: int = 18) -> str:
+def _icon(path_markup: str, size: int = 18, stroke_width: int = 2) -> str:
     return (
         f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
-        f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{path_markup}</svg>'
+        f'stroke-width="{stroke_width}" stroke-linecap="round" stroke-linejoin="round">{path_markup}</svg>'
     )
 
 
@@ -129,11 +149,23 @@ COPY_ICON_SVG = _icon(
     size=14,
 )
 FILTER_ICON_SVG = _icon('<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>', size=14)
-CHECK_ICON_SVG = _icon('<polyline points="20 6 9 17 4 12"></polyline>', size=15)
+CHECK_ICON_SVG = _icon('<polyline points="20 6 9 17 4 12"></polyline>', size=15, stroke_width=3)
 PACKAGE_ICON_SVG = _icon(
-    '<path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.11-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.79 0z"></path>'
-    '<polyline points="2.32 6.16 12 11 21.68 6.16"></polyline><line x1="12" y1="22.76" x2="12" y2="11"></line>',
+    '<line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>'
+    '<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>'
+    '<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line>',
     size=20,
+)
+EXTERNAL_LINK_ICON_SVG = _icon(
+    '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>'
+    '<polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>',
+    size=13,
+)
+GITHUB_ICON_SVG = _icon(
+    '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 '
+    '5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 '
+    '0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>',
+    size=16,
 )
 # Larger variant of the grid icon for use as a nav-card visual (vs. the compact
 # size used in the list/grid view-toggle button).
