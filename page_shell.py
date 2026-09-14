@@ -136,13 +136,16 @@ def routes_nav(current: str) -> str:
     correctly regardless of how deep the current page is nested.
 
     current: "search" (home), "directory" (the full list/grid), or "components".
+    Nav labels: "Search" (home), "All Systems" (directory — avoids repeating
+    "Directory" from the site name), "Components".
     """
     return f"""
     <nav class="site-nav">
       <div class="site-nav-inner">
         <a href="/" class="site-brand">Design Systems Directory</a>
         <div class="site-nav-links">
-          <a href="/directory.html" class="{'current' if current == 'directory' else ''}">Directory</a>
+          <a href="/" class="{'current' if current == 'search' else ''}">Search</a>
+          <a href="/directory.html" class="{'current' if current == 'directory' else ''}">All Systems</a>
           <a href="/components/index.html" class="{'current' if current == 'components' else ''}">Components</a>
         </div>
         <div class="nav-search">

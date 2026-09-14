@@ -145,7 +145,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 <body>
 {routes_nav("directory")}
 <div class="page">
-  <p class="eyebrow"><a href="/directory.html">Directory</a></p>
+  <p class="eyebrow"><a href="/directory.html">All Systems</a></p>
   <div class="system-header">{favicon}<span class="org-label">{html.escape(org) if org else html.escape(domain)}</span></div>
   <h1>{html.escape(ds_name)}</h1>
   <p class="meta-line">{" · ".join(html.escape(m) for m in meta_parts)}</p>

@@ -315,7 +315,7 @@ def render_page(entries: list[dict]) -> str:
 <body>
 {routes_nav("directory")}
 <div class="page">
-  <p class="eyebrow">Directory</p>
+  <p class="eyebrow">All Systems</p>
   <h1>Every indexed design system</h1>
   <p class="subtitle">{len(entries_sorted)} external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
 
