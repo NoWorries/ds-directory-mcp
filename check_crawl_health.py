@@ -1,55 +1,81 @@
 """
-Flags design systems whose crawl looks like it failed or was incomplete
-(fewer than LOW_COVERAGE_THRESHOLD pages indexed) and reports it to the
-maintainer — via the GitHub Actions job summary and a file the workflow hands
-to `gh issue create`/`gh issue edit`.
+Flags two opposite crawl-health problems and reports them to the maintainer —
+via the GitHub Actions job summary and a file the workflow hands to
+`gh issue create`/`gh issue edit`:
+
+1. Low coverage (fewer than LOW_COVERAGE_THRESHOLD pages indexed) — the crawl
+   likely failed or got blocked.
+2. Capped (hit ingest.py's max_pages ceiling with pages still queued) — the
+   crawl worked, but there's real content that wasn't indexed because the
+   site is bigger than max_pages allows.
 
 Deliberately NOT surfaced on the public directory page — see
-generate_directory.py's find_low_coverage() docstring for why.
+generate_directory.py's find_low_coverage()/find_capped() docstrings for why.
 """
 
 import os
 from pathlib import Path
 
-from generate_directory import LOW_COVERAGE_THRESHOLD, find_low_coverage, load_systems
+from generate_directory import LOW_COVERAGE_THRESHOLD, find_capped, find_low_coverage, load_systems
 from text_utils import full_name
 
 REPORT_FILE = Path(__file__).parent / "health_report.md"
 
 
-def render_report(low_coverage: list[dict]) -> str:
-    lines = [
-        f"### ⚠ {len(low_coverage)} system{'s' if len(low_coverage) != 1 else ''} likely failed to crawl properly",
-        "",
-        f"Fewer than {LOW_COVERAGE_THRESHOLD} pages indexed usually means a JS-rendered site the "
-        "crawler can't see through, a robots.txt block, a redirect, or a start_url that needs "
-        "`include_patterns`/`max_pages` tuning in `systems.yaml` — not that the system genuinely "
-        "has almost no documentation.",
-        "",
-    ]
-    for entry in low_coverage:
-        pages = entry["pages_indexed"]
-        start_url = (entry.get("start_urls") or [""])[0]
-        lines.append(f"- **{full_name(entry)}** — {pages} page{'s' if pages != 1 else ''} — {start_url}")
-    return "\n".join(lines)
+def render_report(low_coverage: list[dict], capped: list[dict]) -> str:
+    sections = []
+
+    if low_coverage:
+        lines = [
+            f"### ⚠ {len(low_coverage)} system{'s' if len(low_coverage) != 1 else ''} likely failed to crawl properly",
+            "",
+            f"Fewer than {LOW_COVERAGE_THRESHOLD} pages indexed usually means a JS-rendered site the "
+            "crawler can't see through, a robots.txt block, a redirect, or a start_url that needs "
+            "`include_patterns`/`max_pages` tuning in `systems.yaml` — not that the system genuinely "
+            "has almost no documentation.",
+            "",
+        ]
+        for entry in low_coverage:
+            pages = entry["pages_indexed"]
+            start_url = (entry.get("start_urls") or [""])[0]
+            lines.append(f"- **{full_name(entry)}** — {pages} page{'s' if pages != 1 else ''} — {start_url}")
+        sections.append("\n".join(lines))
+
+    if capped:
+        lines = [
+            f"### 📈 {len(capped)} system{'s' if len(capped) != 1 else ''} hit the max_pages ceiling",
+            "",
+            "The crawl stopped with pages still queued to visit — there's more real "
+            "documentation on these sites than got indexed. Raise `max_pages` for these "
+            "entries in `systems.yaml` if full coverage matters for them.",
+            "",
+        ]
+        for entry in capped:
+            pages = entry["pages_indexed"]
+            start_url = (entry.get("start_urls") or [""])[0]
+            lines.append(f"- **{full_name(entry)}** — {pages} pages indexed — {start_url}")
+        sections.append("\n".join(lines))
+
+    return "\n\n".join(sections)
 
 
 def main() -> None:
     entries = load_systems()
     low_coverage = find_low_coverage(entries)
+    capped = find_capped(entries)
 
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
 
-    if not low_coverage:
-        print("No low-coverage systems detected.")
+    if not low_coverage and not capped:
+        print("No crawl-health issues detected.")
         if REPORT_FILE.exists():
             REPORT_FILE.unlink()
         if summary_path:
             with open(summary_path, "a") as f:
-                f.write("### ✅ No low-coverage systems detected\n")
+                f.write("### ✅ No crawl-health issues detected\n")
         return
 
-    report = render_report(low_coverage)
+    report = render_report(low_coverage, capped)
     print(report)
     REPORT_FILE.write_text(report)
 

@@ -17,7 +17,7 @@ from urllib.parse import urlparse
 
 import yaml
 
-from page_shell import CHECK_ICON_SVG, FONT_LINK, GRID_ICON_SVG, LIST_ICON_SVG, TOKENS_CSS, routes_nav
+from page_shell import CHECK_ICON_SVG, EXTERNAL_LINK_ICON_SVG, FONT_LINK, GRID_ICON_SVG, LIST_ICON_SVG, TOKENS_CSS, routes_nav
 from slug import slugify
 from text_utils import full_name, split_org_name
 
@@ -105,6 +105,15 @@ def find_low_coverage(entries: list[dict]) -> list[dict]:
     ]
 
 
+def find_capped(entries: list[dict]) -> list[dict]:
+    """The opposite problem to find_low_coverage(): systems whose crawl hit
+    ingest.py's max_pages ceiling with more pages still queued (see
+    ingest.py's crawl()) — real content that exists but wasn't indexed,
+    rather than a failed/blocked crawl. Also maintainer-only, for the same
+    reason find_low_coverage() is."""
+    return [e for e in entries if e.get("hit_max_pages")]
+
+
 def favicon_html(start_url: str | None) -> str:
     domain = urlparse(start_url).netloc if start_url else ""
     if not domain:
@@ -128,29 +137,42 @@ def found_count(entry: dict) -> int:
     return sum(1 for key, _ in COLUMNS if resources.get(key))
 
 
-def render_name_block(entry: dict) -> str:
+def render_name_block(entry: dict, link_to_detail: bool = False) -> str:
     org, ds_name = split_org_name(entry)
     favicon = favicon_html((entry.get("start_urls") or [None])[0])
     org_html = f'<span class="org">{html.escape(org)}</span>' if org else ""
     ds_name_html = html.escape(ds_name)
+    if link_to_detail:
+        detail_href = f"systems/{slugify(full_name(entry))}.html"
+        ds_name_html = f'<a href="{detail_href}">{ds_name_html}</a>'
     return f'<div class="name-block">{favicon}<div class="name-text">{org_html}<span class="ds-name">{ds_name_html}</span></div></div>'
+
+
+def render_docs_cell(entry: dict) -> str:
+    start_url = (entry.get("start_urls") or [None])[0]
+    if not start_url:
+        return '<td class="cell cell-docs cell-none">—</td>'
+    url = html.escape(start_url)
+    return (
+        f'<td class="cell cell-docs">'
+        f'<a href="{url}" target="_blank" rel="noopener" title="Open {url}" aria-label="Open external docs site">'
+        f"{EXTERNAL_LINK_ICON_SVG}</a></td>"
+    )
 
 
 def render_row(entry: dict) -> str:
     name_text = full_name(entry)
+    _org, ds_name = split_org_name(entry)
     row_id = slugify(name_text)
-    detail_href = f"systems/{slugify(name_text)}.html"
     pages = entry.get("pages_indexed")
     pages_text = "—" if pages is None else str(pages)
     n_found = found_count(entry)
     cells = "".join(render_cell(entry, key) for key, _ in COLUMNS)
 
     return f"""
-    <tr id="{row_id}" data-name="{html.escape(name_text.lower())}">
-      <td class="name-cell">
-        {render_name_block(entry)}
-        <a class="view-details-link" href="{detail_href}">View details &rarr;</a>
-      </td>
+    <tr id="{row_id}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
+      <td class="name-cell">{render_name_block(entry, link_to_detail=True)}</td>
+      {render_docs_cell(entry)}
       <td class="cell cell-pages" data-sort-value="{pages if pages is not None else -1}">{pages_text}</td>
       {cells}
       <td class="cell cell-found-count" data-sort-value="{n_found}">{n_found}/{len(COLUMNS)}</td>
@@ -198,12 +220,13 @@ def render_card(entry: dict) -> str:
 def render_page(entries: list[dict]) -> str:
     entries_sorted = sorted(entries, key=lambda e: full_name(e).lower())
 
-    # Column indices: 0 = name (text sort), 1 = pages (number), 2..2+len(COLUMNS)-1
-    # = resource dots (found), last = found-count (number, pinned).
+    # Column indices: 0 = name (text sort), 1 = docs link (not sortable),
+    # 2 = pages (number), 3..3+len(COLUMNS)-1 = resource dots (found),
+    # last = found-count (number, pinned).
     header_cells = "".join(
-        f'<th data-col="{i + 2}" data-sort="found">{label}</th>' for i, (_, label) in enumerate(COLUMNS)
+        f'<th data-col="{i + 3}" data-sort="found">{label}</th>' for i, (_, label) in enumerate(COLUMNS)
     )
-    last_col = len(COLUMNS) + 2
+    last_col = len(COLUMNS) + 3
     rows = "".join(render_row(e) for e in entries_sorted)
     cards = "".join(render_card(e) for e in entries_sorted)
 
@@ -285,18 +308,32 @@ def render_page(entries: list[dict]) -> str:
   .name-text {{ display: flex; flex-direction: column; line-height: 1.25; }}
   .org {{ font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); }}
   .ds-name {{ font-weight: 600; font-size: 0.92rem; }}
+  .ds-name a {{ color: inherit; text-decoration: none; text-underline-offset: 2px; }}
+  .ds-name a:hover {{ text-decoration: underline; }}
   .favicon {{ border-radius: 3px; flex: none; }}
   .meta {{ font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; font-variant-numeric: tabular-nums; font-family: "JetBrains Mono", monospace; }}
   .cell {{ text-align: center; font-variant-numeric: tabular-nums; }}
   .cell-pages {{ font-family: "JetBrains Mono", monospace; color: var(--text-muted); }}
-  .cell-found a {{ color: var(--accent); text-decoration: none; display: inline-flex; }}
-  .cell-found a:hover {{ text-decoration: underline; text-underline-offset: 2px; }}
-  .cell-none {{ color: var(--text-faint); }}
-  .view-details-link {{
-    display: inline-block; margin-top: 2px; font-size: 0.76rem; font-weight: 600;
-    text-decoration: none; text-underline-offset: 2px;
+  /* A bare checkmark glyph doesn't read as clickable until you hover it —
+     giving it a pill background (same visual language as .badge/.chip
+     elsewhere) makes "this is a link" obvious at rest, not just on hover. */
+  .cell-found a {{
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--accent); background: var(--accent-soft); text-decoration: none;
+    width: 26px; height: 22px; border-radius: 999px;
   }}
-  .view-details-link:hover {{ text-decoration: underline; }}
+  .cell-found a:hover {{ background: var(--accent); color: #fff; }}
+  /* Distinct from the name link (which goes to this system's own detail
+     page): same pill treatment, but muted rather than accent-colored so it
+     doesn't read as another "resource found" indicator — this one always
+     goes straight out to the system's real docs site. */
+  .cell-docs a {{
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--text-muted); background: var(--surface-sunken); text-decoration: none;
+    width: 26px; height: 22px; border-radius: 999px; border: 1px solid var(--border);
+  }}
+  .cell-docs a:hover {{ color: var(--accent); border-color: var(--accent); }}
+  .cell-none {{ color: var(--text-faint); }}
   .cell-found-count {{
     font-family: "JetBrains Mono", monospace; font-weight: 600; color: var(--text);
     position: sticky; right: 0; background: var(--surface);
@@ -358,7 +395,8 @@ def render_page(entries: list[dict]) -> str:
     <thead>
       <tr>
         <th data-col="0" data-sort="text">System</th>
-        <th data-col="1" data-sort="number">Pages</th>
+        <th>Docs</th>
+        <th data-col="2" data-sort="number">Pages</th>
         {header_cells}
         <th data-col="{last_col}" data-sort="number">Found</th>
       </tr>
@@ -379,7 +417,12 @@ def render_page(entries: list[dict]) -> str:
   let currentSort = {{ col: null, dir: 1 }};
 
   function cellValue(row, col, type) {{
-    if (col === 0) return row.dataset.name || "";
+    // Sorting the System column by the visible design-system name (e.g.
+    // "Mozaic Design System"), not by row.dataset.name — that's the "Org —
+    // Name" identity string used for the name-filter box, and sorting by it
+    // instead would order rows by the org prefix, which isn't what's visually
+    // prominent in the name cell and made the sort look wrong/arbitrary.
+    if (col === 0) return row.dataset.sortName || "";
     const cell = row.children[col];
     if (!cell) return "";
     if (type === "found") return cell.classList.contains("cell-found") ? 1 : 0;

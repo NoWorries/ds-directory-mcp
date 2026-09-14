@@ -92,6 +92,17 @@ DEFAULT_EXCLUDE_PATTERNS = [
 # always nav-only, redirect, or placeholder pages — not worth embedding.
 MIN_CONTENT_LENGTH = 200
 
+# Per-system crawl ceiling when a systems.yaml entry doesn't set its own
+# max_pages. 246 of 247 registered systems currently rely on this default, so
+# it was quietly capping nearly the entire site's coverage at 30 pages
+# regardless of how big the real docs site is — bumped to give real multi-page
+# doc sites a realistic shot at full coverage. Still overridable per-entry in
+# systems.yaml for anything unusually large or unusually small. When a crawl
+# actually hits this ceiling (see crawl()'s hit_max_pages return value), that's
+# recorded on the entry and reported by check_crawl_health.py, since it means
+# there's likely more real content on the site than got indexed.
+DEFAULT_MAX_PAGES = 300
+
 
 def ensure_collection(client: QdrantClient) -> None:
     if not client.collection_exists(QDRANT_COLLECTION):
@@ -113,6 +124,13 @@ def fetch_page(url: str) -> BeautifulSoup | None:
     except requests.RequestException as exc:
         print(f"  skip {url}: {exc}")
         return None
+    # requests falls back to Latin-1 (per the old HTTP spec default) whenever a
+    # server's Content-Type header omits a charset — even though virtually
+    # every real docs site actually serves UTF-8. That mismatch is what turns
+    # an em dash into "â€"" once BeautifulSoup decodes .text with the wrong
+    # encoding, so force UTF-8 unless the server was explicit about something else.
+    if "charset" not in response.headers.get("content-type", "").lower():
+        response.encoding = "utf-8"
     return BeautifulSoup(response.text, "html.parser")
 
 
@@ -159,17 +177,20 @@ def extract_title(soup: BeautifulSoup, url: str) -> str:
 
 def crawl(
     start_urls: list[str],
-    max_pages: int = 30,
+    max_pages: int = DEFAULT_MAX_PAGES,
     include_patterns: list[str] | None = None,
     exclude_patterns: list[str] | None = None,
-) -> tuple[dict[str, str], set[str], dict[str, str]]:
+) -> tuple[dict[str, str], set[str], dict[str, str], bool]:
     """Breadth-first crawl restricted to the start URLs' domain(s).
 
-    Returns ({url: text}, all_links_seen, {url: page_title}) — all_links_seen
-    includes off-domain links (GitHub, Storybook, Figma, etc.) for resource
-    discovery, even though only same-domain pages are actually crawled and
-    embedded. page_title lets a browsable "jump straight to this page" index
-    show something more useful than a bare URL.
+    Returns ({url: text}, all_links_seen, {url: page_title}, hit_max_pages) —
+    all_links_seen includes off-domain links (GitHub, Storybook, Figma, etc.)
+    for resource discovery, even though only same-domain pages are actually
+    crawled and embedded. page_title lets a browsable "jump straight to this
+    page" index show something more useful than a bare URL. hit_max_pages is
+    True when the crawl stopped because it hit max_pages while pages were
+    still queued to visit — i.e. there's real, undiscovered content still out
+    there, as opposed to the crawl just running out of links on its own.
 
     include_patterns: if given, only crawl URLs containing one of these substrings
     (start_urls themselves are always crawled regardless).
@@ -216,7 +237,10 @@ def crawl(
                     continue
                 to_visit.append(link)
 
-    return pages, all_links_seen, page_titles
+    hit_max_pages = len(visited) >= max_pages and bool(to_visit)
+    if hit_max_pages:
+        print(f"  hit max_pages ({max_pages}) with {len(to_visit)} more page(s) still queued — coverage is likely incomplete")
+    return pages, all_links_seen, page_titles, hit_max_pages
 
 
 def load_registry() -> list[dict]:
@@ -266,8 +290,12 @@ def update_registry_stats(
     pages_indexed: int,
     resources: dict[str, list[str]],
     enrichment: dict,
+    hit_max_pages: bool = False,
 ) -> None:
-    fields = {"pages_indexed": pages_indexed}
+    # Written every run (not just when True) so a system that used to hit the
+    # cap and no longer does (bigger max_pages, or the site shrank) gets its
+    # flag cleared instead of staying stuck reporting stale incomplete-coverage.
+    fields = {"pages_indexed": pages_indexed, "hit_max_pages": hit_max_pages}
     if resources:
         fields["resources"] = resources
     if enrichment:
@@ -318,7 +346,7 @@ def delete_existing(client: QdrantClient, design_system_name: str) -> None:
 def ingest(
     design_system_name: str,
     start_urls: list[str],
-    max_pages: int = 30,
+    max_pages: int = DEFAULT_MAX_PAGES,
     include_patterns: list[str] | None = None,
     exclude_patterns: list[str] | None = None,
 ) -> None:
@@ -326,7 +354,7 @@ def ingest(
     ensure_collection(client)
     delete_existing(client, design_system_name)
 
-    pages, all_links_seen, page_titles = crawl(
+    pages, all_links_seen, page_titles, hit_max_pages = crawl(
         start_urls,
         max_pages=max_pages,
         include_patterns=include_patterns,
@@ -340,7 +368,13 @@ def ingest(
         print(f"  discovered resources: {resources}")
     if enrichment:
         print(f"  enrichment: {enrichment}")
-    update_registry_stats(design_system_name, pages_indexed=len(pages), resources=resources, enrichment=enrichment)
+    update_registry_stats(
+        design_system_name,
+        pages_indexed=len(pages),
+        resources=resources,
+        enrichment=enrichment,
+        hit_max_pages=hit_max_pages,
+    )
     update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in pages])
 
     for url, text in pages.items():
@@ -383,7 +417,7 @@ def ingest_entry(entry: dict, force: bool = False) -> None:
     ingest(
         design_system_name=name,
         start_urls=start_urls,
-        max_pages=entry.get("max_pages", 30),
+        max_pages=entry.get("max_pages", DEFAULT_MAX_PAGES),
         include_patterns=entry.get("include_patterns"),
         exclude_patterns=entry.get("exclude_patterns"),
     )
