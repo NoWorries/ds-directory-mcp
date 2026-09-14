@@ -105,7 +105,6 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
-  .page {{ max-width: 760px; margin: 0 auto; }}
   .system-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }}
   .org-label {{ font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }}
   .meta-line {{ font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px; }}
@@ -144,12 +143,12 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 </style>
 </head>
 <body>
+{routes_nav("directory")}
 <div class="page">
-  <p class="eyebrow"><a href="/">Design Systems Directory</a> / Systems</p>
+  <p class="eyebrow"><a href="/directory.html">Directory</a></p>
   <div class="system-header">{favicon}<span class="org-label">{html.escape(org) if org else html.escape(domain)}</span></div>
   <h1>{html.escape(ds_name)}</h1>
   <p class="meta-line">{" · ".join(html.escape(m) for m in meta_parts)}</p>
-  {routes_nav("directory")}
   {thumb_html}
 
   <dl class="freshness">

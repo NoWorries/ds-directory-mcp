@@ -6,6 +6,7 @@ frontend or embedded agent can query the indexed design systems.
 """
 
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -25,6 +26,11 @@ mcp = FastMCP(
     port=int(os.environ.get("PORT", 8000)),
 )
 qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+
+# Set once, at process start — Render's free tier spins up a brand new process
+# on every cold start, so this timestamp doubles as "how long has the current
+# instance been awake" for the /health endpoint below.
+SERVER_STARTED_AT = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
 
@@ -85,6 +91,14 @@ def design_system_directory(user_query: str) -> str:
         )
 
     return "\n\n---\n\n".join(formatted)
+
+
+@mcp.custom_route("/health", methods=["GET", "OPTIONS"])
+async def health(request: Request) -> JSONResponse:
+    """Cheap liveness probe for the directory page's "is the MCP server awake"
+    indicator — no Qdrant/Jina calls, just confirms the process itself is up
+    and reports when this instance started (i.e. since the last cold start)."""
+    return JSONResponse({"status": "awake", "server_started_at": SERVER_STARTED_AT}, headers=CORS_HEADERS)
 
 
 @mcp.custom_route("/search", methods=["GET", "OPTIONS"])

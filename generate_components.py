@@ -25,8 +25,7 @@ COMPONENTS_DIR = Path(__file__).parent / "components"
 
 HEAD = f"""{FONT_LINK}
 <style>
-{TOKENS_CSS}
-  .page {{ max-width: 900px; margin: 0 auto; }}"""
+{TOKENS_CSS}"""
 
 
 def build_component_index(pages_index: dict) -> dict[str, list[dict]]:
@@ -92,11 +91,11 @@ def render_index_page(component_index: dict[str, list[dict]]) -> str:
 </style>
 </head>
 <body>
+{routes_nav("components")}
 <div class="page">
-  <p class="eyebrow"><a href="/">Design Systems Directory</a> / Components</p>
+  <p class="eyebrow">Components</p>
   <h1>Browse by component</h1>
   <p class="subtitle">The same indexed design systems, entered by component name instead of by system or search query. Pick one to see which systems document it.</p>
-  {routes_nav("components")}
   <nav class="jump-nav">{jump_links}</nav>
   {sections}
 </div>
@@ -127,11 +126,11 @@ def render_component_page(name: str, entries: list[dict]) -> str:
 </style>
 </head>
 <body>
+{routes_nav("components")}
 <div class="page">
-  <p class="eyebrow"><a href="/">Design Systems Directory</a> / <a href="/components/index.html">Components</a></p>
+  <p class="eyebrow"><a href="/components/index.html">Components</a></p>
   <h1>{html.escape(name)}</h1>
   <p class="subtitle">{len(entries)} indexed system{"s" if len(entries) != 1 else ""} document {html.escape(name).lower()} — click through to the actual page.</p>
-  {routes_nav("components")}
   <ul class="system-list">{by_system}</ul>
 </div>
 </body>

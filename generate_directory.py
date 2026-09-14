@@ -26,11 +26,6 @@ OUTPUT_FILE = Path(__file__).parent / "directory.html"
 SCREENSHOTS_DIR = Path(__file__).parent / "screenshots"
 PAGES_INDEX_FILE = Path(__file__).parent / "pages_index.json"
 
-# Update if the Render service URL ever changes.
-MCP_URL = "https://designsystems.onrender.com/mcp"
-SEARCH_API_URL = "https://designsystems.onrender.com/search"
-MCP_INSTALL_COMMAND = f"claude mcp add ds-directory --transport http {MCP_URL}"
-
 # A system with fewer indexed pages than this either genuinely has a tiny docs
 # site, or (far more often) the crawl failed to get real content — blocked by
 # robots.txt, a JS-rendered SPA our plain requests+BeautifulSoup crawler can't
@@ -70,6 +65,24 @@ def indexed_only(entries: list[dict]) -> list[dict]:
     systems.yaml so `ingest.py --new` still picks them up; they just don't
     render anywhere on the site until that happens."""
     return [e for e in entries if e.get("pages_indexed") is not None]
+
+
+def compute_stats(entries: list[dict]) -> dict:
+    """Homepage stats: how much is actually indexed, right now."""
+    total_pages = sum(e.get("pages_indexed") or 0 for e in entries)
+    resource_counts = {key: 0 for key, _ in COLUMNS}
+    for e in entries:
+        resources = e.get("resources") or {}
+        for key, _ in COLUMNS:
+            if resources.get(key):
+                resource_counts[key] += 1
+    checked_values = [e["last_checked"] for e in entries if e.get("last_checked")]
+    return {
+        "total_systems": len(entries),
+        "total_pages": total_pages,
+        "resource_counts": resource_counts,
+        "last_checked": max(checked_values) if checked_values else None,
+    }
 
 
 def find_low_coverage(entries: list[dict]) -> list[dict]:
@@ -184,7 +197,6 @@ def render_page(entries: list[dict]) -> str:
     last_col = len(COLUMNS) + 2
     rows = "".join(render_row(e) for e in entries_sorted)
     cards = "".join(render_card(e) for e in entries_sorted)
-    system_names_json = json.dumps([full_name(e) for e in entries_sorted])
 
     return f"""<!doctype html>
 <html lang="en">
@@ -195,100 +207,6 @@ def render_page(entries: list[dict]) -> str:
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
-  .page {{ max-width: 1180px; margin: 0 auto; }}
-
-  .mcp-card {{
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    color: var(--text);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin-bottom: 36px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }}
-  .mcp-card-text h2 {{ font-family: "JetBrains Mono", monospace; font-size: 0.88rem; margin: 0 0 3px; font-weight: 700; color: var(--accent); }}
-  .mcp-card-text p {{ margin: 0; font-size: 0.82rem; color: var(--text-muted); max-width: 48ch; }}
-  .mcp-install {{ display: flex; align-items: center; gap: 8px; }}
-  .mcp-command {{
-    font-family: "JetBrains Mono", monospace; font-size: 0.78rem; background: var(--surface-sunken);
-    color: var(--text); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px;
-    white-space: nowrap; overflow-x: auto; max-width: 380px;
-  }}
-  .mcp-copy {{
-    font-family: "IBM Plex Sans", sans-serif; font-size: 0.78rem; font-weight: 600; padding: 8px 12px;
-    border-radius: 6px; border: 1px solid var(--border); background: var(--surface);
-    color: var(--accent); cursor: pointer; white-space: nowrap;
-  }}
-  .mcp-copy:hover {{ background: var(--accent-soft); }}
-
-  .search-card {{
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(15,23,42,0.05), 0 12px 32px -14px rgba(15,23,42,0.18);
-    padding: 26px;
-    margin-bottom: 20px;
-  }}
-  .search-title {{
-    font-family: "IBM Plex Sans", sans-serif; font-size: 0.95rem; font-weight: 600;
-    color: var(--text); margin: 0 0 14px;
-  }}
-  #q {{
-    width: 100%;
-    padding: 15px 18px;
-    font: inherit;
-    font-size: 1.05rem;
-    box-sizing: border-box;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--surface-sunken);
-    color: var(--text);
-  }}
-  #q:focus {{ outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }}
-  #results {{ margin-top: 8px; }}
-  .result {{ padding: 16px 0; border-top: 1px solid var(--border); }}
-  .result:first-child {{ border-top: none; }}
-  .result .meta {{ font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px; }}
-  .result .meta a {{ color: var(--text-muted); }}
-  .result .system-name {{ color: var(--text); font-weight: 600; }}
-  .result pre {{
-    white-space: pre-wrap; font-family: "IBM Plex Sans", sans-serif; font-size: 0.92rem;
-    background: var(--surface-sunken); padding: 12px 14px; border-radius: 6px; margin: 0; line-height: 1.5;
-  }}
-  .status {{ color: var(--text-muted); font-size: 0.9rem; }}
-
-  .restrict-toggle {{
-    display: inline-block; margin-top: 12px; background: none; border: none; padding: 0; cursor: pointer;
-    font: inherit; font-size: 0.82rem; color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px;
-  }}
-  .restrict-toggle:hover {{ color: var(--accent); }}
-  .filter-wrap {{ position: relative; margin-top: 16px; }}
-  .chips {{ display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }}
-  .chip {{ display: inline-flex; align-items: center; gap: 6px; background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 6px; padding: 4px 6px 4px 12px; font-size: 0.82rem; font-weight: 500; }}
-  .chip button {{ background: none; border: none; color: inherit; cursor: pointer; font-size: 0.95rem; line-height: 1; padding: 2px 4px; opacity: 0.75; }}
-  .chip button:hover {{ opacity: 1; }}
-  .filter-label {{ font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); margin: 0 0 8px; }}
-  #systemFilter {{
-    width: 260px; max-width: 100%; padding: 6px 12px 6px 30px; font: inherit; font-size: 0.85rem;
-    box-sizing: border-box; border: 1px solid var(--border); border-radius: 6px;
-    background: var(--surface-sunken) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="%235b6472" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>') no-repeat 10px center;
-    color: var(--text);
-  }}
-  #systemFilter:focus {{ background-color: var(--surface); border-color: var(--accent); outline: none; }}
-  .filter-dropdown {{
-    position: absolute; z-index: 10; top: 100%; left: 0; width: 260px; max-width: 100%;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-top: 6px;
-    max-height: 220px; overflow-y: auto; box-shadow: var(--shadow);
-  }}
-  .filter-option {{ padding: 8px 12px; font-size: 0.85rem; cursor: pointer; }}
-  .filter-option:hover {{ background: var(--surface-sunken); }}
-  .filter-hint {{ font-size: 0.78rem; color: var(--text-faint); margin: 6px 0 0; }}
-
   .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
   .legend {{ font-size: 0.82rem; color: var(--text-faint); margin: 0 0 12px; }}
   #tableFilter {{
@@ -305,9 +223,25 @@ def render_page(entries: list[dict]) -> str:
   .view-toggle button + button {{ border-left: 1px solid var(--border); }}
   .view-toggle button.current {{ background: var(--accent-soft); color: var(--accent); }}
 
+  /* Classic CSS-only "scroll shadow": two background-attachment:local layers
+     scroll WITH the content (so they only show at the true start/end, never
+     appearing over content past the very edges) and two background-attachment:
+     scroll shadow layers stay fixed to the viewport — the shadow only becomes
+     visible once the local layer has scrolled out from under it, i.e. exactly
+     when there's more table to the left/right than currently visible. */
   .table-wrap {{
-    overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+    overflow-x: auto; border: 1px solid var(--border); border-radius: 10px;
     box-shadow: var(--shadow);
+    background-color: var(--surface);
+    background-image:
+      linear-gradient(to right, var(--surface) 30%, rgba(0,0,0,0)),
+      linear-gradient(to left, var(--surface) 30%, rgba(0,0,0,0)),
+      linear-gradient(to right, rgba(15,23,42,0.15), rgba(15,23,42,0)),
+      linear-gradient(to left, rgba(15,23,42,0.15), rgba(15,23,42,0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-size: 24px 100%, 24px 100%, 10px 100%, 10px 100%;
+    background-attachment: local, local, scroll, scroll;
   }}
   table {{ border-collapse: collapse; width: 100%; font-size: 0.86rem; }}
   th {{
@@ -357,6 +291,11 @@ def render_page(entries: list[dict]) -> str:
      of source order, so without this override toggling hidden does nothing. */
   .cards-grid[hidden] {{ display: none; }}
   .cards-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }}
+  /* Same fix as .cards-grid above, needed again here: .card sets its own
+     "display: flex" below, which otherwise wins over [hidden] and breaks the
+     per-card name-filter (the row-level version never needed this because tr
+     doesn't set an explicit display of its own). */
+  .card[hidden] {{ display: none; }}
   .card {{
     background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
     box-shadow: var(--shadow); display: flex; flex-direction: column;
@@ -374,40 +313,11 @@ def render_page(entries: list[dict]) -> str:
 </style>
 </head>
 <body>
+{routes_nav("directory")}
 <div class="page">
-  <p class="eyebrow">Design Systems Directory</p>
-  <h1>Find what the community has already published</h1>
-  <p class="subtitle">{len(entries_sorted)} external design systems, semantically searchable and cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
-
-  {routes_nav("directory")}
-
-  <section class="search-card" id="search">
-    <h2 class="search-title">Search component patterns, tokens, and guidance across every indexed design system</h2>
-    <input id="q" type="text" placeholder="e.g. table column resizing, disabled button states...">
-
-    <button type="button" class="restrict-toggle" id="restrictToggle">Restrict search results</button>
-
-    <div class="filter-wrap" id="filterWrap" hidden>
-      <p class="filter-label">Optional: limit to specific systems</p>
-      <div class="chips" id="chips"></div>
-      <input id="systemFilter" type="text" placeholder="Type a system name...">
-      <div class="filter-dropdown" id="filterDropdown" hidden></div>
-      <p class="filter-hint">Leave blank to search across all indexed systems.</p>
-    </div>
-
-    <div id="results"></div>
-  </section>
-
-  <div class="mcp-card">
-    <div class="mcp-card-text">
-      <h2>Use this from Claude (or any MCP client)</h2>
-      <p>One command connects it as an MCP server — then just ask your assistant design-system questions directly.</p>
-    </div>
-    <div class="mcp-install">
-      <code class="mcp-command" id="mcpCommand">{MCP_INSTALL_COMMAND}</code>
-      <button class="mcp-copy" id="mcpCopy" type="button">Copy</button>
-    </div>
-  </div>
+  <p class="eyebrow">Directory</p>
+  <h1>Every indexed design system</h1>
+  <p class="subtitle">{len(entries_sorted)} external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
 
   <div class="table-toolbar">
     <input id="tableFilter" type="text" placeholder="Filter by name...">
@@ -440,142 +350,6 @@ def render_page(entries: list[dict]) -> str:
 </div>
 
 <script>
-  const API_URL = {json.dumps(SEARCH_API_URL)};
-  const ALL_SYSTEMS = {system_names_json};
-
-  const input = document.getElementById("q");
-  const resultsEl = document.getElementById("results");
-  const filterInput = document.getElementById("systemFilter");
-  const dropdown = document.getElementById("filterDropdown");
-  const chipsEl = document.getElementById("chips");
-  const restrictToggle = document.getElementById("restrictToggle");
-  const filterWrap = document.getElementById("filterWrap");
-  let debounceTimer;
-  const selectedSystems = new Set();
-
-  restrictToggle.addEventListener("click", () => {{
-    const nowHidden = !filterWrap.hidden;
-    filterWrap.hidden = nowHidden;
-    restrictToggle.textContent = nowHidden ? "Restrict search results" : "Hide restriction";
-    if (!nowHidden) filterInput.focus();
-  }});
-
-  input.addEventListener("input", () => {{
-    clearTimeout(debounceTimer);
-    const query = input.value.trim();
-    if (!query) {{
-      resultsEl.innerHTML = "";
-      return;
-    }}
-    debounceTimer = setTimeout(() => runSearch(query), 400);
-  }});
-
-  filterInput.addEventListener("input", () => renderDropdown(filterInput.value));
-  filterInput.addEventListener("focus", () => renderDropdown(filterInput.value));
-  document.addEventListener("click", (e) => {{
-    if (!e.target.closest(".filter-wrap")) dropdown.hidden = true;
-  }});
-
-  function renderDropdown(text) {{
-    const query = text.trim().toLowerCase();
-    const matches = ALL_SYSTEMS
-      .filter(name => !selectedSystems.has(name))
-      .filter(name => !query || name.toLowerCase().includes(query))
-      .slice(0, 8);
-
-    if (!matches.length) {{
-      dropdown.hidden = true;
-      return;
-    }}
-    dropdown.innerHTML = matches.map(name =>
-      `<div class="filter-option" data-name="${{escapeHtml(name)}}">${{escapeHtml(name)}}</div>`
-    ).join("");
-    dropdown.hidden = false;
-  }}
-
-  dropdown.addEventListener("click", (e) => {{
-    const option = e.target.closest(".filter-option");
-    if (!option) return;
-    selectedSystems.add(option.dataset.name);
-    filterInput.value = "";
-    dropdown.hidden = true;
-    renderChips();
-    if (input.value.trim()) runSearch(input.value.trim());
-  }});
-
-  function renderChips() {{
-    chipsEl.innerHTML = [...selectedSystems].map(name => `
-      <span class="chip">${{escapeHtml(name)}}<button type="button" data-name="${{escapeHtml(name)}}" aria-label="Remove filter">×</button></span>
-    `).join("");
-  }}
-
-  chipsEl.addEventListener("click", (e) => {{
-    const button = e.target.closest("button");
-    if (!button) return;
-    selectedSystems.delete(button.dataset.name);
-    renderChips();
-    if (input.value.trim()) runSearch(input.value.trim());
-  }});
-
-  async function runSearch(query) {{
-    resultsEl.innerHTML = '<p class="status">Searching… (first request may take up to a minute if the server was idle)</p>';
-    try {{
-      const params = new URLSearchParams({{ q: query }});
-      selectedSystems.forEach(name => params.append("system", name));
-      const res = await fetch(`${{API_URL}}?${{params.toString()}}`);
-      const data = await res.json();
-      renderResults(data.results || []);
-    }} catch (err) {{
-      waitAndRetry(query, 10);
-    }}
-  }}
-
-  function waitAndRetry(query, seconds) {{
-    if (seconds <= 0) {{
-      resultsEl.innerHTML = '<p class="status">Retrying now…</p>';
-      runSearch(query);
-      return;
-    }}
-    resultsEl.innerHTML = `<p class="status">Just warming up the search server — retrying in ${{seconds}}…</p>`;
-    setTimeout(() => waitAndRetry(query, seconds - 1), 1000);
-  }}
-
-  function renderResults(results) {{
-    if (!results.length) {{
-      resultsEl.innerHTML = '<p class="status">No matches found.</p>';
-      return;
-    }}
-    resultsEl.innerHTML = results.map(r => `
-      <div class="result">
-        <div class="meta">
-          <span class="system-name">${{escapeHtml(r.design_system_name || "Unknown system")}}</span>
-          &middot; score ${{r.score.toFixed(3)}}
-          &middot; <a href="${{escapeHtml(r.url || "#")}}" target="_blank" rel="noopener">${{escapeHtml(r.url || "")}}</a>
-        </div>
-        <pre>${{escapeHtml(r.text || "")}}</pre>
-      </div>
-    `).join("");
-  }}
-
-  function escapeHtml(str) {{
-    return String(str).replace(/[&<>"']/g, c => ({{
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-    }}[c]));
-  }}
-
-  // --- Copy MCP install command ---
-  const mcpCopy = document.getElementById("mcpCopy");
-  const mcpCommand = document.getElementById("mcpCommand");
-  mcpCopy.addEventListener("click", async () => {{
-    try {{
-      await navigator.clipboard.writeText(mcpCommand.textContent);
-      mcpCopy.textContent = "Copied!";
-      setTimeout(() => {{ mcpCopy.textContent = "Copy"; }}, 1500);
-    }} catch (err) {{
-      // Clipboard API unavailable (e.g. insecure context) — text is still selectable manually.
-    }}
-  }});
-
   // --- Table sort ---
   let currentSort = {{ col: null, dir: 1 }};
 
