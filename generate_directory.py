@@ -59,12 +59,21 @@ def load_pages_index() -> dict:
 
 
 def indexed_only(entries: list[dict]) -> list[dict]:
-    """Systems registered in systems.yaml but never actually crawled yet
-    (pages_indexed is None) don't get a public page — "not yet indexed" is
-    internal pipeline state, not something a visitor should see. They stay in
-    systems.yaml so `ingest.py --new` still picks them up; they just don't
-    render anywhere on the site until that happens."""
-    return [e for e in entries if e.get("pages_indexed") is not None]
+    """Systems that actually have something to show. Excludes both:
+    - never crawled yet (pages_indexed is None) — "not yet indexed" is
+      internal pipeline state, not something a visitor should see;
+    - crawled but found nothing (pages_indexed == 0) — usually a JS-rendered
+      site the crawler can't see through, a robots.txt block, or a start_url
+      that needs tuning (see find_low_coverage()), not a system that
+      genuinely has zero documentation. A public "0 pages indexed" card
+      reads as broken, not as "nothing here yet."
+
+    Either way they stay in systems.yaml (so `ingest.py --new`/a future full
+    recrawl still picks them up) and still get reported to the maintainer —
+    see check_crawl_health.py, which runs on the raw unfiltered registry —
+    they just don't render anywhere on the public site until real content is
+    found."""
+    return [e for e in entries if e.get("pages_indexed")]
 
 
 def compute_stats(entries: list[dict]) -> dict:
@@ -157,10 +166,11 @@ def thumbnail_src(name: str, start_url: str) -> str:
 
 
 def render_card(entry: dict) -> str:
-    """A lightweight preview only — thumbnail, name, one-line stats, and a
-    link through to the system's own detail page for everything else
-    (resources, freshness, full page list). Cards are a preview, not a
-    second copy of the full detail."""
+    """A lightweight preview only — thumbnail, name, and a page count. The
+    whole card is the link through to the system's own detail page for
+    everything else (resources, freshness, full page list) — no separate
+    "view details" line needed. Cards are a preview, not a second copy of the
+    full detail, so the resource-found count stays in the table view only."""
     name_text = full_name(entry)
     start_url = (entry.get("start_urls") or [None])[0]
     detail_href = f"systems/{slugify(name_text)}.html"
@@ -168,21 +178,18 @@ def render_card(entry: dict) -> str:
     thumb_html = ""
     if start_url:
         src = thumbnail_src(name_text, start_url)
-        thumb_html = f'<a href="{detail_href}" class="card-thumb-link"><img class="card-thumb" src="{src}" alt="" loading="lazy"></a>'
+        thumb_html = f'<img class="card-thumb" src="{src}" alt="" loading="lazy">'
 
     pages = entry.get("pages_indexed", 0)
-    n_found = found_count(entry)
-    stats = f"{pages} pages · {n_found}/{len(COLUMNS)} resources"
 
     return f"""
-    <div class="card" data-name="{html.escape(name_text.lower())}">
+    <a class="card" href="{detail_href}" data-name="{html.escape(name_text.lower())}">
       {thumb_html}
       <div class="card-body">
         {render_name_block(entry)}
-        <div class="meta">{stats}</div>
-        <a class="card-details-link" href="{detail_href}">View details →</a>
+        <div class="meta">{pages} pages indexed</div>
       </div>
-    </div>
+    </a>
     """
 
 
@@ -207,11 +214,17 @@ def render_page(entries: list[dict]) -> str:
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
-  .page.page-full {{ max-width: none; }}
-  /* This page opts out of the shared PAGE_MAX_WIDTH, so the fixed nav bar
-     (whose inner row is capped at that width in TOKENS_CSS) needs the same
-     override here — otherwise the table below stretches past the nav links. */
-  .site-nav-inner {{ max-width: none; }}
+  /* Breaks an element out of .page's max-width to span the full viewport,
+     while .page itself (and everything else on this page — heading, toolbar,
+     nav) stays at the normal reading width. Standard trick: since .page is
+     horizontally centered (margin: 0 auto), half its own width minus half the
+     viewport width is exactly the offset needed to reach the viewport edges,
+     regardless of how wide the viewport is. Re-adds the page's own side
+     padding so content lines up with the rest of the page at narrow widths. */
+  .full-bleed {{
+    width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+    padding: 0 24px; box-sizing: border-box;
+  }}
   .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
   .legend {{ font-size: 0.82rem; color: var(--text-faint); margin: 0 0 12px; }}
   #tableFilter {{
@@ -306,22 +319,21 @@ def render_page(entries: list[dict]) -> str:
   .card {{
     background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
     box-shadow: var(--shadow); display: flex; flex-direction: column;
-    content-visibility: auto; contain-intrinsic-size: auto 260px;
+    content-visibility: auto; contain-intrinsic-size: auto 220px;
+    text-decoration: none; color: inherit; transition: border-color 0.15s;
   }}
+  .card:hover {{ border-color: var(--accent); }}
   .card .name-block {{ align-items: flex-start; }}
-  .card-thumb-link {{ display: block; }}
   .card-thumb {{
     width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
     background: var(--surface-sunken); display: block;
   }}
   .card-body {{ padding: 14px; }}
-  .card-details-link {{ display: inline-block; margin-top: 10px; font-size: 0.82rem; font-weight: 600; text-decoration: none; }}
-  .card-details-link:hover {{ text-decoration: underline; }}
 </style>
 </head>
 <body>
 {routes_nav("directory")}
-<div class="page page-full">
+<div class="page">
   <p class="eyebrow">All Systems</p>
   <h1>Every indexed design system</h1>
   <p class="subtitle">{len(entries_sorted)} external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
@@ -335,7 +347,7 @@ def render_page(entries: list[dict]) -> str:
   </div>
   <p class="legend" id="listLegend">✓ = resource found and linked · — = none found · click a column header to sort</p>
 
-  <div class="table-wrap" id="listView">
+  <div class="table-wrap full-bleed" id="listView">
   <table id="directoryTable">
     <thead>
       <tr>
@@ -351,7 +363,7 @@ def render_page(entries: list[dict]) -> str:
   </table>
   </div>
 
-  <div class="cards-grid" id="cardsGrid" hidden>
+  <div class="cards-grid full-bleed" id="cardsGrid" hidden>
     {cards}
   </div>
 </div>
