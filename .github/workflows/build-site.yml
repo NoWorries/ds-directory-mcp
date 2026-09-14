@@ -56,4 +56,10 @@ jobs:
           if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
           if [ -d components ]; then cp -r components site/components; fi
           if [ -d systems ]; then cp -r systems site/systems; fi
-          npx --yes netlify-cli deploy --dir=site --prod
+          # --site pinned explicitly (not just via the NETLIFY_SITE_ID env var)
+          # and the CLI version pinned too — an unpinned `npx netlify-cli` can
+          # pick up a newer major version whose deploy-target resolution
+          # changed, which is a known way for --prod to land somewhere other
+          # than the site your custom domain actually points at (the domain
+          # then 404s even though the deploy itself "succeeded").
+          npx --yes netlify-cli@17 deploy --site "$NETLIFY_SITE_ID" --dir=site --prod

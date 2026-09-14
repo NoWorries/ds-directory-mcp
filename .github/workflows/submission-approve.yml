@@ -66,7 +66,7 @@ jobs:
           if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
           if [ -d components ]; then cp -r components site/components; fi
           if [ -d systems ]; then cp -r systems site/systems; fi
-          npx --yes netlify-cli deploy --dir=site --prod
+          npx --yes netlify-cli@17 deploy --site "$NETLIFY_SITE_ID" --dir=site --prod
 
       - name: Comment and close the issue
         env:
