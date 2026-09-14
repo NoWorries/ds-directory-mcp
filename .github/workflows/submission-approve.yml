@@ -44,13 +44,14 @@ jobs:
 
       - name: Generate directory page
         run: |
+          python generate_home.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
 
       - name: Commit updated registry stats + directory page
         run: |
-          git add systems.yaml directory.html pages_index.json components systems
+          git add systems.yaml home.html directory.html pages_index.json components systems
           git diff --quiet --cached || git commit -m "Update directory page after approving ${{ steps.approve.outputs.full_name }} [skip ci]"
           git push
 
@@ -60,7 +61,8 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
           mkdir -p site
-          cp directory.html site/index.html
+          cp home.html site/index.html
+          cp directory.html site/directory.html
           if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
           if [ -d components ]; then cp -r components site/components; fi
           if [ -d systems ]; then cp -r systems site/systems; fi

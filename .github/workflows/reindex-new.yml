@@ -34,6 +34,7 @@ jobs:
 
       - name: Generate static directory page
         run: |
+          python generate_home.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
@@ -61,7 +62,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add systems.yaml directory.html pages_index.json components systems
+          git add systems.yaml home.html directory.html pages_index.json components systems
           if ! git diff --cached --quiet; then
             git commit -m "Auto-index new design systems + update directory page [skip ci]"
             git push
@@ -75,7 +76,8 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
           mkdir -p site
-          cp directory.html site/index.html
+          cp home.html site/index.html
+          cp directory.html site/directory.html
           if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
           if [ -d components ]; then cp -r components site/components; fi
           if [ -d systems ]; then cp -r systems site/systems; fi

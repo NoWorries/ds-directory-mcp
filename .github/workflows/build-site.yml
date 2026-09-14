@@ -40,6 +40,7 @@ jobs:
 
       - name: Generate site pages from current systems.yaml/pages_index.json
         run: |
+          python generate_home.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
@@ -50,7 +51,8 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
           mkdir -p site
-          cp directory.html site/index.html
+          cp home.html site/index.html
+          cp directory.html site/directory.html
           if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
           if [ -d components ]; then cp -r components site/components; fi
           if [ -d systems ]; then cp -r systems site/systems; fi
