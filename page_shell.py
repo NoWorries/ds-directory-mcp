@@ -100,10 +100,47 @@ TOKENS_CSS = f"""
   }}
 """
 
-SEARCH_ICON_SVG = (
-    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
-    'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-    '<circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>'
+# Feather icons (github.com/feathericons/feather), inlined so the site has no
+# icon-font/CDN dependency — the "class=feather..." attribute Feather ships
+# with is dropped since nothing here relies on it. width/height set per usage
+# site rather than baked in, so the same markup can be reused at different sizes.
+def _icon(path_markup: str, size: int = 18) -> str:
+    return (
+        f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{path_markup}</svg>'
+    )
+
+
+SEARCH_ICON_SVG = _icon('<circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>')
+GRID_ICON_SVG = _icon(
+    '<rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect>'
+    '<rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>',
+    size=15,
+)
+LIST_ICON_SVG = _icon(
+    '<line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line>'
+    '<line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line>'
+    '<line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line>',
+    size=15,
+)
+COPY_ICON_SVG = _icon(
+    '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>'
+    '<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>',
+    size=14,
+)
+FILTER_ICON_SVG = _icon('<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>', size=14)
+CHECK_ICON_SVG = _icon('<polyline points="20 6 9 17 4 12"></polyline>', size=15)
+PACKAGE_ICON_SVG = _icon(
+    '<path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.11-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.79 0z"></path>'
+    '<polyline points="2.32 6.16 12 11 21.68 6.16"></polyline><line x1="12" y1="22.76" x2="12" y2="11"></line>',
+    size=20,
+)
+# Larger variant of the grid icon for use as a nav-card visual (vs. the compact
+# size used in the list/grid view-toggle button).
+GRID_ICON_SVG_LARGE = _icon(
+    '<rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect>'
+    '<rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>',
+    size=20,
 )
 
 # Submitting always navigates to "/?q=..." — the homepage reads that query

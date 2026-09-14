@@ -1,0 +1,4 @@
+/Users/josh.harwood/GitHub/ds-directory-mcp/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/josh.harwood/GitHub/ds-directory-mcp/ingest.py:325: UserWarning: Qdrant client version 1.16.1 is incompatible with server version 1.19.1. Major versions should match and minor version difference must not exceed 1. Set check_compatibility=False to skip version check.
+  client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)

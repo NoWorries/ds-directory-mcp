@@ -1,6 +1,6 @@
 # Account setup
 
-Four services needed, all with free tiers. For each: create the account, then copy the
+Five services needed, all with free tiers. For each: create the account, then copy the
 listed value(s) into your local `.env` (`cp .env.example .env`), GitHub repo secrets, and
 Render's environment settings — the same three values go in all three places.
 
@@ -71,6 +71,28 @@ Note: Render's free tier sleeps after ~15 min of no traffic; the next request co
 
 ---
 
+## 5. Netlify (static directory site hosting)
+
+The searchable listing page (`directory.html`) and its `components/`/`systems/` subpages
+are static — they don't need Render, and deploy separately via the workflows to a Netlify
+site so browsing has no cold start.
+
+1. Go to https://app.netlify.com and sign up (GitHub login is easiest), then create a site
+   (any placeholder deploy is fine — the workflows will overwrite it).
+2. Get a **Personal Access Token**: click your avatar (top-right) → **User settings** →
+   **Applications** → **Personal access tokens** → **New access token**. Copy it immediately —
+   it's not shown again.
+3. Get the site's **Site ID**: open your site in Netlify → **Site configuration** →
+   **General** → **Site details** → copy **Site ID** (a UUID, not the site name).
+4. Add both as **GitHub repo secrets** (Settings → Secrets and variables → Actions):
+   - `NETLIFY_AUTH_TOKEN`
+   - `NETLIFY_SITE_ID`
+
+No local Netlify CLI login needed — the workflows authenticate with these two secrets when
+they run `netlify-cli deploy --prod`.
+
+---
+
 ## Summary: what goes where
 
 | Value | Source | Goes into |
@@ -79,5 +101,7 @@ Note: Render's free tier sleeps after ~15 min of no traffic; the next request co
 | `QDRANT_API_KEY` | Qdrant Cloud → API Keys | `.env`, GitHub secrets, Render env vars |
 | `JINA_API_KEY` | Jina AI dashboard | `.env`, GitHub secrets, Render env vars |
 | Render service URL | Render dashboard, after deploy | Your MCP client config (Claude Code/Desktop) |
+| `NETLIFY_AUTH_TOKEN` | Netlify → User settings → Applications | GitHub secrets only |
+| `NETLIFY_SITE_ID` | Netlify → Site configuration → General | GitHub secrets only |
 
 Nothing here should ever be committed to git — `.env` is already in `.gitignore`.

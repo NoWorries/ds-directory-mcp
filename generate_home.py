@@ -15,7 +15,15 @@ from datetime import datetime
 from pathlib import Path
 
 from generate_directory import compute_stats, indexed_only, load_systems
-from page_shell import FONT_LINK, TOKENS_CSS, routes_nav
+from page_shell import (
+    COPY_ICON_SVG,
+    FILTER_ICON_SVG,
+    FONT_LINK,
+    GRID_ICON_SVG_LARGE,
+    PACKAGE_ICON_SVG,
+    TOKENS_CSS,
+    routes_nav,
+)
 from text_utils import full_name
 
 OUTPUT_FILE = Path(__file__).parent / "home.html"
@@ -65,9 +73,10 @@ def render_page(entries: list[dict]) -> str:
   .status {{ color: var(--text-muted); font-size: 0.9rem; }}
 
   .restrict-toggle {{
-    display: inline-block; margin-top: 12px; background: none; border: none; padding: 0; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 5px; margin-top: 12px; background: none; border: none; padding: 0; cursor: pointer;
     font: inherit; font-size: 0.82rem; color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px;
   }}
+  .restrict-toggle svg {{ flex: none; }}
   .restrict-toggle:hover {{ color: var(--accent); }}
   .filter-wrap {{ position: relative; margin-top: 16px; }}
   .chips {{ display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }}
@@ -91,18 +100,27 @@ def render_page(entries: list[dict]) -> str:
   .filter-option:hover {{ background: var(--surface-sunken); }}
   .filter-hint {{ font-size: 0.78rem; color: var(--text-faint); margin: 6px 0 0; }}
 
-  .nav-links {{ display: flex; flex-wrap: wrap; gap: 4px 28px; margin: 14px 2px 32px; }}
-  .nav-link {{
-    display: inline-flex; align-items: baseline; gap: 6px; text-decoration: none; color: var(--text);
-    font-size: 0.9rem; font-weight: 600; padding: 4px 0;
+  .nav-cards {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 20px 0 32px; }}
+  .nav-card {{
+    display: flex; align-items: center; gap: 14px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; text-decoration: none; color: var(--text);
+    box-shadow: var(--shadow); transition: border-color 0.15s, transform 0.15s;
   }}
-  .nav-link span {{ font-weight: 400; color: var(--text-muted); }}
-  .nav-link:hover {{ color: var(--accent); }}
-  .nav-link:hover span {{ color: var(--accent); }}
+  .nav-card:hover {{ border-color: var(--accent); transform: translateY(-1px); }}
+  .nav-card-icon {{
+    flex: none; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px;
+    border-radius: 9px; background: var(--accent-soft); color: var(--accent);
+  }}
+  .nav-card-text {{ flex: 1; min-width: 0; }}
+  .nav-card-text h3 {{ margin: 0 0 2px; font-size: 0.96rem; font-weight: 600; color: var(--text); }}
+  .nav-card-text p {{ margin: 0; font-size: 0.8rem; color: var(--text-muted); }}
+  .nav-card-arrow {{ flex: none; color: var(--text-faint); font-size: 1.2rem; }}
+  .nav-card:hover .nav-card-arrow {{ color: var(--accent); }}
 
   .mcp-bar {{
-    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
-    padding: 16px 0 0; border-top: 1px solid var(--border); margin-bottom: 36px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+    background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 36px; box-shadow: var(--shadow);
   }}
   .mcp-badge {{
     display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700;
@@ -128,10 +146,12 @@ def render_page(entries: list[dict]) -> str:
     white-space: nowrap; overflow-x: auto; max-width: 380px;
   }}
   .mcp-copy {{
+    display: inline-flex; align-items: center; gap: 6px;
     font-family: "IBM Plex Sans", sans-serif; font-size: 0.78rem; font-weight: 600; padding: 8px 12px;
     border-radius: 6px; border: 1px solid var(--border); background: var(--surface);
     color: var(--accent); cursor: pointer; white-space: nowrap;
   }}
+  .mcp-copy svg {{ flex: none; }}
   .mcp-copy:hover {{ background: var(--accent-soft); }}
 </style>
 </head>
@@ -143,7 +163,7 @@ def render_page(entries: list[dict]) -> str:
     <p class="hero-subtitle">Find component patterns, tokens, and guidance across every publicly documented design system indexed here — or connect it to your AI agent via MCP.</p>
     <input id="q" type="text" placeholder="e.g. table column resizing, disabled button states...">
 
-    <button type="button" class="restrict-toggle" id="restrictToggle">Restrict search results</button>
+    <button type="button" class="restrict-toggle" id="restrictToggle">{FILTER_ICON_SVG}<span id="restrictToggleLabel">Filter by system</span></button>
 
     <div class="filter-wrap" id="filterWrap" hidden>
       <p class="filter-label">Optional: limit to specific systems</p>
@@ -154,12 +174,26 @@ def render_page(entries: list[dict]) -> str:
     </div>
 
     <div id="results"></div>
-
-    <div class="nav-links">
-      <a class="nav-link" href="/directory.html">Browse all systems <span>&rarr;</span></a>
-      <a class="nav-link" href="/components/index.html">Browse by component <span>&rarr;</span></a>
-    </div>
   </section>
+
+  <div class="nav-cards">
+    <a class="nav-card" href="/directory.html">
+      <span class="nav-card-icon">{GRID_ICON_SVG_LARGE}</span>
+      <span class="nav-card-text">
+        <h3>Browse all systems</h3>
+        <p>Every indexed design system, as a sortable list or grid.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a class="nav-card" href="/components/index.html">
+      <span class="nav-card-icon">{PACKAGE_ICON_SVG}</span>
+      <span class="nav-card-text">
+        <h3>Browse by component</h3>
+        <p>See which systems have documented a given component or pattern.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+  </div>
 
   <div class="mcp-bar">
     <div class="mcp-card-text">
@@ -170,7 +204,7 @@ def render_page(entries: list[dict]) -> str:
     </div>
     <div class="mcp-install">
       <code class="mcp-command" id="mcpCommand">{MCP_INSTALL_COMMAND}</code>
-      <button class="mcp-copy" id="mcpCopy" type="button">Copy</button>
+      <button class="mcp-copy" id="mcpCopy" type="button">{COPY_ICON_SVG}<span id="mcpCopyLabel">Copy</span></button>
     </div>
   </div>
 </div>
@@ -186,6 +220,7 @@ def render_page(entries: list[dict]) -> str:
   const dropdown = document.getElementById("filterDropdown");
   const chipsEl = document.getElementById("chips");
   const restrictToggle = document.getElementById("restrictToggle");
+  const restrictToggleLabel = document.getElementById("restrictToggleLabel");
   const filterWrap = document.getElementById("filterWrap");
   let debounceTimer;
   const selectedSystems = new Set();
@@ -193,7 +228,7 @@ def render_page(entries: list[dict]) -> str:
   restrictToggle.addEventListener("click", () => {{
     const nowHidden = !filterWrap.hidden;
     filterWrap.hidden = nowHidden;
-    restrictToggle.textContent = nowHidden ? "Restrict search results" : "Hide restriction";
+    restrictToggleLabel.textContent = nowHidden ? "Filter by system" : "Hide system filter";
     if (!nowHidden) filterInput.focus();
   }});
 
@@ -302,12 +337,13 @@ def render_page(entries: list[dict]) -> str:
 
   // --- Copy MCP install command ---
   const mcpCopy = document.getElementById("mcpCopy");
+  const mcpCopyLabel = document.getElementById("mcpCopyLabel");
   const mcpCommand = document.getElementById("mcpCommand");
   mcpCopy.addEventListener("click", async () => {{
     try {{
       await navigator.clipboard.writeText(mcpCommand.textContent);
-      mcpCopy.textContent = "Copied!";
-      setTimeout(() => {{ mcpCopy.textContent = "Copy"; }}, 1500);
+      mcpCopyLabel.textContent = "Copied!";
+      setTimeout(() => {{ mcpCopyLabel.textContent = "Copy"; }}, 1500);
     }} catch (err) {{
       // Clipboard API unavailable (e.g. insecure context) — text is still selectable manually.
     }}

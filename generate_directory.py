@@ -17,7 +17,7 @@ from urllib.parse import urlparse
 
 import yaml
 
-from page_shell import FONT_LINK, TOKENS_CSS, routes_nav
+from page_shell import CHECK_ICON_SVG, FONT_LINK, GRID_ICON_SVG, LIST_ICON_SVG, TOKENS_CSS, routes_nav
 from slug import slugify
 from text_utils import full_name, split_org_name
 
@@ -111,7 +111,7 @@ def render_cell(entry: dict, key: str) -> str:
     if not urls:
         return '<td class="cell cell-none" title="None found">—</td>'
     url = html.escape(urls[0])
-    return f'<td class="cell cell-found"><a href="{url}" target="_blank" rel="noopener" title="{url}">●</a></td>'
+    return f'<td class="cell cell-found"><a href="{url}" target="_blank" rel="noopener" title="{url}">{CHECK_ICON_SVG}</a></td>'
 
 
 def found_count(entry: dict) -> int:
@@ -207,6 +207,11 @@ def render_page(entries: list[dict]) -> str:
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
+  .page.page-full {{ max-width: none; }}
+  /* This page opts out of the shared PAGE_MAX_WIDTH, so the fixed nav bar
+     (whose inner row is capped at that width in TOKENS_CSS) needs the same
+     override here — otherwise the table below stretches past the nav links. */
+  .site-nav-inner {{ max-width: none; }}
   .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
   .legend {{ font-size: 0.82rem; color: var(--text-faint); margin: 0 0 12px; }}
   #tableFilter {{
@@ -217,9 +222,11 @@ def render_page(entries: list[dict]) -> str:
 
   .view-toggle {{ display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }}
   .view-toggle button {{
+    display: flex; align-items: center; gap: 6px;
     font: inherit; font-size: 0.82rem; font-weight: 600; padding: 7px 14px; border: none; cursor: pointer;
     background: var(--surface); color: var(--text-muted);
   }}
+  .view-toggle button svg {{ flex: none; }}
   .view-toggle button + button {{ border-left: 1px solid var(--border); }}
   .view-toggle button.current {{ background: var(--accent-soft); color: var(--accent); }}
 
@@ -268,7 +275,7 @@ def render_page(entries: list[dict]) -> str:
   .meta {{ font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; font-variant-numeric: tabular-nums; font-family: "JetBrains Mono", monospace; }}
   .cell {{ text-align: center; font-variant-numeric: tabular-nums; }}
   .cell-pages {{ font-family: "JetBrains Mono", monospace; color: var(--text-muted); }}
-  .cell-found a {{ color: var(--accent); text-decoration: none; font-size: 1.1rem; }}
+  .cell-found a {{ color: var(--accent); text-decoration: none; display: inline-flex; }}
   .cell-none {{ color: var(--text-faint); }}
   .cell-found-count {{
     font-family: "JetBrains Mono", monospace; font-weight: 600; color: var(--text);
@@ -314,7 +321,7 @@ def render_page(entries: list[dict]) -> str:
 </head>
 <body>
 {routes_nav("directory")}
-<div class="page">
+<div class="page page-full">
   <p class="eyebrow">All Systems</p>
   <h1>Every indexed design system</h1>
   <p class="subtitle">{len(entries_sorted)} external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
@@ -322,11 +329,11 @@ def render_page(entries: list[dict]) -> str:
   <div class="table-toolbar">
     <input id="tableFilter" type="text" placeholder="Filter by name...">
     <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
-      <button type="button" data-view="list" class="current">List</button>
-      <button type="button" data-view="grid">Grid</button>
+      <button type="button" data-view="list" class="current">{LIST_ICON_SVG} List</button>
+      <button type="button" data-view="grid">{GRID_ICON_SVG} Grid</button>
     </div>
   </div>
-  <p class="legend" id="listLegend">● = resource found and linked · — = none found · click a column header to sort</p>
+  <p class="legend" id="listLegend">✓ = resource found and linked · — = none found · click a column header to sort</p>
 
   <div class="table-wrap" id="listView">
   <table id="directoryTable">
