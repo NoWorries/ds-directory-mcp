@@ -17,7 +17,7 @@ from pathlib import Path
 
 from component_taxonomy import TAXONOMY
 from generate_directory import load_pages_index
-from page_shell import FONT_LINK, TOKENS_CSS, routes_nav
+from page_shell import FONT_LINK, NAV_HEIGHT, TOKENS_CSS, routes_nav
 from slug import slugify
 from text_utils import clean_title
 
@@ -104,7 +104,16 @@ def render_index_page(component_index: dict[str, list[dict]]) -> str:
 """
 
 
-def render_component_page(name: str, entries: list[dict]) -> str:
+def render_sidebar(component_index: dict[str, list[dict]], current: str) -> str:
+    items = "".join(
+        f'<li><a href="{slugify(n)}.html" class="{"current" if n == current else ""}">'
+        f'{html.escape(n)} <span class="sidebar-count">{len(entries)}</span></a></li>'
+        for n, entries in sorted(component_index.items(), key=lambda kv: kv[0].lower())
+    )
+    return f'<nav class="component-sidebar"><p class="sidebar-label">All components</p><ul>{items}</ul></nav>'
+
+
+def render_component_page(name: str, entries: list[dict], component_index: dict[str, list[dict]]) -> str:
     by_system = "".join(
         f'<li><a href="{html.escape(e["url"])}" target="_blank" rel="noopener">{html.escape(e["system"])}</a> '
         f'<span class="page-title">{html.escape(clean_title(e["title"]))}</span></li>'
@@ -118,20 +127,52 @@ def render_component_page(name: str, entries: list[dict]) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(name)} — Design Systems Directory</title>
 {HEAD}
+  .page.page-wide {{ max-width: 1240px; }}
+  .component-layout {{ display: flex; gap: 40px; align-items: flex-start; }}
+  .component-sidebar {{
+    flex: 0 0 220px; position: sticky; top: calc({NAV_HEIGHT} + 24px);
+    max-height: calc(100vh - {NAV_HEIGHT} - 48px); overflow-y: auto;
+    border-right: 1px solid var(--border); padding-right: 16px;
+  }}
+  .sidebar-label {{
+    font-family: "JetBrains Mono", monospace; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--text-faint); margin: 0 0 10px;
+  }}
+  .component-sidebar ul {{ list-style: none; margin: 0; padding: 0; }}
+  .component-sidebar li {{ margin-bottom: 2px; }}
+  .component-sidebar a {{
+    display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+    padding: 5px 8px; margin: 0 -8px; border-radius: 6px; text-decoration: none;
+    font-size: 0.88rem; color: var(--text-muted);
+  }}
+  .component-sidebar a:hover {{ background: var(--surface-sunken); color: var(--text); }}
+  .component-sidebar a.current {{ background: var(--accent-soft); color: var(--accent); font-weight: 600; }}
+  .sidebar-count {{ color: var(--text-faint); font-size: 0.76rem; font-family: "JetBrains Mono", monospace; }}
+  .component-sidebar a.current .sidebar-count {{ color: var(--accent); }}
+  .component-main {{ flex: 1; min-width: 0; }}
   .system-list {{ list-style: none; margin: 0; padding: 0; }}
   .system-list li {{ display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }}
   .system-list a {{ text-decoration: none; font-weight: 600; }}
   .system-list a:hover {{ text-decoration: underline; }}
   .page-title {{ color: var(--text-muted); font-size: 0.85rem; font-family: "JetBrains Mono", monospace; white-space: nowrap; }}
+  @media (max-width: 760px) {{
+    .component-layout {{ display: block; }}
+    .component-sidebar {{ position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 16px; margin-bottom: 20px; }}
+  }}
 </style>
 </head>
 <body>
 {routes_nav("components")}
-<div class="page">
-  <p class="eyebrow"><a href="/components/index.html">Components</a></p>
-  <h1>{html.escape(name)}</h1>
-  <p class="subtitle">{len(entries)} indexed system{"s" if len(entries) != 1 else ""} document {html.escape(name).lower()} — click through to the actual page.</p>
-  <ul class="system-list">{by_system}</ul>
+<div class="page page-wide">
+  <div class="component-layout">
+    {render_sidebar(component_index, name)}
+    <div class="component-main">
+      <p class="eyebrow"><a href="/components/index.html">Components</a></p>
+      <h1>{html.escape(name)}</h1>
+      <p class="subtitle">{len(entries)} indexed system{"s" if len(entries) != 1 else ""} document {html.escape(name).lower()} — click through to the actual page.</p>
+      <ul class="system-list">{by_system}</ul>
+    </div>
+  </div>
 </div>
 </body>
 </html>
@@ -145,7 +186,7 @@ def main() -> None:
     COMPONENTS_DIR.mkdir(exist_ok=True)
     (COMPONENTS_DIR / "index.html").write_text(render_index_page(component_index))
     for name, entries in component_index.items():
-        (COMPONENTS_DIR / f"{slugify(name)}.html").write_text(render_component_page(name, entries))
+        (COMPONENTS_DIR / f"{slugify(name)}.html").write_text(render_component_page(name, entries, component_index))
 
     print(f"Wrote components/index.html + {len(component_index)} component pages.")
 
