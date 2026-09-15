@@ -38,7 +38,14 @@ jobs:
           if ! git diff --quiet screenshots/ || [ -n "$(git status --porcelain screenshots/)" ]; then
             git add screenshots/
             git commit -m "Add newly fetched site screenshots [skip ci]" || echo "Nothing to commit"
-            git push
+            # Other workflows commit to this same branch too, so a push can
+            # land after one of them — ordinary non-fast-forward race, not a
+            # real conflict most of the time. Rebase and retry a few times.
+            for i in 1 2 3 4 5; do
+              git push && break
+              echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
+              git pull --rebase
+            done
           else
             echo "No new screenshots to commit"
           fi

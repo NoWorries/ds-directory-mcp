@@ -6,7 +6,18 @@ Usage:
     python ingest.py --all [--force]              # re-ingest every system in systems.yaml
     python ingest.py --all --shard 1/4 [--force]  # ...but only entries at index i where i%4==1
     python ingest.py --new                        # only systems never indexed before
+    python ingest.py --new --shallow              # ...but cap every crawl at SHALLOW_MAX_PAGES pages
+    python ingest.py --new --shallow --shard 1/4  # ...sharded the same way --all is
     python ingest.py --system "Shopify — Polaris" [--force]   # re-ingest one entry (org — design_system)
+
+--shallow: overrides max_pages (both the per-entry systems.yaml value and
+DEFAULT_MAX_PAGES) down to SHALLOW_MAX_PAGES for every system it touches.
+For getting breadth across many never-before-indexed systems fast — a handful
+of real pages per system beats a full deep crawl of a handful of systems when
+most of the registry has nothing indexed at all yet. Once a system has been
+shallow-crawled it has a pages_indexed value like anything else, so --new
+won't pick it up again — the monthly --all full reindex is what deep-crawls
+it properly later, exactly as it would for any other already-indexed system.
 
 Example:
     python ingest.py "Atlassian Design System" https://atlassian.design/components
@@ -102,6 +113,13 @@ MIN_CONTENT_LENGTH = 200
 # recorded on the entry and reported by check_crawl_health.py, since it means
 # there's likely more real content on the site than got indexed.
 DEFAULT_MAX_PAGES = 300
+
+# Used by --shallow: a deliberately small crawl ceiling so a "get breadth"
+# pass can touch many systems quickly instead of going deep on a few. Enough
+# pages for real (non-boilerplate) content to show up and for the directory
+# page to stop showing a system as unindexed, without spending anywhere near
+# the time/embedding cost of a full DEFAULT_MAX_PAGES crawl.
+SHALLOW_MAX_PAGES = 8
 
 
 def ensure_collection(client: QdrantClient) -> None:
@@ -401,7 +419,7 @@ def ingest(
     print("\nDone.")
 
 
-def ingest_entry(entry: dict, force: bool = False) -> None:
+def ingest_entry(entry: dict, force: bool = False, max_pages_override: int | None = None) -> None:
     name = full_name(entry)
     start_urls = entry["start_urls"]
     never_indexed = "pages_indexed" not in entry
@@ -413,11 +431,12 @@ def ingest_entry(entry: dict, force: bool = False) -> None:
             update_registry_fields(name, {**new_signal, "last_checked": now_iso()})
             return
 
-    print(f"\n=== {name} ===")
+    max_pages = max_pages_override if max_pages_override is not None else entry.get("max_pages", DEFAULT_MAX_PAGES)
+    print(f"\n=== {name} ==={' (shallow)' if max_pages_override is not None else ''}")
     ingest(
         design_system_name=name,
         start_urls=start_urls,
-        max_pages=entry.get("max_pages", DEFAULT_MAX_PAGES),
+        max_pages=max_pages,
         include_patterns=entry.get("include_patterns"),
         exclude_patterns=entry.get("exclude_patterns"),
     )
@@ -445,6 +464,10 @@ if __name__ == "__main__":
     force = "--force" in args
     args = [a for a in args if a != "--force"]
 
+    shallow = "--shallow" in args
+    args = [a for a in args if a != "--shallow"]
+    shallow_max_pages = SHALLOW_MAX_PAGES if shallow else None
+
     shard = parse_shard(args)
     if shard:
         shard_index, shard_total = shard
@@ -461,14 +484,17 @@ if __name__ == "__main__":
             entries = [e for i, e in enumerate(entries) if i % shard_total == shard_index]
             print(f"Shard {shard_index}/{shard_total}: {len(entries)} of {len(load_registry())} systems")
         for entry in entries:
-            ingest_entry(entry, force=force)
+            ingest_entry(entry, force=force, max_pages_override=shallow_max_pages)
 
     elif args[0] == "--new":
         new_entries = [e for e in load_registry() if "pages_indexed" not in e]
+        if shard:
+            new_entries = [e for i, e in enumerate(new_entries) if i % shard_total == shard_index]
+            print(f"Shard {shard_index}/{shard_total}: {len(new_entries)} unindexed systems in this shard")
         if not new_entries:
-            print("No unindexed systems found — everything in systems.yaml has been indexed at least once.")
+            print("No unindexed systems found in this shard — everything in systems.yaml has been indexed at least once.")
         for entry in new_entries:
-            ingest_entry(entry, force=True)
+            ingest_entry(entry, force=True, max_pages_override=shallow_max_pages)
 
     elif args[0] == "--system":
         if len(args) < 2:

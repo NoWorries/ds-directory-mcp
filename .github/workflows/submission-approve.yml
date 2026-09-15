@@ -33,7 +33,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add systems.yaml
           git diff --quiet --cached || git commit -m "Add ${{ steps.approve.outputs.full_name }} to systems.yaml (approved via #${{ github.event.issue.number }})"
-          git push
+          # Other workflows commit to this same branch too, so a push can land
+          # after one of them — ordinary non-fast-forward race, not a real
+          # conflict most of the time. Rebase and retry a few times.
+          for i in 1 2 3 4 5; do
+            git push && break
+            echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
+            git pull --rebase
+          done
 
       - name: Ingest the newly approved system now
         env:
@@ -64,7 +71,11 @@ jobs:
         run: |
           git add systems.yaml home.html directory.html pages_index.json components systems
           git diff --quiet --cached || git commit -m "Update directory page after approving ${{ steps.approve.outputs.full_name }} [skip ci]"
-          git push
+          for i in 1 2 3 4 5; do
+            git push && break
+            echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
+            git pull --rebase
+          done
 
       - name: Deploy directory page to Netlify
         if: always()

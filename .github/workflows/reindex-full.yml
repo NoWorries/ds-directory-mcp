@@ -123,7 +123,16 @@ jobs:
           git add systems.yaml home.html directory.html pages_index.json components systems
           if ! git diff --cached --quiet; then
             git commit -m "Auto-update discovered resources and directory page [skip ci]"
-            git push
+            # Other workflows (submission-approve, reindex-new) commit to this
+            # same branch too, so a push here can land after one of them —
+            # "fetch first"/non-fast-forward, not a real conflict most of the
+            # time. Rebase our one commit on top and retry a few times rather
+            # than failing the whole job over an ordinary race.
+            for i in 1 2 3 4 5; do
+              git push && break
+              echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
+              git pull --rebase
+            done
           else
             echo "No changes to commit"
           fi
