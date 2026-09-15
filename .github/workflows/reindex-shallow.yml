@@ -31,6 +31,10 @@ jobs:
   shallow-shard:
     strategy:
       fail-fast: false
+      # Caps how many shards run at once — GitHub also enforces a concurrent-
+      # jobs limit independent of the Actions-minutes quota, and 4 shards plus
+      # whatever else happened to be running was a plausible way to trip it.
+      max-parallel: 2
       matrix:
         shard: [0, 1, 2, 3]
     runs-on: ubuntu-latest
