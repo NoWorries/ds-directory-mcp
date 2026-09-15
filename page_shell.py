@@ -19,6 +19,11 @@ FONT_LINK = (
 PAGE_MAX_WIDTH = "1040px"
 NAV_HEIGHT = "60px"
 
+# The only way to suggest a new system is this GitHub Issue Form — it wasn't
+# linked from anywhere on the actual public site, so a visitor had no way to
+# discover it short of already being in the repo's Issues tab.
+SUBMISSION_URL = "https://github.com/NoWorries/ds-directory-mcp/issues/new?template=new-design-system.yml"
+
 TOKENS_CSS = f"""
   @view-transition {{ navigation: auto; }}
 

@@ -246,16 +246,21 @@ def render_page(entries: list[dict]) -> str:
      and everything (nav, heading, toolbar, table) shares the same margins
      instead of the table alone reaching closer to the viewport edge. */
   .page {{ max-width: 1320px; }}
-  /* inline-flex (not flex) so this row only takes the width its own controls
-     need — a block-level flex container instead stretches to the page's full
-     width and, combined with the old justify-content: space-between, pushed
-     the view toggle out to the far edge, decoupled from how wide the table
-     below it actually ends up (see table's width: auto above). */
-  .table-toolbar {{ display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
-  .legend {{ font-size: 0.82rem; color: var(--text-faint); margin: 0 0 12px; }}
+  /* .table-section is display: inline-block so it shrink-wraps to its widest
+     child — the table (width: auto, see below) — and .table-toolbar (width:
+     100%) then matches that resolved width exactly, letting justify-content:
+     space-between push the view toggle to the true right edge of the table
+     rather than to the page's full (wider, unrelated) width. cards-grid is
+     deliberately OUTSIDE this wrapper: a grid's own shrink-to-fit contribution
+     assumes one row of items at their minimum column size, which for dozens
+     of cards would blow the wrapper out far wider than the table ever is.
+     In Grid view the table (and toolbar's width match) simply isn't relevant —
+     the toolbar naturally hugs just its own controls instead, which is fine. */
+  .table-section {{ display: inline-block; max-width: 100%; }}
+  .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
   #tableFilter {{
     padding: 8px 12px; font: inherit; font-size: 0.85rem; border: 1px solid var(--border);
-    border-radius: 6px; width: 220px; max-width: 100%; background: var(--surface); color: var(--text);
+    border-radius: 6px; width: 280px; max-width: 100%; background: var(--surface); color: var(--text);
   }}
   #tableFilter:focus {{ outline: 2px solid var(--accent); outline-offset: 1px; }}
 
@@ -381,14 +386,14 @@ def render_page(entries: list[dict]) -> str:
   <h1>Every indexed design system</h1>
   <p class="subtitle">{len(entries_sorted)} external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
 
+  <div class="table-section">
   <div class="table-toolbar">
-    <input id="tableFilter" type="text" placeholder="Filter by name...">
+    <input id="tableFilter" type="text" placeholder="Filter by system or company name...">
     <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
       <button type="button" data-view="list" class="current">{LIST_ICON_SVG} List</button>
       <button type="button" data-view="grid">{GRID_ICON_SVG} Grid</button>
     </div>
   </div>
-  <p class="legend" id="listLegend">✓ = resource found and linked · — = none found · click a column header to sort</p>
 
   <div class="table-wrap" id="listView">
   <table id="directoryTable">
@@ -405,6 +410,7 @@ def render_page(entries: list[dict]) -> str:
       {rows}
     </tbody>
   </table>
+  </div>
   </div>
 
   <div class="cards-grid" id="cardsGrid" hidden>
@@ -472,12 +478,10 @@ def render_page(entries: list[dict]) -> str:
   // --- List/Grid view toggle (remembers choice per viewer via localStorage) ---
   const viewToggle = document.getElementById("viewToggle");
   const listView = document.getElementById("listView");
-  const listLegend = document.getElementById("listLegend");
   const gridView = document.getElementById("cardsGrid");
 
   function setView(view) {{
     listView.hidden = view !== "list";
-    listLegend.hidden = view !== "list";
     gridView.hidden = view !== "grid";
     viewToggle.querySelectorAll("button").forEach(b => b.classList.toggle("current", b.dataset.view === view));
     try {{ localStorage.setItem("ds-directory-view", view); }} catch (err) {{ /* private browsing etc. — fine to skip */ }}

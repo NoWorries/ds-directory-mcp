@@ -6,9 +6,12 @@ frontend or embedded agent can query the indexed design systems.
 """
 
 import os
+import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+import requests
 import yaml
 from mcp.server.fastmcp import FastMCP
 from qdrant_client import QdrantClient
@@ -16,7 +19,7 @@ from qdrant_client.models import FieldCondition, Filter, MatchAny
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from config import QDRANT_API_KEY, QDRANT_COLLECTION, QDRANT_URL
+from config import GITHUB_ISSUE_TOKEN, GITHUB_REPO, QDRANT_API_KEY, QDRANT_COLLECTION, QDRANT_URL
 from embeddings import embed_query
 from text_utils import full_name
 
@@ -36,9 +39,44 @@ SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
 
 CORS_HEADERS = {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "*",
 }
+
+# Field label -> exact text GitHub's issue-form UI renders for that field, so
+# a synthetic issue body built here parses identically to a real form
+# submission through parse_issue_form.py (used by run_submission_check.py and
+# approve_submission.py) — nothing downstream needs to know these issues
+# didn't come from the GitHub UI.
+SUBMISSION_FIELDS = [
+    ("organization", "Organization name", True),
+    ("design_system", "Design system name", True),
+    ("start_url", "Start URL", True),
+    ("github_url", "GitHub repository (optional)", False),
+    ("storybook_url", "Storybook URL (optional)", False),
+    ("figma_url", "Figma file URL (optional)", False),
+    ("npm_url", "npm package (optional)", False),
+    ("notes", "Anything else we should know? (optional)", False),
+    ("notify_email", "Email for approval notification (optional)", False),
+]
+
+# Bare-minimum abuse mitigation for a public, unauthenticated,
+# issue-creating endpoint — an in-memory sliding window (fine for a
+# single-process Render instance; resets on every cold start/redeploy,
+# which is an acceptable trade-off for how low-traffic this form is).
+_SUBMIT_WINDOW_SECONDS = 3600
+_SUBMIT_MAX_PER_WINDOW = 5
+_submit_timestamps: dict[str, list[float]] = defaultdict(list)
+
+
+def _rate_limited(client_ip: str) -> bool:
+    now = time.time()
+    recent = [t for t in _submit_timestamps[client_ip] if now - t < _SUBMIT_WINDOW_SECONDS]
+    _submit_timestamps[client_ip] = recent
+    if len(recent) >= _SUBMIT_MAX_PER_WINDOW:
+        return True
+    recent.append(now)
+    return False
 
 
 def get_resources(design_system_name: str) -> dict:
