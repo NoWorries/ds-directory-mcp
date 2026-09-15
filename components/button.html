@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Components — Design Systems Directory</title>
+<title>Button — Design Systems Directory</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -107,19 +107,37 @@
     .nav-search-form input { width: 140px; }
   }
 
-  .jump-nav { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 32px; font-family: "JetBrains Mono", monospace; font-size: 0.82rem; }
-  .jump-nav a { display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center; border-radius: 4px; text-decoration: none; color: var(--text-muted); }
-  .jump-nav a:hover { background: var(--accent-soft); color: var(--accent); }
-  .letter-group { margin-bottom: 28px; }
-  .letter-group h2 {
-    font-family: "JetBrains Mono", monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent);
-    margin: 0 0 6px; padding-bottom: 6px; border-bottom: 2px solid var(--border);
+  .component-layout { display: flex; gap: 32px; align-items: flex-start; }
+  .component-sidebar {
+    flex: 0 0 190px; position: sticky; top: calc(60px + 24px);
+    max-height: calc(100vh - 60px - 48px); overflow-y: auto;
+    border-right: 1px solid var(--border); padding-right: 16px;
   }
-  .component-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 24px; }
-  .component-list li { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
-  .component-list a { text-decoration: none; font-weight: 600; }
-  .component-list a:hover { text-decoration: underline; }
-  .count { color: var(--text-faint); font-size: 0.78rem; font-family: "JetBrains Mono", monospace; white-space: nowrap; margin-left: 8px; }
+  .sidebar-label {
+    font-family: "JetBrains Mono", monospace; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--text-faint); margin: 0 0 10px;
+  }
+  .component-sidebar ul { list-style: none; margin: 0; padding: 0; }
+  .component-sidebar li { margin-bottom: 2px; }
+  .component-sidebar a {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+    padding: 5px 8px; margin: 0 -8px; border-radius: 6px; text-decoration: none;
+    font-size: 0.88rem; color: var(--text-muted);
+  }
+  .component-sidebar a:hover { background: var(--surface-sunken); color: var(--text); }
+  .component-sidebar a.current { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .sidebar-count { color: var(--text-faint); font-size: 0.76rem; font-family: "JetBrains Mono", monospace; }
+  .component-sidebar a.current .sidebar-count { color: var(--accent); }
+  .component-main { flex: 1; min-width: 0; }
+  .system-list { list-style: none; margin: 0; padding: 0; }
+  .system-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .system-list a { text-decoration: none; font-weight: 600; }
+  .system-list a:hover { text-decoration: underline; }
+  .page-title { color: var(--text-muted); font-size: 0.85rem; font-family: "JetBrains Mono", monospace; white-space: nowrap; }
+  @media (max-width: 760px) {
+    .component-layout { display: block; }
+    .component-sidebar { position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 16px; margin-bottom: 20px; }
+  }
 </style>
 </head>
 <body>
@@ -159,71 +177,15 @@
 </script>
     
 <div class="page">
-  <p class="eyebrow">Components</p>
-  <h1>Browse by component</h1>
-  <p class="subtitle">The same indexed design systems, entered by component name instead of by system or search query. Pick one to see which systems document it.</p>
-  <nav class="jump-nav"><a href="#letter-A">A</a> <a href="#letter-B">B</a> <a href="#letter-C">C</a> <a href="#letter-D">D</a> <a href="#letter-I">I</a> <a href="#letter-L">L</a> <a href="#letter-M">M</a> <a href="#letter-N">N</a> <a href="#letter-P">P</a> <a href="#letter-R">R</a> <a href="#letter-S">S</a> <a href="#letter-T">T</a></nav>
-  
-        <section class="letter-group" id="letter-A">
-          <h2>A</h2>
-          <ul class="component-list"><li><a href="alert.html">Alert</a> <span class="count">1 system</span></li><li><a href="avatar.html">Avatar</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-B">
-          <h2>B</h2>
-          <ul class="component-list"><li><a href="badge.html">Badge</a> <span class="count">1 system</span></li><li><a href="breadcrumb.html">Breadcrumb</a> <span class="count">1 system</span></li><li><a href="button.html">Button</a> <span class="count">2 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-C">
-          <h2>C</h2>
-          <ul class="component-list"><li><a href="card.html">Card</a> <span class="count">1 system</span></li><li><a href="checkbox.html">Checkbox</a> <span class="count">1 system</span></li><li><a href="chip.html">Chip</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-D">
-          <h2>D</h2>
-          <ul class="component-list"><li><a href="date-picker.html">Date Picker</a> <span class="count">2 systems</span></li><li><a href="dropdown.html">Dropdown</a> <span class="count">3 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-I">
-          <h2>I</h2>
-          <ul class="component-list"><li><a href="icon.html">Icon</a> <span class="count">1 system</span></li><li><a href="input.html">Input</a> <span class="count">2 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-L">
-          <h2>L</h2>
-          <ul class="component-list"><li><a href="link.html">Link</a> <span class="count">1 system</span></li><li><a href="list.html">List</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-M">
-          <h2>M</h2>
-          <ul class="component-list"><li><a href="modal.html">Modal</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-N">
-          <h2>N</h2>
-          <ul class="component-list"><li><a href="navigation.html">Navigation</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-P">
-          <h2>P</h2>
-          <ul class="component-list"><li><a href="pagination.html">Pagination</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-R">
-          <h2>R</h2>
-          <ul class="component-list"><li><a href="radio.html">Radio</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-S">
-          <h2>S</h2>
-          <ul class="component-list"><li><a href="sidebar.html">Sidebar</a> <span class="count">1 system</span></li><li><a href="switch.html">Switch</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-T">
-          <h2>T</h2>
-          <ul class="component-list"><li><a href="table.html">Table</a> <span class="count">1 system</span></li><li><a href="tabs.html">Tabs</a> <span class="count">1 system</span></li><li><a href="tooltip.html">Tooltip</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
+  <div class="component-layout">
+    <nav class="component-sidebar"><p class="sidebar-label">All components</p><ul><li><a href="alert.html" class="">Alert <span class="sidebar-count">1</span></a></li><li><a href="avatar.html" class="">Avatar <span class="sidebar-count">1</span></a></li><li><a href="badge.html" class="">Badge <span class="sidebar-count">1</span></a></li><li><a href="breadcrumb.html" class="">Breadcrumb <span class="sidebar-count">1</span></a></li><li><a href="button.html" class="current">Button <span class="sidebar-count">2</span></a></li><li><a href="card.html" class="">Card <span class="sidebar-count">1</span></a></li><li><a href="checkbox.html" class="">Checkbox <span class="sidebar-count">1</span></a></li><li><a href="chip.html" class="">Chip <span class="sidebar-count">1</span></a></li><li><a href="date-picker.html" class="">Date Picker <span class="sidebar-count">2</span></a></li><li><a href="dropdown.html" class="">Dropdown <span class="sidebar-count">3</span></a></li><li><a href="icon.html" class="">Icon <span class="sidebar-count">1</span></a></li><li><a href="input.html" class="">Input <span class="sidebar-count">2</span></a></li><li><a href="link.html" class="">Link <span class="sidebar-count">1</span></a></li><li><a href="list.html" class="">List <span class="sidebar-count">1</span></a></li><li><a href="modal.html" class="">Modal <span class="sidebar-count">1</span></a></li><li><a href="navigation.html" class="">Navigation <span class="sidebar-count">1</span></a></li><li><a href="pagination.html" class="">Pagination <span class="sidebar-count">1</span></a></li><li><a href="radio.html" class="">Radio <span class="sidebar-count">1</span></a></li><li><a href="sidebar.html" class="">Sidebar <span class="sidebar-count">1</span></a></li><li><a href="switch.html" class="">Switch <span class="sidebar-count">1</span></a></li><li><a href="table.html" class="">Table <span class="sidebar-count">1</span></a></li><li><a href="tabs.html" class="">Tabs <span class="sidebar-count">1</span></a></li><li><a href="tooltip.html" class="">Tooltip <span class="sidebar-count">1</span></a></li></ul></nav>
+    <div class="component-main">
+      <p class="eyebrow"><a href="/components/index.html">Components</a></p>
+      <h1>Button</h1>
+      <p class="subtitle">2 indexed systems document button — click through to the actual page.</p>
+      <ul class="system-list"><li><a href="https://developers.arcgis.com/calcite-design-system/components/radio-button/" target="_blank" rel="noopener">ArcGIS — Calcite</a> <span class="page-title">Radio Button</span></li><li><a href="https://developers.arcgis.com/calcite-design-system/components/split-button/" target="_blank" rel="noopener">ArcGIS — Calcite</a> <span class="page-title">Split Button</span></li></ul>
+    </div>
+  </div>
 </div>
 </body>
 </html>

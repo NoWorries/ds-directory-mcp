@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Components — Design Systems Directory</title>
+<title>Polaris — Design Systems Directory</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -107,19 +107,42 @@
     .nav-search-form input { width: 140px; }
   }
 
-  .jump-nav { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 32px; font-family: "JetBrains Mono", monospace; font-size: 0.82rem; }
-  .jump-nav a { display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center; border-radius: 4px; text-decoration: none; color: var(--text-muted); }
-  .jump-nav a:hover { background: var(--accent-soft); color: var(--accent); }
-  .letter-group { margin-bottom: 28px; }
-  .letter-group h2 {
-    font-family: "JetBrains Mono", monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent);
-    margin: 0 0 6px; padding-bottom: 6px; border-bottom: 2px solid var(--border);
+  .system-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .org-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }
+  .meta-line { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px; }
+  .meta-line .badge { background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px; }
+
+  .hero-thumb {
+    display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--surface-sunken); margin-bottom: 28px;
   }
-  .component-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 24px; }
-  .component-list li { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
-  .component-list a { text-decoration: none; font-weight: 600; }
-  .component-list a:hover { text-decoration: underline; }
-  .count { color: var(--text-faint); font-size: 0.78rem; font-family: "JetBrains Mono", monospace; white-space: nowrap; margin-left: 8px; }
+
+  .freshness {
+    display: flex; gap: 24px; flex-wrap: wrap; background: var(--surface-sunken); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.85rem;
+  }
+  .freshness dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); margin: 0; }
+  .freshness dd { margin: 2px 0 0; font-family: "JetBrains Mono", monospace; color: var(--text); }
+
+  section.block { margin-bottom: 32px; }
+  section.block h2 {
+    font-family: "JetBrains Mono", monospace; font-size: 0.95rem; font-weight: 700; margin: 0 0 12px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  }
+  .resource-list, .page-list { list-style: none; margin: 0; padding: 0; }
+  .resource-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .resource-list li a {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border);
+    border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  }
+  .resource-list li a svg { flex: none; }
+  .resource-list li a:hover { border-color: var(--accent); color: var(--accent); }
+  .page-list { columns: 2; column-gap: 24px; }
+  .page-list li { padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }
+  .page-list a { text-decoration: none; }
+  .page-list a:hover { text-decoration: underline; }
+  .empty-note { color: var(--text-faint); font-size: 0.88rem; }
+  @media (max-width: 600px) { .page-list { columns: 1; } }
 </style>
 </head>
 <body>
@@ -129,8 +152,8 @@
         <a href="/" class="site-brand">Design Systems Directory</a>
         <div class="site-nav-links">
           <a href="/" class="">Search</a>
-          <a href="/directory.html" class="">All Systems</a>
-          <a href="/components/index.html" class="current">Components</a>
+          <a href="/directory.html" class="current">All Systems</a>
+          <a href="/components/index.html" class="">Components</a>
         </div>
         <div class="nav-search">
           <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
@@ -159,71 +182,26 @@
 </script>
     
 <div class="page">
-  <p class="eyebrow">Components</p>
-  <h1>Browse by component</h1>
-  <p class="subtitle">The same indexed design systems, entered by component name instead of by system or search query. Pick one to see which systems document it.</p>
-  <nav class="jump-nav"><a href="#letter-A">A</a> <a href="#letter-B">B</a> <a href="#letter-C">C</a> <a href="#letter-D">D</a> <a href="#letter-I">I</a> <a href="#letter-L">L</a> <a href="#letter-M">M</a> <a href="#letter-N">N</a> <a href="#letter-P">P</a> <a href="#letter-R">R</a> <a href="#letter-S">S</a> <a href="#letter-T">T</a></nav>
-  
-        <section class="letter-group" id="letter-A">
-          <h2>A</h2>
-          <ul class="component-list"><li><a href="alert.html">Alert</a> <span class="count">1 system</span></li><li><a href="avatar.html">Avatar</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-B">
-          <h2>B</h2>
-          <ul class="component-list"><li><a href="badge.html">Badge</a> <span class="count">1 system</span></li><li><a href="breadcrumb.html">Breadcrumb</a> <span class="count">1 system</span></li><li><a href="button.html">Button</a> <span class="count">2 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-C">
-          <h2>C</h2>
-          <ul class="component-list"><li><a href="card.html">Card</a> <span class="count">1 system</span></li><li><a href="checkbox.html">Checkbox</a> <span class="count">1 system</span></li><li><a href="chip.html">Chip</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-D">
-          <h2>D</h2>
-          <ul class="component-list"><li><a href="date-picker.html">Date Picker</a> <span class="count">2 systems</span></li><li><a href="dropdown.html">Dropdown</a> <span class="count">3 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-I">
-          <h2>I</h2>
-          <ul class="component-list"><li><a href="icon.html">Icon</a> <span class="count">1 system</span></li><li><a href="input.html">Input</a> <span class="count">2 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-L">
-          <h2>L</h2>
-          <ul class="component-list"><li><a href="link.html">Link</a> <span class="count">1 system</span></li><li><a href="list.html">List</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-M">
-          <h2>M</h2>
-          <ul class="component-list"><li><a href="modal.html">Modal</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-N">
-          <h2>N</h2>
-          <ul class="component-list"><li><a href="navigation.html">Navigation</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-P">
-          <h2>P</h2>
-          <ul class="component-list"><li><a href="pagination.html">Pagination</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-R">
-          <h2>R</h2>
-          <ul class="component-list"><li><a href="radio.html">Radio</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-S">
-          <h2>S</h2>
-          <ul class="component-list"><li><a href="sidebar.html">Sidebar</a> <span class="count">1 system</span></li><li><a href="switch.html">Switch</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-T">
-          <h2>T</h2>
-          <ul class="component-list"><li><a href="table.html">Table</a> <span class="count">1 system</span></li><li><a href="tabs.html">Tabs</a> <span class="count">1 system</span></li><li><a href="tooltip.html">Tooltip</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
+  <p class="eyebrow"><a href="/directory.html">All Systems</a></p>
+  <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=polaris.shopify.com&sz=32" alt="" width="16" height="16" loading="lazy"><span class="org-label">Shopify</span></div>
+  <h1>Polaris</h1>
+  <p class="meta-line">9 pages indexed</p>
+  <a href="https://polaris.shopify.com/" target="_blank" rel="noopener"><img class="hero-thumb" src="screenshots/shopify-polaris.jpg" alt="" loading="lazy"></a>
+
+  <dl class="freshness">
+    <div><dt>Site last updated</dt><dd>unknown</dd></div>
+    <div><dt>Last checked here</dt><dd>13 Sep 2026, 22:19 UTC</dd></div>
+  </dl>
+
+  <section class="block">
+    <h2>Resources</h2>
+    <ul class="resource-list"><li><a href="https://polaris.shopify.com/.well-known/mcp.json" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> MCP server</a></li><li><a href="https://polaris.shopify.com/llms.txt" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> Agent instructions</a></li></ul>
+  </section>
+
+  <section class="block">
+    <h2>Indexed pages</h2>
+    <ul class="page-list"><li><a href="https://polaris.shopify.com/" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/api/polaris/using-polaris-web-components" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/api/app-home" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/api/app-home-ui-extension" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/api/checkout-ui-extensions" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/api/customer-account-ui-extensions" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/apps/build/app-surfaces" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/api/admin-extensions" target="_blank" rel="noopener">Polaris references</a></li><li><a href="https://polaris.shopify.com/docs/api/pos-ui-extensions" target="_blank" rel="noopener">Polaris references</a></li></ul>
+  </section>
 </div>
 </body>
 </html>

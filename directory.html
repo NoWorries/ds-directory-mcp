@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Systems Directory</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+
+  @view-transition { navigation: auto; }
+
+  :root {
+    --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
+    --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
+    --accent: #1d4ed8; --accent-strong: #1638a8; --accent-soft: #e8edfc; --accent-soft-text: #1d4ed8;
+    --shadow: 0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -10px rgba(15,23,42,0.14);
+    /* Faint fractal-noise grain (alpha-only, so it reads as texture rather
+       than color) — the shared look for .textured containers below. Kept as
+       a token so light/dark could each tune it without touching every
+       container's markup. */
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --surface: #151a21; --surface-sunken: #1b212a; --border: #2a323d;
+      --text: #e7eaee; --text-muted: #98a2b0; --text-faint: #626b78;
+      --accent: #7ea2ff; --accent-strong: #a4c0ff; --accent-soft: rgba(126,162,255,0.12); --accent-soft-text: #a4c0ff;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 18px -10px rgba(0,0,0,0.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  /* A faint grain treatment for card-like containers (the MCP callout, nav
+     cards, grid cards) — applied via ::before so it layers over each
+     container's own background without fighting its other background-image
+     uses (e.g. a card's own thumbnail). Needs the container to have
+     `position: relative` (each usage sets it) and `overflow: hidden`
+     (usually already there) so it respects rounded corners instead of
+     bleeding past them. */
+  .textured { position: relative; }
+  .textured::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background-image: var(--noise);
+    background-repeat: repeat;
+    opacity: 0.7;
+  }
+  .textured > * { position: relative; }
+  body {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); margin: 0; padding: calc(60px + 32px) 24px 80px;
+  }
+  a { color: var(--accent); }
+  .page { max-width: 1040px; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; }
+  h1 {
+    font-family: "JetBrains Mono", monospace; font-weight: 700;
+    font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); letter-spacing: -0.01em; line-height: 1.25;
+    margin: 0 0 12px; text-wrap: balance;
+  }
+  .subtitle { color: var(--text-muted); font-size: 0.98rem; line-height: 1.55; max-width: 64ch; margin: 0 0 28px; }
+
+  /* --- Fixed global top nav --- */
+  .site-nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 100;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+  }
+  .site-nav-inner {
+    max-width: 1040px; margin: 0 auto; width: 100%; padding: 0 24px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .site-brand {
+    font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.86rem;
+    color: var(--text); text-decoration: none; white-space: nowrap;
+  }
+  .site-nav-links { display: flex; gap: 4px; flex: 1; }
+  .site-nav-links a {
+    font-size: 0.86rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 6px;
+  }
+  .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
+  .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  .nav-search { display: flex; align-items: center; }
+  .nav-search-toggle {
+    background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; border-radius: 6px;
+  }
+  .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  /* Same [hidden]-vs-explicit-display fix needed a third time here — see the
+     .cards-grid/.card comments in generate_directory.py for the full story. */
+  .nav-search-form[hidden] { display: none; }
+  .nav-search-form { display: flex; align-items: center; }
+  .nav-search-form input {
+    width: 220px; font: inherit; font-size: 0.85rem; padding: 6px 10px; margin-left: 6px;
+    border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
+  }
+  .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+  @media (max-width: 640px) {
+    .site-nav-links a span { display: none; }
+    .nav-search-form input { width: 140px; }
+  }
+
+  /* .page (eyebrow/heading/subtitle) deliberately stays at the shared
+     PAGE_MAX_WIDTH, same as every other page — no reason for the intro here
+     to look different from the rest of the site. Only the table/grid itself
+     needs more room (with the full ~250-system registry and 9 resource
+     columns, it wants noticeably more than this sample data's 4 rows show),
+     so it lives in its own .table-breakout below: a separate block, centered
+     independently at a wider FIXED cap. Fixed (not shrink-to-fit) on purpose
+     — an earlier version sized this to the table's own content width, which
+     meant the toolbar (and the List/Grid toggle inside it) physically moved
+     between the two views, since Grid view has no table to size against.
+     A constant width means the toggle sits in the same place either way. */
+  .table-breakout { max-width: 1600px; margin: 0 auto; }
+  .table-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
+  #tableFilter {
+    padding: 8px 12px; font: inherit; font-size: 0.85rem; border: 1px solid var(--border);
+    border-radius: 6px; width: 280px; max-width: 100%; background: var(--surface); color: var(--text);
+  }
+  #tableFilter:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  .view-toggle { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .view-toggle button {
+    display: flex; align-items: center; gap: 6px;
+    font: inherit; font-size: 0.82rem; font-weight: 600; padding: 7px 14px; border: none; cursor: pointer;
+    background: var(--surface); color: var(--text-muted);
+  }
+  .view-toggle button svg { flex: none; }
+  .view-toggle button + button { border-left: 1px solid var(--border); }
+  .view-toggle button.current { background: var(--accent-soft); color: var(--accent); }
+
+  /* Classic CSS-only "scroll shadow": two background-attachment:local layers
+     scroll WITH the content (so they only show at the true start/end, never
+     appearing over content past the very edges) and two background-attachment:
+     scroll shadow layers stay fixed to the viewport — the shadow only becomes
+     visible once the local layer has scrolled out from under it, i.e. exactly
+     when there's more table to the left/right than currently visible. */
+  .table-wrap {
+    overflow-x: auto; border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: var(--shadow);
+    background-color: var(--surface);
+    background-image:
+      linear-gradient(to right, var(--surface) 30%, rgba(0,0,0,0)),
+      linear-gradient(to left, var(--surface) 30%, rgba(0,0,0,0)),
+      linear-gradient(to right, rgba(15,23,42,0.15), rgba(15,23,42,0)),
+      linear-gradient(to left, rgba(15,23,42,0.15), rgba(15,23,42,0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-size: 24px 100%, 24px 100%, 10px 100%, 10px 100%;
+    background-attachment: local, local, scroll, scroll;
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+  th {
+    text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-weight: 600;
+    white-space: nowrap; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em;
+    font-family: "JetBrains Mono", monospace;
+  }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  /* Skips layout/paint for off-screen rows entirely — the load-bearing fix for
+     hundreds of rows staying cheap without pagination or virtualization JS.
+     contain-intrinsic-size is a rough guess at row height so the page doesn't
+     jump around as rows are measured for the first time while scrolling. */
+  tbody tr { content-visibility: auto; contain-intrinsic-size: auto 46px; }
+  tbody tr:last-child td { border-bottom: none; }
+  .name-cell { min-width: 200px; }
+  .name-block { display: flex; align-items: center; gap: 8px; }
+  .name-text { display: flex; flex-direction: column; line-height: 1.25; }
+  .org { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); }
+  .ds-name { font-weight: 600; font-size: 0.92rem; }
+  .ds-name a { color: inherit; text-decoration: none; text-underline-offset: 2px; }
+  .ds-name a:hover { text-decoration: underline; }
+  .favicon { border-radius: 3px; flex: none; }
+  .meta { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; font-variant-numeric: tabular-nums; font-family: "JetBrains Mono", monospace; }
+  .cell { text-align: center; font-variant-numeric: tabular-nums; }
+  .cell-pages { font-family: "JetBrains Mono", monospace; color: var(--text-muted); }
+  /* A bare checkmark glyph doesn't read as clickable until you hover it —
+     giving it a pill background (same visual language as .badge/.chip
+     elsewhere) makes "this is a link" obvious at rest, not just on hover. */
+  .cell-found a {
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--accent); background: var(--accent-soft); text-decoration: none;
+    width: 26px; height: 22px; border-radius: 999px;
+  }
+  .cell-found a:hover { background: var(--accent); color: #fff; }
+  /* Distinct from the name link (which goes to this system's own detail
+     page): same pill treatment, but muted rather than accent-colored so it
+     doesn't read as another "resource found" indicator — this one always
+     goes straight out to the system's real docs site. */
+  .cell-docs a {
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--text-muted); background: var(--surface-sunken); text-decoration: none;
+    width: 26px; height: 22px; border-radius: 999px; border: 1px solid var(--border);
+  }
+  .cell-docs a:hover { color: var(--accent); border-color: var(--accent); }
+  .cell-none { color: var(--text-faint); }
+  .cell-found-count {
+    font-family: "JetBrains Mono", monospace; font-weight: 600; color: var(--text);
+    position: sticky; right: 0; background: var(--surface);
+    box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25);
+  }
+  th:last-child { position: sticky; right: 0; background: var(--surface); box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25); }
+  .badge {
+    background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px;
+    font-size: 0.72rem; font-family: "JetBrains Mono", monospace; font-weight: 500;
+  }
+  th[data-col] { cursor: pointer; user-select: none; }
+  th[data-col]:hover { color: var(--accent); }
+  th.sorted-asc::after { content: " ▲"; font-size: 0.65em; }
+  th.sorted-desc::after { content: " ▼"; font-size: 0.65em; }
+
+  /* [hidden] must win over this class's own "display: grid" — an author-origin
+     rule always overrides the UA stylesheet's hidden-implies-none regardless
+     of source order, so without this override toggling hidden does nothing. */
+  .cards-grid[hidden] { display: none; }
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  /* Same fix as .cards-grid above, needed again here: .card sets its own
+     "display: flex" below, which otherwise wins over [hidden] and breaks the
+     per-card name-filter (the row-level version never needed this because tr
+     doesn't set an explicit display of its own). */
+  .card[hidden] { display: none; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    box-shadow: var(--shadow); display: flex; flex-direction: column;
+    content-visibility: auto; contain-intrinsic-size: auto 220px;
+    text-decoration: none; color: inherit; transition: border-color 0.15s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card .name-block { align-items: flex-start; }
+  .card-thumb {
+    width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
+    background: var(--surface-sunken); display: block;
+  }
+  .card-body { padding: 14px; }
+</style>
+</head>
+<body>
+
+    <nav class="site-nav">
+      <div class="site-nav-inner">
+        <a href="/" class="site-brand">Design Systems Directory</a>
+        <div class="site-nav-links">
+          <a href="/" class="">Search</a>
+          <a href="/directory.html" class="current">All Systems</a>
+          <a href="/components/index.html" class="">Components</a>
+        </div>
+        <div class="nav-search">
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+          <form class="nav-search-form" id="navSearchForm" hidden>
+            <input type="text" id="navSearchInput" placeholder="Search design systems...">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <script>
+(function () {
+  var toggle = document.getElementById("navSearchToggle");
+  var form = document.getElementById("navSearchForm");
+  var input = document.getElementById("navSearchInput");
+  if (!toggle || !form) return;
+  toggle.addEventListener("click", function () {
+    form.hidden = !form.hidden;
+    if (!form.hidden) input.focus();
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (q) window.location.href = "/?q=" + encodeURIComponent(q);
+  });
+})();
+</script>
+    
+<div class="page">
+  <p class="eyebrow">All Systems</p>
+  <h1>Every indexed design system</h1>
+  <p class="subtitle">4 external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
+</div>
+
+<div class="table-breakout">
+  <div class="table-toolbar">
+    <input id="tableFilter" type="text" placeholder="Filter by system or company name...">
+    <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
+      <button type="button" data-view="list" class="current"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg> List</button>
+      <button type="button" data-view="grid"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> Grid</button>
+    </div>
+  </div>
+
+  <div class="table-wrap" id="listView">
+  <table id="directoryTable">
+    <thead>
+      <tr>
+        <th data-col="0" data-sort="text">System</th>
+        <th>Docs</th>
+        <th data-col="2" data-sort="number">Pages</th>
+        <th data-col="3" data-sort="found">GitHub</th><th data-col="4" data-sort="found">npm</th><th data-col="5" data-sort="found">Storybook</th><th data-col="6" data-sort="found">Figma</th><th data-col="7" data-sort="found">Icons</th><th data-col="8" data-sort="found">Markdown docs</th><th data-col="9" data-sort="found">MCP server</th><th data-col="10" data-sort="found">Agent skill</th><th data-col="11" data-sort="found">Agent instructions</th>
+        <th data-col="12" data-sort="number">Found</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    <tr id="adeo-mozaic-design-system" data-name="adeo — mozaic design system" data-sort-name="mozaic design system">
+      <td class="name-cell"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=mozaic.adeo.cloud&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">Adeo</span><span class="ds-name"><a href="systems/adeo-mozaic-design-system.html">Mozaic Design System</a></span></div></div></td>
+      <td class="cell cell-docs"><a href="https://mozaic.adeo.cloud/" target="_blank" rel="noopener" title="Open https://mozaic.adeo.cloud/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
+      <td class="cell cell-pages" data-sort-value="30">30</td>
+      <td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-found"><a href="https://mozaic.adeo.cloud/foundations/icons/" target="_blank" rel="noopener" title="https://mozaic.adeo.cloud/foundations/icons/"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td>
+      <td class="cell cell-found-count" data-sort-value="1">1/9</td>
+    </tr>
+    
+    <tr id="ant-financial-ant-design" data-name="ant financial — ant design" data-sort-name="ant design">
+      <td class="name-cell"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ant.design&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">Ant Financial</span><span class="ds-name"><a href="systems/ant-financial-ant-design.html">Ant Design</a></span></div></div></td>
+      <td class="cell cell-docs"><a href="https://ant.design/" target="_blank" rel="noopener" title="Open https://ant.design/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
+      <td class="cell cell-pages" data-sort-value="30">30</td>
+      <td class="cell cell-found"><a href="https://github.com/ant-design/ant-design-icons" target="_blank" rel="noopener" title="https://github.com/ant-design/ant-design-icons"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-found"><a href="https://www.npmjs.com/package/@ant-design/colors" target="_blank" rel="noopener" title="https://www.npmjs.com/package/@ant-design/colors"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-found"><a href="https://ant.design/docs/spec/icon" target="_blank" rel="noopener" title="https://ant.design/docs/spec/icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-found"><a href="https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md" target="_blank" rel="noopener" title="https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-found"><a href="https://ant.design/llms.txt" target="_blank" rel="noopener" title="https://ant.design/llms.txt"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td>
+      <td class="cell cell-found-count" data-sort-value="5">5/9</td>
+    </tr>
+    
+    <tr id="arcgis-calcite" data-name="arcgis — calcite" data-sort-name="calcite">
+      <td class="name-cell"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developers.arcgis.com&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">ArcGIS</span><span class="ds-name"><a href="systems/arcgis-calcite.html">Calcite</a></span></div></div></td>
+      <td class="cell cell-docs"><a href="https://developers.arcgis.com/calcite-design-system/" target="_blank" rel="noopener" title="Open https://developers.arcgis.com/calcite-design-system/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
+      <td class="cell cell-pages" data-sort-value="29">29</td>
+      <td class="cell cell-none" title="None found">—</td><td class="cell cell-found"><a href="https://www.npmjs.com/package/@esri/calcite-components-react" target="_blank" rel="noopener" title="https://www.npmjs.com/package/@esri/calcite-components-react"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-found"><a href="https://developers.arcgis.com/calcite-design-system/components/icon/" target="_blank" rel="noopener" title="https://developers.arcgis.com/calcite-design-system/components/icon/"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td>
+      <td class="cell cell-found-count" data-sort-value="2">2/9</td>
+    </tr>
+    
+    <tr id="shopify-polaris" data-name="shopify — polaris" data-sort-name="polaris">
+      <td class="name-cell"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=polaris.shopify.com&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">Shopify</span><span class="ds-name"><a href="systems/shopify-polaris.html">Polaris</a></span></div></div></td>
+      <td class="cell cell-docs"><a href="https://polaris.shopify.com/" target="_blank" rel="noopener" title="Open https://polaris.shopify.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
+      <td class="cell cell-pages" data-sort-value="9">9</td>
+      <td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-none" title="None found">—</td><td class="cell cell-found"><a href="https://polaris.shopify.com/.well-known/mcp.json" target="_blank" rel="noopener" title="https://polaris.shopify.com/.well-known/mcp.json"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td><td class="cell cell-none" title="None found">—</td><td class="cell cell-found"><a href="https://polaris.shopify.com/llms.txt" target="_blank" rel="noopener" title="https://polaris.shopify.com/llms.txt"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></a></td>
+      <td class="cell cell-found-count" data-sort-value="2">2/9</td>
+    </tr>
+    
+    </tbody>
+  </table>
+  </div>
+
+  <div class="cards-grid" id="cardsGrid" hidden>
+    
+    <a class="card" href="systems/adeo-mozaic-design-system.html" data-name="adeo — mozaic design system">
+      <img class="card-thumb" src="screenshots/adeo-mozaic-design-system.jpg" alt="" loading="lazy">
+      <div class="card-body textured">
+        <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=mozaic.adeo.cloud&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">Adeo</span><span class="ds-name">Mozaic Design System</span></div></div>
+        <div class="meta">30 pages indexed</div>
+      </div>
+    </a>
+    
+    <a class="card" href="systems/ant-financial-ant-design.html" data-name="ant financial — ant design">
+      <img class="card-thumb" src="screenshots/ant-financial-ant-design.jpg" alt="" loading="lazy">
+      <div class="card-body textured">
+        <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ant.design&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">Ant Financial</span><span class="ds-name">Ant Design</span></div></div>
+        <div class="meta">30 pages indexed</div>
+      </div>
+    </a>
+    
+    <a class="card" href="systems/arcgis-calcite.html" data-name="arcgis — calcite">
+      <img class="card-thumb" src="screenshots/arcgis-calcite.jpg" alt="" loading="lazy">
+      <div class="card-body textured">
+        <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developers.arcgis.com&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">ArcGIS</span><span class="ds-name">Calcite</span></div></div>
+        <div class="meta">29 pages indexed</div>
+      </div>
+    </a>
+    
+    <a class="card" href="systems/shopify-polaris.html" data-name="shopify — polaris">
+      <img class="card-thumb" src="screenshots/shopify-polaris.jpg" alt="" loading="lazy">
+      <div class="card-body textured">
+        <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=polaris.shopify.com&sz=32" alt="" width="16" height="16" loading="lazy"><div class="name-text"><span class="org">Shopify</span><span class="ds-name">Polaris</span></div></div>
+        <div class="meta">9 pages indexed</div>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+<script>
+  // --- Table sort ---
+  let currentSort = { col: null, dir: 1 };
+
+  function cellValue(row, col, type) {
+    // Sorting the System column by the visible design-system name (e.g.
+    // "Mozaic Design System"), not by row.dataset.name — that's the "Org —
+    // Name" identity string used for the name-filter box, and sorting by it
+    // instead would order rows by the org prefix, which isn't what's visually
+    // prominent in the name cell and made the sort look wrong/arbitrary.
+    if (col === 0) return row.dataset.sortName || "";
+    const cell = row.children[col];
+    if (!cell) return "";
+    if (type === "found") return cell.classList.contains("cell-found") ? 1 : 0;
+    if (type === "number") return parseFloat(cell.dataset.sortValue ?? cell.textContent) || 0;
+    return (cell.textContent || "").trim().toLowerCase();
+  }
+
+  function sortTable(th) {
+    const col = parseInt(th.dataset.col, 10);
+    const type = th.dataset.sort;
+    const tbody = document.querySelector("#directoryTable tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+
+    const dir = (currentSort.col === col && currentSort.dir === 1) ? -1 : 1;
+    currentSort = { col, dir };
+
+    rows.sort((a, b) => {
+      const va = cellValue(a, col, type);
+      const vb = cellValue(b, col, type);
+      if (va < vb) return -1 * dir;
+      if (va > vb) return 1 * dir;
+      return 0;
+    });
+    rows.forEach(row => tbody.appendChild(row));
+
+    document.querySelectorAll("#directoryTable th[data-col]").forEach(h => h.classList.remove("sorted-asc", "sorted-desc"));
+    th.classList.add(dir === 1 ? "sorted-asc" : "sorted-desc");
+  }
+
+  document.querySelectorAll("#directoryTable th[data-col]").forEach(th => {
+    th.addEventListener("click", () => sortTable(th));
+  });
+
+  // --- Name filter (plain substring match, separate from the semantic search above) —
+  // applies to both the table and the card gallery below it, since they show the same data.
+  const tableFilter = document.getElementById("tableFilter");
+  tableFilter.addEventListener("input", () => {
+    const query = tableFilter.value.trim().toLowerCase();
+    document.querySelectorAll("#directoryTable tbody tr").forEach(row => {
+      row.hidden = Boolean(query) && !row.dataset.name.includes(query);
+    });
+    document.querySelectorAll("#cardsGrid .card").forEach(card => {
+      card.hidden = Boolean(query) && !card.dataset.name.includes(query);
+    });
+  });
+
+  // --- List/Grid view toggle (remembers choice per viewer via localStorage) ---
+  const viewToggle = document.getElementById("viewToggle");
+  const listView = document.getElementById("listView");
+  const gridView = document.getElementById("cardsGrid");
+
+  function setView(view) {
+    listView.hidden = view !== "list";
+    gridView.hidden = view !== "grid";
+    viewToggle.querySelectorAll("button").forEach(b => b.classList.toggle("current", b.dataset.view === view));
+    try { localStorage.setItem("ds-directory-view", view); } catch (err) { /* private browsing etc. — fine to skip */ }
+  }
+
+  viewToggle.addEventListener("click", (e) => {
+    const button = e.target.closest("button[data-view]");
+    if (button) setView(button.dataset.view);
+  });
+
+  let savedView = "list";
+  try { savedView = localStorage.getItem("ds-directory-view") || "list"; } catch (err) { /* fine */ }
+  setView(savedView);
+</script>
+</body>
+</html>
