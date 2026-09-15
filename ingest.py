@@ -135,13 +135,19 @@ def ensure_collection(client: QdrantClient) -> None:
     )
 
 
-def fetch_page(url: str) -> BeautifulSoup | None:
+def fetch_page(url: str) -> tuple[BeautifulSoup | None, str | None]:
+    """Returns (soup, None) on success or (None, error_message) on failure.
+    The error string is only actually used for the start URL (see crawl()) —
+    that's the one fetch failure worth recording on the registry entry, since
+    a DNS/connection failure there usually means the whole site is
+    unreachable (moved, renamed, taken down), not just one bad link deeper
+    in the crawl."""
     try:
         response = requests.get(url, timeout=15, headers={"User-Agent": "ds-directory-mcp/1.0"})
         response.raise_for_status()
     except requests.RequestException as exc:
         print(f"  skip {url}: {exc}")
-        return None
+        return None, str(exc)
     # requests falls back to Latin-1 (per the old HTTP spec default) whenever a
     # server's Content-Type header omits a charset — even though virtually
     # every real docs site actually serves UTF-8. That mismatch is what turns
@@ -149,7 +155,7 @@ def fetch_page(url: str) -> BeautifulSoup | None:
     # encoding, so force UTF-8 unless the server was explicit about something else.
     if "charset" not in response.headers.get("content-type", "").lower():
         response.encoding = "utf-8"
-    return BeautifulSoup(response.text, "html.parser")
+    return BeautifulSoup(response.text, "html.parser"), None
 
 
 def extract_text(soup: BeautifulSoup) -> str:
@@ -198,17 +204,23 @@ def crawl(
     max_pages: int = DEFAULT_MAX_PAGES,
     include_patterns: list[str] | None = None,
     exclude_patterns: list[str] | None = None,
-) -> tuple[dict[str, str], set[str], dict[str, str], bool]:
+) -> tuple[dict[str, str], set[str], dict[str, str], bool, str | None]:
     """Breadth-first crawl restricted to the start URLs' domain(s).
 
-    Returns ({url: text}, all_links_seen, {url: page_title}, hit_max_pages) —
-    all_links_seen includes off-domain links (GitHub, Storybook, Figma, etc.)
-    for resource discovery, even though only same-domain pages are actually
-    crawled and embedded. page_title lets a browsable "jump straight to this
-    page" index show something more useful than a bare URL. hit_max_pages is
-    True when the crawl stopped because it hit max_pages while pages were
-    still queued to visit — i.e. there's real, undiscovered content still out
-    there, as opposed to the crawl just running out of links on its own.
+    Returns ({url: text}, all_links_seen, {url: page_title}, hit_max_pages,
+    start_url_error) — all_links_seen includes off-domain links (GitHub,
+    Storybook, Figma, etc.) for resource discovery, even though only
+    same-domain pages are actually crawled and embedded. page_title lets a
+    browsable "jump straight to this page" index show something more useful
+    than a bare URL. hit_max_pages is True when the crawl stopped because it
+    hit max_pages while pages were still queued to visit — i.e. there's real,
+    undiscovered content still out there, as opposed to the crawl just
+    running out of links on its own. start_url_error is the fetch error for
+    the FIRST start URL specifically (None if it fetched fine) — a DNS/
+    connection failure there usually means the whole site moved or is down,
+    not just one bad link deeper in the crawl, so it's worth surfacing
+    distinctly from an ordinary low-page-count crawl (see find_broken() in
+    generate_directory.py / check_crawl_health.py).
 
     include_patterns: if given, only crawl URLs containing one of these substrings
     (start_urls themselves are always crawled regardless).
@@ -223,6 +235,7 @@ def crawl(
     pages: dict[str, str] = {}
     page_titles: dict[str, str] = {}
     all_links_seen: set[str] = set()
+    start_url_error: str | None = None
 
     while to_visit and len(visited) < max_pages:
         url = to_visit.pop(0)
@@ -231,9 +244,11 @@ def crawl(
         visited.add(url)
 
         print(f"Crawling: {url}")
-        soup = fetch_page(url)
+        soup, error = fetch_page(url)
         time.sleep(CRAWL_DELAY_SECONDS)
         if soup is None:
+            if url == start_urls[0]:
+                start_url_error = error
             continue
 
         text = extract_text(soup)
@@ -258,7 +273,7 @@ def crawl(
     hit_max_pages = len(visited) >= max_pages and bool(to_visit)
     if hit_max_pages:
         print(f"  hit max_pages ({max_pages}) with {len(to_visit)} more page(s) still queued — coverage is likely incomplete")
-    return pages, all_links_seen, page_titles, hit_max_pages
+    return pages, all_links_seen, page_titles, hit_max_pages, start_url_error
 
 
 def load_registry() -> list[dict]:
@@ -309,11 +324,15 @@ def update_registry_stats(
     resources: dict[str, list[str]],
     enrichment: dict,
     hit_max_pages: bool = False,
+    crawl_error: str | None = None,
 ) -> None:
-    # Written every run (not just when True) so a system that used to hit the
-    # cap and no longer does (bigger max_pages, or the site shrank) gets its
-    # flag cleared instead of staying stuck reporting stale incomplete-coverage.
-    fields = {"pages_indexed": pages_indexed, "hit_max_pages": hit_max_pages}
+    # hit_max_pages/crawl_error written every run (not just when truthy) so a
+    # system that used to hit the cap, or used to fail to fetch its start URL
+    # at all, and no longer does, gets that cleared instead of staying stuck
+    # reporting a stale problem that's since been fixed. "" rather than None
+    # for the no-error case specifically — update_registry_fields drops None
+    # values so it could never clear a previously-set crawl_error otherwise.
+    fields = {"pages_indexed": pages_indexed, "hit_max_pages": hit_max_pages, "crawl_error": crawl_error or ""}
     if resources:
         fields["resources"] = resources
     if enrichment:
@@ -372,7 +391,7 @@ def ingest(
     ensure_collection(client)
     delete_existing(client, design_system_name)
 
-    pages, all_links_seen, page_titles, hit_max_pages = crawl(
+    pages, all_links_seen, page_titles, hit_max_pages, start_url_error = crawl(
         start_urls,
         max_pages=max_pages,
         include_patterns=include_patterns,
@@ -392,6 +411,7 @@ def ingest(
         resources=resources,
         enrichment=enrichment,
         hit_max_pages=hit_max_pages,
+        crawl_error=start_url_error,
     )
     update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in pages])
 

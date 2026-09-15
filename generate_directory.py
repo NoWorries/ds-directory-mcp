@@ -98,10 +98,18 @@ def find_low_coverage(entries: list[dict]) -> list[dict]:
     """Systems that look like their crawl failed or was incomplete. Used by
     check_crawl_health.py to notify the maintainer — deliberately NOT surfaced
     on the public directory page, which stays clean of internal crawl-health
-    noise for visitors. See check_crawl_health.py for where this goes instead."""
+    noise for visitors. See check_crawl_health.py for where this goes instead.
+
+    Excludes anything find_broken() already caught (crawl_error set) — a
+    system whose start URL couldn't be fetched at all is a different, more
+    specific problem than "crawled fine but found few pages," and would
+    otherwise show up in both sections of the health report for the same
+    underlying issue."""
     return [
         e for e in entries
-        if e.get("pages_indexed") is not None and e["pages_indexed"] < LOW_COVERAGE_THRESHOLD
+        if e.get("pages_indexed") is not None
+        and e["pages_indexed"] < LOW_COVERAGE_THRESHOLD
+        and not e.get("crawl_error")
     ]
 
 
@@ -112,6 +120,15 @@ def find_capped(entries: list[dict]) -> list[dict]:
     rather than a failed/blocked crawl. Also maintainer-only, for the same
     reason find_low_coverage() is."""
     return [e for e in entries if e.get("hit_max_pages")]
+
+
+def find_broken(entries: list[dict]) -> list[dict]:
+    """Systems whose start URL couldn't even be fetched (DNS failure,
+    connection refused, timeout, etc — see crawl()'s start_url_error in
+    ingest.py) — usually means the site moved, was renamed, or is down,
+    rather than the milder "crawled fine but found little" case
+    find_low_coverage() covers. Also maintainer-only, for the same reason."""
+    return [e for e in entries if e.get("crawl_error")]
 
 
 def favicon_html(start_url: str | None) -> str:

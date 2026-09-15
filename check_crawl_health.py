@@ -1,29 +1,48 @@
 """
-Flags two opposite crawl-health problems and reports them to the maintainer —
-via the GitHub Actions job summary and a file the workflow hands to
+Flags three crawl-health problems and reports them to the maintainer — via
+the GitHub Actions job summary and a file the workflow hands to
 `gh issue create`/`gh issue edit`:
 
-1. Low coverage (fewer than LOW_COVERAGE_THRESHOLD pages indexed) — the crawl
-   likely failed or got blocked.
-2. Capped (hit ingest.py's max_pages ceiling with pages still queued) — the
+1. Broken (the start URL itself couldn't be fetched — DNS failure, connection
+   refused, timeout) — usually means the site moved, was renamed, or is down.
+2. Low coverage (fewer than LOW_COVERAGE_THRESHOLD pages indexed, and not
+   already caught by #1) — the crawl ran but likely got blocked or found a
+   JS-rendered page it can't see through.
+3. Capped (hit ingest.py's max_pages ceiling with pages still queued) — the
    crawl worked, but there's real content that wasn't indexed because the
    site is bigger than max_pages allows.
 
 Deliberately NOT surfaced on the public directory page — see
-generate_directory.py's find_low_coverage()/find_capped() docstrings for why.
+generate_directory.py's find_broken()/find_low_coverage()/find_capped()
+docstrings for why.
 """
 
 import os
 from pathlib import Path
 
-from generate_directory import LOW_COVERAGE_THRESHOLD, find_capped, find_low_coverage, load_systems
+from generate_directory import LOW_COVERAGE_THRESHOLD, find_broken, find_capped, find_low_coverage, load_systems
 from text_utils import full_name
 
 REPORT_FILE = Path(__file__).parent / "health_report.md"
 
 
-def render_report(low_coverage: list[dict], capped: list[dict]) -> str:
+def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dict]) -> str:
     sections = []
+
+    if broken:
+        lines = [
+            f"### 🔴 {len(broken)} system{'s' if len(broken) != 1 else ''} failed to fetch at all — url may have changed",
+            "",
+            "The start URL itself couldn't be reached (DNS failure, connection refused, "
+            "timeout, etc). Usually the site moved, was renamed, or the URL in "
+            "`systems.yaml` is just wrong — worth checking each one manually before "
+            "assuming it's a temporary blip.",
+            "",
+        ]
+        for entry in broken:
+            start_url = (entry.get("start_urls") or [""])[0]
+            lines.append(f"- **{full_name(entry)}** — {start_url}\n  `{entry['crawl_error']}`")
+        sections.append("\n".join(lines))
 
     if low_coverage:
         lines = [
@@ -61,12 +80,13 @@ def render_report(low_coverage: list[dict], capped: list[dict]) -> str:
 
 def main() -> None:
     entries = load_systems()
+    broken = find_broken(entries)
     low_coverage = find_low_coverage(entries)
     capped = find_capped(entries)
 
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
 
-    if not low_coverage and not capped:
+    if not broken and not low_coverage and not capped:
         print("No crawl-health issues detected.")
         if REPORT_FILE.exists():
             REPORT_FILE.unlink()
@@ -75,7 +95,7 @@ def main() -> None:
                 f.write("### ✅ No crawl-health issues detected\n")
         return
 
-    report = render_report(low_coverage, capped)
+    report = render_report(broken, low_coverage, capped)
     print(report)
     REPORT_FILE.write_text(report)
 

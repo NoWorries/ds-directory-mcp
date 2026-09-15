@@ -104,13 +104,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          existing=$(gh issue list --search "Crawl health: low-coverage systems in:title" --state open --json number --jq '.[0].number')
+          existing=$(gh issue list --search "Crawl health: systems needing attention in:title" --state open --json number --jq '.[0].number')
           if [ -f health_report.md ]; then
             if [ -n "$existing" ]; then
               gh issue edit "$existing" --body-file health_report.md
             else
-              gh issue create --title "Crawl health: low-coverage systems" --body-file health_report.md --label "crawl-health" || \
-              gh issue create --title "Crawl health: low-coverage systems" --body-file health_report.md
+              gh issue create --title "Crawl health: systems needing attention" --body-file health_report.md --label "crawl-health" || \
+              gh issue create --title "Crawl health: systems needing attention" --body-file health_report.md
             fi
           elif [ -n "$existing" ]; then
             gh issue close "$existing" --comment "All systems now have healthy crawl coverage — closing."
