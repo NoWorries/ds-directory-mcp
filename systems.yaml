@@ -437,7 +437,7 @@
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
-  - https://www.gov.uk/design-system/
+  - https://design-system.service.gov.uk/
 - organization: Government of Canada
   design_system: Aurora Design System
   start_urls:
@@ -485,7 +485,7 @@
 - organization: Hewlett Packard
   design_system: Grommet
   start_urls:
-  - https://grommet.io/
+  - https://v2.grommet.io/
 - organization: Hubspot
   design_system: Canvas Design System
   start_urls:
@@ -665,7 +665,7 @@
 - organization: MongoDB
   design_system: MongoDB Design System
   start_urls:
-  - https://mongodb.design/
+  - https://www.mongodb.design/
 - organization: Monzo
   design_system: Monzo Tone of Voice
   start_urls:
@@ -801,7 +801,7 @@
 - organization: Priceline
   design_system: Priceline One
   start_urls:
-  - https://priceline.github.io/design-system/
+  - https://pricelinelabs.github.io/design-system/
 - organization: Pusher
   design_system: Chameleon
   start_urls:
@@ -952,7 +952,7 @@
 - organization: Skyscanner
   design_system: Backpack
   start_urls:
-  - https://backpack.github.io/
+  - https://skyscanner.design/
 - organization: SpareBank 1
   design_system: SpareBank 1 Designsystem
   start_urls:
