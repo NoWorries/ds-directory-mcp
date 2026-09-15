@@ -1,0 +1,7 @@
+# requirements-ingest.txt plus crawl4ai (headless-browser rendering) — only
+# ingest.py's --spa mode needs this, so it's kept out of requirements-ingest.txt
+# to spare every other crawl job (reindex-full/new/shallow, hundreds of
+# shards combined) from installing a full browser-automation dependency tree
+# they never touch.
+-r requirements-ingest.txt
+crawl4ai>=0.4.0

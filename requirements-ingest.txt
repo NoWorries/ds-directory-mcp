@@ -1,0 +1,16 @@
+# Lean dependency set for crawl/merge/generate CI jobs (reindex-full,
+# reindex-new, reindex-shallow, submission-approve, submission-check,
+# merge_shards.py) — everything ingest.py/generate_*.py actually import,
+# minus:
+#   - mcp[cli]: only used by server.py, which runs on Render, never in CI
+#   - crawl4ai: only used by ingest.py's --spa mode (reindex-spa.yml installs
+#     it separately, on top of this file)
+# Every one of these jobs was installing both anyway via requirements.txt,
+# which meant hundreds of shards pulling in a full browser-automation
+# dependency tree (crawl4ai -> Playwright + extras) they never use — pure
+# wasted Actions-minutes at real scale.
+qdrant-client>=1.9.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+python-dotenv>=1.0.0
+PyYAML>=6.0
