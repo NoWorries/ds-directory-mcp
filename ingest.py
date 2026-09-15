@@ -158,6 +158,24 @@ def fetch_page(url: str) -> tuple[BeautifulSoup | None, str | None]:
     return BeautifulSoup(response.text, "html.parser"), None
 
 
+def fetch_text_resource(url: str) -> str | None:
+    """Plain-text fetch (no HTML parsing) for llms.txt/llms-full.txt-style
+    resources — used as a fallback when a site's crawl comes back empty (see
+    crawl()'s SPA fallback below). These are meant to be read directly by
+    agents in the first place, so they're often the single best source of
+    real content for a client-side-rendered site this crawler otherwise can't
+    see through at all."""
+    try:
+        response = requests.get(url, timeout=15, headers={"User-Agent": "ds-directory-mcp/1.0"})
+        response.raise_for_status()
+    except requests.RequestException as exc:
+        print(f"  skip {url}: {exc}")
+        return None
+    if "charset" not in response.headers.get("content-type", "").lower():
+        response.encoding = "utf-8"
+    return response.text
+
+
 def extract_text(soup: BeautifulSoup) -> str:
     for tag_name in STRIP_TAGS:
         for tag in soup.find_all(tag_name):
@@ -325,14 +343,21 @@ def update_registry_stats(
     enrichment: dict,
     hit_max_pages: bool = False,
     crawl_error: str | None = None,
+    likely_spa: bool = False,
 ) -> None:
-    # hit_max_pages/crawl_error written every run (not just when truthy) so a
-    # system that used to hit the cap, or used to fail to fetch its start URL
-    # at all, and no longer does, gets that cleared instead of staying stuck
-    # reporting a stale problem that's since been fixed. "" rather than None
-    # for the no-error case specifically — update_registry_fields drops None
-    # values so it could never clear a previously-set crawl_error otherwise.
-    fields = {"pages_indexed": pages_indexed, "hit_max_pages": hit_max_pages, "crawl_error": crawl_error or ""}
+    # hit_max_pages/crawl_error/likely_spa written every run (not just when
+    # truthy) so a system that used to hit the cap, fail to fetch its start
+    # URL, or look like an unrenderable SPA, and no longer does, gets that
+    # cleared instead of staying stuck reporting a stale problem that's since
+    # been fixed. "" rather than None for the no-error case specifically —
+    # update_registry_fields drops None values so it could never clear a
+    # previously-set crawl_error otherwise.
+    fields = {
+        "pages_indexed": pages_indexed,
+        "hit_max_pages": hit_max_pages,
+        "crawl_error": crawl_error or "",
+        "likely_spa": likely_spa,
+    }
     if resources:
         fields["resources"] = resources
     if enrichment:
@@ -405,6 +430,25 @@ def ingest(
         print(f"  discovered resources: {resources}")
     if enrichment:
         print(f"  enrichment: {enrichment}")
+
+    # A start URL that fetched fine (no start_url_error) but yielded zero
+    # usable pages is the classic signature of a client-side-rendered SPA —
+    # the crawler only ever sees the pre-JS HTML shell, which has nothing in
+    # it. We can't execute JS, but many SPA-based doc sites publish an
+    # llms.txt/llms-full.txt specifically so agents have something real to
+    # read — try that as a fallback source before giving up entirely.
+    likely_spa = False
+    if not pages and not start_url_error:
+        for llms_url in resources.get("agent_instructions", []):
+            fallback_text = fetch_text_resource(llms_url)
+            if fallback_text and len(fallback_text) >= MIN_CONTENT_LENGTH:
+                print(f"  no crawlable pages found (likely a JS-rendered SPA) — falling back to {llms_url} ({len(fallback_text)} chars)")
+                pages[llms_url] = fallback_text
+                page_titles[llms_url] = f"{design_system_name} — llms.txt"
+                break
+        else:
+            likely_spa = True
+
     update_registry_stats(
         design_system_name,
         pages_indexed=len(pages),
@@ -412,6 +456,7 @@ def ingest(
         enrichment=enrichment,
         hit_max_pages=hit_max_pages,
         crawl_error=start_url_error,
+        likely_spa=likely_spa,
     )
     update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in pages])
 

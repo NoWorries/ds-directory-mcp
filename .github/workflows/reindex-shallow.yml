@@ -23,20 +23,40 @@ permissions:
   issues: write
 
 env:
-  SHARD_COUNT: 4
+  # ~4 systems per shard (roughly 243 unindexed / 64) — a shard's local
+  # progress only survives if it reaches its own end-of-job artifact upload,
+  # and a forced runner shutdown (GitHub killing the VM outright, not just
+  # failing a step) gives it no chance to run that step at all. Real
+  # indexing work has been lost mid-shard this way more than once, so the
+  # priority here is shrinking how much work is unprotected in-flight at any
+  # moment, not crawling efficiency — max-parallel below keeps only 2 shards
+  # actually running at a time regardless of how many are queued.
+  SHARD_COUNT: 64
 
 jobs:
+  # Builds the [0, 1, ..., SHARD_COUNT-1] matrix from env.SHARD_COUNT instead
+  # of hand-listing 64 numbers below — bump SHARD_COUNT above and this job
+  # picks it up automatically.
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.gen.outputs.shards }}
+    steps:
+      - id: gen
+        run: echo "shards=$(python3 -c 'import json; print(json.dumps(list(range(${{ env.SHARD_COUNT }}))))')" >> "$GITHUB_OUTPUT"
+
   # Same sharding rationale as reindex-full.yml: a runner getting killed
   # mid-run only loses its slice, not the whole pass.
   shallow-shard:
+    needs: prepare
     strategy:
       fail-fast: false
       # Caps how many shards run at once — GitHub also enforces a concurrent-
-      # jobs limit independent of the Actions-minutes quota, and 4 shards plus
-      # whatever else happened to be running was a plausible way to trip it.
+      # jobs limit independent of the Actions-minutes quota, and running too
+      # many at once was a plausible way to trip it.
       max-parallel: 2
       matrix:
-        shard: [0, 1, 2, 3]
+        shard: ${{ fromJSON(needs.prepare.outputs.shards) }}
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:

@@ -57,7 +57,8 @@ def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dic
         for entry in low_coverage:
             pages = entry["pages_indexed"]
             start_url = (entry.get("start_urls") or [""])[0]
-            lines.append(f"- **{full_name(entry)}** — {pages} page{'s' if pages != 1 else ''} — {start_url}")
+            spa_note = " — likely a JS-rendered SPA (plain HTML crawling can't see its content)" if entry.get("likely_spa") else ""
+            lines.append(f"- **{full_name(entry)}** — {pages} page{'s' if pages != 1 else ''} — {start_url}{spa_note}")
         sections.append("\n".join(lines))
 
     if capped:

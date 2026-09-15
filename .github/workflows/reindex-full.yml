@@ -17,21 +17,53 @@ permissions:
   contents: write
   issues: write
 
-env:
-  SHARD_COUNT: 4
-
 jobs:
+  # One shard per registered system (capped at 256 — GitHub's hard matrix-size
+  # limit) instead of a fixed small SHARD_COUNT: a shard's local progress only
+  # survives if it reaches its own end-of-job artifact upload, and a forced
+  # runner shutdown (GitHub killing the VM outright, not just failing a step)
+  # gives it no chance to run that step at all — real indexing work has been
+  # lost mid-shard this way more than once. One site per shard means a single
+  # kill can only ever cost that one site's progress, not a whole batch's.
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      shard_count: ${{ steps.gen.outputs.shard_count }}
+      shards: ${{ steps.gen.outputs.shards }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install PyYAML
+      - id: gen
+        run: |
+          python3 -c "
+          import json
+          import yaml
+
+          with open('systems.yaml') as f:
+              total = len(yaml.safe_load(f) or [])
+          n = min(total, 256)
+          print(f'shard_count={n}')
+          print(f'shards={json.dumps(list(range(n)))}')
+          " >> "$GITHUB_OUTPUT"
+
   # Split into independent shards so a runner getting killed mid-run (cancellation,
   # quota, transient infra issue) only loses one shard's work, not the whole
-  # 247-system run — this is what actually failed before, not a single job being
-  # too slow. Each shard writes straight to Qdrant (safe, no conflict across
+  # run. Each shard writes straight to Qdrant (safe, no conflict across
   # shards) and uploads its own systems.yaml/pages_index.json as an artifact;
   # nothing is committed to git until the merge job combines them all.
   reindex-shard:
+    needs: prepare
     strategy:
       fail-fast: false
+      # GitHub also enforces a concurrent-jobs limit independent of the
+      # Actions-minutes quota — capping how many of these run at once avoids
+      # tripping it even with up to 256 shards queued.
+      max-parallel: 4
       matrix:
-        shard: [0, 1, 2, 3]
+        shard: ${{ fromJSON(needs.prepare.outputs.shards) }}
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:
@@ -48,7 +80,7 @@ jobs:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-        run: python ingest.py --all --shard ${{ matrix.shard }}/${{ env.SHARD_COUNT }} ${{ inputs.force && '--force' || '' }}
+        run: python ingest.py --all --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }} ${{ inputs.force && '--force' || '' }}
 
       # if: always() is the whole point of sharding: ingest.py writes
       # systems.yaml/pages_index.json incrementally (after each system, well
@@ -70,7 +102,7 @@ jobs:
           retention-days: 1
 
   merge-and-deploy:
-    needs: reindex-shard
+    needs: [prepare, reindex-shard]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -88,7 +120,7 @@ jobs:
           path: shards
 
       - name: Merge shard results into systems.yaml + pages_index.json
-        run: python merge_shards.py ${{ env.SHARD_COUNT }}
+        run: python merge_shards.py ${{ needs.prepare.outputs.shard_count }}
 
       - name: Generate static directory page
         run: |
