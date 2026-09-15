@@ -239,25 +239,19 @@ def render_page(entries: list[dict]) -> str:
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
-  /* This page gets more breathing room than the shared PAGE_MAX_WIDTH since
-     the table has a lot of columns, but it's still a fixed, centered cap —
-     not an edge-to-edge breakout — so the table/grid below can only grow as
-     wide as they actually need (see table's width: auto below), never wider,
-     and everything (nav, heading, toolbar, table) shares the same margins
-     instead of the table alone reaching closer to the viewport edge. */
-  .page {{ max-width: 1320px; }}
-  /* .table-section is display: inline-block so it shrink-wraps to its widest
-     child — the table (width: auto, see below) — and .table-toolbar (width:
-     100%) then matches that resolved width exactly, letting justify-content:
-     space-between push the view toggle to the true right edge of the table
-     rather than to the page's full (wider, unrelated) width. cards-grid is
-     deliberately OUTSIDE this wrapper: a grid's own shrink-to-fit contribution
-     assumes one row of items at their minimum column size, which for dozens
-     of cards would blow the wrapper out far wider than the table ever is.
-     In Grid view the table (and toolbar's width match) simply isn't relevant —
-     the toolbar naturally hugs just its own controls instead, which is fine. */
-  .table-section {{ display: inline-block; max-width: 100%; }}
-  .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
+  /* .page (eyebrow/heading/subtitle) deliberately stays at the shared
+     PAGE_MAX_WIDTH, same as every other page — no reason for the intro here
+     to look different from the rest of the site. Only the table/grid itself
+     needs more room (with the full ~250-system registry and 9 resource
+     columns, it wants noticeably more than this sample data's 4 rows show),
+     so it lives in its own .table-breakout below: a separate block, centered
+     independently at a wider FIXED cap. Fixed (not shrink-to-fit) on purpose
+     — an earlier version sized this to the table's own content width, which
+     meant the toolbar (and the List/Grid toggle inside it) physically moved
+     between the two views, since Grid view has no table to size against.
+     A constant width means the toggle sits in the same place either way. */
+  .table-breakout {{ max-width: 1600px; margin: 0 auto; }}
+  .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
   #tableFilter {{
     padding: 8px 12px; font: inherit; font-size: 0.85rem; border: 1px solid var(--border);
     border-radius: 6px; width: 280px; max-width: 100%; background: var(--surface); color: var(--text);
@@ -281,7 +275,6 @@ def render_page(entries: list[dict]) -> str:
      visible once the local layer has scrolled out from under it, i.e. exactly
      when there's more table to the left/right than currently visible. */
   .table-wrap {{
-    display: inline-block; max-width: 100%; vertical-align: top;
     overflow-x: auto; border: 1px solid var(--border); border-radius: 10px;
     box-shadow: var(--shadow);
     background-color: var(--surface);
@@ -295,7 +288,7 @@ def render_page(entries: list[dict]) -> str:
     background-size: 24px 100%, 24px 100%, 10px 100%, 10px 100%;
     background-attachment: local, local, scroll, scroll;
   }}
-  table {{ border-collapse: collapse; width: auto; font-size: 0.86rem; }}
+  table {{ border-collapse: collapse; width: 100%; font-size: 0.86rem; }}
   th {{
     text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-weight: 600;
     white-space: nowrap; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em;
@@ -385,8 +378,9 @@ def render_page(entries: list[dict]) -> str:
   <p class="eyebrow">All Systems</p>
   <h1>Every indexed design system</h1>
   <p class="subtitle">{len(entries_sorted)} external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
+</div>
 
-  <div class="table-section">
+<div class="table-breakout">
   <div class="table-toolbar">
     <input id="tableFilter" type="text" placeholder="Filter by system or company name...">
     <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
@@ -410,7 +404,6 @@ def render_page(entries: list[dict]) -> str:
       {rows}
     </tbody>
   </table>
-  </div>
   </div>
 
   <div class="cards-grid" id="cardsGrid" hidden>
