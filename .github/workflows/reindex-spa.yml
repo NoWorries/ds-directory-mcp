@@ -1,19 +1,13 @@
-name: Shallow reindex (breadth pass over unindexed systems)
+name: Reindex SPA sites (headless-render pass)
 
-# One-off (manually triggered) pass to get SOME real content into every
-# never-before-indexed system quickly, rather than waiting for reindex-full's
-# deep crawl to slowly work through the whole registry. Uses ingest.py's
-# --shallow flag (see its docstring) to cap every crawl at SHALLOW_MAX_PAGES
-# pages instead of each entry's normal max_pages/DEFAULT_MAX_PAGES — many
-# systems get touched fast instead of a few systems getting crawled fully.
-#
-# Once a system is touched here it has a pages_indexed value like any other
-# indexed system, so it stops being "unindexed" — a later reindex-full run
-# re-crawls it at full depth exactly as it would any other already-indexed
-# system. This workflow is meant to be run again whenever there's a fresh
-# batch of unindexed systems worth a quick pass (e.g. right after a big bulk
-# addition to systems.yaml) — it's a no-op if everything's already been
-# touched at least once.
+# For systems flagged likely_spa=True (see ingest.py's crawl() — a start URL
+# that fetches fine but yields zero usable pages, and has no llms.txt to fall
+# back on) — a plain requests+BeautifulSoup crawl only ever sees the pre-JS
+# HTML shell of a client-side-rendered site, which has nothing real in it.
+# This workflow re-renders just those systems' start URL through an actual
+# headless browser (crawl4ai/Playwright) instead. Manually triggered: this
+# is a targeted retry pass over a specific, usually small set of systems, not
+# a routine scheduled crawl.
 
 on:
   workflow_dispatch: {}
@@ -22,38 +16,45 @@ permissions:
   contents: write
   issues: write
 
-env:
-  # ~4 systems per shard (roughly 243 unindexed / 64) — a shard's local
-  # progress only survives if it reaches its own end-of-job artifact upload,
-  # and a forced runner shutdown (GitHub killing the VM outright, not just
-  # failing a step) gives it no chance to run that step at all. Real
-  # indexing work has been lost mid-shard this way more than once, so the
-  # priority here is shrinking how much work is unprotected in-flight at any
-  # moment, not crawling efficiency — max-parallel below keeps only 2 shards
-  # actually running at a time regardless of how many are queued.
-  SHARD_COUNT: 64
-
 jobs:
-  # Builds the [0, 1, ..., SHARD_COUNT-1] matrix from env.SHARD_COUNT instead
-  # of hand-listing 64 numbers below — bump SHARD_COUNT above and this job
-  # picks it up automatically.
+  # One shard per likely_spa system (capped at 256, floored at 1) — same
+  # rationale as the other reindex workflows: a shard's local progress only
+  # survives if it reaches its own end-of-job artifact upload, and a forced
+  # runner shutdown gives it no chance to run that step at all.
   prepare:
     runs-on: ubuntu-latest
     outputs:
+      shard_count: ${{ steps.gen.outputs.shard_count }}
       shards: ${{ steps.gen.outputs.shards }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install PyYAML
       - id: gen
-        run: echo "shards=$(python3 -c 'import json; print(json.dumps(list(range(${{ env.SHARD_COUNT }}))))')" >> "$GITHUB_OUTPUT"
+        run: |
+          python3 -c "
+          import json
+          import yaml
 
-  # Same sharding rationale as reindex-full.yml: a runner getting killed
-  # mid-run only loses its slice, not the whole pass.
-  shallow-shard:
+          with open('systems.yaml') as f:
+              entries = yaml.safe_load(f) or []
+          total = len([e for e in entries if e.get('likely_spa')])
+          n = max(min(total, 256), 1)
+          print(f'shard_count={n}')
+          print(f'shards={json.dumps(list(range(n)))}')
+          " >> "$GITHUB_OUTPUT"
+
+  spa-shard:
     needs: prepare
     strategy:
       fail-fast: false
-      # Caps how many shards run at once — GitHub also enforces a concurrent-
-      # jobs limit independent of the Actions-minutes quota, and running too
-      # many at once was a plausible way to trip it.
+      # Headless rendering is much heavier per-page than a plain GET, and
+      # GitHub enforces a concurrent-jobs limit independent of the
+      # Actions-minutes quota — keep this conservative.
       max-parallel: 2
       matrix:
         shard: ${{ fromJSON(needs.prepare.outputs.shards) }}
@@ -70,18 +71,17 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Shallow-crawl this shard's unindexed systems
+      # crawl4ai wraps Playwright, which needs its own browser binary
+      # installed separately from the pip package.
+      - run: playwright install --with-deps chromium
+
+      - name: Render this shard's likely_spa systems
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-        run: python ingest.py --new --shallow --shard ${{ matrix.shard }}/${{ env.SHARD_COUNT }}
+        run: python ingest.py --spa --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
 
-      # if: always() — same reasoning as reindex-full.yml: ingest.py writes
-      # systems.yaml/pages_index.json incrementally per system, well before
-      # that system's embedding calls (where a rate-limit or other failure
-      # actually happens), so whatever this shard got through before any
-      # failure is already on disk and worth uploading.
       - if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -92,7 +92,7 @@ jobs:
           retention-days: 1
 
   merge-and-deploy:
-    needs: shallow-shard
+    needs: [prepare, spa-shard]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -112,7 +112,7 @@ jobs:
           path: shards
 
       - name: Merge shard results into systems.yaml + pages_index.json
-        run: python merge_shards.py ${{ env.SHARD_COUNT }}
+        run: python merge_shards.py ${{ needs.prepare.outputs.shard_count }}
 
       - name: Generate static directory page
         run: |
@@ -140,13 +140,13 @@ jobs:
             gh issue close "$existing" --comment "All systems now have healthy crawl coverage — closing."
           fi
 
-      - name: Commit newly-touched systems + directory page
+      - name: Commit newly-rendered systems + directory page
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add systems.yaml home.html directory.html pages_index.json components systems
           if ! git diff --cached --quiet; then
-            git commit -m "Shallow-index previously unindexed design systems [skip ci]"
+            git commit -m "Render likely_spa design systems via headless browser [skip ci]"
             # Other workflows commit to this same branch too, so a push can
             # land after one of them — ordinary non-fast-forward race, not a
             # real conflict most of the time. Rebase and retry a few times.
