@@ -85,7 +85,16 @@ def classify_links(all_links: set[str]) -> dict[str, list[str]]:
 def probe_well_known(start_url: str) -> dict[str, list[str]]:
     """Check common AI-agent discovery paths at the site root (e.g. /llms.txt,
     /.github/copilot-instructions.md) — see WELL_KNOWN_PATHS for the full set
-    and what each one counts as."""
+    and what each one counts as.
+
+    A 200 status alone isn't proof the path is real: a client-side-routed
+    SPA commonly answers every unknown path with 200 + its normal HTML shell
+    rather than a 404 (its router, not the server, decides what's "not
+    found") — confirmed live against meshdesignsystem.com/.well-known/
+    mcp.json, which returns 200 with content-type text/html, not real JSON.
+    None of llms.txt/AGENTS.md/CLAUDE.md/mcp.json/a registry are ever
+    legitimately served as text/html, so that content-type is treated as a
+    false positive and skipped."""
     parsed = urlparse(start_url)
     root = f"{parsed.scheme}://{parsed.netloc}/"
     found: dict[str, list[str]] = {key: [] for key in set(WELL_KNOWN_PATHS.values())}
@@ -94,7 +103,7 @@ def probe_well_known(start_url: str) -> dict[str, list[str]]:
         url = urljoin(root, path)
         try:
             response = requests.head(url, timeout=8, allow_redirects=True)
-            if response.status_code == 200:
+            if response.status_code == 200 and "text/html" not in response.headers.get("content-type", "").lower():
                 found[key].append(url)
         except requests.RequestException:
             continue

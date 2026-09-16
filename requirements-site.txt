@@ -1,0 +1,11 @@
+# Minimal dependency set for jobs that only build/generate static site
+# output or do a lightweight shard-count (build-site.yml, fetch-screenshots.yml,
+# every reindex/submission workflow's "prepare" job) — none of these touch
+# ingest.py's crawl/embed path, so they don't need requirements-ingest.txt's
+# qdrant-client/beautifulsoup4 at all. Kept separate specifically so their
+# pip cache key reflects what's actually installed instead of a heavier file
+# that happens to be a superset — pinning cache-dependency-path at
+# requirements-ingest.txt for a job that only ever installs PyYAML meant the
+# cache invalidated on unrelated dependency bumps these jobs never use.
+PyYAML>=6.0
+requests>=2.31.0

@@ -166,6 +166,17 @@ def ensure_collection(client: QdrantClient) -> None:
         field_name="design_system_name",
         field_schema=PayloadSchemaType.KEYWORD,
     )
+    # Needed by delete_urls()'s per-page delete filter (design_system_name +
+    # url together) — Qdrant refuses to filter on a field with no payload
+    # index at all ("Index required but not found for 'url'"), which this
+    # collection never had until the per-page incremental-reindex feature
+    # started filtering on it. create_payload_index is a no-op if the index
+    # already exists, so this is safe to call on every run regardless.
+    client.create_payload_index(
+        collection_name=QDRANT_COLLECTION,
+        field_name="url",
+        field_schema=PayloadSchemaType.KEYWORD,
+    )
 
 
 def page_freshness_from_headers(headers) -> dict:

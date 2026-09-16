@@ -13,7 +13,7 @@ from __future__ import annotations
 import html
 import json
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 import yaml
 
@@ -202,8 +202,8 @@ def favicon_html(start_url: str | None) -> str:
     if not domain:
         return ""
     return (
-        f'<img class="favicon" src="https://www.google.com/s2/favicons?domain={html.escape(domain)}&sz=32" '
-        f'alt="" width="16" height="16" loading="lazy">'
+        f'<img class="favicon" src="https://www.google.com/s2/favicons?domain={html.escape(domain)}&sz=64" '
+        f'alt="" width="22" height="22" loading="lazy">'
     )
 
 
@@ -297,13 +297,31 @@ def render_row(entry: dict) -> str:
     """
 
 
-def thumbnail_src(name: str, start_url: str) -> str:
-    stored = SCREENSHOTS_DIR / f"{slugify(name)}.jpg"
+# (suffix appended to the stored filename, width requested from mshots) —
+# card thumbnails are small/dense (the directory grid), the detail page's
+# hero image has the whole width of the page to fill, so it's worth a
+# distinct, sharper fetch rather than upscaling the card-sized one.
+THUMBNAIL_SIZES = {
+    "card": ("", 320),
+    "detail": ("-large", 800),
+}
+
+
+def thumbnail_src(name: str, start_url: str, size: str = "card") -> str:
+    suffix, width = THUMBNAIL_SIZES[size]
+    stored = SCREENSHOTS_DIR / f"{slugify(name)}{suffix}.jpg"
     if stored.exists():
         return f"screenshots/{stored.name}"
     # Not fetched into the repo yet (fetch_screenshots.py runs on a slow,
     # separate cadence) — fall back to a live fetch so new systems aren't blank.
-    return f"https://image.thum.io/get/width/320/{start_url}"
+    # thum.io's free tier now requires a paid account (confirmed live — it
+    # was serving an "Image not authorized" placeholder instead of a real
+    # screenshot), so this uses WordPress's mshots service instead: free, no
+    # API key, no rate-limit auth wall. First request for a URL it hasn't
+    # seen returns a "generating" placeholder and the real screenshot a few
+    # seconds later — acceptable for a fallback that's meant to be temporary
+    # until fetch_screenshots.py stores a real one anyway.
+    return f"https://s0.wp.com/mshots/v1/{quote(start_url, safe='')}?w={width}"
 
 
 def render_card(entry: dict) -> str:
@@ -530,8 +548,13 @@ def render_page(entries: list[dict]) -> str:
      template to keep in sync — so it always matches the standalone page;
      "Open full page" just navigates there normally (and gets the .thumb
      view-transition morph on the way in, same as any other link to it). */
-  .detail-panel-overlay {{ position: fixed; inset: 0; background: rgba(15,23,42,0.35); z-index: 199; }}
-  .detail-panel-overlay[hidden] {{ display: none; }}
+  /* Deliberately no dimming overlay behind the panel — it stays open while
+     the visitor clicks around the rest of the table, so they can open a
+     different system without closing this one first. The currently-open
+     row is highlighted instead (.is-active-row below) so "what am I
+     looking at" stays clear without blocking the rest of the page. */
+  .is-active-row {{ background: var(--accent-soft); }}
+  .is-active-row:hover {{ background: var(--accent-soft); }}
   .detail-panel {{
     position: fixed; top: 0; right: 0; height: 100%; width: min(480px, 92vw); z-index: 200;
     background: var(--surface); border-left: 1px solid var(--border);

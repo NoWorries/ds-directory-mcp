@@ -36,8 +36,8 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-          cache-dependency-path: requirements-ingest.txt
-      - run: pip install PyYAML
+          cache-dependency-path: requirements-site.txt
+      - run: pip install -r requirements-site.txt
       - id: gen
         run: |
           python3 -c "
@@ -138,6 +138,9 @@ jobs:
           python generate_data_export.py
           python generate_llms_txt.py
           python generate_sitemap.py
+          python generate_mcp_manifest.py
+          python generate_security_txt.py
+          python generate_robots_txt.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
@@ -165,7 +168,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems
+          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems .well-known robots.txt
           if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           if ! git diff --cached --quiet; then
             git commit -m "Auto-update discovered resources and directory page [skip ci]"
@@ -195,6 +198,9 @@ jobs:
           cp report.html site/report.html
           cp llms.txt site/llms.txt
           if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
+          mkdir -p site/.well-known && cp .well-known/mcp.json site/.well-known/mcp.json
+          if [ -f .well-known/security.txt ]; then cp .well-known/security.txt site/.well-known/security.txt; fi
+          cp robots.txt site/robots.txt
           cp systems.json site/systems.json
           cp design-system.schema.json site/design-system.schema.json
           cp directory.html site/directory.html

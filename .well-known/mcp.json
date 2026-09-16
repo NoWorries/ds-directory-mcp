@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ds-directory": {
+      "url": "https://ds-directory-mcp.onrender.com/mcp",
+      "transport": "http",
+      "description": "Semantic search across every publicly documented design system indexed at this site \u2014 GitHub, Storybook, Figma, npm packages, tokens, icons, and full-text page content.",
+      "install": "claude mcp add ds-directory --transport http https://ds-directory-mcp.onrender.com/mcp"
+    }
+  }
+}

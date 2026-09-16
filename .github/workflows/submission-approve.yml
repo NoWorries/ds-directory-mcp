@@ -71,6 +71,9 @@ jobs:
           python generate_data_export.py
           python generate_llms_txt.py
           python generate_sitemap.py
+          python generate_mcp_manifest.py
+          python generate_security_txt.py
+          python generate_robots_txt.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
@@ -78,7 +81,7 @@ jobs:
       - name: Commit updated registry stats + directory page
         if: always()
         run: |
-          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems
+          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems .well-known robots.txt
           if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           git diff --quiet --cached || git commit -m "Update directory page after approving ${{ steps.approve.outputs.full_name }} [skip ci]"
           for i in 1 2 3 4 5; do
@@ -100,6 +103,9 @@ jobs:
           cp report.html site/report.html
           cp llms.txt site/llms.txt
           if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
+          mkdir -p site/.well-known && cp .well-known/mcp.json site/.well-known/mcp.json
+          if [ -f .well-known/security.txt ]; then cp .well-known/security.txt site/.well-known/security.txt; fi
+          cp robots.txt site/robots.txt
           cp systems.json site/systems.json
           cp design-system.schema.json site/design-system.schema.json
           cp directory.html site/directory.html

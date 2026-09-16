@@ -1,8 +1,12 @@
 {
   "$schema": "./design-system.schema.json",
+<<<<<<< HEAD
+  "generated_at": "2026-09-16T02:34:13+00:00",
+=======
   "generated_at": "2026-09-16T02:40:11+00:00",
+>>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
   "data_as_of": "2026-09-13T22:19:25+00:00",
-  "total_systems": 118,
+  "total_systems": 116,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -1137,6 +1141,8 @@
       "indexed_pages": []
     },
     {
+<<<<<<< HEAD
+=======
       "id": "gov-uk-gov-uk-design-system",
       "organization": "GOV.UK",
       "design_system": "GOV.UK Design System",
@@ -1168,6 +1174,7 @@
       "indexed_pages": []
     },
     {
+>>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
       "id": "government-of-canada-aurora-design-system",
       "organization": "Government of Canada",
       "design_system": "Aurora Design System",
@@ -1423,6 +1430,8 @@
       "indexed_pages": []
     },
     {
+<<<<<<< HEAD
+=======
       "id": "hewlett-packard-grommet",
       "organization": "Hewlett Packard",
       "design_system": "Grommet",
@@ -1473,6 +1482,7 @@
       "indexed_pages": []
     },
     {
+>>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
       "id": "hubspot-canvas-design-system",
       "organization": "Hubspot",
       "design_system": "Canvas Design System",
@@ -1722,7 +1732,7 @@
       "coverage_status": "partial",
       "hit_max_pages": true,
       "likely_spa": false,
-      "last_checked": "2026-09-15T23:49:07+00:00",
+      "last_checked": "2026-09-15T23:49:00+00:00",
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {},

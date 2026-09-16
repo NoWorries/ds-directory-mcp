@@ -311,7 +311,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
     slug = slugify(name_text)
     thumb_html = ""
     if start_url:
-        src = thumbnail_src(name_text, start_url)
+        src = thumbnail_src(name_text, start_url, size="detail")
         # Shared view-transition-name with this same card's .card-thumb on the
         # directory grid (see generate_directory.py's render_card) — the
         # browser morphs one into the other on navigation instead of a hard cut.

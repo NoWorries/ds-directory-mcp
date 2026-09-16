@@ -823,6 +823,9 @@
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
+<<<<<<< HEAD
+  - https://www.gov.uk/design-system/
+=======
   - https://design-system.service.gov.uk/
   pages_indexed: 8
   resources:
@@ -837,6 +840,7 @@
     last_pushed: '2026-09-15T10:15:18Z'
   etag: '"213f7439c10d9f5418a5e1d8a60260a1-ssl-df"'
   last_checked: '2026-09-16T00:48:12+00:00'
+>>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
 - organization: Government of Canada
   design_system: Aurora Design System
   start_urls:
@@ -1008,6 +1012,9 @@
 - organization: Hewlett Packard
   design_system: Grommet
   start_urls:
+<<<<<<< HEAD
+  - https://grommet.io/
+=======
   - https://v2.grommet.io/
   pages_indexed: 7
   resources:
@@ -1037,6 +1044,7 @@
     last_pushed: '2023-01-10T03:27:49Z'
   etag: '"2bf20c8558a1c61aa84a15c6be85e9f5-ssl-df"'
   last_checked: '2026-09-16T00:50:38+00:00'
+>>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
 - organization: Hubspot
   design_system: Canvas Design System
   start_urls:
@@ -1191,7 +1199,7 @@
   hit_max_pages: true
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-09-15T23:49:07+00:00'
+  last_checked: '2026-09-15T23:49:00+00:00'
 - organization: iStreamPlanet
   design_system: Pebble Design System
   start_urls:
