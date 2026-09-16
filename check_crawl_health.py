@@ -36,11 +36,20 @@ from text_utils import full_name
 
 REPORT_FILE = Path(__file__).parent / "health_report.md"
 
+# A single failed fetch is often just a transient blip (a timeout, a
+# momentary outage) — this many checks in a row failing is a real signal the
+# site has actually moved or gone away, worth calling out as a genuine
+# archival candidate rather than lumped in with everything currently broken.
+REPEATED_FAILURE_THRESHOLD = 3
+
 
 def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dict], unverified: list[dict]) -> str:
     sections = []
 
     if broken:
+        broken = sorted(broken, key=lambda e: e.get("consecutive_crawl_failures", 0), reverse=True)
+        repeated = [e for e in broken if e.get("consecutive_crawl_failures", 0) >= REPEATED_FAILURE_THRESHOLD]
+
         lines = [
             f"### 🔴 {len(broken)} system{'s' if len(broken) != 1 else ''} failed to fetch at all — url may have changed",
             "",
@@ -52,8 +61,27 @@ def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dic
         ]
         for entry in broken:
             start_url = (entry.get("start_urls") or [""])[0]
-            lines.append(f"- **{full_name(entry)}** — {start_url}\n  `{entry['crawl_error']}`")
+            streak = entry.get("consecutive_crawl_failures", 0)
+            streak_note = f" — **failed {streak} checks in a row**" if streak >= REPEATED_FAILURE_THRESHOLD else ""
+            lines.append(f"- **{full_name(entry)}**{streak_note} — {start_url}\n  `{entry['crawl_error']}`")
         sections.append("\n".join(lines))
+
+        if repeated:
+            lines = [
+                f"### 🪦 {len(repeated)} system{'s' if len(repeated) != 1 else ''} failed "
+                f"{REPEATED_FAILURE_THRESHOLD}+ checks in a row — likely archival candidates",
+                "",
+                "These have now failed to fetch on every check for a while, not just this "
+                "one — a single failure is often transient, but this many in a row usually "
+                "means the site is genuinely gone. Worth a manual look and, if confirmed, "
+                "marking `archived: true` in `systems.yaml` (see its header comment for the "
+                "companion fields) so ingest.py stops re-attempting it every cycle.",
+                "",
+            ]
+            for entry in repeated:
+                start_url = (entry.get("start_urls") or [""])[0]
+                lines.append(f"- **{full_name(entry)}** — {entry['consecutive_crawl_failures']} checks — {start_url}")
+            sections.append("\n".join(lines))
 
     if low_coverage:
         lines = [

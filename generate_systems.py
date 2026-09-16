@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import html
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import quote, urlparse
@@ -55,6 +55,52 @@ def format_iso(value: str | None) -> str:
         return value
 
 
+# How long since the last commit before a repo reads as possibly-inactive
+# rather than just quiet — a design system genuinely can go this long
+# between releases without being abandoned, so this is a cue to look closer,
+# not a claim the system is dead (compare archived_status, which is a human
+# verdict after actually checking, not a date threshold).
+STALE_REPO_THRESHOLD_DAYS = 365
+
+
+def format_short_date(value: str | None) -> str:
+    """Compact absolute date for a resource badge — e.g. "12 Aug 2025", unlike
+    format_iso's full date+time. A relative "2mo ago" reads nicer but is
+    computed at *build* time and baked into static HTML, so it silently goes
+    stale between rebuilds (and would be flatly wrong if a rebuild ever
+    failed for a while) — an absolute date has no such expiry, and matches
+    every other date already shown on this page. Empty string for anything
+    unparseable so a caller can just omit the suffix entirely."""
+    if not value:
+        return ""
+    try:
+        dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return ""
+    return dt.strftime("%-d %b %Y")
+
+
+def format_repo_activity(github_meta: dict) -> str:
+    """GitHub's own pushed_at (last commit push, to any branch) — a
+    genuinely more direct "is this actively maintained" signal than stars or
+    license, which say nothing about whether anyone still touches the code.
+    Empty string (not "unknown") when there's no github_meta at all, so the
+    freshness box just omits the row entirely rather than showing a claim
+    with nothing behind it."""
+    last_pushed = github_meta.get("last_pushed")
+    if not last_pushed:
+        return ""
+    try:
+        dt = datetime.fromisoformat(last_pushed.replace("Z", "+00:00"))
+    except ValueError:
+        return html.escape(last_pushed)
+    formatted = dt.strftime("%-d %b %Y")
+    days_since = (datetime.now(timezone.utc) - dt).days
+    if days_since > STALE_REPO_THRESHOLD_DAYS:
+        return f'<span class="stale-repo" title="No commits in over a year — worth checking whether this is still actively maintained">{formatted}</span>'
+    return formatted
+
+
 def format_site_updated(entry: dict) -> str:
     """Prefer sitemap_last_modified (resources.probe_sitemap) over the
     homepage's own Last-Modified header when both exist — a sitemap's
@@ -82,6 +128,25 @@ def resource_url_label(url: str) -> str:
 _IDENTITY_LABELS = {"GitHub", "npm"}
 
 
+def resource_activity(entry: dict, label: str, url: str) -> str:
+    """Last-activity date for a GitHub/npm resource pill, when it's known —
+    enrich_resources() only ever fetches metadata for the FIRST url under
+    each of those keys (one API call per system, not one per discovered
+    link), so this only has an answer for that one representative link;
+    every other same-type link (e.g. a second npm package) just gets no
+    suffix rather than a wrong or duplicated one."""
+    resources = entry.get("resources") or {}
+    if label == "GitHub" and resources.get("github") and url == resources["github"][0]:
+        last_pushed = (entry.get("github_meta") or {}).get("last_pushed")
+        date = format_short_date(last_pushed)
+        return f' <span class="resource-activity" title="Last commit: {html.escape(last_pushed or "")}">{date}</span>' if date else ""
+    if label == "npm" and resources.get("npm") and url == resources["npm"][0]:
+        last_published = (entry.get("npm_meta") or {}).get("last_published")
+        date = format_short_date(last_published)
+        return f' <span class="resource-activity" title="Last published: {html.escape(last_published or "")}">{date}</span>' if date else ""
+    return ""
+
+
 def render_resource_list(entry: dict) -> str:
     resources = entry.get("resources") or {}
     # Any key can have more than one discovered link (e.g. two npm packages)
@@ -106,7 +171,7 @@ def render_resource_list(entry: dict) -> str:
     items = "".join(
         f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">'
         f'{GITHUB_ICON_SVG if label == "GitHub" else EXTERNAL_LINK_ICON_SVG} '
-        f'{link_text(label, url, show_detail)}</a></li>'
+        f'{link_text(label, url, show_detail)}</a>{resource_activity(entry, label, url)}</li>'
         for label, url, show_detail in found
     )
     return f'<ul class="resource-list">{items}</ul>'
@@ -339,6 +404,9 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   .coverage-dot.coverage-full {{ color: #22c55e; }}
   .coverage-dot.coverage-partial {{ color: #f59e0b; }}
   .coverage-dot.coverage-unknown {{ color: var(--text-faint); }}
+  /* No commits in over a year (see format_repo_activity's threshold) — a
+     cue to look closer, not a claim the system is dead. */
+  .stale-repo {{ color: #f59e0b; }}
 
   .hero-thumb {{
     display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
@@ -388,6 +456,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   }}
   .resource-list li a svg {{ flex: none; }}
   .resource-list li a:hover {{ border-color: var(--accent); color: var(--accent); }}
+  .resource-activity {{ font-size: 0.76rem; color: var(--text-faint); margin-left: 2px; white-space: nowrap; }}
   .page-list {{ columns: 2; column-gap: 24px; }}
   .page-list li {{ padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }}
   .page-list a {{ text-decoration: none; }}
@@ -411,6 +480,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   <dl class="freshness">
     <div><dt>Site last updated</dt><dd>{format_site_updated(entry)}</dd></div>
     <div><dt>Last checked here</dt><dd>{format_iso(entry.get("last_checked"))}</dd></div>
+    {f'<div><dt>Repo last updated</dt><dd>{format_repo_activity(github_meta)}</dd></div>' if format_repo_activity(github_meta) else ""}
   </dl>
 
   <section class="block" id="resources">

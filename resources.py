@@ -188,7 +188,8 @@ def fetch_github_metadata(github_url: str) -> dict:
 
 
 def fetch_npm_metadata(npm_url: str) -> dict:
-    """Latest version and weekly downloads for an npmjs.com/package/<name> URL."""
+    """Latest version, its publish date, and weekly downloads for an
+    npmjs.com/package/<name> URL."""
     match = re.search(r"npmjs\.com/package/([\w.@/-]+)", npm_url, re.IGNORECASE)
     if not match:
         return {}
@@ -198,7 +199,16 @@ def fetch_npm_metadata(npm_url: str) -> dict:
     try:
         response = requests.get(f"https://registry.npmjs.org/{package}", timeout=10)
         if response.status_code == 200:
-            result["latest_version"] = response.json().get("dist-tags", {}).get("latest")
+            data = response.json()
+            latest = data.get("dist-tags", {}).get("latest")
+            result["latest_version"] = latest
+            # The registry's "time" object maps each version to its publish
+            # date, plus a "modified" key for the most recent change overall
+            # — a more direct "is anyone still touching this" signal than
+            # weekly downloads, which says nothing about active maintenance.
+            last_published = (data.get("time") or {}).get(latest) or (data.get("time") or {}).get("modified")
+            if last_published:
+                result["last_published"] = last_published
     except requests.RequestException:
         pass
 

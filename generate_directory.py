@@ -257,7 +257,7 @@ def render_name_block(entry: dict, link_to_detail: bool = False) -> str:
     slug = slugify(full_name(entry))
     detail_href = f"systems/{slug}"
     return (
-        f'<a class="name-cell-link" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(full_name(entry))}">'
+        f'<a class="name-cell-link panel-link" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(full_name(entry))}">'
         f'{name_block}<span class="name-chevron">{CHEVRON_RIGHT_ICON_SVG}</span></a>'
     )
 
@@ -345,7 +345,7 @@ def render_card(entry: dict) -> str:
     pages = entry.get("pages_indexed", 0)
 
     return f"""
-    <a class="card" href="{detail_href}" data-name="{html.escape(name_text.lower())}">
+    <a class="card panel-link" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(name_text.lower())}">
       {thumb_html}
       <div class="card-body textured">
         {render_name_block(entry)}
@@ -551,10 +551,13 @@ def render_page(entries: list[dict]) -> str:
   /* Deliberately no dimming overlay behind the panel — it stays open while
      the visitor clicks around the rest of the table, so they can open a
      different system without closing this one first. The currently-open
-     row is highlighted instead (.is-active-row below) so "what am I
-     looking at" stays clear without blocking the rest of the page. */
-  .is-active-row {{ background: var(--accent-soft); }}
-  .is-active-row:hover {{ background: var(--accent-soft); }}
+     system is highlighted instead (.is-active-entry below) so "what am I
+     looking at" stays clear without blocking the rest of the page — applied
+     to whichever of the row/card actually matches the open slug, so the
+     highlight survives switching between List and Grid view. */
+  tr.is-active-entry {{ background: var(--accent-soft); }}
+  tr.is-active-entry:hover {{ background: var(--accent-soft); }}
+  .card.is-active-entry {{ border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }}
   .detail-panel {{
     position: fixed; top: 0; right: 0; height: 100%; width: min(480px, 92vw); z-index: 200;
     background: var(--surface); border-left: 1px solid var(--border);
@@ -625,7 +628,6 @@ def render_page(entries: list[dict]) -> str:
   </div>
 </div>
 
-<div class="detail-panel-overlay" id="detailPanelOverlay" hidden></div>
 <aside class="detail-panel" id="detailPanel" aria-hidden="true">
   <div class="detail-panel-header">
     <a class="detail-panel-expand" id="detailPanelExpand" href="#">{EXPAND_ICON_SVG} Open full page</a>
@@ -728,14 +730,39 @@ def render_page(entries: list[dict]) -> str:
   // in-place, without leaving the list. Fetches and injects that same page's
   // .page content (plus its <style> block, once) rather than keeping a
   // second copy of the template, so the panel always matches the real page.
+  // Deliberately no dimming overlay behind it — it stays open while the
+  // visitor clicks around the rest of the table, so they can open a
+  // different system without closing this one first (see .is-active-entry
+  // below, which highlights the system currently showing, since there's no
+  // overlay to make that obvious any other way). Tracked by SLUG, not by
+  // element reference, so the highlight applies to whichever of the row
+  // (List view) or card (Grid view) actually matches — both are always in
+  // the DOM at once (CSS just hides whichever view isn't current), so
+  // switching between List and Grid keeps the same system highlighted.
   const detailPanel = document.getElementById("detailPanel");
-  const detailPanelOverlay = document.getElementById("detailPanelOverlay");
   const detailPanelBody = document.getElementById("detailPanelBody");
   const detailPanelExpand = document.getElementById("detailPanelExpand");
   const detailPanelClose = document.getElementById("detailPanelClose");
   let detailStylesInjected = false;
+  let activeSlug = null;
 
-  async function openDetailPanel(slug) {{
+  function setActiveEntry(slug) {{
+    if (activeSlug) {{
+      document.querySelectorAll('.panel-link[data-slug="' + activeSlug + '"]').forEach((el) => {{
+        (el.closest("tr") || el).classList.remove("is-active-entry");
+      }});
+    }}
+    activeSlug = slug;
+    if (activeSlug) {{
+      document.querySelectorAll('.panel-link[data-slug="' + activeSlug + '"]').forEach((el) => {{
+        (el.closest("tr") || el).classList.add("is-active-entry");
+      }});
+    }}
+  }}
+
+  async function openDetailPanel(link) {{
+    const slug = link.dataset.slug;
+    setActiveEntry(slug);
     // Two different URLs on purpose: the visible "Open full page" link is
     // the clean, extension-less path (matches every other in-page link —
     // see netlify.toml's pretty_urls), while the fetch() below hits the
@@ -745,7 +772,6 @@ def render_page(entries: list[dict]) -> str:
     const fetchHref = "systems/" + slug + ".html";
     detailPanel.classList.add("open");
     detailPanel.setAttribute("aria-hidden", "false");
-    detailPanelOverlay.hidden = false;
     detailPanelBody.innerHTML = '<p class="empty-note">Loading…</p>';
 
     try {{
@@ -789,21 +815,20 @@ def render_page(entries: list[dict]) -> str:
   function closeDetailPanel() {{
     detailPanel.classList.remove("open");
     detailPanel.setAttribute("aria-hidden", "true");
-    detailPanelOverlay.hidden = true;
+    setActiveEntry(null);
   }}
 
-  document.querySelectorAll(".name-cell-link").forEach((link) => {{
+  document.querySelectorAll(".panel-link").forEach((link) => {{
     link.addEventListener("click", (e) => {{
       // Only intercept a plain left click — modifier/middle/right clicks keep
       // their normal browser behavior (open in new tab, etc.) via the real href.
       if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       e.preventDefault();
-      openDetailPanel(link.dataset.slug);
+      openDetailPanel(link);
     }});
   }});
 
   detailPanelClose.addEventListener("click", closeDetailPanel);
-  detailPanelOverlay.addEventListener("click", closeDetailPanel);
   document.addEventListener("keydown", (e) => {{
     if (e.key === "Escape" && detailPanel.classList.contains("open")) closeDetailPanel();
   }});

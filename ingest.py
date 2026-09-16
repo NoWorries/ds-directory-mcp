@@ -396,10 +396,15 @@ REGISTRY_HEADER = (
     "# Add an entry per system: 'organization' (blank if there isn't a distinct one),\n"
     "# 'design_system' name, and one or more start URLs to crawl from.\n"
     "#\n"
-    "# 'resources', 'pages_indexed', 'etag', 'last_modified', 'last_checked', and any\n"
-    "# '*_meta' fields are auto-populated by ingest.py — don't hand-edit them, your\n"
-    "# changes will be overwritten on the next run. A missing 'pages_indexed' means\n"
-    "# the entry has never been indexed (picked up by `ingest.py --new`).\n"
+    "# 'resources', 'pages_indexed', 'etag', 'last_modified', 'last_checked',\n"
+    "# 'consecutive_crawl_failures', and any '*_meta' fields are auto-populated by\n"
+    "# ingest.py — don't hand-edit them, your changes will be overwritten on the\n"
+    "# next run. A missing 'pages_indexed' means the entry has never been indexed\n"
+    "# (picked up by `ingest.py --new`). 'consecutive_crawl_failures' counts how\n"
+    "# many checks IN A ROW the start URL couldn't be fetched at all — resets to 0\n"
+    "# the moment a check succeeds; check_crawl_health.py uses a run of these to\n"
+    "# flag a system as a real archival candidate rather than just currently having\n"
+    "# a bad day.\n"
     "#\n"
     "# 'archived: true' is a graveyard marker for a system whose docs site is\n"
     "# confirmed gone with no live replacement — set by hand after investigating,\n"
@@ -446,6 +451,13 @@ def update_registry_fields(design_system_name: str, fields: dict) -> None:
     save_registry(entries)
 
 
+def get_registry_entry(design_system_name: str) -> dict | None:
+    for entry in load_registry():
+        if full_name(entry) == design_system_name:
+            return entry
+    return None
+
+
 def update_registry_stats(
     design_system_name: str,
     pages_indexed: int,
@@ -476,10 +488,24 @@ def update_registry_stats(
     # returned. Anything that interrupts the process in that gap (a runner
     # timeout/cancellation) leaves the crawl data written but last_checked
     # never set. One atomic call closes that window.
+    #
+    # consecutive_crawl_failures counts how many checks IN A ROW the start
+    # URL itself couldn't be fetched at all (crawl_error set) — a single
+    # failure is often a transient blip (a timeout, a momentary outage), but
+    # one that keeps failing check after check is a real signal the site has
+    # moved or gone away for good. check_crawl_health.py uses this to tell
+    # "just had a bad day" apart from "probably dead, worth archiving" in its
+    # report, instead of every currently-broken system looking identical
+    # regardless of how long it's been that way. Resets to 0 the moment a
+    # check succeeds again.
+    previous = get_registry_entry(design_system_name) or {}
+    consecutive_failures = previous.get("consecutive_crawl_failures", 0) + 1 if crawl_error else 0
+
     fields = {
         "pages_indexed": pages_indexed,
         "hit_max_pages": hit_max_pages,
         "crawl_error": crawl_error or "",
+        "consecutive_crawl_failures": consecutive_failures,
         "likely_spa": likely_spa,
         "unverified_resources": unverified_resources or {},
         "content_signals": content_signals or {},
@@ -872,10 +898,17 @@ if __name__ == "__main__":
         sys.exit(1)
 
     if args[0] == "--all":
-        entries = [e for e in load_registry() if not e.get("archived")]
+        # likely_spa systems are deliberately excluded: a plain crawl already
+        # found nothing real there once (that's what set the flag), and
+        # would just fail identically again — reindex-spa.yml's headless
+        # render is the only thing that can actually make progress on them,
+        # so re-attempting the plain crawl here every month is pure wasted
+        # requests. If a site stops being an SPA, likely_spa gets cleared by
+        # a successful --spa run, not by --all guessing it's worth retrying.
+        entries = [e for e in load_registry() if not e.get("archived") and not e.get("likely_spa")]
         if shard:
             entries = [e for i, e in enumerate(entries) if i % shard_total == shard_index]
-            print(f"Shard {shard_index}/{shard_total}: {len(entries)} of {len([e for e in load_registry() if not e.get('archived')])} systems")
+            print(f"Shard {shard_index}/{shard_total}: {len(entries)} of {len([e for e in load_registry() if not e.get('archived') and not e.get('likely_spa')])} systems")
         # Always force=True here now, regardless of the --force flag: the
         # change-detection skip (fetch_change_signal/content_unchanged) only
         # ever checks the start URL's ETag/Last-Modified — a coarse "did the

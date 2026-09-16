@@ -5,11 +5,20 @@ name: Reindex SPA sites (headless-render pass)
 # back on) — a plain requests+BeautifulSoup crawl only ever sees the pre-JS
 # HTML shell of a client-side-rendered site, which has nothing real in it.
 # This workflow re-renders just those systems' start URL through an actual
-# headless browser (crawl4ai/Playwright) instead. Manually triggered: this
-# is a targeted retry pass over a specific, usually small set of systems, not
-# a routine scheduled crawl.
+# headless browser (crawl4ai/Playwright) instead.
+#
+# Scheduled monthly (reindex-full.yml's --all deliberately EXCLUDES
+# likely_spa systems now — a plain crawl already failed there once and
+# would just fail identically again, so this headless-render pass is the
+# only thing that can actually make progress on them) — without a schedule
+# of its own, excluding them from --all would mean they're only ever
+# re-checked if someone remembers to trigger this by hand.
 
 on:
+  schedule:
+    # 03:00 UTC on the 15th of each month — offset from reindex-full.yml's
+    # 1st-of-month run so the two heavy crawls don't compete for runners.
+    - cron: "0 3 15 * *"
   workflow_dispatch: {}
 
 permissions:
