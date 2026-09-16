@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T07:36:17+00:00",
+  "generated_at": "2026-09-16T08:37:49+00:00",
   "id": "mongodb-mongodb-design-system",
   "organization": "MongoDB",
   "design_system": "MongoDB Design System",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-16T07:11:31+00:00",
+  "last_checked": "2026-09-16T08:21:04+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -25,7 +25,7 @@
   "content_signals": {},
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 271,
+    "stars": 272,
     "last_pushed": "2026-09-03T16:19:38Z"
   },
   "npm_meta": null,

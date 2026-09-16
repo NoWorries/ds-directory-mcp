@@ -1,8 +1,8 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-16T08:04:28+00:00",
+  "generated_at": "2026-09-16T08:37:49+00:00",
   "data_as_of": "2026-09-13T22:19:25+00:00",
-  "total_systems": 160,
+  "total_systems": 161,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -3017,6 +3017,42 @@
       "github_meta": null,
       "npm_meta": null,
       "indexed_pages": []
+    },
+    {
+      "id": "mongodb-mongodb-design-system",
+      "organization": "MongoDB",
+      "design_system": "MongoDB Design System",
+      "full_name": "MongoDB — MongoDB Design System",
+      "start_urls": [
+        "https://www.mongodb.design/"
+      ],
+      "detail_url": "/systems/mongodb-mongodb-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T08:21:04+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/mongodb/leafygreen-ui"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "Apache-2.0",
+        "stars": 272,
+        "last_pushed": "2026-09-03T16:19:38Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://mongodb.design/",
+          "title": "https://mongodb.design/"
+        }
+      ]
     },
     {
       "id": "monzo-monzo-tone-of-voice",
