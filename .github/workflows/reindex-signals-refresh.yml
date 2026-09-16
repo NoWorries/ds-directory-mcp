@@ -1,0 +1,157 @@
+name: Refresh signals on already-indexed systems
+
+# Runs automatically whenever resources.py or content_signals.py changes —
+# i.e. whenever a new detectable resource type or content signal is added
+# (copilot-instructions, a governance-model detector, etc). Those are
+# recomputed from freshly fetched page text/links on EVERY crawl regardless
+# of ingest.py's per-page embed-skip optimization, so a --refresh --shallow
+# pass (ingest.py's mode for "already-indexed systems only") is enough to
+# backfill the new signal across every currently-indexed system without
+# waiting for the monthly full reindex or paying for a full deep re-embed.
+#
+# Deliberately does NOT touch never-indexed systems (that's reindex-new.yml/
+# reindex-shallow.yml's job) or do a deep crawl (that's reindex-full.yml,
+# monthly) — this is specifically "the code that decides what a signal means
+# changed, so re-check what's already here with it."
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - resources.py
+      - content_signals.py
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  # Sharded the same way reindex-shallow.yml is, for the same reason (a
+  # runner getting killed mid-run only loses its slice) — smaller count than
+  # reindex-shallow.yml since this only ever covers already-indexed systems
+  # (a subset of the registry), not the whole thing.
+  SHARD_COUNT: 16
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.gen.outputs.shards }}
+    steps:
+      - id: gen
+        run: echo "shards=$(python3 -c 'import json; print(json.dumps(list(range(${{ env.SHARD_COUNT }}))))')" >> "$GITHUB_OUTPUT"
+
+  refresh-shard:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: ${{ fromJSON(needs.prepare.outputs.shards) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-ingest.txt
+
+      - run: pip install -r requirements-ingest.txt
+
+      - name: Shallow re-scan this shard's already-indexed systems
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+        run: python ingest.py --refresh --shallow --shard ${{ matrix.shard }}/${{ env.SHARD_COUNT }}
+
+      # if: always() — same reasoning as every other sharded reindex workflow:
+      # ingest.py writes systems.yaml/pages_index.json per system well before
+      # that system's embedding calls, so whatever this shard got through
+      # before any failure is already on disk and worth uploading.
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard }}
+          path: |
+            systems.yaml
+            pages_index.json
+          retention-days: 1
+
+  merge-and-deploy:
+    needs: refresh-shard
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-ingest.txt
+
+      - run: pip install -r requirements-ingest.txt
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shards
+
+      - name: Merge shard results into systems.yaml + pages_index.json
+        run: python merge_shards.py ${{ env.SHARD_COUNT }}
+
+      - name: Generate static directory page
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          python generate_home.py
+          python generate_search.py
+          python generate_forms.py
+          python generate_data_export.py
+          python generate_llms_txt.py
+          python generate_sitemap.py
+          python generate_directory.py
+          python generate_components.py
+          python generate_systems.py
+
+      - name: Commit refreshed signals + directory page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems
+          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh resource/content signals on already-indexed systems [skip ci]"
+            for i in 1 2 3 4 5; do
+              git push && break
+              echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
+              git pull --rebase
+            done
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Deploy directory page to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          mkdir -p site
+          cp home.html site/index.html
+          cp search.html site/search.html
+          cp suggest.html site/suggest.html
+          cp report.html site/report.html
+          cp llms.txt site/llms.txt
+          if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
+          cp systems.json site/systems.json
+          cp design-system.schema.json site/design-system.schema.json
+          cp directory.html site/directory.html
+          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
+          if [ -d components ]; then cp -r components site/components; fi
+          if [ -d systems ]; then cp -r systems site/systems; fi
+          npx --yes netlify-cli@17 deploy --site "$NETLIFY_SITE_ID" --dir=site --prod

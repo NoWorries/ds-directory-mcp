@@ -9,6 +9,7 @@ Usage:
     python ingest.py --new --shallow              # ...but cap every crawl at SHALLOW_MAX_PAGES pages
     python ingest.py --new --shallow --shard 1/4  # ...sharded the same way --all is
     python ingest.py --spa [--shard 1/4]          # re-render every likely_spa system via a headless browser
+    python ingest.py --refresh --shallow [--shard 1/4]   # already-indexed systems only, shallow — see below
     python ingest.py --system "Shopify — Polaris" [--force]   # re-ingest one entry (org — design_system)
 
 --shallow: overrides max_pages (both the per-entry systems.yaml value and
@@ -19,6 +20,17 @@ most of the registry has nothing indexed at all yet. Once a system has been
 shallow-crawled it has a pages_indexed value like anything else, so --new
 won't pick it up again — the monthly --all full reindex is what deep-crawls
 it properly later, exactly as it would for any other already-indexed system.
+
+--refresh: like --all, but restricted to systems that are ALREADY indexed
+(pages_indexed set) — the complement of --new. Exists specifically for
+picking up a newly added resources.py/content_signals.py detector without
+waiting for the monthly full reindex: content_signals/resources are
+recomputed from freshly fetched page text/links on every crawl regardless
+of the embed-skip optimization (see crawl()'s unchanged_urls), so a quick
+--shallow pass here is enough to backfill a new signal across every
+already-indexed system without the cost of a full deep re-embed. See
+reindex-signals-refresh.yml, which runs this automatically whenever
+resources.py or content_signals.py changes.
 
 --spa: targets systems flagged likely_spa=True (see ingest()'s SPA-shell
 detection) — sites where a plain HTTP GET only ever returns an empty
@@ -855,6 +867,16 @@ if __name__ == "__main__":
         if not new_entries:
             print("No unindexed systems found in this shard — everything in systems.yaml has been indexed at least once.")
         for entry in new_entries:
+            safe_run(full_name(entry), ingest_entry, entry, force=True, max_pages_override=shallow_max_pages)
+
+    elif args[0] == "--refresh":
+        refresh_entries = [e for e in load_registry() if e.get("pages_indexed") and not e.get("archived")]
+        if shard:
+            refresh_entries = [e for i, e in enumerate(refresh_entries) if i % shard_total == shard_index]
+            print(f"Shard {shard_index}/{shard_total}: {len(refresh_entries)} already-indexed systems in this shard")
+        if not refresh_entries:
+            print("No already-indexed systems found in this shard.")
+        for entry in refresh_entries:
             safe_run(full_name(entry), ingest_entry, entry, force=True, max_pages_override=shallow_max_pages)
 
     elif args[0] == "--spa":
