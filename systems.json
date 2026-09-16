@@ -1,10 +1,6 @@
 {
   "$schema": "./design-system.schema.json",
-<<<<<<< HEAD
   "generated_at": "2026-09-16T02:34:13+00:00",
-=======
-  "generated_at": "2026-09-16T02:40:11+00:00",
->>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
   "data_as_of": "2026-09-13T22:19:25+00:00",
   "total_systems": 116,
   "systems": [
@@ -696,17 +692,10 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-16T02:39:30+00:00",
-      "last_modified": "Wed, 16 Sep 2026 00:00:40 GMT",
+      "last_checked": "2026-09-15T22:29:49+00:00",
+      "last_modified": "Tue, 15 Sep 2026 21:52:14 GMT",
       "sitemap_last_modified": null,
       "resources": {
-        "copilot_instructions": [
-          "https://druids.datadoghq.com/.github/copilot-instructions.md"
-        ],
-        "cursor_rules": [
-          "https://druids.datadoghq.com/.cursorrules",
-          "https://druids.datadoghq.com/.cursor/rules"
-        ],
         "agent_instructions": [
           "https://druids.datadoghq.com/llms.txt",
           "https://druids.datadoghq.com/llms-full.txt",
@@ -715,25 +704,13 @@
         ],
         "mcp": [
           "https://druids.datadoghq.com/.well-known/mcp.json"
-        ],
-        "registry": [
-          "https://druids.datadoghq.com/registry.json"
         ]
       },
       "unverified_resources": {},
-      "content_signals": {
-        "frameworks": [
-          "React"
-        ]
-      },
+      "content_signals": {},
       "github_meta": null,
       "npm_meta": null,
-      "indexed_pages": [
-        {
-          "url": "https://druids.datadoghq.com/llms.txt",
-          "title": "Datadog — Druids — llms.txt"
-        }
-      ]
+      "indexed_pages": []
     },
     {
       "id": "decathlon-design-system-vitamin",
@@ -1141,40 +1118,6 @@
       "indexed_pages": []
     },
     {
-<<<<<<< HEAD
-=======
-      "id": "gov-uk-gov-uk-design-system",
-      "organization": "GOV.UK",
-      "design_system": "GOV.UK Design System",
-      "full_name": "GOV.UK — GOV.UK Design System",
-      "start_urls": [
-        "https://design-system.service.gov.uk/"
-      ],
-      "detail_url": "/systems/gov-uk-gov-uk-design-system",
-      "pages_indexed": 8,
-      "coverage_status": "partial",
-      "hit_max_pages": true,
-      "likely_spa": false,
-      "last_checked": "2026-09-16T00:48:12+00:00",
-      "last_modified": null,
-      "sitemap_last_modified": null,
-      "resources": {
-        "github": [
-          "https://github.com/alphagov/accessible-autocomplete"
-        ]
-      },
-      "unverified_resources": {},
-      "content_signals": {},
-      "github_meta": {
-        "license": "MIT",
-        "stars": 954,
-        "last_pushed": "2026-09-15T10:15:18Z"
-      },
-      "npm_meta": null,
-      "indexed_pages": []
-    },
-    {
->>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
       "id": "government-of-canada-aurora-design-system",
       "organization": "Government of Canada",
       "design_system": "Aurora Design System",
@@ -1430,59 +1373,6 @@
       "indexed_pages": []
     },
     {
-<<<<<<< HEAD
-=======
-      "id": "hewlett-packard-grommet",
-      "organization": "Hewlett Packard",
-      "design_system": "Grommet",
-      "full_name": "Hewlett Packard — Grommet",
-      "start_urls": [
-        "https://v2.grommet.io/"
-      ],
-      "detail_url": "/systems/hewlett-packard-grommet",
-      "pages_indexed": 7,
-      "coverage_status": "partial",
-      "hit_max_pages": true,
-      "likely_spa": false,
-      "last_checked": "2026-09-16T00:50:38+00:00",
-      "last_modified": null,
-      "sitemap_last_modified": null,
-      "resources": {
-        "github": [
-          "https://github.com/grommet/grommet-starter-existing-app",
-          "https://github.com/grommet/grommet-starter-new-app",
-          "https://github.com/grommet/grommet"
-        ],
-        "storybook": [
-          "https://storybook.grommet.io/?path=/story/Layout-Box",
-          "https://storybook.grommet.io/?path=/story/Layout-Grid"
-        ],
-        "icons": [
-          "https://icons.grommet.io",
-          "https://v2.grommet.io/icons"
-        ],
-        "agent_instructions": [
-          "https://v2.grommet.io/llms.txt",
-          "https://v2.grommet.io/llms-full.txt",
-          "https://v2.grommet.io/AGENTS.md",
-          "https://v2.grommet.io/CLAUDE.md"
-        ],
-        "mcp": [
-          "https://v2.grommet.io/.well-known/mcp.json"
-        ]
-      },
-      "unverified_resources": {},
-      "content_signals": {},
-      "github_meta": {
-        "license": "Apache-2.0",
-        "stars": 84,
-        "last_pushed": "2023-01-10T03:27:49Z"
-      },
-      "npm_meta": null,
-      "indexed_pages": []
-    },
-    {
->>>>>>> 5a86a74c0d78b01647f7d9b5f6941a9930e7301e
       "id": "hubspot-canvas-design-system",
       "organization": "Hubspot",
       "design_system": "Canvas Design System",
@@ -1672,8 +1562,8 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-16T02:36:55+00:00",
-      "last_modified": "Mon, 14 Sep 2026 20:05:56 GMT",
+      "last_checked": "2026-09-15T22:22:19+00:00",
+      "last_modified": "Mon, 14 Sep 2026 20:05:55 GMT",
       "sitemap_last_modified": null,
       "resources": {
         "agent_instructions": [
@@ -1681,20 +1571,10 @@
         ]
       },
       "unverified_resources": {},
-      "content_signals": {
-        "accessibility_conformance": "WCAG 2.1 AA",
-        "frameworks": [
-          "React"
-        ]
-      },
+      "content_signals": {},
       "github_meta": null,
       "npm_meta": null,
-      "indexed_pages": [
-        {
-          "url": "https://instructure.design/llms.txt",
-          "title": "Instructure Inc — Instructure UI — llms.txt"
-        }
-      ]
+      "indexed_pages": []
     },
     {
       "id": "intuit-design-system",
