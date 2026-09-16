@@ -258,6 +258,17 @@
   design_system: Wordpress.com design handbook
   start_urls:
   - https://dotcombrand.wordpress.com/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    agent_instructions:
+    - https://dotcombrand.wordpress.com/llms.txt
+    - https://dotcombrand.wordpress.com/llms-full.txt
+    mcp:
+    - https://dotcombrand.wordpress.com/.well-known/mcp.json
+  last_checked: '2026-09-15T23:36:17+00:00'
 - organization: AWS
   design_system: Cloudscape Design System
   start_urls:
@@ -313,10 +324,27 @@
   design_system: Flame Design System
   start_urls:
   - https://bancosantander.invisionapp.com/dsm/santander-group/flame-ds-santander/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''bancosantander.invisionapp.com'', port=443):
+    Max retries exceeded with url: /dsm/santander-group/flame-ds-santander/ (Caused
+    by NameResolutionError("HTTPSConnection(host=''bancosantander.invisionapp.com'',
+    port=443): Failed to resolve ''bancosantander.invisionapp.com'' ([Errno -2] Name
+    or service not known)"))'
+  likely_spa: false
+  last_checked: '2026-09-15T23:36:45+00:00'
 - organization: Barnardo's
   design_system: Barnardo's Design System
   start_urls:
   - https://design-system.barnardos.org.uk/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''design-system.barnardos.org.uk'', port=443):
+    Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''design-system.barnardos.org.uk'',
+    port=443): Failed to resolve ''design-system.barnardos.org.uk'' ([Errno -5] No
+    address associated with hostname)"))'
+  likely_spa: false
+  last_checked: '2026-09-15T23:37:54+00:00'
 - organization: BBC
   design_system: Global Experience Language (GEL)
   start_urls:
@@ -356,10 +384,20 @@
   design_system: UAI Design System
   start_urls:
   - https://design.blip.ai/uai-design-system/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  last_checked: '2026-09-15T23:38:40+00:00'
 - organization: Brainly
   design_system: Brainly Style Guide
   start_urls:
   - https://styleguide.brainly.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://styleguide.brainly.com/'
+  likely_spa: false
+  last_checked: '2026-09-15T23:39:36+00:00'
 - organization: Brainly
   design_system: Design
   start_urls:
@@ -451,6 +489,22 @@
   design_system: Solid Style Guide
   start_urls:
   - https://solid.buzzfeed.com/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/buzzfeed/solid
+    - https://gist.github.com/samthurman/ca90a195e9d1925b53630bb904d194ce
+    - https://github.com/sindresorhus/grunt-sass
+  github_meta:
+    license: MIT
+    stars: 137
+    last_pushed: '2025-12-22T15:14:34Z'
+  etag: '"66ea22062ac1a4f512e55b7b54a17efc"'
+  last_modified: Mon, 22 Apr 2024 16:35:43 GMT
+  last_checked: '2026-09-15T23:40:00+00:00'
 - organization: Canonical
   design_system: Vanilla framework
   start_urls:
@@ -490,10 +544,37 @@
   design_system: Zen
   start_urls:
   - https://design.censhare.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://design.censhare.com/'
+  likely_spa: false
+  last_checked: '2026-09-15T23:40:24+00:00'
 - organization: Chakra team
   design_system: Chakra UI
   start_urls:
   - https://chakra-ui.com/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/chakra-ui/zag
+    - https://github.com/chakra-ui/chakra-ui
+    - https://github.com/chakra-ui/ark
+    storybook:
+    - https://chakra-ui.com/docs/get-started/frameworks/storybook
+    mcp:
+    - https://chakra-ui.com/docs/get-started/ai/mcp-server
+    agent_instructions:
+    - https://chakra-ui.com/llms-full.txt
+    - https://chakra-ui.com/llms.txt
+  github_meta:
+    license: MIT
+    stars: 5206
+    last_pushed: '2026-09-15T20:20:21Z'
+  etag: '"c017ddc3ed629490dd35c6875be28511"'
+  last_checked: '2026-09-15T23:40:58+00:00'
 - organization: City of Boston
   design_system: Fleet
   start_urls:
@@ -509,6 +590,13 @@
   design_system: CF-UI
   start_urls:
   - https://cloudflare.github.io/cf-ui/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  etag: W/"59c95b5c-454a8"
+  last_modified: Mon, 25 Sep 2017 19:39:08 GMT
+  last_checked: '2026-09-15T23:40:54+00:00'
 - organization: Consumer Financial Protection Bureau
   design_system: CFPB Design Manual
   start_urls:
@@ -583,6 +671,19 @@
   design_system: Design System - Vitamin
   start_urls:
   - https://decathlon.design/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    agent_instructions:
+    - https://decathlon.design/llms.txt
+    - https://decathlon.design/llms-full.txt
+    - https://decathlon.design/AGENTS.md
+    - https://decathlon.design/CLAUDE.md
+    mcp:
+    - https://decathlon.design/.well-known/mcp.json
+  last_checked: '2026-09-15T23:41:19+00:00'
 - organization: ''
   design_system: Decentraland UI
   start_urls:
@@ -651,14 +752,39 @@
   design_system: Playbook
   start_urls:
   - https://playbook.ebay.com/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    agent_instructions:
+    - https://playbook.ebay.com/llms.txt
+  last_checked: '2026-09-15T23:42:04+00:00'
 - organization: eBay
   design_system: Skin
   start_urls:
   - https://ebay.github.io/skin/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"680fc46c-10c"
+  last_modified: Mon, 28 Apr 2025 18:09:48 GMT
+  last_checked: '2026-09-15T23:42:28+00:00'
 - organization: Elastic UI
   design_system: Elastic UI Framework
   start_urls:
   - https://elastic.github.io/eui/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    icons:
+    - https://elastic.github.io/eui/docs/components/display/icons/
+  etag: '"21dfe08aeec47761501235bd3667a73b"'
+  last_modified: Mon, 14 Sep 2026 15:50:05 GMT
+  last_checked: '2026-09-15T23:43:03+00:00'
 - organization: Elia Group
   design_system: Nova
   start_urls:
@@ -776,6 +902,13 @@
   design_system: Photon Design System
   start_urls:
   - https://design.firefox.com/photon/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"0160ec9eb2229c14e65ec80d098e60df"
+  last_modified: Mon, 14 Sep 2026 15:53:17 GMT
+  last_checked: '2026-09-15T23:43:20+00:00'
 - organization: Flexport
   design_system: Latitude
   start_urls:
@@ -844,6 +977,21 @@
   design_system: Pajamas Design System
   start_urls:
   - https://design.gitlab.com/
+  pages_indexed: 7
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    storybook:
+    - https://design.gitlab.com/storybook
+    figma:
+    - https://www.figma.com/file/qEddyqCrI7kPSBjGmwkZzQ/Pajamas-UI-Kit
+    markdown_docs:
+    - https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/packages/gitlab-ui/CONTRIBUTING.md
+    - https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/README.md
+  etag: '"30daaa7917c200376afd76aa4f1630f494d1572776448aa8d6f4a3a2b9435d31"'
+  last_modified: Tue, 15 Sep 2026 21:56:41 GMT
+  last_checked: '2026-09-15T23:43:57+00:00'
 - organization: GO-JEK
   design_system: Asphalt
   start_urls:
@@ -894,6 +1042,13 @@
   design_system: Material 2
   start_urls:
   - https://material.io/guidelines/#introduction-goals/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"9fe3994f3822d53a0ff79f19dcb81afa"
+  last_modified: Tue, 01 Jan 1980 00:00:01 GMT
+  last_checked: '2026-09-15T23:44:23+00:00'
 - organization: Google
   design_system: Material Design
   start_urls:
@@ -913,25 +1068,25 @@
   design_system: GOV.UK Design System
   start_urls:
   - https://design-system.service.gov.uk/
+- organization: Government of Canada
+  design_system: Aurora Design System
+  start_urls:
+  - https://design.gccollab.ca/
   pages_indexed: 8
   hit_max_pages: true
   crawl_error: ''
   likely_spa: false
   resources:
     github:
-    - https://github.com/dequelabs/axe-core
-    - https://github.com/alphagov/govuk-frontend
-    - https://github.com/nickcolley/jest-axe
+    - https://github.com/gctools-outilsgc/aurora-design-system
+    - https://github.com/gctools-outilsgc/design-system-code
   github_meta:
-    license: MPL-2.0
-    stars: 7512
-    last_pushed: '2026-09-15T21:50:21Z'
-  etag: '"213f7439c10d9f5418a5e1d8a60260a1-ssl-df"'
-  last_checked: '2026-09-15T21:59:40+00:00'
-- organization: Government of Canada
-  design_system: Aurora Design System
-  start_urls:
-  - https://design.gccollab.ca/
+    license: MIT
+    stars: 95
+    last_pushed: '2019-06-13T17:38:24Z'
+  etag: W/"5d42ef40-2d6c9"
+  last_modified: Thu, 01 Aug 2019 13:55:12 GMT
+  last_checked: '2026-09-15T23:45:27+00:00'
 - organization: Government of Canada
   design_system: Canada.ca design system
   start_urls:
@@ -983,10 +1138,23 @@
   design_system: Halstack Design System
   start_urls:
   - https://developer.dxc.com/design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''developer.dxc.com'', port=443): Max retries
+    exceeded with url: /design/ (Caused by NameResolutionError("HTTPSConnection(host=''developer.dxc.com'',
+    port=443): Failed to resolve ''developer.dxc.com'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  last_checked: '2026-09-15T23:45:30+00:00'
 - organization: Heartbeat
   design_system: .pulse
   start_urls:
   - https://pulse.heartbeat.ua/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '526 Server Error: <none> for url: https://pulse.heartbeat.ua/'
+  likely_spa: false
+  last_checked: '2026-09-15T23:45:58+00:00'
 - organization: Helios Design System
   design_system: Hashicorp
   start_urls:
@@ -1064,37 +1232,6 @@
   design_system: Grommet
   start_urls:
   - https://v2.grommet.io/
-  pages_indexed: 8
-  hit_max_pages: true
-  crawl_error: ''
-  likely_spa: false
-  resources:
-    github:
-    - https://github.com/grommet/grommet
-    - https://github.com/grommet/grommet-starter-new-app
-    - https://github.com/grommet/grommet-starter-existing-app
-    storybook:
-    - https://storybook.grommet.io/?path=/story/Input-MaskedInput
-    - https://storybook.grommet.io/?path=/story/Layout-Box
-    - https://storybook.grommet.io/?path=/story/Layout-Grid
-    - https://storybook.grommet.io/?path=/story/Layout-Page
-    - https://storybook.grommet.io/?path=/story/data-toolbar
-    icons:
-    - https://v2.grommet.io/icons
-    - https://icons.grommet.io
-    agent_instructions:
-    - https://v2.grommet.io/llms.txt
-    - https://v2.grommet.io/llms-full.txt
-    - https://v2.grommet.io/AGENTS.md
-    - https://v2.grommet.io/CLAUDE.md
-    mcp:
-    - https://v2.grommet.io/.well-known/mcp.json
-  github_meta:
-    license: Apache-2.0
-    stars: 8348
-    last_pushed: '2026-09-15T20:33:18Z'
-  etag: '"2bf20c8558a1c61aa84a15c6be85e9f5-ssl-df"'
-  last_checked: '2026-09-15T22:15:01+00:00'
 - organization: Hubspot
   design_system: Canvas Design System
   start_urls:
@@ -1209,6 +1346,15 @@
   design_system: Lion
   start_urls:
   - https://lion-web.netlify.app/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    markdown_docs:
+    - https://github.com/ing-bank/lion/blob/master/CONTRIBUTING.md
+  etag: W/"7ffa9a02b58c9dff04a564dfb8bea3e3-ssl-df"
+  last_checked: '2026-09-15T23:48:24+00:00'
 - organization: Instacart
   design_system: Snacks
   start_urls:
@@ -1237,10 +1383,20 @@
   design_system: Design system
   start_urls:
   - https://design.intuit.com/quickbooks
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  last_checked: '2026-09-15T23:49:00+00:00'
 - organization: Intuit
   design_system: QuickBooks Design System
   start_urls:
   - https://design.intuit.com/quickbooks/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  last_checked: '2026-09-15T23:49:07+00:00'
 - organization: iStreamPlanet
   design_system: Pebble Design System
   start_urls:
@@ -1257,6 +1413,20 @@
   design_system: .it Designers Italy
   start_urls:
   - https://designers.italia.it/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/italia/feedback.designers.italia.it
+  github_meta:
+    license: BSD-3-Clause
+    stars: 2
+    last_pushed: '2026-03-26T09:00:36Z'
+  etag: W/"6aa91d98-bcd55"
+  last_modified: Tue, 15 Sep 2026 10:27:36 GMT
+  last_checked: '2026-09-15T23:49:37+00:00'
 - organization: JetBrains
   design_system: JetBrains Web UI
   start_urls:
@@ -1359,6 +1529,35 @@
   design_system: kickstartDS
   start_urls:
   - https://www.kickstartds.com/
+  pages_indexed: 6
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/kickstartDS/stackbit-starter
+    - https://github.com/kickstartDS/storyblok-starter
+    - https://github.com/kickstartDS/staticcms-starter
+    - https://github.com/kickstartDS/schema
+    storybook:
+    - https://www.kickstartds.com/docs/integration/storybook/token
+    - https://www.kickstartds.com/docs/integration/storybook/theming
+    - https://www.kickstartds.com/docs/integration/storybook/schema
+    - https://www.kickstartds.com/docs/integration/storybook/
+    - https://www.kickstartds.com/storybook/?path=/story/content-visual--box-inverted
+    - https://www.kickstartds.com/docs/integration/storybook/controls
+    - https://www.kickstartds.com/storybook/
+    - https://www.kickstartds.com/storybook
+    - https://www.kickstartds.com/docs/integration/storybook/story
+    - https://www.kickstartds.com/docs/guides/create/storybook
+    figma:
+    - https://www.figma.com/file/H7F4P2fsDgEkIcc7U1alk1/kickstartDS-Design-Tokens
+  github_meta:
+    license: NOASSERTION
+    stars: 2
+    last_pushed: '2024-03-05T09:36:49Z'
+  etag: '"46ca0b879f4e658650d07f072799c039-ssl-df"'
+  last_checked: '2026-09-15T23:49:47+00:00'
 - organization: Kiwi.com
   design_system: Orbit
   start_urls:
@@ -1426,14 +1625,46 @@
   design_system: LINE Design System
   start_urls:
   - https://designsystem.line.me/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"9f0c69a8ffd437b5d071d45a25eb247a"
+  last_modified: Wed, 26 Feb 2025 09:02:07 GMT
+  last_checked: '2026-09-15T23:50:01+00:00'
 - organization: LocalTapiola
   design_system: Duet
   start_urls:
   - https://www.duetds.com/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/duetds/duet-example-angular
+    - https://github.com/duetds/duet-example-react
+    icons:
+    - https://www.duetds.com/components/icon/
+  github_meta:
+    license: NOASSERTION
+    stars: 6
+    last_pushed: '2022-03-02T14:15:13Z'
+  etag: W/"0x8DF132BAE04DDBC"
+  last_modified: Tue, 15 Sep 2026 13:17:23 GMT
+  last_checked: '2026-09-15T23:50:39+00:00'
 - organization: Lonely Planet
   design_system: Rizzo
   start_urls:
   - https://rizzo.lonelyplanet.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''rizzo.lonelyplanet.com'', port=443): Max
+    retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''rizzo.lonelyplanet.com'',
+    port=443): Failed to resolve ''rizzo.lonelyplanet.com'' ([Errno -5] No address
+    associated with hostname)"))'
+  likely_spa: false
+  last_checked: '2026-09-15T23:50:20+00:00'
 - organization: Loom
   design_system: Lens
   start_urls:
@@ -1665,6 +1896,20 @@
   design_system: MongoDB Design System
   start_urls:
   - https://www.mongodb.design/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/mongodb/leafygreen-ui
+    mcp:
+    - https://www.mongodb.design/.well-known/mcp.json
+  github_meta:
+    license: Apache-2.0
+    stars: 271
+    last_pushed: '2026-09-03T16:19:38Z'
+  last_checked: '2026-09-15T23:52:48+00:00'
 - organization: Monzo
   design_system: Monzo Tone of Voice
   start_urls:
@@ -1714,6 +1959,12 @@
   design_system: Acorn
   start_urls:
   - https://acorn.firefox.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"1789130985912"
+  last_checked: '2026-09-15T23:53:09+00:00'
 - organization: Mutual of Omaha
   design_system: Digital Design Guide
   start_urls:
@@ -1784,6 +2035,22 @@
   design_system: Fuse
   start_urls:
   - https://ni.github.io/design-system/
+  pages_indexed: 0
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: true
+  resources:
+    github:
+    - https://github.com/ni/design-system
+    icons:
+    - https://ni.github.io/design-system/style/icons/
+  github_meta:
+    license: NOASSERTION
+    stars: 6
+    last_pushed: '2024-06-04T04:24:53Z'
+  etag: W/"5f8ddc7e-7a05"
+  last_modified: Mon, 19 Oct 2020 18:35:42 GMT
+  last_checked: '2026-09-15T23:53:14+00:00'
 - organization: NationBuilder
   design_system: Radius
   start_urls:
@@ -1824,10 +2091,22 @@
   design_system: New Zealand Government Design System (NZGDS)
   start_urls:
   - https://design-system-alpha.digital.govt.nz/
+  pages_indexed: 3
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  etag: W/"206788fed97911fc752f6a67a1aa4a38"
+  last_modified: Thu, 16 Jul 2020 04:29:12 GMT
+  last_checked: '2026-09-15T23:53:36+00:00'
 - organization: New Zealand Ministry of Education
   design_system: Design System
   start_urls:
   - https://designsystem.education.govt.nz/
+  pages_indexed: 7
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  last_checked: '2026-09-15T23:53:51+00:00'
 - organization: News UK
   design_system: NewsKit
   start_urls:
@@ -1920,6 +2199,12 @@
   design_system: Tractie
   start_urls:
   - https://tractie.ns.nl/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"d42a10b6b25a3b3631398e00935dbc2b"
+  last_checked: '2026-09-15T23:54:22+00:00'
 - organization: Nulogy
   design_system: Nulogy Design System
   start_urls:
@@ -2007,6 +2292,14 @@
   design_system: Studio
   start_urls:
   - https://studio.patreon.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''studio.patreon.com'', port=443): Max retries
+    exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''studio.patreon.com'',
+    port=443): Failed to resolve ''studio.patreon.com'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  last_checked: '2026-09-15T23:54:46+00:00'
 - organization: ''
   design_system: PatternFly
   start_urls:
@@ -2043,6 +2336,13 @@
   design_system: Gestalt
   start_urls:
   - https://pinterest.github.io/gestalt/#/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"5ed7cd79-1f6"
+  last_modified: Wed, 03 Jun 2020 16:19:05 GMT
+  last_checked: '2026-09-15T23:56:02+00:00'
 - organization: Pivotal software
   design_system: Pivotal UI
   start_urls:
@@ -2066,13 +2366,6 @@
   design_system: Priceline One
   start_urls:
   - https://pricelinelabs.github.io/design-system/
-  pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  etag: '"60aa9c91-66"'
-  last_modified: Sun, 23 May 2021 18:18:57 GMT
-  last_checked: '2026-09-15T22:28:45+00:00'
 - organization: Pusher
   design_system: Chameleon
   start_urls:
@@ -2346,10 +2639,24 @@
   design_system: Rendition
   start_urls:
   - https://balena-io-modules.github.io/rendition/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  etag: W/"5fbbe617-48c"
+  last_modified: Mon, 23 Nov 2020 16:40:55 GMT
+  last_checked: '2026-09-15T23:58:44+00:00'
 - organization: ''
   design_system: Reshaped
   start_urls:
   - https://reshaped.so/content/docs/getting-started/overview
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://www.reshaped.so/content/docs/getting-started/overview'
+  likely_spa: false
+  etag: W/"10ca1513ccbc6768ea4571421be36ae0"
+  last_modified: Wed, 09 Sep 2026 23:03:15 GMT
+  last_checked: '2026-09-15T23:59:08+00:00'
 - organization: Royal Canin
   design_system: Royal Canin's Design Language
   start_urls:
@@ -2358,6 +2665,14 @@
   design_system: Luna
   start_urls:
   - https://luna.sainsburys.co.uk/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''luna.sainsburys.co.uk'', port=443): Max
+    retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''luna.sainsburys.co.uk'',
+    port=443): Failed to resolve ''luna.sainsburys.co.uk'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  last_checked: '2026-09-15T23:59:27+00:00'
 - organization: Salesforce
   design_system: Lightning Design System
   start_urls:
@@ -2622,6 +2937,21 @@
   design_system: Singapore Government Design System
   start_urls:
   - https://www.designsystem.tech.gov.sg/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    agent_instructions:
+    - https://www.designsystem.tech.gov.sg/llms.txt
+    - https://www.designsystem.tech.gov.sg/llms-full.txt
+    - https://www.designsystem.tech.gov.sg/AGENTS.md
+    - https://www.designsystem.tech.gov.sg/CLAUDE.md
+    mcp:
+    - https://www.designsystem.tech.gov.sg/.well-known/mcp.json
+  etag: W/"ce87ddc84e207c0661f3d1b6e84aa7b1"
+  last_modified: Tue, 15 Sep 2026 04:41:46 GMT
+  last_checked: '2026-09-16T00:01:36+00:00'
 - organization: Sipgate
   design_system: pandaUI
   start_urls:
@@ -2656,12 +2986,6 @@
   design_system: Backpack
   start_urls:
   - https://skyscanner.design/
-  pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  etag: W/"1789482855722"
-  last_checked: '2026-09-15T21:56:38+00:00'
 - organization: SpareBank 1
   design_system: SpareBank 1 Designsystem
   start_urls:
@@ -2712,6 +3036,12 @@
   design_system: Starbucks Style Guide
   start_urls:
   - https://www.starbucks.com/static/reference/styleguide/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://www.starbucks.com/developer/pattern-library/'
+  likely_spa: false
+  etag: '"7kl1l68iou1f0t"'
+  last_checked: '2026-09-16T00:02:28+00:00'
 - organization: State of New South Wales
   design_system: Digital NSW
   start_urls:
@@ -2825,6 +3155,21 @@
   design_system: Nachos
   start_urls:
   - https://design.trello.com/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    agent_instructions:
+    - https://design.trello.com/llms.txt
+    - https://design.trello.com/llms-full.txt
+    - https://design.trello.com/AGENTS.md
+    - https://design.trello.com/CLAUDE.md
+    mcp:
+    - https://design.trello.com/.well-known/mcp.json
+  etag: '"c09b83b5658eff2f9d98480e3de530e1"'
+  last_modified: Tue, 15 Sep 2026 03:08:46 GMT
+  last_checked: '2026-09-16T00:04:44+00:00'
 - organization: Twilio
   design_system: Paste
   start_urls:
@@ -2955,6 +3300,21 @@
   design_system: uStyle
   start_urls:
   - https://ustyle.guide/
+  pages_indexed: 2
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/uswitch/ustyle
+    - https://github.com/postcss/autoprefixer
+    - https://github.com/ai/browserslist
+  github_meta:
+    license: NOASSERTION
+    stars: 19
+    last_pushed: '2024-02-07T19:28:52Z'
+  last_modified: Tue, 24 Mar 2020 16:21:54 GMT
+  last_checked: '2026-09-16T00:07:41+00:00'
 - organization: Vercel
   design_system: Geist
   start_urls:
@@ -3010,6 +3370,19 @@
   design_system: Vue Design System
   start_urls:
   - https://vueds.com/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/arielsalminen/vue-design-system
+  github_meta:
+    license: MIT
+    stars: 2195
+    last_pushed: '2023-04-19T08:22:50Z'
+  last_modified: Tue, 24 Jan 2023 08:05:35 GMT
+  last_checked: '2026-09-15T23:36:23+00:00'
 - organization: Washington Post
   design_system: Washington Post Design System (WPDS)
   start_urls:
@@ -3066,6 +3439,25 @@
   design_system: Ray
   start_urls:
   - https://ray.wework.com/
+  pages_indexed: 2
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  resources:
+    github:
+    - https://github.com/wework/ray
+    npm:
+    - https://www.npmjs.com/package/@wework/ray-core
+  github_meta:
+    license: Apache-2.0
+    stars: 55
+    last_pushed: '2023-01-11T19:04:31Z'
+  npm_meta:
+    latest_version: 1.16.9
+    weekly_downloads: 232
+  etag: W/"6126b078-1bbdc"
+  last_modified: Wed, 25 Aug 2021 21:04:56 GMT
+  last_checked: '2026-09-15T23:36:57+00:00'
 - organization: Wise
   design_system: Design system
   start_urls:
@@ -3124,7 +3516,18 @@
   design_system: Yelp Styleguide
   start_urls:
   - https://www.yelp.com/styleguide/
+  pages_indexed: 4
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  last_checked: '2026-09-15T23:38:16+00:00'
 - organization: Zendesk
   design_system: Garden
   start_urls:
   - https://garden.zendesk.com/
+  pages_indexed: 5
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  etag: '"ba996fd616b07de0b7c779af5dc69d0e-ssl-df"'
+  last_checked: '2026-09-15T23:39:04+00:00'

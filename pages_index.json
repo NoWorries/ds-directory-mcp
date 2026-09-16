@@ -2512,5 +2512,596 @@
       "url": "https://ix.siemens.io/llms.txt",
       "title": "Siemens iX — llms.txt"
     }
+  ],
+  "Automattic — Wordpress.com design handbook": [
+    {
+      "url": "https://dotcombrand.wordpress.com/",
+      "title": "Private Site"
+    }
+  ],
+  "Vue Design System": [
+    {
+      "url": "https://vueds.com/",
+      "title": "Vue Design System"
+    }
+  ],
+  "Banco Santander — Flame Design System": [],
+  "WeWork — Ray": [
+    {
+      "url": "https://ray.wework.com/getting-started",
+      "title": "Ray - Documentation"
+    },
+    {
+      "url": "https://ray.wework.com/foundations/fonts/",
+      "title": "Ray - Documentation"
+    }
+  ],
+  "Barnardo's — Barnardo's Design System": [],
+  "Yelp — Yelp Styleguide": [
+    {
+      "url": "https://www.yelp.com/styleguide/",
+      "title": "Yelp Design — Cookbook"
+    },
+    {
+      "url": "https://www.yelp.com/styleguide/ingredients",
+      "title": "Yelp Design — Ingredients"
+    },
+    {
+      "url": "https://www.yelp.com/styleguide/principles",
+      "title": "Yelp Design — Principles"
+    },
+    {
+      "url": "https://www.yelp.com/styleguide/recipes",
+      "title": "Yelp Design — Recipes & Entrees"
+    }
+  ],
+  "BLiP — UAI Design System": [],
+  "Zendesk — Garden": [
+    {
+      "url": "https://garden.zendesk.com/components",
+      "title": "Components overview / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/design",
+      "title": "Design overview / Design / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/patterns",
+      "title": "Patterns overview / Patterns / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/versions",
+      "title": "Versions / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/",
+      "title": "Zendesk Garden"
+    }
+  ],
+  "Brainly — Brainly Style Guide": [],
+  "BuzzFeed — Solid Style Guide": [
+    {
+      "url": "https://solid.buzzfeed.com/",
+      "title": "WTF is Solid? - Solid"
+    }
+  ],
+  "censhare GmbH — Zen": [],
+  "Chakra team — Chakra UI": [
+    {
+      "url": "https://chakra-ui.com/",
+      "title": "Chakra UI"
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/cli",
+      "title": "CLI | Chakra UI"
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/contributing",
+      "title": "Contributing to Chakra UI | Chakra UI"
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/installation",
+      "title": "Installation | Chakra UI"
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/ai/llms",
+      "title": "LLMs.txt Documentation | Chakra UI"
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/frameworks/tanstack-router",
+      "title": "Using Chakra in TanStack Router | Chakra UI"
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/frameworks/vite",
+      "title": "Using Chakra in Vite | Chakra UI"
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/frameworks/next-app",
+      "title": "Using Chakra UI in Next.js (App) | Chakra UI"
+    }
+  ],
+  "Cloudflare — CF-UI": [
+    {
+      "url": "https://cloudflare.github.io/cf-ui/",
+      "title": "cf-ui styleguide"
+    }
+  ],
+  "Decathlon — Design System - Vitamin": [
+    {
+      "url": "https://decathlon.design/",
+      "title": "Vitamin Play | Welcome to Vitamin Play"
+    }
+  ],
+  "eBay — Playbook": [
+    {
+      "url": "https://playbook.ebay.com/articles/ebay-design-2025-in-review",
+      "title": "eBay Design 2025 in Review | Articles | eBay Playbook"
+    },
+    {
+      "url": "https://playbook.ebay.com/",
+      "title": "eBay Playbook — One system for everyone to love."
+    },
+    {
+      "url": "https://playbook.ebay.com/foundations/illustration",
+      "title": "Illustration | Foundations  | eBay Playbook"
+    },
+    {
+      "url": "https://playbook.ebay.com/foundations/motion",
+      "title": "Motion | Foundations  | eBay Playbook"
+    },
+    {
+      "url": "https://playbook.ebay.com/foundations/object-styles-in-product",
+      "title": "Object Styles in Product | Foundations  | eBay Playbook"
+    },
+    {
+      "url": "https://playbook.ebay.com/foundations/iconography/our-icons",
+      "title": "Our Icons | Iconography | Foundations | eBay Playbook"
+    },
+    {
+      "url": "https://playbook.ebay.com/foundations/photography",
+      "title": "Photography | Foundations  | eBay Playbook"
+    },
+    {
+      "url": "https://playbook.ebay.com/foundations/typography",
+      "title": "Typography | Foundations  | eBay Playbook"
+    }
+  ],
+  "eBay — Skin": [],
+  "Elastic UI — Elastic UI Framework": [
+    {
+      "url": "https://elastic.github.io/eui/docs/components/containers/card",
+      "title": "Card | Elastic UI Framework"
+    },
+    {
+      "url": "https://elastic.github.io/eui/",
+      "title": "Elastic UI Framework | Elastic UI Framework"
+    },
+    {
+      "url": "https://elastic.github.io/eui/docs/components/display/icons/",
+      "title": "Icons | Elastic UI Framework"
+    },
+    {
+      "url": "https://elastic.github.io/eui/docs/content/",
+      "title": "Overview | Elastic UI Framework"
+    },
+    {
+      "url": "https://elastic.github.io/eui/docs/components/layout/spacer/",
+      "title": "Spacer | Elastic UI Framework"
+    },
+    {
+      "url": "https://elastic.github.io/eui/docs/components/display/text",
+      "title": "Text | Elastic UI Framework"
+    },
+    {
+      "url": "https://elastic.github.io/eui/docs/components/display/title",
+      "title": "Title | Elastic UI Framework"
+    },
+    {
+      "url": "https://elastic.github.io/eui/docs/components/display/tooltip",
+      "title": "Tooltip | Elastic UI Framework"
+    }
+  ],
+  "Firefox — Photon Design System": [],
+  "GitLab — Pajamas Design System": [
+    {
+      "url": "https://design.gitlab.com/contribute/contributing",
+      "title": "Contributing | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/contribute/lifecycle",
+      "title": "Contribution lifecycle | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/about/design-system-philosophy",
+      "title": "How to think about the design system | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/brand-introduction",
+      "title": "Introduction | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/about/navigating-pajamas",
+      "title": "Navigating Pajamas | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/",
+      "title": "Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/about/principles",
+      "title": "Principles | Pajamas Design System"
+    }
+  ],
+  "Google — Material 2": [],
+  "Government of Canada — Aurora Design System": [
+    {
+      "url": "https://design.gccollab.ca/",
+      "title": "Aurora Design System"
+    },
+    {
+      "url": "https://design.gccollab.ca/component/colour",
+      "title": "Colour - Aurora Design System"
+    },
+    {
+      "url": "https://design.gccollab.ca/component",
+      "title": "Components - Aurora Design System"
+    },
+    {
+      "url": "https://design.gccollab.ca/content/content-guidelines",
+      "title": "Content Guidelines - Aurora Design System"
+    },
+    {
+      "url": "https://design.gccollab.ca/data/data-overview",
+      "title": "Data Overview - Aurora Design System"
+    },
+    {
+      "url": "https://design.gccollab.ca/overview/download",
+      "title": "Download - Aurora Design System"
+    },
+    {
+      "url": "https://design.gccollab.ca/overview/introduction",
+      "title": "Introduction - Aurora Design System"
+    },
+    {
+      "url": "https://design.gccollab.ca/component/typography",
+      "title": "Typography - Aurora Design System"
+    }
+  ],
+  "Halstack — Halstack Design System": [],
+  "Heartbeat — .pulse": [],
+  "ING — Lion": [
+    {
+      "url": "https://lion-web.netlify.app/about/astro",
+      "title": "Astro portal: Lion"
+    },
+    {
+      "url": "https://lion-web.netlify.app/components/",
+      "title": "Components - Lion UI: Lion"
+    },
+    {
+      "url": "https://lion-web.netlify.app/guides/",
+      "title": "Guides: Lion"
+    },
+    {
+      "url": "https://lion-web.netlify.app/guides/how-to/create-a-custom-field/",
+      "title": "How To: Create a custom field: Lion"
+    },
+    {
+      "url": "https://lion-web.netlify.app/guides/how-to/get-started/",
+      "title": "How To: Get Started: Lion"
+    },
+    {
+      "url": "https://lion-web.netlify.app/",
+      "title": "Lion"
+    },
+    {
+      "url": "https://lion-web.netlify.app/guides/principles/scoped-elements/",
+      "title": "Principles: Scoped Elements: Lion"
+    },
+    {
+      "url": "https://lion-web.netlify.app/guides/principles/subclasser-apis/",
+      "title": "Principles: Subclasser apis: Lion"
+    }
+  ],
+  "Intuit — Design system": [
+    {
+      "url": "https://design.intuit.com/your-first-90-days-as-a-new-design-manager/",
+      "title": "Growing through some things as a new design manager - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/quickbooks",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/quickbooks/brand/",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/how-to-tackle-being-a-big-tech-design-intern/",
+      "title": "How to tackle being a big-tech design intern - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/lead-people/",
+      "title": "Lead People Archives - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/letting-go-of-the-steering-wheel/",
+      "title": "Letting go of the steering wheel - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/should-i-be-a-unicorn/",
+      "title": "Should I be a unicorn? - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/what-do-a-handmade-jacket-and-a-digital-mvp-have-in-common-the-pride-of-making-progress/",
+      "title": "What do a handmade jacket and a digital MVP have in common? The pride of making progress - Intuit Design Hub"
+    }
+  ],
+  "Intuit — QuickBooks Design System": [
+    {
+      "url": "https://design.intuit.com/behavioral-science-should-be-in-your-designer-toolkit/",
+      "title": "Behavioral science should be in your designer toolkit - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/do-research/",
+      "title": "Do Research Archives - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/empower-your-team-through-rapid-experimentation/",
+      "title": "Empower your team through rapid experimentation - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/quickbooks/",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/how-to-tackle-being-a-big-tech-design-intern/",
+      "title": "How to tackle being a big-tech design intern - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/lead-people/",
+      "title": "Lead People Archives - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/adhd-and-ipd-in-product-discovery/",
+      "title": "Making \"In-product discovery\" (IPD) work for everyone - Intuit Design Hub"
+    }
+  ],
+  "Italian Public Administration — .it Designers Italy": [
+    {
+      "url": "https://designers.italia.it/",
+      "title": "Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/",
+      "title": "Formazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/",
+      "title": "Modelli - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/partecipa/",
+      "title": "Partecipa - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20260529-premiato-al-compasso-d-oro-adi-2026-il-progetto-della-misura-1-4-1-del-pnrr-per-i-portali-web-delle-asl/",
+      "title": "Premiato al Compasso d’Oro ADI 2026 il progetto della Misura 1.4.1 del PNRR per i portali web delle ASL"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/",
+      "title": "Progetto - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/",
+      "title": "Risorse per progettare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/202607-un-kit-per-ogni-ambiente-di-sviluppo-il-nuovo-dev-kit-italia/",
+      "title": "Un kit per ogni ambiente di sviluppo: il nuovo Dev Kit Italia"
+    }
+  ],
+  "kickstart — kickstartDS": [
+    {
+      "url": "https://www.kickstartds.com/",
+      "title": "https://www.kickstartds.com/"
+    },
+    {
+      "url": "https://www.kickstartds.com/content-module/",
+      "title": "https://www.kickstartds.com/content-module/"
+    },
+    {
+      "url": "https://www.kickstartds.com/integrations/",
+      "title": "https://www.kickstartds.com/integrations/"
+    },
+    {
+      "url": "https://www.kickstartds.com/modules/",
+      "title": "https://www.kickstartds.com/modules/"
+    },
+    {
+      "url": "https://www.kickstartds.com/services/",
+      "title": "https://www.kickstartds.com/services/"
+    },
+    {
+      "url": "https://www.kickstartds.com/docs",
+      "title": "Welcome to the kickstartDS docs | kickstartDS docs"
+    }
+  ],
+  "LINE — LINE Design System": [],
+  "LocalTapiola — Duet": [
+    {
+      "url": "https://www.duetds.com/about/",
+      "title": "About Duet | Duet Design System"
+    },
+    {
+      "url": "https://www.duetds.com/components/",
+      "title": "Components | Duet Design System"
+    },
+    {
+      "url": "https://www.duetds.com/tokens/",
+      "title": "Design Tokens | Duet Design System"
+    },
+    {
+      "url": "https://www.duetds.com/designers/",
+      "title": "Designers | Duet Design System"
+    },
+    {
+      "url": "https://www.duetds.com/developers/",
+      "title": "Developers | Duet Design System"
+    },
+    {
+      "url": "https://www.duetds.com/",
+      "title": "Duet Design System"
+    },
+    {
+      "url": "https://www.duetds.com/faq/",
+      "title": "FAQ | Duet Design System"
+    },
+    {
+      "url": "https://www.duetds.com/getting-started/",
+      "title": "Getting Started | Duet Design System"
+    }
+  ],
+  "Lonely Planet — Rizzo": [],
+  "MongoDB — MongoDB Design System": [
+    {
+      "url": "https://www.mongodb.design/",
+      "title": "https://www.mongodb.design/"
+    }
+  ],
+  "Mozilla firefox — Acorn": [],
+  "National Instruments — Fuse": [],
+  "New Zealand Government — New Zealand Government Design System (NZGDS)": [
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/",
+      "title": "Basics | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/",
+      "title": "Components | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/",
+      "title": "Design System - Alpha | Design System - Alpha | NZ Government"
+    }
+  ],
+  "New Zealand Ministry of Education — Design System": [
+    {
+      "url": "https://designsystem.education.govt.nz/components",
+      "title": "Components | Design System"
+    },
+    {
+      "url": "https://designsystem.education.govt.nz/",
+      "title": "Design System | Design System"
+    },
+    {
+      "url": "https://designsystem.education.govt.nz/design",
+      "title": "Design | Design System"
+    },
+    {
+      "url": "https://designsystem.education.govt.nz/design/colours",
+      "title": "Our Colours | Design System"
+    },
+    {
+      "url": "https://designsystem.education.govt.nz/design/logos",
+      "title": "Our logos | Design System"
+    },
+    {
+      "url": "https://designsystem.education.govt.nz/patterns",
+      "title": "Patterns | Design System"
+    },
+    {
+      "url": "https://designsystem.education.govt.nz/design/typography",
+      "title": "Typography | Design System"
+    }
+  ],
+  "NS Dutch Railways — Tractie": [],
+  "Patreon — Studio": [],
+  "Pinterest — Gestalt": [],
+  "Rendition": [],
+  "Reshaped": [],
+  "Sainsbury's — Luna": [],
+  "Singapore Government Design System": [
+    {
+      "url": "https://www.designsystem.tech.gov.sg/components/accordion",
+      "title": "Accordion – Singapore Government Design System"
+    },
+    {
+      "url": "https://www.designsystem.tech.gov.sg/foundations/",
+      "title": "Foundations – Singapore Government Design System"
+    },
+    {
+      "url": "https://www.designsystem.tech.gov.sg/get-started/",
+      "title": "Get started – Singapore Government Design System"
+    },
+    {
+      "url": "https://www.designsystem.tech.gov.sg/",
+      "title": "Home – Singapore Government Design System"
+    },
+    {
+      "url": "https://www.designsystem.tech.gov.sg/foundations/design-tokens",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://www.designsystem.tech.gov.sg/foundations/colour",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://www.designsystem.tech.gov.sg/foundations/iconography",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://www.designsystem.tech.gov.sg/templates/",
+      "title": "Templates – Singapore Government Design System"
+    }
+  ],
+  "Starbucks Style Guide": [],
+  "Trello — Nachos": [
+    {
+      "url": "https://design.trello.com/",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/get-started/about-atlassian-design-system",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/typography",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/design-system",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/color-new",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/whats-new",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/iconography",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/news",
+      "title": "Atlassian Design"
+    }
+  ],
+  "uSwitch — uStyle": [
+    {
+      "url": "https://ustyle.guide/",
+      "title": "uStyle styleguide"
+    },
+    {
+      "url": "https://ustyle.guide/pattern-library/",
+      "title": "uStyle styleguide"
+    }
   ]
 }

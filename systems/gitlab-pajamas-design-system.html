@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Table — Design Systems Directory</title>
+<title>Pajamas Design System — Design Systems Directory</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -107,37 +107,42 @@
     .nav-search-form input { width: 140px; }
   }
 
-  .component-layout { display: flex; gap: 32px; align-items: flex-start; }
-  .component-sidebar {
-    flex: 0 0 190px; position: sticky; top: calc(60px + 24px);
-    max-height: calc(100vh - 60px - 48px); overflow-y: auto;
-    border-right: 1px solid var(--border); padding-right: 16px;
+  .system-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .org-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }
+  .meta-line { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px; }
+  .meta-line .badge { background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px; }
+
+  .hero-thumb {
+    display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--surface-sunken); margin-bottom: 28px;
   }
-  .sidebar-label {
-    font-family: "JetBrains Mono", monospace; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.05em; color: var(--text-faint); margin: 0 0 10px;
+
+  .freshness {
+    display: flex; gap: 24px; flex-wrap: wrap; background: var(--surface-sunken); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.85rem;
   }
-  .component-sidebar ul { list-style: none; margin: 0; padding: 0; }
-  .component-sidebar li { margin-bottom: 2px; }
-  .component-sidebar a {
-    display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
-    padding: 5px 8px; margin: 0 -8px; border-radius: 6px; text-decoration: none;
-    font-size: 0.88rem; color: var(--text-muted);
+  .freshness dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); margin: 0; }
+  .freshness dd { margin: 2px 0 0; font-family: "JetBrains Mono", monospace; color: var(--text); }
+
+  section.block { margin-bottom: 32px; }
+  section.block h2 {
+    font-family: "JetBrains Mono", monospace; font-size: 0.95rem; font-weight: 700; margin: 0 0 12px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
   }
-  .component-sidebar a:hover { background: var(--surface-sunken); color: var(--text); }
-  .component-sidebar a.current { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
-  .sidebar-count { color: var(--text-faint); font-size: 0.76rem; font-family: "JetBrains Mono", monospace; }
-  .component-sidebar a.current .sidebar-count { color: var(--accent); }
-  .component-main { flex: 1; min-width: 0; }
-  .system-list { list-style: none; margin: 0; padding: 0; }
-  .system-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
-  .system-list a { text-decoration: none; font-weight: 600; }
-  .system-list a:hover { text-decoration: underline; }
-  .page-title { color: var(--text-muted); font-size: 0.85rem; font-family: "JetBrains Mono", monospace; white-space: nowrap; }
-  @media (max-width: 760px) {
-    .component-layout { display: block; }
-    .component-sidebar { position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 16px; margin-bottom: 20px; }
+  .resource-list, .page-list { list-style: none; margin: 0; padding: 0; }
+  .resource-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .resource-list li a {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border);
+    border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 500;
   }
+  .resource-list li a svg { flex: none; }
+  .resource-list li a:hover { border-color: var(--accent); color: var(--accent); }
+  .page-list { columns: 2; column-gap: 24px; }
+  .page-list li { padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }
+  .page-list a { text-decoration: none; }
+  .page-list a:hover { text-decoration: underline; }
+  .empty-note { color: var(--text-faint); font-size: 0.88rem; }
+  @media (max-width: 600px) { .page-list { columns: 1; } }
 </style>
 </head>
 <body>
@@ -147,8 +152,8 @@
         <a href="/" class="site-brand">Design Systems Directory</a>
         <div class="site-nav-links">
           <a href="/" class="">Search</a>
-          <a href="/directory.html" class="">All Systems</a>
-          <a href="/components/index.html" class="current">Components</a>
+          <a href="/directory.html" class="current">All Systems</a>
+          <a href="/components/index.html" class="">Components</a>
         </div>
         <div class="nav-search">
           <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
@@ -177,15 +182,26 @@
 </script>
     
 <div class="page">
-  <div class="component-layout">
-    <nav class="component-sidebar"><p class="sidebar-label">All components</p><ul><li><a href="accordion.html" class="">Accordion <span class="sidebar-count">5</span></a></li><li><a href="alert.html" class="">Alert <span class="sidebar-count">1</span></a></li><li><a href="avatar.html" class="">Avatar <span class="sidebar-count">1</span></a></li><li><a href="badge.html" class="">Badge <span class="sidebar-count">1</span></a></li><li><a href="breadcrumb.html" class="">Breadcrumb <span class="sidebar-count">1</span></a></li><li><a href="button.html" class="">Button <span class="sidebar-count">3</span></a></li><li><a href="card.html" class="">Card <span class="sidebar-count">3</span></a></li><li><a href="carousel.html" class="">Carousel <span class="sidebar-count">1</span></a></li><li><a href="checkbox.html" class="">Checkbox <span class="sidebar-count">1</span></a></li><li><a href="chip.html" class="">Chip <span class="sidebar-count">1</span></a></li><li><a href="date-picker.html" class="">Date Picker <span class="sidebar-count">3</span></a></li><li><a href="dropdown.html" class="">Dropdown <span class="sidebar-count">5</span></a></li><li><a href="icon.html" class="">Icon <span class="sidebar-count">8</span></a></li><li><a href="input.html" class="">Input <span class="sidebar-count">4</span></a></li><li><a href="link.html" class="">Link <span class="sidebar-count">2</span></a></li><li><a href="list.html" class="">List <span class="sidebar-count">3</span></a></li><li><a href="menu.html" class="">Menu <span class="sidebar-count">1</span></a></li><li><a href="modal.html" class="">Modal <span class="sidebar-count">2</span></a></li><li><a href="navigation.html" class="">Navigation <span class="sidebar-count">2</span></a></li><li><a href="pagination.html" class="">Pagination <span class="sidebar-count">1</span></a></li><li><a href="progress.html" class="">Progress <span class="sidebar-count">3</span></a></li><li><a href="radio.html" class="">Radio <span class="sidebar-count">1</span></a></li><li><a href="sidebar.html" class="">Sidebar <span class="sidebar-count">2</span></a></li><li><a href="switch.html" class="">Switch <span class="sidebar-count">1</span></a></li><li><a href="table.html" class="current">Table <span class="sidebar-count">3</span></a></li><li><a href="tabs.html" class="">Tabs <span class="sidebar-count">2</span></a></li><li><a href="toast.html" class="">Toast <span class="sidebar-count">1</span></a></li><li><a href="tooltip.html" class="">Tooltip <span class="sidebar-count">3</span></a></li><li><a href="typography.html" class="">Typography <span class="sidebar-count">4</span></a></li></ul></nav>
-    <div class="component-main">
-      <p class="eyebrow"><a href="/components/index.html">Components</a></p>
-      <h1>Table</h1>
-      <p class="subtitle">3 indexed systems document table — click through to the actual page.</p>
-      <ul class="system-list"><li><a href="https://developers.arcgis.com/calcite-design-system/components/table/" target="_blank" rel="noopener">ArcGIS — Calcite</a> <span class="page-title">Table</span></li><li><a href="https://www.patternfly.org/components/table/react-demos" target="_blank" rel="noopener">Red Hat — Patternfly Design System</a> <span class="page-title">PatternFly • Table</span></li><li><a href="https://developer.semrush.com/intergalactic/table-group/table-showcase/table-showcase" target="_blank" rel="noopener">Semrush — Intergalactic</a> <span class="page-title">Table showcase</span></li></ul>
-    </div>
-  </div>
+  <p class="eyebrow"><a href="/directory.html">All Systems</a></p>
+  <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.gitlab.com&sz=32" alt="" width="16" height="16" loading="lazy"><span class="org-label">GitLab</span></div>
+  <h1>Pajamas Design System</h1>
+  <p class="meta-line">7 pages indexed</p>
+  <a href="https://design.gitlab.com/" target="_blank" rel="noopener"><img class="hero-thumb" src="screenshots/gitlab-pajamas-design-system.jpg" alt="" loading="lazy"></a>
+
+  <dl class="freshness">
+    <div><dt>Site last updated</dt><dd>15 Sep 2026</dd></div>
+    <div><dt>Last checked here</dt><dd>15 Sep 2026, 23:43 UTC</dd></div>
+  </dl>
+
+  <section class="block">
+    <h2>Resources</h2>
+    <ul class="resource-list"><li><a href="https://design.gitlab.com/storybook" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> Storybook</a></li><li><a href="https://www.figma.com/file/qEddyqCrI7kPSBjGmwkZzQ/Pajamas-UI-Kit" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> Figma</a></li><li><a href="https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/packages/gitlab-ui/CONTRIBUTING.md" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> Markdown docs</a></li></ul>
+  </section>
+
+  <section class="block">
+    <h2>Indexed pages</h2>
+    <ul class="page-list"><li><a href="https://design.gitlab.com/contribute/contributing" target="_blank" rel="noopener">Contributing</a></li><li><a href="https://design.gitlab.com/contribute/lifecycle" target="_blank" rel="noopener">Contribution lifecycle</a></li><li><a href="https://design.gitlab.com/about/design-system-philosophy" target="_blank" rel="noopener">How to think about the design system</a></li><li><a href="https://design.gitlab.com/brand-introduction" target="_blank" rel="noopener">Introduction</a></li><li><a href="https://design.gitlab.com/about/navigating-pajamas" target="_blank" rel="noopener">Navigating Pajamas</a></li><li><a href="https://design.gitlab.com/" target="_blank" rel="noopener">Pajamas Design System</a></li><li><a href="https://design.gitlab.com/about/principles" target="_blank" rel="noopener">Principles</a></li></ul>
+  </section>
 </div>
 </body>
 </html>
