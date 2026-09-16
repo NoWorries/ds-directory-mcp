@@ -2255,21 +2255,6 @@
   design_system: MongoDB Design System
   start_urls:
   - https://www.mongodb.design/
-  pages_indexed: 1
-  hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
-  likely_spa: false
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T07:11:31+00:00'
-  resources:
-    github:
-    - https://github.com/mongodb/leafygreen-ui
-  github_meta:
-    license: Apache-2.0
-    stars: 271
-    last_pushed: '2026-09-03T16:19:38Z'
 - organization: Monzo
   design_system: Monzo Tone of Voice
   start_urls:
@@ -2782,16 +2767,6 @@
   design_system: Priceline One
   start_urls:
   - https://pricelinelabs.github.io/design-system/
-  pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T07:15:13+00:00'
-  etag: '"60aa9c91-66"'
-  last_modified: Sun, 23 May 2021 18:18:57 GMT
 - organization: Pusher
   design_system: Chameleon
   start_urls:
@@ -3505,16 +3480,6 @@
   design_system: Backpack
   start_urls:
   - https://skyscanner.design/
-  pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T07:21:57+00:00'
-  etag: W/"1789526878988"
-  sitemap_url: https://skyscanner.design/sitemap.xml
 - organization: SpareBank 1
   design_system: SpareBank 1 Designsystem
   start_urls:
