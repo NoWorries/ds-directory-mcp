@@ -1,0 +1,29 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T06:50:49+00:00",
+  "id": "altinn-altinn-design-system",
+  "organization": "Altinn",
+  "design_system": "Altinn Design System",
+  "full_name": "Altinn — Altinn Design System",
+  "start_urls": [
+    "https://docs.altinn.studio/"
+  ],
+  "detail_url": "/systems/altinn-altinn-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T05:49:43+00:00",
+  "last_modified": "Tue, 15 Sep 2026 12:52:26 GMT",
+  "sitemap_last_modified": "2026-09-15T14:48:20+02:00",
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

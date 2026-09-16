@@ -1,0 +1,29 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T06:50:49+00:00",
+  "id": "marvel-marvel-styleguide",
+  "organization": "Marvel",
+  "design_system": "Marvel Styleguide",
+  "full_name": "Marvel — Marvel Styleguide",
+  "start_urls": [
+    "https://marvelapp.com/styleguide/"
+  ],
+  "detail_url": "/systems/marvel-marvel-styleguide",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T06:23:20+00:00",
+  "last_modified": "Wed, 17 Feb 2021 16:49:16 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://marvelapp.com/styleguide/design/icons"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

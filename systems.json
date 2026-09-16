@@ -1,8 +1,8 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-16T05:42:08+00:00",
+  "generated_at": "2026-09-16T06:50:49+00:00",
   "data_as_of": "2026-09-13T22:19:25+00:00",
-  "total_systems": 122,
+  "total_systems": 159,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -27,6 +27,38 @@
       },
       "unverified_resources": {},
       "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "adobe-spectrum",
+      "organization": "Adobe",
+      "design_system": "Spectrum",
+      "full_name": "Adobe — Spectrum",
+      "start_urls": [
+        "https://spectrum.adobe.com/"
+      ],
+      "detail_url": "/systems/adobe-spectrum",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:49:56+00:00",
+      "last_modified": "Wed, 28 Feb 2024 21:04:55 GMT",
+      "sitemap_last_modified": "2024-02-28T20:57:26.301Z",
+      "resources": {
+        "icons": [
+          "https://spectrum.adobe.com/page/icons/"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "React",
+          "Web Components"
+        ]
+      },
       "github_meta": null,
       "npm_meta": null,
       "indexed_pages": []
@@ -68,6 +100,33 @@
           "title": "Alaska Airlines — Auro — llms.txt"
         }
       ]
+    },
+    {
+      "id": "altinn-altinn-design-system",
+      "organization": "Altinn",
+      "design_system": "Altinn Design System",
+      "full_name": "Altinn — Altinn Design System",
+      "start_urls": [
+        "https://docs.altinn.studio/"
+      ],
+      "detail_url": "/systems/altinn-altinn-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:49:43+00:00",
+      "last_modified": "Tue, 15 Sep 2026 12:52:26 GMT",
+      "sitemap_last_modified": "2026-09-15T14:48:20+02:00",
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "React"
+        ]
+      },
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
     },
     {
       "id": "ant-financial-ant-design",
@@ -122,6 +181,91 @@
         "latest_version": "8.0.1",
         "weekly_downloads": 3394966
       },
+      "indexed_pages": []
+    },
+    {
+      "id": "aotu-labs-at-uikit",
+      "organization": "AOTU Labs",
+      "design_system": "AT UIKIT",
+      "full_name": "AOTU Labs — AT UIKIT",
+      "start_urls": [
+        "https://at-ui.github.io/at-ui/#/en/"
+      ],
+      "detail_url": "/systems/aotu-labs-at-uikit",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:50:52+00:00",
+      "last_modified": "Tue, 10 Apr 2018 21:05:48 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/at-ui/at-ui"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "Vue"
+        ]
+      },
+      "github_meta": {
+        "license": "MIT",
+        "stars": 2318,
+        "last_pushed": "2023-01-12T09:50:00Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "appear-here-bloom",
+      "organization": "Appear here",
+      "design_system": "Bloom",
+      "full_name": "Appear here — Bloom",
+      "start_urls": [
+        "https://bloom.appearhere.co.uk/"
+      ],
+      "detail_url": "/systems/appear-here-bloom",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:50:56+00:00",
+      "last_modified": "Wed, 24 Feb 2021 12:11:38 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "apple-human-interface-guidelines",
+      "organization": "Apple",
+      "design_system": "Human Interface Guidelines",
+      "full_name": "Apple — Human Interface Guidelines",
+      "start_urls": [
+        "https://developer.apple.com/design/human-interface-guidelines/"
+      ],
+      "detail_url": "/systems/apple-human-interface-guidelines",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:52:03+00:00",
+      "last_modified": "Mon, 14 Sep 2026 13:31:47 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "SwiftUI"
+        ]
+      },
+      "github_meta": null,
+      "npm_meta": null,
       "indexed_pages": []
     },
     {
@@ -269,6 +413,29 @@
       "indexed_pages": []
     },
     {
+      "id": "autoguru-overdrive",
+      "organization": "AutoGuru",
+      "design_system": "Overdrive",
+      "full_name": "AutoGuru — Overdrive",
+      "start_urls": [
+        "https://overdrive.autoguru.io/"
+      ],
+      "detail_url": "/systems/autoguru-overdrive",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:53:18+00:00",
+      "last_modified": "Thu, 10 Sep 2026 04:41:18 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "automattic-wordpress-com-design-handbook",
       "organization": "Automattic",
       "design_system": "Wordpress.com design handbook",
@@ -370,6 +537,29 @@
       "indexed_pages": []
     },
     {
+      "id": "backbase-design-system",
+      "organization": "Backbase",
+      "design_system": "Design system",
+      "full_name": "Backbase — Design system",
+      "start_urls": [
+        "https://designsystem.backbase.com/v2/web-components/"
+      ],
+      "detail_url": "/systems/backbase-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:55:26+00:00",
+      "last_modified": "Mon, 14 Sep 2026 15:53:17 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "bbc-global-experience-language-gel",
       "organization": "BBC",
       "design_system": "Global Experience Language (GEL)",
@@ -419,6 +609,37 @@
       "unverified_resources": {},
       "content_signals": {},
       "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "biings-biings-design-system",
+      "organization": "Biings",
+      "design_system": "Biings Design System",
+      "full_name": "Biings — Biings Design System",
+      "start_urls": [
+        "https://biings.design/"
+      ],
+      "detail_url": "/systems/biings-biings-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:55:00+00:00",
+      "last_modified": "Tue, 04 Aug 2026 10:26:24 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/biings/biings-ds"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "CC-BY-SA-4.0",
+        "stars": 36,
+        "last_pushed": "2026-08-04T10:25:55Z"
+      },
       "npm_meta": null,
       "indexed_pages": []
     },
@@ -480,6 +701,29 @@
           "https://www.figma.com/design/HdnAatpIIliZhoj6C77aHx/Nucleus-BritishGas---Components?m=auto&node-id=1876-35073&t=IwNdEWK1sFgZAbou-1"
         ]
       },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "bt-arc",
+      "organization": "BT",
+      "design_system": "Arc",
+      "full_name": "BT — Arc",
+      "start_urls": [
+        "https://arc.bt.com/"
+      ],
+      "detail_url": "/systems/bt-arc",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:57:07+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {},
       "unverified_resources": {},
       "content_signals": {},
       "github_meta": null,
@@ -557,6 +801,37 @@
         "latest_version": "4.13.0",
         "weekly_downloads": 72450
       },
+      "indexed_pages": []
+    },
+    {
+      "id": "catho-quantum",
+      "organization": "Catho",
+      "design_system": "Quantum",
+      "full_name": "Catho — Quantum",
+      "start_urls": [
+        "https://catho.github.io/quantum/"
+      ],
+      "detail_url": "/systems/catho-quantum",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:58:28+00:00",
+      "last_modified": "Thu, 28 May 2026 14:54:42 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/catho/quantum"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "GPL-3.0",
+        "stars": 57,
+        "last_pushed": "2026-05-28T14:54:05Z"
+      },
+      "npm_meta": null,
       "indexed_pages": []
     },
     {
@@ -789,6 +1064,75 @@
       "indexed_pages": []
     },
     {
+      "id": "decentraland-ui",
+      "organization": null,
+      "design_system": "Decentraland UI",
+      "full_name": "Decentraland UI",
+      "start_urls": [
+        "https://ui.decentraland.org/"
+      ],
+      "detail_url": "/systems/decentraland-ui",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:59:27+00:00",
+      "last_modified": "Mon, 24 Aug 2026 14:03:03 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "design-language-e-trade",
+      "organization": "Design Language",
+      "design_system": "E-Trade",
+      "full_name": "Design Language — E-Trade",
+      "start_urls": [
+        "https://etrade.design/"
+      ],
+      "detail_url": "/systems/design-language-e-trade",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:00:49+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "drawbotics-drylus",
+      "organization": "Drawbotics",
+      "design_system": "Drylus",
+      "full_name": "Drawbotics — Drylus",
+      "start_urls": [
+        "https://drawbotics.github.io/drylus/"
+      ],
+      "detail_url": "/systems/drawbotics-drylus",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:01:58+00:00",
+      "last_modified": "Fri, 20 Mar 2026 16:35:58 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "duolingo-design-guidelines",
       "organization": "Duolingo",
       "design_system": "Design guidelines",
@@ -842,6 +1186,37 @@
       "unverified_resources": {},
       "content_signals": {},
       "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "ebay-skin",
+      "organization": "eBay",
+      "design_system": "Skin",
+      "full_name": "eBay — Skin",
+      "start_urls": [
+        "https://ebay.github.io/skin/"
+      ],
+      "detail_url": "/systems/ebay-skin",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:03:14+00:00",
+      "last_modified": "Mon, 28 Apr 2025 18:09:48 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/eBay/evo-web"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "NOASSERTION",
+        "stars": 51,
+        "last_pushed": "2026-09-15T20:10:27Z"
+      },
       "npm_meta": null,
       "indexed_pages": []
     },
@@ -962,6 +1337,29 @@
       "indexed_pages": []
     },
     {
+      "id": "firefox-photon-design-system",
+      "organization": "Firefox",
+      "design_system": "Photon Design System",
+      "full_name": "Firefox — Photon Design System",
+      "start_urls": [
+        "https://design.firefox.com/photon/"
+      ],
+      "detail_url": "/systems/firefox-photon-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:07:04+00:00",
+      "last_modified": "Mon, 14 Sep 2026 15:53:17 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "foundation",
       "organization": null,
       "design_system": "Foundation",
@@ -978,6 +1376,34 @@
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "futurelearn-futurelearn-pattern-library",
+      "organization": "FutureLearn",
+      "design_system": "FutureLearn Pattern Library",
+      "full_name": "FutureLearn — FutureLearn Pattern Library",
+      "start_urls": [
+        "https://storybook.futurelearn.com/"
+      ],
+      "detail_url": "/systems/futurelearn-futurelearn-pattern-library",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:11:19+00:00",
+      "last_modified": "Mon, 14 Sep 2026 17:17:39 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "storybook": [
+          "https://github.com/storybookjs/storybook/tree/master/addons/knobs",
+          "https://storybook.futurelearn.com/"
+        ]
+      },
       "unverified_resources": {},
       "content_signals": {},
       "github_meta": null,
@@ -1123,6 +1549,29 @@
           "https://www.goodbarber.com/llms-full.txt"
         ]
       },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "google-material-design",
+      "organization": "Google",
+      "design_system": "Material Design",
+      "full_name": "Google — Material Design",
+      "start_urls": [
+        "https://material.io/"
+      ],
+      "detail_url": "/systems/google-material-design",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:13:00+00:00",
+      "last_modified": "Tue, 01 Jan 1980 00:00:01 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
       "unverified_resources": {},
       "content_signals": {},
       "github_meta": null,
@@ -1709,6 +2158,29 @@
       "indexed_pages": []
     },
     {
+      "id": "indiana-university-rivet",
+      "organization": "Indiana University",
+      "design_system": "Rivet",
+      "full_name": "Indiana University — Rivet",
+      "start_urls": [
+        "https://rivet.uits.iu.edu/"
+      ],
+      "detail_url": "/systems/indiana-university-rivet",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:16:33+00:00",
+      "last_modified": "Thu, 09 Jul 2026 19:21:54 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "infor-infor-design-system",
       "organization": "Infor",
       "design_system": "Infor Design System",
@@ -1870,6 +2342,37 @@
         "license": "BSD-3-Clause",
         "stars": 2,
         "last_pushed": "2026-03-26T09:00:36Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "jetbrains-jetbrains-web-ui",
+      "organization": "JetBrains",
+      "design_system": "JetBrains Web UI",
+      "full_name": "JetBrains — JetBrains Web UI",
+      "start_urls": [
+        "https://jetbrains.github.io/ring-ui/"
+      ],
+      "detail_url": "/systems/jetbrains-jetbrains-web-ui",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:17:51+00:00",
+      "last_modified": "Mon, 14 Sep 2026 11:36:44 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/JetBrains/ring-ui"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "Apache-2.0",
+        "stars": 3790,
+        "last_pushed": "2026-09-14T11:34:41Z"
       },
       "npm_meta": null,
       "indexed_pages": []
@@ -2092,6 +2595,40 @@
       "indexed_pages": []
     },
     {
+      "id": "latitude-financial-basis-design-system",
+      "organization": "Latitude Financial",
+      "design_system": "Basis Design System",
+      "full_name": "Latitude Financial — Basis Design System",
+      "start_urls": [
+        "https://basis.now.sh/"
+      ],
+      "detail_url": "/systems/latitude-financial-basis-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:20:13+00:00",
+      "last_modified": "Tue, 15 Sep 2026 22:33:37 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/LatitudeFinancialOSS/basis"
+        ],
+        "icons": [
+          "https://basis.vercel.app/components/icon"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "MIT",
+        "stars": 61,
+        "last_pushed": "2024-02-13T05:12:28Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "localtapiola-duet",
       "organization": "LocalTapiola",
       "design_system": "Duet",
@@ -2287,6 +2824,56 @@
       "indexed_pages": []
     },
     {
+      "id": "marvel-marvel-styleguide",
+      "organization": "Marvel",
+      "design_system": "Marvel Styleguide",
+      "full_name": "Marvel — Marvel Styleguide",
+      "start_urls": [
+        "https://marvelapp.com/styleguide/"
+      ],
+      "detail_url": "/systems/marvel-marvel-styleguide",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:23:20+00:00",
+      "last_modified": "Wed, 17 Feb 2021 16:49:16 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "icons": [
+          "https://marvelapp.com/styleguide/design/icons"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "material-3",
+      "organization": null,
+      "design_system": "Material 3",
+      "full_name": "Material 3",
+      "start_urls": [
+        "https://m3.material.io/"
+      ],
+      "detail_url": "/systems/material-3",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:24:35+00:00",
+      "last_modified": "Tue, 01 Jan 1980 00:00:01 GMT",
+      "sitemap_last_modified": "2026-09-08",
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "merck-liquid",
       "organization": "Merck",
       "design_system": "Liquid",
@@ -2324,6 +2911,29 @@
       "likely_spa": false,
       "last_checked": "2026-09-15T22:53:18+00:00",
       "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "microsoft-fluent-ui",
+      "organization": "Microsoft",
+      "design_system": "Fluent UI",
+      "full_name": "Microsoft — Fluent UI",
+      "start_urls": [
+        "https://developer.microsoft.com/en-us/fluentui#/"
+      ],
+      "detail_url": "/systems/microsoft-fluent-ui",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:25:46+00:00",
+      "last_modified": "Wed, 16 Sep 2026 04:30:33 GMT",
       "sitemap_last_modified": null,
       "resources": {},
       "unverified_resources": {},
@@ -2417,6 +3027,29 @@
         "latest_version": "22.0.0",
         "weekly_downloads": 912
       },
+      "indexed_pages": []
+    },
+    {
+      "id": "mozilla-firefox-acorn",
+      "organization": "Mozilla firefox",
+      "design_system": "Acorn",
+      "full_name": "Mozilla firefox — Acorn",
+      "start_urls": [
+        "https://acorn.firefox.com/"
+      ],
+      "detail_url": "/systems/mozilla-firefox-acorn",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:27:22+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
       "indexed_pages": []
     },
     {
@@ -2527,6 +3160,40 @@
         "latest_version": "4.0.70",
         "weekly_downloads": 358
       },
+      "indexed_pages": []
+    },
+    {
+      "id": "national-instruments-fuse",
+      "organization": "National Instruments",
+      "design_system": "Fuse",
+      "full_name": "National Instruments — Fuse",
+      "start_urls": [
+        "https://ni.github.io/design-system/"
+      ],
+      "detail_url": "/systems/national-instruments-fuse",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:28:30+00:00",
+      "last_modified": "Mon, 19 Oct 2020 18:35:42 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/ni/design-system"
+        ],
+        "icons": [
+          "https://ni.github.io/design-system/style/icons/"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "NOASSERTION",
+        "stars": 6,
+        "last_pushed": "2024-06-04T04:24:53Z"
+      },
+      "npm_meta": null,
       "indexed_pages": []
     },
     {
@@ -2852,6 +3519,29 @@
       ]
     },
     {
+      "id": "ns-dutch-railways-tractie",
+      "organization": "NS Dutch Railways",
+      "design_system": "Tractie",
+      "full_name": "NS Dutch Railways — Tractie",
+      "start_urls": [
+        "https://tractie.ns.nl/"
+      ],
+      "detail_url": "/systems/ns-dutch-railways-tractie",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:30:02+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "nulogy-nulogy-design-system",
       "organization": "Nulogy",
       "design_system": "Nulogy Design System",
@@ -2876,6 +3566,41 @@
       "unverified_resources": {},
       "content_signals": {},
       "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "palantir-blueprint",
+      "organization": "Palantir",
+      "design_system": "Blueprint",
+      "full_name": "Palantir — Blueprint",
+      "start_urls": [
+        "https://blueprintjs.com/"
+      ],
+      "detail_url": "/systems/palantir-blueprint",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:31:21+00:00",
+      "last_modified": "Sat, 15 Aug 2026 00:01:42 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/palantir/blueprint"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "React"
+        ]
+      },
+      "github_meta": {
+        "license": "Apache-2.0",
+        "stars": 22065,
+        "last_pushed": "2026-09-15T21:09:12Z"
+      },
       "npm_meta": null,
       "indexed_pages": []
     },
@@ -2936,6 +3661,52 @@
       "indexed_pages": []
     },
     {
+      "id": "pinterest-gestalt",
+      "organization": "Pinterest",
+      "design_system": "Gestalt",
+      "full_name": "Pinterest — Gestalt",
+      "start_urls": [
+        "https://pinterest.github.io/gestalt/#/"
+      ],
+      "detail_url": "/systems/pinterest-gestalt",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:32:37+00:00",
+      "last_modified": "Wed, 03 Jun 2020 16:19:05 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "pluralsight-pluralsight-design-system",
+      "organization": "Pluralsight",
+      "design_system": "Pluralsight Design System",
+      "full_name": "Pluralsight — Pluralsight Design System",
+      "start_urls": [
+        "https://design-system.pluralsight.com/"
+      ],
+      "detail_url": "/systems/pluralsight-pluralsight-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:34:16+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "pusher-chameleon",
       "organization": "Pusher",
       "design_system": "Chameleon",
@@ -2962,6 +3733,99 @@
         "license": "MIT",
         "stars": 34,
         "last_pushed": "2024-02-29T01:18:30Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "rambler",
+      "organization": null,
+      "design_system": "Rambler",
+      "full_name": "Rambler",
+      "start_urls": [
+        "https://rambler-digital-solutions.github.io/rambler-ui/"
+      ],
+      "detail_url": "/systems/rambler",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:35:26+00:00",
+      "last_modified": "Wed, 15 Jan 2025 11:44:01 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/rambler-digital-solutions/rambler-ui"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "MIT",
+        "stars": 190,
+        "last_pushed": "2025-01-15T11:41:06Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "rambler-ratio",
+      "organization": "Rambler",
+      "design_system": "Ratio",
+      "full_name": "Rambler — Ratio",
+      "start_urls": [
+        "https://ui-kit.rambler.ru/#/"
+      ],
+      "detail_url": "/systems/rambler-ratio",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:36:45+00:00",
+      "last_modified": "Wed, 15 Jan 2025 11:44:01 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/rambler-digital-solutions/rambler-ui"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "MIT",
+        "stars": 190,
+        "last_pushed": "2025-01-15T11:41:06Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "react95",
+      "organization": null,
+      "design_system": "React95",
+      "full_name": "React95",
+      "start_urls": [
+        "https://react95.github.io/React95/"
+      ],
+      "detail_url": "/systems/react95",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:38:07+00:00",
+      "last_modified": "Wed, 02 Sep 2026 20:02:51 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/React95/React95"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "NOASSERTION",
+        "stars": 3824,
+        "last_pushed": "2026-09-02T20:02:28Z"
       },
       "npm_meta": null,
       "indexed_pages": []
@@ -3269,6 +4133,29 @@
           "title": "Starter page/Boilerplate | Royal Canin Design Language"
         }
       ]
+    },
+    {
+      "id": "salesforce-lightning-design-system",
+      "organization": "Salesforce",
+      "design_system": "Lightning Design System",
+      "full_name": "Salesforce — Lightning Design System",
+      "start_urls": [
+        "https://www.lightningdesignsystem.com/"
+      ],
+      "detail_url": "/systems/salesforce-lightning-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:40:25+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
     },
     {
       "id": "samsung-tizen-circularui",
@@ -4226,6 +5113,90 @@
       "indexed_pages": []
     },
     {
+      "id": "vimeo-vimeo-design-system",
+      "organization": "Vimeo",
+      "design_system": "Vimeo Design System",
+      "full_name": "Vimeo — Vimeo Design System",
+      "start_urls": [
+        "https://vimeo.github.io/iris/"
+      ],
+      "detail_url": "/systems/vimeo-vimeo-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:47:02+00:00",
+      "last_modified": "Wed, 23 Oct 2024 19:19:12 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "vmware-clarity-design-system",
+      "organization": "VMware",
+      "design_system": "Clarity Design System",
+      "full_name": "VMware — Clarity Design System",
+      "start_urls": [
+        "https://clarity.design/"
+      ],
+      "detail_url": "/systems/vmware-clarity-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:48:18+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {
+        "storybook": [
+          "https://storybook.clarity.design"
+        ],
+        "icons": [
+          "/documentation/icons"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "Angular"
+        ]
+      },
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
+      "id": "vtex-styleguide",
+      "organization": "VTEX",
+      "design_system": "Styleguide",
+      "full_name": "VTEX — Styleguide",
+      "start_urls": [
+        "https://styleguide.vtex.com/"
+      ],
+      "detail_url": "/systems/vtex-styleguide",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:48:44+00:00",
+      "last_modified": "Fri, 19 Dec 2025 17:14:38 GMT",
+      "sitemap_last_modified": null,
+      "resources": {},
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "React"
+        ]
+      },
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": []
+    },
+    {
       "id": "vue-design-system",
       "organization": null,
       "design_system": "Vue Design System",
@@ -4278,6 +5249,38 @@
       "github_meta": null,
       "npm_meta": null,
       "indexed_pages": []
+    },
+    {
+      "id": "webex-momentum-design-system",
+      "organization": "Webex",
+      "design_system": "Momentum Design System",
+      "full_name": "Webex — Momentum Design System",
+      "start_urls": [
+        "https://momentum.design/"
+      ],
+      "detail_url": "/systems/webex-momentum-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T06:49:33+00:00",
+      "last_modified": "Mon, 14 Sep 2026 20:44:19 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "skills": [
+          "https://momentum.design/en/skills/momentum-concierge"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://momentum.design/",
+          "title": "Webex — Momentum Design System"
+        }
+      ]
     },
     {
       "id": "welcome-to-the-jungle-welcome-ui",

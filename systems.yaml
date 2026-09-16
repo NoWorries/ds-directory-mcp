@@ -2,10 +2,15 @@
 # Add an entry per system: 'organization' (blank if there isn't a distinct one),
 # 'design_system' name, and one or more start URLs to crawl from.
 #
-# 'resources', 'pages_indexed', 'etag', 'last_modified', 'last_checked', and any
-# '*_meta' fields are auto-populated by ingest.py — don't hand-edit them, your
-# changes will be overwritten on the next run. A missing 'pages_indexed' means
-# the entry has never been indexed (picked up by `ingest.py --new`).
+# 'resources', 'pages_indexed', 'etag', 'last_modified', 'last_checked',
+# 'consecutive_crawl_failures', and any '*_meta' fields are auto-populated by
+# ingest.py — don't hand-edit them, your changes will be overwritten on the
+# next run. A missing 'pages_indexed' means the entry has never been indexed
+# (picked up by `ingest.py --new`). 'consecutive_crawl_failures' counts how
+# many checks IN A ROW the start URL couldn't be fetched at all — resets to 0
+# the moment a check succeeds; check_crawl_health.py uses a run of these to
+# flag a system as a real archival candidate rather than just currently having
+# a bad day.
 #
 # 'archived: true' is a graveyard marker for a system whose docs site is
 # confirmed gone with no live replacement — set by hand after investigating,
@@ -36,17 +41,24 @@
   design_system: Spectrum
   start_urls:
   - https://spectrum.adobe.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T05:14:47+00:00'
+  content_signals:
+    frameworks:
+    - React
+    - Web Components
+  last_checked: '2026-09-16T05:49:56+00:00'
   etag: W/"bf464d5e8515e7fb8f54b84f85825628"
   last_modified: Wed, 28 Feb 2024 21:04:55 GMT
   sitemap_url: https://spectrum.adobe.com/sitemap.xml
   sitemap_last_modified: '2024-02-28T20:57:26.301Z'
+  consecutive_crawl_failures: 0
+  resources:
+    icons:
+    - https://spectrum.adobe.com/page/icons/
 - organization: Alaska Airlines
   design_system: Auro
   start_urls:
@@ -70,17 +82,20 @@
   design_system: Altinn Design System
   start_urls:
   - https://docs.altinn.studio/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T05:15:13+00:00'
+  content_signals:
+    frameworks:
+    - React
+  last_checked: '2026-09-16T05:49:43+00:00'
   etag: '"6aa93f8a-f3"'
   last_modified: Tue, 15 Sep 2026 12:52:26 GMT
   sitemap_url: https://docs.altinn.studio/sitemap.xml
   sitemap_last_modified: '2026-09-15T14:48:20+02:00'
+  consecutive_crawl_failures: 0
 - organization: Ant Financial
   design_system: Ant Design
   start_urls:
@@ -119,41 +134,55 @@
   design_system: AT UIKIT
   start_urls:
   - https://at-ui.github.io/at-ui/#/en/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T05:15:23+00:00'
+  content_signals:
+    frameworks:
+    - Vue
+  last_checked: '2026-09-16T05:50:52+00:00'
   etag: W/"5acd272c-1124"
   last_modified: Tue, 10 Apr 2018 21:05:48 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/at-ui/at-ui
+  github_meta:
+    license: MIT
+    stars: 2318
+    last_pushed: '2023-01-12T09:50:00Z'
 - organization: Appear here
   design_system: Bloom
   start_urls:
   - https://bloom.appearhere.co.uk/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:15:48+00:00'
+  last_checked: '2026-09-16T05:50:56+00:00'
   etag: W/"6036427a-46d"
   last_modified: Wed, 24 Feb 2021 12:11:38 GMT
+  consecutive_crawl_failures: 0
 - organization: Apple
   design_system: Human Interface Guidelines
   start_urls:
   - https://developer.apple.com/design/human-interface-guidelines/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T05:15:53+00:00'
-  etag: '"4511-65b7174ae0019-df"'
+  content_signals:
+    frameworks:
+    - SwiftUI
+  last_checked: '2026-09-16T05:52:03+00:00'
+  etag: '"4511-65b7174ae0019"'
   last_modified: Mon, 14 Sep 2026 13:31:47 GMT
+  consecutive_crawl_failures: 0
 - organization: Arbetsförmedlingen
   design_system: Design system
   start_urls:
@@ -164,11 +193,12 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:16:29+00:00'
+  last_checked: '2026-09-16T05:52:02+00:00'
   etag: '"2a524b8751e867273ea9b2f172fa2981eaa72b532883542380875c5ab2ca5785"'
   last_modified: Wed, 09 Sep 2026 08:48:57 GMT
   sitemap_url: https://designsystem.arbetsformedlingen.se/sitemap.xml
   sitemap_last_modified: '2026-06-05'
+  consecutive_crawl_failures: 0
 - organization: ArcGIS
   design_system: Calcite
   start_urls:
@@ -293,15 +323,16 @@
   design_system: Overdrive
   start_urls:
   - https://overdrive.autoguru.io/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:17:31+00:00'
+  last_checked: '2026-09-16T05:53:18+00:00'
   etag: W/"6aa234ee-108c"
   last_modified: Thu, 10 Sep 2026 04:41:18 GMT
+  consecutive_crawl_failures: 0
 - organization: Automattic
   design_system: Wordpress.com design handbook
   start_urls:
@@ -361,16 +392,17 @@
   design_system: Design system
   start_urls:
   - https://designsystem.backbase.com/v2/web-components/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:18:00+00:00'
+  last_checked: '2026-09-16T05:55:26+00:00'
   etag: W/"0160ec9eb2229c14e65ec80d098e60df"
   last_modified: Mon, 14 Sep 2026 15:53:17 GMT
   sitemap_url: https://designsystem.backbase.com/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Banco Santander
   design_system: Flame Design System
   start_urls:
@@ -418,14 +450,22 @@
   design_system: Biings Design System
   start_urls:
   - https://biings.design/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:19:49+00:00'
+  last_checked: '2026-09-16T05:55:00+00:00'
   last_modified: Tue, 04 Aug 2026 10:26:24 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/biings/biings-ds
+  github_meta:
+    license: CC-BY-SA-4.0
+    stars: 36
+    last_pushed: '2026-08-04T10:25:55Z'
 - organization: BLiP
   design_system: UAI Design System
   start_urls:
@@ -436,7 +476,8 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:20:18+00:00'
+  last_checked: '2026-09-16T05:56:06+00:00'
+  consecutive_crawl_failures: 0
 - organization: Brainly
   design_system: Brainly Style Guide
   start_urls:
@@ -517,15 +558,16 @@
   design_system: Arc
   start_urls:
   - https://arc.bt.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:21:51+00:00'
-  etag: W/"f5a23fa865998f23f3fa93091b75e25f"
+  last_checked: '2026-09-16T05:57:07+00:00'
+  etag: W/"f468ce82fc7bd77e7be016ce2bfcd39f"
   sitemap_url: https://arc.bt.com/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Buildit
   design_system: Gravity
   start_urls:
@@ -586,15 +628,23 @@
   design_system: Quantum
   start_urls:
   - https://catho.github.io/quantum/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:23:05+00:00'
+  last_checked: '2026-09-16T05:58:28+00:00'
   etag: W/"6a185732-1af9"
   last_modified: Thu, 28 May 2026 14:54:42 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/catho/quantum
+  github_meta:
+    license: GPL-3.0
+    stars: 57
+    last_pushed: '2026-05-28T14:54:05Z'
 - organization: censhare GmbH
   design_system: Zen
   start_urls:
@@ -748,27 +798,29 @@
   design_system: Decentraland UI
   start_urls:
   - https://ui.decentraland.org/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:24:54+00:00'
+  last_checked: '2026-09-16T05:59:27+00:00'
   etag: W/"6a8c4f17-d1a"
   last_modified: Mon, 24 Aug 2026 14:03:03 GMT
+  consecutive_crawl_failures: 0
 - organization: Design Language
   design_system: E-Trade
   start_urls:
   - https://etrade.design/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:25:26+00:00'
+  last_checked: '2026-09-16T06:00:49+00:00'
   etag: W/"7bb-XeVDM9kqYDnzprlC1ZyCA6aFy0Q"
+  consecutive_crawl_failures: 0
 - organization: Discovery Education
   design_system: Comet
   start_urls:
@@ -787,15 +839,16 @@
   design_system: Drylus
   start_urls:
   - https://drawbotics.github.io/drylus/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:25:56+00:00'
+  last_checked: '2026-09-16T06:01:58+00:00'
   etag: W/"69bd776e-1cf"
   last_modified: Fri, 20 Mar 2026 16:35:58 GMT
+  consecutive_crawl_failures: 0
 - organization: Duolingo
   design_system: Design guidelines
   start_urls:
@@ -832,16 +885,24 @@
   design_system: Skin
   start_urls:
   - https://ebay.github.io/skin/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:26:31+00:00'
-  etag: W/"680fc46d-10c"
-  last_modified: Mon, 28 Apr 2025 18:09:49 GMT
+  last_checked: '2026-09-16T06:03:14+00:00'
+  etag: W/"680fc46c-10c"
+  last_modified: Mon, 28 Apr 2025 18:09:48 GMT
   sitemap_url: https://ebay.github.io/sitemap.xml
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/eBay/evo-web
+  github_meta:
+    license: NOASSERTION
+    stars: 51
+    last_pushed: '2026-09-15T20:10:27Z'
 - organization: Elastic UI
   design_system: Elastic UI Framework
   start_urls:
@@ -979,16 +1040,17 @@
   design_system: Photon Design System
   start_urls:
   - https://design.firefox.com/photon/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:30:22+00:00'
+  last_checked: '2026-09-16T06:07:04+00:00'
   etag: W/"0160ec9eb2229c14e65ec80d098e60df"
   last_modified: Mon, 14 Sep 2026 15:53:17 GMT
   sitemap_url: https://design.firefox.com/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Flexport
   design_system: Latitude
   start_urls:
@@ -1025,15 +1087,20 @@
   design_system: FutureLearn Pattern Library
   start_urls:
   - https://storybook.futurelearn.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:30:48+00:00'
+  last_checked: '2026-09-16T06:11:19+00:00'
   etag: W/"6aa82c33-900"
   last_modified: Mon, 14 Sep 2026 17:17:39 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    storybook:
+    - https://github.com/storybookjs/storybook/tree/master/addons/knobs
+    - https://storybook.futurelearn.com/
 - organization: GE
   design_system: Edison Design System
   start_urls:
@@ -1124,16 +1191,17 @@
   design_system: Material Design
   start_urls:
   - https://material.io/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:33:59+00:00'
+  last_checked: '2026-09-16T06:13:00+00:00'
   etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://material.io/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
@@ -1323,9 +1391,10 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:35:47+00:00'
-  etag: W/"6a5a0b39-a3c78"
-  last_modified: Fri, 17 Jul 2026 11:00:09 GMT
+  last_checked: '2026-09-16T06:14:17+00:00'
+  etag: W/"6a5a0b3b-a3c78"
+  last_modified: Fri, 17 Jul 2026 11:00:11 GMT
+  consecutive_crawl_failures: 0
 - organization: Heroku
   design_system: Heroki Design
   start_urls:
@@ -1425,10 +1494,11 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:36:59+00:00'
+  last_checked: '2026-09-16T06:15:26+00:00'
   etag: W/"6659ce48-5ae7a"
   last_modified: Fri, 31 May 2024 13:19:04 GMT
   sitemap_url: https://uniform.hudl.com/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: IBM
   design_system: Carbon Design System
   start_urls:
@@ -1486,15 +1556,16 @@
   design_system: Rivet
   start_urls:
   - https://rivet.uits.iu.edu/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:37:21+00:00'
+  last_checked: '2026-09-16T06:16:33+00:00'
   etag: '"6a4ff4d2-13cf"'
   last_modified: Thu, 09 Jul 2026 19:21:54 GMT
+  consecutive_crawl_failures: 0
 - organization: Infor
   design_system: Infor Design System
   start_urls:
@@ -1593,15 +1664,23 @@
   design_system: JetBrains Web UI
   start_urls:
   - https://jetbrains.github.io/ring-ui/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:37:51+00:00'
+  last_checked: '2026-09-16T06:17:51+00:00'
   etag: '"6aa7dc4c-ac"'
   last_modified: Mon, 14 Sep 2026 11:36:44 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/JetBrains/ring-ui
+  github_meta:
+    license: Apache-2.0
+    stars: 3790
+    last_pushed: '2026-09-14T11:34:41Z'
 - organization: JSTOR
   design_system: Pharos
   start_urls:
@@ -1612,8 +1691,9 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:38:00+00:00'
+  last_checked: '2026-09-16T06:18:58+00:00'
   etag: '"d7682c5e79bc5013a992bb90aad1e60a-ssl-df"'
+  consecutive_crawl_failures: 0
 - organization: Just Eat Takeaway
   design_system: PIE
   start_urls:
@@ -1773,16 +1853,26 @@
   design_system: Basis Design System
   start_urls:
   - https://basis.now.sh/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:38:24+00:00'
+  last_checked: '2026-09-16T06:20:13+00:00'
   etag: W/"6772da25e4c11e05c9d56478fe882fa37b8baa6241c294388534e67db4e61bc1"
-  last_modified: Mon, 14 Sep 2026 21:01:26 GMT
+  last_modified: Tue, 15 Sep 2026 22:33:37 GMT
   sitemap_url: https://basis.vercel.app/sitemap.xml
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/LatitudeFinancialOSS/basis
+    icons:
+    - https://basis.vercel.app/components/icon
+  github_meta:
+    license: MIT
+    stars: 61
+    last_pushed: '2024-02-13T05:12:28Z'
 - organization: Liferay
   design_system: Lexicon
   start_urls:
@@ -1806,9 +1896,10 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:38:48+00:00'
+  last_checked: '2026-09-16T06:21:43+00:00'
   etag: W/"9f0c69a8ffd437b5d071d45a25eb247a"
   last_modified: Wed, 26 Feb 2025 09:02:07 GMT
+  consecutive_crawl_failures: 0
 - organization: LocalTapiola
   design_system: Duet
   start_urls:
@@ -1982,31 +2073,36 @@
   design_system: Marvel Styleguide
   start_urls:
   - https://marvelapp.com/styleguide/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:40:00+00:00'
+  last_checked: '2026-09-16T06:23:20+00:00'
   etag: W/"602d490c-aea"
   last_modified: Wed, 17 Feb 2021 16:49:16 GMT
   sitemap_url: https://marvelapp.com/sitemap.xml
+  consecutive_crawl_failures: 0
+  resources:
+    icons:
+    - https://marvelapp.com/styleguide/design/icons
 - organization: ''
   design_system: Material 3
   start_urls:
   - https://m3.material.io/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:40:20+00:00'
+  last_checked: '2026-09-16T06:24:35+00:00'
   etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://m3.material.io/sitemap.xml
   sitemap_last_modified: '2026-09-08'
+  consecutive_crawl_failures: 0
 - organization: Materialize
   design_system: Materialize CSS
   start_urls:
@@ -2051,15 +2147,16 @@
   design_system: Fluent UI
   start_urls:
   - https://developer.microsoft.com/en-us/fluentui#/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:14:53+00:00'
-  last_modified: Wed, 16 Sep 2026 03:30:58 GMT
+  last_checked: '2026-09-16T06:25:46+00:00'
+  last_modified: Wed, 16 Sep 2026 04:30:33 GMT
   sitemap_url: https://developer.microsoft.com/_devcom/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Mixpanel
   design_system: Mixpanel DS
   start_urls:
@@ -2128,15 +2225,16 @@
   design_system: Acorn
   start_urls:
   - https://acorn.firefox.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:15:59+00:00'
+  last_checked: '2026-09-16T06:27:22+00:00'
   etag: W/"1789130985912"
   sitemap_url: https://acorn.firefox.com/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Mutual of Omaha
   design_system: Digital Design Guide
   start_urls:
@@ -2207,13 +2305,13 @@
   design_system: Fuse
   start_urls:
   - https://ni.github.io/design-system/
-  pages_indexed: 0
-  hit_max_pages: true
+  pages_indexed: 1
+  hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:16:05+00:00'
+  last_checked: '2026-09-16T06:28:30+00:00'
   etag: W/"5f8ddc7e-7a05"
   last_modified: Mon, 19 Oct 2020 18:35:42 GMT
   resources:
@@ -2225,6 +2323,7 @@
     license: NOASSERTION
     stars: 6
     last_pushed: '2024-06-04T04:24:53Z'
+  consecutive_crawl_failures: 0
 - organization: NationBuilder
   design_system: Radius
   start_urls:
@@ -2410,15 +2509,16 @@
   design_system: Tractie
   start_urls:
   - https://tractie.ns.nl/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:17:10+00:00'
-  etag: W/"37290bdc0fc801e18ada1518016dde4e"
+  last_checked: '2026-09-16T06:30:02+00:00'
+  etag: W/"d32196a0f969c95ec6e7f210226f7cec"
   sitemap_url: https://tractie.ns.nl/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Nulogy
   design_system: Nulogy Design System
   start_urls:
@@ -2468,15 +2568,25 @@
   design_system: Blueprint
   start_urls:
   - https://blueprintjs.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T05:17:35+00:00'
+  content_signals:
+    frameworks:
+    - React
+  last_checked: '2026-09-16T06:31:21+00:00'
   etag: W/"6a7fac66-d5d"
   last_modified: Sat, 15 Aug 2026 00:01:42 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/palantir/blueprint
+  github_meta:
+    license: Apache-2.0
+    stars: 22065
+    last_pushed: '2026-09-15T21:09:12Z'
 - organization: PAQT
   design_system: Graphite Design System
   start_urls:
@@ -2528,15 +2638,16 @@
   design_system: Gestalt
   start_urls:
   - https://pinterest.github.io/gestalt/#/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:19:24+00:00'
+  last_checked: '2026-09-16T06:32:37+00:00'
   etag: W/"5ed7cd79-1f6"
   last_modified: Wed, 03 Jun 2020 16:19:05 GMT
+  consecutive_crawl_failures: 0
 - organization: Pivotal software
   design_system: Pivotal UI
   start_urls:
@@ -2550,15 +2661,16 @@
   design_system: Pluralsight Design System
   start_urls:
   - https://design-system.pluralsight.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:20:03+00:00'
-  etag: W/"638ad8fdd6fdbf175cadf3e5e88d18aa"
+  last_checked: '2026-09-16T06:34:16+00:00'
+  etag: W/"8d28e41d7a5465d7637e84151e886eda"
   sitemap_url: https://design-system.pluralsight.com/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Priceline
   design_system: Priceline One
   start_urls:
@@ -2607,41 +2719,65 @@
   design_system: Rambler
   start_urls:
   - https://rambler-digital-solutions.github.io/rambler-ui/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:21:28+00:00'
+  last_checked: '2026-09-16T06:35:26+00:00'
   etag: W/"67879f81-437"
   last_modified: Wed, 15 Jan 2025 11:44:01 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/rambler-digital-solutions/rambler-ui
+  github_meta:
+    license: MIT
+    stars: 190
+    last_pushed: '2025-01-15T11:41:06Z'
 - organization: Rambler
   design_system: Ratio
   start_urls:
   - https://ui-kit.rambler.ru/#/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:21:54+00:00'
+  last_checked: '2026-09-16T06:36:45+00:00'
   etag: W/"67879f81-437"
   last_modified: Wed, 15 Jan 2025 11:44:01 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/rambler-digital-solutions/rambler-ui
+  github_meta:
+    license: MIT
+    stars: 190
+    last_pushed: '2025-01-15T11:41:06Z'
 - organization: ''
   design_system: React95
   start_urls:
   - https://react95.github.io/React95/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:25:15+00:00'
+  last_checked: '2026-09-16T06:38:07+00:00'
   etag: W/"6a9880eb-13d2"
   last_modified: Wed, 02 Sep 2026 20:02:51 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    github:
+    - https://github.com/React95/React95
+  github_meta:
+    license: NOASSERTION
+    stars: 3824
+    last_pushed: '2026-09-02T20:02:28Z'
 - organization: Red Hat
   design_system: Patternfly Design System
   start_urls:
@@ -2854,9 +2990,10 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:23:07+00:00'
+  last_checked: '2026-09-16T06:39:08+00:00'
   etag: W/"5fbbe617-48c"
   last_modified: Mon, 23 Nov 2020 16:40:55 GMT
+  consecutive_crawl_failures: 0
 - organization: ''
   design_system: Reshaped
   start_urls:
@@ -2913,15 +3050,16 @@
   design_system: Lightning Design System
   start_urls:
   - https://www.lightningdesignsystem.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:25:36+00:00'
-  etag: W/"6650cf93dfb67c18391956501067323c"
+  last_checked: '2026-09-16T06:40:25+00:00'
+  etag: W/"c6894a66c9bad948aef07ed281698a74"
   sitemap_url: https://www.lightningdesignsystem.com/sitemap.xml
+  consecutive_crawl_failures: 0
 - organization: Samsung
   design_system: Tizen CircularUI
   start_urls:
@@ -3613,28 +3751,37 @@
   design_system: Vimeo Design System
   start_urls:
   - https://vimeo.github.io/iris/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:35:38+00:00'
+  last_checked: '2026-09-16T06:47:02+00:00'
   etag: W/"67194c30-252"
   last_modified: Wed, 23 Oct 2024 19:19:12 GMT
+  consecutive_crawl_failures: 0
 - organization: VMware
   design_system: Clarity Design System
   start_urls:
   - https://clarity.design/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T05:35:51+00:00'
+  content_signals:
+    frameworks:
+    - Angular
+  last_checked: '2026-09-16T06:48:18+00:00'
   etag: '"ddf34e84d72caff8bd61934813865b27-ssl-df"'
   sitemap_url: https://clarity.design/sitemap.xml
+  consecutive_crawl_failures: 0
+  resources:
+    storybook:
+    - https://storybook.clarity.design
+    icons:
+    - /documentation/icons
 - organization: Volvo Cars Web Design System
   design_system: Volvo
   start_urls:
@@ -3643,15 +3790,18 @@
   design_system: Styleguide
   start_urls:
   - https://styleguide.vtex.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T05:36:37+00:00'
+  content_signals:
+    frameworks:
+    - React
+  last_checked: '2026-09-16T06:48:44+00:00'
   etag: W/"694587fe-1a6"
   last_modified: Fri, 19 Dec 2025 17:14:38 GMT
+  consecutive_crawl_failures: 0
 - organization: ''
   design_system: Vue Design System
   start_urls:
@@ -3684,15 +3834,19 @@
   design_system: Momentum Design System
   start_urls:
   - https://momentum.design/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:37:03+00:00'
+  last_checked: '2026-09-16T06:49:33+00:00'
   etag: '"6aa85ca3-46"'
   last_modified: Mon, 14 Sep 2026 20:44:19 GMT
+  consecutive_crawl_failures: 0
+  resources:
+    skills:
+    - https://momentum.design/en/skills/momentum-concierge
 - organization: Welcome to the Jungle
   design_system: Welcome UI
   start_urls:

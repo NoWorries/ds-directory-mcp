@@ -1,0 +1,25 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T06:50:49+00:00",
+  "id": "indiana-university-rivet",
+  "organization": "Indiana University",
+  "design_system": "Rivet",
+  "full_name": "Indiana University — Rivet",
+  "start_urls": [
+    "https://rivet.uits.iu.edu/"
+  ],
+  "detail_url": "/systems/indiana-university-rivet",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T06:16:33+00:00",
+  "last_modified": "Thu, 09 Jul 2026 19:21:54 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

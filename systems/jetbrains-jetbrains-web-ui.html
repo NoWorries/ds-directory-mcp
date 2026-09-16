@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JetBrains Web UI — Design Systems Directory</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+
+  @view-transition { navigation: auto; }
+
+  /* Named transition (view-transition-name: thumb-<slug>, tagged
+     view-transition-class: thumb — set inline in generate_directory.py's
+     render_card/generate_systems.py's thumb_html, since the name itself must
+     be unique per element but the *class* lets every card share one
+     animation rule) gets a slightly slower, eased morph than the default
+     page crossfade, so a card's thumbnail visibly glides into the detail
+     page's hero image instead of just cutting; everything else keeps the
+     plain default root crossfade, intentionally quick. (A matching
+     title-<slug> transition on the heading was tried and dropped — morphing
+     text at a different size/weight read as glitchy, not smooth.)
+     Chrome/Edge only (view-transition-class needs Chrome 125+) — a no-op
+     elsewhere, same as @view-transition itself. */
+  ::view-transition-group(*) { animation-duration: 0.3s; }
+  ::view-transition-group(*.thumb) {
+    animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  :root {
+    --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
+    --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
+    --accent: #1d4ed8; --accent-strong: #1638a8; --accent-soft: #e8edfc; --accent-soft-text: #1d4ed8;
+    --shadow: 0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -10px rgba(15,23,42,0.14);
+    /* Faint fractal-noise grain (alpha-only, so it reads as texture rather
+       than color) — the shared look for .textured containers below. Kept as
+       a token so light/dark could each tune it without touching every
+       container's markup. */
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --surface: #151a21; --surface-sunken: #1b212a; --border: #2a323d;
+      --text: #e7eaee; --text-muted: #98a2b0; --text-faint: #626b78;
+      --accent: #7ea2ff; --accent-strong: #a4c0ff; --accent-soft: rgba(126,162,255,0.12); --accent-soft-text: #a4c0ff;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 18px -10px rgba(0,0,0,0.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  /* A faint grain treatment for card-like containers (the MCP callout, nav
+     cards, grid cards) — applied via ::before so it layers over each
+     container's own background without fighting its other background-image
+     uses (e.g. a card's own thumbnail). Needs the container to have
+     `position: relative` (each usage sets it) and `overflow: hidden`
+     (usually already there) so it respects rounded corners instead of
+     bleeding past them. */
+  .textured { position: relative; }
+  .textured::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background-image: var(--noise);
+    background-repeat: repeat;
+    opacity: 0.7;
+  }
+  .textured > * { position: relative; }
+  body {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); margin: 0; padding: calc(60px + 32px) 24px 80px;
+  }
+  a { color: var(--accent); }
+  .page { max-width: 1040px; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; }
+  h1 {
+    font-family: "JetBrains Mono", monospace; font-weight: 700;
+    font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); letter-spacing: -0.01em; line-height: 1.25;
+    margin: 0 0 12px; text-wrap: balance;
+  }
+  .subtitle { color: var(--text-muted); font-size: 0.98rem; line-height: 1.55; max-width: 64ch; margin: 0 0 28px; }
+
+  /* --- Fixed global top nav --- */
+  .site-nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 100;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+  }
+  .site-nav-inner {
+    max-width: 1040px; margin: 0 auto; width: 100%; padding: 0 24px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .site-brand {
+    font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.86rem;
+    color: var(--text); text-decoration: none; white-space: nowrap;
+  }
+  .site-nav-links { display: flex; gap: 4px; flex: 1; }
+  .site-nav-links a {
+    font-size: 0.86rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 6px;
+  }
+  .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
+  .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  .nav-suggest {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap;
+    padding: 6px 10px; border-radius: 6px;
+  }
+  .nav-suggest:hover { background: var(--accent-soft); }
+  @media (max-width: 640px) { .nav-suggest { display: none; } }
+
+  .nav-search { display: flex; align-items: center; }
+  .nav-search-toggle {
+    background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; border-radius: 6px;
+  }
+  .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  /* Same [hidden]-vs-explicit-display fix needed a third time here — see the
+     .cards-grid/.card comments in generate_directory.py for the full story. */
+  .nav-search-form[hidden] { display: none; }
+  .nav-search-form { display: flex; align-items: center; }
+  .nav-search-form input {
+    width: 220px; font: inherit; font-size: 0.85rem; padding: 6px 10px; margin-left: 6px;
+    border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
+  }
+  .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+  @media (max-width: 640px) {
+    .site-nav-links a span { display: none; }
+    .nav-search-form input { width: 140px; }
+  }
+
+  .system-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .org-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }
+  .meta-line { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px; }
+  .meta-line .badge { background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px; }
+  .coverage-dot { font-size: 1.05rem; line-height: 1; vertical-align: -1px; }
+  .coverage-dot.coverage-full { color: #22c55e; }
+  .coverage-dot.coverage-partial { color: #f59e0b; }
+  .coverage-dot.coverage-unknown { color: var(--text-faint); }
+  /* No commits in over a year (see format_repo_activity's threshold) — a
+     cue to look closer, not a claim the system is dead. */
+  .stale-repo { color: #f59e0b; }
+
+  .hero-thumb {
+    display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--surface-sunken); margin-bottom: 28px;
+  }
+
+  .freshness {
+    display: flex; gap: 24px; flex-wrap: wrap; background: var(--surface-sunken); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.85rem;
+  }
+  .freshness dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); margin: 0; }
+  .freshness dd { margin: 2px 0 0; font-family: "JetBrains Mono", monospace; color: var(--text); }
+
+  section.block { margin-bottom: 32px; }
+  section.block h2 {
+    font-family: "JetBrains Mono", monospace; font-size: 0.95rem; font-weight: 700; margin: 0 0 12px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  }
+  .signal-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .signal-pill {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
+    background: var(--surface-sunken); border: 1px solid var(--border); font-size: 0.82rem;
+  }
+  .signal-label {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint);
+  }
+  .signal-value { color: var(--text); font-weight: 500; }
+  .section-note { font-size: 0.82rem; color: var(--text-muted); margin: -6px 0 14px; max-width: 68ch; }
+  .section-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  /* Deliberately shows every taxonomy item, detected or not (see
+     render_ai_native()) — a muted dash for "not detected" instead of hiding
+     the row, so the list reads as a coverage checklist against the whole
+     taxonomy rather than just a list of hits. */
+  .ai-native-list {
+    list-style: none; margin: 0; padding: 0; display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 16px;
+  }
+  .ai-native-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; padding: 4px 0; }
+  .ai-native-mark { flex: none; display: flex; align-items: center; justify-content: center; width: 18px; color: #22c55e; }
+  .ai-native-item.is-absent { color: var(--text-faint); }
+  .ai-native-item.is-absent .ai-native-mark { color: var(--text-faint); }
+  .resource-list, .page-list { list-style: none; margin: 0; padding: 0; }
+  .resource-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .resource-list li a {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border);
+    border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  }
+  .resource-list li a svg { flex: none; }
+  .resource-list li a:hover { border-color: var(--accent); color: var(--accent); }
+  .resource-activity { font-size: 0.76rem; color: var(--text-faint); margin-left: 2px; white-space: nowrap; }
+  .page-list { columns: 2; column-gap: 24px; }
+  .page-list li { padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }
+  .page-list a { text-decoration: none; }
+  .page-list a:hover { text-decoration: underline; }
+  .empty-note { color: var(--text-faint); font-size: 0.88rem; }
+  .report-issue { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .report-issue a { font-size: 0.82rem; color: var(--text-faint); text-decoration: underline; text-underline-offset: 2px; }
+  .report-issue a:hover { color: var(--accent); }
+  @media (max-width: 600px) { .page-list { columns: 1; } }
+</style>
+</head>
+<body>
+
+    <nav class="site-nav">
+      <div class="site-nav-inner">
+        <a href="/" class="site-brand">Design Systems Directory</a>
+        <div class="site-nav-links">
+          <a href="/" class="">Search</a>
+          <a href="/directory" class="current">All Systems</a>
+          <a href="/components" class="">Components</a>
+        </div>
+        <a class="nav-suggest" href="/suggest">Suggest a system</a>
+        <div class="nav-search">
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+          <form class="nav-search-form" id="navSearchForm" hidden>
+            <input type="text" id="navSearchInput" placeholder="Search design systems...">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <script>
+(function () {
+  var toggle = document.getElementById("navSearchToggle");
+  var form = document.getElementById("navSearchForm");
+  var input = document.getElementById("navSearchInput");
+  if (!toggle || !form) return;
+  toggle.addEventListener("click", function () {
+    form.hidden = !form.hidden;
+    if (!form.hidden) input.focus();
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+})();
+</script>
+    
+<div class="page">
+  <p class="eyebrow"><a href="/directory">All Systems</a></p>
+  <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=jetbrains.github.io&sz=64" alt="" width="22" height="22" loading="lazy"><span class="org-label">JetBrains</span></div>
+  <h1>JetBrains Web UI</h1>
+  <p class="meta-line"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span> 1 pages indexed · Apache-2.0 · 3,790★</p>
+  <a href="https://jetbrains.github.io/ring-ui/" target="_blank" rel="noopener"><img class="hero-thumb" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fjetbrains.github.io%2Fring-ui%2F?w=800" alt="" loading="lazy" style="view-transition-name: thumb-jetbrains-jetbrains-web-ui; view-transition-class: thumb"></a>
+
+  <dl class="freshness">
+    <div><dt>Site last updated</dt><dd>14 Sep 2026</dd></div>
+    <div><dt>Last checked here</dt><dd>16 Sep 2026, 06:17 UTC</dd></div>
+    <div><dt>Repo last updated</dt><dd>14 Sep 2026</dd></div>
+  </dl>
+
+  <section class="block" id="resources">
+    <h2>Resources</h2>
+    <ul class="resource-list"><li><a href="https://github.com/JetBrains/ring-ui" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> JetBrains/ring-ui</a> <span class="resource-activity" title="Last commit: 2026-09-14T11:34:41Z">14 Sep 2026</span></li></ul>
+  </section>
+
+
+
+  <section class="block">
+    <h2>Indexed pages</h2>
+    <p class="empty-note">No pages indexed yet.</p>
+  </section>
+
+  <p class="report-issue">
+    <a href="/report?system=JetBrains%20%E2%80%94%20JetBrains%20Web%20UI" id="reportIssueLink">Report an issue with this system</a>
+  </p>
+</div>
+<script>
+  // The page's own live URL can't be known at build time (the site's actual
+  // domain isn't fixed here) — filled in from what the visitor is looking
+  // at, so /report arrives with its "Link to the system's detail page"
+  // field already prefilled.
+  (function () {
+    var link = document.getElementById("reportIssueLink");
+    if (link) link.href += "&url=" + encodeURIComponent(window.location.href);
+  })();
+</script>
+</body>
+</html>

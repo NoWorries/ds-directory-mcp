@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T06:50:49+00:00",
+  "id": "jetbrains-jetbrains-web-ui",
+  "organization": "JetBrains",
+  "design_system": "JetBrains Web UI",
+  "full_name": "JetBrains — JetBrains Web UI",
+  "start_urls": [
+    "https://jetbrains.github.io/ring-ui/"
+  ],
+  "detail_url": "/systems/jetbrains-jetbrains-web-ui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T06:17:51+00:00",
+  "last_modified": "Mon, 14 Sep 2026 11:36:44 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/JetBrains/ring-ui"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 3790,
+    "last_pushed": "2026-09-14T11:34:41Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

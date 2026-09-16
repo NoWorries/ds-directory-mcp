@@ -139,6 +139,9 @@
   .coverage-dot.coverage-full { color: #22c55e; }
   .coverage-dot.coverage-partial { color: #f59e0b; }
   .coverage-dot.coverage-unknown { color: var(--text-faint); }
+  /* No commits in over a year (see format_repo_activity's threshold) — a
+     cue to look closer, not a claim the system is dead. */
+  .stale-repo { color: #f59e0b; }
 
   .hero-thumb {
     display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
@@ -188,6 +191,7 @@
   }
   .resource-list li a svg { flex: none; }
   .resource-list li a:hover { border-color: var(--accent); color: var(--accent); }
+  .resource-activity { font-size: 0.76rem; color: var(--text-faint); margin-left: 2px; white-space: nowrap; }
   .page-list { columns: 2; column-gap: 24px; }
   .page-list li { padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }
   .page-list a { text-decoration: none; }
@@ -246,6 +250,7 @@
   <dl class="freshness">
     <div><dt>Site last updated</dt><dd>unknown</dd></div>
     <div><dt>Last checked here</dt><dd>15 Sep 2026, 22:51 UTC</dd></div>
+    
   </dl>
 
   <section class="block" id="resources">
