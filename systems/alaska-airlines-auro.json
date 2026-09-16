@@ -1,0 +1,40 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T05:42:08+00:00",
+  "id": "alaska-airlines-auro",
+  "organization": "Alaska Airlines",
+  "design_system": "Auro",
+  "full_name": "Alaska Airlines — Auro",
+  "start_urls": [
+    "https://auro.alaskaair.com/"
+  ],
+  "detail_url": "/systems/alaska-airlines-auro",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T05:14:51+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://auro.alaskaair.com/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Web Components",
+      "Svelte"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://auro.alaskaair.com/llms.txt",
+      "title": "Alaska Airlines — Auro — llms.txt"
+    }
+  ]
+}

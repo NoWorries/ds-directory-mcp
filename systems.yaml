@@ -36,14 +36,51 @@
   design_system: Spectrum
   start_urls:
   - https://spectrum.adobe.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:14:47+00:00'
+  etag: W/"bf464d5e8515e7fb8f54b84f85825628"
+  last_modified: Wed, 28 Feb 2024 21:04:55 GMT
+  sitemap_url: https://spectrum.adobe.com/sitemap.xml
+  sitemap_last_modified: '2024-02-28T20:57:26.301Z'
 - organization: Alaska Airlines
   design_system: Auro
   start_urls:
   - https://auro.alaskaair.com/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  unverified_resources: {}
+  content_signals:
+    frameworks:
+    - React
+    - Web Components
+    - Svelte
+  last_checked: '2026-09-16T05:14:51+00:00'
+  sitemap_url: https://auro.alaskaair.com/sitemap.xml
+  resources:
+    agent_instructions:
+    - https://auro.alaskaair.com/llms.txt
 - organization: Altinn
   design_system: Altinn Design System
   start_urls:
   - https://docs.altinn.studio/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:15:13+00:00'
+  etag: '"6aa93f8a-f3"'
+  last_modified: Tue, 15 Sep 2026 12:52:26 GMT
+  sitemap_url: https://docs.altinn.studio/sitemap.xml
+  sitemap_last_modified: '2026-09-15T14:48:20+02:00'
 - organization: Ant Financial
   design_system: Ant Design
   start_urls:
@@ -82,18 +119,56 @@
   design_system: AT UIKIT
   start_urls:
   - https://at-ui.github.io/at-ui/#/en/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:15:23+00:00'
+  etag: W/"5acd272c-1124"
+  last_modified: Tue, 10 Apr 2018 21:05:48 GMT
 - organization: Appear here
   design_system: Bloom
   start_urls:
   - https://bloom.appearhere.co.uk/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:15:48+00:00'
+  etag: W/"6036427a-46d"
+  last_modified: Wed, 24 Feb 2021 12:11:38 GMT
 - organization: Apple
   design_system: Human Interface Guidelines
   start_urls:
   - https://developer.apple.com/design/human-interface-guidelines/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:15:53+00:00'
+  etag: '"4511-65b7174ae0019-df"'
+  last_modified: Mon, 14 Sep 2026 13:31:47 GMT
 - organization: Arbetsförmedlingen
   design_system: Design system
   start_urls:
   - https://designsystem.arbetsformedlingen.se/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:16:29+00:00'
+  etag: '"2a524b8751e867273ea9b2f172fa2981eaa72b532883542380875c5ab2ca5785"'
+  last_modified: Wed, 09 Sep 2026 08:48:57 GMT
+  sitemap_url: https://designsystem.arbetsformedlingen.se/sitemap.xml
+  sitemap_last_modified: '2026-06-05'
 - organization: ArcGIS
   design_system: Calcite
   start_urls:
@@ -117,6 +192,15 @@
   design_system: Artsy Palette
   start_urls:
   - https://palette.artsy.net/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:16:31+00:00'
+  etag: W/"a196026065080c977b13ecae3d867784"
+  last_modified: Tue, 15 Sep 2026 13:35:45 GMT
 - organization: Atlassian
   design_system: Atlassian Design System
   start_urls:
@@ -147,6 +231,18 @@
   design_system: Audi UI
   start_urls:
   - https://www.audi.com/ci/en/guides/user-interface/introduction.html
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://www.audi.com/ci/en/guides/user-interface/introduction.html'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:17:01+00:00'
+  sitemap_url: https://www.audi.com/sitemap.xml
+  sitemap_last_modified: '2026-09-16T06:35:14+02:00'
+  resources:
+    agent_instructions:
+    - https://www.audi.com/llms.txt
 - organization: Australian Government, Department of Agriculture, Fisheries and Forestry
   design_system: Agriculture Design System (AgDS)
   start_urls:
@@ -197,6 +293,15 @@
   design_system: Overdrive
   start_urls:
   - https://overdrive.autoguru.io/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:17:31+00:00'
+  etag: W/"6aa234ee-108c"
+  last_modified: Thu, 10 Sep 2026 04:41:18 GMT
 - organization: Automattic
   design_system: Wordpress.com design handbook
   start_urls:
@@ -256,6 +361,16 @@
   design_system: Design system
   start_urls:
   - https://designsystem.backbase.com/v2/web-components/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:18:00+00:00'
+  etag: W/"0160ec9eb2229c14e65ec80d098e60df"
+  last_modified: Mon, 14 Sep 2026 15:53:17 GMT
+  sitemap_url: https://designsystem.backbase.com/sitemap.xml
 - organization: Banco Santander
   design_system: Flame Design System
   start_urls:
@@ -264,6 +379,16 @@
   design_system: Barnardo's Design System
   start_urls:
   - https://design-system.barnardos.org.uk/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''design-system.barnardos.org.uk'', port=443):
+    Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''design-system.barnardos.org.uk'',
+    port=443): Failed to resolve ''design-system.barnardos.org.uk'' ([Errno -5] No
+    address associated with hostname)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:19:20+00:00'
 - organization: BBC
   design_system: Global Experience Language (GEL)
   start_urls:
@@ -293,18 +418,49 @@
   design_system: Biings Design System
   start_urls:
   - https://biings.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:19:49+00:00'
+  last_modified: Tue, 04 Aug 2026 10:26:24 GMT
 - organization: BLiP
   design_system: UAI Design System
   start_urls:
   - https://design.blip.ai/uai-design-system/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:20:18+00:00'
 - organization: Brainly
   design_system: Brainly Style Guide
   start_urls:
   - https://styleguide.brainly.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://styleguide.brainly.com/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:20:26+00:00'
 - organization: Brainly
   design_system: Design
   start_urls:
   - https://design.brainly.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:20:46+00:00'
+  etag: W/"0f0e350fde71bb3ead57f66ba09c79ba"
+  sitemap_url: https://design.brainly.com/sitemap.xml
 - organization: Bridge
   design_system: Bold design system
   start_urls:
@@ -332,6 +488,16 @@
   design_system: Spark Design System
   start_urls:
   - https://spark.brighte.com.au/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''spark.brighte.com.au'', port=443): Max
+    retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''spark.brighte.com.au'',
+    port=443): Failed to resolve ''spark.brighte.com.au'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:21:23+00:00'
 - organization: British Gas
   design_system: Nucleus Design System
   start_urls:
@@ -351,10 +517,27 @@
   design_system: Arc
   start_urls:
   - https://arc.bt.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:21:51+00:00'
+  etag: W/"f5a23fa865998f23f3fa93091b75e25f"
+  sitemap_url: https://arc.bt.com/sitemap.xml
 - organization: Buildit
   design_system: Gravity
   start_urls:
   - https://style.buildit.digital/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''style.buildit.digital'', port=443): Read
+    timed out. (read timeout=15)'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:25:12+00:00'
 - organization: BuzzFeed
   design_system: Solid Style Guide
   start_urls:
@@ -403,10 +586,27 @@
   design_system: Quantum
   start_urls:
   - https://catho.github.io/quantum/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:23:05+00:00'
+  etag: W/"6a185732-1af9"
+  last_modified: Thu, 28 May 2026 14:54:42 GMT
 - organization: censhare GmbH
   design_system: Zen
   start_urls:
   - https://design.censhare.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://design.censhare.com/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:23:34+00:00'
+  sitemap_url: https://design.censhare.com/sitemap.xml
 - organization: Chakra team
   design_system: Chakra UI
   start_urls:
@@ -499,6 +699,15 @@
   design_system: Kaizen
   start_urls:
   - https://cultureamp.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:24:01+00:00'
+  etag: W/"878f2396eab4816b6ee77c72c15114c3"
+  last_modified: Mon, 14 Sep 2026 02:18:35 GMT
 - organization: Datadog
   design_system: Druids
   start_urls:
@@ -539,18 +748,54 @@
   design_system: Decentraland UI
   start_urls:
   - https://ui.decentraland.org/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:24:54+00:00'
+  etag: W/"6a8c4f17-d1a"
+  last_modified: Mon, 24 Aug 2026 14:03:03 GMT
 - organization: Design Language
   design_system: E-Trade
   start_urls:
   - https://etrade.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:25:26+00:00'
+  etag: W/"7bb-XeVDM9kqYDnzprlC1ZyCA6aFy0Q"
 - organization: Discovery Education
   design_system: Comet
   start_urls:
   - https://comet.discoveryeducation.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''comet.discoveryeducation.com'', port=443):
+    Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''comet.discoveryeducation.com'',
+    port=443): Failed to resolve ''comet.discoveryeducation.com'' ([Errno -2] Name
+    or service not known)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:25:37+00:00'
 - organization: Drawbotics
   design_system: Drylus
   start_urls:
   - https://drawbotics.github.io/drylus/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:25:56+00:00'
+  etag: W/"69bd776e-1cf"
+  last_modified: Fri, 20 Mar 2026 16:35:58 GMT
 - organization: Duolingo
   design_system: Design guidelines
   start_urls:
@@ -587,6 +832,16 @@
   design_system: Skin
   start_urls:
   - https://ebay.github.io/skin/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:26:31+00:00'
+  etag: W/"680fc46d-10c"
+  last_modified: Mon, 28 Apr 2025 18:09:49 GMT
+  sitemap_url: https://ebay.github.io/sitemap.xml
 - organization: Elastic UI
   design_system: Elastic UI Framework
   start_urls:
@@ -609,10 +864,30 @@
   design_system: Fluid
   start_urls:
   - https://www.engie.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''www.engie.design'', port=443): Max retries
+    exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ''[SSL: CERTIFICATE_VERIFY_FAILED]
+    certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'')))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:27:50+00:00'
 - organization: Enigma
   design_system: Boundless
   start_urls:
   - https://boundless.js.org/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:29:04+00:00'
+  etag: W/"59a213ec-3940"
+  last_modified: Sun, 27 Aug 2017 00:35:56 GMT
+  sitemap_url: https://boundless.js.org/sitemap.xml
+  sitemap_last_modified: '2017-06-06T04:45:52.951Z'
 - organization: Equinor
   design_system: EDS
   start_urls:
@@ -653,10 +928,30 @@
   design_system: GLU
   start_urls:
   - https://style.eurostar.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''style.eurostar.com'', port=443): Max retries
+    exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''style.eurostar.com'',
+    port=443): Failed to resolve ''style.eurostar.com'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:29:20+00:00'
 - organization: Family Search
   design_system: Frontier
   start_urls:
   - https://www.familysearch.org/frontier/styleguide/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://www.familysearch.org/frontier/styleguide/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:29:37+00:00'
+  resources:
+    agent_instructions:
+    - https://www.familysearch.org/llms.txt
 - organization: Financial Times
   design_system: Origami
   start_urls:
@@ -670,10 +965,30 @@
   design_system: Finastra Design System
   start_urls:
   - https://design.fusionfabric.cloud/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''design.fusionfabric.cloud'', port=443):
+    Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''design.fusionfabric.cloud'',
+    port=443): Failed to resolve ''design.fusionfabric.cloud'' ([Errno -2] Name or
+    service not known)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:29:46+00:00'
 - organization: Firefox
   design_system: Photon Design System
   start_urls:
   - https://design.firefox.com/photon/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:30:22+00:00'
+  etag: W/"0160ec9eb2229c14e65ec80d098e60df"
+  last_modified: Mon, 14 Sep 2026 15:53:17 GMT
+  sitemap_url: https://design.firefox.com/sitemap.xml
 - organization: Flexport
   design_system: Latitude
   start_urls:
@@ -697,10 +1012,28 @@
   design_system: Foyer Design System
   start_urls:
   - https://design.foyer.lu/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:30:26+00:00'
+  etag: W/"bc98fde16c5d0f06d604fdb193116b5e"
+  sitemap_url: https://design.foyer.lu/sitemap.xml
 - organization: FutureLearn
   design_system: FutureLearn Pattern Library
   start_urls:
   - https://storybook.futurelearn.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:30:48+00:00'
+  etag: W/"6aa82c33-900"
+  last_modified: Mon, 14 Sep 2026 17:17:39 GMT
 - organization: GE
   design_system: Edison Design System
   start_urls:
@@ -791,6 +1124,16 @@
   design_system: Material Design
   start_urls:
   - https://material.io/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:33:59+00:00'
+  etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
+  last_modified: Tue, 01 Jan 1980 00:00:01 GMT
+  sitemap_url: https://material.io/sitemap.xml
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
@@ -811,7 +1154,20 @@
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
-  - https://www.gov.uk/design-system/
+  - https://design-system.service.gov.uk/
+  pages_indexed: 8
+  resources:
+    github:
+    - https://github.com/alphagov/accessible-autocomplete
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  github_meta:
+    license: MIT
+    stars: 954
+    last_pushed: '2026-09-15T10:15:18Z'
+  etag: '"213f7439c10d9f5418a5e1d8a60260a1-ssl-df"'
+  last_checked: '2026-09-16T00:48:12+00:00'
 - organization: Government of Canada
   design_system: Aurora Design System
   start_urls:
@@ -882,10 +1238,27 @@
   design_system: Halstack Design System
   start_urls:
   - https://developer.dxc.com/design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''developer.dxc.com'', port=443): Max retries
+    exceeded with url: /design/ (Caused by NameResolutionError("HTTPSConnection(host=''developer.dxc.com'',
+    port=443): Failed to resolve ''developer.dxc.com'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:35:25+00:00'
 - organization: Heartbeat
   design_system: .pulse
   start_urls:
   - https://pulse.heartbeat.ua/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '526 Server Error: <none> for url: https://pulse.heartbeat.ua/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:35:34+00:00'
 - organization: Helios Design System
   design_system: Hashicorp
   start_urls:
@@ -944,6 +1317,15 @@
   design_system: Helsinki Design System
   start_urls:
   - https://hds.hel.fi/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:35:47+00:00'
+  etag: W/"6a5a0b39-a3c78"
+  last_modified: Fri, 17 Jul 2026 11:00:09 GMT
 - organization: Heroku
   design_system: Heroki Design
   start_urls:
@@ -983,7 +1365,35 @@
 - organization: Hewlett Packard
   design_system: Grommet
   start_urls:
-  - https://grommet.io/
+  - https://v2.grommet.io/
+  pages_indexed: 7
+  resources:
+    github:
+    - https://github.com/grommet/grommet-starter-existing-app
+    - https://github.com/grommet/grommet-starter-new-app
+    - https://github.com/grommet/grommet
+    storybook:
+    - https://storybook.grommet.io/?path=/story/Layout-Box
+    - https://storybook.grommet.io/?path=/story/Layout-Grid
+    icons:
+    - https://icons.grommet.io
+    - https://v2.grommet.io/icons
+    agent_instructions:
+    - https://v2.grommet.io/llms.txt
+    - https://v2.grommet.io/llms-full.txt
+    - https://v2.grommet.io/AGENTS.md
+    - https://v2.grommet.io/CLAUDE.md
+    mcp:
+    - https://v2.grommet.io/.well-known/mcp.json
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  github_meta:
+    license: Apache-2.0
+    stars: 84
+    last_pushed: '2023-01-10T03:27:49Z'
+  etag: '"2bf20c8558a1c61aa84a15c6be85e9f5-ssl-df"'
+  last_checked: '2026-09-16T00:50:38+00:00'
 - organization: Hubspot
   design_system: Canvas Design System
   start_urls:
@@ -1009,6 +1419,16 @@
   design_system: Uniform
   start_urls:
   - https://uniform.hudl.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:36:59+00:00'
+  etag: W/"6659ce48-5ae7a"
+  last_modified: Fri, 31 May 2024 13:19:04 GMT
+  sitemap_url: https://uniform.hudl.com/sitemap.xml
 - organization: IBM
   design_system: Carbon Design System
   start_urls:
@@ -1066,6 +1486,15 @@
   design_system: Rivet
   start_urls:
   - https://rivet.uits.iu.edu/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:37:21+00:00'
+  etag: '"6a4ff4d2-13cf"'
+  last_modified: Thu, 09 Jul 2026 19:21:54 GMT
 - organization: Infor
   design_system: Infor Design System
   start_urls:
@@ -1164,10 +1593,27 @@
   design_system: JetBrains Web UI
   start_urls:
   - https://jetbrains.github.io/ring-ui/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:37:51+00:00'
+  etag: '"6aa7dc4c-ac"'
+  last_modified: Mon, 14 Sep 2026 11:36:44 GMT
 - organization: JSTOR
   design_system: Pharos
   start_urls:
   - https://pharos.jstor.org/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:38:00+00:00'
+  etag: '"d7682c5e79bc5013a992bb90aad1e60a-ssl-df"'
 - organization: Just Eat Takeaway
   design_system: PIE
   start_urls:
@@ -1282,6 +1728,16 @@
   design_system: Orbit
   start_urls:
   - https://orbit.kiwi/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''orbit.kiwi'', port=443): Max retries exceeded
+    with url: / (Caused by NameResolutionError("HTTPSConnection(host=''orbit.kiwi'',
+    port=443): Failed to resolve ''orbit.kiwi'' ([Errno -5] No address associated
+    with hostname)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:38:15+00:00'
 - organization: KoliBri
   design_system: KoliBri - Public UI
   start_urls:
@@ -1317,14 +1773,42 @@
   design_system: Basis Design System
   start_urls:
   - https://basis.now.sh/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:38:24+00:00'
+  etag: W/"6772da25e4c11e05c9d56478fe882fa37b8baa6241c294388534e67db4e61bc1"
+  last_modified: Mon, 14 Sep 2026 21:01:26 GMT
+  sitemap_url: https://basis.vercel.app/sitemap.xml
 - organization: Liferay
   design_system: Lexicon
   start_urls:
   - https://liferay.design/lexicon/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://liferay.design/lexicon/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:38:41+00:00'
+  sitemap_url: https://liferay.design/sitemap.xml
+  sitemap_last_modified: '2026-07-17T00:45:33+00:00'
 - organization: LINE
   design_system: LINE Design System
   start_urls:
   - https://designsystem.line.me/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:38:48+00:00'
+  etag: W/"9f0c69a8ffd437b5d071d45a25eb247a"
+  last_modified: Wed, 26 Feb 2025 09:02:07 GMT
 - organization: LocalTapiola
   design_system: Duet
   start_urls:
@@ -1350,6 +1834,16 @@
   design_system: Rizzo
   start_urls:
   - https://rizzo.lonelyplanet.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''rizzo.lonelyplanet.com'', port=443): Max
+    retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''rizzo.lonelyplanet.com'',
+    port=443): Failed to resolve ''rizzo.lonelyplanet.com'' ([Errno -5] No address
+    associated with hostname)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:39:05+00:00'
 - organization: Loom
   design_system: Lens
   start_urls:
@@ -1476,14 +1970,43 @@
   design_system: Mapbox Base
   start_urls:
   - https://www.mapbox.com/design-system
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '401 Client Error: Unauthorized for url: https://www.mapbox.com/design-system'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:39:35+00:00'
+  sitemap_url: https://www.mapbox.com/sitemap.xml
 - organization: Marvel
   design_system: Marvel Styleguide
   start_urls:
   - https://marvelapp.com/styleguide/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:40:00+00:00'
+  etag: W/"602d490c-aea"
+  last_modified: Wed, 17 Feb 2021 16:49:16 GMT
+  sitemap_url: https://marvelapp.com/sitemap.xml
 - organization: ''
   design_system: Material 3
   start_urls:
   - https://m3.material.io/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:40:20+00:00'
+  etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
+  last_modified: Tue, 01 Jan 1980 00:00:01 GMT
+  sitemap_url: https://m3.material.io/sitemap.xml
+  sitemap_last_modified: '2026-09-08'
 - organization: Materialize
   design_system: Materialize CSS
   start_urls:
@@ -1528,10 +2051,26 @@
   design_system: Fluent UI
   start_urls:
   - https://developer.microsoft.com/en-us/fluentui#/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:14:53+00:00'
+  last_modified: Wed, 16 Sep 2026 03:30:58 GMT
+  sitemap_url: https://developer.microsoft.com/_devcom/sitemap.xml
 - organization: Mixpanel
   design_system: Mixpanel DS
   start_urls:
   - https://brand.mixpanel.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://brand.mixpanel.com/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:15:04+00:00'
 - organization: MongoDB
   design_system: MongoDB Design System
   start_urls:
@@ -1539,7 +2078,7 @@
 - organization: MongoDB
   design_system: MongoDB Design System
   start_urls:
-  - https://mongodb.design/
+  - https://www.mongodb.design/
 - organization: Monzo
   design_system: Monzo Tone of Voice
   start_urls:
@@ -1589,6 +2128,15 @@
   design_system: Acorn
   start_urls:
   - https://acorn.firefox.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:15:59+00:00'
+  etag: W/"1789130985912"
+  sitemap_url: https://acorn.firefox.com/sitemap.xml
 - organization: Mutual of Omaha
   design_system: Digital Design Guide
   start_urls:
@@ -1659,10 +2207,37 @@
   design_system: Fuse
   start_urls:
   - https://ni.github.io/design-system/
+  pages_indexed: 0
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:16:05+00:00'
+  etag: W/"5f8ddc7e-7a05"
+  last_modified: Mon, 19 Oct 2020 18:35:42 GMT
+  resources:
+    github:
+    - https://github.com/ni/design-system
+    icons:
+    - https://ni.github.io/design-system/style/icons/
+  github_meta:
+    license: NOASSERTION
+    stars: 6
+    last_pushed: '2024-06-04T04:24:53Z'
 - organization: NationBuilder
   design_system: Radius
   start_urls:
   - https://www.nationbuilder.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://www.nationbuilder.design/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:16:33+00:00'
+  sitemap_url: https://www.nationbuilder.design/sitemap_index.xml
+  sitemap_last_modified: '2026-09-16T05:16:33Z'
 - organization: Neurodiversity
   design_system: Design system
   start_urls:
@@ -1798,10 +2373,52 @@
   design_system: Nord Design System
   start_urls:
   - https://nordhealth.design/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  unverified_resources:
+    github:
+    - https://github.com/salesforce-ux/theo
+  content_signals:
+    tokens_format: Figma Variables
+    frameworks:
+    - React
+    - Vue
+    - Web Components
+    validation_loop: true
+    token_enforcement: true
+  last_checked: '2026-09-16T05:16:42+00:00'
+  etag: W/"6aa123cd-ab2e"
+  last_modified: Wed, 09 Sep 2026 09:15:57 GMT
+  sitemap_url: https://nordhealth.design/sitemap.xml
+  resources:
+    github:
+    - https://github.com/salesforce-ux/theo
+    figma:
+    - https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9
+    - https://www.figma.com/file/n03Z6aG3GAP31Oc9V6IKYy/Component-Illustrations?node-id=0%3A1
+    - https://www.figma.com/design/yarhTRV8eFffff0BIpevi6/Nord-Figma-Toolkit-v4?node-id=1696-298217
+    - https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9&t=VRwF0X33GVvnkgdH-1
+    - https://www.figma.com/file/2uz2VbPlyMR5QHi9eGDMFf/Nordicons?node-id=2%3A36
+    icons:
+    - https://nordhealth.design/components/icon
+    agent_instructions:
+    - https://nordhealth.design/llms.txt
+    - https://nordhealth.design/llms-full.txt
 - organization: NS Dutch Railways
   design_system: Tractie
   start_urls:
   - https://tractie.ns.nl/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:17:10+00:00'
+  etag: W/"37290bdc0fc801e18ada1518016dde4e"
+  sitemap_url: https://tractie.ns.nl/sitemap.xml
 - organization: Nulogy
   design_system: Nulogy Design System
   start_urls:
@@ -1851,6 +2468,15 @@
   design_system: Blueprint
   start_urls:
   - https://blueprintjs.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:17:35+00:00'
+  etag: W/"6a7fac66-d5d"
+  last_modified: Sat, 15 Aug 2026 00:01:42 GMT
 - organization: PAQT
   design_system: Graphite Design System
   start_urls:
@@ -1865,6 +2491,16 @@
   design_system: Studio
   start_urls:
   - https://studio.patreon.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''studio.patreon.com'', port=443): Max retries
+    exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''studio.patreon.com'',
+    port=443): Failed to resolve ''studio.patreon.com'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:18:03+00:00'
 - organization: Pega Digital
   design_system: Bolt Design System
   start_urls:
@@ -1892,6 +2528,15 @@
   design_system: Gestalt
   start_urls:
   - https://pinterest.github.io/gestalt/#/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:19:24+00:00'
+  etag: W/"5ed7cd79-1f6"
+  last_modified: Wed, 03 Jun 2020 16:19:05 GMT
 - organization: Pivotal software
   design_system: Pivotal UI
   start_urls:
@@ -1905,6 +2550,15 @@
   design_system: Pluralsight Design System
   start_urls:
   - https://design-system.pluralsight.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:20:03+00:00'
+  etag: W/"638ad8fdd6fdbf175cadf3e5e88d18aa"
+  sitemap_url: https://design-system.pluralsight.com/sitemap.xml
 - organization: Priceline
   design_system: Priceline One
   start_urls:
@@ -1912,7 +2566,7 @@
 - organization: Priceline
   design_system: Priceline One
   start_urls:
-  - https://priceline.github.io/design-system/
+  - https://pricelinelabs.github.io/design-system/
 - organization: Pusher
   design_system: Chameleon
   start_urls:
@@ -1935,6 +2589,16 @@
   design_system: Spark Design System
   start_urls:
   - https://sparkdesignsystem.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''sparkdesignsystem.com'', port=443): Max
+    retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''sparkdesignsystem.com'',
+    port=443): Failed to resolve ''sparkdesignsystem.com'' ([Errno -5] No address
+    associated with hostname)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:20:49+00:00'
 - organization: Radix
   design_system: Radix UI
   start_urls:
@@ -1943,14 +2607,41 @@
   design_system: Rambler
   start_urls:
   - https://rambler-digital-solutions.github.io/rambler-ui/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:21:28+00:00'
+  etag: W/"67879f81-437"
+  last_modified: Wed, 15 Jan 2025 11:44:01 GMT
 - organization: Rambler
   design_system: Ratio
   start_urls:
   - https://ui-kit.rambler.ru/#/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:21:54+00:00'
+  etag: W/"67879f81-437"
+  last_modified: Wed, 15 Jan 2025 11:44:01 GMT
 - organization: ''
   design_system: React95
   start_urls:
   - https://react95.github.io/React95/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:25:15+00:00'
+  etag: W/"6a9880eb-13d2"
+  last_modified: Wed, 02 Sep 2026 20:02:51 GMT
 - organization: Red Hat
   design_system: Patternfly Design System
   start_urls:
@@ -2157,22 +2848,80 @@
   design_system: Rendition
   start_urls:
   - https://balena-io-modules.github.io/rendition/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:23:07+00:00'
+  etag: W/"5fbbe617-48c"
+  last_modified: Mon, 23 Nov 2020 16:40:55 GMT
 - organization: ''
   design_system: Reshaped
   start_urls:
   - https://reshaped.so/content/docs/getting-started/overview
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://www.reshaped.so/content/docs/getting-started/overview'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:23:41+00:00'
+  etag: W/"10ca1513ccbc6768ea4571421be36ae0"
+  last_modified: Tue, 15 Sep 2026 14:54:31 GMT
+  sitemap_url: https://reshaped.so/sitemap.xml
 - organization: Royal Canin
   design_system: Royal Canin's Design Language
   start_urls:
   - https://developer.royalcanin.com/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  likely_spa: false
+  unverified_resources:
+    github:
+    - https://github.com/roadhump/SublimeLinter-eslint
+  content_signals:
+    validation_loop: true
+  last_checked: '2026-09-16T05:24:17+00:00'
+  etag: '"06f8f5297f0d91:0"'
+  last_modified: Tue, 26 Sep 2023 16:34:30 GMT
+  sitemap_url: https://developer.royalcanin.com/sitemap.xml
+  resources:
+    github:
+    - https://github.com/roadhump/SublimeLinter-eslint
+  github_meta:
+    license: MIT
+    stars: 861
+    last_pushed: '2025-02-27T16:36:34Z'
 - organization: Sainsbury's
   design_system: Luna
   start_urls:
   - https://luna.sainsburys.co.uk/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''luna.sainsburys.co.uk'', port=443): Max
+    retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''luna.sainsburys.co.uk'',
+    port=443): Failed to resolve ''luna.sainsburys.co.uk'' ([Errno -2] Name or service
+    not known)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:24:56+00:00'
 - organization: Salesforce
   design_system: Lightning Design System
   start_urls:
   - https://www.lightningdesignsystem.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:25:36+00:00'
+  etag: W/"6650cf93dfb67c18391956501067323c"
+  sitemap_url: https://www.lightningdesignsystem.com/sitemap.xml
 - organization: Samsung
   design_system: Tizen CircularUI
   start_urls:
@@ -2187,6 +2936,13 @@
   design_system: Fiori
   start_urls:
   - https://www.sap.com/design-system/fiori-design-web
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://www.sap.com/design-system/fiori-design-web'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:25:41+00:00'
 - organization: SAP
   design_system: Fiori Fundamentals
   start_urls:
@@ -2210,6 +2966,22 @@
   design_system: SAP OpenUI
   start_urls:
   - https://openui5.org/documentation
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:26:01+00:00'
+  etag: W/"6a9ab2e2-32bd"
+  last_modified: Fri, 04 Sep 2026 12:00:34 GMT
+  resources:
+    github:
+    - https://github.com/SAP/openui5-sample-app
+  github_meta:
+    license: Apache-2.0
+    stars: 304
+    last_pushed: '2026-09-01T09:57:14Z'
 - organization: Scania
   design_system: Tegel
   start_urls:
@@ -2218,6 +2990,13 @@
   design_system: Scania Digital Design System
   start_urls:
   - https://tegel.scania.com/home/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://tegel.scania.com/home/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:26:34+00:00'
 - organization: Seek
   design_system: Braid Design System
   start_urls:
@@ -2347,6 +3126,14 @@
   design_system: ServiceNow Design System
   start_urls:
   - https://horizon.servicenow.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''horizon.servicenow.com'', port=443): Read
+    timed out. (read timeout=15)'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:28:46+00:00'
 - organization: ServiceTitan
   design_system: Anvil
   start_urls:
@@ -2416,6 +3203,16 @@
   design_system: pandaUI
   start_urls:
   - https://panda.sipgatedesign.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:29:10+00:00'
+  etag: '"a1c772b9bc103ffc3dd92ed9a2179ba05d1432e6fb57483c861a65d90257899a"'
+  last_modified: Tue, 15 Sep 2026 11:34:58 GMT
+  sitemap_url: https://panda.sipgatedesign.com/sitemap.xml
 - organization: SIS Gov UK
   design_system: Intelligence Community Design System
   start_urls:
@@ -2431,6 +3228,16 @@
   design_system: Sky Toolkit
   start_urls:
   - https://www.sky.com/toolkit/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://www.sky.com/toolkit/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:29:25+00:00'
+  etag: '"a23cc0663788b9253e7d833606869bb3:1781101607.475861"'
+  last_modified: Wed, 10 Jun 2026 14:26:47 GMT
+  sitemap_url: https://www.sky.com/sitemap_index.xml
 - organization: Skyscanner
   design_system: Backpack
   start_urls:
@@ -2438,7 +3245,7 @@
 - organization: Skyscanner
   design_system: Backpack
   start_urls:
-  - https://backpack.github.io/
+  - https://skyscanner.design/
 - organization: SpareBank 1
   design_system: SpareBank 1 Designsystem
   start_urls:
@@ -2489,6 +3296,15 @@
   design_system: Starbucks Style Guide
   start_urls:
   - https://www.starbucks.com/static/reference/styleguide/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://www.starbucks.com/developer/pattern-library/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:30:36+00:00'
+  etag: '"7kl1l68iou1f0t"'
+  sitemap_url: https://www.starbucks.com/sitemap.xml
 - organization: State of New South Wales
   design_system: Digital NSW
   start_urls:
@@ -2511,10 +3327,29 @@
   design_system: Styleguide
   start_urls:
   - https://styleguide.studyportals.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''styleguide.studyportals.com'', port=443):
+    Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''styleguide.studyportals.com'',
+    port=443): Failed to resolve ''styleguide.studyportals.com'' ([Errno -5] No address
+    associated with hostname)"))'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:30:29+00:00'
 - organization: Sumup
   design_system: CircuitUI
   start_urls:
   - https://circuit.sumup.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:30:51+00:00'
+  etag: W/"e24b6bec0ed3a0ea6d41b2cc56633fdc"
+  last_modified: Tue, 15 Sep 2026 10:11:17 GMT
 - organization: ''
   design_system: Teambition Clarity Design
   start_urls:
@@ -2649,6 +3484,13 @@
   design_system: Base Web
   start_urls:
   - https://baseweb.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:34:04+00:00'
 - organization: United States Centers for Medicare & Medicaid Services
   design_system: CMS Design System
   start_urls:
@@ -2679,6 +3521,14 @@
   design_system: USPTO UI Design Library
   start_urls:
   - https://uspto.github.io/USPTO-Design-System/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://uspto.github.io/USPTO-Design-System/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:35:00+00:00'
+  etag: W/"6aa9b47d-239b"
 - organization: United States Space Force
   design_system: Astro
   start_urls:
@@ -2711,6 +3561,14 @@
   design_system: USA jobs design system
   start_urls:
   - https://usajobs.github.io/design-system/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://usajobs.github.io/design-system/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:35:28+00:00'
+  etag: W/"6aa9b47d-239b"
 - organization: uSwitch
   design_system: uStyle
   start_urls:
@@ -2755,10 +3613,28 @@
   design_system: Vimeo Design System
   start_urls:
   - https://vimeo.github.io/iris/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:35:38+00:00'
+  etag: W/"67194c30-252"
+  last_modified: Wed, 23 Oct 2024 19:19:12 GMT
 - organization: VMware
   design_system: Clarity Design System
   start_urls:
   - https://clarity.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:35:51+00:00'
+  etag: '"ddf34e84d72caff8bd61934813865b27-ssl-df"'
+  sitemap_url: https://clarity.design/sitemap.xml
 - organization: Volvo Cars Web Design System
   design_system: Volvo
   start_urls:
@@ -2767,6 +3643,15 @@
   design_system: Styleguide
   start_urls:
   - https://styleguide.vtex.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:36:37+00:00'
+  etag: W/"694587fe-1a6"
+  last_modified: Fri, 19 Dec 2025 17:14:38 GMT
 - organization: ''
   design_system: Vue Design System
   start_urls:
@@ -2799,6 +3684,15 @@
   design_system: Momentum Design System
   start_urls:
   - https://momentum.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:37:03+00:00'
+  etag: '"6aa85ca3-46"'
+  last_modified: Mon, 14 Sep 2026 20:44:19 GMT
 - organization: Welcome to the Jungle
   design_system: Welcome UI
   start_urls:
@@ -2824,6 +3718,13 @@
   design_system: GEL
   start_urls:
   - https://gel.westpacgroup.com.au/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '429 Client Error: Too Many Requests for url: https://gel.westpacgroup.com.au/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:37:24+00:00'
 - organization: WeWork
   design_system: Ray
   start_urls:
@@ -2892,6 +3793,13 @@
   design_system: Workday Canvas
   start_urls:
   - https://canvas.workday.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://canvas.workday.com/'
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T05:37:54+00:00'
 - organization: Yelp
   design_system: Yelp Styleguide
   start_urls:

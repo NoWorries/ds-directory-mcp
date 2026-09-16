@@ -1,0 +1,89 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T05:42:08+00:00",
+  "id": "nordhealth-nord-design-system",
+  "organization": "Nordhealth",
+  "design_system": "Nord Design System",
+  "full_name": "Nordhealth — Nord Design System",
+  "start_urls": [
+    "https://nordhealth.design/"
+  ],
+  "detail_url": "/systems/nordhealth-nord-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T05:16:42+00:00",
+  "last_modified": "Wed, 09 Sep 2026 09:15:57 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/salesforce-ux/theo"
+    ],
+    "figma": [
+      "https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9",
+      "https://www.figma.com/file/n03Z6aG3GAP31Oc9V6IKYy/Component-Illustrations?node-id=0%3A1",
+      "https://www.figma.com/design/yarhTRV8eFffff0BIpevi6/Nord-Figma-Toolkit-v4?node-id=1696-298217",
+      "https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9&t=VRwF0X33GVvnkgdH-1",
+      "https://www.figma.com/file/2uz2VbPlyMR5QHi9eGDMFf/Nordicons?node-id=2%3A36"
+    ],
+    "icons": [
+      "https://nordhealth.design/components/icon"
+    ],
+    "agent_instructions": [
+      "https://nordhealth.design/llms.txt",
+      "https://nordhealth.design/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/salesforce-ux/theo"
+    ]
+  },
+  "content_signals": {
+    "tokens_format": "Figma Variables",
+    "frameworks": [
+      "React",
+      "Vue",
+      "Web Components"
+    ],
+    "validation_loop": true,
+    "token_enforcement": true
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://nordhealth.design/core/tokens/",
+      "title": "Design Tokens - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/design/foundations/figma/",
+      "title": "Figma Toolkit - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/tailwind/",
+      "title": "Migration to Tailwind CSS - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/",
+      "title": "Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/progress",
+      "title": "Progress Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/resources/support/",
+      "title": "Support - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/core/css/tailwind/",
+      "title": "Tailwind CSS - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/",
+      "title": "Web Components - Nord Design System"
+    }
+  ]
+}

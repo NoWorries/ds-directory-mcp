@@ -1,8 +1,8 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-16T02:34:13+00:00",
+  "generated_at": "2026-09-16T05:42:08+00:00",
   "data_as_of": "2026-09-13T22:19:25+00:00",
-  "total_systems": 116,
+  "total_systems": 122,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -30,6 +30,44 @@
       "github_meta": null,
       "npm_meta": null,
       "indexed_pages": []
+    },
+    {
+      "id": "alaska-airlines-auro",
+      "organization": "Alaska Airlines",
+      "design_system": "Auro",
+      "full_name": "Alaska Airlines — Auro",
+      "start_urls": [
+        "https://auro.alaskaair.com/"
+      ],
+      "detail_url": "/systems/alaska-airlines-auro",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:14:51+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {
+        "agent_instructions": [
+          "https://auro.alaskaair.com/llms.txt"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "React",
+          "Web Components",
+          "Svelte"
+        ]
+      },
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://auro.alaskaair.com/llms.txt",
+          "title": "Alaska Airlines — Auro — llms.txt"
+        }
+      ]
     },
     {
       "id": "ant-financial-ant-design",
@@ -710,7 +748,12 @@
       "content_signals": {},
       "github_meta": null,
       "npm_meta": null,
-      "indexed_pages": []
+      "indexed_pages": [
+        {
+          "url": "https://druids.datadoghq.com/llms.txt",
+          "title": "Datadog — Druids — llms.txt"
+        }
+      ]
     },
     {
       "id": "decathlon-design-system-vitamin",
@@ -1115,7 +1158,64 @@
         "last_pushed": "2026-09-15T10:15:18Z"
       },
       "npm_meta": null,
-      "indexed_pages": []
+      "indexed_pages": [
+        {
+          "url": "https://www.gov.uk/guidance/government-design-principles",
+          "title": "Government Design Principles - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/design-system/",
+          "title": "Home – GOV.UK Design System"
+        },
+        {
+          "url": "https://www.gov.uk/service-manual",
+          "title": "Service Manual - GOV.UK"
+        }
+      ]
+    },
+    {
+      "id": "gov-uk-gov-uk-design-system",
+      "organization": "GOV.UK",
+      "design_system": "GOV.UK Design System",
+      "full_name": "GOV.UK — GOV.UK Design System",
+      "start_urls": [
+        "https://design-system.service.gov.uk/"
+      ],
+      "detail_url": "/systems/gov-uk-gov-uk-design-system",
+      "pages_indexed": 8,
+      "coverage_status": "partial",
+      "hit_max_pages": true,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T00:48:12+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/alphagov/accessible-autocomplete"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "MIT",
+        "stars": 954,
+        "last_pushed": "2026-09-15T10:15:18Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://www.gov.uk/guidance/government-design-principles",
+          "title": "Government Design Principles - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/design-system/",
+          "title": "Home – GOV.UK Design System"
+        },
+        {
+          "url": "https://www.gov.uk/service-manual",
+          "title": "Service Manual - GOV.UK"
+        }
+      ]
     },
     {
       "id": "government-of-canada-aurora-design-system",
@@ -1370,7 +1470,123 @@
         "last_pushed": "2023-01-10T03:27:49Z"
       },
       "npm_meta": null,
-      "indexed_pages": []
+      "indexed_pages": [
+        {
+          "url": "https://grommet.io/box",
+          "title": "Box - Grommet"
+        },
+        {
+          "url": "https://grommet.io/components",
+          "title": "Components - Grommet"
+        },
+        {
+          "url": "https://grommet.io/grid",
+          "title": "Grid - Grommet"
+        },
+        {
+          "url": "https://grommet.io/",
+          "title": "Grommet"
+        },
+        {
+          "url": "https://grommet.io/docs",
+          "title": "Grommet"
+        },
+        {
+          "url": "https://grommet.io/menu",
+          "title": "Menu - Grommet"
+        },
+        {
+          "url": "https://grommet.io/sidebar",
+          "title": "Sidebar - Grommet"
+        },
+        {
+          "url": "https://grommet.io/text",
+          "title": "Text - Grommet"
+        }
+      ]
+    },
+    {
+      "id": "hewlett-packard-grommet",
+      "organization": "Hewlett Packard",
+      "design_system": "Grommet",
+      "full_name": "Hewlett Packard — Grommet",
+      "start_urls": [
+        "https://v2.grommet.io/"
+      ],
+      "detail_url": "/systems/hewlett-packard-grommet",
+      "pages_indexed": 7,
+      "coverage_status": "partial",
+      "hit_max_pages": true,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T00:50:38+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/grommet/grommet-starter-existing-app",
+          "https://github.com/grommet/grommet-starter-new-app",
+          "https://github.com/grommet/grommet"
+        ],
+        "storybook": [
+          "https://storybook.grommet.io/?path=/story/Layout-Box",
+          "https://storybook.grommet.io/?path=/story/Layout-Grid"
+        ],
+        "icons": [
+          "https://icons.grommet.io",
+          "https://v2.grommet.io/icons"
+        ],
+        "agent_instructions": [
+          "https://v2.grommet.io/llms.txt",
+          "https://v2.grommet.io/llms-full.txt",
+          "https://v2.grommet.io/AGENTS.md",
+          "https://v2.grommet.io/CLAUDE.md"
+        ],
+        "mcp": [
+          "https://v2.grommet.io/.well-known/mcp.json"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "Apache-2.0",
+        "stars": 84,
+        "last_pushed": "2023-01-10T03:27:49Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://grommet.io/box",
+          "title": "Box - Grommet"
+        },
+        {
+          "url": "https://grommet.io/components",
+          "title": "Components - Grommet"
+        },
+        {
+          "url": "https://grommet.io/grid",
+          "title": "Grid - Grommet"
+        },
+        {
+          "url": "https://grommet.io/",
+          "title": "Grommet"
+        },
+        {
+          "url": "https://grommet.io/docs",
+          "title": "Grommet"
+        },
+        {
+          "url": "https://grommet.io/menu",
+          "title": "Menu - Grommet"
+        },
+        {
+          "url": "https://grommet.io/sidebar",
+          "title": "Sidebar - Grommet"
+        },
+        {
+          "url": "https://grommet.io/text",
+          "title": "Text - Grommet"
+        }
+      ]
     },
     {
       "id": "hubspot-canvas-design-system",
@@ -1574,7 +1790,12 @@
       "content_signals": {},
       "github_meta": null,
       "npm_meta": null,
-      "indexed_pages": []
+      "indexed_pages": [
+        {
+          "url": "https://instructure.design/llms.txt",
+          "title": "Instructure Inc — Instructure UI — llms.txt"
+        }
+      ]
     },
     {
       "id": "intuit-design-system",
@@ -2544,6 +2765,93 @@
       "indexed_pages": []
     },
     {
+      "id": "nordhealth-nord-design-system",
+      "organization": "Nordhealth",
+      "design_system": "Nord Design System",
+      "full_name": "Nordhealth — Nord Design System",
+      "start_urls": [
+        "https://nordhealth.design/"
+      ],
+      "detail_url": "/systems/nordhealth-nord-design-system",
+      "pages_indexed": 8,
+      "coverage_status": "partial",
+      "hit_max_pages": true,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:16:42+00:00",
+      "last_modified": "Wed, 09 Sep 2026 09:15:57 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/salesforce-ux/theo"
+        ],
+        "figma": [
+          "https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9",
+          "https://www.figma.com/file/n03Z6aG3GAP31Oc9V6IKYy/Component-Illustrations?node-id=0%3A1",
+          "https://www.figma.com/design/yarhTRV8eFffff0BIpevi6/Nord-Figma-Toolkit-v4?node-id=1696-298217",
+          "https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9&t=VRwF0X33GVvnkgdH-1",
+          "https://www.figma.com/file/2uz2VbPlyMR5QHi9eGDMFf/Nordicons?node-id=2%3A36"
+        ],
+        "icons": [
+          "https://nordhealth.design/components/icon"
+        ],
+        "agent_instructions": [
+          "https://nordhealth.design/llms.txt",
+          "https://nordhealth.design/llms-full.txt"
+        ]
+      },
+      "unverified_resources": {
+        "github": [
+          "https://github.com/salesforce-ux/theo"
+        ]
+      },
+      "content_signals": {
+        "tokens_format": "Figma Variables",
+        "frameworks": [
+          "React",
+          "Vue",
+          "Web Components"
+        ],
+        "validation_loop": true,
+        "token_enforcement": true
+      },
+      "github_meta": null,
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://nordhealth.design/core/tokens/",
+          "title": "Design Tokens - Nord Design System"
+        },
+        {
+          "url": "https://nordhealth.design/design/foundations/figma/",
+          "title": "Figma Toolkit - Nord Design System"
+        },
+        {
+          "url": "https://nordhealth.design/migrations/tailwind/",
+          "title": "Migration to Tailwind CSS - Nord Design System"
+        },
+        {
+          "url": "https://nordhealth.design/",
+          "title": "Nord Design System"
+        },
+        {
+          "url": "https://nordhealth.design/components/progress",
+          "title": "Progress Component - Nord Design System"
+        },
+        {
+          "url": "https://nordhealth.design/resources/support/",
+          "title": "Support - Nord Design System"
+        },
+        {
+          "url": "https://nordhealth.design/core/css/tailwind/",
+          "title": "Tailwind CSS - Nord Design System"
+        },
+        {
+          "url": "https://nordhealth.design/components/",
+          "title": "Web Components - Nord Design System"
+        }
+      ]
+    },
+    {
       "id": "nulogy-nulogy-design-system",
       "organization": "Nulogy",
       "design_system": "Nulogy Design System",
@@ -2893,6 +3201,76 @@
       "indexed_pages": []
     },
     {
+      "id": "royal-canin-royal-canin-s-design-language",
+      "organization": "Royal Canin",
+      "design_system": "Royal Canin's Design Language",
+      "full_name": "Royal Canin — Royal Canin's Design Language",
+      "start_urls": [
+        "https://developer.royalcanin.com/"
+      ],
+      "detail_url": "/systems/royal-canin-royal-canin-s-design-language",
+      "pages_indexed": 8,
+      "coverage_status": "partial",
+      "hit_max_pages": true,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:24:17+00:00",
+      "last_modified": "Tue, 26 Sep 2023 16:34:30 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/roadhump/SublimeLinter-eslint"
+        ]
+      },
+      "unverified_resources": {
+        "github": [
+          "https://github.com/roadhump/SublimeLinter-eslint"
+        ]
+      },
+      "content_signals": {
+        "validation_loop": true
+      },
+      "github_meta": {
+        "license": "MIT",
+        "stars": 861,
+        "last_pushed": "2025-02-27T16:36:34Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://developer.royalcanin.com/getting-started/overview/about_design_language.html",
+          "title": "About Design Language | Royal Canin Design Language"
+        },
+        {
+          "url": "https://developer.royalcanin.com/ui-framework/brand_identity/colour.html",
+          "title": "Colour | Royal Canin Design Language"
+        },
+        {
+          "url": "https://developer.royalcanin.com/getting-started/usage/contribution.html",
+          "title": "Contribution | Royal Canin Design Language"
+        },
+        {
+          "url": "https://developer.royalcanin.com/",
+          "title": "Home | Royal Canin Design Language"
+        },
+        {
+          "url": "https://developer.royalcanin.com/getting-started/usage/assets_migration.html",
+          "title": "Migration | Royal Canin Design Language"
+        },
+        {
+          "url": "https://developer.royalcanin.com/getting-started/usage/overview.html",
+          "title": "Overview | Royal Canin Design Language"
+        },
+        {
+          "url": "https://developer.royalcanin.com/getting-started/usage/resources.html",
+          "title": "Resources | Royal Canin Design Language"
+        },
+        {
+          "url": "https://developer.royalcanin.com/ui-framework/templates/starter.html",
+          "title": "Starter page/Boilerplate | Royal Canin Design Language"
+        }
+      ]
+    },
+    {
       "id": "samsung-tizen-circularui",
       "organization": "Samsung",
       "design_system": "Tizen CircularUI",
@@ -2946,6 +3324,42 @@
       },
       "npm_meta": null,
       "indexed_pages": []
+    },
+    {
+      "id": "sap-openui",
+      "organization": null,
+      "design_system": "SAP OpenUI",
+      "full_name": "SAP OpenUI",
+      "start_urls": [
+        "https://openui5.org/documentation"
+      ],
+      "detail_url": "/systems/sap-openui",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T05:26:01+00:00",
+      "last_modified": "Fri, 04 Sep 2026 12:00:34 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/SAP/openui5-sample-app"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "Apache-2.0",
+        "stars": 304,
+        "last_pushed": "2026-09-01T09:57:14Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://openui5.org/documentation",
+          "title": "OpenUI5 - Documentation"
+        }
+      ]
     },
     {
       "id": "seek-braid-design-system",

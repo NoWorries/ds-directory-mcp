@@ -1,0 +1,72 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T05:42:08+00:00",
+  "id": "royal-canin-royal-canin-s-design-language",
+  "organization": "Royal Canin",
+  "design_system": "Royal Canin's Design Language",
+  "full_name": "Royal Canin — Royal Canin's Design Language",
+  "start_urls": [
+    "https://developer.royalcanin.com/"
+  ],
+  "detail_url": "/systems/royal-canin-royal-canin-s-design-language",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T05:24:17+00:00",
+  "last_modified": "Tue, 26 Sep 2023 16:34:30 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/roadhump/SublimeLinter-eslint"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/roadhump/SublimeLinter-eslint"
+    ]
+  },
+  "content_signals": {
+    "validation_loop": true
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 861,
+    "last_pushed": "2025-02-27T16:36:34Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://developer.royalcanin.com/getting-started/overview/about_design_language.html",
+      "title": "About Design Language | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/brand_identity/colour.html",
+      "title": "Colour | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/usage/contribution.html",
+      "title": "Contribution | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/usage/assets_migration.html",
+      "title": "Migration | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/usage/overview.html",
+      "title": "Overview | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/usage/resources.html",
+      "title": "Resources | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/templates/starter.html",
+      "title": "Starter page/Boilerplate | Royal Canin Design Language"
+    }
+  ]
+}

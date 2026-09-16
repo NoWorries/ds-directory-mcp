@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T02:40:11+00:00",
+  "generated_at": "2026-09-16T05:42:08+00:00",
   "id": "instructure-inc-instructure-ui",
   "organization": "Instructure Inc",
   "design_system": "Instructure UI",
@@ -13,8 +13,8 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-16T02:36:55+00:00",
-  "last_modified": "Mon, 14 Sep 2026 20:05:56 GMT",
+  "last_checked": "2026-09-15T22:22:19+00:00",
+  "last_modified": "Mon, 14 Sep 2026 20:05:55 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "agent_instructions": [
@@ -22,12 +22,7 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {
-    "accessibility_conformance": "WCAG 2.1 AA",
-    "frameworks": [
-      "React"
-    ]
-  },
+  "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T02:40:11+00:00",
+  "generated_at": "2026-09-16T05:42:08+00:00",
   "id": "hewlett-packard-grommet",
   "organization": "Hewlett Packard",
   "design_system": "Grommet",
@@ -48,5 +48,38 @@
     "last_pushed": "2023-01-10T03:27:49Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://grommet.io/box",
+      "title": "Box - Grommet"
+    },
+    {
+      "url": "https://grommet.io/components",
+      "title": "Components - Grommet"
+    },
+    {
+      "url": "https://grommet.io/grid",
+      "title": "Grid - Grommet"
+    },
+    {
+      "url": "https://grommet.io/",
+      "title": "Grommet"
+    },
+    {
+      "url": "https://grommet.io/docs",
+      "title": "Grommet"
+    },
+    {
+      "url": "https://grommet.io/menu",
+      "title": "Menu - Grommet"
+    },
+    {
+      "url": "https://grommet.io/sidebar",
+      "title": "Sidebar - Grommet"
+    },
+    {
+      "url": "https://grommet.io/text",
+      "title": "Text - Grommet"
+    }
+  ]
 }
