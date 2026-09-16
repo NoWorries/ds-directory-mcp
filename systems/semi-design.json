@@ -1,0 +1,52 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "semi-design",
+  "organization": null,
+  "design_system": "Semi Design",
+  "full_name": "Semi Design",
+  "start_urls": [
+    "https://semi.design/en-US/"
+  ],
+  "detail_url": "/systems/semi-design",
+  "pages_indexed": 6,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:51:46+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "figma": [
+      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo?node-id=1%3A276",
+      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo%EF%BC%88Figma-Community%EF%BC%89?node-id=419%3A128959&t=PMnGQ3VQIoGQZZPl-4",
+      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo?node-id=5%3A2092",
+      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo%EF%BC%88Figma-Community%EF%BC%89?node-id=419%3A90854&t=PMnGQ3VQIoGQZZPl-4",
+      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo?node-id=1%3A275"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/reset-css",
+      "https://www.npmjs.com/package/@douyinfe/semi-next"
+    ],
+    "icons": [
+      "https://semi.design/zh-CN/basic/icon"
+    ],
+    "agent_instructions": [
+      "https://semi.design/llms.txt",
+      "https://semi.design/llms-full.txt",
+      "https://semi.design/AGENTS.md",
+      "https://semi.design/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://semi.design/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": {
+    "latest_version": "5.0.2",
+    "weekly_downloads": 54860
+  },
+  "indexed_pages": []
+}

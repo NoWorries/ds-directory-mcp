@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "brightcore-ui",
+  "organization": "Brightcore",
+  "design_system": "UI",
+  "full_name": "Brightcore — UI",
+  "start_urls": [
+    "https://ui.britecore.com/"
+  ],
+  "detail_url": "/systems/brightcore-ui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:16:13+00:00",
+  "last_modified": "Thu, 19 Mar 2026 23:21:30 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://ui.britecore.com/llms.txt",
+      "https://ui.britecore.com/llms-full.txt",
+      "https://ui.britecore.com/AGENTS.md",
+      "https://ui.britecore.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://ui.britecore.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

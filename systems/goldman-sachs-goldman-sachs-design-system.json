@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "goldman-sachs-goldman-sachs-design-system",
+  "organization": "Goldman Sachs",
+  "design_system": "Goldman Sachs Design System",
+  "full_name": "Goldman Sachs — Goldman Sachs Design System",
+  "start_urls": [
+    "https://design.gs.com/home/"
+  ],
+  "detail_url": "/systems/goldman-sachs-goldman-sachs-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T21:54:58+00:00",
+  "last_modified": "Tue, 15 Sep 2026 13:54:54 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://design.gs.com/llms.txt",
+      "https://design.gs.com/llms-full.txt",
+      "https://design.gs.com/AGENTS.md",
+      "https://design.gs.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://design.gs.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

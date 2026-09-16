@@ -10,6 +10,23 @@
 
   @view-transition { navigation: auto; }
 
+  /* Named transition (view-transition-name: thumb-<slug>, tagged
+     view-transition-class: thumb — set inline in generate_directory.py's
+     render_card/generate_systems.py's thumb_html, since the name itself must
+     be unique per element but the *class* lets every card share one
+     animation rule) gets a slightly slower, eased morph than the default
+     page crossfade, so a card's thumbnail visibly glides into the detail
+     page's hero image instead of just cutting; everything else keeps the
+     plain default root crossfade, intentionally quick. (A matching
+     title-<slug> transition on the heading was tried and dropped — morphing
+     text at a different size/weight read as glitchy, not smooth.)
+     Chrome/Edge only (view-transition-class needs Chrome 125+) — a no-op
+     elsewhere, same as @view-transition itself. */
+  ::view-transition-group(*) { animation-duration: 0.3s; }
+  ::view-transition-group(*.thumb) {
+    animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
   :root {
     --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
     --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
@@ -87,6 +104,13 @@
   .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
   .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
 
+  .nav-suggest {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap;
+    padding: 6px 10px; border-radius: 6px;
+  }
+  .nav-suggest:hover { background: var(--accent-soft); }
+  @media (max-width: 640px) { .nav-suggest { display: none; } }
+
   .nav-search { display: flex; align-items: center; }
   .nav-search-toggle {
     background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
@@ -129,9 +153,10 @@
         <a href="/" class="site-brand">Design Systems Directory</a>
         <div class="site-nav-links">
           <a href="/" class="">Search</a>
-          <a href="/directory.html" class="">All Systems</a>
-          <a href="/components/index.html" class="current">Components</a>
+          <a href="/directory" class="">All Systems</a>
+          <a href="/components" class="current">Components</a>
         </div>
+        <a class="nav-suggest" href="/suggest">Suggest a system</a>
         <div class="nav-search">
           <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
           <form class="nav-search-form" id="navSearchForm" hidden>
@@ -153,7 +178,7 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
-    if (q) window.location.href = "/?q=" + encodeURIComponent(q);
+    if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
   });
 })();
 </script>
@@ -162,68 +187,8 @@
   <p class="eyebrow">Components</p>
   <h1>Browse by component</h1>
   <p class="subtitle">The same indexed design systems, entered by component name instead of by system or search query. Pick one to see which systems document it.</p>
-  <nav class="jump-nav"><a href="#letter-A">A</a> <a href="#letter-B">B</a> <a href="#letter-C">C</a> <a href="#letter-D">D</a> <a href="#letter-I">I</a> <a href="#letter-L">L</a> <a href="#letter-M">M</a> <a href="#letter-N">N</a> <a href="#letter-P">P</a> <a href="#letter-R">R</a> <a href="#letter-S">S</a> <a href="#letter-T">T</a></nav>
+  <nav class="jump-nav"></nav>
   
-        <section class="letter-group" id="letter-A">
-          <h2>A</h2>
-          <ul class="component-list"><li><a href="accordion.html">Accordion</a> <span class="count">5 systems</span></li><li><a href="alert.html">Alert</a> <span class="count">1 system</span></li><li><a href="avatar.html">Avatar</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-B">
-          <h2>B</h2>
-          <ul class="component-list"><li><a href="badge.html">Badge</a> <span class="count">1 system</span></li><li><a href="breadcrumb.html">Breadcrumb</a> <span class="count">1 system</span></li><li><a href="button.html">Button</a> <span class="count">3 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-C">
-          <h2>C</h2>
-          <ul class="component-list"><li><a href="card.html">Card</a> <span class="count">3 systems</span></li><li><a href="carousel.html">Carousel</a> <span class="count">1 system</span></li><li><a href="checkbox.html">Checkbox</a> <span class="count">1 system</span></li><li><a href="chip.html">Chip</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-D">
-          <h2>D</h2>
-          <ul class="component-list"><li><a href="date-picker.html">Date Picker</a> <span class="count">3 systems</span></li><li><a href="dropdown.html">Dropdown</a> <span class="count">5 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-I">
-          <h2>I</h2>
-          <ul class="component-list"><li><a href="icon.html">Icon</a> <span class="count">8 systems</span></li><li><a href="input.html">Input</a> <span class="count">4 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-L">
-          <h2>L</h2>
-          <ul class="component-list"><li><a href="link.html">Link</a> <span class="count">2 systems</span></li><li><a href="list.html">List</a> <span class="count">3 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-M">
-          <h2>M</h2>
-          <ul class="component-list"><li><a href="menu.html">Menu</a> <span class="count">1 system</span></li><li><a href="modal.html">Modal</a> <span class="count">2 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-N">
-          <h2>N</h2>
-          <ul class="component-list"><li><a href="navigation.html">Navigation</a> <span class="count">2 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-P">
-          <h2>P</h2>
-          <ul class="component-list"><li><a href="pagination.html">Pagination</a> <span class="count">1 system</span></li><li><a href="progress.html">Progress</a> <span class="count">3 systems</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-R">
-          <h2>R</h2>
-          <ul class="component-list"><li><a href="radio.html">Radio</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-S">
-          <h2>S</h2>
-          <ul class="component-list"><li><a href="sidebar.html">Sidebar</a> <span class="count">2 systems</span></li><li><a href="switch.html">Switch</a> <span class="count">1 system</span></li></ul>
-        </section>
-        
-        <section class="letter-group" id="letter-T">
-          <h2>T</h2>
-          <ul class="component-list"><li><a href="table.html">Table</a> <span class="count">3 systems</span></li><li><a href="tabs.html">Tabs</a> <span class="count">2 systems</span></li><li><a href="toast.html">Toast</a> <span class="count">1 system</span></li><li><a href="tooltip.html">Tooltip</a> <span class="count">3 systems</span></li><li><a href="typography.html">Typography</a> <span class="count">4 systems</span></li></ul>
-        </section>
-        
 </div>
 </body>
 </html>

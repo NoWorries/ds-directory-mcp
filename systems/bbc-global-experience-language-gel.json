@@ -1,0 +1,25 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "bbc-global-experience-language-gel",
+  "organization": "BBC",
+  "design_system": "Global Experience Language (GEL)",
+  "full_name": "BBC — Global Experience Language (GEL)",
+  "start_urls": [
+    "https://www.bbc.co.uk/gel/"
+  ],
+  "detail_url": "/systems/bbc-global-experience-language-gel",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:08:00+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

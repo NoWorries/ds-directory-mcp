@@ -1,0 +1,43 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "semantic-semantic-ui",
+  "organization": "Semantic",
+  "design_system": "Semantic UI",
+  "full_name": "Semantic — Semantic UI",
+  "start_urls": [
+    "https://semantic-ui.com/"
+  ],
+  "detail_url": "/systems/semantic-semantic-ui",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:48:55+00:00",
+  "last_modified": "Fri, 30 May 2025 15:55:40 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/Semantic-Org/Semantic-UI",
+      "https://github.com/defunkt/jquery-pjax",
+      "https://github.com/Semantic-Org/UI-Grid/",
+      "https://github.com/Semantic-Org/UI-Tab/",
+      "https://github.com/macek/jquery-serialize-object",
+      "https://github.com/Semantic-Org/UI-Segment/",
+      "https://github.com/Semantic-Org/UI-Modal/",
+      "https://github.com/Semantic-Org/UI-Reveal/",
+      "https://github.com/asual/jquery-address",
+      "https://github.com/Semantic-Org/UI-Sidebar/",
+      "https://github.com/rails/turbolinks/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 51019,
+    "last_pushed": "2024-11-27T21:01:48Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

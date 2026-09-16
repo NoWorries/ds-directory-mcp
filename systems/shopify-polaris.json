@@ -1,0 +1,72 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "shopify-polaris",
+  "organization": "Shopify",
+  "design_system": "Polaris",
+  "full_name": "Shopify — Polaris",
+  "start_urls": [
+    "https://polaris.shopify.com/"
+  ],
+  "detail_url": "/systems/shopify-polaris",
+  "pages_indexed": 9,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-13T22:19:25+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://polaris.shopify.com/llms.txt",
+      "https://polaris.shopify.com/llms-full.txt",
+      "https://polaris.shopify.com/AGENTS.md",
+      "https://polaris.shopify.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://polaris.shopify.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://polaris.shopify.com/",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/api/polaris/using-polaris-web-components",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/api/app-home",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/api/app-home-ui-extension",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/api/checkout-ui-extensions",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/api/customer-account-ui-extensions",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/apps/build/app-surfaces",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/api/admin-extensions",
+      "title": "Polaris references"
+    },
+    {
+      "url": "https://polaris.shopify.com/docs/api/pos-ui-extensions",
+      "title": "Polaris references"
+    }
+  ]
+}

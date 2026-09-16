@@ -1,0 +1,46 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "rei-cedar",
+  "organization": "REI",
+  "design_system": "Cedar",
+  "full_name": "REI — Cedar",
+  "start_urls": [
+    "https://rei.github.io/rei-cedar-docs/"
+  ],
+  "detail_url": "/systems/rei-cedar",
+  "pages_indexed": 7,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:35:21+00:00",
+  "last_modified": "Tue, 18 Jul 2023 18:25:19 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/rei/rei-cedar",
+      "https://github.com/rei/rei-cedar-component-variables"
+    ],
+    "figma": [
+      "https://www.figma.com/file/5R0ElfCIEJbRJx2tKzlA7s/Greenhouse?node-id=1673%3A4"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@rei/cedar"
+    ],
+    "icons": [
+      "https://rei.github.io/rei-cedar-docs/icons/overview/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 52,
+    "last_pushed": "2026-09-11T05:07:47Z"
+  },
+  "npm_meta": {
+    "latest_version": "17.1.0",
+    "weekly_downloads": 709
+  },
+  "indexed_pages": []
+}

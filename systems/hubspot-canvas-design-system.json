@@ -1,0 +1,38 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "hubspot-canvas-design-system",
+  "organization": "Hubspot",
+  "design_system": "Canvas Design System",
+  "full_name": "Hubspot — Canvas Design System",
+  "start_urls": [
+    "https://canvas.hubspot.com/"
+  ],
+  "detail_url": "/systems/hubspot-canvas-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:14:56+00:00",
+  "last_modified": "Wed, 28 Aug 2024 11:00:01 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://carbondesignsystem.com/guidelines/icons/library"
+    ],
+    "agent_instructions": [
+      "https://canvas.hubspot.com/llms.txt",
+      "https://canvas.hubspot.com/llms-full.txt",
+      "https://canvas.hubspot.com/AGENTS.md",
+      "https://canvas.hubspot.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://canvas.hubspot.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

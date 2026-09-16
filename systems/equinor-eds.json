@@ -1,0 +1,45 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "equinor-eds",
+  "organization": "Equinor",
+  "design_system": "EDS",
+  "full_name": "Equinor — EDS",
+  "start_urls": [
+    "https://eds.equinor.com/"
+  ],
+  "detail_url": "/systems/equinor-eds",
+  "pages_indexed": 4,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:44:05+00:00",
+  "last_modified": "Tue, 15 Sep 2026 08:37:34 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/equinor/design-system/"
+    ],
+    "storybook": [
+      "https://storybook.eds.equinor.com"
+    ],
+    "agent_instructions": [
+      "https://eds.equinor.com/llms.txt",
+      "https://eds.equinor.com/llms-full.txt",
+      "https://eds.equinor.com/AGENTS.md",
+      "https://eds.equinor.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://eds.equinor.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 151,
+    "last_pushed": "2026-09-15T13:37:43Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

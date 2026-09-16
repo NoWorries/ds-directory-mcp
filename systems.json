@@ -1,6 +1,6 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-16T02:05:36+00:00",
+  "generated_at": "2026-09-16T02:40:11+00:00",
   "data_as_of": "2026-09-13T22:19:25+00:00",
   "total_systems": 118,
   "systems": [
@@ -692,10 +692,17 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-15T22:29:49+00:00",
-      "last_modified": "Tue, 15 Sep 2026 21:52:14 GMT",
+      "last_checked": "2026-09-16T02:39:30+00:00",
+      "last_modified": "Wed, 16 Sep 2026 00:00:40 GMT",
       "sitemap_last_modified": null,
       "resources": {
+        "copilot_instructions": [
+          "https://druids.datadoghq.com/.github/copilot-instructions.md"
+        ],
+        "cursor_rules": [
+          "https://druids.datadoghq.com/.cursorrules",
+          "https://druids.datadoghq.com/.cursor/rules"
+        ],
         "agent_instructions": [
           "https://druids.datadoghq.com/llms.txt",
           "https://druids.datadoghq.com/llms-full.txt",
@@ -704,13 +711,25 @@
         ],
         "mcp": [
           "https://druids.datadoghq.com/.well-known/mcp.json"
+        ],
+        "registry": [
+          "https://druids.datadoghq.com/registry.json"
         ]
       },
       "unverified_resources": {},
-      "content_signals": {},
+      "content_signals": {
+        "frameworks": [
+          "React"
+        ]
+      },
       "github_meta": null,
       "npm_meta": null,
-      "indexed_pages": []
+      "indexed_pages": [
+        {
+          "url": "https://druids.datadoghq.com/llms.txt",
+          "title": "Datadog — Druids — llms.txt"
+        }
+      ]
     },
     {
       "id": "decathlon-design-system-vitamin",
@@ -1123,7 +1142,7 @@
       "design_system": "GOV.UK Design System",
       "full_name": "GOV.UK — GOV.UK Design System",
       "start_urls": [
-        "https://www.gov.uk/design-system/"
+        "https://design-system.service.gov.uk/"
       ],
       "detail_url": "/systems/gov-uk-gov-uk-design-system",
       "pages_indexed": 8,
@@ -1409,7 +1428,7 @@
       "design_system": "Grommet",
       "full_name": "Hewlett Packard — Grommet",
       "start_urls": [
-        "https://grommet.io/"
+        "https://v2.grommet.io/"
       ],
       "detail_url": "/systems/hewlett-packard-grommet",
       "pages_indexed": 7,
@@ -1643,8 +1662,8 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-15T22:22:19+00:00",
-      "last_modified": "Mon, 14 Sep 2026 20:05:55 GMT",
+      "last_checked": "2026-09-16T02:36:55+00:00",
+      "last_modified": "Mon, 14 Sep 2026 20:05:56 GMT",
       "sitemap_last_modified": null,
       "resources": {
         "agent_instructions": [
@@ -1652,10 +1671,20 @@
         ]
       },
       "unverified_resources": {},
-      "content_signals": {},
+      "content_signals": {
+        "accessibility_conformance": "WCAG 2.1 AA",
+        "frameworks": [
+          "React"
+        ]
+      },
       "github_meta": null,
       "npm_meta": null,
-      "indexed_pages": []
+      "indexed_pages": [
+        {
+          "url": "https://instructure.design/llms.txt",
+          "title": "Instructure Inc — Instructure UI — llms.txt"
+        }
+      ]
     },
     {
       "id": "intuit-design-system",

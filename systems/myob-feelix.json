@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "myob-feelix",
+  "organization": "MYOB",
+  "design_system": "Feelix",
+  "full_name": "MYOB — Feelix",
+  "start_urls": [
+    "https://feelix.myob.com/"
+  ],
+  "detail_url": "/systems/myob-feelix",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T21:59:35+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://feelix.myob.com/llms.txt",
+      "https://feelix.myob.com/llms-full.txt",
+      "https://feelix.myob.com/AGENTS.md",
+      "https://feelix.myob.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://feelix.myob.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

@@ -505,6 +505,11 @@
   - https://druids.datadoghq.com/
   pages_indexed: 1
   resources:
+    copilot_instructions:
+    - https://druids.datadoghq.com/.github/copilot-instructions.md
+    cursor_rules:
+    - https://druids.datadoghq.com/.cursorrules
+    - https://druids.datadoghq.com/.cursor/rules
     agent_instructions:
     - https://druids.datadoghq.com/llms.txt
     - https://druids.datadoghq.com/llms-full.txt
@@ -512,12 +517,19 @@
     - https://druids.datadoghq.com/CLAUDE.md
     mcp:
     - https://druids.datadoghq.com/.well-known/mcp.json
+    registry:
+    - https://druids.datadoghq.com/registry.json
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: '"330cabde4ecb51de1c9e4a2610718f57"'
-  last_modified: Tue, 15 Sep 2026 21:52:14 GMT
-  last_checked: '2026-09-15T22:29:49+00:00'
+  etag: '"18806ce2f9a7852799dd895f4f20f6b1"'
+  last_modified: Wed, 16 Sep 2026 00:00:40 GMT
+  last_checked: '2026-09-16T02:39:30+00:00'
+  unverified_resources: {}
+  content_signals:
+    frameworks:
+    - React
+  sitemap_url: https://druids.datadoghq.com/sitemap.xml
 - organization: Decathlon
   design_system: Design System - Vitamin
   start_urls:
@@ -796,13 +808,13 @@
   start_urls:
   - https://design-system.service.gov.uk/
   pages_indexed: 8
-  resources: &id001
+  resources:
     github:
     - https://github.com/alphagov/accessible-autocomplete
   hit_max_pages: true
   crawl_error: ''
   likely_spa: false
-  github_meta: &id002
+  github_meta:
     license: MIT
     stars: 954
     last_pushed: '2026-09-15T10:15:18Z'
@@ -811,13 +823,18 @@
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
-  - https://www.gov.uk/design-system/
+  - https://design-system.service.gov.uk/
   pages_indexed: 8
-  resources: *id001
+  resources:
+    github:
+    - https://github.com/alphagov/accessible-autocomplete
   hit_max_pages: true
   crawl_error: ''
   likely_spa: false
-  github_meta: *id002
+  github_meta:
+    license: MIT
+    stars: 954
+    last_pushed: '2026-09-15T10:15:18Z'
   etag: '"213f7439c10d9f5418a5e1d8a60260a1-ssl-df"'
   last_checked: '2026-09-16T00:48:12+00:00'
 - organization: Government of Canada
@@ -961,7 +978,7 @@
   start_urls:
   - https://v2.grommet.io/
   pages_indexed: 7
-  resources: &id003
+  resources:
     github:
     - https://github.com/grommet/grommet-starter-existing-app
     - https://github.com/grommet/grommet-starter-new-app
@@ -982,7 +999,7 @@
   hit_max_pages: true
   crawl_error: ''
   likely_spa: false
-  github_meta: &id004
+  github_meta:
     license: Apache-2.0
     stars: 84
     last_pushed: '2023-01-10T03:27:49Z'
@@ -991,13 +1008,33 @@
 - organization: Hewlett Packard
   design_system: Grommet
   start_urls:
-  - https://grommet.io/
+  - https://v2.grommet.io/
   pages_indexed: 7
-  resources: *id003
+  resources:
+    github:
+    - https://github.com/grommet/grommet-starter-existing-app
+    - https://github.com/grommet/grommet-starter-new-app
+    - https://github.com/grommet/grommet
+    storybook:
+    - https://storybook.grommet.io/?path=/story/Layout-Box
+    - https://storybook.grommet.io/?path=/story/Layout-Grid
+    icons:
+    - https://icons.grommet.io
+    - https://v2.grommet.io/icons
+    agent_instructions:
+    - https://v2.grommet.io/llms.txt
+    - https://v2.grommet.io/llms-full.txt
+    - https://v2.grommet.io/AGENTS.md
+    - https://v2.grommet.io/CLAUDE.md
+    mcp:
+    - https://v2.grommet.io/.well-known/mcp.json
   hit_max_pages: true
   crawl_error: ''
   likely_spa: false
-  github_meta: *id004
+  github_meta:
+    license: Apache-2.0
+    stars: 84
+    last_pushed: '2023-01-10T03:27:49Z'
   etag: '"2bf20c8558a1c61aa84a15c6be85e9f5-ssl-df"'
   last_checked: '2026-09-16T00:50:38+00:00'
 - organization: Hubspot
@@ -1129,9 +1166,14 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: W/"6aa853a3-c51"
-  last_modified: Mon, 14 Sep 2026 20:05:55 GMT
-  last_checked: '2026-09-15T22:22:19+00:00'
+  etag: W/"6aa853a4-c51"
+  last_modified: Mon, 14 Sep 2026 20:05:56 GMT
+  last_checked: '2026-09-16T02:36:55+00:00'
+  unverified_resources: {}
+  content_signals:
+    accessibility_conformance: WCAG 2.1 AA
+    frameworks:
+    - React
 - organization: Intuit
   design_system: Design system
   start_urls:
@@ -1555,7 +1597,7 @@
 - organization: MongoDB
   design_system: MongoDB Design System
   start_urls:
-  - https://mongodb.design/
+  - https://www.mongodb.design/
 - organization: Monzo
   design_system: Monzo Tone of Voice
   start_urls:
@@ -1928,7 +1970,7 @@
 - organization: Priceline
   design_system: Priceline One
   start_urls:
-  - https://priceline.github.io/design-system/
+  - https://pricelinelabs.github.io/design-system/
 - organization: Pusher
   design_system: Chameleon
   start_urls:
@@ -2454,7 +2496,7 @@
 - organization: Skyscanner
   design_system: Backpack
   start_urls:
-  - https://backpack.github.io/
+  - https://skyscanner.design/
 - organization: SpareBank 1
   design_system: SpareBank 1 Designsystem
   start_urls:

@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "mailchimp-mailchimp-content-styleguide",
+  "organization": "MailChimp",
+  "design_system": "Mailchimp Content Styleguide",
+  "full_name": "MailChimp — Mailchimp Content Styleguide",
+  "start_urls": [
+    "https://styleguide.mailchimp.com/"
+  ],
+  "detail_url": "/systems/mailchimp-mailchimp-content-styleguide",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:42:46+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/mailchimp/content-style-guide"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 557,
+    "last_pushed": "2022-05-04T22:34:54Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

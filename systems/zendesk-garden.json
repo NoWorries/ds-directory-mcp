@@ -1,0 +1,25 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "zendesk-garden",
+  "organization": "Zendesk",
+  "design_system": "Garden",
+  "full_name": "Zendesk — Garden",
+  "start_urls": [
+    "https://garden.zendesk.com/"
+  ],
+  "detail_url": "/systems/zendesk-garden",
+  "pages_indexed": 5,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:39:04+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

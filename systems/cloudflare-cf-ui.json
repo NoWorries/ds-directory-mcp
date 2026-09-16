@@ -1,0 +1,25 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "cloudflare-cf-ui",
+  "organization": "Cloudflare",
+  "design_system": "CF-UI",
+  "full_name": "Cloudflare — CF-UI",
+  "start_urls": [
+    "https://cloudflare.github.io/cf-ui/"
+  ],
+  "detail_url": "/systems/cloudflare-cf-ui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:40:54+00:00",
+  "last_modified": "Mon, 25 Sep 2017 19:39:08 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

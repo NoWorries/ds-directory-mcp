@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "pega-digital-bolt-design-system",
+  "organization": "Pega Digital",
+  "design_system": "Bolt Design System",
+  "full_name": "Pega Digital — Bolt Design System",
+  "start_urls": [
+    "https://boltdesignsystem.com/"
+  ],
+  "detail_url": "/systems/pega-digital-bolt-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:22:27+00:00",
+  "last_modified": "Tue, 21 Jul 2026 07:01:26 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://boltdesignsystem.com/llms.txt",
+      "https://boltdesignsystem.com/llms-full.txt",
+      "https://boltdesignsystem.com/AGENTS.md",
+      "https://boltdesignsystem.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://boltdesignsystem.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

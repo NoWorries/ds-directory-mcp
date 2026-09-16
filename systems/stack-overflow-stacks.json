@@ -1,0 +1,40 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "stack-overflow-stacks",
+  "organization": "Stack Overflow",
+  "design_system": "Stacks",
+  "full_name": "Stack Overflow — Stacks",
+  "start_urls": [
+    "https://stackoverflow.design/"
+  ],
+  "detail_url": "/systems/stack-overflow-stacks",
+  "pages_indexed": 2,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:00:25+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/StackExchange/Stacks"
+    ],
+    "icons": [
+      "https://stackoverflow.design/resources/icons/"
+    ],
+    "agent_instructions": [
+      "https://stackoverflow.design/llms.txt",
+      "https://stackoverflow.design/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 672,
+    "last_pushed": "2026-09-15T21:10:32Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

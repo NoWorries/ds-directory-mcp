@@ -1,0 +1,29 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "sprout-social-seeds",
+  "organization": "Sprout Social",
+  "design_system": "Seeds",
+  "full_name": "Sprout Social — Seeds",
+  "start_urls": [
+    "https://sproutsocial.com/seeds/"
+  ],
+  "detail_url": "/systems/sprout-social-seeds",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T21:59:46+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://sproutsocial.com/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

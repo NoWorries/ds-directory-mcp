@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "australian-open-source-community-gold-design-system",
+  "organization": "Australian Open Source Community",
+  "design_system": "GOLD Design System",
+  "full_name": "Australian Open Source Community — GOLD Design System",
+  "start_urls": [
+    "https://gold.designsystemau.org/"
+  ],
+  "detail_url": "/systems/australian-open-source-community-gold-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T21:58:45+00:00",
+  "last_modified": "Mon, 10 Aug 2026 06:03:16 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://gold.designsystemau.org/llms.txt",
+      "https://gold.designsystemau.org/llms-full.txt",
+      "https://gold.designsystemau.org/AGENTS.md",
+      "https://gold.designsystemau.org/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://gold.designsystemau.org/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "buzzfeed-solid-style-guide",
+  "organization": "BuzzFeed",
+  "design_system": "Solid Style Guide",
+  "full_name": "BuzzFeed — Solid Style Guide",
+  "start_urls": [
+    "https://solid.buzzfeed.com/"
+  ],
+  "detail_url": "/systems/buzzfeed-solid-style-guide",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:40:00+00:00",
+  "last_modified": "Mon, 22 Apr 2024 16:35:43 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/buzzfeed/solid",
+      "https://gist.github.com/samthurman/ca90a195e9d1925b53630bb904d194ce",
+      "https://github.com/sindresorhus/grunt-sass"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 137,
+    "last_pushed": "2025-12-22T15:14:34Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

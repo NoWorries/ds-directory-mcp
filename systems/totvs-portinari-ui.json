@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "totvs-portinari-ui",
+  "organization": "TOTVS",
+  "design_system": "Portinari UI",
+  "full_name": "TOTVS — Portinari UI",
+  "start_urls": [
+    "https://po-ui.io/"
+  ],
+  "detail_url": "/systems/totvs-portinari-ui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:11:01+00:00",
+  "last_modified": "Tue, 15 Sep 2026 20:42:18 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://po-ui.io/llms.txt",
+      "https://po-ui.io/llms-full.txt",
+      "https://po-ui.io/AGENTS.md",
+      "https://po-ui.io/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://po-ui.io/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

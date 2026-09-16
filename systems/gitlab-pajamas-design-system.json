@@ -1,0 +1,36 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "gitlab-pajamas-design-system",
+  "organization": "GitLab",
+  "design_system": "Pajamas Design System",
+  "full_name": "GitLab — Pajamas Design System",
+  "start_urls": [
+    "https://design.gitlab.com/"
+  ],
+  "detail_url": "/systems/gitlab-pajamas-design-system",
+  "pages_indexed": 7,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:43:57+00:00",
+  "last_modified": "Tue, 15 Sep 2026 21:56:41 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://design.gitlab.com/storybook"
+    ],
+    "figma": [
+      "https://www.figma.com/file/qEddyqCrI7kPSBjGmwkZzQ/Pajamas-UI-Kit"
+    ],
+    "markdown_docs": [
+      "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/packages/gitlab-ui/CONTRIBUTING.md",
+      "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/README.md"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

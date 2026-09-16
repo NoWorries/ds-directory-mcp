@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "state-of-new-south-wales-digital-nsw",
+  "organization": "State of New South Wales",
+  "design_system": "Digital NSW",
+  "full_name": "State of New South Wales — Digital NSW",
+  "start_urls": [
+    "https://www.digital.nsw.gov.au/digital-design-system/"
+  ],
+  "detail_url": "/systems/state-of-new-south-wales-digital-nsw",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:02:27+00:00",
+  "last_modified": "Tue, 15 Sep 2026 22:02:19 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/digitalnsw/nsw-design-system"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 90,
+    "last_pushed": "2026-09-15T06:05:09Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

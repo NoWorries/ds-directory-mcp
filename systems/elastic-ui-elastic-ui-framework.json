@@ -1,0 +1,29 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "elastic-ui-elastic-ui-framework",
+  "organization": "Elastic UI",
+  "design_system": "Elastic UI Framework",
+  "full_name": "Elastic UI — Elastic UI Framework",
+  "start_urls": [
+    "https://elastic.github.io/eui/"
+  ],
+  "detail_url": "/systems/elastic-ui-elastic-ui-framework",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:43:03+00:00",
+  "last_modified": "Mon, 14 Sep 2026 15:50:05 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://elastic.github.io/eui/docs/components/display/icons/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

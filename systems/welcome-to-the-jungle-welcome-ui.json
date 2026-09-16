@@ -1,0 +1,38 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "welcome-to-the-jungle-welcome-ui",
+  "organization": "Welcome to the Jungle",
+  "design_system": "Welcome UI",
+  "full_name": "Welcome to the Jungle — Welcome UI",
+  "start_urls": [
+    "https://www.welcome-ui.com/"
+  ],
+  "detail_url": "/systems/welcome-to-the-jungle-welcome-ui",
+  "pages_indexed": 2,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:29:29+00:00",
+  "last_modified": "Tue, 15 Sep 2026 13:11:29 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://www.welcome-ui.com/components/icon"
+    ],
+    "agent_instructions": [
+      "https://www.welcome-ui.com/llms.txt",
+      "https://www.welcome-ui.com/llms-full.txt",
+      "https://www.welcome-ui.com/AGENTS.md",
+      "https://www.welcome-ui.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://www.welcome-ui.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

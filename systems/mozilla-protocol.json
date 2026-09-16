@@ -1,0 +1,39 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "mozilla-protocol",
+  "organization": "Mozilla",
+  "design_system": "Protocol",
+  "full_name": "Mozilla — Protocol",
+  "start_urls": [
+    "https://protocol.mozilla.org/"
+  ],
+  "detail_url": "/systems/mozilla-protocol",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T21:56:29+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/mozilla/protocol"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@mozilla-protocol/core"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MPL-2.0",
+    "stars": 297,
+    "last_pushed": "2026-09-15T16:46:32Z"
+  },
+  "npm_meta": {
+    "latest_version": "22.0.0",
+    "weekly_downloads": 912
+  },
+  "indexed_pages": []
+}

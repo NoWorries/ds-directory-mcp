@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "siemens-ix",
+  "organization": null,
+  "design_system": "Siemens iX",
+  "full_name": "Siemens iX",
+  "start_urls": [
+    "https://ix.siemens.io/"
+  ],
+  "detail_url": "/systems/siemens-ix",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:54:32+00:00",
+  "last_modified": "Wed, 09 Sep 2026 07:20:45 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://ix.siemens.io/llms.txt",
+      "https://ix.siemens.io/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

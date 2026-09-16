@@ -1,0 +1,37 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "thumbtack-thumbprint",
+  "organization": "Thumbtack",
+  "design_system": "Thumbprint",
+  "full_name": "Thumbtack — Thumbprint",
+  "start_urls": [
+    "https://thumbprint.design/"
+  ],
+  "detail_url": "/systems/thumbtack-thumbprint",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:09:01+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/thumbtack/thumbprint"
+    ],
+    "icons": [
+      "https://thumbprint.design/internal/icons",
+      "https://thumbprint.design/icons/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 12,
+    "last_pushed": "2025-08-21T16:16:00Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

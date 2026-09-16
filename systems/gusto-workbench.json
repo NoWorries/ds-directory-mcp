@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "gusto-workbench",
+  "organization": "Gusto",
+  "design_system": "Workbench",
+  "full_name": "Gusto — Workbench",
+  "start_urls": [
+    "https://workbench.gusto.com/"
+  ],
+  "detail_url": "/systems/gusto-workbench",
+  "pages_indexed": 6,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:04:04+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://workbench.gusto.com/llms.txt",
+      "https://workbench.gusto.com/llms-full.txt",
+      "https://workbench.gusto.com/AGENTS.md",
+      "https://workbench.gusto.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://workbench.gusto.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

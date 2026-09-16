@@ -1,0 +1,39 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "transport-for-west-midlands",
+  "organization": null,
+  "design_system": "Transport for West Midlands",
+  "full_name": "Transport for West Midlands",
+  "start_urls": [
+    "https://designsystem.tfwm.org.uk/"
+  ],
+  "detail_url": "/systems/transport-for-west-midlands",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:10:46+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/alphagov/govuk-design-system-backlog"
+    ],
+    "markdown_docs": [
+      "https://github.com/wmcadigital/wmn-design-system/blob/master/doc/contributing.md"
+    ],
+    "icons": [
+      "https://designsystem.tfwm.org.uk/styles/icons"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": null,
+    "stars": 46,
+    "last_pushed": "2026-09-09T13:45:34Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

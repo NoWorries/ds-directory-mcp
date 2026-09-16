@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "government-of-canada-canada-ca-design-system",
+  "organization": "Government of Canada",
+  "design_system": "Canada.ca design system",
+  "full_name": "Government of Canada — Canada.ca design system",
+  "start_urls": [
+    "https://www.canada.ca/en/government/about/design-system.html"
+  ],
+  "detail_url": "/systems/government-of-canada-canada-ca-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:02:13+00:00",
+  "last_modified": "Tue, 15 Sep 2026 18:12:08 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://www.canada.ca/llms.txt",
+      "https://www.canada.ca/llms-full.txt",
+      "https://www.canada.ca/AGENTS.md",
+      "https://www.canada.ca/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://www.canada.ca/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

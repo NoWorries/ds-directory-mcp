@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "italian-public-administration-it-designers-italy",
+  "organization": "Italian Public Administration",
+  "design_system": ".it Designers Italy",
+  "full_name": "Italian Public Administration — .it Designers Italy",
+  "start_urls": [
+    "https://designers.italia.it/"
+  ],
+  "detail_url": "/systems/italian-public-administration-it-designers-italy",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:49:37+00:00",
+  "last_modified": "Tue, 15 Sep 2026 10:27:36 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/italia/feedback.designers.italia.it"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "BSD-3-Clause",
+    "stars": 2,
+    "last_pushed": "2026-03-26T09:00:36Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

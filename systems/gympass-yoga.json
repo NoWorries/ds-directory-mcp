@@ -1,0 +1,25 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "gympass-yoga",
+  "organization": "Gympass",
+  "design_system": "Yoga",
+  "full_name": "Gympass — Yoga",
+  "start_urls": [
+    "https://gympass.github.io/yoga/"
+  ],
+  "detail_url": "/systems/gympass-yoga",
+  "pages_indexed": 5,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:04:27+00:00",
+  "last_modified": "Mon, 14 Sep 2026 13:44:37 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

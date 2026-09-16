@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "nulogy-nulogy-design-system",
+  "organization": "Nulogy",
+  "design_system": "Nulogy Design System",
+  "full_name": "Nulogy — Nulogy Design System",
+  "start_urls": [
+    "https://nulogy.design/"
+  ],
+  "detail_url": "/systems/nulogy-nulogy-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:15:23+00:00",
+  "last_modified": "Fri, 04 Nov 2022 15:26:29 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://fonts.google.com/icons",
+      "https://nulogy.design/components/icon"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

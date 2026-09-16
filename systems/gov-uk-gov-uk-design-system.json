@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "gov-uk-gov-uk-design-system",
+  "organization": "GOV.UK",
+  "design_system": "GOV.UK Design System",
+  "full_name": "GOV.UK — GOV.UK Design System",
+  "start_urls": [
+    "https://design-system.service.gov.uk/"
+  ],
+  "detail_url": "/systems/gov-uk-gov-uk-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T00:48:12+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/alphagov/accessible-autocomplete"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 954,
+    "last_pushed": "2026-09-15T10:15:18Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

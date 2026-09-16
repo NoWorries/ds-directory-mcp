@@ -1,0 +1,32 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "duolingo-design-guidelines",
+  "organization": "Duolingo",
+  "design_system": "Design guidelines",
+  "full_name": "Duolingo — Design guidelines",
+  "start_urls": [
+    "https://www.duolingo.com/design/"
+  ],
+  "detail_url": "/systems/duolingo-design-guidelines",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:34:58+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://www.duolingo.com/llms.txt",
+      "https://www.duolingo.com/llms-full.txt",
+      "https://www.duolingo.com/AGENTS.md",
+      "https://www.duolingo.com/CLAUDE.md"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

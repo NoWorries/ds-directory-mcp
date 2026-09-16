@@ -1,0 +1,54 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "datadog-druids",
+  "organization": "Datadog",
+  "design_system": "Druids",
+  "full_name": "Datadog — Druids",
+  "start_urls": [
+    "https://druids.datadoghq.com/"
+  ],
+  "detail_url": "/systems/datadog-druids",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T02:39:30+00:00",
+  "last_modified": "Wed, 16 Sep 2026 00:00:40 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "copilot_instructions": [
+      "https://druids.datadoghq.com/.github/copilot-instructions.md"
+    ],
+    "cursor_rules": [
+      "https://druids.datadoghq.com/.cursorrules",
+      "https://druids.datadoghq.com/.cursor/rules"
+    ],
+    "agent_instructions": [
+      "https://druids.datadoghq.com/llms.txt",
+      "https://druids.datadoghq.com/llms-full.txt",
+      "https://druids.datadoghq.com/AGENTS.md",
+      "https://druids.datadoghq.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://druids.datadoghq.com/.well-known/mcp.json"
+    ],
+    "registry": [
+      "https://druids.datadoghq.com/registry.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://druids.datadoghq.com/llms.txt",
+      "title": "Datadog — Druids — llms.txt"
+    }
+  ]
+}

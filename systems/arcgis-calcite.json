@@ -1,0 +1,41 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "arcgis-calcite",
+  "organization": "ArcGIS",
+  "design_system": "Calcite",
+  "full_name": "ArcGIS — Calcite",
+  "start_urls": [
+    "https://developers.arcgis.com/calcite-design-system/"
+  ],
+  "detail_url": "/systems/arcgis-calcite",
+  "pages_indexed": 29,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": null,
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "npm": [
+      "https://www.npmjs.com/package/@esri/calcite-components-react",
+      "https://www.npmjs.com/package/@esri/calcite-components"
+    ],
+    "icons": [
+      "https://developers.arcgis.com/calcite-design-system/components/icon/",
+      "https://developers.arcgis.com/calcite-design-system/icons/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 373,
+    "last_pushed": "2026-09-13T13:57:42Z"
+  },
+  "npm_meta": {
+    "latest_version": "5.1.2",
+    "weekly_downloads": 4054
+  },
+  "indexed_pages": []
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "aws-amplify-amplify-ui",
+  "organization": "AWS Amplify",
+  "design_system": "Amplify UI",
+  "full_name": "AWS Amplify — Amplify UI",
+  "start_urls": [
+    "https://ui.docs.amplify.aws/"
+  ],
+  "detail_url": "/systems/aws-amplify-amplify-ui",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:03:43+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://ui.docs.amplify.aws/react/components/icon"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

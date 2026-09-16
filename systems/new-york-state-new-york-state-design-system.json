@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "new-york-state-new-york-state-design-system",
+  "organization": "New York State",
+  "design_system": "New York State Design System",
+  "full_name": "New York State — New York State Design System",
+  "start_urls": [
+    "http://designsystem.ny.gov/"
+  ],
+  "detail_url": "/systems/new-york-state-new-york-state-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:04:46+00:00",
+  "last_modified": "Fri, 11 Sep 2026 15:35:29 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/ITS-HCD/nysds-fonts",
+      "https://github.com/ITS-HCD/nysds"
+    ],
+    "figma": [
+      "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

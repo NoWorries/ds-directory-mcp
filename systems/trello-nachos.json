@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "trello-nachos",
+  "organization": "Trello",
+  "design_system": "Nachos",
+  "full_name": "Trello — Nachos",
+  "start_urls": [
+    "https://design.trello.com/"
+  ],
+  "detail_url": "/systems/trello-nachos",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T00:04:44+00:00",
+  "last_modified": "Tue, 15 Sep 2026 03:08:46 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://design.trello.com/llms.txt",
+      "https://design.trello.com/llms-full.txt",
+      "https://design.trello.com/AGENTS.md",
+      "https://design.trello.com/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://design.trello.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

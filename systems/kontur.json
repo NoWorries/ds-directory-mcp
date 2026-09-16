@@ -1,0 +1,38 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "kontur",
+  "organization": null,
+  "design_system": "Kontur",
+  "full_name": "Kontur",
+  "start_urls": [
+    "https://guides.kontur.ru/"
+  ],
+  "detail_url": "/systems/kontur",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:33:55+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://guides.kontur.ru/re/sources/icons/"
+    ],
+    "agent_instructions": [
+      "https://guides.kontur.ru/llms.txt",
+      "https://guides.kontur.ru/llms-full.txt",
+      "https://guides.kontur.ru/AGENTS.md",
+      "https://guides.kontur.ru/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://guides.kontur.ru/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

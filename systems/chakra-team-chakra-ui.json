@@ -1,0 +1,45 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "chakra-team-chakra-ui",
+  "organization": "Chakra team",
+  "design_system": "Chakra UI",
+  "full_name": "Chakra team — Chakra UI",
+  "start_urls": [
+    "https://chakra-ui.com/"
+  ],
+  "detail_url": "/systems/chakra-team-chakra-ui",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:40:58+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/chakra-ui/zag",
+      "https://github.com/chakra-ui/chakra-ui",
+      "https://github.com/chakra-ui/ark"
+    ],
+    "storybook": [
+      "https://chakra-ui.com/docs/get-started/frameworks/storybook"
+    ],
+    "mcp": [
+      "https://chakra-ui.com/docs/get-started/ai/mcp-server"
+    ],
+    "agent_instructions": [
+      "https://chakra-ui.com/llms-full.txt",
+      "https://chakra-ui.com/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 5206,
+    "last_pushed": "2026-09-15T20:20:21Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

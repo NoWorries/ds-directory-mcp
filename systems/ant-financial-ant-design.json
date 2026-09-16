@@ -1,0 +1,57 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "ant-financial-ant-design",
+  "organization": "Ant Financial",
+  "design_system": "Ant Design",
+  "full_name": "Ant Financial — Ant Design",
+  "start_urls": [
+    "https://ant.design/"
+  ],
+  "detail_url": "/systems/ant-financial-ant-design",
+  "pages_indexed": 30,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-13T22:42:03+00:00",
+  "last_modified": "Mon, 07 Sep 2026 08:49:44 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/ant-design/ant-design-icons",
+      "https://github.com/ant-design/ant-design-cli",
+      "https://github.com/atomui/atomui",
+      "https://github.com/yarnpkg/yarn/",
+      "https://github.com/websemantics/awesome-ant-design",
+      "https://github.com/ant-design/ant-design-colors",
+      "https://github.com/priornix/antizer",
+      "https://github.com/cnpm/cnpm"
+    ],
+    "markdown_docs": [
+      "https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@ant-design/colors"
+    ],
+    "icons": [
+      "https://ant.design/docs/spec/icon",
+      "https://ant.design/components/icon"
+    ],
+    "agent_instructions": [
+      "https://ant.design/llms.txt",
+      "https://ant.design/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 1090,
+    "last_pushed": "2026-08-31T09:33:32Z"
+  },
+  "npm_meta": {
+    "latest_version": "8.0.1",
+    "weekly_downloads": 3394966
+  },
+  "indexed_pages": []
+}

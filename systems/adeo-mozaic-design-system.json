@@ -1,0 +1,29 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "adeo-mozaic-design-system",
+  "organization": "Adeo",
+  "design_system": "Mozaic Design System",
+  "full_name": "Adeo — Mozaic Design System",
+  "start_urls": [
+    "https://mozaic.adeo.cloud/"
+  ],
+  "detail_url": "/systems/adeo-mozaic-design-system",
+  "pages_indexed": 30,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-13T22:41:54+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://mozaic.adeo.cloud/foundations/icons/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "canonical-vanilla-framework",
+  "organization": "Canonical",
+  "design_system": "Vanilla framework",
+  "full_name": "Canonical — Vanilla framework",
+  "start_urls": [
+    "https://vanillaframework.io/"
+  ],
+  "detail_url": "/systems/canonical-vanilla-framework",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:21:41+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/canonical/dotrun",
+      "https://github.com/marketplace/axe-linter",
+      "https://github.com/canonical/vanilla-framework"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@axe-core/cli",
+      "https://www.npmjs.com/package/vanilla-framework"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": null,
+    "stars": 40,
+    "last_pushed": "2026-09-08T23:40:18Z"
+  },
+  "npm_meta": {
+    "latest_version": "4.13.0",
+    "weekly_downloads": 72450
+  },
+  "indexed_pages": []
+}

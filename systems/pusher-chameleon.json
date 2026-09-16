@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "pusher-chameleon",
+  "organization": "Pusher",
+  "design_system": "Chameleon",
+  "full_name": "Pusher — Chameleon",
+  "start_urls": [
+    "https://pusher.github.io/chameleon/"
+  ],
+  "detail_url": "/systems/pusher-chameleon",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:29:11+00:00",
+  "last_modified": "Wed, 25 Jan 2017 15:28:01 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/pusher/chameleon"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 34,
+    "last_pushed": "2024-02-29T01:18:30Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

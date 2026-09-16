@@ -1,0 +1,37 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "localtapiola-duet",
+  "organization": "LocalTapiola",
+  "design_system": "Duet",
+  "full_name": "LocalTapiola — Duet",
+  "start_urls": [
+    "https://www.duetds.com/"
+  ],
+  "detail_url": "/systems/localtapiola-duet",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:50:39+00:00",
+  "last_modified": "Tue, 15 Sep 2026 13:17:23 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/duetds/duet-example-angular",
+      "https://github.com/duetds/duet-example-react"
+    ],
+    "icons": [
+      "https://www.duetds.com/components/icon/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 6,
+    "last_pushed": "2022-03-02T14:15:13Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

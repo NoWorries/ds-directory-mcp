@@ -1,0 +1,45 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "aws-cloudscape-design-system",
+  "organization": "AWS",
+  "design_system": "Cloudscape Design System",
+  "full_name": "AWS — Cloudscape Design System",
+  "start_urls": [
+    "https://cloudscape.design/"
+  ],
+  "detail_url": "/systems/aws-cloudscape-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:01:29+00:00",
+  "last_modified": "Tue, 15 Sep 2026 18:42:52 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/cloudscape-design/components"
+    ],
+    "markdown_docs": [
+      "https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md"
+    ],
+    "icons": [
+      "https://github.com/cloudscape-design/components/blob/main/src/icon/icons/heart-filled.svg?short_path=c950a38",
+      "https://cloudscape.design/components/icon/",
+      "https://github.com/cloudscape-design/components/blob/main/src/icon/icons/status-in-progress.svg?short_path=4cc6c19",
+      "https://github.com/cloudscape-design/components/blob/main/src/icon/icons/external.svg?short_path=cefcf88"
+    ],
+    "agent_instructions": [
+      "https://cloudscape.design/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 2647,
+    "last_pushed": "2026-09-15T16:52:43Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

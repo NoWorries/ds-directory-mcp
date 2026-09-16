@@ -1,0 +1,36 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "u-s-government-u-s-web-design-system",
+  "organization": "U.S. Government",
+  "design_system": "U.S. Web Design System",
+  "full_name": "U.S. Government — U.S. Web Design System",
+  "start_urls": [
+    "https://designsystem.digital.gov/"
+  ],
+  "detail_url": "/systems/u-s-government-u-s-web-design-system",
+  "pages_indexed": 7,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:15:24+00:00",
+  "last_modified": "Fri, 28 Aug 2026 03:22:05 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/postcss/autoprefixer"
+    ],
+    "agent_instructions": [
+      "https://designsystem.digital.gov/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 22229,
+    "last_pushed": "2026-09-15T13:44:00Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

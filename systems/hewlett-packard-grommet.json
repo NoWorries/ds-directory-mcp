@@ -1,0 +1,52 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "hewlett-packard-grommet",
+  "organization": "Hewlett Packard",
+  "design_system": "Grommet",
+  "full_name": "Hewlett Packard — Grommet",
+  "start_urls": [
+    "https://v2.grommet.io/"
+  ],
+  "detail_url": "/systems/hewlett-packard-grommet",
+  "pages_indexed": 7,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T00:50:38+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/grommet/grommet-starter-existing-app",
+      "https://github.com/grommet/grommet-starter-new-app",
+      "https://github.com/grommet/grommet"
+    ],
+    "storybook": [
+      "https://storybook.grommet.io/?path=/story/Layout-Box",
+      "https://storybook.grommet.io/?path=/story/Layout-Grid"
+    ],
+    "icons": [
+      "https://icons.grommet.io",
+      "https://v2.grommet.io/icons"
+    ],
+    "agent_instructions": [
+      "https://v2.grommet.io/llms.txt",
+      "https://v2.grommet.io/llms-full.txt",
+      "https://v2.grommet.io/AGENTS.md",
+      "https://v2.grommet.io/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://v2.grommet.io/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 84,
+    "last_pushed": "2023-01-10T03:27:49Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

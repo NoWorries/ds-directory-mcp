@@ -1,0 +1,34 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "contentful-forma-36",
+  "organization": "Contentful",
+  "design_system": "Forma 36",
+  "full_name": "Contentful — Forma 36",
+  "start_urls": [
+    "https://f36.contentful.com/"
+  ],
+  "detail_url": "/systems/contentful-forma-36",
+  "pages_indexed": 5,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:28:39+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/contentful/forma-36",
+      "https://github.com/changesets/changesets"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 361,
+    "last_pushed": "2026-09-15T22:21:19Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

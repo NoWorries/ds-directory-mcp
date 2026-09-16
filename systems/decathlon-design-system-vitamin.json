@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "decathlon-design-system-vitamin",
+  "organization": "Decathlon",
+  "design_system": "Design System - Vitamin",
+  "full_name": "Decathlon — Design System - Vitamin",
+  "start_urls": [
+    "https://decathlon.design/"
+  ],
+  "detail_url": "/systems/decathlon-design-system-vitamin",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T23:41:19+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://decathlon.design/llms.txt",
+      "https://decathlon.design/llms-full.txt",
+      "https://decathlon.design/AGENTS.md",
+      "https://decathlon.design/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://decathlon.design/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

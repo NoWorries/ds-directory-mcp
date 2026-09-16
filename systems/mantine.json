@@ -1,0 +1,75 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "mantine",
+  "organization": null,
+  "design_system": "Mantine",
+  "full_name": "Mantine",
+  "start_urls": [
+    "https://mantine.dev/"
+  ],
+  "detail_url": "/systems/mantine",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:45:23+00:00",
+  "last_modified": "Wed, 09 Sep 2026 13:26:36 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/mantinedev/next-pages-template",
+      "https://github.com/tylim88/Tanstack-Start-Mantine-Tailwind-Template",
+      "https://github.com/KennethAduan/kenstack-bun-nextjs-mantine/",
+      "https://github.com/mantinedev/redwood-template",
+      "https://github.com/doiska/waku-mantine-starter",
+      "https://github.com/dipiash/nx-vite-react-ts-mantine-boilerplate",
+      "https://github.com/auronvila/mantine-template",
+      "https://github.com/gfazioli/next-app-nextra-template",
+      "https://github.com/mantinedev/next-app-template",
+      "https://github.com/paralect/ship",
+      "https://github.com/ynssenem/next-mantine-turborepo",
+      "https://github.com/mantinedev/next-vanilla-extract-template",
+      "https://github.com/gfazioli/next-app-fumadocs-template",
+      "https://github.com/AshutoshDash1999/nextjs-mantine-boilerplate",
+      "https://github.com/LewisDamy/bun-vite-template",
+      "https://github.com/WillKirkmanM/mantine-t3-template",
+      "https://github.com/saulotarsobc/sc-electron-boilerplate",
+      "https://github.com/mantinedev/vite-template",
+      "https://github.com/LanVukusic/mantine-supabase-template",
+      "https://github.com/mantinedev/vite-vanilla-extract-template",
+      "https://github.com/mantinedev/vite-min-template",
+      "https://github.com/mantinedev/next-pages-min-template",
+      "https://github.com/mantinedev/gatsby-template",
+      "https://github.com/songkeys/next-app-mantine-tailwind-template",
+      "https://github.com/mantinedev/next-app-min-template",
+      "https://github.com/samui-build/react-router-mantine",
+      "https://github.com/mantinedev/extension-template",
+      "https://github.com/mantinedev/mantine"
+    ],
+    "storybook": [
+      "https://mantine.dev/guides/storybook/",
+      "https://storybook.js.org/"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@mantine/hooks",
+      "https://www.npmjs.com/package/@mantine/form"
+    ],
+    "agent_instructions": [
+      "https://mantine.dev/llms.txt",
+      "https://mantine.dev/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 512,
+    "last_pushed": "2026-09-13T07:14:32Z"
+  },
+  "npm_meta": {
+    "latest_version": "9.6.1",
+    "weekly_downloads": 1960761
+  },
+  "indexed_pages": []
+}

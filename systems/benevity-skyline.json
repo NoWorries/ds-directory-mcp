@@ -1,0 +1,32 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-16T02:40:11+00:00",
+  "id": "benevity-skyline",
+  "organization": "Benevity",
+  "design_system": "Skyline",
+  "full_name": "Benevity — Skyline",
+  "start_urls": [
+    "https://skyline.benevity.org/"
+  ],
+  "detail_url": "/systems/benevity-skyline",
+  "pages_indexed": 8,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:10:14+00:00",
+  "last_modified": "Thu, 26 Oct 2023 22:55:47 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "figma": [
+      "https://www.figma.com/proto/KO7hp8rwUXq1s7DvAU25Wr/Skyline-A-Z-Product-Glossary?node-id=61%3A2454&viewport=-80%2C459%2C0.12735266983509064&scaling=scale-down-width"
+    ],
+    "icons": [
+      "https://skyline.benevity.org/components/images-and-icons/icons/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}
