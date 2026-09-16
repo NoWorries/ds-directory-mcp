@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "estonia-brand-estonia",
   "organization": "Estonia",
   "design_system": "Brand Estonia",
@@ -9,17 +9,200 @@
     "https://brand.estonia.ee/"
   ],
   "detail_url": "/systems/estonia-brand-estonia",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 41,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:44:25+00:00",
+  "last_checked": "2026-09-16T12:10:55+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
-  "resources": {},
+  "resources": {
+    "figma": [
+      "https://www.figma.com/design/27fMG3SrUcYhLhyNTmsuV3/%F0%9F%92%8E-DDS-2.0---WIP?node-id=27109-14046&t=Eu83DauGADOHZybD-1",
+      "https://www.figma.com/design/A1xWacpiD78gQSVpaXwjLV/%F0%9F%94%B7-Brand---Logos?node-id=3493-3498&t=rrCfX3p6OyjTYNkE-1",
+      "https://www.figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media?node-id=12823-396&t=08vLCR9227QY6Y4B-1",
+      "https://www.figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media?node-id=9967-977&t=08vLCR9227QY6Y4B-1",
+      "https://www.figma.com/design/27fMG3SrUcYhLhyNTmsuV3/%F0%9F%92%8E-DDS-2.0---WIP?node-id=22-1400&t=Eu83DauGADOHZybD-1",
+      "https://www.figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media?node-id=11426-799&t=08vLCR9227QY6Y4B-1",
+      "https://www.figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media?node-id=12489-3821&t=08vLCR9227QY6Y4B-1",
+      "https://www.figma.com/design/NZMXNJpfAvyw7GkdxaAexw/%F0%9F%94%B7-Brand---Shapes?node-id=3223-2026&t=GIARDKnjg3Ul0xST-1",
+      "https://www.figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media?node-id=12839-522&t=08vLCR9227QY6Y4B-1",
+      "https://www.figma.com/design/G4alDnApAMevLkdNKPG4fgRu/%F0%9F%94%B7-Brand---Icons?node-id=2658-3202&t=RNJ1NBpPvPNJ9enI-1"
+    ]
+  },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ],
+    "governance_model": true
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://brand.estonia.ee/inspiration-examples/meet-estonia-area-at-the-latitude59-conference",
+      "title": "\"Meet Estonia\" area at the Latitude59 conference"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/cleantech",
+      "title": "Cleantech"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/colors",
+      "title": "Colors"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/defence",
+      "title": "Defence"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/digital-marketing",
+      "title": "Digital marketing"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/e-estonia",
+      "title": "e-Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/inspiration-examples/e-residency-card-kit",
+      "title": "e-Residency card kit"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/education",
+      "title": "Education"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/electronics",
+      "title": "Electronics"
+    },
+    {
+      "url": "https://brand.estonia.ee/inspiration-examples/estonia-s-best-companies-awards-gala",
+      "title": "Estonia's best companies awards gala \"Stories that create\""
+    },
+    {
+      "url": "https://brand.estonia.ee/inspiration-examples/estonias-official-website-estonia-ee",
+      "title": "Estonia's official website estonia.ee"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand",
+      "title": "Estonian brand"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/estonian-security",
+      "title": "Estonian security"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/food-and-bevarage",
+      "title": "Food & beverage"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines",
+      "title": "Guidelines"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/healthtech",
+      "title": "Healthtech"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/icons-and-pictograms",
+      "title": "Icons and pictograms"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/ict",
+      "title": "ICT"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/illustrations",
+      "title": "Illustrations"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/imagery",
+      "title": "Imagery"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/industry",
+      "title": "Industry"
+    },
+    {
+      "url": "https://brand.estonia.ee/inspiration-examples",
+      "title": "Inspiring examples | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/logos",
+      "title": "Logos"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/machine",
+      "title": "Machine"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/maritime",
+      "title": "Maritime"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages",
+      "title": "Messages"
+    },
+    {
+      "url": "https://brand.estonia.ee/news/new-photo-and-video-series-about-estonia-s-success-stories-has-been-released",
+      "title": "New photo and video series about Estonia’s success stories has been released"
+    },
+    {
+      "url": "https://brand.estonia.ee/news/new-video-introducing-estonia-shows-that-what-is-normal-for-us-is-actually-exceptional",
+      "title": "New video introducing Estonia shows that what is normal for us is actually exceptional"
+    },
+    {
+      "url": "https://brand.estonia.ee/inspiration-examples/rooted-in-estonia",
+      "title": "Photo series \"Rooted in Estonia\""
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/shapes",
+      "title": "Shapes"
+    },
+    {
+      "url": "https://brand.estonia.ee/news/soft-power-index-2025-estonia-s-reputation-has-been-strengthened-most-by-values-based-foreign-relations",
+      "title": "Soft Power Index 2025: Estonia’s reputation has been strengthened most by values-based foreign relations"
+    },
+    {
+      "url": "https://brand.estonia.ee/",
+      "title": "Succeeding at change is our superpower"
+    },
+    {
+      "url": "https://brand.estonia.ee/inspiration-examples/the-estonia-introduction-video-normal",
+      "title": "The Estonia introduction video \"Normal\""
+    },
+    {
+      "url": "https://brand.estonia.ee/news/song-and-dance-celebration-brought-the-worlds-attention-to-estonia",
+      "title": "The Song and Dance Celebration brought the world’s attention to Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/tone-of-voice",
+      "title": "Tone of voice"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/tourism",
+      "title": "Tourism"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/typography",
+      "title": "Typography"
+    },
+    {
+      "url": "https://brand.estonia.ee/news/visit-estonia-director-anneli-lepp-i-show-speed-s-popularity-surprised-even-me-but-what-matters-is-trying-to-understand-not-to-judge",
+      "title": "Visit Estonia Director Anneli Lepp: IShowSpeed’s popularity surprised even me, but what matters is trying to understand, not to judge"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/web",
+      "title": "Web"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/wood",
+      "title": "Wood"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/work-in-estonia",
+      "title": "Work in Estonia"
+    }
+  ]
 }

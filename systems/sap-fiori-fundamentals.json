@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "sap-fiori-fundamentals",
   "organization": "SAP",
   "design_system": "Fiori Fundamentals",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:44:13+00:00",
+  "last_checked": "2026-09-16T14:08:37+00:00",
   "last_modified": "Sat, 23 May 2026 11:20:05 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -23,12 +23,22 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "Angular",
+      "Web Components"
+    ]
+  },
   "github_meta": {
     "license": "Apache-2.0",
     "stars": 294,
-    "last_pushed": "2026-09-15T16:41:38Z"
+    "last_pushed": "2026-09-16T12:46:22Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://sap.github.io/fundamental/",
+      "title": "Fundamental Library"
+    }
+  ]
 }

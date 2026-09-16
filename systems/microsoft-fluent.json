@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "microsoft-fluent",
   "organization": "Microsoft",
   "design_system": "Fluent",
@@ -9,17 +9,1166 @@
     "https://www.microsoft.com/design/fluent/"
   ],
   "detail_url": "/systems/microsoft-fluent",
-  "pages_indexed": 2,
+  "pages_indexed": 285,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:53:18+00:00",
+  "last_checked": "2026-09-16T13:40:55+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
-  "resources": {},
-  "unverified_resources": {},
+  "resources": {
+    "github": [
+      "https://github.com/features/copilot"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/features/copilot"
+    ]
+  },
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/responsible-ai-transparency-report/?ocid=cmmqy1qzyog&icid=mscom_marcom_CPAI1a_AITransparencyReport26",
+      "title": "2026 Responsible AI Transparency Report | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/learn-copilot-today",
+      "title": "30-Day AI Productivity Journey | Microsoft Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/rewards",
+      "title": "About – Microsoft Rewards"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/rewards/about",
+      "title": "About – Microsoft Rewards"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/accessibility",
+      "title": "Accessibility Technology & Tools | Microsoft Accessibility"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/dynamics-365",
+      "title": "Agentic CRM and ERP Solutions | Microsoft Dynamics 365"
+    },
+    {
+      "url": "https://www.microsoft.com/software-development-companies?icid=DSM_Footer_SoftwareCompanies&ocid=cmm3atxvn98",
+      "title": "AI & Tools for Software Companies | Software Development Companies"
+    },
+    {
+      "url": "https://www.microsoft.com/software-development-companies?icid=DSM_All_SoftwareCompanies&ocid=cmm3atxvn98",
+      "title": "AI & Tools for Software Companies | Software Development Companies"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/agents",
+      "title": "AI Agents for Individuals and Businesses | Microsoft Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/roadmap",
+      "title": "AI at Work Roadmap | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/chat",
+      "title": "AI Chat for Getting Work Done | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/enterprise",
+      "title": "AI for Enterprise Productivity | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/power-platform",
+      "title": "AI-Powered Development Tools | Microsoft Power Platform"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/mobility/automotive",
+      "title": "Automotive, mobility, and transportation solutions | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/financial-services/banking",
+      "title": "Banking Solutions-Cloud Financial Services | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/businessdevices",
+      "title": "Business Devices | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/active-matter/9mz1sk7h6lb6",
+      "title": "Buy Active Matter | XBOX"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/barkside-roads-bunny-pit-berry-cute-astro-herd-dispatch-meowgic-mix-bundle/9n7xhhw5hr9v",
+      "title": "Buy Barkside Roads + Bunny Pit Berry + Cute Astro + Herd Dispatch + Meowgic Mix (Bundle) | XBOX"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/final-fantasy-vii-remake-intergrade/9nrqvq7zrm7z",
+      "title": "Buy FINAL FANTASY VII REMAKE INTERGRADE | XBOX"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/final-fantasy-xvi/9pnn223h8mlz",
+      "title": "Buy FINAL FANTASY XVI | XBOX"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-family/cfq7ttc0k5dm",
+      "title": "Buy Microsoft 365 Family (formerly Office 365) - Subscription Price, Download | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-personal/cfq7ttc0k5bf",
+      "title": "Buy Microsoft 365 Personal (formerly Office 365) - Subscription Price | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-premium/cfq7ttc11z3q",
+      "title": "Buy Microsoft 365 Premium - Subscription Price, Download | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-pro/cfq7ttbzzcmc",
+      "title": "Buy Microsoft 365 Pro - Subscription Price, Download & AI Copilot | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/pc?icid=CNavDevicesPC",
+      "title": "Buy Microsoft Laptops, PC Computers, & Tablets Online | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xboxconsoles?icid=DSM_Gaming_Consoles_AllXboxConsoles_Slot01",
+      "title": "Buy New XBOX Series X|S Consoles - See Deals & Pricing | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-x-certified-refurbished/8q7bghmlgdjv",
+      "title": "Buy Refurbished XBOX Series X for Sale (See Used Price) - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/runescape-dragonwilds/9p402rwr63h4",
+      "title": "Buy RuneScape: Dragonwilds | XBOX"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/buy-surface-laptop",
+      "title": "Buy Surface Laptop - Compare Latest Models, Specs, Price | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/configure/surface-laptop-13-inch/8mzbmmcjzqv3?icid=mscom_marcom_PRCP2a_SurfaceLaptop13Offer",
+      "title": "Buy Surface Laptop, 13-inch (1st Edition) Price, Specs, Windows | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/configure/surface-laptop-13-inch/8mzbmmcjzqv3/3hfl",
+      "title": "Buy Surface Laptop, 13-inch (1st Edition) Price, Specs, Windows | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/configure/surface-laptop-13-8-inch-8th-edition/8mzbmmcjzpmf/6bj6",
+      "title": "Buy Surface Laptop, 13.8-in (8th Ed) Price, Specs, Windows | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/configure/surface-laptop-15-inch-8th-edition/8mzbmmcjzp9w/r7pn",
+      "title": "Buy Surface Laptop, 15-in (8th Ed) Price, Specs, Windows | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/configure/surface-pro-12-inch/8mzbmmcjzqv2?icid=mscom_marcom_PRCP1a_SurfacePro12inOffer",
+      "title": "Buy Surface Pro, 12-inch (1st Edition) 2-in-1 Laptop, Specs, Windows | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/surface-thunderbolt-4-dock/8x7cgh1n2tb2",
+      "title": "Buy Surface Thunderbolt 4 Dock (Ports, Compatibility, Price) - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-forza-horizon-6-limited-edition/8mzbmmcjzpb0?icid=DSM_Gaming_LFX_FH6Accessories&ocid=CMMJAI9RWU6",
+      "title": "Buy the Forza Horizon 6 Limited Edition Wireless Controller & Headset | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xbox-accessories?icid=DSM_UHF_Gaming_Accessories_AllXboxAccessories_Slot01",
+      "title": "Buy XBOX Accessories - Gaming Controllers, Headsets, & Peripherals | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/xbox-game-pass-ultimate/cfq7ttc0khs0?icid=mscom_marcom_PRCP6a_GamePass",
+      "title": "Buy Xbox Game Pass Ultimate — Xbox Game Pass Ultimate 1 Month | XBOX"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/xbox-gift-card-digital-code/cfq7ttc0k63h?icid=DSM_UHF_Gaming_GiftCards",
+      "title": "Buy XBOX Gift Card – Digital Code - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-s/942j774tp9jn",
+      "title": "Buy XBOX Series S Console_ See Specs, Price, Storage Size| Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-x/8wj714n3rbtl",
+      "title": "Buy XBOX Series X Console - See Price & Specs | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/XBOX-Wireless-Controller-Gears-of-War-E-Day-Limited-Edition/8wg5vqp0x4gw?icid=DSM_Gaming_LFX_XWCGearsOfWarEday&ocid=CMMMLJ0F8G2",
+      "title": "Buy XBOX Wireless Controller  - Gears of War: E-Day Limited Edition for XBOX Series X|S & Windows PC - See Price & Availability | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/certifiedrefurbishedxbox?icid=DSM_Gaming_Consoles_XboxCertifiedRefurbished_Slot04",
+      "title": "Certified Refurbished XBOX | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security",
+      "title": "Cloud Security Solutions | Microsoft Security"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration",
+      "title": "Collaborative Content Management, and Secure File Sharing | Microsoft SharePoint"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/copilot-vs-chatgpt-enterprise",
+      "title": "Compare Copilot vs. ChatGPT Enterprise | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/copilot-vs-claude-enterprise",
+      "title": "Compare Copilot vs. Claude Enterprise | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/copilot-vs-gemini-enterprise",
+      "title": "Compare Copilot vs. Gemini Enterprise | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/copilot-vs-the-competition",
+      "title": "Compare Copilot with Other AI Tools | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products?icid=mscom_marcom_PRCP3a_M365Compare2026",
+      "title": "Compare Microsoft 365 Plans & Pricing (Formerly Office 365) - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+      "title": "Compare Microsoft 365 Plans & Pricing (Formerly Office 365) - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products?icid=mscom_marcom_M365",
+      "title": "Compare Microsoft 365 Plans & Pricing (Formerly Office 365) - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-for-business-support-options",
+      "title": "Compare Microsoft 365 Support Options | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/devices/compare-devices",
+      "title": "Compare Surface models | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/teals",
+      "title": "Computer Science education support | Microsoft TEALS"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/education/devices/overview",
+      "title": "Computers and Laptops for Schools | Microsoft Education"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/consumer-goods",
+      "title": "Consumer Goods Solutions and CPG Technologies | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/cowork",
+      "title": "Copilot Cowork: Automate Tasks and Workflows | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/in-apps-for-work",
+      "title": "Copilot in apps for work | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/customers",
+      "title": "Customer Success Stories | Microsoft Customer Stories"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-fabric",
+      "title": "Data Analytics Platform | Microsoft Fabric"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/access",
+      "title": "Database Software and Applications | Microsoft Access"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/deals/games/xbox",
+      "title": "Deals Games on Xbox | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/sovereignty?icid=DSM_More_Sovereignty",
+      "title": "Discover Microsoft Sovereign Cloud | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/sovereignty",
+      "title": "Discover Microsoft Sovereign Cloud | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/edge/learning-center",
+      "title": "Do More with Edge | Microsoft Edge"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/do-more-with-surface",
+      "title": "Do More with Surface Laptop & Surface Pro | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/download",
+      "title": "Download Drivers & Updates for Microsoft, Windows and more - Microsoft Download Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/download-copilot-app",
+      "title": "Download Microsoft Copilot App on Windows, Mac, Android & iOS"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/download/drivers",
+      "title": "Drivers - Microsoft Download Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/education",
+      "title": "Education & Student Discounts on Laptops, Microsoft 365, Windows, Surface | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/education",
+      "title": "Education Technology Solutions with AI | Microsoft Education"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-viva",
+      "title": "Employee Experience and Engagement | Microsoft Viva"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/end-of-support",
+      "title": "End of support for Windows 10, Windows 8.1, and Windows 7 | Microsoft Windows"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/",
+      "title": "Experience the Windows difference with Windows 11 OS, Laptops, PCs & Apps | Microsoft Windows"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows",
+      "title": "Experience the Windows difference with Windows 11 OS, Laptops, PCs & Apps | Microsoft Windows"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/frontier-program",
+      "title": "Explore AI Early Access in Microsoft 365 | Microsoft Frontier"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-products-and-apps",
+      "title": "Explore Microsoft apps, products, and devices – AI apps, cloud security, and more | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/locations/find-a-store?icid=en_US_Store_UH_FAS",
+      "title": "Find a Microsoft Store Near Me - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/apps-for-windows?icid=DSM_Footer_WhatsNew_Windows11apps",
+      "title": "Find the Best Apps for Windows | Microsoft Windows"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/education/products/office",
+      "title": "Free Microsoft Office 365 for Schools | Microsoft Education"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/word",
+      "title": "Free Online Document Editing with Microsoft Word | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/microsoft-365/try",
+      "title": "Free Trial - Try a Microsoft 365 Subscription for a month - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/try",
+      "title": "Free Trial - Try a Microsoft 365 Subscription for a month - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/try?ocid=cmmkh0den3m",
+      "title": "Free Trial - Try a Microsoft 365 Subscription for a month - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/try-premium",
+      "title": "Free Trial - Try Microsoft 365 Premium for a month - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/try-prs",
+      "title": "Free Trial - Try Microsoft Personal 365 for a month - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/frontline",
+      "title": "Frontline Worker Tools and Solutions | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/windows-11-pc-gaming",
+      "title": "Gaming on Windows 11: Windows Gaming PC & Laptops | Microsoft Windows"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/p/fortnite/bt5p2x999vh2",
+      "title": "Get Fortnite | XBOX"
+    },
+    {
+      "url": "https://www.microsoft.com/edge",
+      "title": "Get to Know Microsoft Edge"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/edge",
+      "title": "Get to Know Microsoft Edge"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/ai-get-ready",
+      "title": "Get Up and Running with Copilot | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/buy",
+      "title": "Get your Surface direct from Microsoft or Find a Retailer – Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/gift-cards?icid=DSM_All_GiftCards",
+      "title": "Gift Cards: XBOX Gift Cards for Gamers & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/gift-cards?icid=CNavMoreGiftCards",
+      "title": "Gift Cards: XBOX Gift Cards for Gamers & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/government",
+      "title": "Government Solutions | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/design/fluent/",
+      "title": "Home - Fluent 2 Design System"
+    },
+    {
+      "url": "https://www.microsoft.com/investor/default.aspx",
+      "title": "Home page"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/investor/default",
+      "title": "Home page"
+    },
+    {
+      "url": "https://www.microsoft.com/licensing/",
+      "title": "Home | Microsoft Licensing Resources"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/licensing",
+      "title": "Home | Microsoft Licensing Resources"
+    },
+    {
+      "url": "https://www.microsoft.com/education/how-to-buy",
+      "title": "How to Buy Microsoft for Education | Microsoft Education"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/get-windows-11",
+      "title": "How to Get Windows 11 for Your Compatible PC | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/insidetrack",
+      "title": "Inside Track - Home Page"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/download/internet-explorer",
+      "title": "Internet Explorer - Microsoft Download Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/legal",
+      "title": "Legal Resources from Microsoft | Microsoft Legal"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/locale",
+      "title": "Locale picker page - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/media-entertainment",
+      "title": "Media and Entertainment Solutions | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/locale",
+      "title": "Microsoft - Choose Your Country & Language"
+    },
+    {
+      "url": "http://www.microsoft.com/en-us/locale.aspx",
+      "title": "Microsoft - Choose Your Country & Language"
+    },
+    {
+      "url": "https://www.microsoft.com/en-US/microsoft-365/locale",
+      "title": "Microsoft 365 - choose your locale"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/education/ai-in-education",
+      "title": "Microsoft 365 AI Education Tools | Microsoft Education"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog",
+      "title": "Microsoft 365 Blog | Latest Product Updates and Insights"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-premium-with-copilot",
+      "title": "Microsoft 365 Business Premium with Copilot | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-standard-with-copilot",
+      "title": "Microsoft 365 Business Standard with Copilot | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals?form=MY02PT&OCID=GE_web_Copilot_Free_868g3t5nj",
+      "title": "Microsoft 365 Copilot Plans for Individuals | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/personal",
+      "title": "Microsoft 365 Copilot Plans for Individuals | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot?icid=DSM_Footer_Microsoft365Copilot",
+      "title": "Microsoft 365 Copilot | AI Productivity Tools for Work"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot?icid=mscom_marcom_BRCP3a_M365forBusiness_Copilot",
+      "title": "Microsoft 365 Copilot | AI Productivity Tools for Work"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot",
+      "title": "Microsoft 365 Copilot | AI Productivity Tools for Work"
+    },
+    {
+      "url": "https://www.microsoft.com/en-US/microsoft-365-copilot/locale",
+      "title": "Microsoft 365 Copilot- choose your locale"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/e3",
+      "title": "Microsoft 365 E3 for enterprise | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/e5",
+      "title": "Microsoft 365 E5 for Enterprise | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/e7",
+      "title": "Microsoft 365 E7 for Enterprise | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/nonprofit-plans-and-pricing",
+      "title": "Microsoft 365 Enterprise Nonprofit: Compare Plans & Pricing"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-365-enterprise",
+      "title": "Microsoft 365 Enterprise | Official Site"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-plans-and-pricing",
+      "title": "Microsoft 365 Enterprise: Compare Plans and Pricing"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-365-business",
+      "title": "Microsoft 365 for Business | Official Site"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-365-education",
+      "title": "Microsoft 365 for Education | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/education/products/microsoft-365",
+      "title": "Microsoft 365 for Education | Microsoft Education"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/personal-family",
+      "title": "Microsoft 365 for Individuals User Guide | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/microsoft-365",
+      "title": "Microsoft 365 for Individuals: Subscription for Productivity Apps"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365",
+      "title": "Microsoft 365 for Individuals: Subscription for Productivity Apps"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/explore-microsoft-365-for-home",
+      "title": "Microsoft 365 for Individuals—Plans and Pricing | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/explore-microsoft-365-for-individuals",
+      "title": "Microsoft 365 for Individuals—Plans and Pricing | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac",
+      "title": "Microsoft 365 for Mac, Office for Mac"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/business",
+      "title": "Microsoft 365 for Work: Business Productivity Apps"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/government",
+      "title": "Microsoft 365 Government Solutions: Productivity, AI, and Compliance Tools"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/support",
+      "title": "Microsoft 365 help | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing",
+      "title": "Microsoft 365 Pricing for Business: Plans & Features"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/products-apps-services",
+      "title": "Microsoft 365 Products, Apps, and Services | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/business/sales-support",
+      "title": "Microsoft 365 Sales and Support | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-agent-365",
+      "title": "Microsoft Agent 365: The Control Plane for Agents"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai?icid=mscom_marcom_BRCP4a_AI",
+      "title": "Microsoft AI - Business Solutions and Tools"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai?icid=DSM_All_AI",
+      "title": "Microsoft AI - Business Solutions and Tools"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai?icid=DSM_Footer_AI",
+      "title": "Microsoft AI - Business Solutions and Tools"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai?icid=DSM_Sitemap_Solutions_AI",
+      "title": "Microsoft AI - Business Solutions and Tools"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/business-sales-and-support",
+      "title": "Microsoft Business Sales & Support | Resources & Tools"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/microsoft-complete?icid=Xbox_Light_XF_VP_MS_Complete_12032025",
+      "title": "Microsoft Complete - Protection Plan for your Surface or Xbox- Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/microsoft-complete?icid=MScomplete_1/2/2026",
+      "title": "Microsoft Complete - Protection Plan for your Surface or Xbox- Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/copilot-learning-center",
+      "title": "Microsoft Copilot Learning Center | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/microsoft-copilot-studio",
+      "title": "Microsoft Copilot Studio | Create AI Agents"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-copilot/organizations?icid=DSM_Footer_CopilotOrganizations",
+      "title": "Microsoft Copilot | AI Tools for Organizations"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility",
+      "title": "Microsoft Corporate Social Responsibility | Microsoft CSR"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals",
+      "title": "Microsoft Defender | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/download/developer-tools",
+      "title": "Microsoft developer tools - Microsoft Download Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/evalcenter",
+      "title": "Microsoft Evaluation Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/events",
+      "title": "Microsoft Events, Webinars, and Conferences"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "title": "Microsoft Excel | Free Online Spreadsheets Software"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/exchange/email",
+      "title": "Microsoft Exchange: Custom Business Email Service"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/health",
+      "title": "Microsoft for Healthcare | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/manufacturing",
+      "title": "Microsoft for Manufacturing | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/startups",
+      "title": "Microsoft for Startups | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/diversity/default?icid=DSM_Footer_Company_Diversity",
+      "title": "Microsoft Global Diversity and Inclusion | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/diversity/default",
+      "title": "Microsoft Global Diversity and Inclusion | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-teams/immersive",
+      "title": "Microsoft Mesh Is Evolving to Teams Immersive"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-office",
+      "title": "Microsoft Office is part of Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/onedrive/onedrive-for-business",
+      "title": "Microsoft OneDrive: AI-Powered File Storage & Collaboration Solution | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/order-tracking",
+      "title": "Microsoft Order History & Tracking - Check Status of Xbox & Surface Purchases"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+      "title": "Microsoft Outlook Personal Email and Calendar | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f&sdf=0",
+      "title": "Microsoft Outlook Personal Email and Calendar | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/payment-financing-options?icid=footer_financing_vcc",
+      "title": "Microsoft Payment & Financing Options for Surface, PCs & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/payment-financing-options?icid=Xbox_Light_XF_VP_FlexiblePayments",
+      "title": "Microsoft Payment & Financing Options for Surface, PCs & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/",
+      "title": "Microsoft Research – Emerging Technology, Computer, & Software Research"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/sql-server",
+      "title": "Microsoft SQL Server"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/sale?icid=DSM_TopNavDeals",
+      "title": "Microsoft Store - Deals on Laptops, Windows Computers & Other Sales"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/sale",
+      "title": "Microsoft Store - Deals on Laptops, Windows Computers & Other Sales"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xbox-deals?icid=DSM_UHF_Gaming_XboxDeals",
+      "title": "Microsoft Store - Deals on Laptops, Windows Computers & Other Sales"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/returns",
+      "title": "Microsoft Store Refund & Return Policy (Surface, Xbox, etc.)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/returns?icid=Xbox_Light_XF_VP_Returns_12032025",
+      "title": "Microsoft Store Refund & Return Policy (Surface, Xbox, etc.)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/why-microsoft-store?icid=footer_why-msft-store_7102020",
+      "title": "Microsoft Store Support & Return Policy for Surface, Xbox & More"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/why-microsoft-store?icid=why-msft_sitemap-msft-store_552020",
+      "title": "Microsoft Store Support & Return Policy for Surface, Xbox & More"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/why-microsoft-store?icid=Xbox_light_BG_XF_VP_New-CTA_010325",
+      "title": "Microsoft Store Support & Return Policy for Surface, Xbox & More"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/college-student-pricing",
+      "title": "Microsoft Student Discount on Office, Word | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/store/b/surface-repair-parts",
+      "title": "Microsoft Surface Repair & Replacement Parts - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/shop-all-microsoft-surface",
+      "title": "Microsoft Surface Store - Buy Computers, Devices, & See Pricing | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/surface",
+      "title": "Microsoft Surface: Laptops, Tablets & Computers | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface",
+      "title": "Microsoft Surface: Laptops, Tablets & Computers | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/why-surface",
+      "title": "Microsoft Surface: Laptops, Tablets & Computers | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/education/products/teams",
+      "title": "Microsoft Teams for Schools and Students | Microsoft Education"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/microsoft-trade-in",
+      "title": "Microsoft Trade-In Program - Laptop, XBOX, Surface and More | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-unified",
+      "title": "Microsoft Unified Overview | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/visio",
+      "title": "Microsoft Visio: Diagramming & Flowcharts | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/business?icid=mscom_marcom_BRCP6a_Windows11forBusiness",
+      "title": "Microsoft Windows for Business: AI Powered OS, Computers, and Apps | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/business",
+      "title": "Microsoft Windows for Business: AI Powered OS, Computers, and Apps | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows-server/blog",
+      "title": "Microsoft Windows Server Blog"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xbox-repair-parts?icid=DSM_UHF_Gaming_Accessories_XboxRepairParts_Slot04",
+      "title": "Microsoft XBOX Repair & Replacement Parts - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/",
+      "title": "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps"
+    },
+    {
+      "url": "https://www.microsoft.com",
+      "title": "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/sitemap1.aspx",
+      "title": "Microsoft.com Site Map"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/sitemap",
+      "title": "Microsoft.com Site Map"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/new/games/xbox",
+      "title": "New Games on Xbox | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/nonprofits",
+      "title": "Nonprofit Solutions & Technology | Microsoft Nonprofits"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/download/office",
+      "title": "Office - Microsoft Download Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/office-365-plans-and-pricing",
+      "title": "Office 365 Enterprise: Compare Plans and Pricing"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/business/onboarding",
+      "title": "Onboarding Resources for Businesses | Microsoft 365 Copilot"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app",
+      "title": "OneNote—Digital Note-Taking App | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/about",
+      "title": "Our Mission and Values | About Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/about",
+      "title": "Our Mission and Values | About Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/accessories?icid=CNavDevicesAccessories",
+      "title": "PC and Computer Accessories & Tech Gadgets - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/surfacependialmouse",
+      "title": "Pens, Dial & Mice | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage",
+      "title": "Personal File Sharing & Cloud Storage | Microsoft OneDrive"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+      "title": "Power BI - Data Visualization | Microsoft Power Platform"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+      "title": "PowerPoint | Presentations and Slides Online | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/security/business/ai-powered-cybersecurity/project-perception-agentic-system?icid=mscom_marcom_BRCP8a_ProjectPerceptionSecurity",
+      "title": "Project Perception | Microsoft Security"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-s-certified-refurbished/8p01kzxz5j21",
+      "title": "Refurbished: Buy Refurbished Xbox Series S for Sale (See Used Price) | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/responsible-ai",
+      "title": "Responsible AI: Ethical policies and practices | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/see-you-in-the-work?icid=mscom_marcom_BRCP1a_SeeYouInTheWork",
+      "title": "See You in the Work: Customer AI Stories | Microsoft AI"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/certified-refurbished-products",
+      "title": "Shop Certified Refurbished Computers & Game Consoles by Surface and XBOX - Microsoft Store."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/surface-accessories?icid=mscom_marcom_PRCP4a_SurfaceAccessories",
+      "title": "Shop Surface Accessories - Keyboards, Pens, Covers, Docks, Headphones & more | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/surface-accessories",
+      "title": "Shop Surface Accessories - Keyboards, Pens, Covers, Docks, Headphones & more | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/surfaceforbusiness?icid=mscom_marcom_BRCP2a_SurfaceBusinessFamily_Spring26",
+      "title": "Shop Surface for Business - Best Laptops & Surface Pro Tablets | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xboxgames?icid=DSM_All_XboxGames",
+      "title": "Shop Xbox Game Deals & Video Games - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xboxgames?icid=DSM_UHF_Gaming_Games_XboxGames_Slot01",
+      "title": "Shop Xbox Game Deals & Video Games - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-teams/small-medium-business?icid=mscom_marcom_BRCP5a_TeamsForBusiness",
+      "title": "Small Business Communication Software | Microsoft Teams"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/small-business-resource-center",
+      "title": "Small Business Ideas, Tips, and Resources | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/developer?icid=CNavDeveloper",
+      "title": "Small Business Software and Tools - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/software",
+      "title": "Small Business Software and Tools - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/business?icid=CNavBusinessStore",
+      "title": "Small Business Solutions: Computers and Software | Microsoft Store for Business"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/business",
+      "title": "Small Business Solutions: Computers and Software | Microsoft Store for Business"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/accessories",
+      "title": "Surface Accessories | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/surface/business/warranty-protection-plans-and-support?activetab=pivot:surfacelaptopand2-in-1stab",
+      "title": "Surface Business Warranty, Protection Plans, and Support | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/business",
+      "title": "Surface for Business Laptops and Computers | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/support-center",
+      "title": "Surface Help and Support: Find Quick Answers & Helpful Resources | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/surface-keyboard-2nd-edition/93d9l5tctr0b",
+      "title": "Surface Keyboard - Wireless Bluetooth Keyboard w/Number Pad & Copilot Key | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/surface/devices/surface-laptop",
+      "title": "Surface Laptop 8th Edition (13\", 13.8\", 15\") touchscreen laptop | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop",
+      "title": "Surface Laptop 8th Edition (13\", 13.8\", 15\") touchscreen laptop | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/business/surface-laptop-7th-edition",
+      "title": "Surface Laptop for Business (8th Edition) – Intel and Snapdragon AI Laptops | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra?icid=DSM_Footer_WhatsNew_SurfaceLaptopUltra",
+      "title": "Surface Laptop Ultra: The new performance Surface Laptop | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
+      "title": "Surface Laptop Ultra: The new performance Surface Laptop | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/surface/devices/surface-pro",
+      "title": "Surface Pro 12th Edition (12\", 13\") 2-in-1 laptop tablet | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-pro",
+      "title": "Surface Pro 12th Edition (12\", 13\") 2-in-1 laptop tablet | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/business/surface-pro-11th-edition",
+      "title": "Surface Pro for Business 12th Edition – Intel and Snapdragon Laptop Tablet | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box?icid=DSM_Footer_WhatsNew_SurfaceRTXSparkDevBox",
+      "title": "Surface RTX Spark Dev Box: The new dev box | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box",
+      "title": "Surface RTX Spark Dev Box: The new dev box | Microsoft Surface"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/surface/worldwide",
+      "title": "Surface | Official Worldwide International Sites"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/sustainability?icid=DSM_Footer_Sustainability",
+      "title": "Sustainability | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/system-center",
+      "title": "System Center | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/planner/microsoft-planner",
+      "title": "Task and Project Management Software | Microsoft Planner"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-teams/teams-free",
+      "title": "Teams Free | For Personal Use"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai/telecommunications",
+      "title": "Telecommunications Industry Solutions | Microsoft AI"
+    },
+    {
+      "url": "http://www.microsoft.com/windows/windowsmedia/download/alldownloads.aspx",
+      "title": "Troubleshoot Windows Media Player Errors | Microsoft Support"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+      "title": "Video Conferencing, Meetings, Calling | Microsoft Teams"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/virtualreality?icid=CNavVirtualReality",
+      "title": "VR Headsets & Accessories: Virtual Reality for Work, Xbox, PC & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/virtualreality?icid=DSM_UHF_Gaming_Accessories_Vr&MixedReality_Slot06",
+      "title": "VR Headsets & Accessories: Virtual Reality for Work, Xbox, PC & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/dynamics-365/what-is-dynamics-365",
+      "title": "What Is Dynamics 365 and What Does It Do"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-365-for-home-and-school-faq",
+      "title": "What is Microsoft Office and Microsoft 365 | FAQs"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/download/windows",
+      "title": "Windows - Microsoft Download Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows-365/business",
+      "title": "Windows 365 Business: Secure Cloud PC | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows-365/enterprise",
+      "title": "Windows 365 Enterprise: Secure Cloud PC | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows-365",
+      "title": "Windows 365: Secure Cloud PC | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows-365?icid=mscom_marcom_BRCP7a_Windows365",
+      "title": "Windows 365: Secure Cloud PC | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/business/devices",
+      "title": "Windows Business Devices: Laptops, 2-in-1s, and Computers | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows/learning-center",
+      "title": "Windows Learning Center | Microsoft Windows"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/windows-server",
+      "title": "Windows Server Operating System | Microsoft"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/work-iq",
+      "title": "Work IQ: Agentic AI Solutions | Microsoft 365"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/download/xbox",
+      "title": "Xbox - Microsoft Download Center"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/xboxconsoles?icid=mscom_marcom_PMPH1a_XboxTradeInOffer",
+      "title": "XBOX consoles | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xbox?icid=DSM_All_ShopXbox",
+      "title": "XBOX Consoles, Games, Controllers, Gear & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xbox",
+      "title": "XBOX Consoles, Games, Controllers, Gear & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/b/xbox?icid=CNavDevicesXbox",
+      "title": "XBOX Consoles, Games, Controllers, Gear & More - Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/XboxControllers?icid=mscom_marcom_PRCP5a_XboxControllers",
+      "title": "XBOX controllers | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/xboxcontrollers?icid=DSM_UHF_Gaming_Accessories_XboxControllers_Slot02",
+      "title": "XBOX controllers | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/xboxheadsets?icid=DSM_UHF_Gaming_Accessories_XboxHeadsets_Slot03",
+      "title": "XBOX headsets | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/xboxseriessconsoles?icid=DSM_Gaming_Consoles_XboxSeriesS_Slot03",
+      "title": "XBOX Series S consoles | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-s-1tb-white/8r02lkf9q26r",
+      "title": "XBOX Series S – 1TB  (White)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-s-1tb-certified-refurbished/8ncm2gz33jql",
+      "title": "Xbox Series S – 1TB (Certified Refurbished)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/xboxseriesxconsoles?icid=DSM_Gaming_Consoles_XboxSeriesX_Slot02",
+      "title": "XBOX Series X | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/collections/xboxseriesxconsoles",
+      "title": "XBOX Series X | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-x-1tb-digital-edition-certified-refurbished/92cc6w0n36g0",
+      "title": "XBOX Series X – 1TB Digital Edition (Certified Refurbished)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-x-1tb-digital-edition-white/8z1l85h2g116",
+      "title": "XBOX Series X – 1TB Digital Edition (White)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-x-2tb-galaxy-black-special-edition-certified-refurbished/8q9jtnwk948f",
+      "title": "XBOX Series X – 2TB Galaxy Black Special Edition (Certified Refurbished)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/d/xbox-series-x25-limited-edition/8wg5vqp0x4h3",
+      "title": "XBOX Series X25 Special Edition Console | Microsoft Store"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/store/cart",
+      "title": "Your Privacy Choices Opt-Out Icon"
+    }
+  ]
 }

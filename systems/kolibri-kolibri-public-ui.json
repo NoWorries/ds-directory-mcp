@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "kolibri-kolibri-public-ui",
   "organization": "KoliBri",
   "design_system": "KoliBri - Public UI",
@@ -13,13 +13,24 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:32:05+00:00",
-  "last_modified": "Tue, 15 Sep 2026 10:59:23 GMT",
+  "last_checked": "2026-09-16T12:57:13+00:00",
+  "last_modified": "Wed, 16 Sep 2026 12:35:56 GMT",
   "sitemap_last_modified": null,
   "resources": {},
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Angular",
+      "Web Components"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://public-ui.github.io/",
+      "title": "Die barrierefreie Web Component Bibliothek | KoliBri - Public UI"
+    }
+  ]
 }

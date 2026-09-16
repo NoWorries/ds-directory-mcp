@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "vue-design-system",
   "organization": null,
   "design_system": "Vue Design System",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T23:36:23+00:00",
+  "last_checked": "2026-09-16T14:53:55+00:00",
   "last_modified": "Tue, 24 Jan 2023 08:05:35 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -22,12 +22,21 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "Vue"
+    ]
+  },
   "github_meta": {
     "license": "MIT",
     "stars": 2195,
     "last_pushed": "2023-04-19T08:22:50Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://vueds.com/",
+      "title": "Vue Design System"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "help-scout-help-scout-style-guide",
   "organization": "Help Scout",
   "design_system": "Help Scout Style Guide",
@@ -13,27 +13,30 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:10:26+00:00",
-  "last_modified": "Tue, 15 Sep 2026 15:15:37 GMT",
+  "last_checked": "2026-09-16T12:35:39+00:00",
+  "last_modified": "Wed, 16 Sep 2026 09:46:35 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "figma": [
-      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29295&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design",
-      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29290&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design",
-      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29091&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design",
       "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=890-53396&viewport=527%2C443%2C0.17&scaling=contain&starting-point-node-id=890%3A53396&t=Kye1XjV6lOBYskNr-1",
-      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29118&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design"
-    ],
-    "agent_instructions": [
-      "https://style.helpscout.com/llms.txt",
-      "https://style.helpscout.com/llms-full.txt",
-      "https://style.helpscout.com/AGENTS.md",
-      "https://style.helpscout.com/CLAUDE.md"
+      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29295&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design",
+      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29118&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design",
+      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29290&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design",
+      "https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29091&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design"
     ]
   },
   "unverified_resources": {},
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://style.helpscout.com/",
+      "title": "Our Help Scout Brand Guidelines"
+    },
+    {
+      "url": "https://style.helpscout.com/lp/get-a-demo/",
+      "title": "Our Help Scout Brand Guidelines"
+    }
+  ]
 }

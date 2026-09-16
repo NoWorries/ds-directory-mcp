@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "decathlon-design-system-vitamin",
   "organization": "Decathlon",
   "design_system": "Design System - Vitamin",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T23:41:19+00:00",
+  "last_checked": "2026-09-16T12:04:40+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -31,5 +31,10 @@
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://decathlon.design/",
+      "title": "Vitamin Play | Welcome to Vitamin Play"
+    }
+  ]
 }

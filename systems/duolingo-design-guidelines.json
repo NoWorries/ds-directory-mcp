@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "duolingo-design-guidelines",
   "organization": "Duolingo",
   "design_system": "Design guidelines",
@@ -11,9 +11,9 @@
   "detail_url": "/systems/duolingo-design-guidelines",
   "pages_indexed": 1,
   "coverage_status": "partial",
-  "hit_max_pages": true,
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:34:58+00:00",
+  "last_checked": "2026-09-16T12:05:47+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -28,5 +28,10 @@
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://www.duolingo.com/design/",
+      "title": "Articles about Design"
+    }
+  ]
 }

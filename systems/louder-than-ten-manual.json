@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "louder-than-ten-manual",
   "organization": "Louder Than Ten",
   "design_system": "Manual",
@@ -9,17 +9,162 @@
     "https://www.louderthanten.com/manual/"
   ],
   "detail_url": "/systems/louder-than-ten-manual",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 30,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:40:47+00:00",
+  "last_checked": "2026-09-16T13:08:30+00:00",
   "last_modified": null,
-  "sitemap_last_modified": null,
-  "resources": {},
-  "unverified_resources": {},
-  "content_signals": {},
-  "github_meta": null,
+  "sitemap_last_modified": "2024-02-26T15:54:50-08:00",
+  "resources": {
+    "github": [
+      "https://github.com/lindseydiloreto/craft-cpjs",
+      "https://github.com/benjamminf/craft-neo",
+      "https://github.com/lindseydiloreto/craft-cpcss",
+      "https://github.com/jamiepittock/craft-typogrify",
+      "https://github.com/sjelfull/Craft-Lettering"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/lindseydiloreto/craft-cpjs",
+      "https://github.com/benjamminf/craft-neo",
+      "https://github.com/lindseydiloreto/craft-cpcss",
+      "https://github.com/jamiepittock/craft-typogrify",
+      "https://github.com/sjelfull/Craft-Lettering"
+    ]
+  },
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 43,
+    "last_pushed": "2024-03-12T02:31:10Z"
+  },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://www.louderthanten.com/profile/abbyfretz",
+      "title": "Abby Fretz | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/training/custom-training/modules",
+      "title": "Available custom training modules | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/why/case-studies",
+      "title": "Case studies | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/craft",
+      "title": "Craft CMS design resources | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/training/custom-training",
+      "title": "Custom training & consulting | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/training",
+      "title": "Digital Project Management Training and Courses | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/manual/",
+      "title": "Digital project management training | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/training/faq",
+      "title": "Frequently asked questions | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/digital-pm-training/faq",
+      "title": "Frequently asked questions | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/resources/operations/how-to-increase-agency-profitability",
+      "title": "How to increase agency profitability | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/why/approach",
+      "title": "How we move the dial | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/profile/kd",
+      "title": "Ketian Dou | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/profile/laurapaine",
+      "title": "Laura Paine | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/digital-pm-training/comparison",
+      "title": "Louder Than Ten course comparison | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/why/team",
+      "title": "Meet the team | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/about/team",
+      "title": "Meet the team | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/for-agencies",
+      "title": "Project management operations consulting for… | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/agency-consulting/",
+      "title": "Project management operations consulting for… | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/agency-consulting",
+      "title": "Project management operations consulting for… | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/profile/rachelgertz",
+      "title": "Rachel Gertz | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/training/apprenticeship",
+      "title": "Redesign your project management approach | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/digital-pm-training/digital-project-management-foundations/",
+      "title": "Refine your project management | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/training/dpm-foundations",
+      "title": "Refine your project management | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/why/student-experience",
+      "title": "Student experience | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/training/superhi",
+      "title": "SuperHi Digital Project Management Course | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/case-studies/the-developer-society",
+      "title": "The Developer Society | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/why/training-methods-compared",
+      "title": "Training methods compared | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/profile/travis",
+      "title": "Travis Gertz | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/resources/operations/healthy-companies",
+      "title": "What a healthy digital agency looks like | Louder Than Ten"
+    },
+    {
+      "url": "https://www.louderthanten.com/why",
+      "title": "Why Louder Than Ten | Louder Than Ten"
+    }
+  ]
 }

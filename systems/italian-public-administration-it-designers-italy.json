@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "italian-public-administration-it-designers-italy",
   "organization": "Italian Public Administration",
   "design_system": ".it Designers Italy",
@@ -9,25 +9,1280 @@
     "https://designers.italia.it/"
   ],
   "detail_url": "/systems/italian-public-administration-it-designers-italy",
-  "pages_indexed": 8,
+  "pages_indexed": 299,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-15T23:49:37+00:00",
-  "last_modified": "Tue, 15 Sep 2026 10:27:36 GMT",
+  "last_checked": "2026-09-16T12:58:50+00:00",
+  "last_modified": "Tue, 15 Sep 2026 10:27:37 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/italia/feedback.designers.italia.it"
+      "https://github.com/italia/bootstrap-italia/",
+      "https://github.com/italia/design-angular-kit/",
+      "https://github.com/italia/designers.italia.it/",
+      "https://github.com/italia/designers.italia.it",
+      "https://github.com/italia/design-scuole-pagine-statiche",
+      "https://github.com/italia/design-tokens-italia",
+      "https://github.com/italia/feedback.designers.italia.it",
+      "https://github.com/italia/design-react-kit",
+      "https://github.com/italia/design-wireframe-kit",
+      "https://github.com/sketch-hq/sketch-document",
+      "https://github.com/italia/design-angular-kit",
+      "https://github.com/italia/dev-kit-italia",
+      "https://github.com/italia/design-react-kit/",
+      "https://github.com/italia/design-ui-kit/",
+      "https://github.com/italia/design-comuni-drupal-theme",
+      "https://github.com/italia/design-comuni-pagine-statiche",
+      "https://github.com/gjtorikian/html-proofer",
+      "https://github.com/italia/design-ui-kit-template/",
+      "https://github.com/italia/design-comuni-ui-kit",
+      "https://github.com/sketch-hq/fig2sketch",
+      "https://github.com/italia/design-tokens-italia/",
+      "https://github.com/chialab/titillium_pro",
+      "https://github.com/italia/design-musei-ui-kit/",
+      "https://github.com/italia/design-comuni-ui-kit/",
+      "https://github.com/italia/bootstrap-italia",
+      "https://github.com/italia/design-ui-kit",
+      "https://github.com/italia/design-comuni-wordpress-theme",
+      "https://github.com/italia/design-scuole-wordpress-theme",
+      "http://github.com/italia/design-ui-kit",
+      "https://github.com/italia/design-asl-ui-kit/"
+    ],
+    "figma": [
+      "https://www.figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito?page-id=856%3A106452&type=design&node-id=1058-24948&viewport=-22%2C847%2C0.09&t=zMGDRi0eYmscDBZW-1&scaling=scale-down&starting-point-node-id=1058%3A24948&show-proto-sidebar=1&mode=design",
+      "https://www.figma.com/proto/FHlE0r9lhfvDR0SgkDRmVi/Comuni---Modello-sito-e-servizi?type=design&node-id=3727-207159&t=u3PkeZh1aCeZB2Qy-0&scaling=scale-down&page-id=360%3A19473&starting-point-node-id=3727%3A207159&hide-ui=1",
+      "https://www.figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito?type=design&node-id=3208-47773&t=ZsIvzJRWEVHWv7ki-0&scaling=contain&page-id=3208%3A47772&starting-point-node-id=3208%3A47773",
+      "https://www.figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito?node-id=2963-29111&starting-point-node-id=2963%3A29111&scaling=scale-down&mode=design&t=WQqEtf6esyW6n73Q-1",
+      "https://www.figma.com/proto/1hQobutdZFwlo2Y4mVt9Rl/Musei-civici---Modello-sito?type=design&node-id=1665-151326&t=SLmYVCR1RCkrVu8r-0&scaling=scale-down&page-id=1665%3A126017&starting-point-node-id=1665%3A151326",
+      "https://www.figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito?type=design&node-id=3208-47773&t=eKr9BEN2co0uYTG9-1&scaling=contain&page-id=3208%3A47772&starting-point-node-id=3208%3A47773&mode=design",
+      "https://www.figma.com/proto/1hQobutdZFwlo2Y4mVt9Rl/Musei-civici---Modello-sito?type=design&node-id=2360-836197&t=SLmYVCR1RCkrVu8r-0&scaling=scale-down-width&page-id=2360%3A820332&starting-point-node-id=2360%3A820333",
+      "https://www.figma.com/proto/1hQobutdZFwlo2Y4mVt9Rl/Musei-civici---Modello-sito?type=design&node-id=1595-132414&t=SLmYVCR1RCkrVu8r-0&scaling=scale-down-width&page-id=54%3A17335&starting-point-node-id=1595%3A132414"
+    ],
+    "markdown_docs": [
+      "https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md"
     ]
   },
-  "unverified_resources": {},
-  "content_signals": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/sketch-hq/sketch-document",
+      "https://github.com/gjtorikian/html-proofer",
+      "https://github.com/sketch-hq/fig2sketch",
+      "https://github.com/chialab/titillium_pro"
+    ]
+  },
+  "content_signals": {
+    "tokens_format": "Tokens Studio",
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular",
+      "Web Components",
+      "Svelte"
+    ]
+  },
   "github_meta": {
     "license": "BSD-3-Clause",
-    "stars": 2,
-    "last_pushed": "2026-03-26T09:00:36Z"
+    "stars": 355,
+    "last_pushed": "2026-09-16T10:42:24Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://designers.italia.it/community/notizie/20241021-italia-versione-1/",
+      "title": ".italia versione 1: l’inizio di una nuova era per i servizi digitali pubblici"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20250313-italia-risorse-in-miglioramento-continuo/",
+      "title": ".italia: risorse in miglioramento continuo"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-1/",
+      "title": "4.1. Accessibilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-2/",
+      "title": "4.2. Affidabilità, trasparenza e sicurezza - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/",
+      "title": "4.3. Semplicità di consultazione ed esperienza d'uso - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-4/",
+      "title": "4.4. Monitoraggio dei servizi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-5/",
+      "title": "4.5. Interfaccia utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-6/",
+      "title": "4.6. Integrazione piattaforme abilitanti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-7/",
+      "title": "4.7. Licenze - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-8/",
+      "title": "4.8. Attuazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20240923-4-anniversario-della-direttiva-europea-sull-accessibilita/",
+      "title": "4° anniversario della Direttiva europea sull'accessibilità del web"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20230518-accessibility-days-2023-il-design-system-del-paese-e-la-responsabilita-di-progettare-interfacce-pubbliche/",
+      "title": "Accessibility Days 2023 – ll design system del Paese e la responsabilità di progettare interfacce pubbliche - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20230519-accessibility-days-2023-l-accessibilita-nello-sviluppo-front-end-di-servizi-pubblici-le-risorse-del-design-system-del-paese/",
+      "title": "Accessibility Days 2023 – L’accessibilità nello sviluppo front-end di servizi pubblici: le risorse del design system del Paese - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20240516-accessibility-days-2024-le-iniziative-nazionali-per-l-accessibilita/",
+      "title": "Accessibility Days 2024 - Le iniziative nazionali per l’accessibilità"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20240516-accessibility-days-2024-strumenti-nazionali-per-migliorare-l-esperienza-di-siti-web-e-servizi-digitali/",
+      "title": "Accessibility Days 2024 - Strumenti nazionali per migliorare l'esperienza di siti web e servizi digitali"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20250516-accessibility-days-2025-accessibilita-by-design/",
+      "title": "Accessibility Days 2025 – Accessibilità by design"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20250515-accessibility-days-2025-il-design-system-italia/",
+      "title": "Accessibility Days 2025 – Il design system .italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/accessibilita/",
+      "title": "Accessibilità"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/accessibilita/",
+      "title": "Accessibilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20221017-accessibilita-e-inclusivita-dei-servizi-pubblici-digitali-protagoniste-al-wired-next-fest/",
+      "title": "Accessibilità e inclusività dei servizi pubblici digitali protagoniste al Wired Next Fest - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/accordion/",
+      "title": "Accordion - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/adozione-modelli/",
+      "title": "Adozione modelli - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/affix/",
+      "title": "Affix - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/alert/",
+      "title": "Alert - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20230130-angular-bootstrap-it-e-non-solo/",
+      "title": "Angular Bootstrap Italia e non solo - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20230328-aperte-le-iscrizioni-della-seconda-edizione-del-corso-qualita-dei-servizi-digitali/",
+      "title": "Aperte le iscrizioni della seconda edizione del corso “Qualità dei servizi digitali” - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/piano-attivita/archivio-storico/",
+      "title": "Archivio storico - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/",
+      "title": "Argomenti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/autocomplete/",
+      "title": "Autocomplete - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/avatar/",
+      "title": "Avatar - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/aziende-sanitarie-locali/",
+      "title": "Aziende sanitarie locali (ASL) - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-5/azione-1/",
+      "title": "Azione 1 - Requisito 4.5 - Interfaccia utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-10/",
+      "title": "Azione 10 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-2/",
+      "title": "Azione 2 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-5/azione-2/",
+      "title": "Azione 2 - Requisito 4.5 - Interfaccia utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-3/",
+      "title": "Azione 3 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-5/azione-3/",
+      "title": "Azione 3 - Requisito 4.5 - Interfaccia utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-5/",
+      "title": "Azione 5 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-6/",
+      "title": "Azione 6 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-7/",
+      "title": "Azione 7 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-8/",
+      "title": "Azione 8 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-3/azione-9/",
+      "title": "Azione 9 - Requisito 4.3 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/back/",
+      "title": "Back - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/back-to-top/",
+      "title": "Back to top - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/badge/",
+      "title": "Badge - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20221020-benvenuto-kit-privacy/",
+      "title": "Benvenuto, Kit Privacy - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/bordi-e-raggi/",
+      "title": "Bordi e raggi"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/bottomnav/",
+      "title": "Bottomnav - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/breadcrumbs/",
+      "title": "Breadcrumbs - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/buttons/",
+      "title": "Buttons - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/callout/",
+      "title": "Callout - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20201115-cantiere-designers-italia/",
+      "title": "Cantiere Designers Italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/card/",
+      "title": "Card - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/carousel/",
+      "title": "Carousel - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/checkbox/",
+      "title": "Checkbox - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/chips/",
+      "title": "Chips - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20240308-ciao-italia-la-terza-generazione-del-design-system-ha-un-nome-ed-entra-in-fase-beta/",
+      "title": "Ciao .italia: la terza generazione del design system ha un nome ed entra in fase beta"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20221220-ecco-l-anteprima-del-nuovo-designers-italia/",
+      "title": "Ciao, questa è la prossima versione di Designers Italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/202607-ciclo-di-webinar-garr-accessibilita-by-design-con-il-design-system-italia/",
+      "title": "Ciclo di webinar GARR: accessibilità by design con il design system .italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/co-progettazione/",
+      "title": "Co-progettazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/collapse/",
+      "title": "Collapse - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/colori/",
+      "title": "Colori"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20210507-come-progettare-e-realizzare-il-sito-web-di-un-comune/",
+      "title": "Come progettare e realizzare il sito web del tuo Comune? - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/",
+      "title": "Community"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/community/",
+      "title": "Community - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20211112-community-call-24nov-soluzioni-a-riuso/",
+      "title": "Community call: come si gestisce una soluzione a riuso - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20250528-community-call-le-asl-presentano-i-loro-nuovi-siti/",
+      "title": "Community call: le ASL presentano i loro nuovi siti"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/202511-community-call-progettare-bene-con-il-design-system-italia/",
+      "title": "Community call: progettare bene con il design system .italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20251119-community-call-design-system-italia/",
+      "title": "Community call: progettare bene con il design system .italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20241217-community-lab/",
+      "title": "Community lab: design system .italia e la progettazione di servizi pubblici digitali"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20241119-community-lab-design-system-italia/",
+      "title": "Community lab: design system .italia e la progettazione di servizi pubblici digitali"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220408-community-lab-nuovo-ui-kit-e-design-token/",
+      "title": "Community lab: il nuovo UI Kit e l’introduzione dei design token - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220513-community-lab-progettiamo-api-rest-per-la-pa/",
+      "title": "Community lab: progettiamo API REST per la Pubblica Amministrazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220620-community-lab-scopriamo-container-con-docker/",
+      "title": "Community lab: scopriamo i container con Docker - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/",
+      "title": "Comprendere - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20230324-comprendere-il-contesto-d-uso/",
+      "title": "Comprendere il contesto d'uso - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20251210-concludi-la-riprogettazione-di-un-sito-con-il-nuovo-kit-dedicato-alla-migrazione/",
+      "title": "Concludi la riprogettazione di un sito con il nuovo kit dedicato alla migrazione"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20250410-user-needs-first/",
+      "title": "Conferenza internazionale User Needs First: l’ecosistema dei design system europei"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/contatti/",
+      "title": "Contatti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/contenuti/",
+      "title": "Contenuti"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/contenuti",
+      "title": "Contenuti"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/contenuti/",
+      "title": "Contenuti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/contenuti-e-linguaggio/",
+      "title": "Contenuti e linguaggio - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/contenuti-e-linguaggio/",
+      "title": "Contenuti e linguaggio - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20250414-contenuti-linguaggio-microtesti-e-tono-di-voce-i-fondamenti-di-italia-si-aggiornano/",
+      "title": "Contenuti, Linguaggio, Microtesti e Tono di voce: i fondamenti di .italia si aggiornano"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/",
+      "title": "Costruzione interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/cultura-progettuale/",
+      "title": "Cultura progettuale - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20230323-dalla-norma-alla-pratica/",
+      "title": "Dalla norma alla pratica - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/202603-dallo-sviluppo-al-riuso-buone-pratiche-del-software-nella-pa/",
+      "title": "Dallo sviluppo al riuso: buone pratiche del software nella PA"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/202603-dallo-sviluppo-al-riuso-buone-pratiche-del-software-nella-pa/",
+      "title": "Dallo sviluppo al riuso: buone pratiche del software nella PA"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/datepicker/",
+      "title": "Datepicker - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/prototipazione/definisci-i-flussi-di-interazione/",
+      "title": "Definisci i flussi di interazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20240708-kit-stato-dell-arte/",
+      "title": "Definisci la direzione progettuale di un sito o servizio con il nuovo kit Stato dell’arte"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/insegnare/design-per-la-trasformazione-digitale-della-pa/",
+      "title": "Design per la trasformazione digitale della PA - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/design-system/",
+      "title": "Design system - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/",
+      "title": "Design system .italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20240404-design-system-italia-disponibili-le-nuove-versioni-dei-kit-react-ed-angular/",
+      "title": "Design system .italia: disponibili le nuove versioni dei kit React ed Angular"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/202605-design-system-italia-nuovi-strumenti-pubblici-per-l-accessibilita-by-default/",
+      "title": "Design system .italia: nuovi strumenti pubblici per l'accessibilità by default"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20241021-design-system-italia/",
+      "title": "Design system .italia: uno strumento di valore per PA e cittadinanza"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20220521-design-system-del-paese-gli-strumenti-le-risorse-e-come-utilizzarli/",
+      "title": "Design system del Paese: gli strumenti, le risorse e come utilizzarli"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/202509-design-system-italia-la-responsabilita-di-progettare-interfacce-pubbliche-continua/",
+      "title": "Design system.italia: la responsabilità di progettare interfacce pubbliche continua"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20230504-design-system-pubblicata-la-versione-ufficiale-dello-ui-kit-italia/",
+      "title": "Design system: pubblicata la versione ufficiale dello UI Kit Italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20230530-design-system-pubblicati-i-fondamenti-di-scrittura-per-l-esperienza-utente/",
+      "title": "Design system: pubblicati i fondamenti di scrittura per l’esperienza utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/design-tokens/",
+      "title": "Design tokens"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220804-designer-sotto-ombrellone-podcast-da-ascoltare-durante-vacanze/",
+      "title": "Designer sotto l’ombrellone: i podcast da ascoltare durante le vacanze - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/",
+      "title": "Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20230515-designers-italia-si-rinnova/",
+      "title": "Designers Italia si rinnova! - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/dimensioni/",
+      "title": "Dimensioni"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/dimmer/",
+      "title": "Dimmer - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20231031-disponibile-il-player-video-della-pubblica-amministrazione-attento-a-privacy-e-accessibilita/",
+      "title": "Disponibile il player video della Pubblica Amministrazione attento a privacy e accessibilità"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/disseminazione/",
+      "title": "Disseminazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/divulgazione-e-disseminazione/",
+      "title": "Divulgazione e disseminazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/dropdown/",
+      "title": "Dropdown - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/stato-dell-arte/effettua-la-valutazione-euristica/",
+      "title": "Effettua la valutazione euristica - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20231107-esperienza-del-cittadino-nei-servizi-pubblici-dalla-misura-alla-pratica/",
+      "title": "Esperienza del cittadino nei servizi pubblici: dalla Misura alla pratica"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/esperienza-utente/",
+      "title": "Esperienza utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/esperienza-utente/",
+      "title": "Esperienza utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/",
+      "title": "Eventi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/footer/",
+      "title": "Footer - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/form/",
+      "title": "Form - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/form/",
+      "title": "Form - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/",
+      "title": "Formazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/formazione/",
+      "title": "Formazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20230516-forum-pa-2023-esperienza-utente-il-design-system-del-paese-e-i-test-di-usabilita/",
+      "title": "Forum PA 2023 – Esperienza utente: il design system del Paese e i test di usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20230516-forum-pa-2023-servizi-e-piattaforme-per-la-cittadinanza-digitale/",
+      "title": "Forum PA 2023 – Servizi e piattaforme per la cittadinanza digitale - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20240523-forum-pa-2024-servizi-digitali-e-piattaforme-per-la-cittadinanza/",
+      "title": "Forum PA 2024 - Piattaforme digitali e servizi al cittadino: stato dell’arte ed evoluzioni future"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/forward/",
+      "title": "Forward - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/griglia/",
+      "title": "Griglia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/header/",
+      "title": "Header - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/hero/",
+      "title": "Hero - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/human-centred-design/",
+      "title": "Human centred design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/icone/",
+      "title": "Icone"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/identita/",
+      "title": "Identità"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/identita/",
+      "title": "Identità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20231115-il-design-system-del-paese-per-realizzare-siti-e-servizi-dei-comuni/",
+      "title": "Il design system del Paese per realizzare siti e servizi dei Comuni"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20231115-il-design-system-del-paese-per-realizzare-siti-e-servizi-dei-comuni/",
+      "title": "Il design system del Paese per realizzare siti e servizi dei Comuni. Cos'è e come si usa"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/202605-il-nuovo-dev-kit-italia-e-gli-ultimi-progressi-del-design-system-italia/",
+      "title": "Il nuovo Dev Kit Italia e gli ultimi progressi del design system .italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/202606-il-nuovo-dev-kit-italia-e-gli-ultimi-progressi-del-design-system-italia/",
+      "title": "Il nuovo Dev Kit Italia e gli ultimi progressi del design system .italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/imparare/il-ruolo-del-design-nella-trasformazione-digitale-della-pa/",
+      "title": "Il ruolo del design nella trasformazione digitale della PA - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20230215-il-service-design-nella-pa-italiana/",
+      "title": "Il service design nella PA italiana - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/imparare/",
+      "title": "Imparare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/input/",
+      "title": "Input - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/insegnare/",
+      "title": "Insegnare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/interazione/",
+      "title": "Interazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/interfaccia-utente/",
+      "title": "Interfaccia utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20240604-lancio-nuovo-modello-musei-civici/",
+      "title": "Lancio del nuovo modello di Designers Italia per i musei civici"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20240516-le-iniziative-nazionali-per-l-accessibilita/",
+      "title": "Le iniziative nazionali per l'accessibilità"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/202607-le-nuove-raccomandazioni-di-design-per-l-interoperabilita/",
+      "title": "Le nuove raccomandazioni di design per l'interoperabilità"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/linee-guida/",
+      "title": "Linee guida - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-accessibilita/",
+      "title": "Linee guida accessibilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/",
+      "title": "Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/linguaggio/",
+      "title": "Linguaggio"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/linguaggio",
+      "title": "Linguaggio"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/list/",
+      "title": "List - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20230518-il-design-system-del-paese-e-la-responsabilita-di-progettare-interfacce-pubbliche/",
+      "title": "ll design system del Paese e la responsabilità di progettare interfacce pubbliche"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20220521-l-attenzione-all-accessibilita-nel-design-system-del-paese/",
+      "title": "L’attenzione all’accessibilità nel design system del Paese"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/manuale-operativo/",
+      "title": "Manuale operativo - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/manuale-operativo-di-design/",
+      "title": "Manuale operativo di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/",
+      "title": "Media - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/media/",
+      "title": "Media - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/megamenu/",
+      "title": "Megamenu - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/messaggi/",
+      "title": "Messaggi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/microtesti/",
+      "title": "Microtesti"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/microtesti",
+      "title": "Microtesti"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20241013-milano-digital-week-interfacce-conversazionali-e-citizen-experience/",
+      "title": "Milano Digital Week 2024 - Interfacce conversazionali e citizen-experience"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/202510-milano-digital-week-2025/",
+      "title": "Milano Digital Week 2025 - progettare assistenti virtuali nei servizi pubblici"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/modal/",
+      "title": "Modal - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/",
+      "title": "Modelli - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20230901-modelli-di-siti-e-servizi-di-designers-italia-nuovi-file-in-formato-aperto/",
+      "title": "Modelli di siti e servizi di Designers Italia: nuovi file in formato aperto"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/modelli-di-sito/",
+      "title": "Modelli di sito - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/comuni/",
+      "title": "Modello Comuni - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/modello-di-contribuzione/",
+      "title": "Modello di contribuzione"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/scuole/",
+      "title": "Modello scuole - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/musei-civici/",
+      "title": "Musei civici - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/navigazione/",
+      "title": "Navigazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/navscroll/",
+      "title": "Navscroll - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20230621-niente-su-di-noi-senza-di-noi/",
+      "title": "Niente su di Noi, senza di Noi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20230314-nome-in-codice-italia/",
+      "title": "Nome in codice: ___ Italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/normativa/",
+      "title": "Normativa - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/",
+      "title": "Normativa - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/notifications/",
+      "title": "Notifications - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/",
+      "title": "Notizie - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/number-input/",
+      "title": "Number input - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20231024-nuovi-rilasci-del-design-system-del-paese-e-delle-risorse-di-progettazione-e-sviluppo/",
+      "title": "Nuovi rilasci del design system del Paese e delle risorse di progettazione e sviluppo"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/ombre/",
+      "title": "Ombre"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20210427-online-il-nuovo-portale-anpr/",
+      "title": "Online il nuovo portale ANPR - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20250219-online-nuovi-materiali-per-insegnare-design-per-l-ambito-pubblico/",
+      "title": "Online nuovi materiali per insegnare design per l’ambito pubblico"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/open-source/",
+      "title": "Open source - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20250716-ora-tocca-a-voi-le-nuove-iniziative-per-la-community/",
+      "title": "Ora tocca a voi! Le nuove iniziative per la community"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/organizzare/",
+      "title": "Organizzare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/overlay/",
+      "title": "Overlay - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/pagination/",
+      "title": "Pagination - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/",
+      "title": "Panoramica come contribuire"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare/",
+      "title": "Panoramica come iniziare"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/",
+      "title": "Panoramica componenti"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/",
+      "title": "Panoramica fondamenti"
+    },
+    {
+      "url": "https://designers.italia.it/community/partecipa/",
+      "title": "Partecipa - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/partecipazione/",
+      "title": "Partecipazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20250625-passi-avanti-per-i-kit-di-design-e-sviluppo-di-italia/",
+      "title": "Passi avanti per i kit di design e sviluppo di .italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare/per-designer/",
+      "title": "Per designer"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/per-il-design/",
+      "title": "Per il design"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/per-la-documentazione/",
+      "title": "Per la documentazione"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/per-lo-sviluppo/",
+      "title": "Per lo sviluppo"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare/per-responsabili-progetto/",
+      "title": "Per responsabili progetto"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare/per-sviluppatori/",
+      "title": "Per sviluppatori"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20201201-per-una-progettazione-a-misura-di-territorio/",
+      "title": "Per una progettazione a misura di territorio - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20210804-per-una-vacanza-da-designers/",
+      "title": "Per una vacanza da Designers - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/validare/test-di-usabilita/pianifica-i-test-di-usabilita/",
+      "title": "Pianifica i test di usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/piano-attivita/",
+      "title": "Piano attività - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/piccole-cose/",
+      "title": "Piccole cose - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/popover/",
+      "title": "Popover - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20260529-premiato-al-compasso-d-oro-adi-2026-il-progetto-della-misura-1-4-1-del-pnrr-per-i-portali-web-delle-asl/",
+      "title": "Premiato al Compasso d’Oro ADI 2026 il progetto della Misura 1.4.1 del PNRR per i portali web delle ASL"
+    },
+    {
+      "url": "https://designers.italia.it/community/partecipa/prendi-parte-alle-attivita-di-ricerca/",
+      "title": "Prendi parte alle attività di ricerca - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20230925-prendi-parte-anche-tu-all-evoluzione-del-design-system-del-paese/",
+      "title": "Prendi parte anche tu all’evoluzione del design system del Paese"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/validare/test-di-usabilita/prepara-le-attivita-e-svolgi-i-test-di-usabilita/",
+      "title": "Prepara le attività e svolgi i test di usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/principi-e-intenzioni/",
+      "title": "Princìpi e intenzioni"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/processi-e-servizi/",
+      "title": "Processi e servizi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/comuni/adotta-il-modello-di-servizi-digitali-comunali/progetta-il-flusso-di-servizio/",
+      "title": "Progetta il flusso di servizio - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/",
+      "title": "Progettare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20260429-progettare-api-diqualita-per-servizi-pubblici-interoperabili/",
+      "title": "Progettare API di qualità per servizi pubblici interoperabili"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/202605-progettare-api-di-qualita-per-servizi-pubblici-interoperabili/",
+      "title": "Progettare API di qualità per servizi pubblici interoperabili"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220530-progettare-api-interoperabili-conformi-linee-guida-agid/",
+      "title": "Progettare API interoperabili conformi alle linee guida AGID - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20241205-progettare-l-interazione-con-le-ia-conversazionali/",
+      "title": "Progettare l'interazione con le IA conversazionali"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/imparare/progettare-servizi-e-touchpoint-digitali-della-pa/",
+      "title": "Progettare servizi e touchpoint digitali della PA - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20240219-progettare-servizi-pubblici-di-qualita-con-il-nuovo-kit-processi-e-servizi/",
+      "title": "Progettare servizi pubblici di qualità con il nuovo kit \"Processi e servizi\""
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20210329-progettare-servizi-pubblici-digitali-equi-e-sostenibili/",
+      "title": "Progettare servizi pubblici digitali più equi e sostenibili - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20250729-progettare-un-assistente-virtuale-un-atto-di-design-pubblico/",
+      "title": "Progettare un assistente virtuale: un atto di design pubblico"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/progettazione-contenuti/",
+      "title": "Progettazione contenuti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/progettazione-interfaccia/",
+      "title": "Progettazione interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/progettazione-servizi/",
+      "title": "Progettazione servizi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/",
+      "title": "Progetto - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/progress-indicators/",
+      "title": "Progress indicators - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/proporzioni-media/",
+      "title": "Proporzioni media"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/prototipazione/",
+      "title": "Prototipazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220727-nuove-linee-guida-e-manuale-operativo-di-design/",
+      "title": "Pubblicate le nuove Linee guida di design per i siti e i servizi digitali della PA - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/questionario-online/",
+      "title": "Questionario online - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/radio-button/",
+      "title": "Radio button - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/rating/",
+      "title": "Rating - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/comuni/adotta-il-modello-di-servizi-digitali-comunali/realizza-l-interfaccia-del-servizio-digitale-comunale/",
+      "title": "Realizza l'interfaccia del servizio digitale comunale - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/aziende-sanitarie-locali/adotta-il-modello-di-sito-asl/realizza-l-interfaccia-del-sito-asl/",
+      "title": "Realizza l'interfaccia del sito ASL - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/comuni/adotta-il-modello-di-sito-comunale/realizza-l-interfaccia-del-sito-comunale/",
+      "title": "Realizza l'interfaccia del sito comunale - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/musei-civici/adotta-il-modello-di-sito-per-i-musei-civici/realizza-l-interfaccia-del-sito-del-museo-civico/",
+      "title": "Realizza l'interfaccia del sito del museo civico - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/scuole/adotta-il-modello-di-sito-scolastico/realizza-l-interfaccia-del-sito-scolastico/",
+      "title": "Realizza l'interfaccia del sito scolastico - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/realizza-un-prototipo-in-alta-fedelta/",
+      "title": "Realizza un prototipo in alta fedeltà - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/prototipazione/realizza-un-prototipo-in-bassa-fedelta/",
+      "title": "Realizza un prototipo in bassa fedeltà - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/",
+      "title": "Realizzare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20231128-realizzare-interfacce-pubbliche-di-qualita-e-piu-accessibili-grazie-al-design-system-del-paese/",
+      "title": "Realizzare interfacce pubbliche di qualità e più accessibili grazie al design system del Paese"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20231128-realizzare-interfacce-pubbliche-di-qualita-e-piu-accessibili-grazie-al-design-system-del-paese/",
+      "title": "Realizzare interfacce pubbliche di qualità e più accessibili grazie al Design system del Paese - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/ricerca-utente/",
+      "title": "Ricerca utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/validare/test-di-usabilita/rielabora-e-condividi-i-risultati-dei-test-di-usabilita/",
+      "title": "Rielabora e condividi i risultati dei test di usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220210-riparte-survey-community/",
+      "title": "Riparte la survey dedicata alla community - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/",
+      "title": "Risorse per progettare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20250320-scopri-le-novita-del-manuale-operativo-di-design/",
+      "title": "Scopri le novità del Manuale operativo di design"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/202512-scrivere-semplice-per-i-cittadini-linguaggio-e-tono-di-voce/",
+      "title": "Scrivere semplice per i cittadini: linguaggio e tono di voce"
+    },
+    {
+      "url": "https://designers.italia.it/community/partecipa/scrivi-un-articolo-di-approfondimento/",
+      "title": "Scrivi un articolo di approfondimento - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/sections/",
+      "title": "Sections - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/partecipa/segnala-buoni-esempi-di-progettazione-e-sviluppo-nella-pa/",
+      "title": "Segnala buoni esempi di progettazione e sviluppo nella PA - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/select/",
+      "title": "Select - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20241104-adi-design-index/",
+      "title": "Selezionati nell’ADI Design Index, un passo verso il Compasso d’Oro"
+    },
+    {
+      "url": "https://designers.italia.it/community/media/20230325-servizi-inclusivi-e-usabili-per-tutti/",
+      "title": "Servizi inclusivi e usabili per tutti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/sidebar/",
+      "title": "Sidebar - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220627-siti-scolastici-semplici-accessibili-grazie-al-modello/",
+      "title": "Siti scolastici sempre più semplici e accessibili grazie al modello aggiornato di Designers Italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/skiplinks/",
+      "title": "Skiplinks - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/spaziature/",
+      "title": "Spaziature"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/stato-dell-arte/",
+      "title": "Stato dell'arte - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/steppers/",
+      "title": "Steppers - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/sticky/",
+      "title": "Sticky - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/storia/",
+      "title": "Storia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/sviluppo-interfaccia/sviluppa-l-interfaccia-di-un-servizio-digitale/",
+      "title": "Sviluppa l'interfaccia di un servizio digitale - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/sviluppo-interfaccia/",
+      "title": "Sviluppo interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/sviluppo-interfaccia/",
+      "title": "Sviluppo interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/tables/",
+      "title": "Tables - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/tabs/",
+      "title": "Tabs - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/test-di-usabilita/",
+      "title": "Test di usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/validare/test-di-usabilita/",
+      "title": "Test di usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/thumbnav/",
+      "title": "Thumbnav - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/timeline/",
+      "title": "Timeline - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/timepicker/",
+      "title": "Timepicker - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/tipografia/",
+      "title": "Tipografia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/toggles/",
+      "title": "Toggles - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/tono-di-voce/",
+      "title": "Tono di voce"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/tono-di-voce",
+      "title": "Tono di voce"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/toolbar/",
+      "title": "Toolbar - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/tooltip/",
+      "title": "Tooltip - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/transfer/",
+      "title": "Transfer - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20210927-disponibile-video-community-call/",
+      "title": "Tre casi di riutilizzo dei modelli di Designers Italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20240514-tutti-gli-eventi-di-designers-italia-a-maggio/",
+      "title": "Tutti gli eventi di Designers Italia a maggio"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/ui-kit/",
+      "title": "UI Kit - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220131-atlante-trasformazione-digitale-pa/",
+      "title": "Un Atlante per la Pubblica Amministrazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/202607-un-kit-per-ogni-ambiente-di-sviluppo-il-nuovo-dev-kit-italia/",
+      "title": "Un kit per ogni ambiente di sviluppo: il nuovo Dev Kit Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie/20220726-una-stagione-di-incontri-community/",
+      "title": "Una stagione di incontri community - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/upload/",
+      "title": "Upload - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/usabilita/",
+      "title": "Usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/utili-per/utilita/",
+      "title": "Utilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/validare/",
+      "title": "Validare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/versionamento/",
+      "title": "Versionamento"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/video-player/",
+      "title": "Video player - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/visione-e-missione/",
+      "title": "Visione e missione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi/20230506-wired-next-fest-trentino-2023-interfacce-di-bronzo/",
+      "title": "Wired Next Fest Trentino 2023 – Interfacce di bronzo - Designers Italia"
+    }
+  ]
 }

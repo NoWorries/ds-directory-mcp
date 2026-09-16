@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "morningstar-morningstar-design-system",
   "organization": "Morningstar",
   "design_system": "Morningstar Design System",
@@ -9,11 +9,11 @@
     "https://designsystem.morningstar.com/"
   ],
   "detail_url": "/systems/morningstar-morningstar-design-system",
-  "pages_indexed": 7,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 111,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T21:55:15+00:00",
+  "last_checked": "2026-09-16T13:19:59+00:00",
   "last_modified": "Mon, 22 Jun 2026 13:11:25 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -22,8 +22,457 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "Vue"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/about-mds/",
+      "title": "About MDS - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/about-chart-elements/",
+      "title": "About Morningstar Chart Elements - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/accessibility/",
+      "title": "Accessibility - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/adoption/",
+      "title": "Adoption - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/alert/",
+      "title": "Alert - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/visual-language/animation/",
+      "title": "Animation - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/application-header/",
+      "title": "Application Header - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/area-plot/",
+      "title": "Area Plot - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/area-plot-stacked/",
+      "title": "Area Plot Stacked - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/banner/",
+      "title": "Banner - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-horizontal/",
+      "title": "Bar Plot Horizontal - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-horizontal-benchmark/",
+      "title": "Bar Plot Horizontal Benchmark - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-horizontal-grouped/",
+      "title": "Bar Plot Horizontal Grouped - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-horizontal-stacked/",
+      "title": "Bar Plot Horizontal Stacked - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-vertical/",
+      "title": "Bar Plot Vertical - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-vertical-benchmark/",
+      "title": "Bar Plot Vertical Benchmark - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-vertical-grouped/",
+      "title": "Bar Plot Vertical Grouped - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/bar-plot-vertical-stacked/",
+      "title": "Bar Plot Vertical Stacked - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/browser-support/",
+      "title": "Browser Support - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/button/",
+      "title": "Button - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/button-group/",
+      "title": "Button Group - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/card/",
+      "title": "Card - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/chart-elements-status/",
+      "title": "Chart Element Status - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/chart-examples/",
+      "title": "Chart Examples - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/interactions-and-behaviors/",
+      "title": "Chart Interactions and Behaviors - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/checkbox/",
+      "title": "Checkbox - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/circle/",
+      "title": "Circle - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/contributions/contributing-code/",
+      "title": "Code Changes - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/visual-language/color/",
+      "title": "Color - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/color/",
+      "title": "Color - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/combo-box/",
+      "title": "Combo Box - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/component-status/",
+      "title": "Component Status - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/visual-language/constants/",
+      "title": "Constants - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/contributions/contributors/",
+      "title": "Contributors - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/data-table-elements/",
+      "title": "Data Table Elements - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/data-table-features/",
+      "title": "Data Table Features - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/date-picker/",
+      "title": "Date Picker - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/design-standards/",
+      "title": "Design Standards - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/contributions/contributing-design/",
+      "title": "Design Updates - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/dialog/",
+      "title": "Dialog - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/contributions/contributing-documentation/",
+      "title": "Documentation - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/donut-plot/",
+      "title": "Donut Plot - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/empty-state/",
+      "title": "Empty State - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/esg-risk-rating/",
+      "title": "Esg Risk Rating - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/contributions/establishing-shared-value/",
+      "title": "Establishing Shared Value - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/exhibit/",
+      "title": "Exhibit - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/favicon/",
+      "title": "Favicon - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/fieldset/",
+      "title": "Fieldset - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/form/",
+      "title": "Form - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/getting-help/",
+      "title": "Getting Help - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/for-designers/?tab=figma",
+      "title": "Getting Started for Designers - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/for-designers/",
+      "title": "Getting Started for Designers - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/for-engineers/",
+      "title": "Getting Started for Engineers - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/grid/",
+      "title": "Grid - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/group/",
+      "title": "Group - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/guidelines/",
+      "title": "Guidelines - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/histogram-plot/",
+      "title": "Histogram Plot - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/",
+      "title": "Home - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/hover-flag/",
+      "title": "Hover Flag - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/how-to-use-data-tables/",
+      "title": "How to Use Data Tables - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/how-to-use-forms/",
+      "title": "How to Use Forms - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/visual-language/iconography/",
+      "title": "Iconography - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/inline-message/",
+      "title": "Inline Message - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/input/",
+      "title": "Input - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/layout/",
+      "title": "Layout - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/layout-grid/",
+      "title": "Layout Grid - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/getting-started-mbc/",
+      "title": "Legacy Charts (MBC) - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/legend/",
+      "title": "Legend - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/line/",
+      "title": "Line - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/line-plot/",
+      "title": "Line Plot - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/link/",
+      "title": "Link - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/list-group/",
+      "title": "List Group - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/loader/",
+      "title": "Loader - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/making-charts-accessible/",
+      "title": "Making Charts Accessible - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/contributions/mds-process/",
+      "title": "MDS Change Process - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/upgrading-mds/",
+      "title": "MDS Training - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/mds-training/",
+      "title": "MDS Training - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/medalist-rating/",
+      "title": "Medalist Rating - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/modal/",
+      "title": "Modal - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/navigation/",
+      "title": "Navigation - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/notification/",
+      "title": "Notification - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/pagination/",
+      "title": "Pagination - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/path/",
+      "title": "Path - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/pointer/",
+      "title": "Pointer - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/popover/",
+      "title": "Popover - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/principles/",
+      "title": "Principles - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/profile-image/",
+      "title": "Profile Image - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/prototyping-with-codepen/",
+      "title": "Prototyping With CodePen - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/radio-button/",
+      "title": "Radio Button - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/range-slider/",
+      "title": "Range Slider - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/rectangle/",
+      "title": "Rectangle - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/required-field-key/",
+      "title": "Required Field Key - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/scatter-plot/",
+      "title": "Scatter Plot - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/scatter-plot-benchmark/",
+      "title": "Scatter Plot Benchmark - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/scatter-plot-weighted/",
+      "title": "Scatter Plot Weighted - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/search-field/",
+      "title": "Search Field - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/search-results/",
+      "title": "Search Results - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/section/",
+      "title": "Section - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/select/",
+      "title": "Select - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/visual-language/space/",
+      "title": "Space - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/star-rating/",
+      "title": "Star Rating - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/stepper/",
+      "title": "Stepper - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/switch/",
+      "title": "Switch - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/tabs/",
+      "title": "Tabs - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/textarea/",
+      "title": "Textarea - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/components/tooltip/",
+      "title": "Tooltip - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/visual-language/typography/",
+      "title": "Typography - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/getting-started/versioning-and-breaking-changes/",
+      "title": "Versioning and Breaking Changes - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/visual-language/",
+      "title": "Visual Language - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/x-axis/",
+      "title": "X Axis - Morningstar Design System"
+    },
+    {
+      "url": "https://designsystem.morningstar.com/charts/y-axis/",
+      "title": "Y Axis - Morningstar Design System"
+    }
+  ]
 }

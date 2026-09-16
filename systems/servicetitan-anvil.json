@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "servicetitan-anvil",
   "organization": "ServiceTitan",
   "design_system": "Anvil",
@@ -13,9 +13,9 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:53:03+00:00",
+  "last_checked": "2026-09-16T14:19:03+00:00",
   "last_modified": null,
-  "sitemap_last_modified": null,
+  "sitemap_last_modified": "2026-09-15T19:27:50.657Z",
   "resources": {
     "agent_instructions": [
       "https://anvil.servicetitan.com/llms.txt",
@@ -27,8 +27,22 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ],
+    "dark_mode": true
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://anvil.servicetitan.com/llms.txt",
+      "title": "https://anvil.servicetitan.com/llms.txt"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/",
+      "title": "ServiceTitan Design System - Anvil2"
+    }
+  ]
 }

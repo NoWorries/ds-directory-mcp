@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "monzo-monzo-tone-of-voice",
   "organization": "Monzo",
   "design_system": "Monzo Tone of Voice",
@@ -13,13 +13,18 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T21:54:47+00:00",
+  "last_checked": "2026-09-16T13:17:03+00:00",
   "last_modified": null,
-  "sitemap_last_modified": null,
+  "sitemap_last_modified": "2026-07-27",
   "resources": {},
   "unverified_resources": {},
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://monzo.com/tone-of-voice/",
+      "title": "Monzo tone of voice"
+    }
+  ]
 }

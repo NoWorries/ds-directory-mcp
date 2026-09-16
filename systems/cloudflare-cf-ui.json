@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "cloudflare-cf-ui",
   "organization": "Cloudflare",
   "design_system": "CF-UI",
@@ -13,13 +13,22 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T23:40:54+00:00",
+  "last_checked": "2026-09-16T11:53:52+00:00",
   "last_modified": "Mon, 25 Sep 2017 19:39:08 GMT",
   "sitemap_last_modified": null,
   "resources": {},
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://cloudflare.github.io/cf-ui/",
+      "title": "cf-ui styleguide"
+    }
+  ]
 }

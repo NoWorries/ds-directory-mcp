@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "totvs-portinari-ui",
   "organization": "TOTVS",
   "design_system": "Portinari UI",
@@ -13,23 +13,27 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:11:01+00:00",
+  "last_checked": "2026-09-16T14:33:32+00:00",
   "last_modified": "Tue, 15 Sep 2026 20:42:18 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "agent_instructions": [
       "https://po-ui.io/llms.txt",
-      "https://po-ui.io/llms-full.txt",
-      "https://po-ui.io/AGENTS.md",
-      "https://po-ui.io/CLAUDE.md"
-    ],
-    "mcp": [
-      "https://po-ui.io/.well-known/mcp.json"
+      "https://po-ui.io/llms-full.txt"
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "Angular"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://po-ui.io/llms.txt",
+      "title": "TOTVS — Portinari UI — llms.txt"
+    }
+  ]
 }

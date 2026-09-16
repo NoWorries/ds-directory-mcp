@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "goldman-sachs-goldman-sachs-design-system",
   "organization": "Goldman Sachs",
   "design_system": "Goldman Sachs Design System",
@@ -9,11 +9,11 @@
     "https://design.gs.com/home/"
   ],
   "detail_url": "/systems/goldman-sachs-goldman-sachs-design-system",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 39,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T21:54:58+00:00",
+  "last_checked": "2026-09-16T12:20:31+00:00",
   "last_modified": "Tue, 15 Sep 2026 13:54:54 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -31,5 +31,162 @@
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://design.gs.com/home/",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/transaction-banking",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/our-firm/our-people-and-leadership",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/ayco",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/enterprise-partnerships",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/podcasts",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/ipos-m-a",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/reports",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/our-firm/sustainable-finance",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/videos",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/videos/cnbc-david-solomon-on-us-economy-outlook",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/investor-relations",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/goldman-sachs-exchanges",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/briefings",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/community-transformation",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/ficc-and-equities",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/markets",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/artificial-intelligence",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/test-content/OCE-Redesign/community-impact",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/articles",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/research",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/goldman-sachs-global-institute",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/our-firm/locations",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/macroeconomics",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/careers",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/alternatives-private-markets",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/our-firm/our-vendor-program",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/serving-clients/delivering-for-our-clients",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/our-firm/purpose-and-values",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/our-firm/partnerships",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/talks-at-gs",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/the-markets",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/europe",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/outlooks",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/our-businesses",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/what-we-do/investment-banking",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/insights/top-of-mind",
+      "title": "Home | Goldman Sachs"
+    },
+    {
+      "url": "https://design.gs.com/our-firm/history",
+      "title": "Home | Goldman Sachs"
+    }
+  ]
 }

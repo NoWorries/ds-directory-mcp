@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "intuit-quickbooks-design-system",
   "organization": "Intuit",
   "design_system": "QuickBooks Design System",
@@ -9,17 +9,154 @@
     "https://design.intuit.com/quickbooks/"
   ],
   "detail_url": "/systems/intuit-quickbooks-design-system",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 33,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T23:49:00+00:00",
+  "last_checked": "2026-09-16T12:52:28+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {},
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://design.intuit.com/behavioral-science-should-be-in-your-designer-toolkit/",
+      "title": "Behavioral science should be in your designer toolkit - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/change-design-with-comic-book/",
+      "title": "Can a comic book change how we design? - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/design-for-all/",
+      "title": "Design for All Archives - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/design-for-all/page/2/",
+      "title": "Design for All Archives - Page 2 of 2 - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/data-driven-design/",
+      "title": "Designing with HEART (and data) - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/do-research/",
+      "title": "Do Research Archives - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/empower-your-team-through-rapid-experimentation/",
+      "title": "Empower your team through rapid experimentation - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/your-first-90-days-as-a-new-design-manager/",
+      "title": "Growing through some things as a new design manager - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/quickbooks/",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/quickbooks/brand/",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/",
+      "title": "Home - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/how-a-bar-of-soap-inspired-a-new-design/",
+      "title": "How a bar of soap inspired a new design path - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/how-inclusivity-happens/",
+      "title": "How inclusivity actually happens - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/adhd-and-design/",
+      "title": "How my ADHD makes me a better designer - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/how-to/",
+      "title": "How To Archives - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/how-to/page/2/",
+      "title": "How To Archives - Page 2 of 4 - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/how-to/page/3/",
+      "title": "How To Archives - Page 3 of 4 - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/how-to-tackle-being-a-big-tech-design-intern/",
+      "title": "How to tackle being a big-tech design intern - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/topics/lead-people/",
+      "title": "Lead People Archives - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/property-management-washing-machines-and-empathy/",
+      "title": "Learning how real customers really use your product - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/letting-go-of-the-steering-wheel/",
+      "title": "Letting go of the steering wheel - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/adhd-and-ipd-in-product-discovery/",
+      "title": "Making \"In-product discovery\" (IPD) work for everyone - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/accounting-for-designers/",
+      "title": "Making accounting matter to designers at Intuit - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/making-others-win/",
+      "title": "Making others win - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/ooo-sos-make-your-out-of-office-message-mean-something/",
+      "title": "OOO SOS: Make your out-of-office message mean something - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/product-design-your-dinner/",
+      "title": "Product design your dinner like a pro - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/should-i-be-a-unicorn/",
+      "title": "Should I be a unicorn? - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/silences-pauses-and-research/",
+      "title": "Silences, pauses, and other research tools - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/the-new-home-of-quickbooks-design/",
+      "title": "The new home of QuickBooks Design - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/power-of-discomfort/",
+      "title": "The power of discomfort: lessons in leadership - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/what-do-a-handmade-jacket-and-a-digital-mvp-have-in-common-the-pride-of-making-progress/",
+      "title": "What do a handmade jacket and a digital MVP have in common? The pride of making progress - Intuit Design Hub"
+    },
+    {
+      "url": "https://design.intuit.com/why-learn-hindi-a-roundabout-way-to-becoming-a-better-designer/",
+      "title": "Why learn Hindi? It'll make you a better designer - Intuit Design Hub"
+    }
+  ]
 }

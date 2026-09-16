@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "shopify-polaris",
   "organization": "Shopify",
   "design_system": "Polaris",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-13T22:19:25+00:00",
+  "last_checked": "2026-09-16T14:19:47+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -28,7 +28,11 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "Web Components"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [

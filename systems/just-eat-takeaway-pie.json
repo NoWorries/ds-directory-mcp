@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "just-eat-takeaway-pie",
   "organization": "Just Eat Takeaway",
   "design_system": "PIE",
@@ -9,69 +9,559 @@
     "https://pie.design/"
   ],
   "detail_url": "/systems/just-eat-takeaway-pie",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 78,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:29:07+00:00",
-  "last_modified": "Tue, 15 Sep 2026 06:57:41 GMT",
+  "last_checked": "2026-09-16T12:57:24+00:00",
+  "last_modified": "Wed, 16 Sep 2026 09:43:26 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
       "https://github.com/justeattakeaway/pie",
-      "https://github.com/justeat/pie-project",
-      "https://github.com/justeattakeaway/fozzie-components"
+      "https://github.com/justeattakeaway/fozzie-components",
+      "https://github.com/justeat/pie-project"
     ],
     "figma": [
-      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/-Core--Apps-Component-Documentation--PIE-3-?m=auto",
-      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/-Core--Web-Component-Documentation--PIE-3-?m=auto",
-      "https://www.figma.com/design/x5tFJvtA7GNxSjHIrybQJl/-BA--Documentation--Customer-%E2%80%93-JE---TA--PIE-2.0-?m=auto",
-      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process?node-id=440%3A1723&t=3PXkTh6rokGiG3sG-4",
-      "https://www.figma.com/design/CSxFGnwnBBBNPF6FYeB8qs/-BA--Partner--PIE-3-?m=auto",
-      "https://www.figma.com/design/64d6BFbEaP9tjrDmOCJpQh/%E2%9C%A8--Core--Foundations--PIE-3-?m=auto",
-      "https://www.figma.com/design/KAsRXLmSLSQ8a2JLXg6OsS/-BA--Customer-%E2%80%93-Skip--PIE-3-?m=auto",
-      "https://www.figma.com/design/2JSAh62IcfXyVffR5yT6Sg/-BA--Fintech--PIE-3-?m=auto",
-      "https://www.figma.com/design/W4DEzDRBQOBohZ7yZr3LXf/-BA--Partner-Portal-%E2%80%93-Skip--PIE-3-?m=auto",
-      "https://www.figma.com/design/XoCqFBgXafCrQR6hkuFaRj/-BA--Scoober-Logistics-%E2%80%93-Patterns--PIE-3-?m=auto",
-      "https://www.figma.com/design/K11XNe5NKsreTkubGEC6z4/-BA--PLO---Skip--%E2%9C%A8-PIE-3.0-?m=auto",
-      "https://www.figma.com/design/Rqz8KHogVsGCS4j0nDueNo/-Core--Patterns--PIE-3-?m=auto",
-      "https://www.figma.com/design/7Auqy3S8J787NywZ0gtgZm/-BA--Customer-%E2%80%93-JE---TA--PIE-3-?m=auto",
-      "https://www.figma.com/design/0olH9rKFUmtbp3R6KmFqm1/Customer---JET---OA-OW-?m=auto&t=1r8VyBhYopDqLgNO-6",
-      "https://www.figma.com/design/XK2nYzvIZ0QCATVuccBJUJ/-BA--Partner-Patterns--PIE-3-?m=auto",
-      "https://www.figma.com/design/tGv7rwthRgAOQP0Xx86Bm0/-AI--Foundations--PIE-3-?m=auto",
-      "https://www.figma.com/design/26iAOwvB5lRVsoHJscqRqs/-Core--Accessibility--PIE-3-?m=auto",
-      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process?node-id=440%3A3052&t=aVebo2jjEWjKMFwI-0",
-      "https://www.figma.com/design/mJiLMfnMfnEYWJh2Njutdq/-Core--Motion--PIE-3-?m=auto",
-      "https://www.figma.com/design/2c3RYLNtwjPhUdrmKlPg8D/-BA--Logistics-Delco---Patterns?m=auto",
-      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8--Core--Web-Components--PIE-3-?m=auto",
-      "https://www.figma.com/design/hvXst0EMuOpwgMcWp6mbib/-BA--Scoober-Logistics-%E2%80%93-Components--PIE-3-?m=auto",
-      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-?m=auto",
-      "https://www.figma.com/design/r0e4dnGSg9qS8MmdTehw0n/-BA--Internal-Tools-%E2%9A%AA%EF%B8%8F--PIE-3-?m=auto",
-      "https://www.figma.com/design/DVKOT2HOucOpWglwIUsVr8/-Core--JET-Brand-Documentation?m=auto",
-      "https://www.figma.com/design/qVVNVoZgeqkQhlMxsrUhd7/Core-AI-Components?m=auto",
-      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process?node-id=440%3A1574&t=3PXkTh6rokGiG3sG-4",
-      "https://www.figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3.0-?m=auto",
-      "https://www.figma.com/design/3nSkAn3xL6jEOXKt1MePPd/-BA--Logistics-Delco---Components?m=auto",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=14-19646",
       "https://www.figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op/-Core--Icons--PIE-3-?m=auto",
-      "https://www.figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices?m=auto"
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=13-19354",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-?m=auto",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=16-19648",
+      "https://www.figma.com/design/qVVNVoZgeqkQhlMxsrUhd7/Core-AI-Components?m=auto",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-?node-id=45-9885",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=13-17640",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=14-19646",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=35-262",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=315-26593",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114527",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=1-65348",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=904-31630",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=1-60872",
+      "https://www.figma.com/file/j1YKygEyhqZ6zKVxcHapn5/%5BCore%5D-Component-Documentation-%E2%9A%AA%EF%B8%8F-%5BPIE-2.0%5D?type=design&node-id=876-1329&mode=design",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114525",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=17-19650",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114512",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=1-55378",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=339-24607",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114514",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=315-28057",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=193-32270",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=19-19819",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-21",
+      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process?node-id=440%3A1574&t=3PXkTh6rokGiG3sG-4",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=132-15914",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=4-21447",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=331-24128",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=314-23908",
+      "https://www.figma.com/design/XoCqFBgXafCrQR6hkuFaRj/-BA--Scoober-Logistics-%E2%80%93-Patterns--PIE-3-?m=auto",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=163-43078",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=35-262",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1005-30849",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=32-32",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=19-19819",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114523",
+      "https://www.figma.com/design/XK2nYzvIZ0QCATVuccBJUJ/-BA--Partner-Patterns--PIE-3-?m=auto",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=315-23961",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=198-33663",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=163-43156",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=287-32323",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=0-1",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=2-65910",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=163-22046",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/-Core--Web-Component-Documentation--PIE-3-?m=auto",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=13-17639",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114515",
+      "https://www.figma.com/design/r0e4dnGSg9qS8MmdTehw0n/-BA--Internal-Tools-%E2%9A%AA%EF%B8%8F--PIE-3-?m=auto",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114518",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=45-9885",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114523",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=193-33379",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=35-261",
+      "https://www.figma.com/design/2c3RYLNtwjPhUdrmKlPg8D/-BA--Logistics-Delco---Patterns?m=auto",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=163-22046",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=24-21059",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=5-9831",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=2-65910",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=19-19818",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1-925",
+      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process?node-id=440%3A1723&t=3PXkTh6rokGiG3sG-4",
+      "https://www.figma.com/design/0olH9rKFUmtbp3R6KmFqm1/Customer---JET---OA-OW-?m=auto&t=1r8VyBhYopDqLgNO-6",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=1-45657",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114516",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1998-6410",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=35-261",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=2-65909",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114528",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-20",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=13-17639",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=35-260",
+      "https://www.figma.com/design/mJiLMfnMfnEYWJh2Njutdq/-Core--Motion--PIE-3-?m=auto",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=75-21124",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=1-49824",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-23",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-29",
+      "https://www.figma.com/design/W4DEzDRBQOBohZ7yZr3LXf/-BA--Partner-Portal-%E2%80%93-Skip--PIE-3-?m=auto",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=1-65907",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=235-32588",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=331-24128",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114516",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=315-23961",
+      "https://www.figma.com/design/26iAOwvB5lRVsoHJscqRqs/-Core--Accessibility--PIE-3-?m=auto",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=19-19818",
+      "https://www.figma.com/design/tGv7rwthRgAOQP0Xx86Bm0/-AI--Foundations--PIE-3-?m=auto",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=13-17640",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=294-32395",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=310-24558",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=2-65908",
+      "https://www.figma.com/design/hvXst0EMuOpwgMcWp6mbib/-BA--Scoober-Logistics-%E2%80%93-Components--PIE-3-?m=auto",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=18-19652",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=364-52420",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=113-22915",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-25",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-22",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=345-32232",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=0-1",
+      "https://www.figma.com/design/64d6BFbEaP9tjrDmOCJpQh/%E2%9C%A8--Core--Foundations--PIE-3-?m=auto",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=32-255",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114522",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=34-259",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=345-32232",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-19",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=32-32",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-27",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=75-21124",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=1-15409",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1-925",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=20-20755",
+      "https://www.figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices?m=auto",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-30",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=1-55378",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/-Core--Apps-Component-Documentation--PIE-3-?m=auto",
+      "https://www.figma.com/design/x5tFJvtA7GNxSjHIrybQJl/-BA--Documentation--Customer-%E2%80%93-JE---TA--PIE-2.0-?m=auto",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=341-24442",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=1-65907",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=1-15409",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=315-28057",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=1-65348",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=364-29974",
+      "https://www.figma.com/design/Rqz8KHogVsGCS4j0nDueNo/-Core--Patterns--PIE-3-?m=auto",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=341-24442",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1005-30849",
+      "https://www.figma.com/design/3nSkAn3xL6jEOXKt1MePPd/-BA--Logistics-Delco---Components?m=auto",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114524",
+      "https://www.figma.com/design/DVKOT2HOucOpWglwIUsVr8/-Core--JET-Brand-Documentation?m=auto",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=339-24607",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=198-33663",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=1-45657",
+      "https://www.figma.com/design/K11XNe5NKsreTkubGEC6z4/-BA--PLO---Skip--%E2%9C%A8-PIE-3.0-?m=auto",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114514",
+      "https://www.figma.com/design/7Auqy3S8J787NywZ0gtgZm/-BA--Customer-%E2%80%93-JE---TA--PIE-3-?m=auto",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=266-36459",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=339-24355",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=113-22915",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-25",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=34-259",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=45-9885",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=24-21059",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=364-29974",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=163-43156",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=5-9831",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=364-52420",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=163-43078",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=235-32588",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114526",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-30",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=2-65908",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=32-256",
+      "https://www.figma.com/design/CSxFGnwnBBBNPF6FYeB8qs/-BA--Partner--PIE-3-?m=auto",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=132-15914",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=294-32395",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=18-19652",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=32-256",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114512",
+      "https://www.figma.com/design/KAsRXLmSLSQ8a2JLXg6OsS/-BA--Customer-%E2%80%93-Skip--PIE-3-?m=auto",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=14-19647",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=14-19647",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114526",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=904-31630",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=315-26593",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=287-32323",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=2-65909",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-22",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=35-260",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=339-24355",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-27",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=17-19650",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114518",
+      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process?node-id=440%3A3052&t=bTA5tJ46naOtMqUn-0",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=1-60872",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=16-19648",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=266-36459",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114515",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=32-257",
+      "https://www.figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3.0-?m=auto",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=1-49824",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-29",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-20",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=32-257",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=193-33379",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=4-21447",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=29-23",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=20-20755",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=32-255",
+      "https://www.figma.com/design/2JSAh62IcfXyVffR5yT6Sg/-BA--Fintech--PIE-3-?m=auto",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/?node-id=29-21",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1998-6410",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=32-258",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=310-24558",
+      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process?node-id=440%3A3052&t=aVebo2jjEWjKMFwI-0",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=193-32270",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/?node-id=1573-114524",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/?node-id=25-21972",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8--Core--Web-Components--PIE-3-?m=auto",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/?node-id=1573-114528"
     ],
-    "agent_instructions": [
-      "https://pie.design/llms.txt",
-      "https://pie.design/llms-full.txt",
-      "https://pie.design/AGENTS.md",
-      "https://pie.design/CLAUDE.md"
-    ],
-    "mcp": [
-      "https://pie.design/.well-known/mcp.json"
+    "npm": [
+      "https://www.npmjs.com/package/@justeattakeaway/pie-webc",
+      "https://npmjs.com/package/@justeattakeaway/pie-webc",
+      "https://www.npmjs.com/package/@justeattakeaway/pie-css"
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "tokens_format": "Figma Variables",
+    "frameworks": [
+      "React",
+      "Vue",
+      "Web Components",
+      "SwiftUI"
+    ],
+    "dark_mode": true,
+    "validation_loop": true
+  },
   "github_meta": {
     "license": "Apache-2.0",
     "stars": 41,
-    "last_pushed": "2026-09-15T16:14:11Z"
+    "last_pushed": "2026-09-16T12:53:59Z"
   },
-  "npm_meta": null,
-  "indexed_pages": []
+  "npm_meta": {
+    "latest_version": "0.11.20",
+    "last_published": "2026-09-10T07:31:50.291Z",
+    "weekly_downloads": 1411
+  },
+  "indexed_pages": [
+    {
+      "url": "https://pie.design/components/accordion",
+      "title": "Components — Accordion | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/assistive-text",
+      "title": "Components — Assistive Text | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/avatar",
+      "title": "Components — Avatar | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/badge",
+      "title": "Components — Badge | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/bottom-sheet",
+      "title": "Components — Bottom Sheet | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/breadcrumb",
+      "title": "Components — Breadcrumb | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/button",
+      "title": "Components — Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/button/code/",
+      "title": "Components — Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/card",
+      "title": "Components — Card | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/carousel-indicator",
+      "title": "Components — Carousel Indicator | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox-group",
+      "title": "Components — Checkbox Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox",
+      "title": "Components — Checkbox | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/chip",
+      "title": "Components — Chip | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/component-status/",
+      "title": "Components — Component status | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/data-table",
+      "title": "Components — Data Table | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/date-picker",
+      "title": "Components — Date Picker | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/divider",
+      "title": "Components — Divider | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/dropdown",
+      "title": "Components — Dropdown | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/fab",
+      "title": "Components — FAB | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/form-label",
+      "title": "Components — Form Label | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-button",
+      "title": "Components — Icon Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/link",
+      "title": "Components — Link | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/map-pin",
+      "title": "Components — Map Pin | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/modal-native",
+      "title": "Components — Modal - Native | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/modal",
+      "title": "Components — Modal | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/notification",
+      "title": "Components — Notification | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/pagination",
+      "title": "Components — Pagination | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/popover",
+      "title": "Components — Popover | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/progress-bar",
+      "title": "Components — Progress Bar | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/progress-stepper",
+      "title": "Components — Progress Stepper | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio-group",
+      "title": "Components — Radio Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio",
+      "title": "Components — Radio | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/rating",
+      "title": "Components — Rating | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/segmented-controls",
+      "title": "Components — Segmented Controls | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/select-input",
+      "title": "Components — Select Input | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/show-more",
+      "title": "Components — Show More | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/side-sheet",
+      "title": "Components — Side Sheet | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/skeleton",
+      "title": "Components — Skeleton | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/slider",
+      "title": "Components — Slider | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/spinner",
+      "title": "Components — Spinner | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/switch",
+      "title": "Components — Switch | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tabs",
+      "title": "Components — Tabs | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tag",
+      "title": "Components — Tag | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/text-input",
+      "title": "Components — Text Input | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/textarea",
+      "title": "Components — Textarea | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/thumbnail",
+      "title": "Components — Thumbnail | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/toast",
+      "title": "Components — Toast | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tooltip",
+      "title": "Components — Tooltip | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/uploader",
+      "title": "Components — Uploader | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/support/contact-us",
+      "title": "Contact us | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/contributing",
+      "title": "Designers — Contributing | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/getting-started/",
+      "title": "Designers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/getting-started/figma-files/",
+      "title": "Designers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/how-we-support-you",
+      "title": "Designers — How we support you | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/contributing",
+      "title": "Engineers — Contributing | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/contributing/",
+      "title": "Engineers — Contributing | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/getting-started/",
+      "title": "Engineers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/getting-started/structure/",
+      "title": "Engineers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/getting-started/structure",
+      "title": "Engineers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/guidelines/",
+      "title": "Engineers — Guidelines | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/guidelines/browser-support/",
+      "title": "Engineers — Guidelines | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/web-components/",
+      "title": "Engineers — Web Components | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/web-components/integration-guides/nextjs-14/",
+      "title": "Engineers — Web Components | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/web-components/integration-guides/nuxt-3/",
+      "title": "Engineers — Web Components | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/support/faq",
+      "title": "FAQs | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/list-item",
+      "title": "List Item — List Item | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper",
+      "title": "Numeric Stepper — Numeric Stepper | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/bar-chart",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/list-item interactive",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper form",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-with background",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper input",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper simple",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/cookie-banner",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/line-chart",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/typography/code/",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/all-about-pie/what-is-pie",
+      "title": "What is PIE? | PIE Design System"
+    }
+  ]
 }

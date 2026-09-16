@@ -10,6 +10,23 @@
 
   @view-transition { navigation: auto; }
 
+  /* Named transition (view-transition-name: thumb-<slug>, tagged
+     view-transition-class: thumb — set inline in generate_directory.py's
+     render_card/generate_systems.py's thumb_html, since the name itself must
+     be unique per element but the *class* lets every card share one
+     animation rule) gets a slightly slower, eased morph than the default
+     page crossfade, so a card's thumbnail visibly glides into the detail
+     page's hero image instead of just cutting; everything else keeps the
+     plain default root crossfade, intentionally quick. (A matching
+     title-<slug> transition on the heading was tried and dropped — morphing
+     text at a different size/weight read as glitchy, not smooth.)
+     Chrome/Edge only (view-transition-class needs Chrome 125+) — a no-op
+     elsewhere, same as @view-transition itself. */
+  ::view-transition-group(*) { animation-duration: 0.3s; }
+  ::view-transition-group(*.thumb) {
+    animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
   :root {
     --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
     --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
@@ -87,6 +104,13 @@
   .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
   .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
 
+  .nav-suggest {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap;
+    padding: 6px 10px; border-radius: 6px;
+  }
+  .nav-suggest:hover { background: var(--accent-soft); }
+  @media (max-width: 640px) { .nav-suggest { display: none; } }
+
   .nav-search { display: flex; align-items: center; }
   .nav-search-toggle {
     background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
@@ -147,9 +171,10 @@
         <a href="/" class="site-brand">Design Systems Directory</a>
         <div class="site-nav-links">
           <a href="/" class="">Search</a>
-          <a href="/directory.html" class="">All Systems</a>
-          <a href="/components/index.html" class="current">Components</a>
+          <a href="/directory" class="">All Systems</a>
+          <a href="/components" class="current">Components</a>
         </div>
+        <a class="nav-suggest" href="/suggest">Suggest a system</a>
         <div class="nav-search">
           <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
           <form class="nav-search-form" id="navSearchForm" hidden>
@@ -171,19 +196,19 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
-    if (q) window.location.href = "/?q=" + encodeURIComponent(q);
+    if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
   });
 })();
 </script>
     
 <div class="page">
   <div class="component-layout">
-    <nav class="component-sidebar"><p class="sidebar-label">All components</p><ul><li><a href="accordion.html" class="">Accordion <span class="sidebar-count">5</span></a></li><li><a href="alert.html" class="">Alert <span class="sidebar-count">1</span></a></li><li><a href="avatar.html" class="">Avatar <span class="sidebar-count">1</span></a></li><li><a href="badge.html" class="">Badge <span class="sidebar-count">1</span></a></li><li><a href="breadcrumb.html" class="">Breadcrumb <span class="sidebar-count">1</span></a></li><li><a href="button.html" class="">Button <span class="sidebar-count">3</span></a></li><li><a href="card.html" class="">Card <span class="sidebar-count">3</span></a></li><li><a href="carousel.html" class="">Carousel <span class="sidebar-count">1</span></a></li><li><a href="checkbox.html" class="">Checkbox <span class="sidebar-count">1</span></a></li><li><a href="chip.html" class="">Chip <span class="sidebar-count">1</span></a></li><li><a href="date-picker.html" class="">Date Picker <span class="sidebar-count">3</span></a></li><li><a href="dropdown.html" class="">Dropdown <span class="sidebar-count">5</span></a></li><li><a href="icon.html" class="">Icon <span class="sidebar-count">8</span></a></li><li><a href="input.html" class="">Input <span class="sidebar-count">4</span></a></li><li><a href="link.html" class="">Link <span class="sidebar-count">2</span></a></li><li><a href="list.html" class="current">List <span class="sidebar-count">3</span></a></li><li><a href="menu.html" class="">Menu <span class="sidebar-count">1</span></a></li><li><a href="modal.html" class="">Modal <span class="sidebar-count">2</span></a></li><li><a href="navigation.html" class="">Navigation <span class="sidebar-count">2</span></a></li><li><a href="pagination.html" class="">Pagination <span class="sidebar-count">1</span></a></li><li><a href="progress.html" class="">Progress <span class="sidebar-count">3</span></a></li><li><a href="radio.html" class="">Radio <span class="sidebar-count">1</span></a></li><li><a href="sidebar.html" class="">Sidebar <span class="sidebar-count">2</span></a></li><li><a href="switch.html" class="">Switch <span class="sidebar-count">1</span></a></li><li><a href="table.html" class="">Table <span class="sidebar-count">3</span></a></li><li><a href="tabs.html" class="">Tabs <span class="sidebar-count">2</span></a></li><li><a href="toast.html" class="">Toast <span class="sidebar-count">1</span></a></li><li><a href="tooltip.html" class="">Tooltip <span class="sidebar-count">3</span></a></li><li><a href="typography.html" class="">Typography <span class="sidebar-count">4</span></a></li></ul></nav>
+    <nav class="component-sidebar"><p class="sidebar-label">All components</p><ul><li><a href="accordion" class="">Accordion <span class="sidebar-count">6</span></a></li><li><a href="alert" class="">Alert <span class="sidebar-count">10</span></a></li><li><a href="avatar" class="">Avatar <span class="sidebar-count">1</span></a></li><li><a href="badge" class="">Badge <span class="sidebar-count">3</span></a></li><li><a href="breadcrumb" class="">Breadcrumb <span class="sidebar-count">6</span></a></li><li><a href="button" class="">Button <span class="sidebar-count">13</span></a></li><li><a href="card" class="">Card <span class="sidebar-count">4</span></a></li><li><a href="carousel" class="">Carousel <span class="sidebar-count">1</span></a></li><li><a href="checkbox" class="">Checkbox <span class="sidebar-count">8</span></a></li><li><a href="chip" class="">Chip <span class="sidebar-count">3</span></a></li><li><a href="combobox" class="">Combobox <span class="sidebar-count">1</span></a></li><li><a href="date-picker" class="">Date Picker <span class="sidebar-count">4</span></a></li><li><a href="divider" class="">Divider <span class="sidebar-count">8</span></a></li><li><a href="dropdown" class="">Dropdown <span class="sidebar-count">13</span></a></li><li><a href="empty-state" class="">Empty State <span class="sidebar-count">1</span></a></li><li><a href="icon" class="">Icon <span class="sidebar-count">86</span></a></li><li><a href="input" class="">Input <span class="sidebar-count">13</span></a></li><li><a href="link" class="">Link <span class="sidebar-count">3</span></a></li><li><a href="list" class="current">List <span class="sidebar-count">12</span></a></li><li><a href="menu" class="">Menu <span class="sidebar-count">74</span></a></li><li><a href="modal" class="">Modal <span class="sidebar-count">8</span></a></li><li><a href="navigation" class="">Navigation <span class="sidebar-count">5</span></a></li><li><a href="pagination" class="">Pagination <span class="sidebar-count">4</span></a></li><li><a href="popover" class="">Popover <span class="sidebar-count">2</span></a></li><li><a href="progress" class="">Progress <span class="sidebar-count">9</span></a></li><li><a href="radio" class="">Radio <span class="sidebar-count">7</span></a></li><li><a href="sidebar" class="">Sidebar <span class="sidebar-count">5</span></a></li><li><a href="skeleton" class="">Skeleton <span class="sidebar-count">1</span></a></li><li><a href="slider" class="">Slider <span class="sidebar-count">1</span></a></li><li><a href="spinner" class="">Spinner <span class="sidebar-count">2</span></a></li><li><a href="stepper" class="">Stepper <span class="sidebar-count">2</span></a></li><li><a href="switch" class="">Switch <span class="sidebar-count">3</span></a></li><li><a href="table" class="">Table <span class="sidebar-count">3</span></a></li><li><a href="tabs" class="">Tabs <span class="sidebar-count">5</span></a></li><li><a href="tooltip" class="">Tooltip <span class="sidebar-count">3</span></a></li><li><a href="tree" class="">Tree <span class="sidebar-count">1</span></a></li><li><a href="typography" class="">Typography <span class="sidebar-count">14</span></a></li></ul></nav>
     <div class="component-main">
-      <p class="eyebrow"><a href="/components/index.html">Components</a></p>
+      <p class="eyebrow"><a href="/components">Components</a></p>
       <h1>List</h1>
-      <p class="subtitle">3 indexed systems document list — click through to the actual page.</p>
-      <ul class="system-list"><li><a href="https://ant.design/docs/spec/data-list" target="_blank" rel="noopener">Ant Financial — Ant Design</a> <span class="page-title">Data List</span></li><li><a href="https://developer.samsung.com/one-ui-watch-tizen/ui-components/list.html" target="_blank" rel="noopener">Samsung — Tizen CircularUI</a> <span class="page-title">List</span></li><li><a href="https://design.va.gov/content-style-guide/word-list" target="_blank" rel="noopener">U.S. Department of Veterans Affairs — Design system</a> <span class="page-title">Word list</span></li></ul>
+      <p class="subtitle">12 indexed systems document list — click through to the actual page.</p>
+      <ul class="system-list"><li><a href="https://skyline.benevity.org/utilities/reset-list/" target="_blank" rel="noopener">Benevity — Skyline</a> <span class="page-title">Reset List</span></li><li><a href="https://vanillaframework.io/docs/patterns/list-tree" target="_blank" rel="noopener">Canonical — Vanilla framework</a> <span class="page-title">List tree</span></li><li><a href="https://vanillaframework.io/docs/examples/patterns/lists/list-nested-stepped-detailed/" target="_blank" rel="noopener">Canonical — Vanilla framework</a> <span class="page-title">Lists / Ordered list nested in stepped list</span></li><li><a href="https://vanillaframework.io/docs/examples/base/lists/ordered-list/" target="_blank" rel="noopener">Canonical — Vanilla framework</a> <span class="page-title">Lists / Ordered List</span></li><li><a href="https://vanillaframework.io/docs/examples/base/lists/unordered-list/" target="_blank" rel="noopener">Canonical — Vanilla framework</a> <span class="page-title">Lists / Unordered List</span></li><li><a href="https://www.carbondesignsystem.com/components/list/style/" target="_blank" rel="noopener">IBM — Carbon Design System</a> <span class="page-title">https://www.carbondesignsystem.com/components/list/style/</span></li><li><a href="https://designers.italia.it/design-system/componenti/list/" target="_blank" rel="noopener">Italian Public Administration — .it Designers Italy</a> <span class="page-title">List</span></li><li><a href="https://pie.design/components/list-item" target="_blank" rel="noopener">Just Eat Takeaway — PIE</a> <span class="page-title">List Item</span></li><li><a href="https://styleguide.mailchimp.com/word-list" target="_blank" rel="noopener">MailChimp — Mailchimp Content Styleguide</a> <span class="page-title">Word List</span></li><li><a href="https://styleguide.mailchimp.com/word-list/" target="_blank" rel="noopener">MailChimp — Mailchimp Content Styleguide</a> <span class="page-title">Word List</span></li><li><a href="https://designsystem.morningstar.com/components/list-group/" target="_blank" rel="noopener">Morningstar — Morningstar Design System</a> <span class="page-title">List Group</span></li><li><a href="https://semantic-ui.com/elements/list.html" target="_blank" rel="noopener">Semantic — Semantic UI</a> <span class="page-title">List</span></li></ul>
     </div>
   </div>
 </div>

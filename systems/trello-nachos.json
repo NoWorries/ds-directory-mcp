@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "trello-nachos",
   "organization": "Trello",
   "design_system": "Nachos",
@@ -9,12 +9,12 @@
     "https://design.trello.com/"
   ],
   "detail_url": "/systems/trello-nachos",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 12,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-16T00:04:44+00:00",
-  "last_modified": "Tue, 15 Sep 2026 03:08:46 GMT",
+  "last_checked": "2026-09-16T14:35:25+00:00",
+  "last_modified": "Wed, 16 Sep 2026 03:08:41 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "agent_instructions": [
@@ -31,5 +31,54 @@
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://design.trello.com/",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/design-system",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/whats-new",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/tokens",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/iconography",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/typography",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/rovo-ui",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/accessibility",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/news",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/get-started/about-atlassian-design-system",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/get-started",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://design.trello.com/foundations/color-new",
+      "title": "Atlassian Design"
+    }
+  ]
 }

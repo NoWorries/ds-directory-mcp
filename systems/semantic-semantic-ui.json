@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "semantic-semantic-ui",
   "organization": "Semantic",
   "design_system": "Semantic UI",
@@ -9,35 +9,367 @@
     "https://semantic-ui.com/"
   ],
   "detail_url": "/systems/semantic-semantic-ui",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 66,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:48:55+00:00",
+  "last_checked": "2026-09-16T14:15:33+00:00",
   "last_modified": "Fri, 30 May 2025 15:55:40 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/Semantic-Org/Semantic-UI",
-      "https://github.com/defunkt/jquery-pjax",
-      "https://github.com/Semantic-Org/UI-Grid/",
-      "https://github.com/Semantic-Org/UI-Tab/",
-      "https://github.com/macek/jquery-serialize-object",
-      "https://github.com/Semantic-Org/UI-Segment/",
+      "https://github.com/Semantic-Org/UI-Table/",
       "https://github.com/Semantic-Org/UI-Modal/",
+      "https://github.com/kylefox/jquery-tablesort",
+      "https://github.com/Semantic-Org/UI-Advertisement/",
+      "https://github.com/Semantic-Org/UI-Dropdown/",
+      "https://github.com/Semantic-Org/UI-Segment/",
+      "https://github.com/Semantic-Org/Semantic-UI",
+      "https://github.com/guacamoly/semantic-ui-kit-for-sketch",
+      "https://github.com/rails/turbolinks/",
+      "https://github.com/Semantic-Org/UI-Item/",
+      "https://github.com/Semantic-Org/UI-Rail/",
+      "https://github.com/Semantic-Org/UI-Dimmer/",
+      "https://github.com/Semantic-Org/Semantic-UI-CSS",
+      "https://github.com/Semantic-Org/UI-Breadcrumb/",
+      "https://github.com/Semantic-Org/UI-Popup/",
+      "https://github.com/Semantic-Org/UI-Icon/",
+      "https://github.com/Semantic-Org/UI-Container/",
+      "https://github.com/Semantic-Org/Semantic-UI-Meteor",
+      "https://github.com/Semantic-Org/UI-Transition/",
+      "https://github.com/Semantic-Org/UI-Rating/",
+      "https://github.com/Semantic-Org/UI-Divider/",
+      "https://github.com/Semantic-Org/UI-Comment/",
+      "https://github.com/Semantic-Org/UI-Flag/",
+      "https://github.com/Semantic-Org/UI-Statistic/",
+      "https://github.com/Semantic-Org/UI-Step/",
+      "https://github.com/Semantic-Org/Semantic-UI-Ember",
+      "https://github.com/Semantic-Org/Semantic-UI-Docs/",
+      "https://github.com/postcss/autoprefixer",
+      "https://github.com/Semantic-Org/UI-Tab/",
       "https://github.com/Semantic-Org/UI-Reveal/",
-      "https://github.com/asual/jquery-address",
+      "https://github.com/Semantic-Org/UI-Loader/",
+      "https://github.com/docpad/docpad-plugin-ghpages",
+      "https://github.com/Semantic-Org/UI-Accordion/",
       "https://github.com/Semantic-Org/UI-Sidebar/",
-      "https://github.com/rails/turbolinks/"
+      "https://github.com/MohammadYounes/rtlcss",
+      "https://github.com/Semantic-Org/UI-Button/",
+      "https://github.com/asual/jquery-address",
+      "https://github.com/Semantic-Org/UI-Input/",
+      "https://github.com/Semantic-Org/UI-Label/",
+      "https://github.com/Semantic-Org/Semantic-UI-React",
+      "https://github.com/Semantic-Org/Semantic-UI-Less",
+      "https://github.com/Semantic-Org/Example-External-Gulpfile",
+      "https://github.com/Semantic-Org/UI-Checkbox/",
+      "https://github.com/Semantic-Org/UI-Grid/",
+      "https://github.com/Semantic-Org/UI-List/",
+      "https://github.com/Semantic-Org/UI-Placeholder/",
+      "https://github.com/macek/jquery-serialize-object",
+      "https://github.com/Semantic-Org/UI-Form/",
+      "https://github.com/Semantic-Org/UI-Feed/",
+      "https://github.com/Semantic-Org/UI-Progress/",
+      "https://github.com/Semantic-Org/UI-Embed/",
+      "https://github.com/Semantic-Org/UI-Image/",
+      "https://github.com/Semantic-Org/UI-Card/",
+      "https://github.com/Semantic-Org/UI-Sticky/",
+      "https://github.com/Semantic-Org/Semantic-UI-Angular",
+      "https://github.com/Semantic-Org/Semantic-UI-LESS",
+      "https://github.com/Semantic-Org/UI-Message/",
+      "https://github.com/Semantic-Org/UI-Search/",
+      "https://github.com/defunkt/jquery-pjax",
+      "https://github.com/Semantic-Org/UI-Header/",
+      "https://github.com/Semantic-Org/UI-Menu/",
+      "https://github.com/Semantic-Org/UI-Shape/"
     ]
   },
-  "unverified_resources": {},
-  "content_signals": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/kylefox/jquery-tablesort",
+      "https://github.com/rails/turbolinks/",
+      "https://github.com/postcss/autoprefixer",
+      "https://github.com/docpad/docpad-plugin-ghpages",
+      "https://github.com/MohammadYounes/rtlcss",
+      "https://github.com/asual/jquery-address",
+      "https://github.com/macek/jquery-serialize-object",
+      "https://github.com/defunkt/jquery-pjax"
+    ]
+  },
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Angular"
+    ]
+  },
   "github_meta": {
-    "license": "MIT",
-    "stars": 51019,
-    "last_pushed": "2024-11-27T21:01:48Z"
+    "license": null,
+    "stars": 7,
+    "last_pushed": "2022-10-06T17:59:13Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://semantic-ui.com/modules/accordion.html",
+      "title": "Accordion | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/views/advertisement.html",
+      "title": "Advertisement | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/behaviors/api.html",
+      "title": "API | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/examples/attached.html",
+      "title": "Attached - Semantic"
+    },
+    {
+      "url": "https://semantic-ui.com/examples/bootstrap.html",
+      "title": "Bootstrap - Semantic"
+    },
+    {
+      "url": "https://semantic-ui.com/collections/breadcrumb.html",
+      "title": "Breadcrumb | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/introduction/build-tools.html",
+      "title": "Build Tools | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/button.html",
+      "title": "Button | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/views/card.html",
+      "title": "Card | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/checkbox.html",
+      "title": "Checkbox | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/views/comment.html",
+      "title": "Comment | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/container.html",
+      "title": "Container | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/cla.html",
+      "title": "Contributor License Agreement | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/dimmer.html",
+      "title": "Dimmer | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/divider.html",
+      "title": "Divider | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/dropdown.html",
+      "title": "Dropdown | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/embed.html",
+      "title": "Embed | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/views/feed.html",
+      "title": "Feed | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/examples/fixed.html",
+      "title": "Fixed Menu Example - Semantic"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/flag.html",
+      "title": "Flag | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/behaviors/form.html",
+      "title": "Form Validation | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/collections/form.html",
+      "title": "Form | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/introduction/getting-started.html",
+      "title": "Getting Started | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/introduction/glossary.html",
+      "title": "Glossary | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/examples/grid.html",
+      "title": "Grid Example - Semantic"
+    },
+    {
+      "url": "https://semantic-ui.com/collections/grid.html",
+      "title": "Grid | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/header.html",
+      "title": "Header | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/examples/homepage.html",
+      "title": "Homepage - Semantic"
+    },
+    {
+      "url": "https://semantic-ui.com/javascript/library/tablesort.js",
+      "title": "https://semantic-ui.com/javascript/library/tablesort.js"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/icon.html",
+      "title": "Icon | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/image.html",
+      "title": "Image | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/input.html",
+      "title": "Input | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/introduction/integrations.html",
+      "title": "Integrations | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/views/item.html",
+      "title": "Item | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/label.html",
+      "title": "Label | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/usage/layout.html",
+      "title": "Layouts | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/list.html",
+      "title": "List | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/loader.html",
+      "title": "Loader | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/collections/menu.html",
+      "title": "Menu | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/collections/message.html",
+      "title": "Message | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/modal.html",
+      "title": "Modal | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/introduction/new.html",
+      "title": "New in 2.4 | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/placeholder.html",
+      "title": "Placeholder | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/popup.html",
+      "title": "Popup | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/progress.html",
+      "title": "Progress | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/rail.html",
+      "title": "Rail | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/rating.html",
+      "title": "Rating | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/introduction/advanced-usage.html",
+      "title": "Recipes | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/globals/reset.html",
+      "title": "Reset | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/examples/responsive.html",
+      "title": "Responsive Elements - Semantic"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/reveal.html",
+      "title": "Reveal | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/search.html",
+      "title": "Search | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/segment.html",
+      "title": "Segment | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/",
+      "title": "Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/shape.html",
+      "title": "Shape | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/sidebar.html",
+      "title": "Sidebar | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/globals/site.html",
+      "title": "Site | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/views/statistic.html",
+      "title": "Statistic | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/elements/step.html",
+      "title": "Step | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/examples/sticky.html",
+      "title": "Sticky Example - Semantic"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/sticky.html",
+      "title": "Sticky | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/tab.html",
+      "title": "Tab | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/collections/table.html",
+      "title": "Table | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/usage/theming.html",
+      "title": "Theming | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/modules/transition.html",
+      "title": "Transition | Semantic UI"
+    },
+    {
+      "url": "https://semantic-ui.com/behaviors/visibility.html",
+      "title": "Visibility | Semantic UI"
+    }
+  ]
 }

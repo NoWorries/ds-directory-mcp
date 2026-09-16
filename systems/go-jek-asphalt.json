@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "go-jek-asphalt",
   "organization": "GO-JEK",
   "design_system": "Asphalt",
@@ -13,13 +13,48 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T21:54:40+00:00",
+  "last_checked": "2026-09-16T12:19:00+00:00",
   "last_modified": "Mon, 30 May 2022 18:41:16 GMT",
-  "sitemap_last_modified": null,
+  "sitemap_last_modified": "2022-05-10T15:04:48+00:00",
   "resources": {},
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "dark_mode": true
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://asphalt.gojek.io/",
+      "title": "Asphalt Aloha"
+    },
+    {
+      "url": "https://asphalt.gojek.io/pages/foundations.html",
+      "title": "Foundations - Asphalt Aloha"
+    },
+    {
+      "url": "https://asphalt.gojek.io/pages/foundations_colors.html",
+      "title": "Foundations - Colors"
+    },
+    {
+      "url": "https://asphalt.gojek.io/pages/foundations_motion.html",
+      "title": "Foundations - Motion"
+    },
+    {
+      "url": "https://asphalt.gojek.io/pages/foundations_shadows.html",
+      "title": "Foundations - Shadows"
+    },
+    {
+      "url": "https://asphalt.gojek.io/pages/foundations_spacings.html",
+      "title": "Foundations - Spacings"
+    },
+    {
+      "url": "https://asphalt.gojek.io/pages/foundations_typography.html",
+      "title": "Foundations - Typography"
+    },
+    {
+      "url": "https://asphalt.gojek.io/pages/principles.html",
+      "title": "Principles - Asphalt Aloha"
+    }
+  ]
 }

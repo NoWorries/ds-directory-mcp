@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "merck-liquid",
   "organization": "Merck",
   "design_system": "Liquid",
@@ -13,13 +13,26 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:51:04+00:00",
-  "last_modified": "Wed, 05 Aug 2026 08:42:22 GMT",
+  "last_checked": "2026-09-16T13:13:56+00:00",
+  "last_modified": "Thu, 06 Aug 2026 05:09:19 GMT",
   "sitemap_last_modified": null,
   "resources": {},
   "unverified_resources": {},
   "content_signals": {},
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://www.emd.design/liquid-images",
+      "title": "Liquid Images by UX Strategy & Design"
+    },
+    {
+      "url": "https://www.emd.design/imprint",
+      "title": "UX Strategy & Design - Imprint"
+    },
+    {
+      "url": "https://www.emd.design/",
+      "title": "UX Strategy & Design | Disruptive Digital Experience"
+    }
+  ]
 }

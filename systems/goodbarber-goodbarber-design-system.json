@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T08:37:49+00:00",
+  "generated_at": "2026-09-16T15:03:09+00:00",
   "id": "goodbarber-goodbarber-design-system",
   "organization": "GoodBarber",
   "design_system": "GoodBarber Design System",
@@ -9,17 +9,17 @@
     "https://www.goodbarber.com/uxdesign/"
   ],
   "detail_url": "/systems/goodbarber-goodbarber-design-system",
-  "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 35,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T21:56:23+00:00",
+  "last_checked": "2026-09-16T12:23:01+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "icons": [
-      "https://www.goodbarber.com/uxdesign/icons/",
-      "https://fonts.google.com/icons"
+      "https://fonts.google.com/icons",
+      "https://www.goodbarber.com/uxdesign/icons/"
     ],
     "agent_instructions": [
       "https://www.goodbarber.com/llms.txt",
@@ -27,8 +27,154 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "Angular"
+    ],
+    "dark_mode": true
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://www.goodbarber.com/uxdesign/background/",
+      "title": "Background | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-blur/",
+      "title": "Blur atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-border/",
+      "title": "Border atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/breakpoints/",
+      "title": "Breakpoints | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/button/",
+      "title": "Button | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/checkboxes-radio-button/",
+      "title": "Checkboxes & Radio Button | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-color/",
+      "title": "Color atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/color/",
+      "title": "Color | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/ui-components",
+      "title": "Components | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/ui-components/",
+      "title": "Components | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/date-time-picker/",
+      "title": "Date & Time Picker | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/",
+      "title": "Design System - App Design and UX guidelines to build top mobile apps"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/dropdown/",
+      "title": "Dropdown | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-font/",
+      "title": "Font atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/form/",
+      "title": "Form | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/foundations",
+      "title": "Foundations | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/foundations/",
+      "title": "Foundations | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-gradient/",
+      "title": "Gradient atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/grid/",
+      "title": "Grid | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atomic-components",
+      "title": "https://www.goodbarber.com/uxdesign/atomic-components"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atomic-components/",
+      "title": "https://www.goodbarber.com/uxdesign/atomic-components/"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/icons/",
+      "title": "Icons | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-image/",
+      "title": "Image atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/images-aspect-ratios/",
+      "title": "Images Aspect Ratios | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-immersive-feedback/",
+      "title": "Immersive feedback atom | GoodBarber Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/layers/",
+      "title": "Layers | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-overlay/",
+      "title": "Overlay atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-shadow/",
+      "title": "Shadow atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-shape/",
+      "title": "Shape atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/atom-size/",
+      "title": "Size atom | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/spacing/",
+      "title": "Spacing | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/tabbar/",
+      "title": "TabBar"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/textfield/",
+      "title": "Text Field | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/thumbnail/",
+      "title": "Thumbnail | GoodBarber's Design System"
+    },
+    {
+      "url": "https://www.goodbarber.com/uxdesign/typography/",
+      "title": "Typography | GoodBarber's Design System"
+    }
+  ]
 }
