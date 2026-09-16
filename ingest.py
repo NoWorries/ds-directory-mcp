@@ -456,6 +456,7 @@ def update_registry_stats(
     likely_spa: bool = False,
     unverified_resources: dict[str, list[str]] | None = None,
     content_signals: dict | None = None,
+    freshness_signal: dict | None = None,
 ) -> None:
     # hit_max_pages/crawl_error/likely_spa/unverified_resources written every
     # run (not just when truthy) so a system that used to hit the cap, fail
@@ -465,6 +466,16 @@ def update_registry_stats(
     # fixed. "" rather than None for the no-error case specifically —
     # update_registry_fields drops None values so it could never clear a
     # previously-set crawl_error otherwise.
+    #
+    # last_checked/freshness_signal are written HERE, in the same call as
+    # pages_indexed, rather than in a separate trailing call after ingest()
+    # returns — a system was found with real pages_indexed/resources but
+    # last_checked stuck at "never" (see generate_systems.py's "Last checked
+    # here"), because the old code fetched the freshness signal and stamped
+    # last_checked in a second call made only after ingest() had already
+    # returned. Anything that interrupts the process in that gap (a runner
+    # timeout/cancellation) leaves the crawl data written but last_checked
+    # never set. One atomic call closes that window.
     fields = {
         "pages_indexed": pages_indexed,
         "hit_max_pages": hit_max_pages,
@@ -472,6 +483,8 @@ def update_registry_stats(
         "likely_spa": likely_spa,
         "unverified_resources": unverified_resources or {},
         "content_signals": content_signals or {},
+        "last_checked": now_iso(),
+        **(freshness_signal or {}),
     }
     if resources:
         fields["resources"] = resources
@@ -644,6 +657,7 @@ def ingest(
         likely_spa=likely_spa,
         unverified_resources=unverified_resources,
         content_signals=content_signals,
+        freshness_signal=fetch_freshness_signal(start_urls[0]),
     )
     update_pages_index(
         design_system_name,
@@ -776,6 +790,7 @@ def ingest_spa(design_system_name: str, start_urls: list[str]) -> None:
         likely_spa=len(pages) == 0,
         unverified_resources=unverified_resources,
         content_signals=content_signals,
+        freshness_signal=fetch_freshness_signal(start_url),
     )
     update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in pages])
 
@@ -797,6 +812,10 @@ def ingest_entry(entry: dict, force: bool = False, max_pages_override: int | Non
 
     max_pages = max_pages_override if max_pages_override is not None else entry.get("max_pages", DEFAULT_MAX_PAGES)
     print(f"\n=== {name} ==={' (shallow)' if max_pages_override is not None else ''}")
+    # ingest() stamps last_checked/the freshness signal itself now, in the
+    # same call that writes pages_indexed — no separate trailing call here
+    # (see update_registry_stats()'s docstring for why that used to leave a
+    # window where pages_indexed was written but last_checked never was).
     ingest(
         design_system_name=name,
         start_urls=start_urls,
@@ -804,8 +823,6 @@ def ingest_entry(entry: dict, force: bool = False, max_pages_override: int | Non
         include_patterns=entry.get("include_patterns"),
         exclude_patterns=entry.get("exclude_patterns"),
     )
-    new_signal = fetch_freshness_signal(start_urls[0])
-    update_registry_fields(name, {**new_signal, "last_checked": now_iso()})
 
 
 def safe_run(name: str, fn, *args, **kwargs) -> None:
