@@ -407,6 +407,18 @@
   design_system: Flame Design System
   start_urls:
   - https://bancosantander.invisionapp.com/dsm/santander-group/flame-ds-santander/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''bancosantander.invisionapp.com'', port=443):
+    Max retries exceeded with url: /dsm/santander-group/flame-ds-santander/ (Caused
+    by NameResolutionError("HTTPSConnection(host=''bancosantander.invisionapp.com'',
+    port=443): Failed to resolve ''bancosantander.invisionapp.com'' ([Errno -2] Name
+    or service not known)"))'
+  consecutive_crawl_failures: 1
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T06:58:53+00:00'
 - organization: Barnardo's
   design_system: Barnardo's Design System
   start_urls:
@@ -506,6 +518,17 @@
   design_system: Bold design system
   start_urls:
   - https://bold.bridge.ufsc.br/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T06:59:23+00:00'
+  etag: W/"6a877905-3a97"
+  last_modified: Thu, 20 Aug 2026 22:00:37 GMT
+  sitemap_url: https://bold.bridge.ufsc.br/sitemap.xml
 - organization: Brightcore
   design_system: UI
   start_urls:
@@ -921,6 +944,16 @@
   design_system: Nova
   start_urls:
   - https://nova.eliagroup.io/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:01:13+00:00'
+  etag: W/"1785944241673"
+  sitemap_url: https://nova.eliagroup.io/sitemap.xml
 - organization: ENGIE
   design_system: Fluid
   start_urls:
@@ -1105,6 +1138,16 @@
   design_system: Edison Design System
   start_urls:
   - https://edisondesignsystem.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: 'HTTPSConnectionPool(host=''edisondesignsystem.com'', port=443): Max
+    retries exceeded with url: / (Caused by SSLError(SSLError(1, ''[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE]
+    sslv3 alert handshake failure (_ssl.c:1010)'')))'
+  consecutive_crawl_failures: 1
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:01:43+00:00'
 - organization: General Electric
   design_system: Predix Design System
   start_urls:
@@ -1187,6 +1230,17 @@
   design_system: Material 2
   start_urls:
   - https://material.io/guidelines/#introduction-goals/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:04:10+00:00'
+  etag: W/"9fe3994f3822d53a0ff79f19dcb81afa"
+  last_modified: Tue, 01 Jan 1980 00:00:01 GMT
+  sitemap_url: https://material.io/sitemap.xml
 - organization: Google
   design_system: Material Design
   start_urls:
@@ -1939,6 +1993,31 @@
   design_system: Lens
   start_urls:
   - https://lens.loom.dev/
+  pages_indexed: 8
+  hit_max_pages: true
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: false
+  unverified_resources: {}
+  content_signals:
+    frameworks:
+    - React
+  last_checked: '2026-09-16T07:07:24+00:00'
+  etag: W/"de1f67a58ae3204ca137e4b15d45b81b"
+  last_modified: Mon, 14 Sep 2026 15:04:56 GMT
+  resources:
+    github:
+    - https://github.com/loomhq/lens
+    npm:
+    - https://www.npmjs.com/package/@loomhq/lens
+    icons:
+    - https://lens.loom.dev/components/icon
+    - https://atlassian.design/components/icon/icon-tile/examples
+    - https://lens.loom.dev/icons/icon-set
+  npm_meta:
+    latest_version: 12.20.6
+    last_published: '2026-09-04T17:19:44.020Z'
+    weekly_downloads: 11942
 - organization: Louder Than Ten
   design_system: Manual
   start_urls:
@@ -2176,6 +2255,21 @@
   design_system: MongoDB Design System
   start_urls:
   - https://www.mongodb.design/
+  pages_indexed: 1
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:11:31+00:00'
+  resources:
+    github:
+    - https://github.com/mongodb/leafygreen-ui
+  github_meta:
+    license: Apache-2.0
+    stars: 271
+    last_pushed: '2026-09-03T16:19:38Z'
 - organization: Monzo
   design_system: Monzo Tone of Voice
   start_urls:
@@ -2564,6 +2658,15 @@
   design_system: Redwood
   start_urls:
   - https://redwood.oracle.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:12:06+00:00'
+  etag: 8244fcb9cfb00a08aac8e41cc6a41b3af4ea9fc9
 - organization: Palantir
   design_system: Blueprint
   start_urls:
@@ -2679,6 +2782,16 @@
   design_system: Priceline One
   start_urls:
   - https://pricelinelabs.github.io/design-system/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:15:13+00:00'
+  etag: '"60aa9c91-66"'
+  last_modified: Sun, 23 May 2021 18:18:57 GMT
 - organization: Pusher
   design_system: Chameleon
   start_urls:
@@ -3124,6 +3237,14 @@
   design_system: Tegel
   start_urls:
   - https://tegel.scania.com/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://tegel.scania.com/'
+  consecutive_crawl_failures: 1
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:17:30+00:00'
 - organization: ''
   design_system: Scania Digital Design System
   start_urls:
@@ -3384,6 +3505,16 @@
   design_system: Backpack
   start_urls:
   - https://skyscanner.design/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:21:57+00:00'
+  etag: W/"1789526878988"
+  sitemap_url: https://skyscanner.design/sitemap.xml
 - organization: SpareBank 1
   design_system: SpareBank 1 Designsystem
   start_urls:
@@ -3496,6 +3627,15 @@
   design_system: Mística
   start_urls:
   - https://brandfactory.telefonica.com/mistica/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:24:48+00:00'
+  sitemap_url: https://brandfactory.telefonica.com/sitemap.xml
 - organization: Thumbtack
   design_system: Thumbprint
   start_urls:
@@ -3786,6 +3926,14 @@
   design_system: Volvo
   start_urls:
   - https://developer.volvocars.com/design-system/web/
+  pages_indexed: 0
+  hit_max_pages: false
+  crawl_error: '403 Client Error: Forbidden for url: https://developer.volvocars.com/design-system/web/'
+  consecutive_crawl_failures: 1
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  last_checked: '2026-09-16T07:25:13+00:00'
 - organization: VTEX
   design_system: Styleguide
   start_urls:

@@ -1,8 +1,8 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-16T06:50:49+00:00",
+  "generated_at": "2026-09-16T07:36:17+00:00",
   "data_as_of": "2026-09-13T22:19:25+00:00",
-  "total_systems": 159,
+  "total_systems": 161,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -2664,6 +2664,82 @@
       "indexed_pages": []
     },
     {
+      "id": "loom-lens",
+      "organization": "Loom",
+      "design_system": "Lens",
+      "full_name": "Loom — Lens",
+      "start_urls": [
+        "https://lens.loom.dev/"
+      ],
+      "detail_url": "/systems/loom-lens",
+      "pages_indexed": 8,
+      "coverage_status": "partial",
+      "hit_max_pages": true,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T07:07:24+00:00",
+      "last_modified": "Mon, 14 Sep 2026 15:04:56 GMT",
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/loomhq/lens"
+        ],
+        "npm": [
+          "https://www.npmjs.com/package/@loomhq/lens"
+        ],
+        "icons": [
+          "https://lens.loom.dev/components/icon",
+          "https://atlassian.design/components/icon/icon-tile/examples",
+          "https://lens.loom.dev/icons/icon-set"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {
+        "frameworks": [
+          "React"
+        ]
+      },
+      "github_meta": null,
+      "npm_meta": {
+        "latest_version": "12.20.6",
+        "last_published": "2026-09-04T17:19:44.020Z",
+        "weekly_downloads": 11942
+      },
+      "indexed_pages": [
+        {
+          "url": "https://lens.loom.dev/",
+          "title": "<!-- --> Lens"
+        },
+        {
+          "url": "https://lens.loom.dev/components/align",
+          "title": "align<!-- --> <!-- -->—<!-- --> Lens"
+        },
+        {
+          "url": "https://lens.loom.dev/components/container",
+          "title": "container<!-- --> <!-- -->—<!-- --> Lens"
+        },
+        {
+          "url": "https://lens.loom.dev/components/icon-tile",
+          "title": "icon-tile<!-- --> <!-- -->—<!-- --> Lens"
+        },
+        {
+          "url": "https://lens.loom.dev/components/logo-loader",
+          "title": "logo-loader<!-- --> <!-- -->—<!-- --> Lens"
+        },
+        {
+          "url": "https://lens.loom.dev/styles/shadows",
+          "title": "shadows<!-- --> <!-- -->—<!-- --> Lens"
+        },
+        {
+          "url": "https://lens.loom.dev/components/skeleton",
+          "title": "skeleton<!-- --> <!-- -->—<!-- --> Lens"
+        },
+        {
+          "url": "https://lens.loom.dev/styles/spacing",
+          "title": "spacing<!-- --> <!-- -->—<!-- --> Lens"
+        }
+      ]
+    },
+    {
       "id": "louder-than-ten-manual",
       "organization": "Louder Than Ten",
       "design_system": "Manual",
@@ -2941,6 +3017,42 @@
       "github_meta": null,
       "npm_meta": null,
       "indexed_pages": []
+    },
+    {
+      "id": "mongodb-mongodb-design-system",
+      "organization": "MongoDB",
+      "design_system": "MongoDB Design System",
+      "full_name": "MongoDB — MongoDB Design System",
+      "start_urls": [
+        "https://www.mongodb.design/"
+      ],
+      "detail_url": "/systems/mongodb-mongodb-design-system",
+      "pages_indexed": 1,
+      "coverage_status": "partial",
+      "hit_max_pages": false,
+      "likely_spa": false,
+      "last_checked": "2026-09-16T07:11:31+00:00",
+      "last_modified": null,
+      "sitemap_last_modified": null,
+      "resources": {
+        "github": [
+          "https://github.com/mongodb/leafygreen-ui"
+        ]
+      },
+      "unverified_resources": {},
+      "content_signals": {},
+      "github_meta": {
+        "license": "Apache-2.0",
+        "stars": 271,
+        "last_pushed": "2026-09-03T16:19:38Z"
+      },
+      "npm_meta": null,
+      "indexed_pages": [
+        {
+          "url": "https://mongodb.design/",
+          "title": "https://mongodb.design/"
+        }
+      ]
     },
     {
       "id": "monzo-monzo-tone-of-voice",
