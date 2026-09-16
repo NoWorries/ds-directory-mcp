@@ -87,6 +87,29 @@ site so browsing has no cold start.
 4. Add both as **GitHub repo secrets** (Settings → Secrets and variables → Actions):
    - `NETLIFY_AUTH_TOKEN`
    - `NETLIFY_SITE_ID`
+5. Add the site's actual public URL as a **GitHub repo *variable*** (same Settings page, but
+   the **Variables** tab, not **Secrets** — it's not sensitive, and workflows read it as
+   `${{ vars.SITE_URL }}`): `SITE_URL`, e.g. `https://designsystems-mcp.netlify.app`
+   (current value at time of writing — update this if/when the site moves to a custom
+   domain, e.g. `https://designsystems.directory`). Only `generate_sitemap.py` uses this
+   (a sitemap's URLs must be absolute) — until it's set, sitemap.xml is skipped rather than
+   generated with a wrong domain baked in.
+
+### 5a. Issue-filing bot token (for the "Suggest a system" / "Report an issue" forms)
+
+`/suggest` and `/report` (see `generate_forms.py`) are real forms, not GitHub Issue Forms —
+a visitor doesn't need their own GitHub account. They POST to
+`netlify/functions/submit-form.js`, which files the actual GitHub issue on a bot account.
+
+1. Create a **fine-grained Personal Access Token** (GitHub → Settings → Developer settings →
+   Personal access tokens → Fine-grained tokens) scoped to just this repo, with **Issues:
+   read and write** permission — nothing else.
+2. In Netlify: **Site configuration** → **Environment variables** → add `ISSUE_BOT_TOKEN`
+   with that token as the value. (This one lives in Netlify, not GitHub secrets — it's the
+   function's own runtime, not a workflow.)
+
+Until this is set, both forms will show a "Form submission isn't configured yet" error
+instead of silently failing.
 
 No local Netlify CLI login needed — the workflows authenticate with these two secrets when
 they run `netlify-cli deploy --prod`.

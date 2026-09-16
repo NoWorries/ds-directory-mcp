@@ -57,7 +57,7 @@ def render_index_page(component_index: dict[str, list[dict]]) -> str:
     sections = ""
     for letter, items in groups.items():
         rows = "".join(
-            f'<li><a href="{slugify(name)}.html">{html.escape(name)}</a> '
+            f'<li><a href="{slugify(name)}">{html.escape(name)}</a> '
             f'<span class="count">{len(entries)} system{"s" if len(entries) != 1 else ""}</span></li>'
             for name, entries in items
         )
@@ -106,7 +106,7 @@ def render_index_page(component_index: dict[str, list[dict]]) -> str:
 
 def render_sidebar(component_index: dict[str, list[dict]], current: str) -> str:
     items = "".join(
-        f'<li><a href="{slugify(n)}.html" class="{"current" if n == current else ""}">'
+        f'<li><a href="{slugify(n)}" class="{"current" if n == current else ""}">'
         f'{html.escape(n)} <span class="sidebar-count">{len(entries)}</span></a></li>'
         for n, entries in sorted(component_index.items(), key=lambda kv: kv[0].lower())
     )
@@ -170,7 +170,7 @@ def render_component_page(name: str, entries: list[dict], component_index: dict[
   <div class="component-layout">
     {render_sidebar(component_index, name)}
     <div class="component-main">
-      <p class="eyebrow"><a href="/components/index.html">Components</a></p>
+      <p class="eyebrow"><a href="/components">Components</a></p>
       <h1>{html.escape(name)}</h1>
       <p class="subtitle">{len(entries)} indexed system{"s" if len(entries) != 1 else ""} document {html.escape(name).lower()} — click through to the actual page.</p>
       <ul class="system-list">{by_system}</ul>

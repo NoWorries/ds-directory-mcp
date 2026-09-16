@@ -17,7 +17,18 @@ from urllib.parse import urlparse
 
 import yaml
 
-from page_shell import CHECK_ICON_SVG, EXTERNAL_LINK_ICON_SVG, FONT_LINK, GRID_ICON_SVG, LIST_ICON_SVG, TOKENS_CSS, routes_nav
+from page_shell import (
+    CHECK_ICON_SVG,
+    CHEVRON_RIGHT_ICON_SVG,
+    CLOSE_ICON_SVG,
+    EXPAND_ICON_SVG,
+    EXTERNAL_LINK_ICON_SVG,
+    FONT_LINK,
+    GRID_ICON_SVG,
+    LIST_ICON_SVG,
+    TOKENS_CSS,
+    routes_nav,
+)
 from slug import slugify
 from text_utils import full_name, split_org_name
 
@@ -44,6 +55,20 @@ COLUMNS = [
     ("mcp", "MCP server"),
     ("skills", "Agent skill"),
     ("agent_instructions", "Agent instructions"),
+]
+
+# More AI-affordance resource.py keys (see WELL_KNOWN_PATHS/RESOURCE_PATTERNS
+# there — same taxonomy the State of AI in Design Systems survey uses:
+# https://state-of-ai-in-design-systems.netlify.app/), deliberately kept out
+# of the summary matrix (COLUMNS above) rather than adding yet more columns
+# to an already-wide table every visitor scrolls past — shown instead on each
+# system's own detail page (generate_systems.py's render_resource_list, which
+# iterates COLUMNS + DETAIL_ONLY_COLUMNS) alongside the resources that already
+# live there.
+DETAIL_ONLY_COLUMNS = [
+    ("copilot_instructions", "Copilot instructions"),
+    ("cursor_rules", "Cursor rules"),
+    ("registry", "Component registry"),
 ]
 
 
@@ -122,6 +147,16 @@ def find_capped(entries: list[dict]) -> list[dict]:
     return [e for e in entries if e.get("hit_max_pages")]
 
 
+def find_unverified_resources(entries: list[dict]) -> list[dict]:
+    """Systems with at least one discovered github/npm link whose name
+    doesn't obviously relate to the system itself (see
+    resources.flag_unverified_resources()) — e.g. a build-tool dependency
+    swept up from a footer/credits link rather than the system's own repo.
+    Maintainer-only: needs a human to actually look at the link and decide,
+    not something a public "?" badge can resolve on its own."""
+    return [e for e in entries if e.get("unverified_resources")]
+
+
 def find_broken(entries: list[dict]) -> list[dict]:
     """Systems whose start URL couldn't even be fetched (DNS failure,
     connection refused, timeout, etc — see crawl()'s start_url_error in
@@ -129,6 +164,37 @@ def find_broken(entries: list[dict]) -> list[dict]:
     rather than the milder "crawled fine but found little" case
     find_low_coverage() covers. Also maintainer-only, for the same reason."""
     return [e for e in entries if e.get("crawl_error")]
+
+
+COVERAGE_GLYPH = {"full": "●", "partial": "◐", "unknown": "○"}
+COVERAGE_LABEL = {
+    "full": "Crawl completed on its own — this is everything the crawler found",
+    "partial": "Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin",
+    "unknown": "Little to nothing indexed yet",
+}
+
+
+def coverage_status(entry: dict) -> str:
+    """How complete our crawl of this system looks, based only on what the
+    crawler itself could determine — never a guarantee the site's actual
+    docs are fully covered, just the best signal available:
+
+    - "full": the crawl ran to completion (didn't hit max_pages) with a
+      healthy page count — nothing indicates more was left undiscovered.
+    - "partial": something real was indexed, but it's known-incomplete —
+      either hit_max_pages (more pages were queued when the crawl stopped)
+      or the page count is suspiciously thin (find_low_coverage()'s
+      threshold) without a harder failure explaining why.
+    - "unknown": effectively nothing indexed (also excluded from every
+      public page by indexed_only(), so this state is only ever seen
+      internally/in the health report, never on the site itself).
+    """
+    pages = entry.get("pages_indexed")
+    if not pages:
+        return "unknown"
+    if entry.get("hit_max_pages") or pages < LOW_COVERAGE_THRESHOLD:
+        return "partial"
+    return "full"
 
 
 def favicon_html(start_url: str | None) -> str:
@@ -145,8 +211,27 @@ def render_cell(entry: dict, key: str) -> str:
     urls = (entry.get("resources") or {}).get(key)
     if not urls:
         return '<td class="cell cell-none" title="None found">—</td>'
-    url = html.escape(urls[0])
-    return f'<td class="cell cell-found"><a href="{url}" target="_blank" rel="noopener" title="{url}">{CHECK_ICON_SVG}</a></td>'
+    # Anything flagged as possibly unrelated (resources.flag_unverified_resources)
+    # isn't shown any differently here — it's still a real discovered link,
+    # just one a maintainer should double-check. That review happens via the
+    # crawl-health GitHub issue (see check_crawl_health.py), not a visible
+    # marker on the public site, so a visitor never has to interpret an
+    # unexplained "?" badge.
+    if len(urls) == 1:
+        primary = html.escape(urls[0])
+        return f'<td class="cell cell-found"><a href="{primary}" target="_blank" rel="noopener" title="{primary}">{CHECK_ICON_SVG}</a></td>'
+
+    # More than one link classified under this resource type (e.g. two npm
+    # packages) — there's no single "the" link to open directly, so this
+    # goes to the system's own detail page (which lists every one of them
+    # under Resources) instead of silently picking urls[0] and hiding the
+    # rest. The count badge signals there's more than one before you click.
+    detail_href = f'systems/{slugify(full_name(entry))}#resources'
+    return (
+        f'<td class="cell cell-found cell-multi">'
+        f'<a href="{detail_href}" title="{len(urls)} {key} links found — view all on the system page">'
+        f'{CHECK_ICON_SVG}<span class="cell-count">{len(urls)}</span></a></td>'
+    )
 
 
 def found_count(entry: dict) -> int:
@@ -159,10 +244,22 @@ def render_name_block(entry: dict, link_to_detail: bool = False) -> str:
     favicon = favicon_html((entry.get("start_urls") or [None])[0])
     org_html = f'<span class="org">{html.escape(org)}</span>' if org else ""
     ds_name_html = html.escape(ds_name)
-    if link_to_detail:
-        detail_href = f"systems/{slugify(full_name(entry))}.html"
-        ds_name_html = f'<a href="{detail_href}">{ds_name_html}</a>'
-    return f'<div class="name-block">{favicon}<div class="name-text">{org_html}<span class="ds-name">{ds_name_html}</span></div></div>'
+    name_block = f'<div class="name-block">{favicon}<div class="name-text">{org_html}<span class="ds-name">{ds_name_html}</span></div></div>'
+
+    if not link_to_detail:
+        return name_block
+
+    # The whole cell is one tap target (not just the name text) — a real
+    # <a href> so modifier-click/middle-click/right-click still work
+    # normally; the JS at the bottom of render_page() intercepts a plain left
+    # click to open the side panel instead of navigating away. The chevron
+    # signals "this reveals nested content", matching that panel behavior.
+    slug = slugify(full_name(entry))
+    detail_href = f"systems/{slug}"
+    return (
+        f'<a class="name-cell-link" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(full_name(entry))}">'
+        f'{name_block}<span class="name-chevron">{CHEVRON_RIGHT_ICON_SVG}</span></a>'
+    )
 
 
 def render_docs_cell(entry: dict) -> str:
@@ -183,6 +280,7 @@ def render_row(entry: dict) -> str:
     row_id = slugify(name_text)
     pages = entry.get("pages_indexed")
     pages_text = "—" if pages is None else str(pages)
+    status = coverage_status(entry)
     n_found = found_count(entry)
     cells = "".join(render_cell(entry, key) for key, _ in COLUMNS)
 
@@ -190,7 +288,9 @@ def render_row(entry: dict) -> str:
     <tr id="{row_id}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
       <td class="name-cell">{render_name_block(entry, link_to_detail=True)}</td>
       {render_docs_cell(entry)}
-      <td class="cell cell-pages" data-sort-value="{pages if pages is not None else -1}">{pages_text}</td>
+      <td class="cell cell-pages" data-sort-value="{pages if pages is not None else -1}">
+        <span class="pages-value"><span class="coverage-dot coverage-{status}" title="{html.escape(COVERAGE_LABEL[status])}">{COVERAGE_GLYPH[status]}</span>{pages_text}</span>
+      </td>
       {cells}
       <td class="cell cell-found-count" data-sort-value="{n_found}">{n_found}/{len(COLUMNS)}</td>
     </tr>
@@ -214,12 +314,15 @@ def render_card(entry: dict) -> str:
     full detail, so the resource-found count stays in the table view only."""
     name_text = full_name(entry)
     start_url = (entry.get("start_urls") or [None])[0]
-    detail_href = f"systems/{slugify(name_text)}.html"
+    detail_href = f"systems/{slugify(name_text)}"
 
+    slug = slugify(name_text)
     thumb_html = ""
     if start_url:
         src = thumbnail_src(name_text, start_url)
-        thumb_html = f'<img class="card-thumb" src="{src}" alt="" loading="lazy">'
+        # Shared view-transition-name with the detail page's .hero-thumb —
+        # see the comment on render_name_block's title transition above.
+        thumb_html = f'<img class="card-thumb" src="{src}" alt="" loading="lazy" style="view-transition-name: thumb-{slug}; view-transition-class: thumb">'
 
     pages = entry.get("pages_indexed", 0)
 
@@ -318,17 +421,34 @@ def render_page(entries: list[dict]) -> str:
      jump around as rows are measured for the first time while scrolling. */
   tbody tr {{ content-visibility: auto; contain-intrinsic-size: auto 46px; }}
   tbody tr:last-child td {{ border-bottom: none; }}
-  .name-cell {{ min-width: 200px; }}
-  .name-block {{ display: flex; align-items: center; gap: 8px; }}
-  .name-text {{ display: flex; flex-direction: column; line-height: 1.25; }}
+  .name-cell {{ min-width: 200px; padding: 0; }}
+  /* The whole column is one tap target (see render_name_block) — the <a>
+     fills the cell itself (hence padding moved here from .name-cell) so
+     there's no dead strip of cell around the name text that looks
+     clickable but isn't. */
+  .name-cell-link {{
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 10px 12px; color: inherit; text-decoration: none;
+  }}
+  .name-cell-link:hover {{ background: var(--surface-sunken); }}
+  .name-cell-link:hover .name-chevron {{ color: var(--accent); transform: translateX(2px); }}
+  .name-chevron {{ flex: none; display: flex; color: var(--text-faint); transition: transform 0.12s, color 0.12s; }}
+  .name-block {{ display: flex; align-items: center; gap: 8px; min-width: 0; }}
+  .name-text {{ display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }}
   .org {{ font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); }}
   .ds-name {{ font-weight: 600; font-size: 0.92rem; }}
-  .ds-name a {{ color: inherit; text-decoration: none; text-underline-offset: 2px; }}
-  .ds-name a:hover {{ text-decoration: underline; }}
   .favicon {{ border-radius: 3px; flex: none; }}
   .meta {{ font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; font-variant-numeric: tabular-nums; font-family: "JetBrains Mono", monospace; }}
   .cell {{ text-align: center; font-variant-numeric: tabular-nums; }}
-  .cell-pages {{ font-family: "JetBrains Mono", monospace; color: var(--text-muted); }}
+  .cell-pages {{ font-family: "JetBrains Mono", monospace; color: var(--text-muted); text-align: left; }}
+  /* coverage_status()'s three states — never shown as "unknown" here since
+     indexed_only() already excludes those entries from every public page,
+     but the rule stays complete for consistency with check_crawl_health.py. */
+  .pages-value {{ display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }}
+  .coverage-dot {{ font-size: 1.05rem; line-height: 1; }}
+  .coverage-dot.coverage-full {{ color: #22c55e; }}
+  .coverage-dot.coverage-partial {{ color: #f59e0b; }}
+  .coverage-dot.coverage-unknown {{ color: var(--text-faint); }}
   /* A bare checkmark glyph doesn't read as clickable until you hover it —
      giving it a pill background (same visual language as .badge/.chip
      elsewhere) makes "this is a link" obvious at rest, not just on hover. */
@@ -338,6 +458,16 @@ def render_page(entries: list[dict]) -> str:
     width: 26px; height: 22px; border-radius: 999px;
   }}
   .cell-found a:hover {{ background: var(--accent); color: #fff; }}
+  /* Small count badge for when more than one link was classified under the
+     same resource type (e.g. two npm packages) — sits at the pill's corner
+     so it reads as "there's more here" without needing its own column. */
+  .cell-multi a {{ position: relative; }}
+  .cell-count {{
+    position: absolute; top: -5px; right: -5px; min-width: 14px; height: 14px; padding: 0 3px;
+    display: inline-flex; align-items: center; justify-content: center; border-radius: 999px;
+    background: var(--accent); color: #fff; font-size: 0.6rem; font-weight: 700; line-height: 1;
+    font-family: "JetBrains Mono", monospace;
+  }}
   /* Distinct from the name link (which goes to this system's own detail
      page): same pill treatment, but muted rather than accent-colored so it
      doesn't read as another "resource found" indicator — this one always
@@ -349,12 +479,18 @@ def render_page(entries: list[dict]) -> str:
   }}
   .cell-docs a:hover {{ color: var(--accent); border-color: var(--accent); }}
   .cell-none {{ color: var(--text-faint); }}
-  .cell-found-count {{
-    font-family: "JetBrains Mono", monospace; font-weight: 600; color: var(--text);
-    position: sticky; right: 0; background: var(--surface);
-    box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25);
-  }}
-  th:last-child {{ position: sticky; right: 0; background: var(--surface); box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25); }}
+  /* Both edge columns are always pinned (sticky) — the shadow that signals
+     "there's scrolled content hidden under here" is the part that's
+     conditional, toggled by JS only when the table actually overflows its
+     container (see the has-overflow class set near the bottom of the page's
+     script). Without that, every row showed a shadow implying hidden
+     content even on a table narrow enough to need no scrolling at all. */
+  .name-cell, th[data-col="0"] {{ position: sticky; left: 0; background: var(--surface); z-index: 2; }}
+  .cell-found-count, th:last-child {{ position: sticky; right: 0; background: var(--surface); z-index: 2; }}
+  .table-wrap.has-overflow .name-cell,
+  .table-wrap.has-overflow th[data-col="0"] {{ box-shadow: 6px 0 8px -8px rgba(15,23,42,0.25); }}
+  .table-wrap.has-overflow .cell-found-count,
+  .table-wrap.has-overflow th:last-child {{ box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25); }}
   .badge {{
     background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px;
     font-size: 0.72rem; font-family: "JetBrains Mono", monospace; font-weight: 500;
@@ -387,6 +523,44 @@ def render_page(entries: list[dict]) -> str:
     background: var(--surface-sunken); display: block;
   }}
   .card-body {{ padding: 14px; }}
+
+  /* --- Detail side panel: lets a visitor preview a system without leaving
+     the list (see the name-cell-link click handler below). Its content is
+     the same systems/<slug>.html page, fetched and injected — not a second
+     template to keep in sync — so it always matches the standalone page;
+     "Open full page" just navigates there normally (and gets the .thumb
+     view-transition morph on the way in, same as any other link to it). */
+  .detail-panel-overlay {{ position: fixed; inset: 0; background: rgba(15,23,42,0.35); z-index: 199; }}
+  .detail-panel-overlay[hidden] {{ display: none; }}
+  .detail-panel {{
+    position: fixed; top: 0; right: 0; height: 100%; width: min(480px, 92vw); z-index: 200;
+    background: var(--surface); border-left: 1px solid var(--border);
+    box-shadow: -12px 0 30px -12px rgba(15,23,42,0.3);
+    transform: translateX(100%); transition: transform 0.22s ease;
+    display: flex; flex-direction: column;
+  }}
+  .detail-panel.open {{ transform: translateX(0); }}
+  .detail-panel-header {{
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex: none;
+    padding: 14px 20px; border-bottom: 1px solid var(--border);
+  }}
+  .detail-panel-expand {{
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600;
+    color: var(--accent); text-decoration: none;
+  }}
+  .detail-panel-expand:hover {{ text-decoration: underline; }}
+  .detail-panel-close {{
+    background: none; border: none; padding: 6px; margin: -6px; color: var(--text-muted); cursor: pointer;
+    border-radius: 6px; display: flex;
+  }}
+  .detail-panel-close:hover {{ background: var(--surface-sunken); color: var(--text); }}
+  .detail-panel-body {{ flex: 1; overflow-y: auto; padding: 8px 24px 32px; }}
+  /* The injected content is the detail page's own `.page` div, which is
+     normally centered at a max-width for a full page — inside the narrower
+     panel it should just fill the available width instead. */
+  .detail-panel-body .page {{ max-width: none; margin: 0; }}
+  .detail-panel-body .page-list {{ columns: 1; }}
+  @media (max-width: 640px) {{ .detail-panel {{ width: 100vw; }} }}
 </style>
 </head>
 <body>
@@ -427,6 +601,15 @@ def render_page(entries: list[dict]) -> str:
     {cards}
   </div>
 </div>
+
+<div class="detail-panel-overlay" id="detailPanelOverlay" hidden></div>
+<aside class="detail-panel" id="detailPanel" aria-hidden="true">
+  <div class="detail-panel-header">
+    <a class="detail-panel-expand" id="detailPanelExpand" href="#">{EXPAND_ICON_SVG} Open full page</a>
+    <button type="button" class="detail-panel-close" id="detailPanelClose" aria-label="Close">{CLOSE_ICON_SVG}</button>
+  </div>
+  <div class="detail-panel-body" id="detailPanelBody"></div>
+</aside>
 
 <script>
   // --- Table sort ---
@@ -505,6 +688,102 @@ def render_page(entries: list[dict]) -> str:
   let savedView = "list";
   try {{ savedView = localStorage.getItem("ds-directory-view") || "list"; }} catch (err) {{ /* fine */ }}
   setView(savedView);
+
+  // --- Pinned-column shadows: only shown when the table actually overflows
+  // its container (scrollWidth > clientWidth) — a table narrow enough to
+  // need no horizontal scrolling has nothing hidden under the pinned edges,
+  // so showing the shadow there would be a false "there's more, scroll" cue.
+  const tableWrapEl = document.getElementById("listView");
+  function updateStickyShadow() {{
+    if (!tableWrapEl) return;
+    tableWrapEl.classList.toggle("has-overflow", tableWrapEl.scrollWidth > tableWrapEl.clientWidth + 1);
+  }}
+  updateStickyShadow();
+  window.addEventListener("resize", updateStickyShadow);
+
+  // --- Detail side panel: previews a system's systems/<slug>.html page
+  // in-place, without leaving the list. Fetches and injects that same page's
+  // .page content (plus its <style> block, once) rather than keeping a
+  // second copy of the template, so the panel always matches the real page.
+  const detailPanel = document.getElementById("detailPanel");
+  const detailPanelOverlay = document.getElementById("detailPanelOverlay");
+  const detailPanelBody = document.getElementById("detailPanelBody");
+  const detailPanelExpand = document.getElementById("detailPanelExpand");
+  const detailPanelClose = document.getElementById("detailPanelClose");
+  let detailStylesInjected = false;
+
+  async function openDetailPanel(slug) {{
+    // Two different URLs on purpose: the visible "Open full page" link is
+    // the clean, extension-less path (matches every other in-page link —
+    // see netlify.toml's pretty_urls), while the fetch() below hits the
+    // real .html file directly rather than depending on Netlify's pretty-url
+    // rewriting also applying to a same-page XHR.
+    detailPanelExpand.href = "systems/" + slug;
+    const fetchHref = "systems/" + slug + ".html";
+    detailPanel.classList.add("open");
+    detailPanel.setAttribute("aria-hidden", "false");
+    detailPanelOverlay.hidden = false;
+    detailPanelBody.innerHTML = '<p class="empty-note">Loading…</p>';
+
+    try {{
+      const response = await fetch(fetchHref);
+      const doc = new DOMParser().parseFromString(await response.text(), "text/html");
+
+      if (!detailStylesInjected) {{
+        const styleTag = doc.querySelector("style");
+        if (styleTag) {{
+          const injected = document.createElement("style");
+          injected.textContent = styleTag.textContent;
+          document.head.appendChild(injected);
+        }}
+        detailStylesInjected = true;
+      }}
+
+      const pageEl = doc.querySelector(".page");
+      if (!pageEl) throw new Error("no .page content");
+
+      // Relative image paths (e.g. "screenshots/x.jpg") resolve against
+      // systems/<slug>.html there — rewrite them to work from this page's
+      // own location instead. Absolute/protocol-relative/data URLs are left
+      // alone.
+      pageEl.querySelectorAll("img[src]").forEach((img) => {{
+        const src = img.getAttribute("src");
+        if (src && !/^([a-z]+:)?\/\//i.test(src) && !src.startsWith("data:") && !src.startsWith("/")) {{
+          img.setAttribute("src", "systems/" + src);
+        }}
+      }});
+      // Redundant inside the panel — the "All Systems" breadcrumb is what
+      // the close button already does.
+      const eyebrow = pageEl.querySelector(".eyebrow");
+      if (eyebrow) eyebrow.remove();
+
+      detailPanelBody.innerHTML = pageEl.innerHTML;
+    }} catch (err) {{
+      detailPanelBody.innerHTML = '<p class="empty-note">Couldn\\'t load this system\\'s details.</p>';
+    }}
+  }}
+
+  function closeDetailPanel() {{
+    detailPanel.classList.remove("open");
+    detailPanel.setAttribute("aria-hidden", "true");
+    detailPanelOverlay.hidden = true;
+  }}
+
+  document.querySelectorAll(".name-cell-link").forEach((link) => {{
+    link.addEventListener("click", (e) => {{
+      // Only intercept a plain left click — modifier/middle/right clicks keep
+      // their normal browser behavior (open in new tab, etc.) via the real href.
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      openDetailPanel(link.dataset.slug);
+    }});
+  }});
+
+  detailPanelClose.addEventListener("click", closeDetailPanel);
+  detailPanelOverlay.addEventListener("click", closeDetailPanel);
+  document.addEventListener("keydown", (e) => {{
+    if (e.key === "Escape" && detailPanel.classList.contains("open")) closeDetailPanel();
+  }});
 </script>
 </body>
 </html>

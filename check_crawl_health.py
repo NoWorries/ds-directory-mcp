@@ -1,5 +1,5 @@
 """
-Flags three crawl-health problems and reports them to the maintainer — via
+Flags four crawl-health problems and reports them to the maintainer — via
 the GitHub Actions job summary and a file the workflow hands to
 `gh issue create`/`gh issue edit`:
 
@@ -11,22 +11,33 @@ the GitHub Actions job summary and a file the workflow hands to
 3. Capped (hit ingest.py's max_pages ceiling with pages still queued) — the
    crawl worked, but there's real content that wasn't indexed because the
    site is bigger than max_pages allows.
+4. Unverified resources (a discovered github/npm link whose name doesn't
+   obviously relate to the system itself) — needs a human to actually look
+   and decide (keep it, or it's an unrelated dependency swept up from the
+   page).
 
 Deliberately NOT surfaced on the public directory page — see
-generate_directory.py's find_broken()/find_low_coverage()/find_capped()
-docstrings for why.
+generate_directory.py's find_broken()/find_low_coverage()/find_capped()/
+find_unverified_resources() docstrings for why.
 """
 
 import os
 from pathlib import Path
 
-from generate_directory import LOW_COVERAGE_THRESHOLD, find_broken, find_capped, find_low_coverage, load_systems
+from generate_directory import (
+    LOW_COVERAGE_THRESHOLD,
+    find_broken,
+    find_capped,
+    find_low_coverage,
+    find_unverified_resources,
+    load_systems,
+)
 from text_utils import full_name
 
 REPORT_FILE = Path(__file__).parent / "health_report.md"
 
 
-def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dict]) -> str:
+def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dict], unverified: list[dict]) -> str:
     sections = []
 
     if broken:
@@ -76,6 +87,25 @@ def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dic
             lines.append(f"- **{full_name(entry)}** — {pages} pages indexed — {start_url}")
         sections.append("\n".join(lines))
 
+    if unverified:
+        lines = [
+            f"### 🔍 {len(unverified)} system{'s' if len(unverified) != 1 else ''} "
+            f"{'have' if len(unverified) != 1 else 'has'} unverified resource links",
+            "",
+            "A discovered GitHub/npm link's name doesn't obviously match the design "
+            "system it was found on — could be a dependency or unrelated tool swept up "
+            "from a footer/credits link rather than the system's own repo/package. "
+            "Worth a quick manual check: if it's wrong, remove it from `resources` in "
+            "`systems.yaml` (the next crawl will just rediscover it otherwise) or add an "
+            "`exclude_patterns` entry so it stops getting picked up.",
+            "",
+        ]
+        for entry in unverified:
+            for key, urls in entry["unverified_resources"].items():
+                for url in urls:
+                    lines.append(f"- **{full_name(entry)}** — {key}: {url}")
+        sections.append("\n".join(lines))
+
     return "\n\n".join(sections)
 
 
@@ -84,10 +114,11 @@ def main() -> None:
     broken = find_broken(entries)
     low_coverage = find_low_coverage(entries)
     capped = find_capped(entries)
+    unverified = find_unverified_resources(entries)
 
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
 
-    if not broken and not low_coverage and not capped:
+    if not broken and not low_coverage and not capped and not unverified:
         print("No crawl-health issues detected.")
         if REPORT_FILE.exists():
             REPORT_FILE.unlink()
@@ -96,7 +127,7 @@ def main() -> None:
                 f.write("### ✅ No crawl-health issues detected\n")
         return
 
-    report = render_report(broken, low_coverage, capped)
+    report = render_report(broken, low_coverage, capped, unverified)
     print(report)
     REPORT_FILE.write_text(report)
 

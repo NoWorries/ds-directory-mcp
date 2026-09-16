@@ -17,27 +17,23 @@ from pathlib import Path
 from generate_directory import compute_stats, indexed_only, load_systems
 from page_shell import (
     COPY_ICON_SVG,
-    FILTER_ICON_SVG,
     FONT_LINK,
     GRID_ICON_SVG_LARGE,
     PACKAGE_ICON_SVG,
     TOKENS_CSS,
     routes_nav,
 )
-from text_utils import full_name
 
 OUTPUT_FILE = Path(__file__).parent / "home.html"
 
 # Update if the Render service URL ever changes.
 MCP_URL = "https://ds-directory-mcp.onrender.com/mcp"
-SEARCH_API_URL = "https://ds-directory-mcp.onrender.com/search"
 HEALTH_API_URL = "https://ds-directory-mcp.onrender.com/health"
 MCP_INSTALL_COMMAND = f"claude mcp add ds-directory --transport http {MCP_URL}"
 
 
 def render_page(entries: list[dict]) -> str:
     stats = compute_stats(entries)
-    system_names_json = json.dumps(sorted(full_name(e) for e in entries))
 
     return f"""<!doctype html>
 <html lang="en">
@@ -60,45 +56,6 @@ def render_page(entries: list[dict]) -> str:
     box-shadow: 0 2px 4px rgba(15,23,42,0.05), 0 12px 32px -14px rgba(15,23,42,0.18);
   }}
   #q:focus {{ outline: 2px solid var(--accent); outline-offset: 1px; }}
-  #results {{ margin-top: 8px; }}
-  .result {{ padding: 16px 0; border-top: 1px solid var(--border); }}
-  .result:first-child {{ border-top: none; }}
-  .result .meta {{ font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px; }}
-  .result .meta a {{ color: var(--text-muted); }}
-  .result .system-name {{ color: var(--text); font-weight: 600; }}
-  .result pre {{
-    white-space: pre-wrap; font-family: "IBM Plex Sans", sans-serif; font-size: 0.92rem;
-    background: var(--surface-sunken); padding: 12px 14px; border-radius: 6px; margin: 0; line-height: 1.5;
-  }}
-  .status {{ color: var(--text-muted); font-size: 0.9rem; }}
-
-  .restrict-toggle {{
-    display: inline-flex; align-items: center; gap: 5px; margin-top: 12px; background: none; border: none; padding: 0; cursor: pointer;
-    font: inherit; font-size: 0.82rem; color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px;
-  }}
-  .restrict-toggle svg {{ flex: none; }}
-  .restrict-toggle:hover {{ color: var(--accent); }}
-  .filter-wrap {{ position: relative; margin-top: 16px; }}
-  .chips {{ display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }}
-  .chip {{ display: inline-flex; align-items: center; gap: 6px; background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 6px; padding: 4px 6px 4px 12px; font-size: 0.82rem; font-weight: 500; }}
-  .chip button {{ background: none; border: none; color: inherit; cursor: pointer; font-size: 0.95rem; line-height: 1; padding: 2px 4px; opacity: 0.75; }}
-  .chip button:hover {{ opacity: 1; }}
-  .filter-label {{ font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); margin: 0 0 8px; }}
-  #systemFilter {{
-    width: 260px; max-width: 100%; padding: 6px 12px 6px 30px; font: inherit; font-size: 0.85rem;
-    box-sizing: border-box; border: 1px solid var(--border); border-radius: 6px;
-    background: var(--surface-sunken) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="%235b6472" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>') no-repeat 10px center;
-    color: var(--text);
-  }}
-  #systemFilter:focus {{ background-color: var(--surface); border-color: var(--accent); outline: none; }}
-  .filter-dropdown {{
-    position: absolute; z-index: 10; top: 100%; left: 0; width: 260px; max-width: 100%;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-top: 6px;
-    max-height: 220px; overflow-y: auto; box-shadow: var(--shadow);
-  }}
-  .filter-option {{ padding: 8px 12px; font-size: 0.85rem; cursor: pointer; }}
-  .filter-option:hover {{ background: var(--surface-sunken); }}
-  .filter-hint {{ font-size: 0.78rem; color: var(--text-faint); margin: 6px 0 0; }}
 
   .nav-cards {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 20px 0 32px; }}
   .nav-card {{
@@ -131,11 +88,21 @@ def render_page(entries: list[dict]) -> str:
   }}
   .mcp-card-text h2 {{ font-family: "JetBrains Mono", monospace; font-size: 0.82rem; margin: 0; font-weight: 700; color: var(--text); }}
   .mcp-card-text p {{ margin: 0; font-size: 0.78rem; color: var(--text-muted); max-width: 48ch; }}
-  .mcp-status {{ margin-top: 6px !important; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
+  /* Every status state (checking/awake/sleeping/waking) renders the exact
+     same three elements — dot, text, wake button — so the row never
+     reflows between states; only their content/visibility changes (see
+     renderMcpStatus() below). The button is hidden with `visibility`, not
+     `hidden`/`display: none`, specifically so it keeps occupying its slot
+     even when invisible — that's what keeps .mcp-bar's height constant
+     across every state instead of the button's appearance/disappearance
+     reshuffling the row. min-height covers the text wrapping to two lines
+     on narrow widths, for the same reason. */
+  .mcp-status {{ margin-top: 6px !important; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; line-height: 1.3; min-height: 2.6em; }}
   .status-dot {{ display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: none; }}
+  .status-dot.checking {{ background: var(--text-faint); }}
   .status-dot.awake {{ background: #22c55e; }}
   .status-dot.sleeping {{ background: #f59e0b; }}
-  .status-dot.waking {{ background: var(--accent); animation: status-pulse 1s ease-in-out infinite; }}
+  .status-dot.waking {{ background: var(--accent); animation: status-pulse 2s ease-in-out infinite; }}
   @keyframes status-pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.35; }} }}
   .wake-button {{
     font: inherit; font-size: 0.76rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
@@ -165,23 +132,13 @@ def render_page(entries: list[dict]) -> str:
   <section class="hero" id="search">
     <h1>Search {stats['total_systems']} design systems</h1>
     <p class="hero-subtitle">Find component patterns, tokens, and guidance across every publicly documented design system indexed here — or connect it to your AI agent via MCP.</p>
-    <input id="q" type="text" placeholder="e.g. table column resizing, disabled button states...">
-
-    <button type="button" class="restrict-toggle" id="restrictToggle">{FILTER_ICON_SVG}<span id="restrictToggleLabel">Filter by system</span></button>
-
-    <div class="filter-wrap" id="filterWrap" hidden>
-      <p class="filter-label">Optional: limit to specific systems</p>
-      <div class="chips" id="chips"></div>
-      <input id="systemFilter" type="text" placeholder="Type a system name...">
-      <div class="filter-dropdown" id="filterDropdown" hidden></div>
-      <p class="filter-hint">Leave blank to search across all indexed systems.</p>
-    </div>
-
-    <div id="results"></div>
+    <form id="searchForm" action="/search" method="get">
+      <input id="q" name="q" type="text" placeholder="e.g. table column resizing, disabled button states...">
+    </form>
   </section>
 
   <div class="nav-cards">
-    <a class="nav-card textured" href="/directory.html">
+    <a class="nav-card textured" href="/directory">
       <span class="nav-card-icon">{GRID_ICON_SVG_LARGE}</span>
       <span class="nav-card-text">
         <h3>Browse all systems</h3>
@@ -189,7 +146,7 @@ def render_page(entries: list[dict]) -> str:
       </span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
-    <a class="nav-card textured" href="/components/index.html">
+    <a class="nav-card textured" href="/components">
       <span class="nav-card-icon">{PACKAGE_ICON_SVG}</span>
       <span class="nav-card-text">
         <h3>Browse by component</h3>
@@ -204,7 +161,11 @@ def render_page(entries: list[dict]) -> str:
       <span class="mcp-badge">MCP Server</span>
       <h2>Connect this to Claude (or any MCP-compatible client)</h2>
       <p>One command adds this whole index as a tool your agent can call directly.</p>
-      <p class="mcp-status" id="mcpStatus">Checking server status…</p>
+      <p class="mcp-status" id="mcpStatus">
+        <span class="status-dot checking"></span>
+        <span class="status-text">Checking server status…</span>
+        <button type="button" class="wake-button" id="wakeButton" style="visibility: hidden" disabled>Wake it up</button>
+      </p>
     </div>
     <div class="mcp-install">
       <code class="mcp-command" id="mcpCommand">{MCP_INSTALL_COMMAND}</code>
@@ -214,130 +175,7 @@ def render_page(entries: list[dict]) -> str:
 </div>
 
 <script>
-  const API_URL = {json.dumps(SEARCH_API_URL)};
   const HEALTH_URL = {json.dumps(HEALTH_API_URL)};
-  const ALL_SYSTEMS = {system_names_json};
-
-  const input = document.getElementById("q");
-  const resultsEl = document.getElementById("results");
-  const filterInput = document.getElementById("systemFilter");
-  const dropdown = document.getElementById("filterDropdown");
-  const chipsEl = document.getElementById("chips");
-  const restrictToggle = document.getElementById("restrictToggle");
-  const restrictToggleLabel = document.getElementById("restrictToggleLabel");
-  const filterWrap = document.getElementById("filterWrap");
-  let debounceTimer;
-  const selectedSystems = new Set();
-
-  restrictToggle.addEventListener("click", () => {{
-    const nowHidden = !filterWrap.hidden;
-    filterWrap.hidden = nowHidden;
-    restrictToggleLabel.textContent = nowHidden ? "Filter by system" : "Hide system filter";
-    if (!nowHidden) filterInput.focus();
-  }});
-
-  input.addEventListener("input", () => {{
-    clearTimeout(debounceTimer);
-    const query = input.value.trim();
-    if (!query) {{
-      resultsEl.innerHTML = "";
-      return;
-    }}
-    debounceTimer = setTimeout(() => runSearch(query), 400);
-  }});
-
-  filterInput.addEventListener("input", () => renderDropdown(filterInput.value));
-  filterInput.addEventListener("focus", () => renderDropdown(filterInput.value));
-  document.addEventListener("click", (e) => {{
-    if (!e.target.closest(".filter-wrap")) dropdown.hidden = true;
-  }});
-
-  function renderDropdown(text) {{
-    const query = text.trim().toLowerCase();
-    const matches = ALL_SYSTEMS
-      .filter(name => !selectedSystems.has(name))
-      .filter(name => !query || name.toLowerCase().includes(query))
-      .slice(0, 8);
-
-    if (!matches.length) {{
-      dropdown.hidden = true;
-      return;
-    }}
-    dropdown.innerHTML = matches.map(name =>
-      `<div class="filter-option" data-name="${{escapeHtml(name)}}">${{escapeHtml(name)}}</div>`
-    ).join("");
-    dropdown.hidden = false;
-  }}
-
-  dropdown.addEventListener("click", (e) => {{
-    const option = e.target.closest(".filter-option");
-    if (!option) return;
-    selectedSystems.add(option.dataset.name);
-    filterInput.value = "";
-    dropdown.hidden = true;
-    renderChips();
-    if (input.value.trim()) runSearch(input.value.trim());
-  }});
-
-  function renderChips() {{
-    chipsEl.innerHTML = [...selectedSystems].map(name => `
-      <span class="chip">${{escapeHtml(name)}}<button type="button" data-name="${{escapeHtml(name)}}" aria-label="Remove filter">×</button></span>
-    `).join("");
-  }}
-
-  chipsEl.addEventListener("click", (e) => {{
-    const button = e.target.closest("button");
-    if (!button) return;
-    selectedSystems.delete(button.dataset.name);
-    renderChips();
-    if (input.value.trim()) runSearch(input.value.trim());
-  }});
-
-  async function runSearch(query) {{
-    resultsEl.innerHTML = '<p class="status">Searching… (first request may take up to a minute if the server was idle)</p>';
-    try {{
-      const params = new URLSearchParams({{ q: query }});
-      selectedSystems.forEach(name => params.append("system", name));
-      const res = await fetch(`${{API_URL}}?${{params.toString()}}`);
-      const data = await res.json();
-      renderResults(data.results || []);
-    }} catch (err) {{
-      waitAndRetry(query, 10);
-    }}
-  }}
-
-  function waitAndRetry(query, seconds) {{
-    if (seconds <= 0) {{
-      resultsEl.innerHTML = '<p class="status">Retrying now…</p>';
-      runSearch(query);
-      return;
-    }}
-    resultsEl.innerHTML = `<p class="status">Just warming up the search server — retrying in ${{seconds}}…</p>`;
-    setTimeout(() => waitAndRetry(query, seconds - 1), 1000);
-  }}
-
-  function renderResults(results) {{
-    if (!results.length) {{
-      resultsEl.innerHTML = '<p class="status">No matches found.</p>';
-      return;
-    }}
-    resultsEl.innerHTML = results.map(r => `
-      <div class="result">
-        <div class="meta">
-          <span class="system-name">${{escapeHtml(r.design_system_name || "Unknown system")}}</span>
-          &middot; score ${{r.score.toFixed(3)}}
-          &middot; <a href="${{escapeHtml(r.url || "#")}}" target="_blank" rel="noopener">${{escapeHtml(r.url || "")}}</a>
-        </div>
-        <pre>${{escapeHtml(r.text || "")}}</pre>
-      </div>
-    `).join("");
-  }}
-
-  function escapeHtml(str) {{
-    return String(str).replace(/[&<>"']/g, c => ({{
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-    }}[c]));
-  }}
 
   // --- Copy MCP install command ---
   const mcpCopy = document.getElementById("mcpCopy");
@@ -362,8 +200,17 @@ def render_page(entries: list[dict]) -> str:
   // while this tab is actually visible — a backgrounded tab makes zero
   // requests, and switching back triggers an immediate re-check.
   const mcpStatusEl = document.getElementById("mcpStatus");
+  // Queried once — every state (checking/awake/sleeping/waking) reuses these
+  // same three elements rather than replacing mcpStatusEl's innerHTML, so the
+  // row's structure (and therefore its height) never changes between states;
+  // setStatus() below only ever edits their class/text/visibility.
+  const statusDotEl = mcpStatusEl.querySelector(".status-dot");
+  const statusTextEl = mcpStatusEl.querySelector(".status-text");
+  const wakeButtonEl = document.getElementById("wakeButton");
   let healthPollTimer = null;
   let waking = false;
+
+  wakeButtonEl.addEventListener("click", () => wakeServer());
 
   function relativeTime(isoString) {{
     const diffMin = Math.round((Date.now() - new Date(isoString).getTime()) / 60000);
@@ -374,22 +221,25 @@ def render_page(entries: list[dict]) -> str:
     return `${{Math.round(diffHr / 24)}}d ago`;
   }}
 
-  function renderMcpStatus(awake) {{
-    let lastAwake = null;
-    try {{ lastAwake = localStorage.getItem("mcp-last-awake"); }} catch (err) {{ /* private browsing etc. */ }}
+  // dotClass: "awake" | "sleeping" | "waking". showButton: whether the wake
+  // button should actually be usable right now (it's only ever hidden via
+  // `visibility`, never removed, so it keeps its layout slot regardless).
+  function setStatus(dotClass, text, showButton) {{
+    statusDotEl.className = `status-dot ${{dotClass}}`;
+    statusTextEl.textContent = text;
+    wakeButtonEl.style.visibility = showButton ? "visible" : "hidden";
+    wakeButtonEl.disabled = !showButton;
+  }}
 
+  function renderMcpStatus(awake) {{
     if (awake) {{
-      mcpStatusEl.innerHTML = '<span class="status-dot awake"></span> MCP server awake';
+      setStatus("awake", "MCP server awake", false);
       return;
     }}
+    let lastAwake = null;
+    try {{ lastAwake = localStorage.getItem("mcp-last-awake"); }} catch (err) {{ /* private browsing etc. */ }}
     const lastText = lastAwake ? ` (last awake ${{relativeTime(lastAwake)}})` : "";
-    mcpStatusEl.innerHTML =
-      `<span class="status-dot sleeping"></span> MCP server sleeping — takes ~30-60s to wake up${{lastText}} ` +
-      '<button type="button" class="wake-button" id="wakeButton">Wake it up</button>';
-    const wakeButton = document.getElementById("wakeButton");
-    if (wakeButton) {{
-      wakeButton.addEventListener("click", () => wakeServer());
-    }}
+    setStatus("sleeping", `MCP server sleeping — takes ~30-60s to wake up${{lastText}}`, true);
   }}
 
   async function checkMcpHealth() {{
@@ -415,7 +265,7 @@ def render_page(entries: list[dict]) -> str:
   async function wakeServer() {{
     if (waking) return;
     waking = true;
-    mcpStatusEl.innerHTML = '<span class="status-dot waking"></span> Waking the server up… (usually takes 30-60s)';
+    setStatus("waking", "Waking the server up… (usually takes 30-60s)", false);
 
     const deadline = Date.now() + 75000;
     while (Date.now() < deadline) {{
@@ -431,7 +281,7 @@ def render_page(entries: list[dict]) -> str:
       await new Promise(resolve => setTimeout(resolve, 4000));
     }}
     waking = false;
-    mcpStatusEl.innerHTML = '<span class="status-dot sleeping"></span> Still not responding — it may need another try.';
+    setStatus("sleeping", "Still not responding — it may need another try.", false);
     setTimeout(() => renderMcpStatus(false), 2500);
   }}
 
@@ -458,11 +308,12 @@ def render_page(entries: list[dict]) -> str:
 
   if (document.visibilityState === "visible") startMcpPolling();
 
-  // --- Auto-run a search if arriving via the nav's mini-search (e.g. "/?q=button") ---
+  // Old links/bookmarks may still point at "/?q=..." (the nav's mini-search
+  // used to run the search right here) — forward them to the real results
+  // page instead of silently ignoring the query.
   const urlQuery = new URLSearchParams(window.location.search).get("q");
   if (urlQuery) {{
-    input.value = urlQuery;
-    runSearch(urlQuery);
+    window.location.replace("/search?q=" + encodeURIComponent(urlQuery));
   }}
 </script>
 </body>

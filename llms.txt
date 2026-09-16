@@ -1,0 +1,48 @@
+# Design Systems Directory
+
+> This is dated research about a fast-moving corpus — oldest record last checked 2026-09-13, refreshed on a rolling basis. A system's own detail page always shows its own last-checked date.
+
+> Semantic search across 1 publicly documented design systems (9 pages indexed) — GitHub, Storybook, Figma, npm packages, tokens, icons, and full-text content, all in one place.
+
+This directory exists specifically to be used by AI coding agents, not just browsed by humans. The MCP server below is the intended way to query it — the same semantic search index, no HTML to parse, callable as a single tool.
+
+## MCP server (preferred)
+
+Add it to any MCP-compatible client:
+
+```
+claude mcp add ds-directory --transport http https://ds-directory-mcp.onrender.com/mcp
+```
+
+Server URL: https://ds-directory-mcp.onrender.com/mcp
+
+## HTTP search API (no MCP client available)
+
+```
+GET https://ds-directory-mcp.onrender.com/search?q=<query>&system=<optional design system name, repeatable>
+```
+
+Returns `{"results": [{"design_system_name", "url", "text", "score"}, ...]}` — semantically ranked chunks of real page content, not just keyword matches.
+
+## Data files (to count with, not just read)
+
+Same records as the HTML pages, as plain JSON — for anything that wants to recompute a stat itself rather than trust a rendered number. Excludes archived/dead systems and anything with zero pages indexed, same as every page below.
+
+- /systems.json (2 KB) — Every indexed system, merged into one file — the same records the HTML pages render.
+- /design-system.schema.json (7 KB) — JSON Schema for systems.json and each systems/<slug>.json.
+- /systems/<slug>.json — one system's own record (matches systems.json's shape)
+
+## Pages (for a plain crawl with no query to run)
+
+Relative to this file's own URL (llms.txt lives at the site root):
+
+- /directory — every indexed system, sortable/filterable, with per-system resource coverage (GitHub, npm, Storybook, Figma, MCP server, agent instructions, etc.)
+- /systems/<slug> — one system's full detail: resources, indexed pages, freshness, and any detected accessibility/tokens/framework/governance signals
+- /components — which systems document a given component or pattern
+
+## Notes for an agent reading this file
+
+- Every system record here was itself crawled and classified for exactly the kind of AI-affordance signal this file represents (see each system's detail page) — this project eats its own dog food.
+- This file describes the directory itself, not any one design system in it — it makes no claim about which system you should use, only how to query what's here.
+- Data refreshes on a rolling basis; a system's own detail page (and each JSON record's last_checked field) shows when it was last checked and whether the crawl looks complete.
+- This is a read-only public index. No authentication, no rate limit beyond fair use.

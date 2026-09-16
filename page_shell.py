@@ -19,13 +19,32 @@ FONT_LINK = (
 PAGE_MAX_WIDTH = "1040px"
 NAV_HEIGHT = "60px"
 
-# The only way to suggest a new system is this GitHub Issue Form — it wasn't
-# linked from anywhere on the actual public site, so a visitor had no way to
-# discover it short of already being in the repo's Issues tab.
-SUBMISSION_URL = "https://github.com/NoWorries/ds-directory-mcp/issues/new?template=new-design-system.yml"
+# Real, no-login pages (see generate_forms.py) — not the GitHub Issue Forms
+# these used to point at directly, which required the visitor to have their
+# own GitHub account. Both POST to netlify/functions/submit-form.js, which
+# files the actual GitHub issue on a bot account instead.
+SUBMISSION_URL = "/suggest"
+REPORT_ISSUE_URL = "/report"
 
 TOKENS_CSS = f"""
   @view-transition {{ navigation: auto; }}
+
+  /* Named transition (view-transition-name: thumb-<slug>, tagged
+     view-transition-class: thumb — set inline in generate_directory.py's
+     render_card/generate_systems.py's thumb_html, since the name itself must
+     be unique per element but the *class* lets every card share one
+     animation rule) gets a slightly slower, eased morph than the default
+     page crossfade, so a card's thumbnail visibly glides into the detail
+     page's hero image instead of just cutting; everything else keeps the
+     plain default root crossfade, intentionally quick. (A matching
+     title-<slug> transition on the heading was tried and dropped — morphing
+     text at a different size/weight read as glitchy, not smooth.)
+     Chrome/Edge only (view-transition-class needs Chrome 125+) — a no-op
+     elsewhere, same as @view-transition itself. */
+  ::view-transition-group(*) {{ animation-duration: 0.3s; }}
+  ::view-transition-group(*.thumb) {{
+    animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }}
 
   :root {{
     --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
@@ -104,6 +123,13 @@ TOKENS_CSS = f"""
   .site-nav-links a:hover {{ background: var(--surface-sunken); color: var(--text); }}
   .site-nav-links a.current {{ color: var(--accent); background: var(--accent-soft); font-weight: 600; }}
 
+  .nav-suggest {{
+    font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap;
+    padding: 6px 10px; border-radius: 6px;
+  }}
+  .nav-suggest:hover {{ background: var(--accent-soft); }}
+  @media (max-width: 640px) {{ .nav-suggest {{ display: none; }} }}
+
   .nav-search {{ display: flex; align-items: center; }}
   .nav-search-toggle {{
     background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
@@ -166,6 +192,13 @@ EXTERNAL_LINK_ICON_SVG = _icon(
     '<polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>',
     size=13,
 )
+CHEVRON_RIGHT_ICON_SVG = _icon('<polyline points="9 18 15 12 9 6"></polyline>', size=16)
+CLOSE_ICON_SVG = _icon('<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>', size=18)
+EXPAND_ICON_SVG = _icon(
+    '<polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline>'
+    '<line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line>',
+    size=15,
+)
 GITHUB_ICON_SVG = _icon(
     '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 '
     '5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 '
@@ -180,10 +213,11 @@ GRID_ICON_SVG_LARGE = _icon(
     size=20,
 )
 
-# Submitting always navigates to "/?q=..." — the homepage reads that query
-# param on load and runs the search immediately. Keeps the nav's mini-search
-# simple and identical on every page, instead of duplicating full search
-# results UI (API calls, rendering, restrict-filter) on every single page.
+# Submitting always navigates to "/search?q=..." — that page reads the
+# query param on load and runs the search immediately (see generate_search.py).
+# Keeps the nav's mini-search simple and identical on every page, instead of
+# duplicating full search results UI (API calls, rendering, restrict-filter)
+# on every single page.
 NAV_SEARCH_JS = """
 (function () {
   var toggle = document.getElementById("navSearchToggle");
@@ -197,7 +231,7 @@ NAV_SEARCH_JS = """
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
-    if (q) window.location.href = "/?q=" + encodeURIComponent(q);
+    if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
   });
 })();
 """
@@ -219,9 +253,10 @@ def routes_nav(current: str) -> str:
         <a href="/" class="site-brand">Design Systems Directory</a>
         <div class="site-nav-links">
           <a href="/" class="{'current' if current == 'search' else ''}">Search</a>
-          <a href="/directory.html" class="{'current' if current == 'directory' else ''}">All Systems</a>
-          <a href="/components/index.html" class="{'current' if current == 'components' else ''}">Components</a>
+          <a href="/directory" class="{'current' if current == 'directory' else ''}">All Systems</a>
+          <a href="/components" class="{'current' if current == 'components' else ''}">Components</a>
         </div>
+        <a class="nav-suggest" href="{SUBMISSION_URL}">Suggest a system</a>
         <div class="nav-search">
           <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search">{SEARCH_ICON_SVG}</button>
           <form class="nav-search-form" id="navSearchForm" hidden>

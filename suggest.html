@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggest a design system — Design Systems Directory</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+
+  @view-transition { navigation: auto; }
+
+  /* Named transition (view-transition-name: thumb-<slug>, tagged
+     view-transition-class: thumb — set inline in generate_directory.py's
+     render_card/generate_systems.py's thumb_html, since the name itself must
+     be unique per element but the *class* lets every card share one
+     animation rule) gets a slightly slower, eased morph than the default
+     page crossfade, so a card's thumbnail visibly glides into the detail
+     page's hero image instead of just cutting; everything else keeps the
+     plain default root crossfade, intentionally quick. (A matching
+     title-<slug> transition on the heading was tried and dropped — morphing
+     text at a different size/weight read as glitchy, not smooth.)
+     Chrome/Edge only (view-transition-class needs Chrome 125+) — a no-op
+     elsewhere, same as @view-transition itself. */
+  ::view-transition-group(*) { animation-duration: 0.3s; }
+  ::view-transition-group(*.thumb) {
+    animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  :root {
+    --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
+    --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
+    --accent: #1d4ed8; --accent-strong: #1638a8; --accent-soft: #e8edfc; --accent-soft-text: #1d4ed8;
+    --shadow: 0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -10px rgba(15,23,42,0.14);
+    /* Faint fractal-noise grain (alpha-only, so it reads as texture rather
+       than color) — the shared look for .textured containers below. Kept as
+       a token so light/dark could each tune it without touching every
+       container's markup. */
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --surface: #151a21; --surface-sunken: #1b212a; --border: #2a323d;
+      --text: #e7eaee; --text-muted: #98a2b0; --text-faint: #626b78;
+      --accent: #7ea2ff; --accent-strong: #a4c0ff; --accent-soft: rgba(126,162,255,0.12); --accent-soft-text: #a4c0ff;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 18px -10px rgba(0,0,0,0.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  /* A faint grain treatment for card-like containers (the MCP callout, nav
+     cards, grid cards) — applied via ::before so it layers over each
+     container's own background without fighting its other background-image
+     uses (e.g. a card's own thumbnail). Needs the container to have
+     `position: relative` (each usage sets it) and `overflow: hidden`
+     (usually already there) so it respects rounded corners instead of
+     bleeding past them. */
+  .textured { position: relative; }
+  .textured::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background-image: var(--noise);
+    background-repeat: repeat;
+    opacity: 0.7;
+  }
+  .textured > * { position: relative; }
+  body {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); margin: 0; padding: calc(60px + 32px) 24px 80px;
+  }
+  a { color: var(--accent); }
+  .page { max-width: 1040px; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; }
+  h1 {
+    font-family: "JetBrains Mono", monospace; font-weight: 700;
+    font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); letter-spacing: -0.01em; line-height: 1.25;
+    margin: 0 0 12px; text-wrap: balance;
+  }
+  .subtitle { color: var(--text-muted); font-size: 0.98rem; line-height: 1.55; max-width: 64ch; margin: 0 0 28px; }
+
+  /* --- Fixed global top nav --- */
+  .site-nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 100;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+  }
+  .site-nav-inner {
+    max-width: 1040px; margin: 0 auto; width: 100%; padding: 0 24px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .site-brand {
+    font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.86rem;
+    color: var(--text); text-decoration: none; white-space: nowrap;
+  }
+  .site-nav-links { display: flex; gap: 4px; flex: 1; }
+  .site-nav-links a {
+    font-size: 0.86rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 6px;
+  }
+  .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
+  .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  .nav-suggest {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap;
+    padding: 6px 10px; border-radius: 6px;
+  }
+  .nav-suggest:hover { background: var(--accent-soft); }
+  @media (max-width: 640px) { .nav-suggest { display: none; } }
+
+  .nav-search { display: flex; align-items: center; }
+  .nav-search-toggle {
+    background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; border-radius: 6px;
+  }
+  .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  /* Same [hidden]-vs-explicit-display fix needed a third time here — see the
+     .cards-grid/.card comments in generate_directory.py for the full story. */
+  .nav-search-form[hidden] { display: none; }
+  .nav-search-form { display: flex; align-items: center; }
+  .nav-search-form input {
+    width: 220px; font: inherit; font-size: 0.85rem; padding: 6px 10px; margin-left: 6px;
+    border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
+  }
+  .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+  @media (max-width: 640px) {
+    .site-nav-links a span { display: none; }
+    .nav-search-form input { width: 140px; }
+  }
+
+
+  .form-page { max-width: 640px; }
+  .form-intro { color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin: 0 0 28px; }
+  .field { margin-bottom: 18px; }
+  .field label {
+    display: block; font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 5px;
+  }
+  .field .hint { font-size: 0.78rem; color: var(--text-faint); margin: 4px 0 0; }
+  .field input[type="text"], .field input[type="url"], .field input[type="email"],
+  .field textarea, .field select {
+    width: 100%; box-sizing: border-box; padding: 9px 12px; font: inherit; font-size: 0.92rem;
+    border: 1px solid var(--border); border-radius: 7px; background: var(--surface); color: var(--text);
+  }
+  .field input:focus, .field textarea:focus, .field select:focus {
+    outline: 2px solid var(--accent); outline-offset: 1px;
+  }
+  .field textarea { min-height: 100px; resize: vertical; font-family: inherit; }
+  .field-optional-label { color: var(--text-faint); font-weight: 500; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
+  .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .submit-row { display: flex; align-items: center; gap: 14px; margin-top: 26px; }
+  .submit-button {
+    font: inherit; font-size: 0.92rem; font-weight: 600; padding: 10px 20px; border-radius: 8px;
+    border: none; background: var(--accent); color: #fff; cursor: pointer;
+  }
+  .submit-button:hover { background: var(--accent-strong); }
+  .submit-button:disabled { opacity: 0.6; cursor: default; }
+  .form-status { font-size: 0.88rem; }
+  .form-status.error { color: #dc2626; }
+  .form-status.success { color: #16a34a; }
+  .form-success-box {
+    background: var(--surface-sunken); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px 22px; margin-top: 8px;
+  }
+  .form-success-box h2 { font-size: 0.98rem; margin: 0 0 6px; }
+  .form-success-box p { margin: 0; font-size: 0.88rem; color: var(--text-muted); }
+  .form-success-box a { font-weight: 600; }
+
+</style>
+</head>
+<body>
+
+    <nav class="site-nav">
+      <div class="site-nav-inner">
+        <a href="/" class="site-brand">Design Systems Directory</a>
+        <div class="site-nav-links">
+          <a href="/" class="current">Search</a>
+          <a href="/directory" class="">All Systems</a>
+          <a href="/components" class="">Components</a>
+        </div>
+        <a class="nav-suggest" href="/suggest">Suggest a system</a>
+        <div class="nav-search">
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+          <form class="nav-search-form" id="navSearchForm" hidden>
+            <input type="text" id="navSearchInput" placeholder="Search design systems...">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <script>
+(function () {
+  var toggle = document.getElementById("navSearchToggle");
+  var form = document.getElementById("navSearchForm");
+  var input = document.getElementById("navSearchInput");
+  if (!toggle || !form) return;
+  toggle.addEventListener("click", function () {
+    form.hidden = !form.hidden;
+    if (!form.hidden) input.focus();
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+})();
+</script>
+    
+<div class="page form-page">
+  <p class="eyebrow">Suggest a system</p>
+  <h1>Suggest a design system</h1>
+  <p class="form-intro">
+    Know a publicly documented design system that isn't indexed yet? Add it here — a bot
+    runs a quick trial crawl and a maintainer reviews it before it's added.
+  </p>
+
+  <form id="suggestForm">
+    <div class="honeypot" aria-hidden="true">
+      <label for="suggestWebsite">Leave this field empty</label>
+      <input type="text" id="suggestWebsite" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="organization">Organization name</label>
+        <input type="text" id="organization" placeholder="e.g. Adobe">
+      </div>
+      <div class="field">
+        <label for="designSystemName">Design system name</label>
+        <input type="text" id="designSystemName" placeholder="e.g. Spectrum" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="startUrl">Start URL</label>
+      <input type="url" id="startUrl" placeholder="https://spectrum.adobe.com/" required>
+      <p class="hint">The main documentation/components page to start crawling from.</p>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="githubUrl"><span class="field-optional-label">GitHub repository (optional)</span></label>
+        <input type="url" id="githubUrl" placeholder="https://github.com/org/repo">
+      </div>
+      <div class="field">
+        <label for="npmUrl"><span class="field-optional-label">npm package (optional)</span></label>
+        <input type="url" id="npmUrl" placeholder="https://www.npmjs.com/package/...">
+      </div>
+      <div class="field">
+        <label for="storybookUrl"><span class="field-optional-label">Storybook URL (optional)</span></label>
+        <input type="url" id="storybookUrl" placeholder="https://org.github.io/repo/storybook">
+      </div>
+      <div class="field">
+        <label for="figmaUrl"><span class="field-optional-label">Figma file URL (optional)</span></label>
+        <input type="url" id="figmaUrl" placeholder="https://www.figma.com/file/...">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="notes"><span class="field-optional-label">Anything else we should know? (optional)</span></label>
+      <textarea id="notes"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="notifyEmail"><span class="field-optional-label">Email for approval notification (optional)</span></label>
+      <input type="email" id="notifyEmail" placeholder="you@example.com">
+      <p class="hint">Only used to email you once this is approved and published — not stored anywhere else.</p>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit" class="submit-button">Submit for review</button>
+      <span class="form-status"></span>
+    </div>
+  </form>
+</div>
+
+<script>
+
+function wireForm(formEl, buildPayload) {
+  const statusEl = formEl.querySelector(".form-status");
+  const submitButton = formEl.querySelector(".submit-button");
+
+  formEl.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const payload = buildPayload();
+    if (payload.error) {
+      statusEl.textContent = payload.error;
+      statusEl.className = "form-status error";
+      return;
+    }
+
+    submitButton.disabled = true;
+    statusEl.textContent = "Submitting…";
+    statusEl.className = "form-status";
+
+    try {
+      const res = await fetch("/.netlify/functions/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload.data),
+      });
+      const result = await res.json();
+      if (!res.ok || result.error) {
+        statusEl.textContent = result.error || "Something went wrong — please try again.";
+        statusEl.className = "form-status error";
+        submitButton.disabled = false;
+        return;
+      }
+      formEl.outerHTML = `
+        <div class="form-success-box">
+          <h2>Thanks — that's filed.</h2>
+          <p>You can follow along at <a href="${result.issue_url}" target="_blank" rel="noopener">${result.issue_url}</a>.</p>
+        </div>
+      `;
+    } catch (err) {
+      statusEl.textContent = "Couldn't reach the server — please try again.";
+      statusEl.className = "form-status error";
+      submitButton.disabled = false;
+    }
+  });
+}
+
+  wireForm(document.getElementById("suggestForm"), () => {
+    const name = document.getElementById("designSystemName").value.trim();
+    const startUrl = document.getElementById("startUrl").value.trim();
+    if (!name || !startUrl) {
+      return { error: "Design system name and start URL are required." };
+    }
+    return {
+      data: {
+        type: "new-system",
+        website: document.getElementById("suggestWebsite").value,
+        organization: document.getElementById("organization").value.trim(),
+        design_system_name: name,
+        start_url: startUrl,
+        github_url: document.getElementById("githubUrl").value.trim(),
+        storybook_url: document.getElementById("storybookUrl").value.trim(),
+        figma_url: document.getElementById("figmaUrl").value.trim(),
+        npm_url: document.getElementById("npmUrl").value.trim(),
+        notes: document.getElementById("notes").value.trim(),
+        notify_email: document.getElementById("notifyEmail").value.trim(),
+      },
+    };
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Pretty URLs (Netlify's default, but pinned explicitly here rather than
+# relying on an implicit default) — every generated page is still written as
+# a real *.html file on disk (see each generate_*.py's OUTPUT_FILE), but
+# Netlify serves it at the extension-less path too and redirects a bare
+# "*.html" request to that clean URL. Every internal link in the generated
+# pages (page_shell.py's routes_nav, generate_directory.py's detail_href,
+# etc.) is written extension-less to match.
+[build.processing.html]
+  pretty_urls = true
+
+# submit-form.js — files a GitHub issue on behalf of a visitor with no GitHub
+# account (see the function's own comment for why). Needs an ISSUE_BOT_TOKEN
+# env var set in the Netlify site's dashboard (Site configuration →
+# Environment variables) — a GitHub PAT with just the "Issues" repo
+# permission, never committed here.
+[functions]
+  directory = "netlify/functions"

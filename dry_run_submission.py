@@ -15,7 +15,9 @@ def run_dry_check(name: str, start_url: str, max_pages: int = DRY_RUN_MAX_PAGES)
     if not start_url.startswith(("http://", "https://")):
         return f"❌ **Invalid start URL** — `{start_url}` doesn't look like a URL. Please edit the submission."
 
-    pages, all_links, _page_titles, _hit_max_pages, _start_url_error = crawl([start_url], max_pages=max_pages)
+    pages, all_links, _page_titles, _hit_max_pages, _start_url_error, _unchanged, _freshness = crawl(
+        [start_url], max_pages=max_pages
+    )
     resources = merge_resources(classify_links(all_links), probe_well_known(start_url))
     enrichment = enrich_resources(resources)
 

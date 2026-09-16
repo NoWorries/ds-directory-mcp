@@ -115,8 +115,15 @@ jobs:
         run: python merge_shards.py ${{ needs.prepare.outputs.shard_count }}
 
       - name: Generate static directory page
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
         run: |
           python generate_home.py
+          python generate_search.py
+          python generate_forms.py
+          python generate_data_export.py
+          python generate_llms_txt.py
+          python generate_sitemap.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
@@ -144,7 +151,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add systems.yaml home.html directory.html pages_index.json components systems
+          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems
+          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           if ! git diff --cached --quiet; then
             git commit -m "Render likely_spa design systems via headless browser [skip ci]"
             # Other workflows commit to this same branch too, so a push can
@@ -166,6 +174,13 @@ jobs:
         run: |
           mkdir -p site
           cp home.html site/index.html
+          cp search.html site/search.html
+          cp suggest.html site/suggest.html
+          cp report.html site/report.html
+          cp llms.txt site/llms.txt
+          if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
+          cp systems.json site/systems.json
+          cp design-system.schema.json site/design-system.schema.json
           cp directory.html site/directory.html
           if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
           if [ -d components ]; then cp -r components site/components; fi

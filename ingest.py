@@ -3,11 +3,12 @@ Phase 1: Scrape a design system's docs, chunk the text, embed it, and load it in
 
 Usage:
     python ingest.py <design_system_name> <start_url> [start_url2 ...]
-    python ingest.py --all [--force]              # re-ingest every system in systems.yaml
-    python ingest.py --all --shard 1/4 [--force]  # ...but only entries at index i where i%4==1
+    python ingest.py --all                        # re-ingest every system in systems.yaml
+    python ingest.py --all --shard 1/4            # ...but only entries at index i where i%4==1
     python ingest.py --new                        # only systems never indexed before
     python ingest.py --new --shallow              # ...but cap every crawl at SHALLOW_MAX_PAGES pages
     python ingest.py --new --shallow --shard 1/4  # ...sharded the same way --all is
+    python ingest.py --spa [--shard 1/4]          # re-render every likely_spa system via a headless browser
     python ingest.py --system "Shopify — Polaris" [--force]   # re-ingest one entry (org — design_system)
 
 --shallow: overrides max_pages (both the per-entry systems.yaml value and
@@ -19,6 +20,14 @@ shallow-crawled it has a pages_indexed value like anything else, so --new
 won't pick it up again — the monthly --all full reindex is what deep-crawls
 it properly later, exactly as it would for any other already-indexed system.
 
+--spa: targets systems flagged likely_spa=True (see ingest()'s SPA-shell
+detection) — sites where a plain HTTP GET only ever returns an empty
+client-side-rendered shell, so the ordinary crawler finds nothing however
+many times you retry it. Renders just the start URL through crawl4ai
+(Playwright under the hood) instead of requests+BeautifulSoup — see
+ingest_spa(). Requires `playwright install --with-deps chromium` to have
+been run once in the environment (see reindex-spa.yml).
+
 Example:
     python ingest.py "Atlassian Design System" https://atlassian.design/components
 
@@ -26,13 +35,16 @@ Re-running for a design_system_name that's already indexed replaces its old chun
 (deletes by that payload filter first), so scheduled re-ingestion doesn't accumulate
 stale duplicates as source docs change.
 
-Change detection (--all / --system, not --new): before crawling, does a cheap HEAD
-request on the first start_url and compares its ETag/Last-Modified header against
-what was stored last run. If unchanged, the whole crawl+embed is skipped. Many doc
-sites (especially SPAs) don't send either header — in that case there's no signal to
-compare, so it always re-crawls. This only checks the start_url, not every page, so
-it's a coarse "did the site's front door change" heuristic, not a guarantee nothing
-changed deeper in the site. Pass --force to bypass the check and always re-crawl.
+Change detection (--system only — not --all, not --new): before crawling, does a
+cheap HEAD request on the first start_url and compares its ETag/Last-Modified
+header against what was stored last run; if unchanged, the whole crawl+embed is
+skipped (pass --force to bypass and always re-crawl one system). This only checks
+the start_url, not every page, so it's a coarse "did the site's front door
+change" heuristic, not a guarantee nothing changed deeper in the site — which is
+exactly why --all (the full reindex) no longer uses it at all: skipping an
+entire system because its homepage header looked unchanged risked missing a
+changed sub-page, or never catching up on pages an earlier max_pages-capped
+crawl left un-indexed. --all always fully re-crawls every entry now.
 """
 
 from __future__ import annotations
@@ -54,6 +66,7 @@ from qdrant_client.models import (
     Distance,
     FieldCondition,
     Filter,
+    MatchAny,
     MatchValue,
     PayloadSchemaType,
     PointStruct,
@@ -69,7 +82,15 @@ from config import (
     QDRANT_URL,
 )
 from embeddings import embed_texts
-from resources import classify_links, enrich_resources, merge_resources, probe_well_known
+from content_signals import detect_content_signals
+from resources import (
+    classify_links,
+    enrich_resources,
+    flag_unverified_resources,
+    merge_resources,
+    probe_sitemap,
+    probe_well_known,
+)
 from text_utils import full_name
 
 SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
@@ -135,19 +156,46 @@ def ensure_collection(client: QdrantClient) -> None:
     )
 
 
-def fetch_page(url: str) -> tuple[BeautifulSoup | None, str | None]:
-    """Returns (soup, None) on success or (None, error_message) on failure.
-    The error string is only actually used for the start URL (see crawl()) —
-    that's the one fetch failure worth recording on the registry entry, since
-    a DNS/connection failure there usually means the whole site is
-    unreachable (moved, renamed, taken down), not just one bad link deeper
-    in the crawl."""
+def page_freshness_from_headers(headers) -> dict:
+    """Same shape as fetch_change_signal()'s result, but from headers already
+    in hand from a page fetched during a crawl — no extra request needed."""
+    signal = {}
+    if headers.get("ETag"):
+        signal["etag"] = headers["ETag"]
+    if headers.get("Last-Modified"):
+        signal["last_modified"] = headers["Last-Modified"]
+    return signal
+
+
+def page_unchanged(previous: dict | None, current: dict) -> bool:
+    """Per-page version of content_unchanged() (no sitemap signal at this
+    granularity — that's a site-wide concept). True only when both sides
+    actually have a signal and it matches; a page whose server sends neither
+    header can't be judged unchanged, so it's always re-embedded."""
+    if not previous or not current:
+        return False
+    if previous.get("etag") and previous["etag"] == current.get("etag"):
+        return True
+    if previous.get("last_modified") and previous["last_modified"] == current.get("last_modified"):
+        return True
+    return False
+
+
+def fetch_page(url: str) -> tuple[BeautifulSoup | None, str | None, dict]:
+    """Returns (soup, None, freshness) on success or (None, error_message, {})
+    on failure. The error string is only actually used for the start URL (see
+    crawl()) — that's the one fetch failure worth recording on the registry
+    entry, since a DNS/connection failure there usually means the whole site
+    is unreachable (moved, renamed, taken down), not just one bad link deeper
+    in the crawl. freshness is this page's own ETag/Last-Modified (if the
+    server sent either), used by crawl() to skip re-embedding a page whose
+    content hasn't changed since it was last indexed."""
     try:
         response = requests.get(url, timeout=15, headers={"User-Agent": "ds-directory-mcp/1.0"})
         response.raise_for_status()
     except requests.RequestException as exc:
         print(f"  skip {url}: {exc}")
-        return None, str(exc)
+        return None, str(exc), {}
     # requests falls back to Latin-1 (per the old HTTP spec default) whenever a
     # server's Content-Type header omits a charset — even though virtually
     # every real docs site actually serves UTF-8. That mismatch is what turns
@@ -155,7 +203,7 @@ def fetch_page(url: str) -> tuple[BeautifulSoup | None, str | None]:
     # encoding, so force UTF-8 unless the server was explicit about something else.
     if "charset" not in response.headers.get("content-type", "").lower():
         response.encoding = "utf-8"
-    return BeautifulSoup(response.text, "html.parser"), None
+    return BeautifulSoup(response.text, "html.parser"), None, page_freshness_from_headers(response.headers)
 
 
 def fetch_text_resource(url: str) -> str | None:
@@ -222,23 +270,36 @@ def crawl(
     max_pages: int = DEFAULT_MAX_PAGES,
     include_patterns: list[str] | None = None,
     exclude_patterns: list[str] | None = None,
-) -> tuple[dict[str, str], set[str], dict[str, str], bool, str | None]:
+    previous_pages: dict[str, dict] | None = None,
+) -> tuple[dict[str, str], set[str], dict[str, str], bool, str | None, set[str], dict[str, dict]]:
     """Breadth-first crawl restricted to the start URLs' domain(s).
 
     Returns ({url: text}, all_links_seen, {url: page_title}, hit_max_pages,
-    start_url_error) — all_links_seen includes off-domain links (GitHub,
-    Storybook, Figma, etc.) for resource discovery, even though only
-    same-domain pages are actually crawled and embedded. page_title lets a
-    browsable "jump straight to this page" index show something more useful
-    than a bare URL. hit_max_pages is True when the crawl stopped because it
-    hit max_pages while pages were still queued to visit — i.e. there's real,
-    undiscovered content still out there, as opposed to the crawl just
-    running out of links on its own. start_url_error is the fetch error for
-    the FIRST start URL specifically (None if it fetched fine) — a DNS/
-    connection failure there usually means the whole site moved or is down,
-    not just one bad link deeper in the crawl, so it's worth surfacing
-    distinctly from an ordinary low-page-count crawl (see find_broken() in
-    generate_directory.py / check_crawl_health.py).
+    start_url_error, unchanged_urls, page_freshness) — all_links_seen includes
+    off-domain links (GitHub, Storybook, Figma, etc.) for resource discovery,
+    even though only same-domain pages are actually crawled and embedded.
+    page_title lets a browsable "jump straight to this page" index show
+    something more useful than a bare URL. hit_max_pages is True when the
+    crawl stopped because it hit max_pages while pages were still queued to
+    visit — i.e. there's real, undiscovered content still out there, as
+    opposed to the crawl just running out of links on its own. start_url_error
+    is the fetch error for the FIRST start URL specifically (None if it
+    fetched fine) — a DNS/connection failure there usually means the whole
+    site moved or is down, not just one bad link deeper in the crawl, so it's
+    worth surfacing distinctly from an ordinary low-page-count crawl (see
+    find_broken() in generate_directory.py / check_crawl_health.py).
+
+    previous_pages ({url: {"etag":, "last_modified":}}, from pages_index.json)
+    lets a re-crawl of an already-indexed system tell which pages haven't
+    actually changed since last time — every page still gets fetched (its
+    HTML is needed to discover outgoing links regardless), but a page whose
+    fetch response matches its previous freshness signal is reported back in
+    unchanged_urls so the caller (ingest()) can skip re-embedding/re-upserting
+    it, instead of unconditionally re-processing every page on every crawl.
+    page_freshness is every crawled page's current signal, to persist back
+    into pages_index.json for next time. Both are empty when previous_pages
+    is empty (e.g. a system's very first crawl) — behavior is then identical
+    to before this existed.
 
     include_patterns: if given, only crawl URLs containing one of these substrings
     (start_urls themselves are always crawled regardless).
@@ -246,6 +307,7 @@ def crawl(
     """
     include_patterns = include_patterns or []
     all_exclude_patterns = DEFAULT_EXCLUDE_PATTERNS + (exclude_patterns or [])
+    previous_pages = previous_pages or {}
 
     root_netlocs = {urlparse(u).netloc for u in start_urls}
     to_visit = list(start_urls)
@@ -254,6 +316,8 @@ def crawl(
     page_titles: dict[str, str] = {}
     all_links_seen: set[str] = set()
     start_url_error: str | None = None
+    unchanged_urls: set[str] = set()
+    page_freshness: dict[str, dict] = {}
 
     while to_visit and len(visited) < max_pages:
         url = to_visit.pop(0)
@@ -262,7 +326,7 @@ def crawl(
         visited.add(url)
 
         print(f"Crawling: {url}")
-        soup, error = fetch_page(url)
+        soup, error, freshness = fetch_page(url)
         time.sleep(CRAWL_DELAY_SECONDS)
         if soup is None:
             if url == start_urls[0]:
@@ -273,6 +337,11 @@ def crawl(
         if len(text) >= MIN_CONTENT_LENGTH:
             pages[url] = text
             page_titles[url] = extract_title(soup, url)
+            if freshness:
+                page_freshness[url] = freshness
+            if page_unchanged(previous_pages.get(url), freshness):
+                unchanged_urls.add(url)
+                print(f"  unchanged since last crawl: {url}")
         else:
             print(f"  skip (too little content): {url}")
 
@@ -291,7 +360,7 @@ def crawl(
     hit_max_pages = len(visited) >= max_pages and bool(to_visit)
     if hit_max_pages:
         print(f"  hit max_pages ({max_pages}) with {len(to_visit)} more page(s) still queued — coverage is likely incomplete")
-    return pages, all_links_seen, page_titles, hit_max_pages, start_url_error
+    return pages, all_links_seen, page_titles, hit_max_pages, start_url_error, unchanged_urls, page_freshness
 
 
 def load_registry() -> list[dict]:
@@ -308,6 +377,21 @@ REGISTRY_HEADER = (
     "# '*_meta' fields are auto-populated by ingest.py — don't hand-edit them, your\n"
     "# changes will be overwritten on the next run. A missing 'pages_indexed' means\n"
     "# the entry has never been indexed (picked up by `ingest.py --new`).\n"
+    "#\n"
+    "# 'archived: true' is a graveyard marker for a system whose docs site is\n"
+    "# confirmed gone with no live replacement — set by hand after investigating,\n"
+    "# never by ingest.py. Comes with three companion fields:\n"
+    "#   archived_status: one of shut_down / acquired / repo_archived /\n"
+    "#     deliberately_removed / unmaintained — the category of \"why it's gone\"\n"
+    "#   archived_reason: a short free-text note on what was actually checked\n"
+    "#   archived_date: the date (YYYY-MM-DD) that check was done, since a site\n"
+    "#     confirmed dead once can always come back — this is an \"as of\", not a\n"
+    "#     permanent verdict\n"
+    "# ingest.py skips these entirely (--all/--new/--spa), and they never appear\n"
+    "# on the public site (generate_directory.py's indexed_only() excludes\n"
+    "# anything without pages_indexed regardless). Kept in the registry rather\n"
+    "# than deleted so a future contributor re-submitting the same dead system\n"
+    "# gets caught by name instead of silently re-added.\n"
 )
 
 
@@ -318,8 +402,11 @@ def save_registry(entries: list[dict]) -> None:
 
 
 def update_pages_index(design_system_name: str, page_entries: list[dict]) -> None:
-    """Stores {url, title} for every page actually indexed, so the directory
-    page can offer a browsable list per system as an alternative to search."""
+    """Stores {url, title} (plus etag/last_modified when the server sent
+    either — see crawl()'s page_freshness) for every page actually indexed,
+    so the directory page can offer a browsable list per system as an
+    alternative to search, and so the *next* crawl can tell which pages
+    haven't changed since this one (load_previous_pages())."""
     index = {}
     if PAGES_INDEX_FILE.exists():
         index = json.loads(PAGES_INDEX_FILE.read_text())
@@ -344,12 +431,15 @@ def update_registry_stats(
     hit_max_pages: bool = False,
     crawl_error: str | None = None,
     likely_spa: bool = False,
+    unverified_resources: dict[str, list[str]] | None = None,
+    content_signals: dict | None = None,
 ) -> None:
-    # hit_max_pages/crawl_error/likely_spa written every run (not just when
-    # truthy) so a system that used to hit the cap, fail to fetch its start
-    # URL, or look like an unrenderable SPA, and no longer does, gets that
-    # cleared instead of staying stuck reporting a stale problem that's since
-    # been fixed. "" rather than None for the no-error case specifically —
+    # hit_max_pages/crawl_error/likely_spa/unverified_resources written every
+    # run (not just when truthy) so a system that used to hit the cap, fail
+    # to fetch its start URL, look like an unrenderable SPA, or have a
+    # dubious-looking resource link, and no longer does, gets that cleared
+    # instead of staying stuck reporting a stale problem that's since been
+    # fixed. "" rather than None for the no-error case specifically —
     # update_registry_fields drops None values so it could never clear a
     # previously-set crawl_error otherwise.
     fields = {
@@ -357,6 +447,8 @@ def update_registry_stats(
         "hit_max_pages": hit_max_pages,
         "crawl_error": crawl_error or "",
         "likely_spa": likely_spa,
+        "unverified_resources": unverified_resources or {},
+        "content_signals": content_signals or {},
     }
     if resources:
         fields["resources"] = resources
@@ -384,11 +476,27 @@ def fetch_change_signal(url: str) -> dict:
     return signal
 
 
+def fetch_freshness_signal(url: str) -> dict:
+    """fetch_change_signal()'s homepage ETag/Last-Modified plus
+    probe_sitemap()'s sitemap_last_modified, if a sitemap exists — the
+    combined signal stored on the registry entry and shown as "site last
+    updated". A sitemap's <lastmod> reflects real sub-page changes a single
+    homepage header can miss entirely, so content_unchanged() below prefers
+    it over the header when both are present."""
+    return {**fetch_change_signal(url), **probe_sitemap(url)}
+
+
 def content_unchanged(entry: dict, new_signal: dict) -> bool:
     """True only if the server gave us a signal AND it matches what we stored last
-    time. No signal at all means we can't tell, so we always re-crawl in that case."""
+    time. No signal at all means we can't tell, so we always re-crawl in that case.
+
+    sitemap_last_modified is checked first when present — it reflects
+    whatever page the site itself claims changed, not just the homepage's own
+    header, so it's the more trustworthy of the two when both exist."""
     if not new_signal:
         return False
+    if "sitemap_last_modified" in new_signal:
+        return entry.get("sitemap_last_modified") == new_signal["sitemap_last_modified"]
     if entry.get("etag") and entry["etag"] == new_signal.get("etag"):
         return True
     if entry.get("last_modified") and entry["last_modified"] == new_signal.get("last_modified"):
@@ -405,6 +513,40 @@ def delete_existing(client: QdrantClient, design_system_name: str) -> None:
     )
 
 
+def delete_urls(client: QdrantClient, design_system_name: str, urls: set[str]) -> None:
+    """Deletes only the given pages' vectors (by url + design_system_name),
+    leaving every other page's existing vectors untouched — used instead of
+    delete_existing()'s full wipe when re-ingesting a system so pages that
+    haven't changed since last crawl don't get re-embedded/re-upserted for
+    nothing. A no-op for an empty set (Qdrant's own delete would otherwise
+    match everything with an empty `any` list)."""
+    if not urls:
+        return
+    client.delete(
+        collection_name=QDRANT_COLLECTION,
+        points_selector=Filter(
+            must=[
+                FieldCondition(key="design_system_name", match=MatchValue(value=design_system_name)),
+                FieldCondition(key="url", match=MatchAny(any=list(urls))),
+            ]
+        ),
+    )
+
+
+def load_previous_pages(design_system_name: str) -> dict[str, dict]:
+    """{url: {"etag":, "last_modified":}} from this system's last recorded
+    crawl (pages_index.json), for crawl()'s per-page unchanged detection.
+    Empty for a system that's never been indexed — every page is then
+    necessarily "new", exactly like before this existed."""
+    if not PAGES_INDEX_FILE.exists():
+        return {}
+    index = json.loads(PAGES_INDEX_FILE.read_text())
+    return {
+        p["url"]: {"etag": p.get("etag"), "last_modified": p.get("last_modified")}
+        for p in index.get(design_system_name, [])
+    }
+
+
 def ingest(
     design_system_name: str,
     start_urls: list[str],
@@ -414,20 +556,35 @@ def ingest(
 ) -> None:
     client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
     ensure_collection(client)
-    delete_existing(client, design_system_name)
+    previous_pages = load_previous_pages(design_system_name)
 
-    pages, all_links_seen, page_titles, hit_max_pages, start_url_error = crawl(
+    pages, all_links_seen, page_titles, hit_max_pages, start_url_error, unchanged_urls, page_freshness = crawl(
         start_urls,
         max_pages=max_pages,
         include_patterns=include_patterns,
         exclude_patterns=exclude_patterns,
+        previous_pages=previous_pages,
     )
-    print(f"\nFetched {len(pages)} pages. Chunking + embedding...")
+    urls_to_upsert = set(pages) - unchanged_urls
+    removed_urls = set(previous_pages) - set(pages)
+    if unchanged_urls:
+        print(f"\nFetched {len(pages)} pages ({len(unchanged_urls)} unchanged since last crawl, "
+              f"{len(urls_to_upsert)} to re-embed). Chunking + embedding...")
+    else:
+        print(f"\nFetched {len(pages)} pages. Chunking + embedding...")
+    # Only touch Qdrant for pages that are new/changed or no longer exist —
+    # an unchanged page's existing vectors are left exactly as they were,
+    # instead of delete_existing()'s old "wipe the whole system, reinsert
+    # everything" on every single ingest.
+    delete_urls(client, design_system_name, urls_to_upsert | removed_urls)
 
     resources = merge_resources(classify_links(all_links_seen), probe_well_known(start_urls[0]))
     enrichment = enrich_resources(resources)
+    unverified_resources = flag_unverified_resources(resources, design_system_name)
     if resources:
         print(f"  discovered resources: {resources}")
+    if unverified_resources:
+        print(f"  unverified (name doesn't obviously match): {unverified_resources}")
     if enrichment:
         print(f"  enrichment: {enrichment}")
 
@@ -445,9 +602,14 @@ def ingest(
                 print(f"  no crawlable pages found (likely a JS-rendered SPA) — falling back to {llms_url} ({len(fallback_text)} chars)")
                 pages[llms_url] = fallback_text
                 page_titles[llms_url] = f"{design_system_name} — llms.txt"
+                urls_to_upsert.add(llms_url)
                 break
         else:
             likely_spa = True
+
+    content_signals = detect_content_signals(pages)
+    if content_signals:
+        print(f"  content signals: {content_signals}")
 
     update_registry_stats(
         design_system_name,
@@ -457,9 +619,24 @@ def ingest(
         hit_max_pages=hit_max_pages,
         crawl_error=start_url_error,
         likely_spa=likely_spa,
+        unverified_resources=unverified_resources,
+        content_signals=content_signals,
     )
-    update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in pages])
+    update_pages_index(
+        design_system_name,
+        [
+            {"url": url, "title": page_titles.get(url, url), **page_freshness.get(url, {})}
+            for url in pages
+        ],
+    )
 
+    _chunk_and_upsert(client, design_system_name, {url: pages[url] for url in urls_to_upsert})
+    print("\nDone.")
+
+
+def _chunk_and_upsert(client: QdrantClient, design_system_name: str, pages: dict[str, str]) -> None:
+    """Shared tail of ingest()/ingest_spa(): chunk each page's text, embed,
+    and upsert into Qdrant."""
     for url, text in pages.items():
         chunks = chunk_text(text)
         if not chunks:
@@ -481,6 +658,105 @@ def ingest(
         client.upsert(collection_name=QDRANT_COLLECTION, points=points)
         print(f"  indexed {len(points)} chunks from {url}")
 
+
+def fetch_rendered_page(url: str) -> tuple[str | None, set[str]]:
+    """Fetches a page through an actual headless browser (crawl4ai, which
+    wraps Playwright) instead of plain requests+BeautifulSoup — for systems
+    already flagged likely_spa: their real content only exists after
+    client-side JS runs, which a plain HTTP GET never sees.
+
+    Returns (rendered_text, links_seen) — links_seen is best-effort (used for
+    resource discovery only, not further crawling; see ingest_spa()), empty
+    if the page's link data couldn't be read for any reason.
+    """
+    import asyncio
+
+    from crawl4ai import AsyncWebCrawler
+
+    async def _run():
+        async with AsyncWebCrawler() as crawler:
+            result = await crawler.arun(url=url)
+            # Some crawl4ai versions return a list-like container for a
+            # single URL rather than the CrawlResult itself.
+            if isinstance(result, list):
+                result = result[0] if result else None
+            return result
+
+    try:
+        result = asyncio.run(_run())
+    except Exception as exc:
+        print(f"  rendered fetch failed for {url}: {exc}")
+        return None, set()
+
+    if result is None or not getattr(result, "success", False):
+        print(f"  rendered fetch did not succeed for {url}")
+        return None, set()
+
+    # .markdown is a str-subclass in every crawl4ai version that's shipped
+    # (kept backward-compatible on purpose per crawl4ai's own models.py) —
+    # str() on it always gives the raw markdown text either way.
+    text = str(getattr(result, "markdown", "") or "")
+
+    links_seen: set[str] = set()
+    links = getattr(result, "links", {}) or {}
+    if isinstance(links, dict):
+        for group in ("internal", "external"):
+            for item in links.get(group, []) or []:
+                href = item.get("href") if isinstance(item, dict) else item
+                if href:
+                    links_seen.add(href)
+
+    return text, links_seen
+
+
+def ingest_spa(design_system_name: str, start_urls: list[str]) -> None:
+    """Single-page rendered ingest for a system already flagged likely_spa —
+    renders just the start URL through a real headless browser (see
+    fetch_rendered_page()) rather than doing a full BFS crawl. Deliberately
+    scoped to one page for now: a multi-page rendered crawl would need its
+    own link-following loop (same shape as crawl()'s, but rendering every
+    page is far slower/heavier than a plain GET), which is a reasonable next
+    step once this simpler version is confirmed working end to end."""
+    client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+    ensure_collection(client)
+    delete_existing(client, design_system_name)
+
+    start_url = start_urls[0]
+    text, links_seen = fetch_rendered_page(start_url)
+
+    pages: dict[str, str] = {}
+    page_titles: dict[str, str] = {}
+    if text and len(text) >= MIN_CONTENT_LENGTH:
+        pages[start_url] = text
+        page_titles[start_url] = design_system_name
+    print(f"\nRendered {len(pages)} page(s). Chunking + embedding...")
+
+    resources = merge_resources(classify_links(links_seen), probe_well_known(start_url))
+    enrichment = enrich_resources(resources)
+    unverified_resources = flag_unverified_resources(resources, design_system_name)
+    if resources:
+        print(f"  discovered resources: {resources}")
+    if unverified_resources:
+        print(f"  unverified (name doesn't obviously match): {unverified_resources}")
+    if enrichment:
+        print(f"  enrichment: {enrichment}")
+
+    content_signals = detect_content_signals(pages)
+    if content_signals:
+        print(f"  content signals: {content_signals}")
+
+    update_registry_stats(
+        design_system_name,
+        pages_indexed=len(pages),
+        resources=resources,
+        enrichment=enrichment,
+        likely_spa=len(pages) == 0,
+        unverified_resources=unverified_resources,
+        content_signals=content_signals,
+    )
+    update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in pages])
+
+    _chunk_and_upsert(client, design_system_name, pages)
     print("\nDone.")
 
 
@@ -490,7 +766,7 @@ def ingest_entry(entry: dict, force: bool = False, max_pages_override: int | Non
     never_indexed = "pages_indexed" not in entry
 
     if not force and not never_indexed:
-        new_signal = fetch_change_signal(start_urls[0])
+        new_signal = fetch_freshness_signal(start_urls[0])
         if content_unchanged(entry, new_signal):
             print(f"\n=== {name} === (no changes detected at {start_urls[0]}, skipping)")
             update_registry_fields(name, {**new_signal, "last_checked": now_iso()})
@@ -505,8 +781,20 @@ def ingest_entry(entry: dict, force: bool = False, max_pages_override: int | Non
         include_patterns=entry.get("include_patterns"),
         exclude_patterns=entry.get("exclude_patterns"),
     )
-    new_signal = fetch_change_signal(start_urls[0])
+    new_signal = fetch_freshness_signal(start_urls[0])
     update_registry_fields(name, {**new_signal, "last_checked": now_iso()})
+
+
+def safe_run(name: str, fn, *args, **kwargs) -> None:
+    """Runs one entry's ingest and swallows any exception that isn't already
+    handled inside crawl()/fetch_page() (a Qdrant/embedding-API error, a bug,
+    etc) so it can't silently starve every other system still queued in this
+    shard's loop — before this, one such crash meant every entry after it in
+    --all/--new/--spa's for-loop never even ran, since nothing caught it."""
+    try:
+        fn(*args, **kwargs)
+    except Exception as exc:
+        print(f"  !! {name} failed unexpectedly, skipping: {exc}")
 
 
 def now_iso() -> str:
@@ -544,22 +832,42 @@ if __name__ == "__main__":
         sys.exit(1)
 
     if args[0] == "--all":
-        entries = load_registry()
+        entries = [e for e in load_registry() if not e.get("archived")]
         if shard:
             entries = [e for i, e in enumerate(entries) if i % shard_total == shard_index]
-            print(f"Shard {shard_index}/{shard_total}: {len(entries)} of {len(load_registry())} systems")
+            print(f"Shard {shard_index}/{shard_total}: {len(entries)} of {len([e for e in load_registry() if not e.get('archived')])} systems")
+        # Always force=True here now, regardless of the --force flag: the
+        # change-detection skip (fetch_change_signal/content_unchanged) only
+        # ever checks the start URL's ETag/Last-Modified — a coarse "did the
+        # front door change" signal that says nothing about whether a
+        # sub-page changed, or whether an earlier max_pages-capped crawl left
+        # real pages un-indexed. A full scan's whole point is to catch up on
+        # exactly that, so it must never skip a system just because its
+        # homepage header looks unchanged.
         for entry in entries:
-            ingest_entry(entry, force=force, max_pages_override=shallow_max_pages)
+            safe_run(full_name(entry), ingest_entry, entry, force=True, max_pages_override=shallow_max_pages)
 
     elif args[0] == "--new":
-        new_entries = [e for e in load_registry() if "pages_indexed" not in e]
+        new_entries = [e for e in load_registry() if "pages_indexed" not in e and not e.get("archived")]
         if shard:
             new_entries = [e for i, e in enumerate(new_entries) if i % shard_total == shard_index]
             print(f"Shard {shard_index}/{shard_total}: {len(new_entries)} unindexed systems in this shard")
         if not new_entries:
             print("No unindexed systems found in this shard — everything in systems.yaml has been indexed at least once.")
         for entry in new_entries:
-            ingest_entry(entry, force=True, max_pages_override=shallow_max_pages)
+            safe_run(full_name(entry), ingest_entry, entry, force=True, max_pages_override=shallow_max_pages)
+
+    elif args[0] == "--spa":
+        spa_entries = [e for e in load_registry() if e.get("likely_spa") and not e.get("archived")]
+        if shard:
+            spa_entries = [e for i, e in enumerate(spa_entries) if i % shard_total == shard_index]
+            print(f"Shard {shard_index}/{shard_total}: {len(spa_entries)} likely_spa systems in this shard")
+        if not spa_entries:
+            print("No likely_spa systems found in this shard.")
+        for entry in spa_entries:
+            name = full_name(entry)
+            print(f"\n=== {name} === (rendered)")
+            safe_run(name, ingest_spa, name, entry["start_urls"])
 
     elif args[0] == "--system":
         if len(args) < 2:

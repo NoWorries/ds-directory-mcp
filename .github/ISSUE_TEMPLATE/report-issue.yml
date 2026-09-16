@@ -1,0 +1,45 @@
+name: Report an issue with a design system
+description: Flag something wrong with a specific system's entry — a broken link, stale info, a bad crawl, or a resource that doesn't belong.
+title: "[System issue] "
+labels: ["system-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report — a maintainer will look into this specific
+        system's entry in systems.yaml and fix or re-crawl it as needed.
+  - type: input
+    id: system_name
+    attributes:
+      label: Design system
+      description: The name as shown on its directory page.
+      placeholder: e.g. Adobe Spectrum
+    validations:
+      required: true
+  - type: input
+    id: page_url
+    attributes:
+      label: Link to the system's detail page
+      placeholder: https://<site>/systems/adobe-spectrum.html
+    validations:
+      required: false
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: What's wrong?
+      options:
+        - Docs site URL is broken or redirects elsewhere
+        - Site has moved to a new URL
+        - Design system appears discontinued/archived
+        - Crawl looks incomplete or stale
+        - A linked resource (GitHub/npm/Storybook/etc) doesn't belong to this system
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What did you see, and what would you expect instead?
+    validations:
+      required: true

@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Local scratch/junk
+.DS_Store
+full_reindex.log
+/scratch/

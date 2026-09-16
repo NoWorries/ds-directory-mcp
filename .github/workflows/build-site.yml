@@ -13,6 +13,12 @@ on:
       - generate_directory.py
       - generate_components.py
       - generate_systems.py
+      - generate_home.py
+      - generate_search.py
+      - generate_forms.py
+      - generate_llms_txt.py
+      - generate_data_export.py
+      - generate_sitemap.py
       - page_shell.py
       - text_utils.py
       - component_taxonomy.py
@@ -41,8 +47,15 @@ jobs:
       - run: pip install PyYAML
 
       - name: Generate site pages from current systems.yaml/pages_index.json
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
         run: |
           python generate_home.py
+          python generate_search.py
+          python generate_forms.py
+          python generate_data_export.py
+          python generate_llms_txt.py
+          python generate_sitemap.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
@@ -54,6 +67,13 @@ jobs:
         run: |
           mkdir -p site
           cp home.html site/index.html
+          cp search.html site/search.html
+          cp suggest.html site/suggest.html
+          cp report.html site/report.html
+          cp llms.txt site/llms.txt
+          if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
+          cp systems.json site/systems.json
+          cp design-system.schema.json site/design-system.schema.json
           cp directory.html site/directory.html
           if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
           if [ -d components ]; then cp -r components site/components; fi
