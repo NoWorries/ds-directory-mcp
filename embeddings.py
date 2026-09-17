@@ -28,7 +28,7 @@ JITTER_SECONDS = 5
 # limit, and previously crashed the whole shard just the same.
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 
-# 400/401/403 are a different category of failure from the retryable ones
+# 401/403 are a different category of failure from the retryable ones
 # above: an invalid/expired API key, a disabled API, or an exhausted account
 # quota (confirmed live on the previous embedding provider — Jina returned
 # 403 once its key ran out of free tokens, and every remaining embed call in
@@ -42,6 +42,14 @@ RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 # ploughing through every other system only to hit this same error hundreds
 # more times. Named for the failure mode, not the provider, since whichever
 # embedding API is behind config.py next hits the same category of error.
+#
+# 400 is deliberately NOT included here even though it sounds similar —
+# confirmed live, Gemini also returns 400 for a well-formed request that's
+# simply too big ("at most 100 requests can be in one batch", hit on
+# Atlassian's 570KB llms-full.txt, which chunks into 800+ pieces). That's a
+# per-call shape problem MAX_BATCH_SIZE below already prevents, not an
+# account problem — treating every 400 as fatal would abort the whole run
+# over something batching alone fixes.
 class EmbeddingAuthError(Exception):
     pass
 
@@ -68,12 +76,27 @@ def _parse_retry_after(value: str | None, default_wait: float) -> float:
         return default_wait
 
 
+# Gemini's real, confirmed-live hard limit for batchEmbedContents ("at most
+# 100 requests can be in one batch") — NOT the 2,048 figure floating around
+# in some third-party write-ups, which does not hold for this endpoint. A
+# single big page (Atlassian's llms-full.txt: 570KB, 800+ chunks at
+# CHUNK_SIZE=800) blows past this in one call otherwise.
+MAX_BATCH_SIZE = 100
+
+
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    """Embed a batch of text chunks via the Gemini API's batchEmbedContents
-    endpoint — one HTTP call embeds the whole list (well under its
-    documented 2,048-text-per-batch limit; a single page's chunks never
-    come close to that many), same shape as the single-call-per-page
-    pattern the rest of ingest.py already relies on."""
+    """Embed any number of text chunks, splitting into <=MAX_BATCH_SIZE calls
+    to Gemini's batchEmbedContents endpoint as needed — transparent to the
+    caller, which just gets back one vector per input text in order, same
+    as the single-call-per-page pattern the rest of ingest.py relies on."""
+    vectors: list[list[float]] = []
+    for i in range(0, len(texts), MAX_BATCH_SIZE):
+        vectors.extend(_embed_batch(texts[i : i + MAX_BATCH_SIZE]))
+    return vectors
+
+
+def _embed_batch(texts: list[str]) -> list[list[float]]:
+    """One HTTP call, <=MAX_BATCH_SIZE texts."""
     if not texts:
         return []
 
@@ -120,7 +143,7 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
             time.sleep(wait)
             continue
 
-        if response.status_code in (400, 401, 403):
+        if response.status_code in (401, 403):
             raise EmbeddingAuthError(
                 f"Gemini returned {response.status_code} — this means an invalid/expired GEMINI_API_KEY, the "
                 f"Generative Language API not being enabled for this key's project, or an exhausted quota, not "
