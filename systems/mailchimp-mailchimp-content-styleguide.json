@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T22:53:58+00:00",
+  "generated_at": "2026-09-17T01:21:04+00:00",
   "id": "mailchimp-mailchimp-content-styleguide",
   "organization": "MailChimp",
   "design_system": "Mailchimp Content Styleguide",
@@ -9,11 +9,11 @@
     "https://styleguide.mailchimp.com/"
   ],
   "detail_url": "/systems/mailchimp-mailchimp-content-styleguide",
-  "pages_indexed": 25,
+  "pages_indexed": 8,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-16T13:11:06+00:00",
+  "last_checked": "2026-09-17T00:46:47+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -36,52 +36,20 @@
   "npm_meta": null,
   "indexed_pages": [
     {
-      "url": "https://styleguide.mailchimp.com/copyright-and-trademarks/",
-      "title": "Copyright and Trademarks | Mailchimp Content Style Guide"
-    },
-    {
       "url": "https://styleguide.mailchimp.com/copyright-and-trademarks",
       "title": "Copyright and Trademarks | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/creating-structured-content/",
-      "title": "Creating Structured Content | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/further-reading/",
-      "title": "Further Reading | Mailchimp Content Style Guide"
     },
     {
       "url": "https://styleguide.mailchimp.com/grammar-and-mechanics",
       "title": "Grammar and Mechanics | Mailchimp Content Style Guide"
     },
     {
-      "url": "https://styleguide.mailchimp.com/grammar-and-mechanics/",
-      "title": "Grammar and Mechanics | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-educational-content/",
-      "title": "How to Write Educational Content | Mailchimp Content Style Guide"
-    },
-    {
       "url": "https://styleguide.mailchimp.com/writing-educational-content",
       "title": "How to Write Educational Content | Mailchimp Content Style Guide"
     },
     {
-      "url": "https://styleguide.mailchimp.com/tldr/",
-      "title": "TL;DR | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/voice-and-tone/",
-      "title": "Voice and Tone | Mailchimp Content Style Guide"
-    },
-    {
       "url": "https://styleguide.mailchimp.com/voice-and-tone",
       "title": "Voice and Tone | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/web-elements/",
-      "title": "Web Elements | Mailchimp Content Style Guide"
     },
     {
       "url": "https://styleguide.mailchimp.com/",
@@ -92,48 +60,12 @@
       "title": "Word List | Mailchimp Content Style Guide"
     },
     {
-      "url": "https://styleguide.mailchimp.com/word-list/",
-      "title": "Word List | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-about-mailchimp/",
-      "title": "Writing about Mailchimp | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-about-people/",
-      "title": "Writing About People | Mailchimp Content Style Guide"
-    },
-    {
       "url": "https://styleguide.mailchimp.com/writing-about-people",
       "title": "Writing About People | Mailchimp Content Style Guide"
     },
     {
-      "url": "https://styleguide.mailchimp.com/writing-email-newsletters/",
-      "title": "Writing Email Newsletters | Mailchimp Content Style Guide"
-    },
-    {
       "url": "https://styleguide.mailchimp.com/writing-for-accessibility",
       "title": "Writing for Accessibility | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-for-accessibility/",
-      "title": "Writing for Accessibility | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-for-social-media/",
-      "title": "Writing for Social Media | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-for-translation/",
-      "title": "Writing for Translation | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-principles/",
-      "title": "Writing Goals and Principles | Mailchimp Content Style Guide"
-    },
-    {
-      "url": "https://styleguide.mailchimp.com/writing-legal-content/",
-      "title": "Writing Legal Content | Mailchimp Content Style Guide"
     }
   ]
 }

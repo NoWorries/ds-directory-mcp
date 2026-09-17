@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T22:53:58+00:00",
+  "generated_at": "2026-09-17T01:21:04+00:00",
   "id": "welcome-to-the-jungle-welcome-ui",
   "organization": "Welcome to the Jungle",
   "design_system": "Welcome UI",
@@ -9,17 +9,14 @@
     "https://www.welcome-ui.com/"
   ],
   "detail_url": "/systems/welcome-to-the-jungle-welcome-ui",
-  "pages_indexed": 2,
+  "pages_indexed": 1,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-16T14:56:18+00:00",
+  "last_checked": "2026-09-17T01:16:38+00:00",
   "last_modified": "Tue, 15 Sep 2026 13:11:29 GMT",
   "sitemap_last_modified": null,
   "resources": {
-    "icons": [
-      "https://www.welcome-ui.com/components/icon"
-    ],
     "agent_instructions": [
       "https://www.welcome-ui.com/llms.txt"
     ]
@@ -33,10 +30,6 @@
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
-    {
-      "url": "https://www.welcome-ui.com/components",
-      "title": "Welcome UI - Components"
-    },
     {
       "url": "https://www.welcome-ui.com/",
       "title": "Welcome UI - Customizable design system with react"

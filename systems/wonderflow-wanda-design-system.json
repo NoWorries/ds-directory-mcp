@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T22:53:58+00:00",
+  "generated_at": "2026-09-17T01:21:04+00:00",
   "id": "wonderflow-wanda-design-system",
   "organization": "Wonderflow",
   "design_system": "Wanda Design System",
@@ -9,35 +9,27 @@
     "https://design.wonderflow.ai/"
   ],
   "detail_url": "/systems/wonderflow-wanda-design-system",
-  "pages_indexed": 4,
+  "pages_indexed": 1,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-16T14:56:26+00:00",
+  "last_checked": "2026-09-17T01:17:17+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
-  "resources": {},
-  "unverified_resources": {},
-  "content_signals": {
-    "frameworks": [
-      "React"
+  "resources": {
+    "github": [
+      "https://github.com/wonderflow-bv/wanda"
     ]
   },
-  "github_meta": null,
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 234,
+    "last_pushed": "2026-08-27T08:26:16Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
-    {
-      "url": "https://design.wonderflow.ai/get-started/documentation/get-started/accessibility",
-      "title": "Accessibility"
-    },
-    {
-      "url": "https://design.wonderflow.ai/get-started/components/actions/button",
-      "title": "Button"
-    },
-    {
-      "url": "https://design.wonderflow.ai/get-started/documentation/get-started/introduction",
-      "title": "Introduction"
-    },
     {
       "url": "https://design.wonderflow.ai/",
       "title": "Wanda Design System"
