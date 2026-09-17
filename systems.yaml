@@ -89,7 +89,7 @@
     - https://auro.alaskaair.com/llms.txt
   hit_max_pages: false
   crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 1
+  consecutive_crawl_failures: 2
   likely_spa: false
   unverified_resources: {}
   content_signals:
@@ -98,7 +98,7 @@
     - Web Components
     - Svelte
   sitemap_url: https://auro.alaskaair.com/sitemap.xml
-  last_checked: '2026-09-17T00:18:48+00:00'
+  last_checked: '2026-09-17T01:37:32+00:00'
   content_signal_sources: {}
 - organization: Altinn
   design_system: Altinn Design System
@@ -382,8 +382,8 @@
   crawl_error: crawl returned 0 pages
   likely_spa: false
   last_modified: Mon, 10 Aug 2026 06:03:16 GMT
-  last_checked: '2026-09-17T00:19:45+00:00'
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-17T01:38:33+00:00'
+  consecutive_crawl_failures: 2
   unverified_resources: {}
   content_signals: {}
   sitemap_url: https://gold.designsystemau.org/sitemap.xml
@@ -416,8 +416,8 @@
   hit_max_pages: false
   crawl_error: crawl returned 0 pages
   likely_spa: false
-  last_checked: '2026-09-17T00:19:51+00:00'
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-17T01:38:33+00:00'
+  consecutive_crawl_failures: 2
   unverified_resources: {}
   content_signals: {}
   sitemap_url: https://dotcombrand.wordpress.com/sitemap.xml
@@ -495,11 +495,11 @@
     by NameResolutionError("HTTPSConnection(host=''bancosantander.invisionapp.com'',
     port=443): Failed to resolve ''bancosantander.invisionapp.com'' ([Errno -2] Name
     or service not known)"))'
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-17T00:20:18+00:00'
+  last_checked: '2026-09-17T01:39:01+00:00'
   content_signal_sources: {}
   thin_page_ratio: 1.0
 - organization: Barnardo's
@@ -512,11 +512,11 @@
     Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''design-system.barnardos.org.uk'',
     port=443): Failed to resolve ''design-system.barnardos.org.uk'' ([Errno -5] No
     address associated with hostname)"))'
-  consecutive_crawl_failures: 2
+  consecutive_crawl_failures: 3
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-17T00:20:43+00:00'
+  last_checked: '2026-09-17T01:39:25+00:00'
   content_signal_sources: {}
   thin_page_ratio: 1.0
 - organization: BBC
@@ -577,7 +577,7 @@
   likely_spa: false
   etag: W/"eb8ebd41b794052573485970d582d24f"
   last_modified: Thu, 26 Oct 2023 22:55:47 GMT
-  last_checked: '2026-09-17T00:21:44+00:00'
+  last_checked: '2026-09-17T01:40:20+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}

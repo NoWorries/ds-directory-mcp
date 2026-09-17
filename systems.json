@@ -1,6 +1,6 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-17T01:21:04+00:00",
+  "generated_at": "2026-09-17T01:41:21+00:00",
   "data_as_of": "2026-09-13T22:42:03+00:00",
   "total_systems": 62,
   "systems": [
@@ -17,7 +17,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-17T00:18:48+00:00",
+      "last_checked": "2026-09-17T01:37:32+00:00",
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {
@@ -110,7 +110,7 @@
       "coverage_status": "full",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-17T00:19:45+00:00",
+      "last_checked": "2026-09-17T01:38:33+00:00",
       "last_modified": "Mon, 10 Aug 2026 06:03:16 GMT",
       "sitemap_last_modified": null,
       "resources": {
@@ -1344,7 +1344,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-17T00:19:51+00:00",
+      "last_checked": "2026-09-17T01:38:33+00:00",
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {
@@ -1407,7 +1407,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-17T00:21:44+00:00",
+      "last_checked": "2026-09-17T01:40:20+00:00",
       "last_modified": "Thu, 26 Oct 2023 22:55:47 GMT",
       "sitemap_last_modified": null,
       "resources": {
