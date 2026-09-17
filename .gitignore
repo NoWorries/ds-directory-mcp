@@ -8,3 +8,6 @@ venv/
 .DS_Store
 full_reindex.log
 /scratch/
+health_report.md
+shard_touched.json
+/shards/

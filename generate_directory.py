@@ -23,6 +23,7 @@ from page_shell import (
     CLOSE_ICON_SVG,
     EXPAND_ICON_SVG,
     EXTERNAL_LINK_ICON_SVG,
+    FAVICON_LINK,
     FONT_LINK,
     GRID_ICON_SVG,
     LIST_ICON_SVG,
@@ -30,7 +31,7 @@ from page_shell import (
     routes_nav,
 )
 from slug import slugify
-from text_utils import full_name, split_org_name
+from text_utils import full_name, is_auth_or_error_title, split_org_name
 
 SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
 OUTPUT_FILE = Path(__file__).parent / "directory.html"
@@ -152,9 +153,38 @@ def find_unverified_resources(entries: list[dict]) -> list[dict]:
     doesn't obviously relate to the system itself (see
     resources.flag_unverified_resources()) — e.g. a build-tool dependency
     swept up from a footer/credits link rather than the system's own repo.
-    Maintainer-only: needs a human to actually look at the link and decide,
-    not something a public "?" badge can resolve on its own."""
+    ingest.py already drops these from `resources` before they ever reach
+    the public site (resources.filter_unverified_resources()); this list is
+    maintainer-only, an audit trail so a human can spot-check the heuristic
+    didn't wrongly exclude something real, not something a visitor needs to
+    see or act on."""
     return [e for e in entries if e.get("unverified_resources")]
+
+
+# A system this far gone is very likely stuck entirely on an auth wall/error
+# page, not just occasionally hitting one real page that happens to redirect —
+# flagging at 50% keeps this from firing on a system with one stray broken
+# link among many good pages.
+AUTH_PAGE_RATIO_THRESHOLD = 0.5
+
+
+def find_auth_pages(entries: list[dict]) -> list[dict]:
+    """Systems where more than AUTH_PAGE_RATIO_THRESHOLD of indexed pages
+    have a login/consent/error-page title (see text_utils.is_auth_or_error_
+    title) — confirmed live on MYOB Feelix, whose crawl landed entirely on a
+    GitHub OAuth "Sign in to GitHub" redirect. ingest.py now skips these
+    during crawling going forward; this catches anything indexed before
+    that existed, until the system is re-crawled."""
+    pages_index = load_pages_index()
+    flagged = []
+    for e in entries:
+        pages = pages_index.get(full_name(e), [])
+        if not pages:
+            continue
+        auth_count = sum(1 for p in pages if is_auth_or_error_title(p.get("title", "")))
+        if auth_count / len(pages) > AUTH_PAGE_RATIO_THRESHOLD:
+            flagged.append({**e, "_auth_page_count": auth_count, "_total_page_count": len(pages)})
+    return flagged
 
 
 def find_broken(entries: list[dict]) -> list[dict]:
@@ -198,12 +228,27 @@ def coverage_status(entry: dict) -> str:
 
 
 def favicon_html(start_url: str | None) -> str:
+    """Google's favicon service returns its generic placeholder with an HTTP
+    404 status (confirmed live, e.g. Morningstar) — but the response body is
+    still a normal, decodable PNG, so the browser's <img> tag treats it as a
+    perfectly successful load (onerror only fires on a network failure or
+    undecodable data, never based on HTTP status). What actually IS a
+    reliable tell, confirmed by comparing dozens of real vs. missing
+    favicons: the placeholder is always exactly 16x16px regardless of the
+    `sz=64` requested, while every real favicon Google found came back
+    larger. Checked once on load and swapped to a local, neutral-grey globe
+    (/favicon-fallback.svg) instead of Google's own generic glyph, which
+    read as just another (oddly plain-looking) site icon rather than
+    clearly "no favicon available". this.onload = null after swapping
+    stops it from re-checking (and looping on) the fallback image itself."""
     domain = urlparse(start_url).netloc if start_url else ""
     if not domain:
         return ""
     return (
         f'<img class="favicon" src="https://www.google.com/s2/favicons?domain={html.escape(domain)}&sz=64" '
-        f'alt="" width="22" height="22" loading="lazy">'
+        f'alt="" width="22" height="22" loading="lazy" '
+        f'onload="if(this.naturalWidth&lt;=16){{this.onload=null;this.src=\'/favicon-fallback.svg\';}}" '
+        f'onerror="this.onerror=null;this.src=\'/favicon-fallback.svg\'">'
     )
 
 
@@ -374,6 +419,7 @@ def render_page(entries: list[dict]) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Design Systems Directory</title>
+{FAVICON_LINK}
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
@@ -509,6 +555,27 @@ def render_page(entries: list[dict]) -> str:
   .table-wrap.has-overflow th[data-col="0"] {{ box-shadow: 6px 0 8px -8px rgba(15,23,42,0.25); }}
   .table-wrap.has-overflow .cell-found-count,
   .table-wrap.has-overflow th:last-child {{ box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25); }}
+  /* Small viewports: the 9 individual resource-dot columns (GitHub, npm,
+     Storybook, ...) are the whole reason this table needs horizontal scroll
+     at all — dropping them leaves System/Docs/Pages/Found, the columns
+     visitors actually scan, and each system's full resource breakdown is
+     still one tap away via the name link's detail panel. nth-child counts
+     the *rendered* column position (1-based), not the data-col attribute:
+     1=System, 2=Docs, 3=Pages, 4-12=the 9 resource columns, 13=Found. */
+  @media (max-width: 640px) {{
+    #directoryTable th:nth-child(n+4):nth-child(-n+12),
+    #directoryTable td:nth-child(n+4):nth-child(-n+12) {{ display: none; }}
+    /* With the resource columns gone, System/Docs/Pages/Found comfortably
+       fit without horizontal scroll — drop the desktop layout's min-width
+       and sticky pinning (built for a much wider table) so the sticky Found
+       column doesn't sit pinned mid-row and overlap Pages while nothing
+       actually needs scrolling into view. */
+    #directoryTable .name-cell {{ min-width: 0; }}
+    #directoryTable .name-cell, #directoryTable th[data-col="0"],
+    #directoryTable .cell-found-count, #directoryTable th:last-child {{ position: static; }}
+    #directoryTable th, #directoryTable td {{ padding: 8px 6px; }}
+    #directoryTable .name-cell-link {{ padding: 8px 6px; }}
+  }}
   .badge {{
     background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px;
     font-size: 0.72rem; font-family: "JetBrains Mono", monospace; font-weight: 500;

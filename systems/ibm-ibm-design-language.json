@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T15:03:09+00:00",
+  "generated_at": "2026-09-16T22:53:58+00:00",
   "id": "ibm-ibm-design-language",
   "organization": "IBM",
   "design_system": "IBM Design Language",
@@ -10,8 +10,8 @@
   ],
   "detail_url": "/systems/ibm-ibm-design-language",
   "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
   "last_checked": "2026-09-15T22:17:48+00:00",
   "last_modified": "Thu, 10 Sep 2026 16:17:50 GMT",

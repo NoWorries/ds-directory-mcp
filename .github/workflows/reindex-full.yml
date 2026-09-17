@@ -6,16 +6,22 @@ on:
     # regardless of whether anything looks changed. reindex-new.yml (weekly) covers
     # newly added registry entries in between.
     - cron: "0 3 1 * *"
-  workflow_dispatch:
-    inputs:
-      force:
-        description: "Force full re-crawl of every system, ignoring change detection"
-        type: boolean
-        default: false
+  workflow_dispatch: {}
 
 permissions:
   contents: write
   issues: write
+
+# Only one of these full-registry pipelines (this, reindex-new, reindex-
+# shallow, reindex-signals-refresh, reindex-spa) committing to master at once
+# — two running concurrently doubled Jina 429s in practice and made the
+# push-retry loops below fight each other for no benefit. Doesn't cancel an
+# in-progress run just because another was queued (cancel-in-progress:
+# false) — a --all run losing to a --new run over queue order would be a bad
+# trade, it just waits its turn.
+concurrency:
+  group: ds-directory-mcp-write-pipeline
+  cancel-in-progress: false
 
 jobs:
   # One shard per registered system (capped at 256 — GitHub's hard matrix-size
@@ -45,8 +51,15 @@ jobs:
           import yaml
 
           with open('systems.yaml') as f:
-              total = len(yaml.safe_load(f) or [])
-          n = min(total, 256)
+              entries = yaml.safe_load(f) or []
+          # Mirrors ingest.eligible_for_all() exactly (kept in sync by hand —
+          # this job doesn't install ingest.py's heavier deps to import it
+          # directly). Sharding on the raw entry count used to spin up ~72
+          # empty shards every run: they'd install deps, run ingest.py --all,
+          # find zero eligible systems in their slice, and exit — pure wasted
+          # Actions minutes with nothing to show for it.
+          eligible = [e for e in entries if not e.get('archived') and not e.get('likely_spa') and e.get('render_mode') != 'spa']
+          n = min(len(eligible), 256)
           print(f'shard_count={n}')
           print(f'shards={json.dumps(list(range(n)))}')
           " >> "$GITHUB_OUTPUT"
@@ -79,12 +92,18 @@ jobs:
 
       - run: pip install -r requirements-ingest.txt
 
+      # ingest.py --all always force-crawls regardless of --force (see its
+      # own comment on that) — there used to be a workflow_dispatch `force`
+      # input here that did nothing whatsoever; removed rather than left as
+      # a control that looked like it did something.
       - name: Re-ingest this shard's systems
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-        run: python ingest.py --all --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }} ${{ inputs.force && '--force' || '' }}
+        run: |
+          rm -f shard_touched.json
+          python ingest.py --all --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
 
       # if: always() is the whole point of sharding: ingest.py writes
       # systems.yaml/pages_index.json incrementally (after each system, well
@@ -96,6 +115,11 @@ jobs:
       # already-crawled progress is discarded the moment the runner is torn
       # down — which is exactly why sites that clearly got indexed (visible in
       # the job log) never showed up after a rebuild.
+      #
+      # shard_touched.json (see ingest.mark_shard_touched) is what tells
+      # merge_shards.py which names to take FROM THIS shard specifically —
+      # without it, merging fell back to diffing full-registry copies against
+      # a moving base and got it wrong (see merge_shards.py's docstring).
       - if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -103,11 +127,20 @@ jobs:
           path: |
             systems.yaml
             pages_index.json
+            shard_touched.json
           retention-days: 1
+          if-no-files-found: ignore
 
   merge-and-deploy:
     needs: [prepare, reindex-shard]
-    if: always()
+    # always() alone would also run this after `prepare` itself failed (bad
+    # systems.yaml, a syntax error in the shard-count script) — shard_count
+    # would then be empty/undefined and merge_shards.py has nothing sane to
+    # do with it. Only skip on an actual prepare failure; still run when
+    # prepare succeeded even if every shard failed, since there's still a
+    # health report worth generating and any shard_touched progress worth
+    # merging.
+    if: always() && needs.prepare.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -137,13 +170,16 @@ jobs:
           python generate_forms.py
           python generate_data_export.py
           python generate_llms_txt.py
-          python generate_sitemap.py
           python generate_mcp_manifest.py
           python generate_security_txt.py
           python generate_robots_txt.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
+          # sitemap.xml must run AFTER components/patterns/foundations are
+          # generated above — it enumerates those directories' pages
+          # (taxonomy_page_paths() in generate_sitemap.py).
+          python generate_sitemap.py
 
       - name: Check crawl health (maintainer-facing only — not shown on the public page)
         run: python check_crawl_health.py
@@ -168,7 +204,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems .well-known robots.txt
+          git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components patterns foundations systems .well-known robots.txt
           if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           if ! git diff --cached --quiet; then
             git commit -m "Auto-update discovered resources and directory page [skip ci]"
@@ -176,35 +212,42 @@ jobs:
             # same branch too, so a push here can land after one of them —
             # "fetch first"/non-fast-forward, not a real conflict most of the
             # time. Rebase our one commit on top and retry a few times rather
-            # than failing the whole job over an ordinary race.
+            # than failing the whole job over an ordinary race. On the fifth
+            # rejected attempt, abandon the rebase cleanly (leaving the
+            # working tree usable) and upload this run's merged
+            # systems.yaml/pages_index.json as a longer-lived artifact so a
+            # maintainer can recover the crawl results by hand instead of
+            # them just vanishing with the runner.
+            pushed=false
             for i in 1 2 3 4 5; do
-              git push && break
+              if git push; then pushed=true; break; fi
               echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
-              git pull --rebase
+              git pull --rebase || { git rebase --abort; break; }
             done
+            if [ "$pushed" != "true" ]; then
+              echo "::warning::Could not push after 5 attempts — this run's crawl results were NOT committed. See the uploaded 'unmerged-crawl-results' artifact."
+              touch .push_failed
+            fi
           else
             echo "No changes to commit"
           fi
+
+      # hashFiles() rather than failure()/steps.*.outcome: the commit step
+      # above deliberately doesn't fail the job over a push conflict (that
+      # would also skip the still-valid Netlify deploy below), so it signals
+      # this instead via a marker file only the push-retry loop creates.
+      - if: always() && hashFiles('.push_failed') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: unmerged-crawl-results
+          path: |
+            systems.yaml
+            pages_index.json
+          retention-days: 30
 
       - name: Deploy directory page to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
-          mkdir -p site
-          cp home.html site/index.html
-          cp search.html site/search.html
-          cp suggest.html site/suggest.html
-          cp report.html site/report.html
-          cp llms.txt site/llms.txt
-          if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
-          mkdir -p site/.well-known && cp .well-known/mcp.json site/.well-known/mcp.json
-          if [ -f .well-known/security.txt ]; then cp .well-known/security.txt site/.well-known/security.txt; fi
-          cp robots.txt site/robots.txt
-          cp systems.json site/systems.json
-          cp design-system.schema.json site/design-system.schema.json
-          cp directory.html site/directory.html
-          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
-          if [ -d components ]; then cp -r components site/components; fi
-          if [ -d systems ]; then cp -r systems site/systems; fi
-          npx --yes netlify-cli@17 deploy --site "$NETLIFY_SITE_ID" --dir=site --prod
+          bash scripts/build_site.sh

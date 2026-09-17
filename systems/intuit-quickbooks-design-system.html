@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QuickBooks Design System — Design Systems Directory</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -96,20 +97,63 @@
     font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.86rem;
     color: var(--text); text-decoration: none; white-space: nowrap;
   }
-  .site-nav-links { display: flex; gap: 4px; flex: 1; }
+  /* Two text variants swapped by viewport rather than one truncated/wrapped
+     string — "Design Systems Directory" is the real name everywhere there's
+     room for it; only the mobile bar (already tight with search+menu on the
+     same row) gets the shortened form. Both live in the DOM at once but
+     only one is ever visible, so a screen reader announces exactly one
+     (the other is display:none, which removes it from the accessibility
+     tree — not a duplicate-announcement risk). */
+  .site-brand-short { display: none; }
+  /* NAV_OVERFLOW_JS's own, width-independent trigger for the same swap —
+     shortening the title is the first, least disruptive space-saving move
+     it tries whenever the nav doesn't fit, before it ever touches Suggest
+     or collapses a route into the "More" menu. Separate from (and additive
+     to) the phone-only media query below, which still applies its own
+     floor regardless of what JS decides. */
+  .site-nav-inner.brand-compact .site-brand-full { display: none; }
+  .site-nav-inner.brand-compact .site-brand-short { display: inline; }
+  /* nowrap rather than wrapping to a second line — a wrapped ragged row was
+     the original bug report here. NAV_OVERFLOW_JS keeps this from actually
+     overflowing: it measures whenever the row doesn't fit and moves the
+     lowest-priority route link into the "More" dropdown one at a time until
+     what's left fits on one line. Deliberately NOT `overflow: hidden` here
+     even as a pre-JS safety net — the "More" dropdown menu below is a
+     descendant of this element, and hidden overflow on an ancestor clips an
+     absolutely-positioned descendant's paint regardless of its own
+     position/containing-block, which made the open dropdown invisible.
+     min-width: 0 overrides the flex default of `auto`, which otherwise
+     refuses to shrink a flex item below its content's own min-content size
+     — with several nowrap links inside, that min-content size is the full
+     unwrapped width of every link combined, so without this override the
+     row never actually shrank at all (scrollWidth == clientWidth always),
+     and NAV_OVERFLOW_JS's overflow check never had anything real to catch. */
+  .site-nav-links { display: flex; flex-wrap: nowrap; align-items: center; gap: 4px; flex: 1; min-width: 0; }
   .site-nav-links a {
     font-size: 0.86rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
-    padding: 6px 12px; border-radius: 6px;
+    padding: 6px 12px; border-radius: 6px; white-space: nowrap;
   }
   .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
   .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
-
-  .nav-suggest {
-    font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap;
-    padding: 6px 10px; border-radius: 6px;
+  /* "Suggest a system" lives in the same link list as the routes (so the
+     mobile menu below doesn't need a second, separately-toggled element)
+     but keeps its own accent treatment so it still reads as a distinct
+     call-to-action rather than one more route. */
+  .site-nav-links a.nav-suggest {
+    display: inline-flex; align-items: center; gap: 5px;
+    color: var(--accent); font-weight: 600; margin-left: auto;
   }
-  .nav-suggest:hover { background: var(--accent-soft); }
-  @media (max-width: 640px) { .nav-suggest { display: none; } }
+  .site-nav-links a.nav-suggest svg { flex: none; }
+  /* Second space-saving move NAV_OVERFLOW_JS tries (after shortening the
+     title, before collapsing any route into "More") — the label hides but
+     the link keeps its aria-label, so the CTA stays a real, accessible
+     target at every width, just icon-only when space is tight. */
+  .site-nav-links a.nav-suggest.compact .nav-suggest-label { display: none; }
+  /* Deliberately the same neutral hover as every other link (not
+     accent-soft) — accent-soft is reserved for .current below, so hovering
+     Suggest never reads as "this is the page you're on" the way it would if
+     hover and current shared a background. */
+  .site-nav-links a.nav-suggest:hover { background: var(--surface-sunken); }
 
   .nav-search { display: flex; align-items: center; }
   .nav-search-toggle {
@@ -126,9 +170,102 @@
     border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
   }
   .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+
+  /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
+     .site-nav-links already fits inline. Fixed box size (rather than sizing
+     to whichever icon is currently showing) matters here: the menu glyph
+     and the close glyph aren't the same size, so without a fixed box the
+     button itself resized by a couple of px on toggle — and since it's the
+     last item in a row right-aligned via nav-search's margin-left:auto,
+     that resize shifted the search icon beside it on every open/close.
+     Both icon layers are stacked via position:absolute inset:0 inside that
+     fixed box so swapping which one is visible never changes the box. */
+  .nav-menu-toggle {
+    display: none; position: relative; width: 32px; height: 32px; background: none; border: none;
+    padding: 0; margin-left: 4px; cursor: pointer; color: var(--text-muted); border-radius: 6px; flex: none;
+  }
+  .nav-menu-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-menu-toggle .icon-menu, .nav-menu-toggle .icon-close {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  }
+  .nav-menu-toggle .icon-close { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-close { display: flex; }
+
+  /* --- "More" overflow menu (see NAV_OVERFLOW_JS) — the in-between state
+     for widths too narrow to fit every route inline but not phone-narrow
+     enough to need the full hamburger sheet below. Hidden by default (both
+     the [hidden] attribute and having nothing in the menu yet); JS reveals
+     it only once it's actually moved a link in. */
+  .nav-more { position: relative; }
+  .nav-more-toggle {
+    display: inline-flex; align-items: center; gap: 4px; font: inherit; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); background: none; border: none; padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; white-space: nowrap;
+  }
+  .nav-more-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  /* Reuses the same chevron as everywhere else on the site (see .name-chevron
+     in generate_directory.py) rotated to point down at rest, up when open —
+     one icon asset, two orientations, instead of a second glyph. */
+  .nav-more-toggle svg { flex: none; transform: rotate(90deg); transition: transform 0.15s; }
+  .nav-more-toggle[aria-expanded="true"] svg { transform: rotate(270deg); }
+  .nav-more-menu {
+    display: none; position: absolute; top: 100%; left: 0; margin-top: 4px; min-width: 170px;
+    flex-direction: column; gap: 2px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; box-shadow: var(--shadow); padding: 6px; z-index: 110;
+  }
+  .nav-more-menu.open { display: flex; }
+  .nav-more-menu a {
+    padding: 8px 10px; border-radius: 6px; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); text-decoration: none; white-space: nowrap;
+  }
+  .nav-more-menu a:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-more-menu a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  /* Collapsed into a hamburger only below this TRUE phone-narrow width.
+     Above it (see NAV_OVERFLOW_JS), a route link that no longer fits inline
+     moves into the "More" dropdown above one at a time instead — so getting
+     narrower on a tablet/small-laptop first thins out the inline row, and
+     only falls back to the full mobile sheet once there's no longer room
+     for even brand + search + one route + Suggest. Below this width the
+     link list itself becomes the toggled panel: hidden by default, dropped
+     down as a full-width sheet under the fixed bar once opened. */
   @media (max-width: 640px) {
-    .site-nav-links a span { display: none; }
+    .nav-menu-toggle { display: flex; }
+    .site-nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 2px; margin: 0;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow); padding: 8px 16px 14px; max-height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+    .site-nav-links.nav-open { display: flex; }
+    .site-nav-links a { padding: 11px 10px; font-size: 0.95rem; }
+    /* Still visually separated from the plain routes above it (margin-top +
+       border-top divider) but keeps the same rounded-pill shape as every
+       other item — an unrounded, edge-to-edge row here read as a leftover
+       fragment of a different component, not an intentional design. */
+    .site-nav-links a.nav-suggest { margin-left: 0; margin-top: 6px; border-top: 1px solid var(--border); padding-top: 14px; }
+    /* The "More" button never applies at this width (NAV_OVERFLOW_JS bails
+       out and restores every link to the flat sheet whenever this same
+       breakpoint matches), so it never needs its own mobile styling. */
+    .nav-more { display: none; }
+    /* .site-nav-links no longer occupies flex:1 once it's the hidden/
+       toggled panel above, so without this, search+menu just sat right
+       after the brand text with a dead gap stretching to the bar's far edge
+       instead of anchoring there — margin-left: auto on the first remaining
+       flex item claims all that leftover space for itself, pushing
+       everything from here on right-aligned as a group. */
+    .nav-search { margin-left: auto; }
+    /* The wide desktop inter-item gap (used for spacing out the full link
+       row) is much too loose for a two-icon cluster once the link list
+       stops being an in-flow sibling here — this is what actually put
+       daylight between the search and menu icons, not their own margins. */
+    .site-nav-inner { gap: 8px; }
+    .nav-menu-toggle { margin-left: 0; }
     .nav-search-form input { width: 140px; }
+    .site-brand-full { display: none; }
+    .site-brand-short { display: inline; }
   }
 
   .system-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
@@ -169,6 +306,11 @@
     font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint);
   }
   .signal-value { color: var(--text); font-weight: 500; }
+  /* Small linked-source icon riding along on a pill that has one — muted at
+     rest so it doesn't compete with the pill's own text, accent on hover so
+     it still reads as clickable. */
+  .signal-source { display: inline-flex; color: var(--text-faint); }
+  .signal-source:hover { color: var(--accent); }
   .section-note { font-size: 0.82rem; color: var(--text-muted); margin: -6px 0 14px; max-width: 68ch; }
   .section-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
   /* Deliberately shows every taxonomy item, detected or not (see
@@ -183,8 +325,13 @@
   .ai-native-mark { flex: none; display: flex; align-items: center; justify-content: center; width: 18px; color: #22c55e; }
   .ai-native-item.is-absent { color: var(--text-faint); }
   .ai-native-item.is-absent .ai-native-mark { color: var(--text-faint); }
+  /* A detected item with a known source page is a real link, not just bold
+     text — underlined so it reads as clickable evidence, same visual
+     language as .section-note's own link to the survey above. */
+  .ai-native-item a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .ai-native-item a:hover { color: var(--accent); }
   .resource-list, .page-list { list-style: none; margin: 0; padding: 0; }
-  .resource-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .resource-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
   .resource-list li a {
     display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border);
     border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 500;
@@ -192,13 +339,43 @@
   .resource-list li a svg { flex: none; }
   .resource-list li a:hover { border-color: var(--accent); color: var(--accent); }
   .resource-activity { font-size: 0.76rem; color: var(--text-faint); margin-left: 2px; white-space: nowrap; }
+  /* One collapsible <details> per resource type — see render_resource_list.
+     A system with a couple dozen GitHub repos or Figma files no longer
+     dumps every single one into view; the count in the header tells you
+     what's there before you open it. */
+  .resource-group { border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
+  .resource-group summary {
+    display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600;
+    list-style: none;
+  }
+  .resource-group summary::-webkit-details-marker { display: none; }
+  .resource-group summary svg { flex: none; }
+  /* A plain chevron drawn from the summary's own box model rather than an
+     inline SVG — rotates open/closed via the <details>'s [open] state,
+     matching the name-cell chevron's language elsewhere on the site
+     without needing a second icon asset. */
+  .resource-group summary::after {
+    content: ""; width: 7px; height: 7px; margin-left: auto;
+    border-right: 1.5px solid var(--text-faint); border-bottom: 1.5px solid var(--text-faint);
+    transform: rotate(-45deg); transition: transform 0.15s;
+  }
+  .resource-group[open] summary::after { transform: rotate(45deg); }
+  .resource-group-label { color: var(--text); }
+  .resource-group-count {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700; color: var(--text-muted);
+    background: var(--surface-sunken); border-radius: 999px; padding: 1px 8px;
+  }
   .page-list { columns: 2; column-gap: 24px; }
   .page-list li { padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }
   .page-list a { text-decoration: none; }
   .page-list a:hover { text-decoration: underline; }
   .empty-note { color: var(--text-faint); font-size: 0.88rem; }
   .report-issue { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); }
-  .report-issue a { font-size: 0.82rem; color: var(--text-faint); text-decoration: underline; text-underline-offset: 2px; }
+  .report-issue a {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 0.82rem; color: var(--text-faint); text-decoration: underline; text-underline-offset: 2px;
+  }
+  .report-issue a svg { flex: none; }
   .report-issue a:hover { color: var(--accent); }
   @media (max-width: 600px) { .page-list { columns: 1; } }
 </style>
@@ -206,20 +383,32 @@
 <body>
 
     <nav class="site-nav">
-      <div class="site-nav-inner">
-        <a href="/" class="site-brand">Design Systems Directory</a>
-        <div class="site-nav-links">
-          <a href="/" class="">Search</a>
+      <div class="site-nav-inner" id="siteNavInner">
+        <a href="/" class="site-brand">
+          <span class="site-brand-full">Design Systems Directory</span>
+          <span class="site-brand-short">DS Directory</span>
+        </a>
+        <div class="site-nav-links" id="siteNavLinks">
+          <a href="/" class="">Home</a>
           <a href="/directory" class="current">All Systems</a>
           <a href="/components" class="">Components</a>
+          <a href="/patterns" class="">Patterns</a>
+          <a href="/foundations" class="">Foundations</a>
+          <div class="nav-more" id="navMore" hidden>
+            <button type="button" class="nav-more-toggle" id="navMoreToggle" aria-haspopup="true" aria-expanded="false">More<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            <div class="nav-more-menu" id="navMoreMenu"></div>
+          </div>
+          <a class="nav-suggest" href="/suggest" aria-label="Suggest a system"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span class="nav-suggest-label">Suggest a system</span></a>
         </div>
-        <a class="nav-suggest" href="/suggest">Suggest a system</a>
         <div class="nav-search">
           <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
           <form class="nav-search-form" id="navSearchForm" hidden>
             <input type="text" id="navSearchInput" placeholder="Search design systems...">
           </form>
         </div>
+        <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
+          <span class="icon-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span class="icon-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+        </button>
       </div>
     </nav>
     <script>
@@ -239,10 +428,128 @@
   });
 })();
 </script>
+    <script>
+(function () {
+  var toggle = document.getElementById("navMenuToggle");
+  var panel = document.getElementById("siteNavLinks");
+  if (!toggle || !panel) return;
+
+  function setOpen(open) {
+    panel.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  toggle.addEventListener("click", function () {
+    setOpen(!panel.classList.contains("nav-open"));
+  });
+  panel.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setOpen(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setOpen(false);
+  });
+  document.addEventListener("click", function (e) {
+    if (panel.classList.contains("nav-open") && !panel.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      setOpen(false);
+    }
+  });
+})();
+</script>
+    <script>
+(function () {
+  var inner = document.getElementById("siteNavInner");
+  var links = document.getElementById("siteNavLinks");
+  var moreWrap = document.getElementById("navMore");
+  var moreToggle = document.getElementById("navMoreToggle");
+  var moreMenu = document.getElementById("navMoreMenu");
+  var suggest = links ? links.querySelector(".nav-suggest") : null;
+  if (!inner || !links || !moreWrap || !moreToggle || !moreMenu || !suggest) return;
+
+  var mobileQuery = window.matchMedia("(max-width: 640px)");
+
+  function fits() {
+    return links.scrollWidth <= links.clientWidth + 1;
+  }
+
+  function routeLinks() {
+    return Array.prototype.slice.call(links.children).filter(function (el) {
+      return el.tagName === "A" && el !== suggest;
+    });
+  }
+
+  function closeMoreMenu() {
+    moreMenu.classList.remove("open");
+    moreToggle.setAttribute("aria-expanded", "false");
+  }
+
+  // Three space-saving measures, applied in order from least to most
+  // disruptive, each only reached once the previous one still isn't enough:
+  // (1) shorten the site title, (2) shrink "Suggest a system" to its icon,
+  // (3) move a route link into the "More" dropdown. Every run starts by
+  // undoing all three (cheaper and more robust than tracking incremental
+  // deltas) and re-measures from a clean slate.
+  function layout() {
+    closeMoreMenu();
+    Array.prototype.slice.call(moreMenu.children).forEach(function (a) {
+      links.insertBefore(a, moreWrap);
+    });
+    moreWrap.hidden = true;
+    inner.classList.remove("brand-compact");
+    suggest.classList.remove("compact");
+
+    if (mobileQuery.matches) return; // the full hamburger sheet handles this range on its own
+
+    if (fits()) return;
+    inner.classList.add("brand-compact");
+
+    if (fits()) return;
+    suggest.classList.add("compact");
+
+    var guard = 0;
+    while (!fits() && guard < 20) {
+      guard++;
+      var candidates = routeLinks();
+      if (candidates.length <= 1) break; // always leave at least one route visible inline
+      var victim = null;
+      for (var i = candidates.length - 1; i >= 0; i--) {
+        if (!candidates[i].classList.contains("current")) { victim = candidates[i]; break; }
+      }
+      if (!victim) victim = candidates[candidates.length - 1];
+      moreMenu.insertBefore(victim, moreMenu.firstChild);
+      moreWrap.hidden = false;
+    }
+  }
+
+  var resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 100);
+  });
+  if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", layout);
+  else mobileQuery.addListener(layout); // Safari <14
+
+  moreToggle.addEventListener("click", function () {
+    var open = !moreMenu.classList.contains("open");
+    moreMenu.classList.toggle("open", open);
+    moreToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  moreMenu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMoreMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMoreMenu();
+  });
+  document.addEventListener("click", function (e) {
+    if (moreMenu.classList.contains("open") && !moreWrap.contains(e.target)) closeMoreMenu();
+  });
+
+  layout();
+})();
+</script>
     
 <div class="page">
   <p class="eyebrow"><a href="/directory">All Systems</a></p>
-  <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.intuit.com&sz=64" alt="" width="22" height="22" loading="lazy"><span class="org-label">Intuit</span></div>
+  <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.intuit.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><span class="org-label">Intuit</span></div>
   <h1>QuickBooks Design System</h1>
   <p class="meta-line"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span> 33 pages indexed</p>
   <a href="https://design.intuit.com/quickbooks/" target="_blank" rel="noopener"><img class="hero-thumb" src="screenshots/intuit-quickbooks-design-system-large.jpg" alt="" loading="lazy" style="view-transition-name: thumb-intuit-quickbooks-design-system; view-transition-class: thumb"></a>
@@ -260,17 +567,17 @@
 
   <section class="block">
     <h2>Tech stack</h2>
-    <div class="signal-pills"><span class="signal-pill"><span class="signal-label">Frameworks</span><span class="signal-value">React</span></span></div>
+    <div class="signal-pills"><span class="signal-pill"><span class="signal-value">React</span></span></div>
   </section>
 
 
   <section class="block">
     <h2>Indexed pages</h2>
-    <ul class="page-list"><li><a href="https://design.intuit.com/behavioral-science-should-be-in-your-designer-toolkit/" target="_blank" rel="noopener">Behavioral science should be in your designer toolkit</a></li><li><a href="https://design.intuit.com/change-design-with-comic-book/" target="_blank" rel="noopener">Can a comic book change how we design?</a></li><li><a href="https://design.intuit.com/topics/design-for-all/" target="_blank" rel="noopener">Design for All Archives</a></li><li><a href="https://design.intuit.com/topics/design-for-all/page/2/" target="_blank" rel="noopener">Design for All Archives</a></li><li><a href="https://design.intuit.com/data-driven-design/" target="_blank" rel="noopener">Designing with HEART (and data)</a></li><li><a href="https://design.intuit.com/topics/do-research/" target="_blank" rel="noopener">Do Research Archives</a></li><li><a href="https://design.intuit.com/empower-your-team-through-rapid-experimentation/" target="_blank" rel="noopener">Empower your team through rapid experimentation</a></li><li><a href="https://design.intuit.com/your-first-90-days-as-a-new-design-manager/" target="_blank" rel="noopener">Growing through some things as a new design manager</a></li><li><a href="https://design.intuit.com/quickbooks/" target="_blank" rel="noopener">Home</a></li><li><a href="https://design.intuit.com/quickbooks/brand/" target="_blank" rel="noopener">Home</a></li><li><a href="https://design.intuit.com" target="_blank" rel="noopener">Home</a></li><li><a href="https://design.intuit.com/" target="_blank" rel="noopener">Home</a></li><li><a href="https://design.intuit.com/how-a-bar-of-soap-inspired-a-new-design/" target="_blank" rel="noopener">How a bar of soap inspired a new design path</a></li><li><a href="https://design.intuit.com/how-inclusivity-happens/" target="_blank" rel="noopener">How inclusivity actually happens</a></li><li><a href="https://design.intuit.com/adhd-and-design/" target="_blank" rel="noopener">How my ADHD makes me a better designer</a></li><li><a href="https://design.intuit.com/topics/how-to/" target="_blank" rel="noopener">How To Archives</a></li><li><a href="https://design.intuit.com/topics/how-to/page/2/" target="_blank" rel="noopener">How To Archives</a></li><li><a href="https://design.intuit.com/topics/how-to/page/3/" target="_blank" rel="noopener">How To Archives</a></li><li><a href="https://design.intuit.com/how-to-tackle-being-a-big-tech-design-intern/" target="_blank" rel="noopener">How to tackle being a big</a></li><li><a href="https://design.intuit.com/topics/lead-people/" target="_blank" rel="noopener">Lead People Archives</a></li><li><a href="https://design.intuit.com/property-management-washing-machines-and-empathy/" target="_blank" rel="noopener">Learning how real customers really use your product</a></li><li><a href="https://design.intuit.com/letting-go-of-the-steering-wheel/" target="_blank" rel="noopener">Letting go of the steering wheel</a></li><li><a href="https://design.intuit.com/adhd-and-ipd-in-product-discovery/" target="_blank" rel="noopener">Making &quot;In</a></li><li><a href="https://design.intuit.com/accounting-for-designers/" target="_blank" rel="noopener">Making accounting matter to designers at Intuit</a></li><li><a href="https://design.intuit.com/making-others-win/" target="_blank" rel="noopener">Making others win</a></li><li><a href="https://design.intuit.com/ooo-sos-make-your-out-of-office-message-mean-something/" target="_blank" rel="noopener">OOO SOS: Make your out</a></li><li><a href="https://design.intuit.com/product-design-your-dinner/" target="_blank" rel="noopener">Product design your dinner like a pro</a></li><li><a href="https://design.intuit.com/should-i-be-a-unicorn/" target="_blank" rel="noopener">Should I be a unicorn?</a></li><li><a href="https://design.intuit.com/silences-pauses-and-research/" target="_blank" rel="noopener">Silences, pauses, and other research tools</a></li><li><a href="https://design.intuit.com/the-new-home-of-quickbooks-design/" target="_blank" rel="noopener">The new home of QuickBooks Design</a></li><li><a href="https://design.intuit.com/power-of-discomfort/" target="_blank" rel="noopener">The power of discomfort: lessons in leadership</a></li><li><a href="https://design.intuit.com/what-do-a-handmade-jacket-and-a-digital-mvp-have-in-common-the-pride-of-making-progress/" target="_blank" rel="noopener">What do a handmade jacket and a digital MVP have in common? The pride of making progress</a></li><li><a href="https://design.intuit.com/why-learn-hindi-a-roundabout-way-to-becoming-a-better-designer/" target="_blank" rel="noopener">Why learn Hindi? It&#x27;ll make you a better designer</a></li></ul>
+    <ul class="page-list"><li><a href="https://design.intuit.com/behavioral-science-should-be-in-your-designer-toolkit/" target="_blank" rel="noopener">Behavioral science should be in your designer toolkit</a></li><li><a href="https://design.intuit.com/change-design-with-comic-book/" target="_blank" rel="noopener">Can a comic book change how we design?</a></li><li><a href="https://design.intuit.com/topics/design-for-all/" target="_blank" rel="noopener">Design for All Archives</a></li><li><a href="https://design.intuit.com/topics/design-for-all/page/2/" target="_blank" rel="noopener">2</a></li><li><a href="https://design.intuit.com/data-driven-design/" target="_blank" rel="noopener">Designing with HEART (and data)</a></li><li><a href="https://design.intuit.com/topics/do-research/" target="_blank" rel="noopener">Do Research Archives</a></li><li><a href="https://design.intuit.com/empower-your-team-through-rapid-experimentation/" target="_blank" rel="noopener">Empower your team through rapid experimentation</a></li><li><a href="https://design.intuit.com/your-first-90-days-as-a-new-design-manager/" target="_blank" rel="noopener">Growing through some things as a new design manager</a></li><li><a href="https://design.intuit.com/quickbooks/" target="_blank" rel="noopener">Home - Intuit Design Hub</a></li><li><a href="https://design.intuit.com/quickbooks/brand/" target="_blank" rel="noopener">Brand</a></li><li><a href="https://design.intuit.com" target="_blank" rel="noopener">Design.intuit.com</a></li><li><a href="https://design.intuit.com/" target="_blank" rel="noopener">Design.intuit.com</a></li><li><a href="https://design.intuit.com/how-a-bar-of-soap-inspired-a-new-design/" target="_blank" rel="noopener">How a bar of soap inspired a new design path</a></li><li><a href="https://design.intuit.com/how-inclusivity-happens/" target="_blank" rel="noopener">How inclusivity actually happens</a></li><li><a href="https://design.intuit.com/adhd-and-design/" target="_blank" rel="noopener">How my ADHD makes me a better designer</a></li><li><a href="https://design.intuit.com/topics/how-to/" target="_blank" rel="noopener">How To Archives</a></li><li><a href="https://design.intuit.com/topics/how-to/page/2/" target="_blank" rel="noopener">2</a></li><li><a href="https://design.intuit.com/topics/how-to/page/3/" target="_blank" rel="noopener">3</a></li><li><a href="https://design.intuit.com/how-to-tackle-being-a-big-tech-design-intern/" target="_blank" rel="noopener">How to tackle being a big-tech design intern</a></li><li><a href="https://design.intuit.com/topics/lead-people/" target="_blank" rel="noopener">Lead People Archives</a></li><li><a href="https://design.intuit.com/property-management-washing-machines-and-empathy/" target="_blank" rel="noopener">Learning how real customers really use your product</a></li><li><a href="https://design.intuit.com/letting-go-of-the-steering-wheel/" target="_blank" rel="noopener">Letting go of the steering wheel</a></li><li><a href="https://design.intuit.com/adhd-and-ipd-in-product-discovery/" target="_blank" rel="noopener">Making &quot;In-product discovery&quot; (IPD) work for everyone</a></li><li><a href="https://design.intuit.com/accounting-for-designers/" target="_blank" rel="noopener">Making accounting matter to designers at Intuit</a></li><li><a href="https://design.intuit.com/making-others-win/" target="_blank" rel="noopener">Making others win</a></li><li><a href="https://design.intuit.com/ooo-sos-make-your-out-of-office-message-mean-something/" target="_blank" rel="noopener">OOO SOS: Make your out-of-office message mean something</a></li><li><a href="https://design.intuit.com/product-design-your-dinner/" target="_blank" rel="noopener">Product design your dinner like a pro</a></li><li><a href="https://design.intuit.com/should-i-be-a-unicorn/" target="_blank" rel="noopener">Should I be a unicorn?</a></li><li><a href="https://design.intuit.com/silences-pauses-and-research/" target="_blank" rel="noopener">Silences, pauses, and other research tools</a></li><li><a href="https://design.intuit.com/the-new-home-of-quickbooks-design/" target="_blank" rel="noopener">The new home of QuickBooks Design</a></li><li><a href="https://design.intuit.com/power-of-discomfort/" target="_blank" rel="noopener">The power of discomfort: lessons in leadership</a></li><li><a href="https://design.intuit.com/what-do-a-handmade-jacket-and-a-digital-mvp-have-in-common-the-pride-of-making-progress/" target="_blank" rel="noopener">What do a handmade jacket and a digital MVP have in common? The pride of making progress</a></li><li><a href="https://design.intuit.com/why-learn-hindi-a-roundabout-way-to-becoming-a-better-designer/" target="_blank" rel="noopener">Why learn Hindi? It&#x27;ll make you a better designer</a></li></ul>
   </section>
 
   <p class="report-issue">
-    <a href="/report?system=Intuit%20%E2%80%94%20QuickBooks%20Design%20System" id="reportIssueLink">Report an issue with this system</a>
+    <a href="/report?system=Intuit%20%E2%80%94%20QuickBooks%20Design%20System" id="reportIssueLink"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg> Report an issue with this system</a>
   </p>
 </div>
 <script>

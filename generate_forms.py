@@ -16,7 +16,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from page_shell import FONT_LINK, TOKENS_CSS, routes_nav
+from page_shell import FAVICON_LINK, FONT_LINK, TOKENS_CSS, routes_nav
 
 SUGGEST_OUTPUT_FILE = Path(__file__).parent / "suggest.html"
 REPORT_OUTPUT_FILE = Path(__file__).parent / "report.html"
@@ -118,6 +118,7 @@ def render_suggest_page() -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Suggest a design system — Design Systems Directory</title>
+{FAVICON_LINK}
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
@@ -231,6 +232,7 @@ def render_report_page() -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Report an issue — Design Systems Directory</title>
+{FAVICON_LINK}
 {FONT_LINK}
 <style>
 {TOKENS_CSS}

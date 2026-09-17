@@ -33,6 +33,14 @@ on:
 permissions:
   contents: read
 
+# Only one of these full-registry pipelines (reindex-full/new/shallow/
+# signals-refresh/spa, plus this one) committing to master or deploying to
+# Netlify at once — running two at a time doubled Jina 429s in practice
+# and made their push-retry loops fight each other for no benefit.
+concurrency:
+  group: ds-directory-mcp-write-pipeline
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -58,39 +66,20 @@ jobs:
           python generate_forms.py
           python generate_data_export.py
           python generate_llms_txt.py
-          python generate_sitemap.py
           python generate_mcp_manifest.py
           python generate_security_txt.py
           python generate_robots_txt.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
+          # sitemap.xml must run AFTER components/patterns/foundations are
+          # generated above — it enumerates those directories' pages
+          # (taxonomy_page_paths() in generate_sitemap.py).
+          python generate_sitemap.py
 
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
-          mkdir -p site
-          cp home.html site/index.html
-          cp search.html site/search.html
-          cp suggest.html site/suggest.html
-          cp report.html site/report.html
-          cp llms.txt site/llms.txt
-          if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
-          mkdir -p site/.well-known && cp .well-known/mcp.json site/.well-known/mcp.json
-          if [ -f .well-known/security.txt ]; then cp .well-known/security.txt site/.well-known/security.txt; fi
-          cp robots.txt site/robots.txt
-          cp systems.json site/systems.json
-          cp design-system.schema.json site/design-system.schema.json
-          cp directory.html site/directory.html
-          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
-          if [ -d components ]; then cp -r components site/components; fi
-          if [ -d systems ]; then cp -r systems site/systems; fi
-          # --site pinned explicitly (not just via the NETLIFY_SITE_ID env var)
-          # and the CLI version pinned too — an unpinned `npx netlify-cli` can
-          # pick up a newer major version whose deploy-target resolution
-          # changed, which is a known way for --prod to land somewhere other
-          # than the site your custom domain actually points at (the domain
-          # then 404s even though the deploy itself "succeeded").
-          npx --yes netlify-cli@17 deploy --site "$NETLIFY_SITE_ID" --dir=site --prod
+          bash scripts/build_site.sh

@@ -176,6 +176,13 @@ def main() -> None:
     SCHEMA_FILE.write_text(json.dumps(SCHEMA, indent=2, ensure_ascii=False))
 
     SYSTEMS_JSON_DIR.mkdir(exist_ok=True)
+    wanted_ids = {record["id"] for record in export["systems"]}
+    # See generate_systems.py's main() for why: a system no longer in
+    # indexed_only()'s output otherwise leaves its old <slug>.json behind
+    # forever, still deployed.
+    for existing in SYSTEMS_JSON_DIR.glob("*.json"):
+        if existing.stem not in wanted_ids:
+            existing.unlink()
     for record in export["systems"]:
         per_system = {
             "$schema": "../design-system.schema.json#/$defs/system",

@@ -8,12 +8,28 @@ ingest.py run overwrites these with freshly auto-discovered ones regardless.
 """
 
 import os
+import re
 import sys
 
 from ingest import load_registry, save_registry
 from parse_issue_form import parse_issue_form
 from run_submission_check import submitter_provided_resources
 from text_utils import full_name
+
+# Belt-and-braces alongside submission-approve.yml passing this value through
+# env: rather than interpolating it directly into a run: script — reject a
+# submitted org/system name outright if it contains shell metacharacters or a
+# newline (the latter could otherwise inject extra keys into $GITHUB_OUTPUT).
+# A legitimate design system name never needs any of these.
+DANGEROUS_NAME_CHARS = re.compile(r'[$;|&<>"\'\\\n\r]')
+
+
+def reject_if_dangerous(name: str) -> None:
+    if DANGEROUS_NAME_CHARS.search(name):
+        sys.exit(
+            f"Refusing to process submission: name {name!r} contains a character "
+            "that isn't allowed in an organization/design-system name."
+        )
 
 
 def main() -> None:
@@ -24,6 +40,9 @@ def main() -> None:
     ds_name = fields.get("Design system name", "").strip()
     start_url = fields.get("Start URL", "").strip()
     notify_email = fields.get("Email for approval notification (optional)", "").strip()
+
+    reject_if_dangerous(org)
+    reject_if_dangerous(ds_name)
 
     entries = load_registry()
     new_entry = {"organization": org, "design_system": ds_name, "start_urls": [start_url]}

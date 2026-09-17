@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T15:03:09+00:00",
+  "generated_at": "2026-09-16T22:53:58+00:00",
   "id": "nhs-uk-service-manual",
   "organization": "NHS.UK",
   "design_system": "Service Manual",
@@ -10,8 +10,8 @@
   ],
   "detail_url": "/systems/nhs-uk-service-manual",
   "pages_indexed": 8,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
   "last_checked": "2026-09-15T22:10:48+00:00",
   "last_modified": null,

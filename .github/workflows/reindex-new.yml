@@ -13,6 +13,14 @@ permissions:
   contents: write
   issues: write
 
+# Only one of these full-registry pipelines (reindex-full/new/shallow/
+# signals-refresh/spa, plus this one) committing to master or deploying to
+# Netlify at once — running two at a time doubled Jina 429s in practice
+# and made their push-retry loops fight each other for no benefit.
+concurrency:
+  group: ds-directory-mcp-write-pipeline
+  cancel-in-progress: false
+
 jobs:
   # One shard per never-indexed system (capped at 256 — GitHub's hard
   # matrix-size limit), same rationale as reindex-full.yml/reindex-shallow.yml:
@@ -43,7 +51,11 @@ jobs:
 
           with open('systems.yaml') as f:
               entries = yaml.safe_load(f) or []
-          total = len([e for e in entries if 'pages_indexed' not in e])
+          # Mirrors ingest.py's --new filter exactly (kept in sync by hand —
+          # see reindex-full.yml's prepare job for the same pattern). Missing
+          # 'not archived' here meant an archived-but-never-indexed entry
+          # could claim a shard that then found nothing to do.
+          total = len([e for e in entries if 'pages_indexed' not in e and not e.get('archived')])
           n = max(min(total, 256), 1)
           print(f'shard_count={n}')
           print(f'shards={json.dumps(list(range(n)))}')
@@ -77,13 +89,16 @@ jobs:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-        run: python ingest.py --new --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
+        run: |
+          rm -f shard_touched.json
+          python ingest.py --new --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
 
       # if: always() — ingest.py writes systems.yaml/pages_index.json
       # incrementally per system, well before that system's embedding calls
       # (where a rate-limit or other failure actually happens), so whatever
       # this shard got through before any failure is already on disk and
-      # worth uploading.
+      # worth uploading. shard_touched.json (see ingest.mark_shard_touched)
+      # tells merge_shards.py which names to take from this shard specifically.
       - if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -91,11 +106,13 @@ jobs:
           path: |
             systems.yaml
             pages_index.json
+            shard_touched.json
           retention-days: 1
+          if-no-files-found: ignore
 
   merge-and-deploy:
     needs: [prepare, reindex-new-shard]
-    if: always()
+    if: always() && needs.prepare.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -125,13 +142,16 @@ jobs:
           python generate_forms.py
           python generate_data_export.py
           python generate_llms_txt.py
-          python generate_sitemap.py
           python generate_mcp_manifest.py
           python generate_security_txt.py
           python generate_robots_txt.py
           python generate_directory.py
           python generate_components.py
           python generate_systems.py
+          # sitemap.xml must run AFTER components/patterns/foundations are
+          # generated above — it enumerates those directories' pages
+          # (taxonomy_page_paths() in generate_sitemap.py).
+          python generate_sitemap.py
 
       - name: Check crawl health (maintainer-facing only — not shown on the public page)
         run: python check_crawl_health.py
@@ -156,7 +176,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add systems.yaml home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components systems .well-known robots.txt
+          git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components patterns foundations systems .well-known robots.txt
           if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           if ! git diff --cached --quiet; then
             git commit -m "Auto-index new design systems + update directory page [skip ci]"
@@ -177,20 +197,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
-          mkdir -p site
-          cp home.html site/index.html
-          cp search.html site/search.html
-          cp suggest.html site/suggest.html
-          cp report.html site/report.html
-          cp llms.txt site/llms.txt
-          if [ -f sitemap.xml ]; then cp sitemap.xml site/sitemap.xml; fi
-          mkdir -p site/.well-known && cp .well-known/mcp.json site/.well-known/mcp.json
-          if [ -f .well-known/security.txt ]; then cp .well-known/security.txt site/.well-known/security.txt; fi
-          cp robots.txt site/robots.txt
-          cp systems.json site/systems.json
-          cp design-system.schema.json site/design-system.schema.json
-          cp directory.html site/directory.html
-          if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
-          if [ -d components ]; then cp -r components site/components; fi
-          if [ -d systems ]; then cp -r systems site/systems; fi
-          npx --yes netlify-cli@17 deploy --site "$NETLIFY_SITE_ID" --dir=site --prod
+          bash scripts/build_site.sh

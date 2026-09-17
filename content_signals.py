@@ -132,60 +132,83 @@ _EXEMPLARS_PATTERN = re.compile(
 _MAX_SCAN_CHARS = 200_000
 
 
-def detect_content_signals(pages: dict[str, str]) -> dict:
-    """pages: {url: text} from a single crawl. Returns whatever of
-    accessibility_conformance / tokens_format / frameworks / dark_mode /
-    multi_brand / governance_model / deprecation_policy / cli_scaffolding /
-    codemods / figma_code_connect / prompt_library was actually found — keys
-    are simply absent when nothing matched, never a false "no" claim about
-    something merely undetected."""
-    combined = "\n".join(pages.values())[:_MAX_SCAN_CHARS]
+# (key, pattern) — every signal here is a plain "found somewhere" boolean,
+# so unlike the a11y/tokens-format patterns above (where only the single
+# strongest match matters) each of these is checked independently.
+_BOOL_SIGNAL_PATTERNS = [
+    ("dark_mode", _DARK_MODE_PATTERN),
+    ("multi_brand", _MULTI_BRAND_PATTERN),
+    ("governance_model", _GOVERNANCE_PATTERN),
+    ("deprecation_policy", _DEPRECATION_POLICY_PATTERN),
+    ("cli_scaffolding", _CLI_SCAFFOLDING_PATTERN),
+    ("codemods", _CODEMOD_PATTERN),
+    ("figma_code_connect", _FIGMA_CODE_CONNECT_PATTERN),
+    ("prompt_library", _PROMPT_LIBRARY_PATTERN),
+    ("validation_loop", _VALIDATION_LOOP_PATTERN),
+    ("prohibition", _PROHIBITION_PATTERN),
+    ("tool_gating", _TOOL_GATING_PATTERN),
+    ("token_enforcement", _TOKEN_ENFORCEMENT_PATTERN),
+    ("exemplars", _EXEMPLARS_PATTERN),
+]
 
-    def first_match(patterns: list[tuple[re.Pattern, str]]) -> str | None:
-        for pattern, label in patterns:
-            if pattern.search(combined):
-                return label
-        return None
 
+def detect_content_signals(pages: dict[str, str]) -> tuple[dict, dict]:
+    """pages: {url: text} from a single crawl. Returns (signals, sources):
+
+    - signals: whatever of accessibility_conformance / tokens_format /
+      frameworks / dark_mode / multi_brand / governance_model /
+      deprecation_policy / cli_scaffolding / codemods / figma_code_connect /
+      prompt_library / validation_loop / prohibition / tool_gating /
+      token_enforcement / exemplars was actually found — keys are simply
+      absent when nothing matched, never a false "no" claim about something
+      merely undetected.
+    - sources: the URL of the first crawled page each signal was actually
+      found on, same keys as signals — lets the detail page link "Dark
+      mode" or "WCAG 2.1 AA" back to the real page that said so, instead of
+      asking a visitor to just take the badge's word for it. frameworks is
+      multi-value, so its source is itself a dict of {framework: url}
+      rather than a single URL.
+
+    Scanned page-by-page (in crawl order) rather than one joined blob so
+    each match can be attributed to the specific page it came from; the
+    ~200k-character cap (a few dozen average pages) is unchanged from
+    before, just spent across pages instead of one combined string."""
     signals: dict = {}
+    sources: dict = {}
+    framework_sources: dict[str, str] = {}
+    remaining = _MAX_SCAN_CHARS
 
-    a11y = first_match(_A11Y_PATTERNS)
-    if a11y:
-        signals["accessibility_conformance"] = a11y
+    for url, text in pages.items():
+        if remaining <= 0:
+            break
+        chunk = text[:remaining]
+        remaining -= len(chunk)
 
-    tokens_format = first_match(_TOKEN_FORMAT_PATTERNS)
-    if tokens_format:
-        signals["tokens_format"] = tokens_format
+        if "accessibility_conformance" not in signals:
+            for pattern, label in _A11Y_PATTERNS:
+                if pattern.search(chunk):
+                    signals["accessibility_conformance"] = label
+                    sources["accessibility_conformance"] = url
+                    break
 
-    frameworks = [label for pattern, label in _FRAMEWORK_PATTERNS if pattern.search(combined)]
-    if frameworks:
-        signals["frameworks"] = frameworks
+        if "tokens_format" not in signals:
+            for pattern, label in _TOKEN_FORMAT_PATTERNS:
+                if pattern.search(chunk):
+                    signals["tokens_format"] = label
+                    sources["tokens_format"] = url
+                    break
 
-    if _DARK_MODE_PATTERN.search(combined):
-        signals["dark_mode"] = True
-    if _MULTI_BRAND_PATTERN.search(combined):
-        signals["multi_brand"] = True
-    if _GOVERNANCE_PATTERN.search(combined):
-        signals["governance_model"] = True
-    if _DEPRECATION_POLICY_PATTERN.search(combined):
-        signals["deprecation_policy"] = True
-    if _CLI_SCAFFOLDING_PATTERN.search(combined):
-        signals["cli_scaffolding"] = True
-    if _CODEMOD_PATTERN.search(combined):
-        signals["codemods"] = True
-    if _FIGMA_CODE_CONNECT_PATTERN.search(combined):
-        signals["figma_code_connect"] = True
-    if _PROMPT_LIBRARY_PATTERN.search(combined):
-        signals["prompt_library"] = True
-    if _VALIDATION_LOOP_PATTERN.search(combined):
-        signals["validation_loop"] = True
-    if _PROHIBITION_PATTERN.search(combined):
-        signals["prohibition"] = True
-    if _TOOL_GATING_PATTERN.search(combined):
-        signals["tool_gating"] = True
-    if _TOKEN_ENFORCEMENT_PATTERN.search(combined):
-        signals["token_enforcement"] = True
-    if _EXEMPLARS_PATTERN.search(combined):
-        signals["exemplars"] = True
+        for pattern, label in _FRAMEWORK_PATTERNS:
+            if label not in framework_sources and pattern.search(chunk):
+                framework_sources[label] = url
 
-    return signals
+        for key, pattern in _BOOL_SIGNAL_PATTERNS:
+            if key not in signals and pattern.search(chunk):
+                signals[key] = True
+                sources[key] = url
+
+    if framework_sources:
+        signals["frameworks"] = list(framework_sources.keys())
+        sources["frameworks"] = framework_sources
+
+    return signals, sources

@@ -25,13 +25,39 @@ from text_utils import full_name
 
 OUTPUT_FILE = Path(__file__).parent / "sitemap.xml"
 
-STATIC_PATHS = ["/", "/directory", "/search", "/components", "/suggest", "/report"]
+STATIC_PATHS = ["/", "/directory", "/search", "/components", "/patterns", "/foundations", "/suggest", "/report"]
+
+# Taxonomy routes whose individual pages (components/button.html, etc.) get
+# their own sitemap entries — generate_components.py writes these three
+# directories. Read directly rather than importing generate_components (only
+# ROUTES' dir names are needed, and this keeps generate_sitemap.py runnable
+# even if that module's heavier imports ever change).
+TAXONOMY_DIRS = ["components", "patterns", "foundations"]
+
+
+def taxonomy_page_paths() -> list[str]:
+    """/<dir>/<slug> for every generated taxonomy page (skips index.html,
+    which is already covered by its STATIC_PATHS entry above). Reads
+    whatever generate_components.py already wrote to disk this run — the
+    workflow generates components/patterns/foundations before sitemap.xml
+    for exactly this reason."""
+    paths = []
+    for dir_name in TAXONOMY_DIRS:
+        dir_path = Path(__file__).parent / dir_name
+        if not dir_path.is_dir():
+            continue
+        for html_file in sorted(dir_path.glob("*.html")):
+            if html_file.stem == "index":
+                continue
+            paths.append(f"/{dir_name}/{html_file.stem}")
+    return paths
 
 
 def render_sitemap(site_url: str, entries: list[dict]) -> str:
     site_url = site_url.rstrip("/")
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     urls = [(path, today) for path in STATIC_PATHS]
+    urls += [(path, today) for path in taxonomy_page_paths()]
     urls += [
         (f"/systems/{slugify(full_name(e))}", (e.get("last_checked") or today)[:10])
         for e in entries
@@ -53,5 +79,7 @@ if __name__ == "__main__":
         )
     else:
         systems = indexed_only(load_systems())
+        taxonomy_paths = taxonomy_page_paths()
         OUTPUT_FILE.write_text(render_sitemap(site_url, systems))
-        print(f"Wrote {OUTPUT_FILE} with {len(systems) + len(STATIC_PATHS)} URLs.")
+        print(f"Wrote {OUTPUT_FILE} with {len(systems) + len(STATIC_PATHS) + len(taxonomy_paths)} URLs "
+              f"({len(taxonomy_paths)} components/patterns/foundations pages).")

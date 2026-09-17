@@ -19,7 +19,7 @@ from pathlib import Path
 
 from generate_directory import indexed_only, load_systems
 from generate_home import MCP_INSTALL_COMMAND
-from page_shell import COPY_ICON_SVG, FILTER_ICON_SVG, FONT_LINK, TOKENS_CSS, routes_nav
+from page_shell import COPY_ICON_SVG, FAVICON_LINK, FILTER_ICON_SVG, FONT_LINK, TOKENS_CSS, routes_nav
 from slug import slugify
 from text_utils import full_name
 
@@ -42,6 +42,7 @@ def render_page(entries: list[dict]) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Search results — Design Systems Directory</title>
 <meta name="robots" content="noindex">
+{FAVICON_LINK}
 {FONT_LINK}
 <style>
 {TOKENS_CSS}

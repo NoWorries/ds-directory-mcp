@@ -16,6 +16,12 @@ on:
 permissions:
   contents: write
 
+# Only one of these pipelines committing to master at once — see
+# reindex-full.yml's concurrency block for the full rationale.
+concurrency:
+  group: ds-directory-mcp-write-pipeline
+  cancel-in-progress: false
+
 jobs:
   fetch-screenshots:
     runs-on: ubuntu-latest

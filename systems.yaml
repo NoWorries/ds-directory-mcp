@@ -1,6 +1,9 @@
 # Registry of external design systems to crawl and index.
 # Add an entry per system: 'organization' (blank if there isn't a distinct one),
-# 'design_system' name, and one or more start URLs to crawl from.
+# 'design_system' name, and one or more start URLs to crawl from. A crawl
+# only follows links under the start URL's own path (its "children"); set
+# 'scope_paths' (a list of path prefixes) to widen or pin that when the
+# start URL is a landing page deeper than the system's real root.
 #
 # 'resources', 'pages_indexed', 'etag', 'last_modified', 'last_checked',
 # 'consecutive_crawl_failures', and any '*_meta' fields are auto-populated by
@@ -11,6 +14,12 @@
 # the moment a check succeeds; check_crawl_health.py uses a run of these to
 # flag a system as a real archival candidate rather than just currently having
 # a bad day.
+#
+# 'render_mode: spa' is set the first time `ingest.py --spa` successfully
+# renders a system's content through a headless browser — it's sticky (unlike
+# 'likely_spa', which a successful render clears), so `--all`'s plain HTTP
+# crawl permanently skips it instead of re-attempting a fetch that can't
+# execute JS, finding nothing, and deleting the vectors the render wrote.
 #
 # 'archived: true' is a graveyard marker for a system whose docs site is
 # confirmed gone with no live replacement — set by hand after investigating,
@@ -42,27 +51,31 @@
   start_urls:
   - https://spectrum.adobe.com/
   pages_indexed: 0
+  resources:
+    icons:
+    - https://spectrum.adobe.com/page/icons/
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T10:56:37+00:00'
   etag: W/"bf464d5e8515e7fb8f54b84f85825628"
   last_modified: Wed, 28 Feb 2024 21:04:55 GMT
   sitemap_url: https://spectrum.adobe.com/sitemap.xml
   sitemap_last_modified: '2024-02-28T20:57:26.301Z'
-  consecutive_crawl_failures: 0
-  resources:
-    icons:
-    - https://spectrum.adobe.com/page/icons/
+  last_checked: '2026-09-16T10:56:37+00:00'
 - organization: Alaska Airlines
   design_system: Auro
   start_urls:
   - https://auro.alaskaair.com/
   pages_indexed: 1
+  resources:
+    agent_instructions:
+    - https://auro.alaskaair.com/llms.txt
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals:
@@ -70,12 +83,8 @@
     - React
     - Web Components
     - Svelte
-  last_checked: '2026-09-16T10:56:44+00:00'
   sitemap_url: https://auro.alaskaair.com/sitemap.xml
-  resources:
-    agent_instructions:
-    - https://auro.alaskaair.com/llms.txt
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T10:56:44+00:00'
 - organization: Altinn
   design_system: Altinn Design System
   start_urls:
@@ -83,15 +92,15 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T10:56:44+00:00'
   etag: '"6aaa3b54-f3"'
   last_modified: Wed, 16 Sep 2026 06:46:44 GMT
   sitemap_url: https://docs.altinn.studio/sitemap.xml
   sitemap_last_modified: '2026-09-16T08:43:18+02:00'
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T10:56:44+00:00'
 - organization: Ant Financial
   design_system: Ant Design
   start_urls:
@@ -131,22 +140,22 @@
   start_urls:
   - https://at-ui.github.io/at-ui/#/en/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T10:57:06+00:00'
-  etag: W/"5acd272c-1124"
-  last_modified: Tue, 10 Apr 2018 21:05:48 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/at-ui/at-ui
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: MIT
     stars: 2318
     last_pushed: '2023-01-12T09:50:00Z'
+  etag: W/"5acd272c-1124"
+  last_modified: Tue, 10 Apr 2018 21:05:48 GMT
+  last_checked: '2026-09-16T10:57:06+00:00'
 - organization: Appear here
   design_system: Bloom
   start_urls:
@@ -154,13 +163,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T10:57:51+00:00'
   etag: W/"6036427a-46d"
   last_modified: Wed, 24 Feb 2021 12:11:38 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T10:57:51+00:00'
 - organization: Apple
   design_system: Human Interface Guidelines
   start_urls:
@@ -168,13 +177,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T10:57:29+00:00'
   etag: '"4511-65b7174ae0019"'
   last_modified: Mon, 14 Sep 2026 13:31:47 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T10:57:29+00:00'
 - organization: Arbetsförmedlingen
   design_system: Design system
   start_urls:
@@ -182,15 +191,15 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:52:02+00:00'
   etag: '"2a524b8751e867273ea9b2f172fa2981eaa72b532883542380875c5ab2ca5785"'
   last_modified: Wed, 09 Sep 2026 08:48:57 GMT
   sitemap_url: https://designsystem.arbetsformedlingen.se/sitemap.xml
   sitemap_last_modified: '2026-06-05'
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T05:52:02+00:00'
 - organization: ArcGIS
   design_system: Calcite
   start_urls:
@@ -220,9 +229,9 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:16:31+00:00'
   etag: W/"a196026065080c977b13ecae3d867784"
   last_modified: Tue, 15 Sep 2026 13:35:45 GMT
+  last_checked: '2026-09-16T05:16:31+00:00'
 - organization: Atlassian
   design_system: Atlassian Design System
   start_urls:
@@ -243,7 +252,7 @@
     agent_instructions:
     - https://atlassian.design/llms.txt
     - https://atlassian.design/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"c09b83b5658eff2f9d98480e3de530e1"'
@@ -254,18 +263,18 @@
   start_urls:
   - https://www.audi.com/ci/en/guides/user-interface/introduction.html
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: '404 Client Error: Not Found for url: https://www.audi.com/ci/en/guides/user-interface/introduction.html'
-  likely_spa: false
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T11:07:27+00:00'
-  sitemap_url: https://www.audi.com/sitemap.xml
-  sitemap_last_modified: '2026-09-16T12:35:14+02:00'
   resources:
     agent_instructions:
     - https://www.audi.com/llms.txt
+  hit_max_pages: false
+  crawl_error: '404 Client Error: Not Found for url: https://www.audi.com/ci/en/guides/user-interface/introduction.html'
   consecutive_crawl_failures: 1
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
+  sitemap_url: https://www.audi.com/sitemap.xml
+  sitemap_last_modified: '2026-09-16T12:35:14+02:00'
+  last_checked: '2026-09-16T11:07:27+00:00'
 - organization: Australian Government, Department of Agriculture, Fisheries and Forestry
   design_system: Agriculture Design System (AgDS)
   start_urls:
@@ -281,7 +290,7 @@
     - https://github.com/healthgovau/health-design-system
     npm:
     - https://www.npmjs.com/package/@health.gov.au/health-design-system
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -323,13 +332,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T11:09:35+00:00'
   etag: W/"6aa234ee-108c"
   last_modified: Thu, 10 Sep 2026 04:41:18 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T11:09:35+00:00'
 - organization: Automattic
   design_system: Wordpress.com design handbook
   start_urls:
@@ -366,7 +375,7 @@
     - https://github.com/cloudscape-design/components/blob/main/src/icon/icons/external.svg?short_path=cefcf88
     agent_instructions:
     - https://cloudscape.design/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -384,7 +393,7 @@
   resources:
     icons:
     - https://ui.docs.amplify.aws/react/components/icon
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"vzbzp74hpo94nt"'
@@ -396,14 +405,14 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T11:19:28+00:00'
   etag: W/"0160ec9eb2229c14e65ec80d098e60df"
   last_modified: Mon, 14 Sep 2026 15:53:17 GMT
   sitemap_url: https://designsystem.backbase.com/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T11:19:28+00:00'
 - organization: Banco Santander
   design_system: Flame Design System
   start_urls:
@@ -430,11 +439,11 @@
     Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''design-system.barnardos.org.uk'',
     port=443): Failed to resolve ''design-system.barnardos.org.uk'' ([Errno -5] No
     address associated with hostname)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T11:19:52+00:00'
-  consecutive_crawl_failures: 1
 - organization: BBC
   design_system: Global Experience Language (GEL)
   start_urls:
@@ -444,16 +453,6 @@
   crawl_error: ''
   likely_spa: false
   last_checked: '2026-09-16T11:27:51+00:00'
-  consecutive_crawl_failures: 0
-  unverified_resources:
-    github:
-    - https://github.com/IRT-Open-Source/irt-ebu-tt-d-application-samples
-  content_signals:
-    accessibility_conformance: WCAG 2.0 AA
-    frameworks:
-    - React
-    governance_model: true
-  sitemap_url: https://www.bbc.co.uk/sitemap.xml
   resources:
     github:
     - https://github.com/bbc/gel-iconography
@@ -465,6 +464,16 @@
     - https://storybook.js.org/
     figma:
     - https://www.figma.com/design/ruFjOr9wFZRWmrNSA1oP10/Icon-Baseline-Grid-Template---Master?node-id=39-133&t=i2Qs0xvRHnYstj25-1
+  consecutive_crawl_failures: 0
+  unverified_resources:
+    github:
+    - https://github.com/IRT-Open-Source/irt-ebu-tt-d-application-samples
+  content_signals:
+    accessibility_conformance: WCAG 2.0 AA
+    frameworks:
+    - React
+    governance_model: true
+  sitemap_url: https://www.bbc.co.uk/sitemap.xml
 - organization: Benevity
   design_system: Skyline
   start_urls:
@@ -528,21 +537,21 @@
   start_urls:
   - https://biings.design/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T11:21:48+00:00'
-  last_modified: Tue, 04 Aug 2026 10:26:24 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/biings/biings-ds
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: CC-BY-SA-4.0
     stars: 36
     last_pushed: '2026-08-04T10:25:55Z'
+  last_modified: Tue, 04 Aug 2026 10:26:24 GMT
+  last_checked: '2026-09-16T11:21:48+00:00'
 - organization: BLiP
   design_system: UAI Design System
   start_urls:
@@ -550,11 +559,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T05:56:06+00:00'
-  consecutive_crawl_failures: 0
 - organization: Brainly
   design_system: Brainly Style Guide
   start_urls:
@@ -562,11 +571,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '403 Client Error: Forbidden for url: https://styleguide.brainly.com/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T11:22:09+00:00'
-  consecutive_crawl_failures: 1
 - organization: Brainly
   design_system: Design
   start_urls:
@@ -577,9 +586,9 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:20:46+00:00'
   etag: W/"0f0e350fde71bb3ead57f66ba09c79ba"
   sitemap_url: https://design.brainly.com/sitemap.xml
+  last_checked: '2026-09-16T05:20:46+00:00'
 - organization: Bridge
   design_system: Bold design system
   start_urls:
@@ -591,10 +600,10 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T06:59:23+00:00'
   etag: W/"6a877905-3a97"
   last_modified: Thu, 20 Aug 2026 22:00:37 GMT
   sitemap_url: https://bold.bridge.ufsc.br/sitemap.xml
+  last_checked: '2026-09-16T06:59:23+00:00'
 - organization: Brightcore
   design_system: UI
   start_urls:
@@ -628,11 +637,11 @@
     retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''spark.brighte.com.au'',
     port=443): Failed to resolve ''spark.brighte.com.au'' ([Errno -2] Name or service
     not known)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T11:22:54+00:00'
-  consecutive_crawl_failures: 1
 - organization: British Gas
   design_system: Nucleus Design System
   start_urls:
@@ -644,7 +653,7 @@
     figma:
     - https://www.figma.com/design/HdnAatpIIliZhoj6C77aHx/Nucleus-BritishGas---Components?m=auto&node-id=10894-239&t=0cyP8uC7iqnlpc2w-1
     - https://www.figma.com/design/HdnAatpIIliZhoj6C77aHx/Nucleus-BritishGas---Components?m=auto&node-id=1876-35073&t=IwNdEWK1sFgZAbou-1
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   last_checked: '2026-09-15T22:17:24+00:00'
@@ -655,13 +664,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T11:29:26+00:00'
   etag: W/"b4ff30661a188a622cf55dbcfe9c6083"
   sitemap_url: https://arc.bt.com/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T11:29:26+00:00'
 - organization: Buildit
   design_system: Gravity
   start_urls:
@@ -670,11 +679,11 @@
   hit_max_pages: false
   crawl_error: 'HTTPSConnectionPool(host=''style.buildit.digital'', port=443): Read
     timed out. (read timeout=15)'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T11:32:36+00:00'
-  consecutive_crawl_failures: 1
 - organization: BuzzFeed
   design_system: Solid Style Guide
   start_urls:
@@ -764,22 +773,22 @@
   start_urls:
   - https://catho.github.io/quantum/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T11:44:20+00:00'
-  etag: W/"6a185732-1af9"
-  last_modified: Thu, 28 May 2026 14:54:42 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/catho/quantum
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: GPL-3.0
     stars: 57
     last_pushed: '2026-05-28T14:54:05Z'
+  etag: W/"6a185732-1af9"
+  last_modified: Thu, 28 May 2026 14:54:42 GMT
+  last_checked: '2026-09-16T11:44:20+00:00'
 - organization: censhare GmbH
   design_system: Zen
   start_urls:
@@ -787,12 +796,12 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '404 Client Error: Not Found for url: https://design.censhare.com/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T11:44:46+00:00'
   sitemap_url: https://design.censhare.com/sitemap.xml
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T11:44:46+00:00'
 - organization: Chakra team
   design_system: Chakra UI
   start_urls:
@@ -810,7 +819,7 @@
     agent_instructions:
     - https://chakra-ui.com/llms-full.txt
     - https://chakra-ui.com/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -861,7 +870,7 @@
     - https://cfpb.github.io/design-system/development/web-component-storybook
     markdown_docs:
     - https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -910,9 +919,9 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:24:01+00:00'
   etag: W/"878f2396eab4816b6ee77c72c15114c3"
   last_modified: Mon, 14 Sep 2026 02:18:35 GMT
+  last_checked: '2026-09-16T05:24:01+00:00'
 - organization: Datadog
   design_system: Druids
   start_urls:
@@ -964,13 +973,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T12:04:48+00:00'
   etag: W/"6a8c4f17-d1a"
   last_modified: Mon, 24 Aug 2026 14:03:03 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T12:04:48+00:00'
 - organization: Design Language
   design_system: E-Trade
   start_urls:
@@ -978,12 +987,12 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T12:05:10+00:00'
   etag: W/"7bb-XeVDM9kqYDnzprlC1ZyCA6aFy0Q"
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T12:05:10+00:00'
 - organization: Discovery Education
   design_system: Comet
   start_urls:
@@ -994,11 +1003,11 @@
     Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''comet.discoveryeducation.com'',
     port=443): Failed to resolve ''comet.discoveryeducation.com'' ([Errno -2] Name
     or service not known)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:05:15+00:00'
-  consecutive_crawl_failures: 1
 - organization: Drawbotics
   design_system: Drylus
   start_urls:
@@ -1006,13 +1015,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T12:05:36+00:00'
   etag: W/"69bd776e-1cf"
   last_modified: Fri, 20 Mar 2026 16:35:58 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T12:05:36+00:00'
 - organization: Duolingo
   design_system: Design guidelines
   start_urls:
@@ -1045,7 +1054,7 @@
   resources:
     agent_instructions:
     - https://playbook.ebay.com/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   last_checked: '2026-09-15T23:42:04+00:00'
@@ -1054,23 +1063,23 @@
   start_urls:
   - https://ebay.github.io/skin/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T12:06:42+00:00'
-  etag: W/"680fc46d-10c"
-  last_modified: Mon, 28 Apr 2025 18:09:49 GMT
-  sitemap_url: https://ebay.github.io/sitemap.xml
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/eBay/evo-web
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: NOASSERTION
     stars: 51
     last_pushed: '2026-09-15T20:10:27Z'
+  etag: W/"680fc46d-10c"
+  last_modified: Mon, 28 Apr 2025 18:09:49 GMT
+  sitemap_url: https://ebay.github.io/sitemap.xml
+  last_checked: '2026-09-16T12:06:42+00:00'
 - organization: Elastic UI
   design_system: Elastic UI Framework
   start_urls:
@@ -1079,7 +1088,7 @@
   resources:
     icons:
     - https://elastic.github.io/eui/docs/components/display/icons/
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"21dfe08aeec47761501235bd3667a73b"'
@@ -1096,9 +1105,9 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T07:01:13+00:00'
   etag: W/"1785944241673"
   sitemap_url: https://nova.eliagroup.io/sitemap.xml
+  last_checked: '2026-09-16T07:01:13+00:00'
 - organization: ENGIE
   design_system: Fluid
   start_urls:
@@ -1108,11 +1117,11 @@
   crawl_error: 'HTTPSConnectionPool(host=''www.engie.design'', port=443): Max retries
     exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ''[SSL: CERTIFICATE_VERIFY_FAILED]
     certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'')))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:07:49+00:00'
-  consecutive_crawl_failures: 1
 - organization: Enigma
   design_system: Boundless
   start_urls:
@@ -1123,11 +1132,11 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:29:04+00:00'
   etag: W/"59a213ec-3940"
   last_modified: Sun, 27 Aug 2017 00:35:56 GMT
   sitemap_url: https://boundless.js.org/sitemap.xml
   sitemap_last_modified: '2017-06-06T04:45:52.951Z'
+  last_checked: '2026-09-16T05:29:04+00:00'
 - organization: Equinor
   design_system: EDS
   start_urls:
@@ -1164,13 +1173,6 @@
   crawl_error: ''
   likely_spa: false
   last_checked: '2026-09-16T12:10:55+00:00'
-  consecutive_crawl_failures: 0
-  unverified_resources: {}
-  content_signals:
-    frameworks:
-    - React
-    governance_model: true
-  sitemap_url: https://brand.estonia.ee/sitemap.xml
   resources:
     figma:
     - https://www.figma.com/design/27fMG3SrUcYhLhyNTmsuV3/%F0%9F%92%8E-DDS-2.0---WIP?node-id=27109-14046&t=Eu83DauGADOHZybD-1
@@ -1183,6 +1185,13 @@
     - https://www.figma.com/design/NZMXNJpfAvyw7GkdxaAexw/%F0%9F%94%B7-Brand---Shapes?node-id=3223-2026&t=GIARDKnjg3Ul0xST-1
     - https://www.figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media?node-id=12839-522&t=08vLCR9227QY6Y4B-1
     - https://www.figma.com/design/G4alDnApAMevLkdNKPG4fgRu/%F0%9F%94%B7-Brand---Icons?node-id=2658-3202&t=RNJ1NBpPvPNJ9enI-1
+  consecutive_crawl_failures: 0
+  unverified_resources: {}
+  content_signals:
+    frameworks:
+    - React
+    governance_model: true
+  sitemap_url: https://brand.estonia.ee/sitemap.xml
 - organization: Eurostar
   design_system: GLU
   start_urls:
@@ -1193,26 +1202,26 @@
     exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''style.eurostar.com'',
     port=443): Failed to resolve ''style.eurostar.com'' ([Errno -2] Name or service
     not known)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:09:38+00:00'
-  consecutive_crawl_failures: 1
 - organization: Family Search
   design_system: Frontier
   start_urls:
   - https://www.familysearch.org/frontier/styleguide/
   pages_indexed: 0
+  resources:
+    agent_instructions:
+    - https://www.familysearch.org/llms.txt
   hit_max_pages: false
   crawl_error: '403 Client Error: Forbidden for url: https://www.familysearch.org/frontier/styleguide/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:10:05+00:00'
-  resources:
-    agent_instructions:
-    - https://www.familysearch.org/llms.txt
-  consecutive_crawl_failures: 1
 - organization: Financial Times
   design_system: Origami
   start_urls:
@@ -1236,11 +1245,11 @@
     Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''design.fusionfabric.cloud'',
     port=443): Failed to resolve ''design.fusionfabric.cloud'' ([Errno -2] Name or
     service not known)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:11:09+00:00'
-  consecutive_crawl_failures: 1
 - organization: Firefox
   design_system: Photon Design System
   start_urls:
@@ -1248,14 +1257,14 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T12:11:46+00:00'
   etag: W/"0160ec9eb2229c14e65ec80d098e60df"
   last_modified: Mon, 14 Sep 2026 15:53:17 GMT
   sitemap_url: https://design.firefox.com/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T12:11:46+00:00'
 - organization: Flexport
   design_system: Latitude
   start_urls:
@@ -1270,7 +1279,7 @@
   start_urls:
   - https://get.foundation/
   pages_indexed: 7
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"67143e7887f91f7d3194e9ad5c45501c-ssl-df"'
@@ -1285,27 +1294,27 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:30:26+00:00'
   etag: W/"bc98fde16c5d0f06d604fdb193116b5e"
   sitemap_url: https://design.foyer.lu/sitemap.xml
+  last_checked: '2026-09-16T05:30:26+00:00'
 - organization: FutureLearn
   design_system: FutureLearn Pattern Library
   start_urls:
   - https://storybook.futurelearn.com/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T12:12:11+00:00'
-  etag: W/"6aaa6d5f-900"
-  last_modified: Wed, 16 Sep 2026 10:20:15 GMT
-  consecutive_crawl_failures: 0
   resources:
     storybook:
     - https://github.com/storybookjs/storybook/tree/master/addons/knobs
     - https://storybook.futurelearn.com/
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  etag: W/"6aaa6d5f-900"
+  last_modified: Wed, 16 Sep 2026 10:20:15 GMT
+  last_checked: '2026-09-16T12:12:11+00:00'
 - organization: GE
   design_system: Edison Design System
   start_urls:
@@ -1351,7 +1360,7 @@
     markdown_docs:
     - https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/packages/gitlab-ui/CONTRIBUTING.md
     - https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/README.md
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"30daaa7917c200376afd76aa4f1630f494d1572776448aa8d6f4a3a2b9435d31"'
@@ -1431,10 +1440,10 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T07:04:10+00:00'
   etag: W/"9fe3994f3822d53a0ff79f19dcb81afa"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://material.io/sitemap.xml
+  last_checked: '2026-09-16T07:04:10+00:00'
 - organization: Google
   design_system: Material Design
   start_urls:
@@ -1442,14 +1451,14 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T12:24:29+00:00'
   etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://material.io/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T12:24:29+00:00'
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
@@ -1458,7 +1467,7 @@
   resources:
     github:
     - https://github.com/alphagov/accessible-autocomplete
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -1470,20 +1479,7 @@
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
-  - https://design-system.service.gov.uk/
-  pages_indexed: 8
-  resources:
-    github:
-    - https://github.com/alphagov/accessible-autocomplete
-  hit_max_pages: true
-  crawl_error: ''
-  likely_spa: false
-  github_meta:
-    license: MIT
-    stars: 954
-    last_pushed: '2026-09-15T10:15:18Z'
-  etag: '"213f7439c10d9f5418a5e1d8a60260a1-ssl-df"'
-  last_checked: '2026-09-16T00:48:12+00:00'
+  - https://www.gov.uk/design-system/
 - organization: Government of Canada
   design_system: Aurora Design System
   start_urls:
@@ -1493,7 +1489,7 @@
     github:
     - https://github.com/gctools-outilsgc/aurora-design-system
     - https://github.com/gctools-outilsgc/design-system-code
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -1516,7 +1512,7 @@
     - https://www.canada.ca/CLAUDE.md
     mcp:
     - https://www.canada.ca/.well-known/mcp.json
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"6aa98a78-4ecc"
@@ -1569,11 +1565,11 @@
     exceeded with url: /design/ (Caused by NameResolutionError("HTTPSConnection(host=''developer.dxc.com'',
     port=443): Failed to resolve ''developer.dxc.com'' ([Errno -2] Name or service
     not known)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:34:24+00:00'
-  consecutive_crawl_failures: 1
 - organization: Heartbeat
   design_system: .pulse
   start_urls:
@@ -1581,11 +1577,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '526 Server Error: <none> for url: https://pulse.heartbeat.ua/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:34:34+00:00'
-  consecutive_crawl_failures: 1
 - organization: Helios Design System
   design_system: Hashicorp
   start_urls:
@@ -1611,7 +1607,7 @@
     - https://helios.hashicorp.design/CLAUDE.md
     mcp:
     - https://helios.hashicorp.design/.well-known/mcp.json
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"9b5a890ec305cf14b5db719a77f2a649"
@@ -1646,13 +1642,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T06:14:17+00:00'
   etag: W/"6a5a0b3b-a3c78"
   last_modified: Fri, 17 Jul 2026 11:00:11 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T06:14:17+00:00'
 - organization: Heroku
   design_system: Heroki Design
   start_urls:
@@ -1680,7 +1676,7 @@
     - https://v2.grommet.io/CLAUDE.md
     mcp:
     - https://v2.grommet.io/.well-known/mcp.json
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -1692,35 +1688,7 @@
 - organization: Hewlett Packard
   design_system: Grommet
   start_urls:
-  - https://v2.grommet.io/
-  pages_indexed: 7
-  resources:
-    github:
-    - https://github.com/grommet/grommet-starter-existing-app
-    - https://github.com/grommet/grommet-starter-new-app
-    - https://github.com/grommet/grommet
-    storybook:
-    - https://storybook.grommet.io/?path=/story/Layout-Box
-    - https://storybook.grommet.io/?path=/story/Layout-Grid
-    icons:
-    - https://icons.grommet.io
-    - https://v2.grommet.io/icons
-    agent_instructions:
-    - https://v2.grommet.io/llms.txt
-    - https://v2.grommet.io/llms-full.txt
-    - https://v2.grommet.io/AGENTS.md
-    - https://v2.grommet.io/CLAUDE.md
-    mcp:
-    - https://v2.grommet.io/.well-known/mcp.json
-  hit_max_pages: true
-  crawl_error: ''
-  likely_spa: false
-  github_meta:
-    license: Apache-2.0
-    stars: 84
-    last_pushed: '2023-01-10T03:27:49Z'
-  etag: '"2bf20c8558a1c61aa84a15c6be85e9f5-ssl-df"'
-  last_checked: '2026-09-16T00:50:38+00:00'
+  - https://grommet.io/
 - organization: Hubspot
   design_system: Canvas Design System
   start_urls:
@@ -1746,14 +1714,14 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T06:15:26+00:00'
   etag: W/"6659ce48-5ae7a"
   last_modified: Fri, 31 May 2024 13:19:04 GMT
   sitemap_url: https://uniform.hudl.com/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T06:15:26+00:00'
 - organization: IBM
   design_system: Carbon Design System
   start_urls:
@@ -1881,11 +1849,11 @@
     governance_model: true
     codemods: true
     figma_code_connect: true
-  sitemap_url: https://carbondesignsystem.com/sitemap-0.xml
   npm_meta:
     latest_version: 8.67.0
     last_published: '2024-09-26T17:38:09.175Z'
     weekly_downloads: 11472
+  sitemap_url: https://carbondesignsystem.com/sitemap-0.xml
 - organization: IBM
   design_system: IBM Design Language
   start_urls:
@@ -1897,7 +1865,7 @@
     - https://www.figma.com/design/PkUl9UBuvA41GPpyl84NBc/IBM%C2%AE-Pictogram-Library?m=auto
     icons:
     - https://github.com/carbon-design-system/carbon/tree/master/packages/icons/src/svg
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"d06155884eb8450df57b3d7797cab294"'
@@ -1910,13 +1878,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T12:48:12+00:00'
   etag: '"6a4ff4d2-13cf"'
   last_modified: Thu, 09 Jul 2026 19:21:54 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T12:48:12+00:00'
 - organization: Infor
   design_system: Infor Design System
   start_urls:
@@ -1945,7 +1913,7 @@
   resources:
     markdown_docs:
     - https://github.com/ing-bank/lion/blob/master/CONTRIBUTING.md
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"7ffa9a02b58c9dff04a564dfb8bea3e3-ssl-df"
@@ -1987,10 +1955,10 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-09-16T12:50:47+00:00'
+  last_checked: '2026-09-16T12:52:28+00:00'
   consecutive_crawl_failures: 0
-  unverified_resources: {}
-  content_signals:
+  unverified_resources: &id001 {}
+  content_signals: &id002
     frameworks:
     - React
   sitemap_url: https://designhubstg.wpengine.com/sitemap.xml
@@ -2004,10 +1972,8 @@
   likely_spa: false
   last_checked: '2026-09-16T12:52:28+00:00'
   consecutive_crawl_failures: 0
-  unverified_resources: {}
-  content_signals:
-    frameworks:
-    - React
+  unverified_resources: *id001
+  content_signals: *id002
   sitemap_url: https://designhubstg.wpengine.com/sitemap.xml
 - organization: iStreamPlanet
   design_system: Pebble Design System
@@ -2095,22 +2061,22 @@
   start_urls:
   - https://jetbrains.github.io/ring-ui/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T12:54:58+00:00'
-  etag: '"6aa7dc4c-ac"'
-  last_modified: Mon, 14 Sep 2026 11:36:44 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/JetBrains/ring-ui
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: Apache-2.0
     stars: 3790
     last_pushed: '2026-09-14T11:34:41Z'
+  etag: '"6aa7dc4c-ac"'
+  last_modified: Mon, 14 Sep 2026 11:36:44 GMT
+  last_checked: '2026-09-16T12:54:58+00:00'
 - organization: JSTOR
   design_system: Pharos
   start_urls:
@@ -2118,12 +2084,12 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T06:18:58+00:00'
   etag: '"d7682c5e79bc5013a992bb90aad1e60a-ssl-df"'
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T06:18:58+00:00'
 - organization: Just Eat Takeaway
   design_system: PIE
   start_urls:
@@ -2358,11 +2324,11 @@
     - SwiftUI
     dark_mode: true
     validation_loop: true
-  sitemap_url: https://pie.design/sitemap.xml
   npm_meta:
     latest_version: 0.11.20
     last_published: '2026-09-10T07:31:50.291Z'
     weekly_downloads: 1411
+  sitemap_url: https://pie.design/sitemap.xml
 - organization: Kajabi
   design_system: Sage
   start_urls:
@@ -2410,7 +2376,7 @@
     - https://www.kickstartds.com/docs/guides/create/storybook
     figma:
     - https://www.figma.com/file/H7F4P2fsDgEkIcc7U1alk1/kickstartDS-Design-Tokens
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -2429,11 +2395,11 @@
     with url: / (Caused by NameResolutionError("HTTPSConnection(host=''orbit.kiwi'',
     port=443): Failed to resolve ''orbit.kiwi'' ([Errno -5] No address associated
     with hostname)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T12:56:54+00:00'
-  consecutive_crawl_failures: 1
 - organization: KoliBri
   design_system: KoliBri - Public UI
   start_urls:
@@ -2478,25 +2444,25 @@
   start_urls:
   - https://basis.now.sh/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T13:04:48+00:00'
-  etag: W/"6772da25e4c11e05c9d56478fe882fa37b8baa6241c294388534e67db4e61bc1"
-  last_modified: Mon, 14 Sep 2026 21:01:26 GMT
-  sitemap_url: https://basis.vercel.app/sitemap.xml
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/LatitudeFinancialOSS/basis
     icons:
     - https://basis.vercel.app/components/icon
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: MIT
     stars: 61
     last_pushed: '2024-02-13T05:12:28Z'
+  etag: W/"6772da25e4c11e05c9d56478fe882fa37b8baa6241c294388534e67db4e61bc1"
+  last_modified: Mon, 14 Sep 2026 21:01:26 GMT
+  sitemap_url: https://basis.vercel.app/sitemap.xml
+  last_checked: '2026-09-16T13:04:48+00:00'
 - organization: Liferay
   design_system: Lexicon
   start_urls:
@@ -2504,13 +2470,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '404 Client Error: Not Found for url: https://liferay.design/lexicon/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:05:13+00:00'
   sitemap_url: https://liferay.design/sitemap.xml
   sitemap_last_modified: '2026-07-17T00:45:33+00:00'
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T13:05:13+00:00'
 - organization: LINE
   design_system: LINE Design System
   start_urls:
@@ -2518,13 +2484,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T06:21:43+00:00'
   etag: W/"9f0c69a8ffd437b5d071d45a25eb247a"
   last_modified: Wed, 26 Feb 2025 09:02:07 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T06:21:43+00:00'
 - organization: LocalTapiola
   design_system: Duet
   start_urls:
@@ -2536,7 +2502,7 @@
     - https://github.com/duetds/duet-example-react
     icons:
     - https://www.duetds.com/components/icon/
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -2556,27 +2522,16 @@
     retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''rizzo.lonelyplanet.com'',
     port=443): Failed to resolve ''rizzo.lonelyplanet.com'' ([Errno -5] No address
     associated with hostname)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T13:07:18+00:00'
-  consecutive_crawl_failures: 1
 - organization: Loom
   design_system: Lens
   start_urls:
   - https://lens.loom.dev/
   pages_indexed: 8
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
-  likely_spa: false
-  unverified_resources: {}
-  content_signals:
-    frameworks:
-    - React
-  last_checked: '2026-09-16T07:07:24+00:00'
-  etag: W/"de1f67a58ae3204ca137e4b15d45b81b"
-  last_modified: Mon, 14 Sep 2026 15:04:56 GMT
   resources:
     github:
     - https://github.com/loomhq/lens
@@ -2586,10 +2541,21 @@
     - https://lens.loom.dev/components/icon
     - https://atlassian.design/components/icon/icon-tile/examples
     - https://lens.loom.dev/icons/icon-set
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: false
+  unverified_resources: {}
+  content_signals:
+    frameworks:
+    - React
   npm_meta:
     latest_version: 12.20.6
     last_published: '2026-09-04T17:19:44.020Z'
     weekly_downloads: 11942
+  etag: W/"de1f67a58ae3204ca137e4b15d45b81b"
+  last_modified: Mon, 14 Sep 2026 15:04:56 GMT
+  last_checked: '2026-09-16T07:07:24+00:00'
 - organization: Louder Than Ten
   design_system: Manual
   start_urls:
@@ -2599,6 +2565,13 @@
   crawl_error: ''
   likely_spa: false
   last_checked: '2026-09-16T13:08:30+00:00'
+  resources:
+    github:
+    - https://github.com/lindseydiloreto/craft-cpjs
+    - https://github.com/benjamminf/craft-neo
+    - https://github.com/lindseydiloreto/craft-cpcss
+    - https://github.com/jamiepittock/craft-typogrify
+    - https://github.com/sjelfull/Craft-Lettering
   consecutive_crawl_failures: 0
   unverified_resources:
     github:
@@ -2610,19 +2583,12 @@
   content_signals:
     frameworks:
     - React
-  sitemap_url: https://www.louderthanten.com/sitemap.xml
-  sitemap_last_modified: '2024-02-26T15:54:50-08:00'
-  resources:
-    github:
-    - https://github.com/lindseydiloreto/craft-cpjs
-    - https://github.com/benjamminf/craft-neo
-    - https://github.com/lindseydiloreto/craft-cpcss
-    - https://github.com/jamiepittock/craft-typogrify
-    - https://github.com/sjelfull/Craft-Lettering
   github_meta:
     license: MIT
     stars: 43
     last_pushed: '2024-03-12T02:31:10Z'
+  sitemap_url: https://www.louderthanten.com/sitemap.xml
+  sitemap_last_modified: '2024-02-26T15:54:50-08:00'
 - organization: Mail.ru
   design_system: Group Paradigm
   start_urls:
@@ -2730,7 +2696,7 @@
     agent_instructions:
     - https://mantine.dev/llms.txt
     - https://mantine.dev/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -2750,30 +2716,30 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '401 Client Error: Unauthorized for url: https://www.mapbox.com/design-system'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:12:11+00:00'
   sitemap_url: https://www.mapbox.com/sitemap.xml
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T13:12:11+00:00'
 - organization: Marvel
   design_system: Marvel Styleguide
   start_urls:
   - https://marvelapp.com/styleguide/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T13:12:42+00:00'
-  etag: W/"602d490c-aea"
-  last_modified: Wed, 17 Feb 2021 16:49:16 GMT
-  sitemap_url: https://marvelapp.com/sitemap.xml
-  consecutive_crawl_failures: 0
   resources:
     icons:
     - https://marvelapp.com/styleguide/design/icons
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  etag: W/"602d490c-aea"
+  last_modified: Wed, 17 Feb 2021 16:49:16 GMT
+  sitemap_url: https://marvelapp.com/sitemap.xml
+  last_checked: '2026-09-16T13:12:42+00:00'
 - organization: ''
   design_system: Material 3
   start_urls:
@@ -2781,15 +2747,15 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:13:06+00:00'
   etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://m3.material.io/sitemap.xml
   sitemap_last_modified: '2026-09-08'
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T13:13:06+00:00'
 - organization: Materialize
   design_system: Materialize CSS
   start_urls:
@@ -2833,15 +2799,15 @@
   crawl_error: ''
   likely_spa: false
   last_checked: '2026-09-16T13:40:55+00:00'
+  resources:
+    github:
+    - https://github.com/features/copilot
   consecutive_crawl_failures: 0
   unverified_resources:
     github:
     - https://github.com/features/copilot
   content_signals: {}
   sitemap_url: https://www.microsoft.com/store/sitemap-index.xml
-  resources:
-    github:
-    - https://github.com/features/copilot
 - organization: Microsoft
   design_system: Fluent UI
   start_urls:
@@ -2849,13 +2815,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:15:19+00:00'
   last_modified: Wed, 16 Sep 2026 13:05:22 GMT
   sitemap_url: https://developer.microsoft.com/_devcom/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T13:15:19+00:00'
 - organization: Mixpanel
   design_system: Mixpanel DS
   start_urls:
@@ -2863,11 +2829,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '403 Client Error: Forbidden for url: https://brand.mixpanel.com/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T13:15:41+00:00'
-  consecutive_crawl_failures: 1
 - organization: MongoDB
   design_system: MongoDB Design System
   start_urls:
@@ -2875,7 +2841,7 @@
 - organization: MongoDB
   design_system: MongoDB Design System
   start_urls:
-  - https://www.mongodb.design/
+  - https://mongodb.design/
 - organization: Monzo
   design_system: Monzo Tone of Voice
   start_urls:
@@ -2943,13 +2909,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:18:18+00:00'
   etag: W/"1789130985912"
   sitemap_url: https://acorn.firefox.com/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T13:18:18+00:00'
 - organization: Mutual of Omaha
   design_system: Digital Design Guide
   start_urls:
@@ -3011,7 +2977,7 @@
     agent_instructions:
     - https://github.com/llms.txt
     - https://github.com/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -3028,24 +2994,24 @@
   start_urls:
   - https://ni.github.io/design-system/
   pages_indexed: 1
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: false
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T06:28:30+00:00'
-  etag: W/"5f8ddc7e-7a05"
-  last_modified: Mon, 19 Oct 2020 18:35:42 GMT
   resources:
     github:
     - https://github.com/ni/design-system
     icons:
     - https://ni.github.io/design-system/style/icons/
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: NOASSERTION
     stars: 6
     last_pushed: '2024-06-04T04:24:53Z'
-  consecutive_crawl_failures: 0
+  etag: W/"5f8ddc7e-7a05"
+  last_modified: Mon, 19 Oct 2020 18:35:42 GMT
+  last_checked: '2026-09-16T06:28:30+00:00'
 - organization: NationBuilder
   design_system: Radius
   start_urls:
@@ -3053,19 +3019,19 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '403 Client Error: Forbidden for url: https://www.nationbuilder.design/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:23:55+00:00'
   sitemap_url: https://www.nationbuilder.design/sitemap_index.xml
   sitemap_last_modified: '2026-09-16T13:23:55Z'
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T13:23:55+00:00'
 - organization: Neurodiversity
   design_system: Design system
   start_urls:
   - https://neurodiversity.design/
   pages_indexed: 8
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   last_modified: Wed, 03 Dec 2025 08:16:31 GMT
@@ -3081,7 +3047,7 @@
     - https://github.com/ITS-HCD/nysds
     figma:
     - https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"6aa41fc1-5ccb"
@@ -3110,14 +3076,14 @@
   crawl_error: ''
   likely_spa: false
   last_checked: '2026-09-16T13:27:58+00:00'
-  consecutive_crawl_failures: 0
-  unverified_resources: {}
-  content_signals:
-    exemplars: true
   resources:
     icons:
     - https://m3.material.io/styles/icons/overview
     - https://m3.material.io/styles/icons/designing-icons
+  consecutive_crawl_failures: 0
+  unverified_resources: {}
+  content_signals:
+    exemplars: true
 - organization: News UK
   design_system: NewsKit
   start_urls:
@@ -3139,7 +3105,7 @@
     icons:
     - https://fonts.google.com/icons
     - https://www.newskit.co.uk/components/icons/
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -3157,7 +3123,7 @@
   resources:
     github:
     - https://github.com/nhsuk/nhsuk-frontend
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -3197,7 +3163,7 @@
     - https://www.meshdesignsystem.com/CLAUDE.md
     mcp:
     - https://www.meshdesignsystem.com/.well-known/mcp.json
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   last_modified: Thu, 10 Sep 2026 01:55:05 GMT
@@ -3207,24 +3173,6 @@
   start_urls:
   - https://nordhealth.design/
   pages_indexed: 8
-  hit_max_pages: true
-  crawl_error: ''
-  likely_spa: false
-  unverified_resources:
-    github:
-    - https://github.com/salesforce-ux/theo
-  content_signals:
-    tokens_format: Figma Variables
-    frameworks:
-    - React
-    - Vue
-    - Web Components
-    validation_loop: true
-    token_enforcement: true
-  last_checked: '2026-09-16T05:16:42+00:00'
-  etag: W/"6aa123cd-ab2e"
-  last_modified: Wed, 09 Sep 2026 09:15:57 GMT
-  sitemap_url: https://nordhealth.design/sitemap.xml
   resources:
     github:
     - https://github.com/salesforce-ux/theo
@@ -3239,6 +3187,24 @@
     agent_instructions:
     - https://nordhealth.design/llms.txt
     - https://nordhealth.design/llms-full.txt
+  hit_max_pages: false
+  crawl_error: ''
+  likely_spa: false
+  unverified_resources:
+    github:
+    - https://github.com/salesforce-ux/theo
+  content_signals:
+    tokens_format: Figma Variables
+    frameworks:
+    - React
+    - Vue
+    - Web Components
+    validation_loop: true
+    token_enforcement: true
+  etag: W/"6aa123cd-ab2e"
+  last_modified: Wed, 09 Sep 2026 09:15:57 GMT
+  sitemap_url: https://nordhealth.design/sitemap.xml
+  last_checked: '2026-09-16T05:16:42+00:00'
 - organization: NS Dutch Railways
   design_system: Tractie
   start_urls:
@@ -3246,13 +3212,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:50:33+00:00'
   etag: W/"626d1569dc4c895e279ea31acf93af0f"
   sitemap_url: https://tractie.ns.nl/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T13:50:33+00:00'
 - organization: Nulogy
   design_system: Nulogy Design System
   start_urls:
@@ -3262,7 +3228,7 @@
     icons:
     - https://fonts.google.com/icons
     - https://nulogy.design/components/icon
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"63652f25-bd94"
@@ -3305,29 +3271,29 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T07:12:06+00:00'
   etag: 8244fcb9cfb00a08aac8e41cc6a41b3af4ea9fc9
+  last_checked: '2026-09-16T07:12:06+00:00'
 - organization: Palantir
   design_system: Blueprint
   start_urls:
   - https://blueprintjs.com/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T13:51:01+00:00'
-  etag: W/"6a7fac66-d5d"
-  last_modified: Sat, 15 Aug 2026 00:01:42 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/palantir/blueprint
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: Apache-2.0
     stars: 22065
     last_pushed: '2026-09-15T21:09:12Z'
+  etag: W/"6a7fac66-d5d"
+  last_modified: Sat, 15 Aug 2026 00:01:42 GMT
+  last_checked: '2026-09-16T13:51:01+00:00'
 - organization: PAQT
   design_system: Graphite Design System
   start_urls:
@@ -3352,11 +3318,11 @@
     exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''studio.patreon.com'',
     port=443): Failed to resolve ''studio.patreon.com'' ([Errno -2] Name or service
     not known)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T13:52:23+00:00'
-  consecutive_crawl_failures: 1
 - organization: Pega Digital
   design_system: Bolt Design System
   start_urls:
@@ -3393,13 +3359,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:56:25+00:00'
   etag: W/"5ed7cd79-1f6"
   last_modified: Wed, 03 Jun 2020 16:19:05 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T13:56:25+00:00'
 - organization: Pivotal software
   design_system: Pivotal UI
   start_urls:
@@ -3416,13 +3382,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T13:56:58+00:00'
   etag: W/"ec0d37d528c5a56b2ec2ccf3ec035231"
   sitemap_url: https://design-system.pluralsight.com/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T13:56:58+00:00'
 - organization: Priceline
   design_system: Priceline One
   start_urls:
@@ -3430,7 +3396,7 @@
 - organization: Priceline
   design_system: Priceline One
   start_urls:
-  - https://pricelinelabs.github.io/design-system/
+  - https://priceline.github.io/design-system/
 - organization: Pusher
   design_system: Chameleon
   start_urls:
@@ -3462,11 +3428,11 @@
     retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''sparkdesignsystem.com'',
     port=443): Failed to resolve ''sparkdesignsystem.com'' ([Errno -5] No address
     associated with hostname)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T13:57:44+00:00'
-  consecutive_crawl_failures: 1
 - organization: Radix
   design_system: Radix UI
   start_urls:
@@ -3476,64 +3442,64 @@
   start_urls:
   - https://rambler-digital-solutions.github.io/rambler-ui/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T13:58:10+00:00'
-  etag: W/"67879f81-437"
-  last_modified: Wed, 15 Jan 2025 11:44:01 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/rambler-digital-solutions/rambler-ui
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: MIT
     stars: 190
     last_pushed: '2025-01-15T11:41:06Z'
+  etag: W/"67879f81-437"
+  last_modified: Wed, 15 Jan 2025 11:44:01 GMT
+  last_checked: '2026-09-16T13:58:10+00:00'
 - organization: Rambler
   design_system: Ratio
   start_urls:
   - https://ui-kit.rambler.ru/#/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T13:58:34+00:00'
-  etag: W/"67879f82-437"
-  last_modified: Wed, 15 Jan 2025 11:44:02 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/rambler-digital-solutions/rambler-ui
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: MIT
     stars: 190
     last_pushed: '2025-01-15T11:41:06Z'
+  etag: W/"67879f82-437"
+  last_modified: Wed, 15 Jan 2025 11:44:02 GMT
+  last_checked: '2026-09-16T13:58:34+00:00'
 - organization: ''
   design_system: React95
   start_urls:
   - https://react95.github.io/React95/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T13:58:55+00:00'
-  etag: W/"6a9880eb-13d2"
-  last_modified: Wed, 02 Sep 2026 20:02:51 GMT
-  consecutive_crawl_failures: 0
   resources:
     github:
     - https://github.com/React95/React95
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: NOASSERTION
     stars: 3824
     last_pushed: '2026-09-02T20:02:28Z'
+  etag: W/"6a9880eb-13d2"
+  last_modified: Wed, 02 Sep 2026 20:02:51 GMT
+  last_checked: '2026-09-16T13:58:55+00:00'
 - organization: Red Hat
   design_system: Patternfly Design System
   start_urls:
@@ -3698,7 +3664,7 @@
     - https://www.redhat.com/en/about/brand/standards/icons
     - https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/scripts/icons/pfToRhIcons.mjs
     - https://www.patternfly.org/components/icon
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -3723,7 +3689,7 @@
     - https://www.npmjs.com/package/@rei/cedar
     icons:
     - https://rei.github.io/rei-cedar-docs/icons/overview/
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -3743,13 +3709,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T06:39:08+00:00'
   etag: W/"5fbbe617-48c"
   last_modified: Mon, 23 Nov 2020 16:40:55 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T06:39:08+00:00'
 - organization: ''
   design_system: Reshaped
   start_urls:
@@ -3757,20 +3723,23 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '404 Client Error: Not Found for url: https://www.reshaped.so/content/docs/getting-started/overview'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:04:37+00:00'
   etag: W/"10ca1513ccbc6768ea4571421be36ae0"
   last_modified: Wed, 09 Sep 2026 23:03:15 GMT
   sitemap_url: https://reshaped.so/sitemap.xml
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T14:04:37+00:00'
 - organization: Royal Canin
   design_system: Royal Canin's Design Language
   start_urls:
   - https://developer.royalcanin.com/
   pages_indexed: 8
-  hit_max_pages: true
+  resources:
+    github:
+    - https://github.com/roadhump/SublimeLinter-eslint
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   unverified_resources:
@@ -3778,17 +3747,14 @@
     - https://github.com/roadhump/SublimeLinter-eslint
   content_signals:
     validation_loop: true
-  last_checked: '2026-09-16T05:24:17+00:00'
-  etag: '"06f8f5297f0d91:0"'
-  last_modified: Tue, 26 Sep 2023 16:34:30 GMT
-  sitemap_url: https://developer.royalcanin.com/sitemap.xml
-  resources:
-    github:
-    - https://github.com/roadhump/SublimeLinter-eslint
   github_meta:
     license: MIT
     stars: 861
     last_pushed: '2025-02-27T16:36:34Z'
+  etag: '"06f8f5297f0d91:0"'
+  last_modified: Tue, 26 Sep 2023 16:34:30 GMT
+  sitemap_url: https://developer.royalcanin.com/sitemap.xml
+  last_checked: '2026-09-16T05:24:17+00:00'
 - organization: Sainsbury's
   design_system: Luna
   start_urls:
@@ -3799,11 +3765,11 @@
     retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''luna.sainsburys.co.uk'',
     port=443): Failed to resolve ''luna.sainsburys.co.uk'' ([Errno -2] Name or service
     not known)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T14:05:00+00:00'
-  consecutive_crawl_failures: 1
 - organization: Salesforce
   design_system: Lightning Design System
   start_urls:
@@ -3811,19 +3777,19 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:05:34+00:00'
   etag: W/"be51c95d757d73db6b7dfc0b69fa9d14"
   sitemap_url: https://www.lightningdesignsystem.com/sitemap.xml
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T14:05:34+00:00'
 - organization: Samsung
   design_system: Tizen CircularUI
   start_urls:
   - https://developer.samsung.com/one-ui-watch-tizen/
   pages_indexed: 8
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"199f9-7Yj8EUnl0/dQajaKF1GCZNYuMB8"
@@ -3835,11 +3801,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '403 Client Error: Forbidden for url: https://www.sap.com/design-system/fiori-design-web'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T14:08:11+00:00'
-  consecutive_crawl_failures: 1
 - organization: SAP
   design_system: Fiori Fundamentals
   start_urls:
@@ -3870,22 +3836,22 @@
   start_urls:
   - https://openui5.org/documentation
   pages_indexed: 1
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: false
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T14:09:34+00:00'
-  etag: W/"6a9ab2e2-32bd"
-  last_modified: Fri, 04 Sep 2026 12:00:34 GMT
   resources:
     github:
     - https://github.com/SAP/openui5-sample-app
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: false
+  unverified_resources: {}
+  content_signals: {}
   github_meta:
     license: Apache-2.0
     stars: 304
     last_pushed: '2026-09-01T09:57:14Z'
-  consecutive_crawl_failures: 0
+  etag: W/"6a9ab2e2-32bd"
+  last_modified: Fri, 04 Sep 2026 12:00:34 GMT
+  last_checked: '2026-09-16T14:09:34+00:00'
 - organization: Scania
   design_system: Tegel
   start_urls:
@@ -3905,11 +3871,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '403 Client Error: Forbidden for url: https://tegel.scania.com/home/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T14:09:33+00:00'
-  consecutive_crawl_failures: 1
 - organization: Seek
   design_system: Braid Design System
   start_urls:
@@ -3918,7 +3884,7 @@
   resources:
     github:
     - https://github.com/seek-oss/playroom
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4070,7 +4036,7 @@
     - https://semi.design/CLAUDE.md
     mcp:
     - https://semi.design/.well-known/mcp.json
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   npm_meta:
@@ -4091,7 +4057,7 @@
     - https://developer.semrush.com/intergalactic/style/icon/icon
     agent_instructions:
     - https://developer.semrush.com/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4112,11 +4078,11 @@
   hit_max_pages: false
   crawl_error: 'HTTPSConnectionPool(host=''horizon.servicenow.com'', port=443): Read
     timed out. (read timeout=15)'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T14:18:34+00:00'
-  consecutive_crawl_failures: 1
 - organization: ServiceTitan
   design_system: Anvil
   start_urls:
@@ -4202,7 +4168,7 @@
     - https://www.designsystem.tech.gov.sg/CLAUDE.md
     mcp:
     - https://www.designsystem.tech.gov.sg/.well-known/mcp.json
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"ce87ddc84e207c0661f3d1b6e84aa7b1"
@@ -4218,16 +4184,16 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:29:10+00:00'
   etag: '"a1c772b9bc103ffc3dd92ed9a2179ba05d1432e6fb57483c861a65d90257899a"'
   last_modified: Tue, 15 Sep 2026 11:34:58 GMT
   sitemap_url: https://panda.sipgatedesign.com/sitemap.xml
+  last_checked: '2026-09-16T05:29:10+00:00'
 - organization: SIS Gov UK
   design_system: Intelligence Community Design System
   start_urls:
   - https://design.sis.gov.uk/
   pages_indexed: 8
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"6a8c5a88-2e3e01"
@@ -4240,14 +4206,14 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '404 Client Error: Not Found for url: https://www.sky.com/toolkit/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:26:11+00:00'
   etag: '"a23cc0663788b9253e7d833606869bb3:1781101607.475861"'
   last_modified: Wed, 10 Jun 2026 14:26:47 GMT
   sitemap_url: https://www.sky.com/sitemap_index.xml
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T14:26:11+00:00'
 - organization: Skyscanner
   design_system: Backpack
   start_urls:
@@ -4255,7 +4221,7 @@
 - organization: Skyscanner
   design_system: Backpack
   start_urls:
-  - https://skyscanner.design/
+  - https://backpack.github.io/
 - organization: SpareBank 1
   design_system: SpareBank 1 Designsystem
   start_urls:
@@ -4300,7 +4266,7 @@
     agent_instructions:
     - https://stackoverflow.design/llms.txt
     - https://stackoverflow.design/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4316,13 +4282,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '404 Client Error: Not Found for url: https://www.starbucks.com/developer/pattern-library/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:28:15+00:00'
   etag: '"7kl1l68iou1f0t"'
   sitemap_url: https://www.starbucks.com/sitemap.xml
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T14:28:15+00:00'
 - organization: State of New South Wales
   design_system: Digital NSW
   start_urls:
@@ -4358,11 +4324,11 @@
     Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host=''styleguide.studyportals.com'',
     port=443): Failed to resolve ''styleguide.studyportals.com'' ([Errno -5] No address
     associated with hostname)"))'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T14:29:14+00:00'
-  consecutive_crawl_failures: 1
 - organization: Sumup
   design_system: CircuitUI
   start_urls:
@@ -4373,9 +4339,9 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T05:30:51+00:00'
   etag: W/"e24b6bec0ed3a0ea6d41b2cc56633fdc"
   last_modified: Tue, 15 Sep 2026 10:11:17 GMT
+  last_checked: '2026-09-16T05:30:51+00:00'
 - organization: ''
   design_system: Teambition Clarity Design
   start_urls:
@@ -4391,8 +4357,8 @@
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T07:24:48+00:00'
   sitemap_url: https://brandfactory.telefonica.com/sitemap.xml
+  last_checked: '2026-09-16T07:24:48+00:00'
 - organization: Thumbtack
   design_system: Thumbprint
   start_urls:
@@ -4404,7 +4370,7 @@
     icons:
     - https://thumbprint.design/internal/icons
     - https://thumbprint.design/icons/
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4446,7 +4412,7 @@
     - https://github.com/wmcadigital/wmn-design-system/blob/master/doc/contributing.md
     icons:
     - https://designsystem.tfwm.org.uk/styles/icons
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4495,7 +4461,7 @@
     - https://www.figma.com/file/afurtw4iqQe6y4gXfNfkkk/VADS-Component-Library?type=design&node-id=121%3A1484&mode=design&t=ygQCLqlAL5VdSPil-1
     agent_instructions:
     - https://design.va.gov/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"6aa59b9f30e1379fb629c3d5c382198c"
@@ -4511,7 +4477,7 @@
     - https://github.com/postcss/autoprefixer
     agent_instructions:
     - https://designsystem.digital.gov/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4548,7 +4514,7 @@
     - https://github.com/CMSgov/design-system/blob/main/CONTRIBUTING.md
     agent_instructions:
     - https://design.cms.gov/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4565,12 +4531,12 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '404 Client Error: Not Found for url: https://uspto.github.io/USPTO-Design-System/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:48:17+00:00'
   etag: W/"6aa9b47d-239b"
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T14:48:17+00:00'
 - organization: United States Space Force
   design_system: Astro
   start_urls:
@@ -4587,7 +4553,7 @@
     - https://www.npmjs.com/package/@astrouxds/angular
     icons:
     - https://github.com/RocketCommunicationsInc/astro/tree/main/packages/web-components/src/icons
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
@@ -4606,12 +4572,12 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '404 Client Error: Not Found for url: https://usajobs.github.io/design-system/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:48:56+00:00'
   etag: W/"6aa9b47d-239b"
-  consecutive_crawl_failures: 1
+  last_checked: '2026-09-16T14:48:56+00:00'
 - organization: uSwitch
   design_system: uStyle
   start_urls:
@@ -4650,7 +4616,7 @@
     - https://vercel.com/llms-full.txt
     - https://vercel.com/AGENTS.md
     - https://vercel.com/CLAUDE.md
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   npm_meta:
@@ -4665,32 +4631,32 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:52:22+00:00'
   etag: W/"67194c2f-252"
   last_modified: Wed, 23 Oct 2024 19:19:11 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T14:52:22+00:00'
 - organization: VMware
   design_system: Clarity Design System
   start_urls:
   - https://clarity.design/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T14:52:53+00:00'
-  etag: '"6ad3f8a79266c7adec050ab5c240718b-ssl-df"'
-  sitemap_url: https://clarity.design/sitemap.xml
-  consecutive_crawl_failures: 0
   resources:
     storybook:
     - https://storybook.clarity.design
     icons:
     - /documentation/icons
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  etag: '"6ad3f8a79266c7adec050ab5c240718b-ssl-df"'
+  sitemap_url: https://clarity.design/sitemap.xml
+  last_checked: '2026-09-16T14:52:53+00:00'
 - organization: Volvo Cars Web Design System
   design_system: Volvo
   start_urls:
@@ -4710,13 +4676,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-16T14:53:43+00:00'
   etag: W/"694587fe-1a6"
   last_modified: Fri, 19 Dec 2025 17:14:38 GMT
-  consecutive_crawl_failures: 0
+  last_checked: '2026-09-16T14:53:43+00:00'
 - organization: ''
   design_system: Vue Design System
   start_urls:
@@ -4745,7 +4711,7 @@
   start_urls:
   - https://build.washingtonpost.com/
   pages_indexed: 7
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"e15cb3a49be386de378ba0e9eb71e9e0"
@@ -4756,18 +4722,18 @@
   start_urls:
   - https://momentum.design/
   pages_indexed: 0
-  hit_max_pages: false
-  crawl_error: ''
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
-  last_checked: '2026-09-16T14:54:21+00:00'
-  etag: '"6aa85ca2-46"'
-  last_modified: Mon, 14 Sep 2026 20:44:18 GMT
-  consecutive_crawl_failures: 0
   resources:
     skills:
     - https://momentum.design/en/skills/momentum-concierge
+  hit_max_pages: false
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: true
+  unverified_resources: {}
+  content_signals: {}
+  etag: '"6aa85ca2-46"'
+  last_modified: Mon, 14 Sep 2026 20:44:18 GMT
+  last_checked: '2026-09-16T14:54:21+00:00'
 - organization: Welcome to the Jungle
   design_system: Welcome UI
   start_urls:
@@ -4797,11 +4763,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '429 Client Error: Too Many Requests for url: https://gel.westpacgroup.com.au/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T14:54:43+00:00'
-  consecutive_crawl_failures: 1
 - organization: WeWork
   design_system: Ray
   start_urls:
@@ -4887,11 +4853,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: '403 Client Error: Forbidden for url: https://canvas.workday.com/'
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   last_checked: '2026-09-16T14:56:40+00:00'
-  consecutive_crawl_failures: 1
 - organization: Yelp
   design_system: Yelp Styleguide
   start_urls:

@@ -29,9 +29,23 @@ from generate_directory import (
     load_systems,
     thumbnail_src,
 )
-from page_shell import CHECK_ICON_SVG, EXTERNAL_LINK_ICON_SVG, FONT_LINK, GITHUB_ICON_SVG, REPORT_ISSUE_URL, TOKENS_CSS, routes_nav
+from page_shell import (
+    CHECK_ICON_SVG,
+    EXTERNAL_LINK_ICON_SVG,
+    FAVICON_LINK,
+    FIGMA_ICON_SVG,
+    FLAG_ICON_SVG,
+    FONT_LINK,
+    GITHUB_LOGO_SVG,
+    MCP_LOGO_SVG,
+    NPM_LOGO_SVG,
+    REPORT_ISSUE_URL,
+    STORYBOOK_LOGO_SVG,
+    TOKENS_CSS,
+    routes_nav,
+)
 from slug import slugify
-from text_utils import clean_title, dedupe_system_name, full_name, split_org_name
+from text_utils import clean_title, dedupe_system_name, full_name, humanize_url_path, split_org_name
 
 SYSTEMS_DIR = Path(__file__).parent / "systems"
 
@@ -125,7 +139,19 @@ def resource_url_label(url: str) -> str:
     return urlparse(url).netloc
 
 
-_IDENTITY_LABELS = {"GitHub", "npm"}
+# Real brand marks for the resource types common enough to have one — the
+# same recognizable logo a visitor already knows from those tools' own
+# sites, rather than one generic arrow-out-of-box glyph for every resource
+# type regardless of what it actually is. Anything not listed here (MCP
+# server icon aside, which get their own dedicated look below) falls back to
+# EXTERNAL_LINK_ICON_SVG.
+_RESOURCE_ICONS = {
+    "GitHub": GITHUB_LOGO_SVG,
+    "npm": NPM_LOGO_SVG,
+    "Storybook": STORYBOOK_LOGO_SVG,
+    "MCP server": MCP_LOGO_SVG,
+    "Figma": FIGMA_ICON_SVG,
+}
 
 
 def resource_activity(entry: dict, label: str, url: str) -> str:
@@ -147,34 +173,43 @@ def resource_activity(entry: dict, label: str, url: str) -> str:
     return ""
 
 
+# A system with a real monorepo/multi-framework setup can turn up a couple
+# dozen GitHub links or Figma files under one resource type (confirmed live
+# on IBM Carbon: 18+ repos, 20+ Figma files) — a flat wall of pills that long
+# reads as noise, not signal. Grouped by type with a per-group count is the
+# fix either way; a group past this size also starts collapsed so the page
+# opens showing what's THERE (which types, how many) rather than every link.
+RESOURCE_GROUP_COLLAPSE_THRESHOLD = 4
+
+
 def render_resource_list(entry: dict) -> str:
     resources = entry.get("resources") or {}
-    # Any key can have more than one discovered link (e.g. two npm packages)
-    # — every one is shown, not just the first, distinguished by a short
-    # label when there's more than one so they don't look identical.
-    found = [
-        (label, url, len(resources[key]) > 1)
-        for key, label in COLUMNS + DETAIL_ONLY_COLUMNS
-        for url in resources.get(key, [])
-    ]
-    if not found:
+    groups = [(label, resources[key]) for key, label in COLUMNS + DETAIL_ONLY_COLUMNS if resources.get(key)]
+    if not groups:
         return '<p class="empty-note">No secondary resources discovered yet.</p>'
 
-    def link_text(label: str, url: str, show_detail: bool) -> str:
-        # GitHub/npm links already carry their icon, so the generic label
-        # ("GitHub") is redundant — showing the actual repo/package name
-        # instead is more useful than showing the type twice.
-        if label in _IDENTITY_LABELS:
-            return html.escape(resource_url_label(url))
-        return f'{label}{f" — {html.escape(resource_url_label(url))}" if show_detail else ""}'
+    def item_html(label: str, url: str) -> str:
+        # The group header below already names the type (GitHub, Figma, ...),
+        # so each pill just needs to distinguish this link from its siblings
+        # under the same type — the repo/package name, or the host for
+        # anything else.
+        text = html.escape(resource_url_label(url))
+        return f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">{text}</a>{resource_activity(entry, label, url)}</li>'
 
-    items = "".join(
-        f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">'
-        f'{GITHUB_ICON_SVG if label == "GitHub" else EXTERNAL_LINK_ICON_SVG} '
-        f'{link_text(label, url, show_detail)}</a>{resource_activity(entry, label, url)}</li>'
-        for label, url, show_detail in found
-    )
-    return f'<ul class="resource-list">{items}</ul>'
+    def group_html(label: str, urls: list[str]) -> str:
+        count = len(urls)
+        icon = _RESOURCE_ICONS.get(label, EXTERNAL_LINK_ICON_SVG)
+        items = "".join(item_html(label, url) for url in urls)
+        open_attr = "" if count > RESOURCE_GROUP_COLLAPSE_THRESHOLD else " open"
+        return (
+            f'<details class="resource-group"{open_attr}>'
+            f'<summary>{icon} <span class="resource-group-label">{html.escape(label)}</span>'
+            f'<span class="resource-group-count">{count}</span></summary>'
+            f'<ul class="resource-list">{items}</ul>'
+            f"</details>"
+        )
+
+    return "".join(group_html(label, urls) for label, urls in groups)
 
 
 # Split in two: frameworks/tokens describe what the system is BUILT WITH
@@ -213,16 +248,45 @@ _AI_TOOLING_LABELS = {
 }
 
 
-def _signal_pill(label: str, value) -> str:
-    label_html = f'<span class="signal-label">{html.escape(label)}</span>'
+def _signal_pill(label: str, value, source_url: str | None = None) -> str:
+    # A True-valued signal (dark mode, governance documented, ...) has
+    # nothing to attach an eyebrow label to — the label itself IS the whole
+    # claim, so it renders as normal-weight .signal-value text like any
+    # other confirmed detection, not the faint uppercase .signal-label
+    # style. That faint style is reserved for an eyebrow that introduces an
+    # actual attached value (e.g. "ACCESSIBILITY" before "WCAG 2.1 AA") —
+    # applying it to a bare boolean flag's only text made every one of these
+    # pills read as muted/disabled rather than as a positive, confirmed hit.
     if value is True:
-        return f'<span class="signal-pill">{label_html}</span>'
-    value_text = ", ".join(html.escape(v) for v in value) if isinstance(value, list) else html.escape(str(value))
-    return f'<span class="signal-pill">{label_html}<span class="signal-value">{value_text}</span></span>'
+        inner = f'<span class="signal-value">{html.escape(label)}</span>'
+    else:
+        inner = f'<span class="signal-label">{html.escape(label)}</span><span class="signal-value">{html.escape(str(value))}</span>'
+    if source_url:
+        inner += (
+            f'<a class="signal-source" href="{html.escape(source_url)}" target="_blank" rel="noopener" '
+            f'title="Source: {html.escape(source_url)}">{EXTERNAL_LINK_ICON_SVG}</a>'
+        )
+    return f'<span class="signal-pill">{inner}</span>'
 
 
-def _signal_section(title: str, signals: dict, labels: dict) -> str:
-    pills = [_signal_pill(label, signals[key]) for key, label in labels.items() if signals.get(key)]
+def _signal_section(title: str, signals: dict, labels: dict, sources: dict | None = None) -> str:
+    sources = sources or {}
+    pills = []
+    for key, label in labels.items():
+        value = signals.get(key)
+        if not value:
+            continue
+        if key == "frameworks":
+            # Multi-value — one pill per framework rather than one combined
+            # "FRAMEWORKS  React, Vue, ..." pill, so each can carry its own
+            # source link (a system's React docs and Svelte docs are
+            # genuinely different pages) instead of one link standing in
+            # for all of them.
+            framework_sources = sources.get(key) or {}
+            for framework in value:
+                pills.append(_signal_pill(framework, True, framework_sources.get(framework)))
+        else:
+            pills.append(_signal_pill(label, value, sources.get(key)))
     if not pills:
         return ""
     return f"""
@@ -255,56 +319,87 @@ _AI_NATIVE_LABELS = {
 }
 
 
-def _detect_ai_native(entry: dict) -> dict[str, bool]:
+def _detect_ai_native(entry: dict) -> tuple[dict[str, bool], dict[str, str]]:
     """Maps this system's already-detected resources/content_signals onto
     the 11-category taxonomy above. Five categories are genuinely new
     detectors (see content_signals.py); the rest reuse a resource or signal
     that was already being tracked for a different reason, just re-read
-    through this particular lens."""
+    through this particular lens. Returns (flags, sources) — sources gives
+    the one real URL backing each detected flag (a resource link already
+    has one; a content_signals-based flag uses the crawled page
+    content_signals.py recorded it on) so a visitor can check the actual
+    evidence instead of taking a checkmark's word for it."""
     resources = entry.get("resources") or {}
     signals = entry.get("content_signals") or {}
+    signal_sources = entry.get("content_signal_sources") or {}
     agent_instruction_urls = resources.get("agent_instructions") or []
 
-    return {
+    # llms.txt/llms-full.txt specifically — the "condensed for a context
+    # window" half of agent_instructions, as distinct from the
+    # AGENTS.md/CLAUDE.md/editor-rules half below.
+    curated_context_url = next(
+        (url for url in agent_instruction_urls if re.search(r"/llms(-full)?\.txt$", url, re.IGNORECASE)), None
+    )
+    # AGENTS.md/CLAUDE.md (the other half of agent_instructions) plus the
+    # editor-specific equivalents, which are their own resource keys.
+    instruction_files_url = (
+        next((url for url in agent_instruction_urls if re.search(r"/(agents|claude)\.md$", url, re.IGNORECASE)), None)
+        or (resources.get("copilot_instructions") or [None])[0]
+        or (resources.get("cursor_rules") or [None])[0]
+    )
+    registry_url = (resources.get("registry") or [None])[0]
+
+    flags = {
         "validation_loop": bool(signals.get("validation_loop")),
         "prohibition": bool(signals.get("prohibition")),
-        # llms.txt/llms-full.txt specifically — the "condensed for a context
-        # window" half of agent_instructions, as distinct from the
-        # AGENTS.md/CLAUDE.md/editor-rules half below.
-        "curated_context": any(
-            re.search(r"/llms(-full)?\.txt$", url, re.IGNORECASE) for url in agent_instruction_urls
-        ),
+        "curated_context": bool(curated_context_url),
         "tool_gating": bool(signals.get("tool_gating")),
         "token_enforcement": bool(signals.get("token_enforcement")),
         "exemplars": bool(signals.get("exemplars")),
-        # AGENTS.md/CLAUDE.md (the other half of agent_instructions) plus the
-        # editor-specific equivalents, which are their own resource keys.
-        "instruction_files": (
-            any(re.search(r"/(agents|claude)\.md$", url, re.IGNORECASE) for url in agent_instruction_urls)
-            or bool(resources.get("copilot_instructions"))
-            or bool(resources.get("cursor_rules"))
-        ),
-        "registry_metadata": bool(resources.get("registry")),
+        "instruction_files": bool(instruction_files_url),
+        "registry_metadata": bool(registry_url),
         "scaffolding": bool(signals.get("cli_scaffolding")),
         "design_code_mapping": bool(signals.get("figma_code_connect")),
     }
+    sources = {
+        "validation_loop": signal_sources.get("validation_loop"),
+        "prohibition": signal_sources.get("prohibition"),
+        "curated_context": curated_context_url,
+        "tool_gating": signal_sources.get("tool_gating"),
+        "token_enforcement": signal_sources.get("token_enforcement"),
+        "exemplars": signal_sources.get("exemplars"),
+        "instruction_files": instruction_files_url,
+        "registry_metadata": registry_url,
+        "scaffolding": signal_sources.get("cli_scaffolding"),
+        "design_code_mapping": signal_sources.get("figma_code_connect"),
+    }
+    return flags, sources
 
 
 def render_ai_native(entry: dict) -> str:
-    flags = _detect_ai_native(entry)
+    flags, sources = _detect_ai_native(entry)
     if not any(flags.values()):
         return ""
-    items = "".join(
-        f'<li class="ai-native-item{"" if flags.get(key) else " is-absent"}">'
-        f'<span class="ai-native-mark">{CHECK_ICON_SVG if flags.get(key) else "–"}</span> {html.escape(label)}</li>'
-        for key, label in _AI_NATIVE_LABELS.items()
-    )
+
+    def item_html(key: str, label: str) -> str:
+        detected = flags.get(key)
+        mark = CHECK_ICON_SVG if detected else "–"
+        source_url = sources.get(key)
+        label_html = (
+            f'<a href="{html.escape(source_url)}" target="_blank" rel="noopener" title="Source: {html.escape(source_url)}">{html.escape(label)}</a>'
+            if detected and source_url
+            else html.escape(label)
+        )
+        return f'<li class="ai-native-item{"" if detected else " is-absent"}"><span class="ai-native-mark">{mark}</span> {label_html}</li>'
+
+    items = "".join(item_html(key, label) for key, label in _AI_NATIVE_LABELS.items())
     return f"""
   <section class="block">
     <h2>AI-Native</h2>
     <p class="section-note">Techniques this system uses to keep a model from inventing components or tokens \
 instead of using real ones — see <a href="https://state-of-ai-in-design-systems.netlify.app/techniques" target="_blank" rel="noopener">the survey</a> \
-this taxonomy is drawn from. A dash means not detected, not confirmed absent.</p>
+this taxonomy is drawn from. Detected independently from this system's own crawled pages, not copied from that \
+survey's own per-system data. A dash means not detected, not confirmed absent; a linked item names the page it was found on.</p>
     <ul class="ai-native-list">{items}</ul>
   </section>"""
 
@@ -314,34 +409,54 @@ def render_content_signals(entry: dict) -> str:
     content_signals.py) — niche/lower-confidence than the hard resource
     links above, so they live here on the detail page rather than the
     summary matrix. Only fields actually detected are shown; nothing here
-    implies a "no" for anything absent."""
+    implies a "no" for anything absent. Each pill links back to the actual
+    crawled page it was detected on when that's known (content_signals.py
+    records it going forward — older entries crawled before that existed
+    just show no link, same as any other signal with no source on file)."""
     signals = entry.get("content_signals") or {}
     if not signals:
         return ""
+    sources = entry.get("content_signal_sources") or {}
     return (
-        _signal_section("Tech stack", signals, _TECH_STACK_LABELS)
-        + _signal_section("Capabilities", signals, _CAPABILITY_LABELS)
-        + _signal_section("Governance", signals, _GOVERNANCE_LABELS)
-        + _signal_section("AI tooling", signals, _AI_TOOLING_LABELS)
+        _signal_section("Tech stack", signals, _TECH_STACK_LABELS, sources)
+        + _signal_section("Capabilities", signals, _CAPABILITY_LABELS, sources)
+        + _signal_section("Governance", signals, _GOVERNANCE_LABELS, sources)
+        + _signal_section("AI tooling", signals, _AI_TOOLING_LABELS, sources)
     )
 
 
-def render_page_list(name: str, pages_index: dict) -> str:
+def render_page_list(name: str, pages_index: dict, org: str = "", ds_name: str = "") -> str:
     pages = pages_index.get(name) or []
     if not pages:
         return '<p class="empty-note">No pages indexed yet.</p>'
 
-    def page_title(p: dict) -> str:
-        cleaned = clean_title(p["title"])
+    site_titles = [p["title"] for p in pages]
+    seen_titles: set[str] = set()
+
+    def page_title(p: dict, url: str) -> str:
+        cleaned = clean_title(p["title"], org, ds_name, name, site_titles=site_titles)
         # A page whose title IS the system name (already shown in the H1
         # above) would otherwise show as a link with no distinguishing label
         # of its own — fall back to the raw cleaned title rather than an
         # empty link.
-        return dedupe_system_name(cleaned, name) or cleaned
+        cleaned = dedupe_system_name(cleaned, name) or cleaned
+        # extract_title() itself only falls back to a bare URL when there's
+        # truly nothing else on the page (no <title>, no og:title, no <h1>)
+        # — pages_index.json entries written before that fallback chain
+        # existed can still carry a raw URL as their stored title, which
+        # clean_title() has nothing to clean out of it. Same fallback for a
+        # title that clean_title() couldn't distinguish from another page on
+        # this same system (a repeated "Home"/site-name-only title, seen
+        # verbatim hundreds of times on some systems) — a list of identical
+        # link texts is as useless as the raw URL was.
+        if cleaned.lower().startswith(("http://", "https://")) or cleaned in seen_titles:
+            cleaned = humanize_url_path(url)
+        seen_titles.add(cleaned)
+        return cleaned
 
     items = "".join(
-        f'<li><a href="{html.escape(p["url"])}" target="_blank" rel="noopener">{html.escape(page_title(p))}</a></li>'
-        for p in sorted(pages, key=lambda p: clean_title(p["title"]).lower())
+        f'<li><a href="{html.escape(p["url"])}" target="_blank" rel="noopener">{html.escape(page_title(p, p["url"]))}</a></li>'
+        for p in sorted(pages, key=lambda p: clean_title(p["title"], org, ds_name, name, site_titles=site_titles).lower())
     )
     return f'<ul class="page-list">{items}</ul>'
 
@@ -393,6 +508,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(ds_name)} — Design Systems Directory</title>
+{FAVICON_LINK}
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
@@ -434,6 +550,11 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
     font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint);
   }}
   .signal-value {{ color: var(--text); font-weight: 500; }}
+  /* Small linked-source icon riding along on a pill that has one — muted at
+     rest so it doesn't compete with the pill's own text, accent on hover so
+     it still reads as clickable. */
+  .signal-source {{ display: inline-flex; color: var(--text-faint); }}
+  .signal-source:hover {{ color: var(--accent); }}
   .section-note {{ font-size: 0.82rem; color: var(--text-muted); margin: -6px 0 14px; max-width: 68ch; }}
   .section-note a {{ color: inherit; text-decoration: underline; text-underline-offset: 2px; }}
   /* Deliberately shows every taxonomy item, detected or not (see
@@ -448,8 +569,13 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   .ai-native-mark {{ flex: none; display: flex; align-items: center; justify-content: center; width: 18px; color: #22c55e; }}
   .ai-native-item.is-absent {{ color: var(--text-faint); }}
   .ai-native-item.is-absent .ai-native-mark {{ color: var(--text-faint); }}
+  /* A detected item with a known source page is a real link, not just bold
+     text — underlined so it reads as clickable evidence, same visual
+     language as .section-note's own link to the survey above. */
+  .ai-native-item a {{ color: inherit; text-decoration: underline; text-underline-offset: 2px; }}
+  .ai-native-item a:hover {{ color: var(--accent); }}
   .resource-list, .page-list {{ list-style: none; margin: 0; padding: 0; }}
-  .resource-list {{ display: flex; flex-wrap: wrap; gap: 8px; }}
+  .resource-list {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }}
   .resource-list li a {{
     display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border);
     border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 500;
@@ -457,13 +583,43 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   .resource-list li a svg {{ flex: none; }}
   .resource-list li a:hover {{ border-color: var(--accent); color: var(--accent); }}
   .resource-activity {{ font-size: 0.76rem; color: var(--text-faint); margin-left: 2px; white-space: nowrap; }}
+  /* One collapsible <details> per resource type — see render_resource_list.
+     A system with a couple dozen GitHub repos or Figma files no longer
+     dumps every single one into view; the count in the header tells you
+     what's there before you open it. */
+  .resource-group {{ border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }}
+  .resource-group summary {{
+    display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600;
+    list-style: none;
+  }}
+  .resource-group summary::-webkit-details-marker {{ display: none; }}
+  .resource-group summary svg {{ flex: none; }}
+  /* A plain chevron drawn from the summary's own box model rather than an
+     inline SVG — rotates open/closed via the <details>'s [open] state,
+     matching the name-cell chevron's language elsewhere on the site
+     without needing a second icon asset. */
+  .resource-group summary::after {{
+    content: ""; width: 7px; height: 7px; margin-left: auto;
+    border-right: 1.5px solid var(--text-faint); border-bottom: 1.5px solid var(--text-faint);
+    transform: rotate(-45deg); transition: transform 0.15s;
+  }}
+  .resource-group[open] summary::after {{ transform: rotate(45deg); }}
+  .resource-group-label {{ color: var(--text); }}
+  .resource-group-count {{
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700; color: var(--text-muted);
+    background: var(--surface-sunken); border-radius: 999px; padding: 1px 8px;
+  }}
   .page-list {{ columns: 2; column-gap: 24px; }}
   .page-list li {{ padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }}
   .page-list a {{ text-decoration: none; }}
   .page-list a:hover {{ text-decoration: underline; }}
   .empty-note {{ color: var(--text-faint); font-size: 0.88rem; }}
   .report-issue {{ margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); }}
-  .report-issue a {{ font-size: 0.82rem; color: var(--text-faint); text-decoration: underline; text-underline-offset: 2px; }}
+  .report-issue a {{
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 0.82rem; color: var(--text-faint); text-decoration: underline; text-underline-offset: 2px;
+  }}
+  .report-issue a svg {{ flex: none; }}
   .report-issue a:hover {{ color: var(--accent); }}
   @media (max-width: 600px) {{ .page-list {{ columns: 1; }} }}
 </style>
@@ -492,11 +648,11 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 
   <section class="block">
     <h2>Indexed pages</h2>
-    {render_page_list(name_text, pages_index)}
+    {render_page_list(name_text, pages_index, org, ds_name)}
   </section>
 
   <p class="report-issue">
-    <a href="{REPORT_ISSUE_URL}?system={quote(name_text)}" id="reportIssueLink">Report an issue with this system</a>
+    <a href="{REPORT_ISSUE_URL}?system={quote(name_text)}" id="reportIssueLink">{FLAG_ICON_SVG} Report an issue with this system</a>
   </p>
 </div>
 <script>
@@ -519,6 +675,16 @@ def main() -> None:
     pages_index = load_pages_index()
 
     SYSTEMS_DIR.mkdir(exist_ok=True)
+    wanted_slugs = {slugify(full_name(entry)) for entry in entries}
+    # A system that's since been archived, renamed, or dropped back to zero
+    # pages_indexed (indexed_only() then excludes it) otherwise leaves its
+    # old <slug>.html sitting in systems/ forever — still deployed, still
+    # reachable by anyone with the old link, describing a system the
+    # directory no longer lists at all. Confirmed live: brightcore-ui,
+    # datadog-druids, gusto-workbench.
+    for existing in SYSTEMS_DIR.glob("*.html"):
+        if existing.stem not in wanted_slugs:
+            existing.unlink()
     for entry in entries:
         out_path = SYSTEMS_DIR / f"{slugify(full_name(entry))}.html"
         out_path.write_text(render_system_page(entry, pages_index))

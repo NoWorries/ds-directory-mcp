@@ -98,7 +98,9 @@ Relative to this file's own URL (llms.txt lives at the site root):
 resource coverage (GitHub, npm, Storybook, Figma, MCP server, agent instructions, etc.)
 - /systems/<slug> — one system's full detail: resources, indexed pages, \
 freshness, and any detected accessibility/tokens/framework/governance signals
-- /components — which systems document a given component or pattern
+- /components — which systems document a given UI component (Button, Modal, Table, ...)
+- /patterns — which systems document a given task-level pattern (Onboarding, Empty State, ...)
+- /foundations — which systems document a given design foundation (Color, Typography, Spacing, ...)
 
 ## Notes for an agent reading this file
 

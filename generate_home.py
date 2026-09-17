@@ -17,6 +17,7 @@ from pathlib import Path
 from generate_directory import compute_stats, indexed_only, load_systems
 from page_shell import (
     COPY_ICON_SVG,
+    FAVICON_LINK,
     FONT_LINK,
     GRID_ICON_SVG_LARGE,
     PACKAGE_ICON_SVG,
@@ -44,6 +45,7 @@ def render_page(entries: list[dict]) -> str:
 <meta name="build-date" content="{datetime.now().strftime('%Y-%m-%d')}">
 <meta name="last-crawl-activity" content="{stats.get('last_checked', '')[:10]}">
 <meta name="description" content="Semantic search across {stats['total_systems']} publicly documented design systems ({stats['total_pages']:,} pages indexed) — searchable in a browser or via MCP for AI agents.">
+{FAVICON_LINK}
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
@@ -74,6 +76,23 @@ def render_page(entries: list[dict]) -> str:
   .nav-card-text p {{ margin: 0; font-size: 0.8rem; color: var(--text-muted); }}
   .nav-card-arrow {{ flex: none; color: var(--text-faint); font-size: 1.2rem; }}
   .nav-card:hover .nav-card-arrow {{ color: var(--accent); }}
+
+  @media (max-width: 640px) {{
+    /* #q's font-size drove the placeholder's own character width — at
+       1.2rem on a ~340px-wide input, "e.g. table column resizing, disabled
+       button sta..." clipped after a handful of words with no visual hint
+       there was more. Smaller text fits meaningfully more of it before the
+       same clipping (the field's real limitation, not this one's to fully
+       solve) sets in. */
+    #q {{ font-size: 1rem; padding: 16px 18px; }}
+    /* The 42px icon box read as disproportionately large once the card
+       itself was full viewport width but still narrow in absolute terms —
+       shrunk alongside the card's own tighter padding so the text gets
+       more of the available room back. */
+    .nav-card {{ padding: 14px 16px; gap: 12px; }}
+    .nav-card-icon {{ width: 32px; height: 32px; }}
+    .nav-card-icon svg {{ width: 16px; height: 16px; }}
+  }}
 
   .mcp-bar {{
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
@@ -110,20 +129,34 @@ def render_page(entries: list[dict]) -> str:
   }}
   .wake-button:hover {{ background: var(--accent-soft); }}
   .wake-button:disabled {{ opacity: 0.6; cursor: default; }}
-  .mcp-install {{ display: flex; align-items: center; gap: 8px; }}
+  /* min-width: 0 is what actually lets .mcp-command shrink below its
+     content's natural width inside this flex row — a flex item's default
+     min-width is auto (its unshrunk content size), so without this the row
+     just overflowed the card instead of the command scrolling internally
+     as intended, squeezing Copy half off the edge. */
+  .mcp-install {{ display: flex; align-items: center; gap: 8px; min-width: 0; }}
   .mcp-command {{
     font-family: "JetBrains Mono", monospace; font-size: 0.78rem; background: var(--surface-sunken);
     color: var(--text); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px;
-    white-space: nowrap; overflow-x: auto; max-width: 380px;
+    white-space: nowrap; overflow-x: auto; max-width: 380px; flex: 1 1 auto; min-width: 0;
   }}
   .mcp-copy {{
-    display: inline-flex; align-items: center; gap: 6px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex: none;
     font-family: "IBM Plex Sans", sans-serif; font-size: 0.78rem; font-weight: 600; padding: 8px 12px;
     border-radius: 6px; border: 1px solid var(--border); background: var(--surface);
     color: var(--accent); cursor: pointer; white-space: nowrap;
   }}
   .mcp-copy svg {{ flex: none; }}
   .mcp-copy:hover {{ background: var(--accent-soft); }}
+  @media (max-width: 640px) {{
+    /* Side-by-side left too little room for both the command and a legible
+       Copy button on a phone-width card — stacked, the command gets the
+       full card width (still scrolling internally if it's still too long
+       for that) and Copy becomes a proper full-width tap target instead of
+       a sliver squeezed against it. */
+    .mcp-install {{ flex-direction: column; align-items: stretch; }}
+    .mcp-command {{ max-width: 100%; }}
+  }}
 </style>
 </head>
 <body>
@@ -150,7 +183,23 @@ def render_page(entries: list[dict]) -> str:
       <span class="nav-card-icon">{PACKAGE_ICON_SVG}</span>
       <span class="nav-card-text">
         <h3>Browse by component</h3>
-        <p>See which systems have documented a given component or pattern.</p>
+        <p>See which systems have documented a given UI component.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a class="nav-card textured" href="/patterns">
+      <span class="nav-card-icon">{PACKAGE_ICON_SVG}</span>
+      <span class="nav-card-text">
+        <h3>Browse by pattern</h3>
+        <p>Task-level compositions built from several components.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a class="nav-card textured" href="/foundations">
+      <span class="nav-card-icon">{PACKAGE_ICON_SVG}</span>
+      <span class="nav-card-text">
+        <h3>Browse by foundation</h3>
+        <p>System-wide design principles that aren't components.</p>
       </span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>

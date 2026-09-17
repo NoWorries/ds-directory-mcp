@@ -21,11 +21,14 @@ generate_directory.py's find_broken()/find_low_coverage()/find_capped()/
 find_unverified_resources() docstrings for why.
 """
 
+from __future__ import annotations
+
 import os
 from pathlib import Path
 
 from generate_directory import (
     LOW_COVERAGE_THRESHOLD,
+    find_auth_pages,
     find_broken,
     find_capped,
     find_low_coverage,
@@ -43,7 +46,13 @@ REPORT_FILE = Path(__file__).parent / "health_report.md"
 REPEATED_FAILURE_THRESHOLD = 3
 
 
-def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dict], unverified: list[dict]) -> str:
+def render_report(
+    broken: list[dict],
+    low_coverage: list[dict],
+    capped: list[dict],
+    unverified: list[dict],
+    auth_pages: list[dict] | None = None,
+) -> str:
     sections = []
 
     if broken:
@@ -118,20 +127,45 @@ def render_report(broken: list[dict], low_coverage: list[dict], capped: list[dic
     if unverified:
         lines = [
             f"### 🔍 {len(unverified)} system{'s' if len(unverified) != 1 else ''} "
-            f"{'have' if len(unverified) != 1 else 'has'} unverified resource links",
+            f"{'had' if len(unverified) != 1 else 'had'} resource links auto-excluded as unrelated",
             "",
-            "A discovered GitHub/npm link's name doesn't obviously match the design "
-            "system it was found on — could be a dependency or unrelated tool swept up "
-            "from a footer/credits link rather than the system's own repo/package. "
-            "Worth a quick manual check: if it's wrong, remove it from `resources` in "
-            "`systems.yaml` (the next crawl will just rediscover it otherwise) or add an "
-            "`exclude_patterns` entry so it stops getting picked up.",
+            "A discovered GitHub/npm link's name didn't obviously match the design "
+            "system it was found on — likely a dependency or unrelated tool swept up "
+            "from a footer/credits link rather than the system's own repo/package "
+            "(confirmed live: IBM Carbon's docs linking to storybookjs/storybook, "
+            "octokit/core.js, vuejs/vue-devtools, and a couple of generic GitHub guide "
+            "pages, alongside its own ~20 real carbon-design-system/* repos). "
+            "ingest.py now drops these from `resources` automatically rather than "
+            "showing them on the public site — this list is only here so a human can "
+            "spot-check the heuristic didn't wrongly exclude something real. If one "
+            "shouldn't have been excluded, the fix is in resources.py's `looks_related()` "
+            "(a real repo whose name genuinely doesn't resemble the system's own).",
             "",
         ]
         for entry in unverified:
             for key, urls in entry["unverified_resources"].items():
                 for url in urls:
                     lines.append(f"- **{full_name(entry)}** — {key}: {url}")
+        sections.append("\n".join(lines))
+
+    if auth_pages:
+        lines = [
+            f"### 🔒 {len(auth_pages)} system{'s' if len(auth_pages) != 1 else ''} "
+            f"{'have' if len(auth_pages) != 1 else 'has'} mostly auth/error pages indexed",
+            "",
+            "More than half of the indexed pages have a login/consent/error-page title "
+            "(\"Sign in to...\", \"404\", \"Just a moment...\") — the crawl likely landed on an "
+            "auth wall or redirect instead of the system's real content. ingest.py now skips "
+            "these going forward; re-crawl (`ingest.py --system \"...\" --force`) to clear the "
+            "bad pages out.",
+            "",
+        ]
+        for entry in auth_pages:
+            start_url = (entry.get("start_urls") or [""])[0]
+            lines.append(
+                f"- **{full_name(entry)}** — {entry['_auth_page_count']}/{entry['_total_page_count']} "
+                f"pages look like auth/error pages — {start_url}"
+            )
         sections.append("\n".join(lines))
 
     return "\n\n".join(sections)
@@ -143,10 +177,11 @@ def main() -> None:
     low_coverage = find_low_coverage(entries)
     capped = find_capped(entries)
     unverified = find_unverified_resources(entries)
+    auth_pages = find_auth_pages(entries)
 
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
 
-    if not broken and not low_coverage and not capped and not unverified:
+    if not broken and not low_coverage and not capped and not unverified and not auth_pages:
         print("No crawl-health issues detected.")
         if REPORT_FILE.exists():
             REPORT_FILE.unlink()
@@ -155,7 +190,7 @@ def main() -> None:
                 f.write("### ✅ No crawl-health issues detected\n")
         return
 
-    report = render_report(broken, low_coverage, capped, unverified)
+    report = render_report(broken, low_coverage, capped, unverified, auth_pages)
     print(report)
     REPORT_FILE.write_text(report)
 

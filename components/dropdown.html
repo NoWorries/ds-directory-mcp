@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dropdown — Design Systems Directory</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -96,20 +97,63 @@
     font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.86rem;
     color: var(--text); text-decoration: none; white-space: nowrap;
   }
-  .site-nav-links { display: flex; gap: 4px; flex: 1; }
+  /* Two text variants swapped by viewport rather than one truncated/wrapped
+     string — "Design Systems Directory" is the real name everywhere there's
+     room for it; only the mobile bar (already tight with search+menu on the
+     same row) gets the shortened form. Both live in the DOM at once but
+     only one is ever visible, so a screen reader announces exactly one
+     (the other is display:none, which removes it from the accessibility
+     tree — not a duplicate-announcement risk). */
+  .site-brand-short { display: none; }
+  /* NAV_OVERFLOW_JS's own, width-independent trigger for the same swap —
+     shortening the title is the first, least disruptive space-saving move
+     it tries whenever the nav doesn't fit, before it ever touches Suggest
+     or collapses a route into the "More" menu. Separate from (and additive
+     to) the phone-only media query below, which still applies its own
+     floor regardless of what JS decides. */
+  .site-nav-inner.brand-compact .site-brand-full { display: none; }
+  .site-nav-inner.brand-compact .site-brand-short { display: inline; }
+  /* nowrap rather than wrapping to a second line — a wrapped ragged row was
+     the original bug report here. NAV_OVERFLOW_JS keeps this from actually
+     overflowing: it measures whenever the row doesn't fit and moves the
+     lowest-priority route link into the "More" dropdown one at a time until
+     what's left fits on one line. Deliberately NOT `overflow: hidden` here
+     even as a pre-JS safety net — the "More" dropdown menu below is a
+     descendant of this element, and hidden overflow on an ancestor clips an
+     absolutely-positioned descendant's paint regardless of its own
+     position/containing-block, which made the open dropdown invisible.
+     min-width: 0 overrides the flex default of `auto`, which otherwise
+     refuses to shrink a flex item below its content's own min-content size
+     — with several nowrap links inside, that min-content size is the full
+     unwrapped width of every link combined, so without this override the
+     row never actually shrank at all (scrollWidth == clientWidth always),
+     and NAV_OVERFLOW_JS's overflow check never had anything real to catch. */
+  .site-nav-links { display: flex; flex-wrap: nowrap; align-items: center; gap: 4px; flex: 1; min-width: 0; }
   .site-nav-links a {
     font-size: 0.86rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
-    padding: 6px 12px; border-radius: 6px;
+    padding: 6px 12px; border-radius: 6px; white-space: nowrap;
   }
   .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
   .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
-
-  .nav-suggest {
-    font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap;
-    padding: 6px 10px; border-radius: 6px;
+  /* "Suggest a system" lives in the same link list as the routes (so the
+     mobile menu below doesn't need a second, separately-toggled element)
+     but keeps its own accent treatment so it still reads as a distinct
+     call-to-action rather than one more route. */
+  .site-nav-links a.nav-suggest {
+    display: inline-flex; align-items: center; gap: 5px;
+    color: var(--accent); font-weight: 600; margin-left: auto;
   }
-  .nav-suggest:hover { background: var(--accent-soft); }
-  @media (max-width: 640px) { .nav-suggest { display: none; } }
+  .site-nav-links a.nav-suggest svg { flex: none; }
+  /* Second space-saving move NAV_OVERFLOW_JS tries (after shortening the
+     title, before collapsing any route into "More") — the label hides but
+     the link keeps its aria-label, so the CTA stays a real, accessible
+     target at every width, just icon-only when space is tight. */
+  .site-nav-links a.nav-suggest.compact .nav-suggest-label { display: none; }
+  /* Deliberately the same neutral hover as every other link (not
+     accent-soft) — accent-soft is reserved for .current below, so hovering
+     Suggest never reads as "this is the page you're on" the way it would if
+     hover and current shared a background. */
+  .site-nav-links a.nav-suggest:hover { background: var(--surface-sunken); }
 
   .nav-search { display: flex; align-items: center; }
   .nav-search-toggle {
@@ -126,9 +170,102 @@
     border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
   }
   .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+
+  /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
+     .site-nav-links already fits inline. Fixed box size (rather than sizing
+     to whichever icon is currently showing) matters here: the menu glyph
+     and the close glyph aren't the same size, so without a fixed box the
+     button itself resized by a couple of px on toggle — and since it's the
+     last item in a row right-aligned via nav-search's margin-left:auto,
+     that resize shifted the search icon beside it on every open/close.
+     Both icon layers are stacked via position:absolute inset:0 inside that
+     fixed box so swapping which one is visible never changes the box. */
+  .nav-menu-toggle {
+    display: none; position: relative; width: 32px; height: 32px; background: none; border: none;
+    padding: 0; margin-left: 4px; cursor: pointer; color: var(--text-muted); border-radius: 6px; flex: none;
+  }
+  .nav-menu-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-menu-toggle .icon-menu, .nav-menu-toggle .icon-close {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  }
+  .nav-menu-toggle .icon-close { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-close { display: flex; }
+
+  /* --- "More" overflow menu (see NAV_OVERFLOW_JS) — the in-between state
+     for widths too narrow to fit every route inline but not phone-narrow
+     enough to need the full hamburger sheet below. Hidden by default (both
+     the [hidden] attribute and having nothing in the menu yet); JS reveals
+     it only once it's actually moved a link in. */
+  .nav-more { position: relative; }
+  .nav-more-toggle {
+    display: inline-flex; align-items: center; gap: 4px; font: inherit; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); background: none; border: none; padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; white-space: nowrap;
+  }
+  .nav-more-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  /* Reuses the same chevron as everywhere else on the site (see .name-chevron
+     in generate_directory.py) rotated to point down at rest, up when open —
+     one icon asset, two orientations, instead of a second glyph. */
+  .nav-more-toggle svg { flex: none; transform: rotate(90deg); transition: transform 0.15s; }
+  .nav-more-toggle[aria-expanded="true"] svg { transform: rotate(270deg); }
+  .nav-more-menu {
+    display: none; position: absolute; top: 100%; left: 0; margin-top: 4px; min-width: 170px;
+    flex-direction: column; gap: 2px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; box-shadow: var(--shadow); padding: 6px; z-index: 110;
+  }
+  .nav-more-menu.open { display: flex; }
+  .nav-more-menu a {
+    padding: 8px 10px; border-radius: 6px; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); text-decoration: none; white-space: nowrap;
+  }
+  .nav-more-menu a:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-more-menu a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  /* Collapsed into a hamburger only below this TRUE phone-narrow width.
+     Above it (see NAV_OVERFLOW_JS), a route link that no longer fits inline
+     moves into the "More" dropdown above one at a time instead — so getting
+     narrower on a tablet/small-laptop first thins out the inline row, and
+     only falls back to the full mobile sheet once there's no longer room
+     for even brand + search + one route + Suggest. Below this width the
+     link list itself becomes the toggled panel: hidden by default, dropped
+     down as a full-width sheet under the fixed bar once opened. */
   @media (max-width: 640px) {
-    .site-nav-links a span { display: none; }
+    .nav-menu-toggle { display: flex; }
+    .site-nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 2px; margin: 0;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow); padding: 8px 16px 14px; max-height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+    .site-nav-links.nav-open { display: flex; }
+    .site-nav-links a { padding: 11px 10px; font-size: 0.95rem; }
+    /* Still visually separated from the plain routes above it (margin-top +
+       border-top divider) but keeps the same rounded-pill shape as every
+       other item — an unrounded, edge-to-edge row here read as a leftover
+       fragment of a different component, not an intentional design. */
+    .site-nav-links a.nav-suggest { margin-left: 0; margin-top: 6px; border-top: 1px solid var(--border); padding-top: 14px; }
+    /* The "More" button never applies at this width (NAV_OVERFLOW_JS bails
+       out and restores every link to the flat sheet whenever this same
+       breakpoint matches), so it never needs its own mobile styling. */
+    .nav-more { display: none; }
+    /* .site-nav-links no longer occupies flex:1 once it's the hidden/
+       toggled panel above, so without this, search+menu just sat right
+       after the brand text with a dead gap stretching to the bar's far edge
+       instead of anchoring there — margin-left: auto on the first remaining
+       flex item claims all that leftover space for itself, pushing
+       everything from here on right-aligned as a group. */
+    .nav-search { margin-left: auto; }
+    /* The wide desktop inter-item gap (used for spacing out the full link
+       row) is much too loose for a two-icon cluster once the link list
+       stops being an in-flow sibling here — this is what actually put
+       daylight between the search and menu icons, not their own margins. */
+    .site-nav-inner { gap: 8px; }
+    .nav-menu-toggle { margin-left: 0; }
     .nav-search-form input { width: 140px; }
+    .site-brand-full { display: none; }
+    .site-brand-short { display: inline; }
   }
 
   .component-layout { display: flex; gap: 32px; align-items: flex-start; }
@@ -143,44 +280,162 @@
   }
   .component-sidebar ul { list-style: none; margin: 0; padding: 0; }
   .component-sidebar li { margin-bottom: 2px; }
+  /* Was padding: 5px 8px; margin: 0 -8px — a "bleed" trick meant to let the
+     hover/current pill extend slightly past the link's own text, which only
+     works when the CONTAINER has matching horizontal padding to bleed into.
+     This container has none on the left, so the negative margin instead
+     pushed the pill's edges flush against (and slightly past) the sidebar's
+     own boundary — the highlight rendered edge-to-edge with no visible
+     inset or corner rounding. Plain padding with no counteracting margin
+     keeps the pill properly inset within the row, rounded like every other
+     pill on the site. */
   .component-sidebar a {
     display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
-    padding: 5px 8px; margin: 0 -8px; border-radius: 6px; text-decoration: none;
+    padding: 6px 10px; border-radius: 8px; text-decoration: none;
     font-size: 0.88rem; color: var(--text-muted);
   }
   .component-sidebar a:hover { background: var(--surface-sunken); color: var(--text); }
   .component-sidebar a.current { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
   .sidebar-count { color: var(--text-faint); font-size: 0.76rem; font-family: "JetBrains Mono", monospace; }
   .component-sidebar a.current .sidebar-count { color: var(--accent); }
+  /* --- Mobile "submenu": a closed-by-default dropdown naming just the
+     current selection, instead of the desktop sidebar's full always-open
+     list dumped inline above the very content it's a menu for. Hidden at
+     desktop widths (see .component-sidebar-mobile below and the .component-
+     sidebar's own display:none at the same breakpoint) — exactly one of the
+     two ever renders at a given width. */
+  .component-sidebar-mobile { display: none; }
   .component-main { flex: 1; min-width: 0; }
   .system-list { list-style: none; margin: 0; padding: 0; }
-  .system-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
-  .system-list a { text-decoration: none; font-weight: 600; }
-  .system-list a:hover { text-decoration: underline; }
-  .page-title { color: var(--text-muted); font-size: 0.85rem; font-family: "JetBrains Mono", monospace; white-space: nowrap; }
+  /* flex-wrap so a long page title (nowrap, can't shrink) and a long system
+     name compete for space by the whole ROW dropping the title onto its own
+     line, not by squeezing the name's column width until its text wraps
+     instead — confirmed live on "Vanilla framework" + "cards with aside and
+     toolbar", where the name wrapped to two lines while the title stayed
+     put on the first. */
+  .system-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 12px; padding: 12px 4px; border-bottom: 1px solid var(--border); }
+  .system-list a { text-decoration: none; color: inherit; }
+  /* Was gap: 8px — read as cramped against the favicon (which itself has no
+     visual padding of its own, being a plain small square/circle image), so
+     the icon looked like it was crowding straight into the text next to it. */
+  .system-list .name-block { display: flex; align-items: center; gap: 12px; }
+  .system-list .name-text { display: flex; flex-direction: column; line-height: 1.25; }
+  .system-list .org { font-size: 0.66rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); }
+  .system-list .ds-name { font-weight: 600; font-size: 0.92rem; }
+  .system-list a:hover .ds-name { text-decoration: underline; }
+  .system-list .favicon { border-radius: 3px; flex: none; }
+  /* margin-left: auto keeps this right-aligned against the name whether it
+     shares the first line (space-between already puts it there) or, once
+     that line is too narrow for both, drops to a line of its own below —
+     right-aligned there too, rather than snapping to the left edge. Its own
+     real link now (opens the actual page on the system's site — the name
+     link above goes to this site's own system page instead), so it gets a
+     hover color of its own rather than inheriting .ds-name's underline. */
+  .page-title {
+    display: inline-flex; align-items: center; gap: 5px;
+    color: var(--text-muted); font-size: 0.85rem; font-family: "JetBrains Mono", monospace;
+    white-space: nowrap; margin-left: auto;
+  }
+  .page-title svg { flex: none; }
+  .page-title:hover { color: var(--accent); }
   @media (max-width: 760px) {
     .component-layout { display: block; }
-    .component-sidebar { position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 16px; margin-bottom: 20px; }
+    .component-sidebar { display: none; }
+    /* The shared sitewide h1 (page_shell.py's clamp()) reads as a hero
+       heading on pages built around one big statement (home's "Search 119
+       design systems") — right below the compact mobile submenu here, that
+       same weight/size instead just crowded a page whose real content is
+       the list underneath it. Knocked down a step for this page only. */
+    .component-main h1 { font-size: 1.2rem; }
+    /* position: relative so the open panel (position: absolute below) anchors
+       to this element and overlays the page instead of pushing it down —
+       native <details> content is normally static, in-flow, and would
+       otherwise shove the eyebrow/heading/list further down the page every
+       time it opened. */
+    .component-sidebar-mobile {
+      position: relative; display: block; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 20px;
+    }
+    .component-sidebar-mobile summary {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 14px; cursor: pointer; list-style: none; font-size: 0.9rem;
+    }
+    .component-sidebar-mobile summary::-webkit-details-marker { display: none; }
+    .sidebar-mobile-current { font-weight: 600; color: var(--accent); margin-right: auto; }
+    /* Same drawn-chevron technique as the resource groups on a system's own
+       detail page (generate_systems.py) — rotates open/closed with the
+       <details>'s own [open] state, no separate icon asset needed. */
+    .component-sidebar-mobile summary::after {
+      content: ""; width: 7px; height: 7px; flex: none;
+      border-right: 1.5px solid var(--text-faint); border-bottom: 1.5px solid var(--text-faint);
+      transform: rotate(45deg); transition: transform 0.15s;
+    }
+    .component-sidebar-mobile[open] summary::after { transform: rotate(225deg); }
+    .component-sidebar-mobile[open] summary { border-bottom: 1px solid var(--border); }
+    /* Overlays below the closed summary bar (see the position: relative
+       parent above) rather than expanding the document flow — the page
+       underneath stays exactly where it was, open or closed. */
+    .component-sidebar-mobile ul {
+      position: absolute; top: 100%; left: 0; right: 0; z-index: 60;
+      background: var(--surface); border: 1px solid var(--border); border-top: none;
+      border-radius: 0 0 10px 10px; box-shadow: var(--shadow);
+      list-style: none; margin: 0; padding: 8px; max-height: 50vh; overflow-y: auto;
+    }
+    .component-sidebar-mobile li { margin-bottom: 2px; }
+    .component-sidebar-mobile a {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+      padding: 8px 10px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; color: var(--text-muted);
+    }
+    .component-sidebar-mobile a:hover { background: var(--surface-sunken); color: var(--text); }
+    .component-sidebar-mobile a.current { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+    .component-sidebar-mobile a.current .sidebar-count { color: var(--accent); }
+  }
+  /* Phone-narrow: the anchored dropdown above has too little room to be
+     useful as a small floating panel, so open takes over the whole screen
+     instead — the <details> element itself (summary included) becomes the
+     fixed-position surface, summary pinned at top (still the native close
+     toggle) with the list filling the rest of the viewport, scrollable. */
+  @media (max-width: 640px) {
+    .component-sidebar-mobile[open] {
+      position: fixed; inset: 0; z-index: 300; display: flex; flex-direction: column;
+      border: none; border-radius: 0; margin: 0; background: var(--surface);
+    }
+    .component-sidebar-mobile[open] summary { flex: none; padding: 16px; }
+    .component-sidebar-mobile[open] ul {
+      position: static; flex: 1; min-height: 0; max-height: none;
+      border: none; border-radius: 0; box-shadow: none; padding: 8px 16px 16px;
+    }
   }
 </style>
 </head>
 <body>
 
     <nav class="site-nav">
-      <div class="site-nav-inner">
-        <a href="/" class="site-brand">Design Systems Directory</a>
-        <div class="site-nav-links">
-          <a href="/" class="">Search</a>
+      <div class="site-nav-inner" id="siteNavInner">
+        <a href="/" class="site-brand">
+          <span class="site-brand-full">Design Systems Directory</span>
+          <span class="site-brand-short">DS Directory</span>
+        </a>
+        <div class="site-nav-links" id="siteNavLinks">
+          <a href="/" class="">Home</a>
           <a href="/directory" class="">All Systems</a>
           <a href="/components" class="current">Components</a>
+          <a href="/patterns" class="">Patterns</a>
+          <a href="/foundations" class="">Foundations</a>
+          <div class="nav-more" id="navMore" hidden>
+            <button type="button" class="nav-more-toggle" id="navMoreToggle" aria-haspopup="true" aria-expanded="false">More<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            <div class="nav-more-menu" id="navMoreMenu"></div>
+          </div>
+          <a class="nav-suggest" href="/suggest" aria-label="Suggest a system"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span class="nav-suggest-label">Suggest a system</span></a>
         </div>
-        <a class="nav-suggest" href="/suggest">Suggest a system</a>
         <div class="nav-search">
           <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
           <form class="nav-search-form" id="navSearchForm" hidden>
             <input type="text" id="navSearchInput" placeholder="Search design systems...">
           </form>
         </div>
+        <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
+          <span class="icon-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span class="icon-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+        </button>
       </div>
     </nav>
     <script>
@@ -200,15 +455,143 @@
   });
 })();
 </script>
+    <script>
+(function () {
+  var toggle = document.getElementById("navMenuToggle");
+  var panel = document.getElementById("siteNavLinks");
+  if (!toggle || !panel) return;
+
+  function setOpen(open) {
+    panel.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  toggle.addEventListener("click", function () {
+    setOpen(!panel.classList.contains("nav-open"));
+  });
+  panel.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setOpen(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setOpen(false);
+  });
+  document.addEventListener("click", function (e) {
+    if (panel.classList.contains("nav-open") && !panel.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      setOpen(false);
+    }
+  });
+})();
+</script>
+    <script>
+(function () {
+  var inner = document.getElementById("siteNavInner");
+  var links = document.getElementById("siteNavLinks");
+  var moreWrap = document.getElementById("navMore");
+  var moreToggle = document.getElementById("navMoreToggle");
+  var moreMenu = document.getElementById("navMoreMenu");
+  var suggest = links ? links.querySelector(".nav-suggest") : null;
+  if (!inner || !links || !moreWrap || !moreToggle || !moreMenu || !suggest) return;
+
+  var mobileQuery = window.matchMedia("(max-width: 640px)");
+
+  function fits() {
+    return links.scrollWidth <= links.clientWidth + 1;
+  }
+
+  function routeLinks() {
+    return Array.prototype.slice.call(links.children).filter(function (el) {
+      return el.tagName === "A" && el !== suggest;
+    });
+  }
+
+  function closeMoreMenu() {
+    moreMenu.classList.remove("open");
+    moreToggle.setAttribute("aria-expanded", "false");
+  }
+
+  // Three space-saving measures, applied in order from least to most
+  // disruptive, each only reached once the previous one still isn't enough:
+  // (1) shorten the site title, (2) shrink "Suggest a system" to its icon,
+  // (3) move a route link into the "More" dropdown. Every run starts by
+  // undoing all three (cheaper and more robust than tracking incremental
+  // deltas) and re-measures from a clean slate.
+  function layout() {
+    closeMoreMenu();
+    Array.prototype.slice.call(moreMenu.children).forEach(function (a) {
+      links.insertBefore(a, moreWrap);
+    });
+    moreWrap.hidden = true;
+    inner.classList.remove("brand-compact");
+    suggest.classList.remove("compact");
+
+    if (mobileQuery.matches) return; // the full hamburger sheet handles this range on its own
+
+    if (fits()) return;
+    inner.classList.add("brand-compact");
+
+    if (fits()) return;
+    suggest.classList.add("compact");
+
+    var guard = 0;
+    while (!fits() && guard < 20) {
+      guard++;
+      var candidates = routeLinks();
+      if (candidates.length <= 1) break; // always leave at least one route visible inline
+      var victim = null;
+      for (var i = candidates.length - 1; i >= 0; i--) {
+        if (!candidates[i].classList.contains("current")) { victim = candidates[i]; break; }
+      }
+      if (!victim) victim = candidates[candidates.length - 1];
+      moreMenu.insertBefore(victim, moreMenu.firstChild);
+      moreWrap.hidden = false;
+    }
+  }
+
+  var resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 100);
+  });
+  if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", layout);
+  else mobileQuery.addListener(layout); // Safari <14
+
+  moreToggle.addEventListener("click", function () {
+    var open = !moreMenu.classList.contains("open");
+    moreMenu.classList.toggle("open", open);
+    moreToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  moreMenu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMoreMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMoreMenu();
+  });
+  document.addEventListener("click", function (e) {
+    if (moreMenu.classList.contains("open") && !moreWrap.contains(e.target)) closeMoreMenu();
+  });
+
+  layout();
+})();
+</script>
     
 <div class="page">
+  <p class="eyebrow"><a href="/components">Components</a></p>
   <div class="component-layout">
-    <nav class="component-sidebar"><p class="sidebar-label">All components</p><ul><li><a href="accordion" class="">Accordion <span class="sidebar-count">6</span></a></li><li><a href="alert" class="">Alert <span class="sidebar-count">10</span></a></li><li><a href="avatar" class="">Avatar <span class="sidebar-count">1</span></a></li><li><a href="badge" class="">Badge <span class="sidebar-count">3</span></a></li><li><a href="breadcrumb" class="">Breadcrumb <span class="sidebar-count">6</span></a></li><li><a href="button" class="">Button <span class="sidebar-count">13</span></a></li><li><a href="card" class="">Card <span class="sidebar-count">4</span></a></li><li><a href="carousel" class="">Carousel <span class="sidebar-count">1</span></a></li><li><a href="checkbox" class="">Checkbox <span class="sidebar-count">8</span></a></li><li><a href="chip" class="">Chip <span class="sidebar-count">3</span></a></li><li><a href="combobox" class="">Combobox <span class="sidebar-count">1</span></a></li><li><a href="date-picker" class="">Date Picker <span class="sidebar-count">4</span></a></li><li><a href="divider" class="">Divider <span class="sidebar-count">8</span></a></li><li><a href="dropdown" class="current">Dropdown <span class="sidebar-count">13</span></a></li><li><a href="empty-state" class="">Empty State <span class="sidebar-count">1</span></a></li><li><a href="icon" class="">Icon <span class="sidebar-count">86</span></a></li><li><a href="input" class="">Input <span class="sidebar-count">13</span></a></li><li><a href="link" class="">Link <span class="sidebar-count">3</span></a></li><li><a href="list" class="">List <span class="sidebar-count">12</span></a></li><li><a href="menu" class="">Menu <span class="sidebar-count">74</span></a></li><li><a href="modal" class="">Modal <span class="sidebar-count">8</span></a></li><li><a href="navigation" class="">Navigation <span class="sidebar-count">5</span></a></li><li><a href="pagination" class="">Pagination <span class="sidebar-count">4</span></a></li><li><a href="popover" class="">Popover <span class="sidebar-count">2</span></a></li><li><a href="progress" class="">Progress <span class="sidebar-count">9</span></a></li><li><a href="radio" class="">Radio <span class="sidebar-count">7</span></a></li><li><a href="sidebar" class="">Sidebar <span class="sidebar-count">5</span></a></li><li><a href="skeleton" class="">Skeleton <span class="sidebar-count">1</span></a></li><li><a href="slider" class="">Slider <span class="sidebar-count">1</span></a></li><li><a href="spinner" class="">Spinner <span class="sidebar-count">2</span></a></li><li><a href="stepper" class="">Stepper <span class="sidebar-count">2</span></a></li><li><a href="switch" class="">Switch <span class="sidebar-count">3</span></a></li><li><a href="table" class="">Table <span class="sidebar-count">3</span></a></li><li><a href="tabs" class="">Tabs <span class="sidebar-count">5</span></a></li><li><a href="tooltip" class="">Tooltip <span class="sidebar-count">3</span></a></li><li><a href="tree" class="">Tree <span class="sidebar-count">1</span></a></li><li><a href="typography" class="">Typography <span class="sidebar-count">14</span></a></li></ul></nav>
+    
+    <nav class="component-sidebar">
+      <p class="sidebar-label">All components</p>
+      <ul><li><a href="/components/accordion" class="">Accordion <span class="sidebar-count">5</span></a></li><li><a href="/components/alert" class="">Alert <span class="sidebar-count">5</span></a></li><li><a href="/components/avatar" class="">Avatar <span class="sidebar-count">3</span></a></li><li><a href="/components/badge" class="">Badge <span class="sidebar-count">4</span></a></li><li><a href="/components/breadcrumb" class="">Breadcrumb <span class="sidebar-count">5</span></a></li><li><a href="/components/button" class="">Button <span class="sidebar-count">9</span></a></li><li><a href="/components/card" class="">Card <span class="sidebar-count">8</span></a></li><li><a href="/components/carousel" class="">Carousel <span class="sidebar-count">3</span></a></li><li><a href="/components/checkbox" class="">Checkbox <span class="sidebar-count">6</span></a></li><li><a href="/components/chip" class="">Chip <span class="sidebar-count">3</span></a></li><li><a href="/components/combobox" class="">Combobox <span class="sidebar-count">1</span></a></li><li><a href="/components/date-picker" class="">Date Picker <span class="sidebar-count">3</span></a></li><li><a href="/components/divider" class="">Divider <span class="sidebar-count">4</span></a></li><li><a href="/components/dropdown" class="current">Dropdown <span class="sidebar-count">6</span></a></li><li><a href="/components/icon" class="">Icon <span class="sidebar-count">7</span></a></li><li><a href="/components/input" class="">Input <span class="sidebar-count">6</span></a></li><li><a href="/components/link" class="">Link <span class="sidebar-count">3</span></a></li><li><a href="/components/list" class="">List <span class="sidebar-count">5</span></a></li><li><a href="/components/menu" class="">Menu <span class="sidebar-count">2</span></a></li><li><a href="/components/modal" class="">Modal <span class="sidebar-count">5</span></a></li><li><a href="/components/pagination" class="">Pagination <span class="sidebar-count">4</span></a></li><li><a href="/components/popover" class="">Popover <span class="sidebar-count">3</span></a></li><li><a href="/components/progress-bar" class="">Progress Bar <span class="sidebar-count">3</span></a></li><li><a href="/components/radio" class="">Radio <span class="sidebar-count">4</span></a></li><li><a href="/components/sidebar" class="">Sidebar <span class="sidebar-count">4</span></a></li><li><a href="/components/skeleton" class="">Skeleton <span class="sidebar-count">3</span></a></li><li><a href="/components/slider" class="">Slider <span class="sidebar-count">2</span></a></li><li><a href="/components/spinner" class="">Spinner <span class="sidebar-count">3</span></a></li><li><a href="/components/stepper" class="">Stepper <span class="sidebar-count">2</span></a></li><li><a href="/components/switch" class="">Switch <span class="sidebar-count">4</span></a></li><li><a href="/components/table" class="">Table <span class="sidebar-count">5</span></a></li><li><a href="/components/tabs" class="">Tabs <span class="sidebar-count">6</span></a></li><li><a href="/components/toast" class="">Toast <span class="sidebar-count">2</span></a></li><li><a href="/components/tooltip" class="">Tooltip <span class="sidebar-count">6</span></a></li></ul>
+    </nav>
+    <details class="component-sidebar-mobile">
+      <summary aria-label="Browse all components, currently viewing Dropdown">
+        <span class="sidebar-mobile-current">Dropdown</span>
+      </summary>
+      <ul><li><a href="/components/accordion" class="">Accordion <span class="sidebar-count">5</span></a></li><li><a href="/components/alert" class="">Alert <span class="sidebar-count">5</span></a></li><li><a href="/components/avatar" class="">Avatar <span class="sidebar-count">3</span></a></li><li><a href="/components/badge" class="">Badge <span class="sidebar-count">4</span></a></li><li><a href="/components/breadcrumb" class="">Breadcrumb <span class="sidebar-count">5</span></a></li><li><a href="/components/button" class="">Button <span class="sidebar-count">9</span></a></li><li><a href="/components/card" class="">Card <span class="sidebar-count">8</span></a></li><li><a href="/components/carousel" class="">Carousel <span class="sidebar-count">3</span></a></li><li><a href="/components/checkbox" class="">Checkbox <span class="sidebar-count">6</span></a></li><li><a href="/components/chip" class="">Chip <span class="sidebar-count">3</span></a></li><li><a href="/components/combobox" class="">Combobox <span class="sidebar-count">1</span></a></li><li><a href="/components/date-picker" class="">Date Picker <span class="sidebar-count">3</span></a></li><li><a href="/components/divider" class="">Divider <span class="sidebar-count">4</span></a></li><li><a href="/components/dropdown" class="current">Dropdown <span class="sidebar-count">6</span></a></li><li><a href="/components/icon" class="">Icon <span class="sidebar-count">7</span></a></li><li><a href="/components/input" class="">Input <span class="sidebar-count">6</span></a></li><li><a href="/components/link" class="">Link <span class="sidebar-count">3</span></a></li><li><a href="/components/list" class="">List <span class="sidebar-count">5</span></a></li><li><a href="/components/menu" class="">Menu <span class="sidebar-count">2</span></a></li><li><a href="/components/modal" class="">Modal <span class="sidebar-count">5</span></a></li><li><a href="/components/pagination" class="">Pagination <span class="sidebar-count">4</span></a></li><li><a href="/components/popover" class="">Popover <span class="sidebar-count">3</span></a></li><li><a href="/components/progress-bar" class="">Progress Bar <span class="sidebar-count">3</span></a></li><li><a href="/components/radio" class="">Radio <span class="sidebar-count">4</span></a></li><li><a href="/components/sidebar" class="">Sidebar <span class="sidebar-count">4</span></a></li><li><a href="/components/skeleton" class="">Skeleton <span class="sidebar-count">3</span></a></li><li><a href="/components/slider" class="">Slider <span class="sidebar-count">2</span></a></li><li><a href="/components/spinner" class="">Spinner <span class="sidebar-count">3</span></a></li><li><a href="/components/stepper" class="">Stepper <span class="sidebar-count">2</span></a></li><li><a href="/components/switch" class="">Switch <span class="sidebar-count">4</span></a></li><li><a href="/components/table" class="">Table <span class="sidebar-count">5</span></a></li><li><a href="/components/tabs" class="">Tabs <span class="sidebar-count">6</span></a></li><li><a href="/components/toast" class="">Toast <span class="sidebar-count">2</span></a></li><li><a href="/components/tooltip" class="">Tooltip <span class="sidebar-count">6</span></a></li></ul>
+    </details>
     <div class="component-main">
-      <p class="eyebrow"><a href="/components">Components</a></p>
       <h1>Dropdown</h1>
-      <p class="subtitle">13 indexed systems document dropdown — click through to the actual page.</p>
-      <ul class="system-list"><li><a href="https://skyline.benevity.org/components/buttons/dropdown-menus/" target="_blank" rel="noopener">Benevity — Skyline</a> <span class="page-title">Dropdown Menu</span></li><li><a href="https://skyline.benevity.org/components/dropdown-menus" target="_blank" rel="noopener">Benevity — Skyline</a> <span class="page-title">Dropdown Menu</span></li><li><a href="https://skyline.benevity.org/components/dropdown-menus/" target="_blank" rel="noopener">Benevity — Skyline</a> <span class="page-title">Dropdown Menu</span></li><li><a href="https://skyline.benevity.org/components/forms/select-input/" target="_blank" rel="noopener">Benevity — Skyline</a> <span class="page-title">Select Input</span></li><li><a href="https://vanillaframework.io/docs/examples/patterns/code-snippet/dropdown" target="_blank" rel="noopener">Canonical — Vanilla framework</a> <span class="page-title">Code snippet / Dropdown</span></li><li><a href="https://vanillaframework.io/docs/examples/patterns/forms/form-validation-select-wrapper-dense" target="_blank" rel="noopener">Canonical — Vanilla framework</a> <span class="page-title">Forms / Validation / Dense select wrapper</span></li><li><a href="https://www.goodbarber.com/uxdesign/dropdown/" target="_blank" rel="noopener">GoodBarber — GoodBarber Design System</a> <span class="page-title">Dropdown</span></li><li><a href="https://www.carbondesignsystem.com/components/dropdown/style/" target="_blank" rel="noopener">IBM — Carbon Design System</a> <span class="page-title">https://www.carbondesignsystem.com/components/dropdown/style/</span></li><li><a href="https://www.carbondesignsystem.com/components/select/style/" target="_blank" rel="noopener">IBM — Carbon Design System</a> <span class="page-title">https://www.carbondesignsystem.com/components/select/style/</span></li><li><a href="https://designers.italia.it/design-system/componenti/dropdown/" target="_blank" rel="noopener">Italian Public Administration — .it Designers Italy</a> <span class="page-title">Dropdown</span></li><li><a href="https://designers.italia.it/design-system/componenti/select/" target="_blank" rel="noopener">Italian Public Administration — .it Designers Italy</a> <span class="page-title">Select</span></li><li><a href="https://designsystem.morningstar.com/components/select/" target="_blank" rel="noopener">Morningstar — Morningstar Design System</a> <span class="page-title">Select</span></li><li><a href="https://semantic-ui.com/modules/dropdown.html" target="_blank" rel="noopener">Semantic — Semantic UI</a> <span class="page-title">Dropdown</span></li></ul>
+      <p class="subtitle">6 indexed systems document dropdown — click through to the actual page.</p>
+      <ul class="system-list"><li><a class="name-block-link" href="/systems/benevity-skyline"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=skyline.benevity.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Benevity</span><span class="ds-name">Skyline</span></div></div></a><a class="page-title" href="https://skyline.benevity.org/components/buttons/dropdown-menus/" target="_blank" rel="noopener" title="Open the actual page on Benevity — Skyline's site — Dropdown Menu"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Dropdown Menu</span></a></li><li><a class="name-block-link" href="/systems/goodbarber-goodbarber-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.goodbarber.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GoodBarber</span><span class="ds-name">GoodBarber Design System</span></div></div></a><a class="page-title" href="https://www.goodbarber.com/uxdesign/dropdown/" target="_blank" rel="noopener" title="Open the actual page on GoodBarber — GoodBarber Design System's site — Dropdown"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Dropdown</span></a></li><li><a class="name-block-link" href="/systems/italian-public-administration-it-designers-italy"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designers.italia.it&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Italian Public Administration</span><span class="ds-name">.it Designers Italy</span></div></div></a><a class="page-title" href="https://designers.italia.it/design-system/componenti/dropdown/" target="_blank" rel="noopener" title="Open the actual page on Italian Public Administration — .it Designers Italy's site — Dropdown"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Dropdown</span></a></li><li><a class="name-block-link" href="/systems/just-eat-takeaway-pie"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pie.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Just Eat Takeaway</span><span class="ds-name">PIE</span></div></div></a><a class="page-title" href="https://pie.design/components/dropdown" target="_blank" rel="noopener" title="Open the actual page on Just Eat Takeaway — PIE's site — Dropdown"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Dropdown</span></a></li><li><a class="name-block-link" href="/systems/morningstar-morningstar-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.morningstar.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Morningstar</span><span class="ds-name">Morningstar Design System</span></div></div></a><a class="page-title" href="https://designsystem.morningstar.com/components/select/" target="_blank" rel="noopener" title="Open the actual page on Morningstar — Morningstar Design System's site — Select"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Select</span></a></li><li><a class="name-block-link" href="/systems/semantic-semantic-ui"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semantic-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Semantic</span><span class="ds-name">Semantic UI</span></div></div></a><a class="page-title" href="https://semantic-ui.com/modules/dropdown.html" target="_blank" rel="noopener" title="Open the actual page on Semantic — Semantic UI's site — Dropdown"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Dropdown</span></a></li></ul>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-16T15:03:09+00:00",
+  "generated_at": "2026-09-16T22:53:58+00:00",
   "id": "kickstart-kickstartds",
   "organization": "kickstart",
   "design_system": "kickstartDS",
@@ -10,8 +10,8 @@
   ],
   "detail_url": "/systems/kickstart-kickstartds",
   "pages_indexed": 6,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
   "last_checked": "2026-09-15T23:49:47+00:00",
   "last_modified": null,

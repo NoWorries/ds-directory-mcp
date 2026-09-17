@@ -11,6 +11,8 @@ These aren't crawled/embedded for search — they're just linked from the site a
 worth recording in the systems registry for humans (and future tooling) to use.
 """
 
+from __future__ import annotations
+
 import re
 from urllib.parse import urljoin, urlparse
 
@@ -70,15 +72,55 @@ def canonicalize_npm_url(url: str) -> str:
     return _NPM_VERSION_SUFFIX.sub(r"\1", url).rstrip("/")
 
 
-def classify_links(all_links: set[str]) -> dict[str, list[str]]:
+# github.com source-browsing paths — a /blob/, /tree/, /edit/ etc. link is a
+# view of ONE FILE deep in a repo, not itself "the icon library" or "the
+# skill" a looser key's pattern (icons, skills) matched on a path substring.
+# Confirmed live: a docs page's "edit this on GitHub" link to
+# .../src/icon/docs/overview.mdx got classified as an "icons" resource
+# purely because "/icon/" appears in that file's own path. github/
+# markdown_docs/agent_instructions are exempt — those keys specifically want
+# a file (a repo itself, or e.g. CONTRIBUTING.md), so a source-view URL
+# pointing at one is exactly what they're supposed to match.
+_GITHUB_SOURCE_VIEW = re.compile(r"github\.com/[\w.-]+/[\w.-]+/(blob|tree|edit|commits?|issues?|pull|actions)/", re.IGNORECASE)
+_EXEMPT_FROM_SOURCE_VIEW_FILTER = {"github", "markdown_docs", "agent_instructions", "copilot_instructions", "cursor_rules", "registry"}
+
+
+def _dedupe_key(url: str) -> str:
+    """Normalizes a URL for DEDUP COMPARISON only (the original, un-normalized
+    string is still what gets stored/displayed) — github.com/Org/Repo and
+    github.com/org/repo/ are the same repo (GitHub owner/repo names are
+    case-insensitive, and a trailing slash is cosmetic), but compared as
+    plain strings they look like two different links. Confirmed live: IBM
+    Carbon's discovered links included both "IBM/carbon-components-svelte"
+    and "ibm/carbon-components-svelte" as separate entries."""
+    return re.sub(r"^https?://", "", url, flags=re.IGNORECASE).rstrip("/").lower()
+
+
+def classify_links(all_links: set[str], design_system_name: str | None = None) -> dict[str, list[str]]:
+    """design_system_name, when given, sorts github/npm hits so the one
+    whose owner/package name actually looks_related() to this system comes
+    first — enrich_resources() only ever fetches metadata for index 0, so an
+    unrelated dependency link happening to be discovered before the
+    system's own repo would otherwise mean the WRONG repo's stars/license/
+    last-pushed date get shown."""
     found: dict[str, list[str]] = {key: [] for key in RESOURCE_PATTERNS}
+    seen_keys: dict[str, set[str]] = {key: set() for key in RESOURCE_PATTERNS}
     for link in all_links:
         for key, pattern in RESOURCE_PATTERNS.items():
             if not pattern.search(link):
                 continue
+            if key not in _EXEMPT_FROM_SOURCE_VIEW_FILTER and _GITHUB_SOURCE_VIEW.search(link):
+                continue
             value = canonicalize_npm_url(link) if key == "npm" else link
-            if value not in found[key]:
+            dedupe_key = _dedupe_key(value)
+            if dedupe_key not in seen_keys[key]:
+                seen_keys[key].add(dedupe_key)
                 found[key].append(value)
+
+    if design_system_name:
+        for key in _CHECKED_RESOURCE_KEYS:
+            found[key].sort(key=lambda u: not looks_related(u, design_system_name))
+
     return {key: urls for key, urls in found.items() if urls}
 
 
@@ -111,19 +153,12 @@ def probe_well_known(start_url: str) -> dict[str, list[str]]:
     return {key: urls for key, urls in found.items() if urls}
 
 
-def probe_sitemap(start_url: str) -> dict:
-    """Check for a sitemap (the robots.txt `Sitemap:` directive first, then
-    the two conventional default paths) and, if found, the most recent
-    <lastmod> across every URL it lists.
-
-    This is a far more reliable "has this site actually changed" signal than
-    fetch_change_signal()'s single ETag/Last-Modified header on the homepage
-    alone — a sitemap's <lastmod> values reflect whatever page the site
-    itself claims was last touched, not just the front door, so it catches a
-    changed sub-page that never shows up in the homepage's own headers.
-    Doesn't fetch/parse a sitemap index's child sitemaps — one network round
-    trip, best-effort, not a guarantee of complete coverage either, just a
-    much better signal than what a single page's headers give."""
+def _find_sitemap(start_url: str) -> tuple[str, str] | None:
+    """(sitemap_url, response_text) for the first working sitemap found at
+    this domain (the robots.txt `Sitemap:` directive first, then the two
+    conventional default paths) — shared by probe_sitemap() (a freshness
+    signal) and fetch_sitemap_urls() (a crawl seed list) so there's exactly
+    one place that knows how to locate a site's sitemap."""
     parsed = urlparse(start_url)
     root = f"{parsed.scheme}://{parsed.netloc}/"
     headers = {"User-Agent": "ds-directory-mcp/1.0"}
@@ -148,8 +183,43 @@ def probe_sitemap(start_url: str) -> dict:
                 continue
         except requests.RequestException:
             continue
+        return sitemap_url, response.text
+    return None
 
-        lastmods = re.findall(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", response.text, re.IGNORECASE)
+
+def fetch_sitemap_urls(start_url: str, limit: int = 1000) -> list[str]:
+    """Every <loc> a site's sitemap lists (capped at `limit`), for seeding
+    ingest.crawl()'s BFS queue — a capped crawl currently always starts from
+    the same URL in the same link order, so the pages just past max_pages
+    never get a turn on a later run even as ones already indexed keep
+    getting re-visited. A sitemap is the site's own authoritative page list;
+    when one exists, it's a far better crawl order than nav-link BFS order.
+    Best-effort: empty if there's no sitemap or it doesn't parse — the
+    ordinary BFS crawl is unaffected either way, this only ever adds seeds."""
+    found = _find_sitemap(start_url)
+    if not found:
+        return []
+    _, text = found
+    locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", text, re.IGNORECASE)
+    return locs[:limit]
+
+
+def probe_sitemap(start_url: str) -> dict:
+    """Check for a sitemap and, if found, the most recent <lastmod> across
+    every URL it lists.
+
+    This is a far more reliable "has this site actually changed" signal than
+    fetch_change_signal()'s single ETag/Last-Modified header on the homepage
+    alone — a sitemap's <lastmod> values reflect whatever page the site
+    itself claims was last touched, not just the front door, so it catches a
+    changed sub-page that never shows up in the homepage's own headers.
+    Doesn't fetch/parse a sitemap index's child sitemaps — one network round
+    trip, best-effort, not a guarantee of complete coverage either, just a
+    much better signal than what a single page's headers give."""
+    found = _find_sitemap(start_url)
+    if found:
+        sitemap_url, text = found
+        lastmods = re.findall(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", text, re.IGNORECASE)
         result = {"sitemap_url": sitemap_url}
         if lastmods:
             # ISO 8601 dates (with or without a time component) sort
@@ -301,13 +371,30 @@ def flag_unverified_resources(resources: dict[str, list[str]], design_system_nam
     a key, not just the first, since a key can have more than one discovered
     link (e.g. two npm packages) and only some might be unrelated.
 
-    Never shown on the public site (a "?" badge there just confuses
-    visitors with no way to act on it) — check_crawl_health.py reports these
-    to the maintainer as a GitHub issue instead, for a human to actually
-    look at and resolve (keep it, tag it as unrelated, or remove it)."""
+    Call this on the raw, unfiltered result of classify_links()/merge_
+    resources() and pass the result to filter_unverified_resources() to get
+    the cleaned-up dict that actually gets stored/shown — this dict is kept
+    around afterwards purely as an audit trail (stored in the registry as
+    unverified_resources, reported by check_crawl_health.py) of what was
+    excluded and why, in case the heuristic was ever wrong about one."""
     unverified: dict[str, list[str]] = {}
     for key in _CHECKED_RESOURCE_KEYS:
         bad = [u for u in resources.get(key, []) if not looks_related(u, design_system_name)]
         if bad:
             unverified[key] = bad
     return unverified
+
+
+def filter_unverified_resources(resources: dict[str, list[str]], unverified: dict[str, list[str]]) -> dict[str, list[str]]:
+    """Drops whatever flag_unverified_resources() identified from the actual
+    resources dict — e.g. IBM Carbon's docs site links to storybookjs/
+    storybook, octokit/core.js, vuejs/vue-devtools and a couple of generic
+    GitHub guide pages alongside its own ~20 real carbon-design-system/*
+    repos; none of those four have anything to do with Carbon itself, so the
+    public resource list should show the design system's own repos only, not
+    every GitHub link its docs happened to reference along the way."""
+    cleaned = {key: list(urls) for key, urls in resources.items()}
+    for key, bad_urls in unverified.items():
+        bad_set = set(bad_urls)
+        cleaned[key] = [u for u in cleaned.get(key, []) if u not in bad_set]
+    return {key: urls for key, urls in cleaned.items() if urls}
