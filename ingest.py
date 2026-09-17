@@ -94,7 +94,7 @@ from config import (
     QDRANT_COLLECTION,
     QDRANT_URL,
 )
-from embeddings import EmbeddingAuthError, embed_texts
+from embeddings import MAX_BATCH_SIZE, EmbeddingAuthError, embed_texts
 from content_signals import detect_content_signals
 from resources import (
     classify_links,
@@ -1296,6 +1296,30 @@ def chunk_point_id(design_system_name: str, url: str, chunk_index: int) -> str:
     return str(uuid.uuid5(uuid.NAMESPACE_URL, f"{design_system_name}|{url}|{chunk_index}"))
 
 
+def _pack_pages_into_batches(page_chunks: dict[str, list[str]]) -> list[list[str]]:
+    """Groups whole pages together up to MAX_BATCH_SIZE total chunks per
+    batch — greedy first-fit, not optimal bin-packing, but good enough here
+    since the goal is just "many fewer requests than one per page", not a
+    perfectly minimal request count. A single page whose own chunk count
+    already exceeds MAX_BATCH_SIZE (Atlassian's llms-full.txt: 800+ chunks)
+    still gets its own batch on its own — embed_texts() already re-splits
+    anything over the limit into multiple HTTP calls internally, so
+    correctness holds either way, it just can't share a request with
+    anyone else."""
+    batches: list[list[str]] = []
+    current: list[str] = []
+    current_size = 0
+    for url, chunks in page_chunks.items():
+        if current and current_size + len(chunks) > MAX_BATCH_SIZE:
+            batches.append(current)
+            current, current_size = [], 0
+        current.append(url)
+        current_size += len(chunks)
+    if current:
+        batches.append(current)
+    return batches
+
+
 def _chunk_and_upsert(
     client: QdrantClient,
     design_system_name: str,
@@ -1303,27 +1327,45 @@ def _chunk_and_upsert(
     page_titles: dict[str, str] | None = None,
 ) -> tuple[set[str], dict[str, int]]:
     """Shared tail of ingest()/ingest_spa(): chunk each page's text, embed,
-    and upsert into Qdrant. Each page is embedded/upserted independently and
-    the result is committed to Qdrant as it goes, so a failure on one page
-    (e.g. exhausted embedding-API rate-limit retries) doesn't lose vectors already
-    written for earlier pages in this same run. Returns (failed, chunk_counts):
-    failed is the URLs that couldn't be embedded, so the caller can leave
-    them out of registry/pages_index bookkeeping and let them be retried on
-    the next run instead of being wrongly marked done; chunk_counts is
-    {url: number of chunks written} for every URL that succeeded, so the
-    caller can clean up any stale tail chunks left over from a previous,
-    longer version of the same page (see delete_stale_chunks())."""
+    and upsert into Qdrant.
+
+    Chunks from multiple pages are packed together into one embed_texts()
+    call per up-to-MAX_BATCH_SIZE-chunk batch (see _pack_pages_into_batches)
+    instead of one call per page — confirmed live, a call per page (even
+    though most pages are only a handful of chunks) burned through Gemini's
+    free-tier daily request quota (1,000/day) well before a full reindex
+    finished. Each BATCH is still embedded/upserted independently and
+    committed to Qdrant as it goes, so a failure on one batch doesn't lose
+    vectors already written for earlier batches in this same run — the
+    trade-off against the old per-page isolation is that a batch failure
+    now takes every page sharing that batch down with it rather than just
+    one, but embed_texts() already retries anything transient (429/5xx)
+    internally, so a batch-level failure here should be rare, not routine.
+    Returns (failed, chunk_counts): failed is the URLs that couldn't be
+    embedded, so the caller can leave them out of registry/pages_index
+    bookkeeping and let them be retried on the next run instead of being
+    wrongly marked done; chunk_counts is {url: number of chunks written}
+    for every URL that succeeded, so the caller can clean up any stale tail
+    chunks left over from a previous, longer version of the same page (see
+    delete_stale_chunks())."""
     page_titles = page_titles or {}
     failed = set()
     chunk_counts: dict[str, int] = {}
     indexed_at = now_iso()
-    for url, text in pages.items():
-        chunks = chunk_text(text)
-        if not chunks:
-            continue
+
+    page_chunks = {url: chunk_text(text) for url, text in pages.items()}
+    page_chunks = {url: chunks for url, chunks in page_chunks.items() if chunks}
+
+    for batch_urls in _pack_pages_into_batches(page_chunks):
+        batch_texts: list[str] = []
+        spans: dict[str, tuple[int, int]] = {}
+        for url in batch_urls:
+            start = len(batch_texts)
+            batch_texts.extend(page_chunks[url])
+            spans[url] = (start, len(batch_texts))
 
         try:
-            vectors = embed_texts(chunks)
+            vectors = embed_texts(batch_texts)
             points = [
                 PointStruct(
                     id=chunk_point_id(design_system_name, url, i),
@@ -1337,24 +1379,30 @@ def _chunk_and_upsert(
                         "indexed_at": indexed_at,
                     },
                 )
-                for i, (chunk, vector) in enumerate(zip(chunks, vectors))
+                for url in batch_urls
+                for i, (chunk, vector) in enumerate(
+                    zip(page_chunks[url], vectors[spans[url][0] : spans[url][1]])
+                )
             ]
             client.upsert(collection_name=QDRANT_COLLECTION, points=points)
-            print(f"  indexed {len(points)} chunks from {url}")
-            chunk_counts[url] = len(points)
+            for url in batch_urls:
+                count = spans[url][1] - spans[url][0]
+                chunk_counts[url] = count
+                print(f"  indexed {count} chunks from {url}")
         except EmbeddingAuthError:
-            # Not a per-page problem — every remaining embed call in this run
-            # (this system's remaining pages, and every other system still
-            # queued after it) would fail the exact same way, so there's
-            # nothing to gain from treating this one URL as "just skip it and
-            # keep going" the way a real per-page failure below does. Let it
-            # propagate all the way out of the --all/--new/--refresh loop
-            # (see safe_run) instead of silently burning the rest of this
-            # run's crawl time on calls that are guaranteed to fail too.
+            # Not a per-batch problem — every remaining embed call in this
+            # run (this system's remaining pages, and every other system
+            # still queued after it) would fail the exact same way, so
+            # there's nothing to gain from treating this one batch as "just
+            # skip it and keep going" the way a real batch failure below
+            # does. Let it propagate all the way out of the --all/--new/
+            # --refresh loop (see safe_run) instead of silently burning the
+            # rest of this run's crawl time on calls guaranteed to fail too.
             raise
         except Exception as e:
-            print(f"  !! failed to embed/upsert {url}, will retry next run: {e}")
-            failed.add(url)
+            for url in batch_urls:
+                print(f"  !! failed to embed/upsert {url}, will retry next run: {e}")
+                failed.add(url)
     return failed, chunk_counts
 
 
