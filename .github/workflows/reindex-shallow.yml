@@ -24,7 +24,7 @@ permissions:
 
 # Only one of these full-registry pipelines (reindex-full/new/shallow/
 # signals-refresh/spa, plus this one) committing to master or deploying to
-# Netlify at once — running two at a time doubled Jina 429s in practice
+# Netlify at once — running two at a time doubled embedding-API 429s in practice
 # and made their push-retry loops fight each other for no benefit.
 concurrency:
   group: ds-directory-mcp-write-pipeline
@@ -96,7 +96,7 @@ jobs:
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
-          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           rm -f shard_touched.json
           python ingest.py --new --shallow --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}

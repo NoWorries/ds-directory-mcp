@@ -14,7 +14,7 @@ permissions:
 
 # Only one of these full-registry pipelines (this, reindex-new, reindex-
 # shallow, reindex-signals-refresh, reindex-spa) committing to master at once
-# — two running concurrently doubled Jina 429s in practice and made the
+# — two running concurrently doubled embedding-API 429s in practice and made the
 # push-retry loops below fight each other for no benefit. Doesn't cancel an
 # in-progress run just because another was queued (cancel-in-progress:
 # false) — a --all run losing to a --new run over queue order would be a bad
@@ -100,14 +100,14 @@ jobs:
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
-          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           rm -f shard_touched.json
           python ingest.py --all --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
 
       # if: always() is the whole point of sharding: ingest.py writes
       # systems.yaml/pages_index.json incrementally (after each system, well
-      # before that system's embedding calls, which is where a Jina rate-limit
+      # before that system's embedding calls, which is where an embedding-API rate-limit
       # or any other mid-run failure actually happens) — so by the time this
       # shard's ingest step fails, the runner's local disk already reflects
       # every system it got through. Without always(), a failed step skips

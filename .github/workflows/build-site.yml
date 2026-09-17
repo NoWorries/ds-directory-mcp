@@ -1,7 +1,7 @@
 name: Build and deploy site (no crawling)
 
 # Builds directory.html/components/systems purely from whatever is already in
-# systems.yaml + pages_index.json right now — no ingest.py, no Qdrant, no Jina.
+# systems.yaml + pages_index.json right now — no ingest.py, no Qdrant, no embedding API.
 # Useful for: deploying a design/template change without waiting for a crawl,
 # recovering the site after a reindex run's build step failed partway through,
 # or just seeing the site in its current (even empty, pre-first-crawl) state.
@@ -35,7 +35,7 @@ permissions:
 
 # Only one of these full-registry pipelines (reindex-full/new/shallow/
 # signals-refresh/spa, plus this one) committing to master or deploying to
-# Netlify at once — running two at a time doubled Jina 429s in practice
+# Netlify at once — running two at a time doubled embedding-API 429s in practice
 # and made their push-retry loops fight each other for no benefit.
 concurrency:
   group: ds-directory-mcp-write-pipeline

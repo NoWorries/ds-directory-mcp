@@ -10,7 +10,7 @@ permissions:
 
 # Only one of these full-registry pipelines (reindex-full/new/shallow/
 # signals-refresh/spa, plus this one) committing to master or deploying to
-# Netlify at once — running two at a time doubled Jina 429s in practice
+# Netlify at once — running two at a time doubled embedding-API 429s in practice
 # and made their push-retry loops fight each other for no benefit.
 concurrency:
   group: ds-directory-mcp-write-pipeline
@@ -41,7 +41,7 @@ jobs:
         env:
           # A submitter's free-text org/system name (approve_submission.py)
           # goes straight into these run: scripts, which hold contents:write
-          # plus Qdrant/Jina/SMTP secrets — an org name like `"; curl ... | sh"`
+          # plus Qdrant/embedding-API/SMTP secrets — an org name like `"; curl ... | sh"`
           # would execute as shell if interpolated directly into the script
           # body. Passing it through env: and referencing it as a quoted
           # shell variable instead (same pattern already used for ISSUE_BODY
@@ -66,13 +66,13 @@ jobs:
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
-          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FULL_NAME: ${{ steps.approve.outputs.full_name }}
         run: python ingest.py --system "$FULL_NAME"
 
       # if: always() on these three — ingest.py writes systems.yaml/
       # pages_index.json right after crawling (before the embedding calls
-      # that are where a failure like a Jina rate-limit actually happens), so
+      # that are where a failure like an embedding-API rate-limit actually happens), so
       # even if the ingest step above fails partway, this one system's
       # updated pages_indexed/resources are already on disk. Without
       # always(), a failed ingest step would skip straight past committing

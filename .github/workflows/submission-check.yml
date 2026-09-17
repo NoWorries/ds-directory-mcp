@@ -23,7 +23,7 @@ jobs:
 
       - run: pip install -r requirements-ingest.txt
 
-      # No Qdrant/Jina secrets passed to this job — the dry run never writes
+      # No Qdrant/embedding-API secrets passed to this job — the dry run never writes
       # to the live index, so a bad or malicious submission can't touch it.
       - name: Run dry-run crawl check
         env:
