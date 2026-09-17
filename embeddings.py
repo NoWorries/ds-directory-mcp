@@ -7,7 +7,7 @@ from email.utils import parsedate_to_datetime
 
 import requests
 
-from config import EMBEDDING_DIM, EMBEDDING_MODEL, GEMINI_API_KEY, GEMINI_EMBED_URL
+from config import EMBEDDING_MODEL, GEMINI_API_KEY, GEMINI_EMBED_URL
 
 # The Gemini API's free tier is generous (1,500 requests/minute at time of
 # writing) but still finite, and a full reindex fires a lot of embedding
@@ -82,12 +82,15 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
         "Content-Type": "application/json",
     }
     model_name = f"models/{EMBEDDING_MODEL}"
+    # Deliberately NOT requesting a truncated outputDimensionality — see
+    # config.py's EMBEDDING_DIM comment for why this uses the model's native
+    # 3072-dim output as-is rather than trying to get Google's truncation
+    # parameter shape exactly right with no way to test it live.
     payload = {
         "requests": [
             {
                 "model": model_name,
                 "content": {"parts": [{"text": text}]},
-                "embedContentConfig": {"outputDimensionality": EMBEDDING_DIM},
             }
             for text in texts
         ]

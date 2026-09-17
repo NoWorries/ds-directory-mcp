@@ -258,6 +258,26 @@ SHALLOW_MAX_PAGES = 8
 
 
 def ensure_collection(client: QdrantClient) -> None:
+    if client.collection_exists(QDRANT_COLLECTION):
+        # A leftover collection from a previous embedding provider/model with
+        # a different native vector size is not a degraded state to work
+        # around — confirmed live, switching Jina -> Gemini left the
+        # collection at Jina's 768 dims while Gemini's real output is 3072,
+        # and Qdrant rejects every single upsert outright ("Wrong input:
+        # Vector dimension error") until the collection matches. There's
+        # nothing worth preserving in that case either way: the OLD vectors
+        # are a different model's semantic space entirely and were already
+        # due for a full re-embed regardless of dimension. Recreate rather
+        # than fail forever on every embed call.
+        existing_size = client.get_collection(QDRANT_COLLECTION).config.params.vectors.size
+        if existing_size != EMBEDDING_DIM:
+            print(
+                f"  !! {QDRANT_COLLECTION}'s existing vector size ({existing_size}) doesn't match "
+                f"EMBEDDING_DIM ({EMBEDDING_DIM}) — deleting and recreating it. This is expected right "
+                f"after an embedding-provider/model switch; every system will re-embed from scratch."
+            )
+            client.delete_collection(QDRANT_COLLECTION)
+
     if not client.collection_exists(QDRANT_COLLECTION):
         client.create_collection(
             collection_name=QDRANT_COLLECTION,
