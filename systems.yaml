@@ -45,12 +45,12 @@
   design_system: Mozaic Design System
   start_urls:
   - https://mozaic.adeo.cloud/
-  pages_indexed: 0
+  pages_indexed: 1
   resources:
     icons:
     - https://mozaic.adeo.cloud/foundations/icons/
   etag: '"VJWcyQ"'
-  last_checked: '2026-09-17T00:18:57+00:00'
+  last_checked: '2026-09-17T02:13:13+00:00'
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -89,7 +89,7 @@
     - https://auro.alaskaair.com/llms.txt
   hit_max_pages: false
   crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 2
+  consecutive_crawl_failures: 3
   likely_spa: false
   unverified_resources: {}
   content_signals:
@@ -98,7 +98,7 @@
     - Web Components
     - Svelte
   sitemap_url: https://auro.alaskaair.com/sitemap.xml
-  last_checked: '2026-09-17T01:37:32+00:00'
+  last_checked: '2026-09-17T02:10:34+00:00'
   content_signal_sources: {}
 - organization: Altinn
   design_system: Altinn Design System
@@ -246,7 +246,7 @@
     frameworks:
       Web Components: https://developers.arcgis.com/calcite-design-system
   thin_page_ratio: 0.5
-  last_checked: '2026-09-17T00:18:47+00:00'
+  last_checked: '2026-09-17T02:20:57+00:00'
   etag: W/"5a46f65be63c180137116dd0b283d663"
   last_modified: Wed, 16 Sep 2026 13:02:48 GMT
   sitemap_url: https://developers.arcgis.com/sitemap-index.xml
