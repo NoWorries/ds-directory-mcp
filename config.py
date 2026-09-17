@@ -6,25 +6,35 @@ load_dotenv()
 
 # .get(), not os.environ[...] — this module also supplies CHUNK_SIZE/
 # CHUNK_OVERLAP/CRAWL_DELAY_SECONDS to code paths that never touch Qdrant or
-# Jina at all (merge_shards.py, dry_run_submission.py's crawl-only dry run,
-# approve_submission.py's registry read/write) via ingest.py's/chunking.py's
-# module-level imports. A hard-required os.environ[...] here meant merely
-# *importing* those modules crashed with a KeyError in any workflow step that
-# (correctly, deliberately) didn't set these secrets — e.g. the merge job and
-# the sandboxed dry-run check, neither of which should need live Qdrant/Jina
-# credentials in the first place. The real usage sites (embeddings.py,
-# ingest.py's actual crawl+embed, server.py) still fail clearly/loudly the
-# moment they're actually called with these unset — this only defers the
-# failure from "unrelated import" to "actual use", which is strictly better.
+# the embedding API at all (merge_shards.py, dry_run_submission.py's crawl-
+# only dry run, approve_submission.py's registry read/write) via ingest.py's/
+# chunking.py's module-level imports. A hard-required os.environ[...] here
+# meant merely *importing* those modules crashed with a KeyError in any
+# workflow step that (correctly, deliberately) didn't set these secrets —
+# e.g. the merge job and the sandboxed dry-run check, neither of which should
+# need live Qdrant/embedding credentials in the first place. The real usage
+# sites (embeddings.py, ingest.py's actual crawl+embed, server.py) still fail
+# clearly/loudly the moment they're actually called with these unset — this
+# only defers the failure from "unrelated import" to "actual use", which is
+# strictly better.
 QDRANT_URL = os.environ.get("QDRANT_URL")
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
-JINA_API_KEY = os.environ.get("JINA_API_KEY")
+# Switched from Jina to Google's Gemini Embedding API (see embeddings.py) —
+# Jina's free tier ran out mid-session with no warning short of the account
+# dashboard, and Gemini's free tier (1,500 requests/minute, no credit card)
+# is a better fit for this project's actual scale. EMBEDDING_DIM stays 768
+# (gemini-embedding-001 supports configurable output dimensionality via
+# embedContentConfig, so this isn't locked to the model's native size) —
+# matching the existing Qdrant collection's vector size means no schema
+# change, though the vectors themselves are a different model's semantic
+# space entirely and need a full re-embed of the whole corpus regardless.
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 QDRANT_COLLECTION = os.environ.get("QDRANT_COLLECTION", "design_system_index")
-EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "jina-embeddings-v2-base-en")
+EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "gemini-embedding-001")
 EMBEDDING_DIM = int(os.environ.get("EMBEDDING_DIM", "768"))
 
-JINA_EMBED_URL = "https://api.jina.ai/v1/embeddings"
+GEMINI_EMBED_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{EMBEDDING_MODEL}:batchEmbedContents"
 
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 100

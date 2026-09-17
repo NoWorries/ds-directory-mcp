@@ -23,15 +23,14 @@ QDRANT_API_KEY=<api key>
 
 ---
 
-## 2. Jina AI (embeddings)
+## 2. Google Gemini (embeddings)
 
-1. Go to https://jina.ai and sign up.
-2. Go to the API key / dashboard section (sometimes under "Embeddings" or "API").
-3. Generate an API key. Free tier is 1M tokens/month, no card required.
+1. Go to https://aistudio.google.com/apikey and sign in with a Google account.
+2. Click **Create API key**. Free tier is 1,500 requests/minute, no card required.
 
 Copy into `.env` as:
 ```
-JINA_API_KEY=<api key>
+GEMINI_API_KEY=<api key>
 ```
 
 ---
@@ -46,7 +45,7 @@ This repo needs to exist on GitHub for the scheduled re-indexing workflow to run
 3. Add three secrets, using the same values as your `.env`:
    - `QDRANT_URL`
    - `QDRANT_API_KEY`
-   - `JINA_API_KEY`
+   - `GEMINI_API_KEY`
 
 No new account needed here, just repo secrets — nothing else to sign up for.
 
@@ -61,7 +60,7 @@ No new account needed here, just repo secrets — nothing else to sign up for.
    `sync: false` in `render.yaml` — enter the same three values:
    - `QDRANT_URL`
    - `QDRANT_API_KEY`
-   - `JINA_API_KEY`
+   - `GEMINI_API_KEY`
 4. Deploy. Render will build (`pip install -r requirements.txt`) and run (`python server.py`).
 5. Copy the service's public URL (e.g. `https://ds-directory-mcp.onrender.com`) — this is
    what you'll point an MCP client at.
@@ -122,7 +121,7 @@ they run `netlify-cli deploy --prod`.
 |---|---|---|
 | `QDRANT_URL` | Qdrant Cloud cluster page | `.env`, GitHub secrets, Render env vars |
 | `QDRANT_API_KEY` | Qdrant Cloud → API Keys | `.env`, GitHub secrets, Render env vars |
-| `JINA_API_KEY` | Jina AI dashboard | `.env`, GitHub secrets, Render env vars |
+| `GEMINI_API_KEY` | Google AI Studio → API keys | `.env`, GitHub secrets, Render env vars |
 | Render service URL | Render dashboard, after deploy | Your MCP client config (Claude Code/Desktop) |
 | `NETLIFY_AUTH_TOKEN` | Netlify → User settings → Applications | GitHub secrets only |
 | `NETLIFY_SITE_ID` | Netlify → Site configuration → General | GitHub secrets only |

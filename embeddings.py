@@ -7,17 +7,18 @@ from email.utils import parsedate_to_datetime
 
 import requests
 
-from config import EMBEDDING_MODEL, JINA_API_KEY, JINA_EMBED_URL
+from config import EMBEDDING_DIM, EMBEDDING_MODEL, GEMINI_API_KEY, GEMINI_EMBED_URL
 
-# Jina's free tier has a fairly low requests-per-minute cap, and a full reindex
-# fires a lot of embedding calls back to back — a 429 here used to crash the
-# whole shard (see ingest.py's --shard workflow) rather than just slowing
-# down. Retry with exponential backoff instead of a fixed/linear wait, so
-# repeated 429s space out fast (20s, 40s, 80s, 160s, 320s) rather than
-# hammering the API at a near-constant cadence — and add jitter so the 4
-# parallel reindex-shard runners don't all wake up and retry in the same
-# instant, which would just trip the rate limit again. Retry-After from the
-# API (a direct signal of the real window) always wins when present.
+# The Gemini API's free tier is generous (1,500 requests/minute at time of
+# writing) but still finite, and a full reindex fires a lot of embedding
+# calls back to back — a 429 here used to crash the whole shard (see
+# ingest.py's --shard workflow) rather than just slowing down. Retry with
+# exponential backoff instead of a fixed/linear wait, so repeated 429s space
+# out fast (20s, 40s, 80s, 160s, 320s) rather than hammering the API at a
+# near-constant cadence — and add jitter so the 4 parallel reindex-shard
+# runners don't all wake up and retry in the same instant, which would just
+# trip the rate limit again. Retry-After from the API (a direct signal of
+# the real window) always wins when present.
 MAX_RETRIES = 5
 BASE_BACKOFF_SECONDS = 20
 JITTER_SECONDS = 5
@@ -26,6 +27,23 @@ JITTER_SECONDS = 5
 # a transient 5xx or a dropped connection is exactly as recoverable as a rate
 # limit, and previously crashed the whole shard just the same.
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
+
+# 400/401/403 are a different category of failure from the retryable ones
+# above: an invalid/expired API key, a disabled API, or an exhausted account
+# quota (confirmed live on the previous embedding provider — Jina returned
+# 403 once its key ran out of free tokens, and every remaining embed call in
+# the shard failed the exact same way, one page at a time, each just logged
+# as "will retry next run" while the crawl for every remaining system still
+# ran to completion first — wasting the whole run's worth of time before
+# the exact same wall got hit again on the next scheduled run). No amount
+# of retrying or waiting fixes this; it needs a human to go check the key/
+# quota/billing. EmbeddingAuthError lets callers tell this apart from a
+# per-page retryable failure and stop the whole run immediately instead of
+# ploughing through every other system only to hit this same error hundreds
+# more times. Named for the failure mode, not the provider, since whichever
+# embedding API is behind config.py next hits the same category of error.
+class EmbeddingAuthError(Exception):
+    pass
 
 
 def _parse_retry_after(value: str | None, default_wait: float) -> float:
@@ -51,26 +69,40 @@ def _parse_retry_after(value: str | None, default_wait: float) -> float:
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    """Embed a batch of text chunks via the Jina AI embeddings API."""
+    """Embed a batch of text chunks via the Gemini API's batchEmbedContents
+    endpoint — one HTTP call embeds the whole list (well under its
+    documented 2,048-text-per-batch limit; a single page's chunks never
+    come close to that many), same shape as the single-call-per-page
+    pattern the rest of ingest.py already relies on."""
     if not texts:
         return []
 
     headers = {
-        "Authorization": f"Bearer {JINA_API_KEY}",
+        "x-goog-api-key": GEMINI_API_KEY,
         "Content-Type": "application/json",
     }
-    payload = {"model": EMBEDDING_MODEL, "input": texts}
+    model_name = f"models/{EMBEDDING_MODEL}"
+    payload = {
+        "requests": [
+            {
+                "model": model_name,
+                "content": {"parts": [{"text": text}]},
+                "embedContentConfig": {"outputDimensionality": EMBEDDING_DIM},
+            }
+            for text in texts
+        ]
+    }
 
     for attempt in range(MAX_RETRIES + 1):
         default_wait = BASE_BACKOFF_SECONDS * (2**attempt)
         jitter = random.uniform(0, JITTER_SECONDS)
         try:
-            response = requests.post(JINA_EMBED_URL, json=payload, headers=headers, timeout=60)
+            response = requests.post(GEMINI_EMBED_URL, json=payload, headers=headers, timeout=60)
         except (requests.Timeout, requests.ConnectionError) as exc:
             if attempt >= MAX_RETRIES:
                 raise
             wait = default_wait + jitter
-            print(f"  Jina request failed ({exc}) — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
+            print(f"  Gemini request failed ({exc}) — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
             time.sleep(wait)
             continue
 
@@ -81,23 +113,32 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
             # shards retrying off the same Retry-After value don't
             # re-synchronise and immediately re-trip the limit together.
             wait = max(_parse_retry_after(response.headers.get("Retry-After"), default_wait), default_wait) + jitter
-            print(f"  Jina returned {response.status_code} — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
+            print(f"  Gemini returned {response.status_code} — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
             time.sleep(wait)
             continue
 
+        if response.status_code in (400, 401, 403):
+            raise EmbeddingAuthError(
+                f"Gemini returned {response.status_code} — this means an invalid/expired GEMINI_API_KEY, the "
+                f"Generative Language API not being enabled for this key's project, or an exhausted quota, not "
+                f"a transient error, so it won't be retried. Check https://aistudio.google.com/apikey. "
+                f"Response body: {response.text[:500]}"
+            )
+
         response.raise_for_status()
         try:
-            data = response.json()["data"]
+            embeddings = response.json()["embeddings"]
+            vectors = [item["values"] for item in embeddings]
         except (ValueError, KeyError) as exc:
             if attempt >= MAX_RETRIES:
                 raise
             wait = default_wait + jitter
-            print(f"  Jina response malformed ({exc}) — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
+            print(f"  Gemini response malformed ({exc}) — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
             time.sleep(wait)
             continue
-        # Jina returns results possibly out of input order; each item carries its index.
-        data.sort(key=lambda item: item["index"])
-        return [item["embedding"] for item in data]
+        if len(vectors) != len(texts):
+            raise ValueError(f"Gemini returned {len(vectors)} embeddings for {len(texts)} input texts")
+        return vectors
 
 
 def embed_query(query: str) -> list[float]:

@@ -134,7 +134,7 @@ def design_system_directory(user_query: str) -> str:
 @mcp.custom_route("/health", methods=["GET", "OPTIONS"])
 async def health(request: Request) -> JSONResponse:
     """Cheap liveness probe for the directory page's "is the MCP server awake"
-    indicator — no Qdrant/Jina calls, just confirms the process itself is up
+    indicator — no Qdrant/embedding-API calls, just confirms the process itself is up
     and reports when this instance started (i.e. since the last cold start)."""
     return JSONResponse({"status": "awake", "server_started_at": SERVER_STARTED_AT}, headers=CORS_HEADERS)
 

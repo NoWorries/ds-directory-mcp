@@ -129,14 +129,25 @@ def format_site_updated(entry: dict) -> str:
 def resource_url_label(url: str) -> str:
     """Short human-readable suffix distinguishing one URL from another
     classified under the same resource type (e.g. two npm packages) —
-    "owner/repo" for GitHub, the package name for npm, else just the host."""
+    "owner/repo" for GitHub, the package name for npm, else the path (plus
+    query string, when there is one). The path is what's actually different
+    between two links under the same type sharing the same domain — e.g.
+    "/llms.txt" vs "/llms-full.txt" vs "/.well-known/mcp.json" all on the
+    same wordpress.com blog — so it's shown in preference to the domain,
+    which was identical (and so useless as a distinguisher) across every
+    single resource pill on a system's page. Falls back to the domain only
+    when there's really no path to show (a bare "https://example.com/")."""
     match = re.search(r"github\.com/([\w.-]+/[\w.-]+)", url, re.IGNORECASE)
     if match:
         return match.group(1)
     match = re.search(r"npmjs\.com/package/([\w.@/-]+)", url, re.IGNORECASE)
     if match:
         return match.group(1)
-    return urlparse(url).netloc
+    parsed = urlparse(url)
+    path = parsed.path.rstrip("/")
+    if parsed.query:
+        path = f"{path}?{parsed.query}"
+    return path or parsed.netloc
 
 
 # Real brand marks for the resource types common enough to have one — the
@@ -181,6 +192,12 @@ def resource_activity(entry: dict, label: str, url: str) -> str:
 # opens showing what's THERE (which types, how many) rather than every link.
 RESOURCE_GROUP_COLLAPSE_THRESHOLD = 4
 
+# How many trailing characters of a resource link's label always stay fully
+# visible (see item_html's head/tail split below) — enough for a filename
+# plus extension ("llms-full.txt", ".well-known/mcp.json") to survive
+# truncation intact even when the row is too narrow for the whole path.
+_TRUNCATE_TAIL_CHARS = 24
+
 
 def render_resource_list(entry: dict) -> str:
     resources = entry.get("resources") or {}
@@ -190,11 +207,24 @@ def render_resource_list(entry: dict) -> str:
 
     def item_html(label: str, url: str) -> str:
         # The group header below already names the type (GitHub, Figma, ...),
-        # so each pill just needs to distinguish this link from its siblings
-        # under the same type — the repo/package name, or the host for
-        # anything else.
-        text = html.escape(resource_url_label(url))
-        return f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">{text}</a>{resource_activity(entry, label, url)}</li>'
+        # so each link just needs to distinguish this URL from its siblings
+        # under the same type — the repo/package name, or the path for
+        # anything else (see resource_url_label). Split into a shrink-to-
+        # ellipsis "head" and an always-visible "tail" (see .link-text* below)
+        # so a long path truncates in the MIDDLE rather than the end — the
+        # end (".../llms-full.txt", ".../mcp.json") is exactly the part that
+        # actually distinguishes one link from another under the same type,
+        # so a plain end-ellipsis would cut off the one part that matters.
+        text = resource_url_label(url)
+        # Negative-index slicing already does the right thing when text is
+        # shorter than the tail budget (head comes back "", tail comes back
+        # the whole string) — no separate short-text branch needed.
+        head, tail = text[:-_TRUNCATE_TAIL_CHARS], text[-_TRUNCATE_TAIL_CHARS:]
+        text_html = (
+            f'<span class="link-text"><span class="link-text-head">{html.escape(head)}</span>'
+            f'<span class="link-text-tail">{html.escape(tail)}</span></span>'
+        )
+        return f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">{text_html}</a>{resource_activity(entry, label, url)}</li>'
 
     def group_html(label: str, urls: list[str]) -> str:
         count = len(urls)
@@ -575,14 +605,29 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   .ai-native-item a {{ color: inherit; text-decoration: underline; text-underline-offset: 2px; }}
   .ai-native-item a:hover {{ color: var(--accent); }}
   .resource-list, .page-list {{ list-style: none; margin: 0; padding: 0; }}
-  .resource-list {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }}
+  /* One full-width row per link rather than wrapped inline pills — a path
+     like ".well-known/mcp.json" needs real width to stay readable, and a
+     fixed-width pill either clipped it outright or wrapped the row in a way
+     that made a handful of links look like a much longer list. */
+  .resource-list {{ display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }}
+  .resource-list li {{ display: flex; align-items: center; gap: 8px; }}
   .resource-list li a {{
-    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border);
-    border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 500;
+    display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;
+    padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px;
+    text-decoration: none; font-size: 0.85rem; font-weight: 500;
   }}
   .resource-list li a svg {{ flex: none; }}
   .resource-list li a:hover {{ border-color: var(--accent); color: var(--accent); }}
-  .resource-activity {{ font-size: 0.76rem; color: var(--text-faint); margin-left: 2px; white-space: nowrap; }}
+  /* Middle truncation: .link-text-head shrinks and ellipsizes on the right
+     as space runs out, while .link-text-tail (the last _TRUNCATE_TAIL_CHARS
+     characters — see item_html) never shrinks and always renders in full,
+     so a long path reads as "start/of/the/path…file.json" rather than
+     losing the filename/extension at the end, which is usually the one
+     part that actually distinguishes it from a sibling link. */
+  .link-text {{ display: flex; min-width: 0; overflow: hidden; }}
+  .link-text-head {{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }}
+  .link-text-tail {{ white-space: nowrap; flex: none; }}
+  .resource-activity {{ font-size: 0.76rem; color: var(--text-faint); white-space: nowrap; flex: none; }}
   /* One collapsible <details> per resource type — see render_resource_list.
      A system with a couple dozen GitHub repos or Figma files no longer
      dumps every single one into view; the count in the header tells you

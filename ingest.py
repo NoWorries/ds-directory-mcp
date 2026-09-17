@@ -94,7 +94,7 @@ from config import (
     QDRANT_COLLECTION,
     QDRANT_URL,
 )
-from embeddings import embed_texts
+from embeddings import EmbeddingAuthError, embed_texts
 from content_signals import detect_content_signals
 from resources import (
     classify_links,
@@ -1211,7 +1211,7 @@ def ingest(
     # pages that actually made it into Qdrant. This used to be the other way
     # around: registry stats + pages_index were written first, based on the
     # raw crawl, then _chunk_and_upsert ran last and could fail partway
-    # (e.g. Jina rate-limiting exhausting its retries) without anything
+    # (e.g. the embedding API rate-limiting exhausting its retries) without anything
     # upstream ever finding out. That looked like progress — pages_indexed
     # said 300 — but most of those pages had no vectors in Qdrant at all, and
     # since pages_index.json also recorded them as seen, the *next* run's
@@ -1285,7 +1285,7 @@ def _chunk_and_upsert(
     """Shared tail of ingest()/ingest_spa(): chunk each page's text, embed,
     and upsert into Qdrant. Each page is embedded/upserted independently and
     the result is committed to Qdrant as it goes, so a failure on one page
-    (e.g. exhausted Jina rate-limit retries) doesn't lose vectors already
+    (e.g. exhausted embedding-API rate-limit retries) doesn't lose vectors already
     written for earlier pages in this same run. Returns (failed, chunk_counts):
     failed is the URLs that couldn't be embedded, so the caller can leave
     them out of registry/pages_index bookkeeping and let them be retried on
@@ -1322,6 +1322,16 @@ def _chunk_and_upsert(
             client.upsert(collection_name=QDRANT_COLLECTION, points=points)
             print(f"  indexed {len(points)} chunks from {url}")
             chunk_counts[url] = len(points)
+        except EmbeddingAuthError:
+            # Not a per-page problem — every remaining embed call in this run
+            # (this system's remaining pages, and every other system still
+            # queued after it) would fail the exact same way, so there's
+            # nothing to gain from treating this one URL as "just skip it and
+            # keep going" the way a real per-page failure below does. Let it
+            # propagate all the way out of the --all/--new/--refresh loop
+            # (see safe_run) instead of silently burning the rest of this
+            # run's crawl time on calls that are guaranteed to fail too.
+            raise
         except Exception as e:
             print(f"  !! failed to embed/upsert {url}, will retry next run: {e}")
             failed.add(url)
@@ -1501,9 +1511,19 @@ def safe_run(name: str, fn, *args, **kwargs) -> None:
     handled inside crawl()/fetch_page() (a Qdrant/embedding-API error, a bug,
     etc) so it can't silently starve every other system still queued in this
     shard's loop — before this, one such crash meant every entry after it in
-    --all/--new/--spa's for-loop never even ran, since nothing caught it."""
+    --all/--new/--spa's for-loop never even ran, since nothing caught it.
+
+    EmbeddingAuthError is the one exception deliberately NOT swallowed here: an
+    invalid/expired API key or exhausted quota applies to every remaining
+    system in this loop identically, not just this one, so "skip it and try
+    the next entry" would just mean re-hitting the same wall (and burning
+    the same crawl time first) for every system left in this shard. Letting
+    it propagate stops the whole --all/--new/--refresh run immediately
+    instead of silently limping to the end having indexed nothing."""
     try:
         fn(*args, **kwargs)
+    except EmbeddingAuthError:
+        raise
     except Exception as exc:
         print(f"  !! {name} failed unexpectedly, skipping: {exc}")
 
