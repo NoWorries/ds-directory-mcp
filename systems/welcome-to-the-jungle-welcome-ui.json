@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "welcome-to-the-jungle-welcome-ui",
   "organization": "Welcome to the Jungle",
   "design_system": "Welcome UI",
@@ -9,36 +9,66 @@
     "https://www.welcome-ui.com/"
   ],
   "detail_url": "/systems/welcome-to-the-jungle-welcome-ui",
-  "pages_indexed": 2,
-  "coverage_status": "partial",
+  "pages_indexed": 6,
+  "coverage_status": "full",
   "hit_max_pages": false,
-  "likely_spa": false,
-  "last_checked": "2026-09-16T14:56:18+00:00",
+  "likely_spa": true,
+  "last_checked": "2026-09-20T13:01:08+00:00",
   "last_modified": "Tue, 15 Sep 2026 13:11:29 GMT",
   "sitemap_last_modified": null,
   "resources": {
+    "github": [
+      "https://github.com/WTTJ/welcome-ui"
+    ],
     "icons": [
-      "https://www.welcome-ui.com/components/icon"
+      "https://welcome-ui.com/components/icon",
+      "https://welcome-ui.com/components/icon/props",
+      "https://welcome-ui.com/foundations/upgrades/components/icons"
     ],
     "agent_instructions": [
       "https://www.welcome-ui.com/llms.txt"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/jaredpalmer/formik",
+      "https://github.com/Hacker0x01/react-datepicker"
+    ]
+  },
   "content_signals": {
     "frameworks": [
       "React"
     ]
   },
-  "github_meta": null,
+  "github_meta": {
+    "license": "MIT",
+    "stars": 676,
+    "last_pushed": "2026-09-19T07:19:34Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
     {
-      "url": "https://www.welcome-ui.com/components",
+      "url": "https://www.welcome-ui.com/llms.txt",
+      "title": "Welcome to the Jungle — Welcome UI — llms.txt"
+    },
+    {
+      "url": "https://welcome-ui.com/components",
       "title": "Welcome UI - Components"
     },
     {
-      "url": "https://www.welcome-ui.com/",
+      "url": "https://welcome-ui.com/",
+      "title": "Welcome UI - Customizable design system with react"
+    },
+    {
+      "url": "https://welcome-ui.com/blog",
+      "title": "Welcome UI - Customizable design system with react"
+    },
+    {
+      "url": "https://welcome-ui.com/foundations/upgrades/migration",
+      "title": "Welcome UI - Customizable design system with react"
+    },
+    {
+      "url": "https://welcome-ui.com/foundations/migrations",
       "title": "Welcome UI - Customizable design system with react"
     }
   ]

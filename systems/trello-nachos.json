@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "trello-nachos",
   "organization": "Trello",
   "design_system": "Nachos",
@@ -13,8 +13,8 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T13:27:48+00:00",
-  "last_modified": "Thu, 17 Sep 2026 03:13:09 GMT",
+  "last_checked": "2026-09-20T12:44:53+00:00",
+  "last_modified": "Sun, 20 Sep 2026 01:55:49 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "agent_instructions": [

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "benevity-skyline",
   "organization": "Benevity",
   "design_system": "Skyline",
@@ -9,35 +9,35 @@
     "https://skyline.benevity.org/"
   ],
   "detail_url": "/systems/benevity-skyline",
-  "pages_indexed": 147,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 156,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T05:22:54+00:00",
+  "last_checked": "2026-09-20T02:32:17+00:00",
   "last_modified": "Thu, 26 Oct 2023 22:55:47 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "figma": [
-      "https://www.figma.com/file/36qGJNr3QY1dFI1cvwyj7s/PX-Tool-Kit",
-      "https://www.figma.com/proto/PkGqofp1FSqPa72hlkgk3dDL/Developer-Tutorial-on-Figma",
-      "https://www.figma.com/proto/KO7hp8rwUXq1s7DvAU25Wr/Skyline-A-Z-Product-Glossary",
       "https://www.figma.com/file/LyqZZbxD6h0O7fOTKDG3TmON/Skyline-UI-Kit",
+      "https://www.figma.com/file/kwQnx660zNTXdRKrcnmGqS/Figma-API-Embed---Layout-%26-Spacing",
+      "https://www.figma.com/file/36qGJNr3QY1dFI1cvwyj7s/PX-Tool-Kit",
       "https://www.figma.com/file/36qGJNr3QY1dFI1cvwyj7s/Presentation-Kit",
-      "https://www.figma.com/file/kwQnx660zNTXdRKrcnmGqS/Figma-API-Embed---Layout-%26-Spacing"
+      "https://www.figma.com/proto/KO7hp8rwUXq1s7DvAU25Wr/Skyline-A-Z-Product-Glossary",
+      "https://www.figma.com/proto/PkGqofp1FSqPa72hlkgk3dDL/Developer-Tutorial-on-Figma"
     ],
     "icons": [
+      "https://stash.benevity.org/projects/WEB/repos/skyline/browse/packages/icons/CHANGELOG.md",
       "https://skyline.benevity.org/components/images-and-icons/icons",
-      "https://skyline.benevity.org/components/icons",
-      "https://stash.benevity.org/projects/WEB/repos/skyline/browse/packages/icons/CHANGELOG.md"
+      "https://skyline.benevity.org/components/icons"
     ]
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/csstools/postcss-preset-env",
+      "https://github.com/vuejs/composition-api",
       "https://github.com/randyrants/sharpkeys",
       "https://github.com/sass-mq/sass-mq",
       "https://github.com/atlassian/changesets",
-      "https://github.com/vuejs/composition-api"
+      "https://github.com/csstools/postcss-preset-env"
     ],
     "npm": [
       "https://www.npmjs.com/package/css-vars-ponyfill",
@@ -132,6 +132,10 @@
       "title": "Basic Form Recipe | Skyline, Benevity's Design System."
     },
     {
+      "url": "https://skyline.benevity.org/patterns/basic-form",
+      "title": "Basic Form Recipe | Skyline, Benevity's Design System."
+    },
+    {
       "url": "https://skyline.benevity.org/utilities/border-radius",
       "title": "Border Radius | Skyline, Benevity's Design System."
     },
@@ -148,11 +152,11 @@
       "title": "Browser Overrides | Skyline, Benevity's Design System."
     },
     {
-      "url": "https://skyline.benevity.org/components/buttons",
+      "url": "https://skyline.benevity.org/components/buttons/buttons",
       "title": "Buttons | Skyline, Benevity's Design System."
     },
     {
-      "url": "https://skyline.benevity.org/components/buttons/buttons",
+      "url": "https://skyline.benevity.org/components/buttons",
       "title": "Buttons | Skyline, Benevity's Design System."
     },
     {
@@ -172,16 +176,20 @@
       "title": "Checkbox Input | Skyline, Benevity's Design System."
     },
     {
-      "url": "https://skyline.benevity.org/design/color",
+      "url": "https://skyline.benevity.org/utilities/color",
       "title": "Color | Skyline, Benevity's Design System."
     },
     {
-      "url": "https://skyline.benevity.org/utilities/color",
+      "url": "https://skyline.benevity.org/design/color",
       "title": "Color | Skyline, Benevity's Design System."
     },
     {
       "url": "https://skyline.benevity.org/principles/color",
       "title": "Color | Skyline, Benevity's Design System."
+    },
+    {
+      "url": "https://skyline.benevity.org/patterns/component",
+      "title": "Component Layouts | Skyline, Benevity's Design System."
     },
     {
       "url": "https://skyline.benevity.org/components",
@@ -340,6 +348,10 @@
       "title": "Implementing Icons | Skyline, Benevity's Design System."
     },
     {
+      "url": "https://skyline.benevity.org/how-to/implementing-icons",
+      "title": "Implementing Icons | Skyline, Benevity's Design System."
+    },
+    {
       "url": "https://skyline.benevity.org/content/inclusive-language",
       "title": "Inclusive Language | Skyline, Benevity's Design System."
     },
@@ -381,6 +393,10 @@
     },
     {
       "url": "https://skyline.benevity.org/components/layout/page-layouts",
+      "title": "Page Layouts | Skyline, Benevity's Design System."
+    },
+    {
+      "url": "https://skyline.benevity.org/patterns/page",
       "title": "Page Layouts | Skyline, Benevity's Design System."
     },
     {
@@ -492,6 +508,10 @@
       "title": "Simple Build Script | Skyline, Benevity's Design System."
     },
     {
+      "url": "https://skyline.benevity.org/how-to/build-css",
+      "title": "Simple Build Script | Skyline, Benevity's Design System."
+    },
+    {
       "url": "https://skyline.benevity.org/components/forms/single-select-input",
       "title": "Single-select Input (with autocomplete) | Skyline, Benevity's Design System."
     },
@@ -505,6 +525,10 @@
     },
     {
       "url": "https://skyline.benevity.org/resources/how-to/configure-skyline",
+      "title": "Skyline Configuration | Skyline, Benevity's Design System."
+    },
+    {
+      "url": "https://skyline.benevity.org/how-to/configure-skyline",
       "title": "Skyline Configuration | Skyline, Benevity's Design System."
     },
     {
@@ -576,11 +600,23 @@
       "title": "The Cluster | Skyline, Benevity's Design System."
     },
     {
+      "url": "https://skyline.benevity.org/patterns/component/the-cluster",
+      "title": "The Cluster | Skyline, Benevity's Design System."
+    },
+    {
       "url": "https://skyline.benevity.org/components/layout/the-sidebar",
       "title": "The Sidebar | Skyline, Benevity's Design System."
     },
     {
+      "url": "https://skyline.benevity.org/patterns/component/the-sidebar",
+      "title": "The Sidebar | Skyline, Benevity's Design System."
+    },
+    {
       "url": "https://skyline.benevity.org/components/layout/the-stack",
+      "title": "The Stack | Skyline, Benevity's Design System."
+    },
+    {
+      "url": "https://skyline.benevity.org/patterns/component/the-stack",
       "title": "The Stack | Skyline, Benevity's Design System."
     },
     {

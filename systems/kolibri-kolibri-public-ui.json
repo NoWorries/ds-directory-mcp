@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "kolibri-kolibri-public-ui",
   "organization": "KoliBri",
   "design_system": "KoliBri - Public UI",
@@ -9,11 +9,11 @@
     "https://public-ui.github.io/"
   ],
   "detail_url": "/systems/kolibri-kolibri-public-ui",
-  "pages_indexed": 149,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 329,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T08:32:52+00:00",
+  "last_checked": "2026-09-20T06:29:10+00:00",
   "last_modified": "Thu, 17 Sep 2026 12:25:46 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -24,23 +24,30 @@
       "https://www.npmjs.com/package/@public-ui/kolibri-cli"
     ],
     "icons": [
+      "https://public-ui.github.io/v3/docs/tags/icon",
+      "https://public-ui.github.io/v2/docs/tags/icon",
+      "https://public-ui.github.io/v3/docs/components/icon",
+      "https://public-ui.github.io/v2/docs/components/icon",
       "https://public-ui.github.io/en/docs/components/icon",
       "https://public-ui.github.io/docs/components/icon"
     ]
   },
   "unverified_resources": {},
   "content_signals": {
+    "dark_mode": true,
+    "exemplars": true,
     "frameworks": [
       "React",
       "Angular",
-      "Web Components"
+      "Web Components",
+      "Vue"
     ]
   },
   "github_meta": null,
   "npm_meta": {
     "latest_version": "4.4.0",
     "last_published": "2026-09-09T07:11:47.469Z",
-    "weekly_downloads": 644
+    "weekly_downloads": 510
   },
   "indexed_pages": [
     {
@@ -52,11 +59,27 @@
       "title": "Abbr | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/abbr",
+      "title": "Abbr | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/abbr",
+      "title": "Abbr | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/accordion",
       "title": "Accordion | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/accordion",
+      "title": "Accordion | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/accordion",
+      "title": "Accordion | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/accordion",
       "title": "Accordion | KoliBri - Public UI"
     },
     {
@@ -68,11 +91,27 @@
       "title": "Alert | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/alert",
+      "title": "Alert | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/alert",
+      "title": "Alert | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/en/docs/concepts/architecture",
       "title": "Architecture | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/concepts/architecture",
+      "title": "Architektur | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/architecture",
+      "title": "Architektur | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/architecture",
       "title": "Architektur | KoliBri - Public UI"
     },
     {
@@ -84,6 +123,14 @@
       "title": "Avatar | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/avatar",
+      "title": "Avatar | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/avatar",
+      "title": "Avatar | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/badge",
       "title": "Badge | KoliBri - Public UI"
     },
@@ -92,7 +139,19 @@
       "title": "Badge | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/badge",
+      "title": "Badge | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/badge",
+      "title": "Badge | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/known-issues",
+      "title": "Bekannte Probleme | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/known-issues",
       "title": "Bekannte Probleme | KoliBri - Public UI"
     },
     {
@@ -104,11 +163,23 @@
       "title": "Blog | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v3/blog",
+      "title": "Blog | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/breadcrumb",
       "title": "Breadcrumb | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/breadcrumb",
+      "title": "Breadcrumb | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/breadcrumb",
+      "title": "Breadcrumb | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/breadcrumb",
       "title": "Breadcrumb | KoliBri - Public UI"
     },
     {
@@ -120,11 +191,31 @@
       "title": "Button | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/button",
+      "title": "Button | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/button",
+      "title": "Button | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/button-group",
+      "title": "ButtonGroup | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/button-link",
       "title": "ButtonLink | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/button-link",
+      "title": "ButtonLink | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/button-link",
+      "title": "ButtonLink | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/button-link",
       "title": "ButtonLink | KoliBri - Public UI"
     },
     {
@@ -136,6 +227,14 @@
       "title": "Card | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/card",
+      "title": "Card | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/card",
+      "title": "Card | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/combobox",
       "title": "Combobox | KoliBri - Public UI"
     },
@@ -144,12 +243,40 @@
       "title": "Combobox | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/combobox",
+      "title": "Combobox | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/combobox",
+      "title": "Combobox | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/en/docs/components",
       "title": "Components | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/en/docs/concepts/styling/designer",
+      "title": "Create a KoliBri theme | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/data-protection",
       "title": "Datenschutz | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/datenschutz",
+      "title": "Datenschutz | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/data-protection",
+      "title": "Datenschutz | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/styling/designer",
+      "title": "Designer | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/styling/designer",
+      "title": "Designer | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/details",
@@ -157,6 +284,14 @@
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/details",
+      "title": "Details | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/details",
+      "title": "Details | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/details",
       "title": "Details | KoliBri - Public UI"
     },
     {
@@ -172,7 +307,19 @@
       "title": "Dialog | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/dialog",
+      "title": "Dialog | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/",
+      "title": "Die barrierefreie Web Component Bibliothek | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2",
+      "title": "Die barrierefreie Web Component Bibliothek | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3",
       "title": "Die barrierefreie Web Component Bibliothek | KoliBri - Public UI"
     },
     {
@@ -184,11 +331,35 @@
       "title": "Drawer | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/drawer",
+      "title": "Drawer | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/drawer",
+      "title": "Drawer | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/properties",
       "title": "Eigenschaften | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/concepts/properties",
+      "title": "Eigenschaften | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/properties",
+      "title": "Eigenschaften | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/get-started/first-steps",
+      "title": "Erste Schritte | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/get-started/first-steps",
+      "title": "Erste Schritte | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/get-started/first-steps",
       "title": "Erste Schritte | KoliBri - Public UI"
     },
     {
@@ -200,6 +371,10 @@
       "title": "Events | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v3/docs/concepts/events",
+      "title": "Events | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/expert-slot",
       "title": "Expert-Slot | KoliBri - Public UI"
     },
@@ -208,8 +383,32 @@
       "title": "Expert-slot | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/concepts/expert-slot",
+      "title": "Expert-Slot | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/expert-slot",
+      "title": "Expert-Slot | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/faq",
+      "title": "FAQ | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/faq",
       "title": "FAQ | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/faq",
+      "title": "FAQ | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/faq",
+      "title": "FAQ | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/get-started/first-steps",
+      "title": "First steps | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/form",
@@ -220,11 +419,39 @@
       "title": "Form | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/form",
+      "title": "Form | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/form",
+      "title": "Form | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/get-started/frameworks",
+      "title": "Frameworks | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/get-started/frameworks",
       "title": "Frameworks | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/get-started/frameworks",
+      "title": "Frameworks | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/get-started/frameworks",
+      "title": "Frameworks | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/known-issues",
+      "title": "Geräte- und Browser-spezifische Probleme | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/known-issues",
+      "title": "Geräte- und Browser-spezifische Probleme | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/known-issues",
       "title": "Geräte- und Browser-spezifische Probleme | KoliBri - Public UI"
     },
     {
@@ -236,8 +463,28 @@
       "title": "Heading | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/heading",
+      "title": "Heading | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/heading",
+      "title": "Heading | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/project/history",
       "title": "Historie | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/project/history",
+      "title": "Historie | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/project/history",
+      "title": "Historie | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/project/history",
+      "title": "History | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/icon",
@@ -245,6 +492,14 @@
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/icon",
+      "title": "Icon | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/icon",
+      "title": "Icon | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/icon",
       "title": "Icon | KoliBri - Public UI"
     },
     {
@@ -256,8 +511,28 @@
       "title": "Image | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/image",
+      "title": "Image | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/image",
+      "title": "Image | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/legal-notice",
       "title": "Impressum | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/legal-notice",
+      "title": "Impressum | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/impressum",
+      "title": "Impressum | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/indented-text",
+      "title": "IndentedText | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/input-checkbox",
@@ -265,6 +540,14 @@
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/input-checkbox",
+      "title": "InputCheckbox | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/input-checkbox",
+      "title": "InputCheckbox | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-checkbox",
       "title": "InputCheckbox | KoliBri - Public UI"
     },
     {
@@ -276,11 +559,27 @@
       "title": "InputColor | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/input-color",
+      "title": "InputColor | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-color",
+      "title": "InputColor | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/input-date",
       "title": "InputDate | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/input-date",
+      "title": "InputDate | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/input-date",
+      "title": "InputDate | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-date",
       "title": "InputDate | KoliBri - Public UI"
     },
     {
@@ -292,11 +591,27 @@
       "title": "InputEmail | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/input-email",
+      "title": "InputEmail | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-email",
+      "title": "InputEmail | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/input-file",
       "title": "InputFile | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/input-file",
+      "title": "InputFile | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/input-file",
+      "title": "InputFile | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-file",
       "title": "InputFile | KoliBri - Public UI"
     },
     {
@@ -308,11 +623,27 @@
       "title": "InputNumber | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/input-number",
+      "title": "InputNumber | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-number",
+      "title": "InputNumber | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/input-password",
       "title": "InputPassword | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/input-password",
+      "title": "InputPassword | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/input-password",
+      "title": "InputPassword | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-password",
       "title": "InputPassword | KoliBri - Public UI"
     },
     {
@@ -324,11 +655,27 @@
       "title": "InputRadio | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/input-radio",
+      "title": "InputRadio | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-radio",
+      "title": "InputRadio | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/input-range",
       "title": "InputRange | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/input-range",
+      "title": "InputRange | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/input-range",
+      "title": "InputRange | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-range",
       "title": "InputRange | KoliBri - Public UI"
     },
     {
@@ -340,12 +687,32 @@
       "title": "Inputs, Select und Textarea | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/concepts/formular",
+      "title": "Inputs, Select und Textarea | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/form-input",
+      "title": "Inputs, Select und Textarea | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/input-text",
       "title": "InputText | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/input-text",
       "title": "InputText | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/input-text",
+      "title": "InputText | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/input-text",
+      "title": "InputText | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/known-issues",
+      "title": "Known Issues | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/kolibri",
@@ -356,8 +723,28 @@
       "title": "KoliBri | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v3/docs/components/kolibri",
+      "title": "KoliBri | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components",
       "title": "Komponenten | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components",
+      "title": "Komponenten | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components",
+      "title": "Komponenten | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/legal-notice",
+      "title": "Legal notice | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/project/license",
+      "title": "Licence | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/link",
@@ -365,6 +752,14 @@
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/link",
+      "title": "Link | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/link",
+      "title": "Link | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/link",
       "title": "Link | KoliBri - Public UI"
     },
     {
@@ -376,11 +771,43 @@
       "title": "LinkButton | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/link-button",
+      "title": "LinkButton | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/link-button",
+      "title": "LinkButton | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/link-group",
+      "title": "LinkGroup | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/project/license",
       "title": "Lizenz | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/project/license",
+      "title": "Lizenz | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/project/license",
+      "title": "Lizenz | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/manifest",
+      "title": "Manifest | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/manifest",
+      "title": "Manifest | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/manifest",
+      "title": "Manifest | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/manifest",
       "title": "Manifest | KoliBri - Public UI"
     },
     {
@@ -392,7 +819,19 @@
       "title": "Meter | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/en/docs/migration",
+      "title": "Migration | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/migration",
+      "title": "Migration | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/migration",
+      "title": "Migration | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/migration",
       "title": "Migration | KoliBri - Public UI"
     },
     {
@@ -404,11 +843,27 @@
       "title": "Modal | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/modal",
+      "title": "Modal | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/modal",
+      "title": "Modal | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/nav",
       "title": "Nav | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/nav",
+      "title": "Nav | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/nav",
+      "title": "Nav | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/nav",
       "title": "Nav | KoliBri - Public UI"
     },
     {
@@ -420,7 +875,23 @@
       "title": "Pagination | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/pagination",
+      "title": "Pagination | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/pagination",
+      "title": "Pagination | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/get-started/playground",
+      "title": "Playground | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/get-started/playground",
+      "title": "Playground | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/get-started/playground",
       "title": "Playground | KoliBri - Public UI"
     },
     {
@@ -432,11 +903,27 @@
       "title": "Popover | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/popover",
+      "title": "Popover | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/popover",
+      "title": "Popover | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/popover-button",
       "title": "PopoverButton | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/popover-button",
+      "title": "PopoverButton | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/popover-button",
+      "title": "PopoverButton | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/popover-button",
       "title": "PopoverButton | KoliBri - Public UI"
     },
     {
@@ -452,6 +939,14 @@
       "title": "Progress | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/progress",
+      "title": "Progress | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/progress",
+      "title": "Progress | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/en/docs/concepts/properties",
       "title": "Properties | KoliBri - Public UI"
     },
@@ -464,11 +959,43 @@
       "title": "Quote | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/quote",
+      "title": "Quote | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/quote",
+      "title": "Quote | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/project/roadmap",
+      "title": "Roadmap | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/project/roadmap",
       "title": "Roadmap | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/project/roadmap",
+      "title": "Roadmap | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/project/roadmap",
+      "title": "Roadmap | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/concepts/styling/scss",
+      "title": "Scss | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/styling/scss",
+      "title": "Scss | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/styling/scss",
+      "title": "Scss | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/styling/scss",
       "title": "Scss | KoliBri - Public UI"
     },
     {
@@ -484,11 +1011,31 @@
       "title": "Select | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/select",
+      "title": "Select | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/select",
+      "title": "Select | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/servicestandard",
+      "title": "Servicestandard | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/servicestandard",
       "title": "Servicestandard | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/concepts/security",
+      "title": "Sicherheit | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/sicherheit",
+      "title": "Sicherheit | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/security",
       "title": "Sicherheit | KoliBri - Public UI"
     },
     {
@@ -500,11 +1047,27 @@
       "title": "SingleSelect | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/single-select",
+      "title": "SingleSelect | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/single-select",
+      "title": "SingleSelect | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/skip-nav",
       "title": "SkipNav | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/skip-nav",
+      "title": "SkipNav | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/skip-nav",
+      "title": "SkipNav | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/skip-nav",
       "title": "SkipNav | KoliBri - Public UI"
     },
     {
@@ -516,6 +1079,14 @@
       "title": "Spin | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/spin",
+      "title": "Spin | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/spin",
+      "title": "Spin | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/split-button",
       "title": "Split-Button | KoliBri - Public UI"
     },
@@ -524,12 +1095,36 @@
       "title": "Split-Button | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/split-button",
+      "title": "Split-Button | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/split-button",
+      "title": "Split-Button | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/concepts/swizzling",
+      "title": "Swizzling | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/swizzling",
+      "title": "Swizzling | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/swizzling",
+      "title": "Swizzling | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/swizzling",
       "title": "Swizzling | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/table-stateless",
       "title": "Table (Stateless) | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/table",
+      "title": "Table | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/components/table-stateful",
@@ -540,7 +1135,23 @@
       "title": "TableStateful | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/table-stateful",
+      "title": "TableStateful | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/table-stateful",
+      "title": "TableStateful | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/en/docs/components/table-stateless",
+      "title": "TableStateless | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/table-stateless",
+      "title": "TableStateless | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/table-stateless",
       "title": "TableStateless | KoliBri - Public UI"
     },
     {
@@ -552,11 +1163,43 @@
       "title": "Tabs | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/tabs",
+      "title": "Tabs | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/tabs",
+      "title": "Tabs | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/concepts/testprocedure",
+      "title": "Test procedure | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/test-results",
+      "title": "Testergebnisse | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/test-results",
       "title": "Testergebnisse | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/test-results",
+      "title": "Testergebnisse | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/test-results",
+      "title": "Testergebnisse | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/test",
+      "title": "Testvorgehen | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/test",
+      "title": "Testvorgehen | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/test",
       "title": "Testvorgehen | KoliBri - Public UI"
     },
     {
@@ -566,6 +1209,18 @@
     {
       "url": "https://public-ui.github.io/en/docs/components/textarea",
       "title": "Textarea | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/textarea",
+      "title": "Textarea | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/textarea",
+      "title": "Textarea | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en",
+      "title": "The accessible Web Component library | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs/concepts/styling/designer",
@@ -580,7 +1235,23 @@
       "title": "Themes - Barrierefreie Layout-Varianten | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v3/docs/concepts/scenes",
+      "title": "Themes - Barrierefreie Layout-Varianten | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/en/docs/concepts/styling/theming",
+      "title": "Theming | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/concepts/styling/theming",
+      "title": "Theming | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/concepts/styling/theming",
+      "title": "Theming | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/concepts/styling/theming",
       "title": "Theming | KoliBri - Public UI"
     },
     {
@@ -592,11 +1263,27 @@
       "title": "Toaster | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/toaster",
+      "title": "Toaster | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/toaster",
+      "title": "Toaster | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/docs/components/toolbar",
       "title": "Toolbar | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/toolbar",
+      "title": "Toolbar | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/toolbar",
+      "title": "Toolbar | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/toolbar",
       "title": "Toolbar | KoliBri - Public UI"
     },
     {
@@ -608,7 +1295,23 @@
       "title": "Tooltip | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/tooltip",
+      "title": "Tooltip | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/tooltip",
+      "title": "Tooltip | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/en/docs/components/tree-item",
+      "title": "Tree Item | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/tree-item",
+      "title": "Tree Item | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/tree-item",
       "title": "Tree Item | KoliBri - Public UI"
     },
     {
@@ -617,6 +1320,14 @@
     },
     {
       "url": "https://public-ui.github.io/en/docs/components/tree",
+      "title": "Tree | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs/components/tree",
+      "title": "Tree | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/tree",
       "title": "Tree | KoliBri - Public UI"
     },
     {
@@ -632,11 +1343,27 @@
       "title": "Version | KoliBri - Public UI"
     },
     {
+      "url": "https://public-ui.github.io/v2/docs/components/version",
+      "title": "Version | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs/components/version",
+      "title": "Version | KoliBri - Public UI"
+    },
+    {
       "url": "https://public-ui.github.io/en/docs",
       "title": "Welcome | KoliBri - Public UI"
     },
     {
       "url": "https://public-ui.github.io/docs",
+      "title": "Willkommen | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v2/docs",
+      "title": "Willkommen | KoliBri - Public UI"
+    },
+    {
+      "url": "https://public-ui.github.io/v3/docs",
       "title": "Willkommen | KoliBri - Public UI"
     }
   ]

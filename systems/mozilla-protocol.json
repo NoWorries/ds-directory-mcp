@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "mozilla-protocol",
   "organization": "Mozilla",
   "design_system": "Protocol",
@@ -9,11 +9,11 @@
     "https://protocol.mozilla.org/"
   ],
   "detail_url": "/systems/mozilla-protocol",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 96,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-16T13:17:40+00:00",
+  "last_checked": "2026-09-20T12:15:03+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -21,25 +21,407 @@
       "https://github.com/mozilla/protocol"
     ],
     "npm": [
-      "https://www.npmjs.com/package/@mozilla-protocol/core"
+      "https://npmjs.com/package/@mozilla-protocol/core"
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "dark_mode": true
+  },
   "github_meta": {
     "license": "MPL-2.0",
-    "stars": 297,
-    "last_pushed": "2026-09-15T16:46:32Z"
+    "stars": 298,
+    "last_pushed": "2026-09-17T23:08:00Z"
   },
   "npm_meta": {
     "latest_version": "22.0.0",
     "last_published": "2025-10-03T20:39:48.714Z",
-    "weekly_downloads": 912
+    "weekly_downloads": 1036
   },
   "indexed_pages": [
     {
+      "url": "https://protocol.mozilla.org/components/detail/article",
+      "title": "Article | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/billboard",
+      "title": "Billboard | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/docs/fundamentals/brand-themes",
+      "title": "Brand Themes | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button-container--default",
+      "title": "Button Container: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button-container--end-aligned",
+      "title": "Button Container: End Aligned | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--disabled",
+      "title": "Button: Disabled | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--neutral-dark",
+      "title": "Button: Neutral Dark | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--neutral",
+      "title": "Button: Neutral | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--product-secondary",
+      "title": "Button: Product Secondary | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--product",
+      "title": "Button: Product | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--secondary-dark",
+      "title": "Button: Secondary Dark | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--with-icon",
+      "title": "Button: With Icon | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/button--with-sizes",
+      "title": "Button: With Sizes | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/callout--compact",
+      "title": "Callout: Compact | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/callout--content-width",
+      "title": "Callout: Content Width | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/callout--dark-theme",
+      "title": "Callout: Dark Theme | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/callout--default",
+      "title": "Callout: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/card-layout--third",
+      "title": "Card Layout: Third | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/card--large",
+      "title": "Card: Large | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/card--overview",
+      "title": "Card: Overview | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/card--small",
+      "title": "Card: Small | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/choices",
+      "title": "Choices | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/docs/fundamentals/color",
+      "title": "Color | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/columns--four",
+      "title": "Columns: Four | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/columns--overview",
+      "title": "Columns: Overview | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/columns--three",
+      "title": "Columns: Three | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/content-container--default",
+      "title": "Content Container: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/content-container--extra-large-container",
+      "title": "Content Container: Extra Large Container | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/content-container--large-container",
+      "title": "Content Container: Large Container | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/content-container--medium-container",
+      "title": "Content Container: Medium Container | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/cta-link--default",
+      "title": "CTA Link: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/cta-link--with-icons",
+      "title": "CTA Link: With Icons | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/data-table",
+      "title": "Data Table | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/docs/fundamentals/design-tokens",
+      "title": "Design Tokens | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/details-component--default",
+      "title": "Details Component: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/download-button--default",
+      "title": "Download Button: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/error-list",
+      "title": "Error List | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/feature-card--default",
+      "title": "Feature Card: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/feature-card--right-half",
+      "title": "Feature Card: Right Half | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/feature-card--right-third",
+      "title": "Feature Card: Right Third | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/field-notes",
+      "title": "Field Notes | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/field-set",
+      "title": "Field Set | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/field",
+      "title": "Field | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/footer",
+      "title": "Footer | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/form-header",
+      "title": "Header and Footer | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/input--disabled",
+      "title": "Input: Disabled | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/input--placeholder",
+      "title": "Input: Placeholder | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/input--text",
+      "title": "Input: Text | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/language-switcher",
+      "title": "Language Switcher | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/links",
+      "title": "Links | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/list-inline",
+      "title": "List Inline | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/list-styled",
+      "title": "List Styled | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/logo--default",
+      "title": "Logo: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/logo--products",
+      "title": "Logo: Products | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/main-with-sidebar--default",
+      "title": "Main With Sidebar: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/menu-item",
+      "title": "Menu Item | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/menu-list--default",
+      "title": "Menu List: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/menu-list--download",
+      "title": "Menu List: Download | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/menu",
+      "title": "Menu | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/modal",
+      "title": "Modal | Mozilla Protocol"
+    },
+    {
       "url": "https://protocol.mozilla.org/",
       "title": "Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/docs/contributing/naming",
+      "title": "Naming Convention | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/navigation--firefox",
+      "title": "Navigation: Firefox | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/notification-bar--click",
+      "title": "Notification Bar: Click | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/notification-bar--default",
+      "title": "Notification Bar: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/notification-bar--error",
+      "title": "Notification Bar: Error | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/notification-bar--scripted",
+      "title": "Notification Bar: Scripted | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/notification-bar--sticky",
+      "title": "Notification Bar: Sticky | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/notification-bar--success",
+      "title": "Notification Bar: Success | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/notification-bar--warning",
+      "title": "Notification Bar: Warning | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/paragraphs",
+      "title": "Paragraphs | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/picto--centered",
+      "title": "Picto: Centered | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/picto--default",
+      "title": "Picto: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/picto--side",
+      "title": "Picto: Side | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/radio-buttons",
+      "title": "Radio Buttons | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/section-heading",
+      "title": "Section Heading | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/select--default",
+      "title": "Select: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/sidebar-menu",
+      "title": "Sidebar Menu | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/split--background",
+      "title": "Split: Background | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/split--constrained-media",
+      "title": "Split: Constrained Media | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/split--default",
+      "title": "Split: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/split--media-alignment",
+      "title": "Split: Media Alignment | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/split--narrow-body",
+      "title": "Split: Narrow Body | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/split--reversed",
+      "title": "Split: Reversed | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/split--wide-body",
+      "title": "Split: Wide Body | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/sticky-promo--dark-theme",
+      "title": "Sticky Promo: Dark Theme | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/sticky-promo--default",
+      "title": "Sticky Promo: Default | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/textarea",
+      "title": "Textarea | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/docs/usage/framework",
+      "title": "The Protocol CSS Framework | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/docs/fundamentals/typography",
+      "title": "Typography | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/video",
+      "title": "Video | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/wordmark--centered-on-mobile",
+      "title": "Wordmark: Centered On Mobile | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/wordmark--products",
+      "title": "Wordmark: Products | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/wordmark--sizes",
+      "title": "Wordmark: Sizes | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/zap--all-styles",
+      "title": "Zap: All Styles | Mozilla Protocol"
+    },
+    {
+      "url": "https://protocol.mozilla.org/components/detail/zap--default",
+      "title": "Zap: Default | Mozilla Protocol"
     }
   ]
 }

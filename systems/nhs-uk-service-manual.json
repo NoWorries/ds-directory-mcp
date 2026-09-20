@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "nhs-uk-service-manual",
   "organization": "NHS.UK",
   "design_system": "Service Manual",
@@ -9,29 +9,29 @@
     "https://service-manual.nhs.uk/"
   ],
   "detail_url": "/systems/nhs-uk-service-manual",
-  "pages_indexed": 146,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 221,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T10:23:15+00:00",
+  "last_checked": "2026-09-20T02:26:45+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/nhsuk/nhsuk-frontend",
-      "https://github.com/nhsuk/nhsuk-service-manual-backlog",
       "https://github.com/NHSDigital/nhsuk-react-components",
-      "https://github.com/NHSDigital/nhsuk-frontend-jinja"
+      "https://github.com/NHSDigital/nhsuk-frontend-jinja",
+      "https://github.com/nhsuk/nhsuk-frontend",
+      "https://github.com/nhsuk/nhsuk-service-manual-backlog"
     ],
     "icons": [
-      "https://service-manual.nhs.uk/design-example/styles/icons/sizes",
-      "https://service-manual.nhs.uk/design-example/styles/icons/arrows",
-      "https://service-manual.nhs.uk/design-example/styles/icons/user",
-      "https://service-manual.nhs.uk/design-example/styles/icons/search",
       "https://service-manual.nhs.uk/design-system/styles/icons",
+      "https://service-manual.nhs.uk/design-example/styles/icons/search",
+      "https://service-manual.nhs.uk/design-example/styles/icons/sizes",
+      "https://service-manual.nhs.uk/design-example/styles/icons/user",
       "https://service-manual.nhs.uk/design-example/styles/icons/arrow-right-circle",
-      "https://service-manual.nhs.uk/design-example/styles/icons/tick-and-cross",
-      "https://service-manual.nhs.uk/design-example/styles/icons/chevron-right-circle"
+      "https://service-manual.nhs.uk/design-example/styles/icons/chevron-right-circle",
+      "https://service-manual.nhs.uk/design-example/styles/icons/arrows",
+      "https://service-manual.nhs.uk/design-example/styles/icons/tick-and-cross"
     ]
   },
   "unverified_resources": {},
@@ -41,8 +41,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 683,
-    "last_pushed": "2026-09-18T07:42:12Z"
+    "stars": 80,
+    "last_pushed": "2026-09-14T06:44:51Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -255,6 +255,10 @@
       "title": "Design system – NHS digital service manual"
     },
     {
+      "url": "https://service-manual.nhs.uk/design-system/index",
+      "title": "Design system – NHS digital service manual"
+    },
+    {
       "url": "https://service-manual.nhs.uk/accessibility/design",
       "title": "Design – NHS digital service manual"
     },
@@ -356,6 +360,10 @@
     },
     {
       "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms",
+      "title": "How to write good questions for forms – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/index",
       "title": "How to write good questions for forms – NHS digital service manual"
     },
     {
@@ -511,6 +519,14 @@
       "title": "Sex, gender and sexuality – NHS digital service manual"
     },
     {
+      "url": "https://service-manual.nhs.uk/whats-new/show-and-tells",
+      "title": "Show and tells – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/site-map",
+      "title": "Site map – NHS digital service manual"
+    },
+    {
       "url": "https://service-manual.nhs.uk/content/inclusive-content/skin-symptoms",
       "title": "Skin symptoms – NHS digital service manual"
     },
@@ -521,6 +537,282 @@
     {
       "url": "https://service-manual.nhs.uk/design-system/styles/spacing",
       "title": "Spacing – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/styles/layout/reading-width",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/styles/spacing/text",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/styles/typography/lists-numbered",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/styles/typography/sizes",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/styles/typography/word-break-wbr",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/card/group-half",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/card/heading-size",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/card/secondary-card-non-clickable",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/card/card-actions",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/card/group-third",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/character-count/error",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/character-count/threshold",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/character-count/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/character-count/without-javascript",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/checkboxes/conditional",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/checkboxes/error-messages",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/checkboxes/without-javascript",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/checkboxes/items-with-hints",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/checkboxes/none-option",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/details/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/do-and-dont-lists/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/error-message/radios",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/error-summary/link-options",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/error-summary/link-multiple-input",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/expander/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/expander/group",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/hint-text/radios",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/hint-text/radio-item-with-hints",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/panel/interruption",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/radios/with-hints-options",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/radios/error-message",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/radios/items-with-a-text-divider",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/select/error",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/select/with-hint",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/summary-list/summary-card",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/summary-list/summary-card-with-actions",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/summary-list/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/sortable",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/striped",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/basic",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/reverse",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/scrolling",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/sortable-custom",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/responsive",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/sortable-server-side-last-login-descending",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/compact",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/tabs/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/tabs/without-javascript",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/task-list/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/warning-callout/custom-heading",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/a-to-z-page/panel",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/ask-for-nhs-numbers/filter-third",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/ask-for-nhs-numbers/error",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/check-answers/example",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/complete-multiple-tasks/cannot-start-yet",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/complete-multiple-tasks/example",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/confirmation-page/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/help-users-decide-when-and-where-to-get-care/two-colons",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/help-users-decide-when-and-where-to-get-care/urgent",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/help-users-decide-when-and-where-to-get-care/non-urgent",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/help-users-decide-when-and-where-to-get-care/emergency",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/hub-page/example",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/interruption-page/default",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/interruption-page/confirmation",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/mini-hub/example",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/patterns/start-page/example",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/sortable-server-side",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/sortable-server-side-last-login-ascending",
+      "title": "Standalone example – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-example/components/table/sortable-server-side-name-ascending",
+      "title": "Standalone example – NHS digital service manual"
     },
     {
       "url": "https://service-manual.nhs.uk/content/standard-for-creating-health-content",
@@ -587,6 +879,10 @@
       "title": "Understand the problem before you write your questions – NHS digital service manual"
     },
     {
+      "url": "https://service-manual.nhs.uk/whats-new/updates",
+      "title": "Updates – NHS digital service manual"
+    },
+    {
       "url": "https://service-manual.nhs.uk/design-system/guides/updating-to-v10",
       "title": "Updating to version 10 – NHS digital service manual"
     },
@@ -625,6 +921,10 @@
     {
       "url": "https://service-manual.nhs.uk/content/writing-nhs-messages",
       "title": "Writing NHS messages – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/cookie-confirmation",
+      "title": "Your cookie settings have been saved – NHS digital service manual"
     },
     {
       "url": "https://service-manual.nhs.uk/your-privacy",

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "ibm-carbon-design-system",
   "organization": "IBM",
   "design_system": "Carbon Design System",
@@ -9,1219 +9,336 @@
     "https://www.carbondesignsystem.com/"
   ],
   "detail_url": "/systems/ibm-carbon-design-system",
-  "pages_indexed": 268,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 64,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T07:59:55+00:00",
-  "last_modified": "Wed, 09 Sep 2026 12:21:50 GMT",
+  "last_checked": "2026-09-20T09:24:05+00:00",
+  "last_modified": "Wed, 09 Sep 2026 12:21:48 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/IBM/carbon-components-angular/",
-      "https://github.com/carbon-design-system/carbon-charts/",
-      "https://github.com/carbon-design-system/carbon-tutorial-angular",
-      "https://github.com/carbon-design-system/carbon-tutorial-web-components",
-      "https://github.com/IBM/hello-carbon-vue3",
-      "https://github.com/IBMa/equal-access",
-      "https://github.com/ibm/plex",
-      "https://github.com/vuejs/vue-devtools",
-      "https://github.com/carbon-design-system/carbon-icons-svelte",
       "https://github.com/carbon-design-system/carbon-website",
       "https://github.com/carbon-design-system/carbon",
-      "https://github.com/IBM/carbon-components-svelte",
-      "https://github.com/IBM/carbon-components-angular",
-      "https://github.com/carbon-design-system/carbon-tutorial-nextjs",
-      "https://github.com/octokit/core.js/",
-      "https://guides.github.com/activities/hello-world",
-      "https://github.com/carbon-design-system/carbon-components-vue/",
-      "https://github.com/carbon-design-system/carbon-components-svelte",
-      "https://github.com/carbon-design-system/carbon-website/",
-      "https://github.com/carbon-design-system/carbon-design-kit",
-      "https://github.com/cloudfoundry/staticfile-buildpack.git",
       "https://github.com/ibm/carbon-components-svelte",
-      "https://github.com/carbon-design-system/carbon-preprocess-svelte",
-      "https://github.com/carbon-design-system/carbon-angular-starter",
-      "https://developer.github.com/v4/explorer/",
-      "https://github.com/carbon-design-system/carbon-ai-chat",
-      "https://github.com/storybookjs/storybook",
-      "https://github.com/carbon-design-system/carbon-charts",
-      "https://github.com/carbon-design-system/carbon-pictograms-svelte",
-      "https://github.com/carbon-design-system/carbon-tutorial-vue",
       "https://github.com/carbon-design-system/carbon-components-vue",
-      "https://github.com/carbon-design-system/stylelint-plugin-carbon-tokens",
-      "https://github.com/carbon-design-system/carbon-tutorial"
-    ],
-    "storybook": [
-      "https://github.com/storybookjs/storybook"
+      "https://github.com/IBM/carbon-components-angular"
     ],
     "figma": [
-      "https://www.figma.com/file/XQqHxu38CiY3Vx1iHdafIa/Image-production-guidelines?t=1KJWmXlChFC7BoKT-6",
-      "https://www.figma.com/design/0sd447WTcazDI6Dq9tjXOe/-v11-Deprecated--Gray-10-Theme-%E2%80%93-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/Gvwx2RnAZzDKTjVuC5xOlO/IBM%C2%AE-Color-Library?m=auto",
-      "https://www.figma.com/design/XhRIHF6qGiJQaJ5eOSSBRm/-v11-Deprecated--Gray-100-Theme-%E2%80%93-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/4UYvy6eey28bD3IvtNF8xP/IBM%C2%AE-Documentation-Library?m=auto&node-id=642-4479&t=1rSjk0nlj8wBV9aK-1",
-      "https://www.figma.com/design/R7HjxsLFktFKMzfLzXUgSd/-Beta--Mid-Fidelity-%E2%80%93-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/PkUl9UBuvA41GPpyl84NBc/IBM%C2%AE-Pictogram-Library?m=auto",
-      "https://www.figma.com/design/YAnB1jKx0yCUL29j6uSLpg/-v11--Carbon-Design-System?m=auto",
-      "https://www.figma.com/proto/XHddusMshnOcHMWjxtoGrx/Cloud-PAL-Experimental-(Light)?page-id=80%3A124640&node-id=80-131354&viewport=4475%2C1436%2C0.29&scaling=min-zoom&starting-point-node-id=80%3A130876",
-      "https://www.figma.com/file/9arERt9v8YZVMDn7AYdmZt/Gatsby-Design-Kit",
-      "https://www.figma.com/design/4UYvy6eey28bD3IvtNF8xP/IBM-Documentation-Library?node-id=654-4435&t=67lxOP8nwgq7z2E1-0",
-      "https://www.figma.com/file/XQqHxu38CiY3Vx1iHdafIa/Image-production-guidelines?type=design&node-id=2651-218&mode=design&t=UbKwOlVeoU83hyGI-0",
-      "https://www.figma.com/design/J5c0d85dSJn9JnBhSYYLmD/IBM%C2%AE-UI-Icon-Library?m=auto",
-      "https://www.figma.com/design/jLtMeH3RsHnDs7xF9xUS8f/Carbon-AI---AI-Details-Beta?m=auto&t=Fz8SUpQOgZSNH9Ab-6",
-      "https://www.figma.com/design/tOT3OKhwLm7xObQPy3pHtc/-Alpha--Carbon-Charts-Library-Kit-%E2%80%93-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/fH8rkv1VUTw5pvFDvO1kPO/-v11-Deprecated--Gray-90-Theme-%E2%80%93-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/O3KSDu2TWpMaazGkgsKqLA/-Beta--Carbon-Native-Mobile-%E2%80%93-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/rK06GY6bvEfokuzrFGdtWB/-v11--Carbon-Type-Sets-%E2%80%93-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/YAnB1jKx0yCUL29j6uSLpg/(v11)-Carbon-Design-System?m=auto",
-      "https://www.figma.com/design/j6Wh5Ud6cDLwlx1i4pmQo7/Chat-Component-Library---Carbon-for-AI?m=auto",
-      "https://www.figma.com/file/CFMtqV5Nztdbm0mi2UiDLg/Library-%2B-Template-Planning?type=design&node-id=3713-26762&mode=design&t=HqvAYXUeccKNMstT-0",
-      "https://www.figma.com/design/zJlvN4TRbslRtyjFuxIDom/IBM%C2%AE-Accessibility-Design-Kit?node-id=0",
-      "https://www.figma.com/design/YAnB1jKx0yCUL29j6uSLpg/(v11)-All-themes---Carbon-Design-System?m=auto"
+      "https://figma.com/design/0sd447WTcazDI6Dq9tjXOe/-v11-Deprecated--Gray-10-Theme-%E2%80%93-Carbon-Design-System",
+      "https://figma.com/design/rK06GY6bvEfokuzrFGdtWB/-v11--Carbon-Type-Sets-%E2%80%93-Carbon-Design-System",
+      "https://figma.com/design/fH8rkv1VUTw5pvFDvO1kPO/-v11-Deprecated--Gray-90-Theme-%E2%80%93-Carbon-Design-System",
+      "https://figma.com/design/YAnB1jKx0yCUL29j6uSLpg/-v11--Carbon-Design-System",
+      "https://figma.com/design/Gvwx2RnAZzDKTjVuC5xOlO/IBM%C2%AE-Color-Library",
+      "https://figma.com/design/PkUl9UBuvA41GPpyl84NBc/IBM%C2%AE-Pictogram-Library",
+      "https://figma.com/design/XhRIHF6qGiJQaJ5eOSSBRm/-v11-Deprecated--Gray-100-Theme-%E2%80%93-Carbon-Design-System",
+      "https://figma.com/design/J5c0d85dSJn9JnBhSYYLmD/IBM%C2%AE-UI-Icon-Library",
+      "https://figma.com/design/zJlvN4TRbslRtyjFuxIDom/IBM%C2%AE-Accessibility-Design-Kit",
+      "https://figma.com/file/XQqHxu38CiY3Vx1iHdafIa/Image-production-guidelines"
     ],
     "markdown_docs": [
-      "https://github.com/IBM/carbon-components-angular/blob/master/README.md",
-      "https://github.com/carbon-design-system/carbon/blob/main/.github/CONTRIBUTING.md",
-      "https://github.com/carbon-design-system/carbon-website/blob/main/.github/CONTRIBUTING.md",
-      "https://github.com/carbon-design-system/stylelint-plugin-carbon-tokens/blob/main/README.md",
-      "https://github.com/carbon-design-system/carbon-components-vue/blob/master/packages/core/README.md",
-      "https://github.com/IBM/carbon-components-svelte/blob/master/CONTRIBUTING.md"
+      "https://github.com/carbon-design-system/carbon-website/blob/main/.github/CONTRIBUTING.md"
     ],
     "npm": [
-      "https://www.npmjs.com/package/carbon-components-react",
-      "https://www.npmjs.com/package/carbon-components",
-      "https://www.npmjs.com/package/@carbon/elements",
-      "https://npmjs.com/package/@carbon/icons-angular",
-      "https://npmjs.com/package/@carbon/icons",
-      "https://npmjs.com/package/@carbon/icons-vue",
+      "https://npmjs.com/package/carbon-components-react",
+      "https://npmjs.com/package/carbon-icons-svelte",
+      "https://npmjs.com/package/@carbon/react",
+      "https://npmjs.com/package/@carbon/elements",
       "https://npmjs.com/package/@carbon/icons-react",
-      "https://www.npmjs.com/package/@carbon/react",
-      "https://npmjs.com/package/carbon-icons-svelte"
+      "https://npmjs.com/package/carbon-components",
+      "https://npmjs.com/package/@carbon/icons-angular",
+      "https://npmjs.com/package/@carbon/icons-vue",
+      "https://npmjs.com/package/@carbon/icons"
     ],
     "icons": [
-      "https://www.carbondesignsystem.com/elements/icons/usage/",
-      "https://www.carbondesignsystem.com/elements/icons/code/",
-      "https://github.com/carbon-design-system/carbon-website/edit/main/src/pages/elements/icons/usage.mdx",
-      "https://github.com/carbon-design-system/carbon-website/edit/main/src/pages/elements/icons/code.mdx",
-      "https://carbondesignsystem.com/elements/icons/library/",
-      "https://www.carbondesignsystem.com/elements/icons/library",
-      "https://npmjs.com/package/@carbon/icons",
-      "https://github.com/carbon-design-system/carbon-website/edit/main/src/pages/elements/icons/library.js",
-      "https://carbon-elements.netlify.app/icons/examples/preview/",
-      "https://github.com/carbon-design-system/carbon/tree/main/packages/icons",
-      "https://www.carbondesignsystem.com/elements/icons/library/"
+      "https://carbondesignsystem.com/elements/icons/usage",
+      "https://carbondesignsystem.com/elements/icons/library",
+      "https://carbondesignsystem.com/elements/icons/code",
+      "https://npmjs.com/package/@carbon/icons"
     ],
     "agent_instructions": [
       "https://www.carbondesignsystem.com/llms.txt"
     ]
   },
-  "unverified_resources": {
-    "github": [
-      "https://github.com/vuejs/vue-devtools",
-      "https://github.com/octokit/core.js/",
-      "https://guides.github.com/activities/hello-world",
-      "https://github.com/cloudfoundry/staticfile-buildpack.git",
-      "https://developer.github.com/v4/explorer/",
-      "https://github.com/storybookjs/storybook"
-    ]
-  },
+  "unverified_resources": {},
   "content_signals": {
-    "accessibility_conformance": "WCAG 2.1 AA",
+    "dark_mode": true,
+    "codemods": true,
+    "validation_loop": true,
     "frameworks": [
       "React",
       "Vue",
       "Angular",
       "Web Components",
       "Svelte"
-    ],
-    "dark_mode": true,
-    "governance_model": true,
-    "codemods": true,
-    "figma_code_connect": true
+    ]
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 650,
-    "last_pushed": "2026-09-12T07:20:51Z"
+    "stars": 330,
+    "last_pushed": "2026-09-09T12:19:39Z"
   },
   "npm_meta": {
     "latest_version": "8.67.0",
     "last_published": "2024-09-26T17:38:09.175Z",
-    "weekly_downloads": 11472
+    "weekly_downloads": 11332
   },
   "indexed_pages": [
     {
-      "url": "https://www.carbondesignsystem.com",
-      "title": "https://www.carbondesignsystem.com"
+      "url": "https://carbondesignsystem.com/",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/",
-      "title": "https://www.carbondesignsystem.com/"
+      "url": "https://carbondesignsystem.com/deprecations",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/all-about-carbon/releases",
-      "title": "https://www.carbondesignsystem.com/all-about-carbon/releases"
+      "url": "https://carbondesignsystem.com/all-about-carbon/releases",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/all-about-carbon/releases/",
-      "title": "https://www.carbondesignsystem.com/all-about-carbon/releases/"
+      "url": "https://carbondesignsystem.com/all-about-carbon/the-carbon-ecosystem",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/all-about-carbon/the-carbon-ecosystem/",
-      "title": "https://www.carbondesignsystem.com/all-about-carbon/the-carbon-ecosystem/"
+      "url": "https://carbondesignsystem.com/all-about-carbon/who-uses-carbon",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/all-about-carbon/what-is-carbon",
-      "title": "https://www.carbondesignsystem.com/all-about-carbon/what-is-carbon"
+      "url": "https://carbondesignsystem.com/community/component-index",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/all-about-carbon/what-is-carbon/",
-      "title": "https://www.carbondesignsystem.com/all-about-carbon/what-is-carbon/"
+      "url": "https://carbondesignsystem.com/community/domain-guidance",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/all-about-carbon/who-uses-carbon/",
-      "title": "https://www.carbondesignsystem.com/all-about-carbon/who-uses-carbon/"
+      "url": "https://carbondesignsystem.com/all-about-carbon/what-is-carbon",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/community/patterns/chatbot/overview",
-      "title": "https://www.carbondesignsystem.com/community/patterns/chatbot/overview"
+      "url": "https://carbondesignsystem.com/community/overview",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/community/patterns/edit-pattern",
-      "title": "https://www.carbondesignsystem.com/community/patterns/edit-pattern"
+      "url": "https://carbondesignsystem.com/designing/get-started",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/community/patterns/export-pattern",
-      "title": "https://www.carbondesignsystem.com/community/patterns/export-pattern"
+      "url": "https://carbondesignsystem.com/developing/get-started",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/community/patterns/remove-pattern",
-      "title": "https://www.carbondesignsystem.com/community/patterns/remove-pattern"
+      "url": "https://carbondesignsystem.com/help/certificate-of-originality",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/accordion/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/accordion/accessibility"
+      "url": "https://carbondesignsystem.com/contributing/documentation",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/accordion/style",
-      "title": "https://www.carbondesignsystem.com/components/accordion/style"
+      "url": "https://carbondesignsystem.com/patterns/overview",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/accordion/style/",
-      "title": "https://www.carbondesignsystem.com/components/accordion/style/"
+      "url": "https://carbondesignsystem.com/community/patterns",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/breadcrumb/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/breadcrumb/accessibility"
+      "url": "https://carbondesignsystem.com/components/UI-shell-header/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/breadcrumb/style/",
-      "title": "https://www.carbondesignsystem.com/components/breadcrumb/style/"
+      "url": "https://carbondesignsystem.com/components/UI-shell-header/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/button/accessibility/",
-      "title": "https://www.carbondesignsystem.com/components/button/accessibility/"
+      "url": "https://carbondesignsystem.com/components/UI-shell-header/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/button/style",
-      "title": "https://www.carbondesignsystem.com/components/button/style"
+      "url": "https://carbondesignsystem.com/components/UI-shell-left-panel/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/checkbox/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/checkbox/accessibility"
+      "url": "https://carbondesignsystem.com/components/UI-shell-left-panel/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/checkbox/style",
-      "title": "https://www.carbondesignsystem.com/components/checkbox/style"
+      "url": "https://carbondesignsystem.com/components/UI-shell-left-panel/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/checkbox/style/",
-      "title": "https://www.carbondesignsystem.com/components/checkbox/style/"
+      "url": "https://carbondesignsystem.com/components/UI-shell-right-panel/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/content-switcher/style/",
-      "title": "https://www.carbondesignsystem.com/components/content-switcher/style/"
+      "url": "https://carbondesignsystem.com/components/UI-shell-left-panel/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/data-table/accessibility/",
-      "title": "https://www.carbondesignsystem.com/components/data-table/accessibility/"
+      "url": "https://carbondesignsystem.com/components/UI-shell-right-panel/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/data-table/style/",
-      "title": "https://www.carbondesignsystem.com/components/data-table/style/"
+      "url": "https://carbondesignsystem.com/components/UI-shell-right-panel/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/date-picker/style",
-      "title": "https://www.carbondesignsystem.com/components/date-picker/style"
+      "url": "https://carbondesignsystem.com/components/accordion/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/date-picker/style/",
-      "title": "https://www.carbondesignsystem.com/components/date-picker/style/"
+      "url": "https://carbondesignsystem.com/components/accordion/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/dropdown/style/",
-      "title": "https://www.carbondesignsystem.com/components/dropdown/style/"
+      "url": "https://carbondesignsystem.com/components/UI-shell-right-panel/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/file-uploader/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/file-uploader/accessibility"
+      "url": "https://carbondesignsystem.com/components/accordion/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/file-uploader/style/",
-      "title": "https://www.carbondesignsystem.com/components/file-uploader/style/"
+      "url": "https://carbondesignsystem.com/components/accordion/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/form/style",
-      "title": "https://www.carbondesignsystem.com/components/form/style"
+      "url": "https://carbondesignsystem.com/components/ai-label/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/form/style/",
-      "title": "https://www.carbondesignsystem.com/components/form/style/"
+      "url": "https://carbondesignsystem.com/components/ai-label/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/link/style/",
-      "title": "https://www.carbondesignsystem.com/components/link/style/"
+      "url": "https://carbondesignsystem.com/components/ai-label/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/list/style/",
-      "title": "https://www.carbondesignsystem.com/components/list/style/"
+      "url": "https://carbondesignsystem.com/components/breadcrumb/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/loading/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/loading/accessibility"
+      "url": "https://carbondesignsystem.com/components/breadcrumb/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/loading/style/",
-      "title": "https://www.carbondesignsystem.com/components/loading/style/"
+      "url": "https://carbondesignsystem.com/components/breadcrumb/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/menu-buttons/style/",
-      "title": "https://www.carbondesignsystem.com/components/menu-buttons/style/"
+      "url": "https://carbondesignsystem.com/components/breadcrumb/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/menu/style",
-      "title": "https://www.carbondesignsystem.com/components/menu/style"
+      "url": "https://carbondesignsystem.com/components/button/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/modal/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/modal/accessibility"
+      "url": "https://carbondesignsystem.com/components/button/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/modal/style",
-      "title": "https://www.carbondesignsystem.com/components/modal/style"
+      "url": "https://carbondesignsystem.com/components/checkbox/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/notification/style",
-      "title": "https://www.carbondesignsystem.com/components/notification/style"
+      "url": "https://carbondesignsystem.com/components/checkbox/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/notification/style/",
-      "title": "https://www.carbondesignsystem.com/components/notification/style/"
+      "url": "https://carbondesignsystem.com/components/checkbox/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/number-input/style/",
-      "title": "https://www.carbondesignsystem.com/components/number-input/style/"
+      "url": "https://carbondesignsystem.com/components/code-snippet/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/overview/accessibility-status",
-      "title": "https://www.carbondesignsystem.com/components/overview/accessibility-status"
+      "url": "https://carbondesignsystem.com/components/code-snippet/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/overview/accessibility-status/",
-      "title": "https://www.carbondesignsystem.com/components/overview/accessibility-status/"
+      "url": "https://carbondesignsystem.com/components/code-snippet/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/overview/components/",
-      "title": "https://www.carbondesignsystem.com/components/overview/components/"
+      "url": "https://carbondesignsystem.com/components/code-snippet/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/overview/feature-flags/",
-      "title": "https://www.carbondesignsystem.com/components/overview/feature-flags/"
+      "url": "https://carbondesignsystem.com/components/contained-list/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/pagination/style/",
-      "title": "https://www.carbondesignsystem.com/components/pagination/style/"
+      "url": "https://carbondesignsystem.com/components/contained-list/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/progress-indicator/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/progress-indicator/accessibility"
+      "url": "https://carbondesignsystem.com/components/contained-list/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/progress-indicator/style/",
-      "title": "https://www.carbondesignsystem.com/components/progress-indicator/style/"
+      "url": "https://carbondesignsystem.com/components/contained-list/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/radio-button/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/radio-button/accessibility"
+      "url": "https://carbondesignsystem.com/components/content-switcher/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/select/style/",
-      "title": "https://www.carbondesignsystem.com/components/select/style/"
+      "url": "https://carbondesignsystem.com/components/content-switcher/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/structured-list/style/",
-      "title": "https://www.carbondesignsystem.com/components/structured-list/style/"
+      "url": "https://carbondesignsystem.com/components/data-table/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/text-input/accessibility",
-      "title": "https://www.carbondesignsystem.com/components/text-input/accessibility"
+      "url": "https://carbondesignsystem.com/components/data-table/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/tile/style/",
-      "title": "https://www.carbondesignsystem.com/components/tile/style/"
+      "url": "https://carbondesignsystem.com/components/date-picker/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/toggletip/style/",
-      "title": "https://www.carbondesignsystem.com/components/toggletip/style/"
+      "url": "https://carbondesignsystem.com/components/dropdown/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/components/tooltip/style/",
-      "title": "https://www.carbondesignsystem.com/components/tooltip/style/"
+      "url": "https://carbondesignsystem.com/components/date-picker/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/contributing/component-checklist",
-      "title": "https://www.carbondesignsystem.com/contributing/component-checklist"
+      "url": "https://carbondesignsystem.com/components/file-uploader/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/contributing/documentation/",
-      "title": "https://www.carbondesignsystem.com/contributing/documentation/"
+      "url": "https://carbondesignsystem.com/components/file-uploader/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/contributing/get-started/code/",
-      "title": "https://www.carbondesignsystem.com/contributing/get-started/code/"
+      "url": "https://carbondesignsystem.com/components/file-uploader/style",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/contributing/get-started/design/",
-      "title": "https://www.carbondesignsystem.com/contributing/get-started/design/"
+      "url": "https://carbondesignsystem.com/components/file-uploader/usage",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/contributing/get-started/overview",
-      "title": "https://www.carbondesignsystem.com/contributing/get-started/overview"
+      "url": "https://carbondesignsystem.com/components/form/accessibility",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/contributing/get-started/overview/",
-      "title": "https://www.carbondesignsystem.com/contributing/get-started/overview/"
+      "url": "https://carbondesignsystem.com/components/form/code",
+      "title": "Carbon Design System"
     },
     {
-      "url": "https://www.carbondesignsystem.com/contributing/product-development-lifecycle/",
-      "title": "https://www.carbondesignsystem.com/contributing/product-development-lifecycle/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/deprecations",
-      "title": "https://www.carbondesignsystem.com/deprecations"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/designing/design-resources/",
-      "title": "https://www.carbondesignsystem.com/designing/design-resources/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/designing/get-started/",
-      "title": "https://www.carbondesignsystem.com/designing/get-started/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/designing/kits/figma",
-      "title": "https://www.carbondesignsystem.com/designing/kits/figma"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/designing/kits/figma/",
-      "title": "https://www.carbondesignsystem.com/designing/kits/figma/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/frameworks/react",
-      "title": "https://www.carbondesignsystem.com/developing/frameworks/react"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/frameworks/react/",
-      "title": "https://www.carbondesignsystem.com/developing/frameworks/react/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/get-started",
-      "title": "https://www.carbondesignsystem.com/developing/get-started"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/get-started/",
-      "title": "https://www.carbondesignsystem.com/developing/get-started/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/react-tutorial/overview/",
-      "title": "https://www.carbondesignsystem.com/developing/react-tutorial/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/web-components-tutorial/overview/",
-      "title": "https://www.carbondesignsystem.com/developing/web-components-tutorial/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/2x-grid/overview",
-      "title": "https://www.carbondesignsystem.com/elements/2x-grid/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/2x-grid/overview/",
-      "title": "https://www.carbondesignsystem.com/elements/2x-grid/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/color/overview",
-      "title": "https://www.carbondesignsystem.com/elements/color/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/color/overview/",
-      "title": "https://www.carbondesignsystem.com/elements/color/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/color/tokens/",
-      "title": "https://www.carbondesignsystem.com/elements/color/tokens/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/icons/code/",
-      "title": "https://www.carbondesignsystem.com/elements/icons/code/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/icons/usage/",
-      "title": "https://www.carbondesignsystem.com/elements/icons/usage/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/motion/overview/",
-      "title": "https://www.carbondesignsystem.com/elements/motion/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/spacing/overview",
-      "title": "https://www.carbondesignsystem.com/elements/spacing/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/spacing/overview/",
-      "title": "https://www.carbondesignsystem.com/elements/spacing/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/themes/overview",
-      "title": "https://www.carbondesignsystem.com/elements/themes/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/themes/overview/",
-      "title": "https://www.carbondesignsystem.com/elements/themes/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/typography/overview",
-      "title": "https://www.carbondesignsystem.com/elements/typography/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/typography/style-strategies",
-      "title": "https://www.carbondesignsystem.com/elements/typography/style-strategies"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/typography/style-strategies/",
-      "title": "https://www.carbondesignsystem.com/elements/typography/style-strategies/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/typography/type-sets/",
-      "title": "https://www.carbondesignsystem.com/elements/typography/type-sets/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/accessibility/color/",
-      "title": "https://www.carbondesignsystem.com/guidelines/accessibility/color/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/accessibility/developers",
-      "title": "https://www.carbondesignsystem.com/guidelines/accessibility/developers"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/accessibility/keyboard",
-      "title": "https://www.carbondesignsystem.com/guidelines/accessibility/keyboard"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/accessibility/overview",
-      "title": "https://www.carbondesignsystem.com/guidelines/accessibility/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/accessibility/overview/",
-      "title": "https://www.carbondesignsystem.com/guidelines/accessibility/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/content/action-labels",
-      "title": "https://www.carbondesignsystem.com/guidelines/content/action-labels"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/content/overview",
-      "title": "https://www.carbondesignsystem.com/guidelines/content/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/content/overview/",
-      "title": "https://www.carbondesignsystem.com/guidelines/content/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/content/writing-style",
-      "title": "https://www.carbondesignsystem.com/guidelines/content/writing-style"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/help/certificate-of-originality/",
-      "title": "https://www.carbondesignsystem.com/help/certificate-of-originality/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/help/contact-us",
-      "title": "https://www.carbondesignsystem.com/help/contact-us"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/help/contact-us/",
-      "title": "https://www.carbondesignsystem.com/help/contact-us/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/help/faq",
-      "title": "https://www.carbondesignsystem.com/help/faq"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/help/faq/",
-      "title": "https://www.carbondesignsystem.com/help/faq/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/migrating/faq/",
-      "title": "https://www.carbondesignsystem.com/migrating/faq/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/migrating/guide/design/",
-      "title": "https://www.carbondesignsystem.com/migrating/guide/design/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/migrating/guide/overview/",
-      "title": "https://www.carbondesignsystem.com/migrating/guide/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/common-actions",
-      "title": "https://www.carbondesignsystem.com/patterns/common-actions"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/common-actions/",
-      "title": "https://www.carbondesignsystem.com/patterns/common-actions/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/dialog-pattern/",
-      "title": "https://www.carbondesignsystem.com/patterns/dialog-pattern/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/disabled-states",
-      "title": "https://www.carbondesignsystem.com/patterns/disabled-states"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/disabled-states/",
-      "title": "https://www.carbondesignsystem.com/patterns/disabled-states/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/disclosures-pattern",
-      "title": "https://www.carbondesignsystem.com/patterns/disclosures-pattern"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/disclosures-pattern/",
-      "title": "https://www.carbondesignsystem.com/patterns/disclosures-pattern/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/empty-states-pattern",
-      "title": "https://www.carbondesignsystem.com/patterns/empty-states-pattern"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/filtering",
-      "title": "https://www.carbondesignsystem.com/patterns/filtering"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/forms-pattern",
-      "title": "https://www.carbondesignsystem.com/patterns/forms-pattern"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/forms-pattern/",
-      "title": "https://www.carbondesignsystem.com/patterns/forms-pattern/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/global-header",
-      "title": "https://www.carbondesignsystem.com/patterns/global-header"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/global-header/",
-      "title": "https://www.carbondesignsystem.com/patterns/global-header/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/loading-pattern",
-      "title": "https://www.carbondesignsystem.com/patterns/loading-pattern"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/loading-pattern/",
-      "title": "https://www.carbondesignsystem.com/patterns/loading-pattern/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/notification-pattern",
-      "title": "https://www.carbondesignsystem.com/patterns/notification-pattern"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/notification-pattern/",
-      "title": "https://www.carbondesignsystem.com/patterns/notification-pattern/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/overview",
-      "title": "https://www.carbondesignsystem.com/patterns/overview"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/overview/",
-      "title": "https://www.carbondesignsystem.com/patterns/overview/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/search-pattern",
-      "title": "https://www.carbondesignsystem.com/patterns/search-pattern"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/search-pattern/",
-      "title": "https://www.carbondesignsystem.com/patterns/search-pattern/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/status-indicator-pattern/",
-      "title": "https://www.carbondesignsystem.com/patterns/status-indicator-pattern/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/whats-happening/meetups",
-      "title": "https://www.carbondesignsystem.com/whats-happening/meetups"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/whats-happening/meetups/",
-      "title": "https://www.carbondesignsystem.com/whats-happening/meetups/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/whats-happening/news-and-articles/",
-      "title": "https://www.carbondesignsystem.com/whats-happening/news-and-articles/"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/designing/kits/sketch/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/community-frameworks/angular/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/patterns/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/component-index/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/angular-tutorial/overview/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/vue-tutorial/overview/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/color/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/themes/code/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/2x-grid/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/color/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/community-frameworks/vue/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/checkbox/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/text-toolbar-pattern/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/patterns/generate-an-api-key",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/patterns/import-pattern",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/patterns/create-flows",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/angular-tutorial/step-5",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/angular-tutorial/step-2",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/angular-tutorial/step-4",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/angular-tutorial/step-1",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/data-table/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/select/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tile/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/dropdown/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tooltip/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/date-picker/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/component-index",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/form/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/number-input/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/checkbox/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/modal/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/ai-label/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/button/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/radio-button/usage/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/web-components-tutorial/step-4",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/web-components-tutorial/step-5",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/web-components-tutorial/step-1",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/web-components-tutorial/step-2",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/web-components-tutorial/step-3",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/web-components-tutorial/step-1/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/vue-tutorial/step-3",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/vue-tutorial/step-2",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/vue-tutorial/step-1",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/vue-tutorial/step-4",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/vue-tutorial/step-5",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/react-tutorial/step-4",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/react-tutorial/step-2",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/react-tutorial/step-3",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/react-tutorial/step-1/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/react-tutorial/step-5",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/react-tutorial/step-1",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/patterns",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/patterns/text-toolbar-pattern",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/spacing/code/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/typography/code/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/2x-grid/code/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/elements/color/code/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/button/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/guidelines/carbon-for-ai/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/developing/community-frameworks/svelte/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/data-visualization/dashboards/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/data-visualization/getting-started",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/modal/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/form/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/radio-button/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/data-table/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/migrating/guide/develop/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/dropdown/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/community/overview/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/select/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/data-visualization/chart-anatomy/",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tile/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tooltip/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/date-picker/usage",
-      "title": "info icon"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/content-switcher/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/accordion/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/progress-indicator/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/link/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/list/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/menu-buttons/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/breadcrumb/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/loading/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/notification/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/structured-list/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/menu/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/toggletip/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/file-uploader/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/pagination/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/toggle/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tree-view/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/content-switcher/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/popover/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/accordion/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/progress-bar/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/UI-shell-header/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/search/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/contained-list/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/code-snippet/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/slider/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/UI-shell-right-panel/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/UI-shell-left-panel/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/breadcrumb/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/UI-shell-left-panel/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/breadcrumb/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/UI-shell-header/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/UI-shell-header/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/notification/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/button/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/notification/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/toggle/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/loading/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/pagination/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/search/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/file-uploader/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/overflow-menu/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tabs/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/progress-indicator/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tree-view/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/structured-list/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/notification/code",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/pagination/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/structured-list/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/overflow-menu/code",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/accordion/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/list/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/menu-buttons/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/tile/code/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/popover/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/link/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/select/code",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/form/code",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/radio-button/code",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/overflow-menu/usage/",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/inline-loading/usage",
-      "title": "Open menu"
-    },
-    {
-      "url": "https://www.carbondesignsystem.com/components/menu-buttons/usage",
-      "title": "Open menu"
+      "url": "https://www.carbondesignsystem.com/llms.txt",
+      "title": "IBM — Carbon Design System — llms.txt"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "mongodb-mongodb-design-system",
   "organization": "MongoDB",
   "design_system": "MongoDB Design System",
@@ -9,22 +9,94 @@
     "https://www.mongodb.design/"
   ],
   "detail_url": "/systems/mongodb-mongodb-design-system",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 14,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": null,
+  "last_checked": "2026-09-20T12:11:12+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
-  "resources": {},
+  "resources": {
+    "github": [
+      "https://github.com/mongodb/leafygreen-ui"
+    ],
+    "figma": [
+      "https://figma.com/design/L41rvEwQmJJ8VzO4hCPc7Y/LeafyGreen-Chat-Library"
+    ],
+    "icons": [
+      "https://mongodb.design/component/icon/guidelines",
+      "https://mongodb.design/component/icon/live-example"
+    ]
+  },
   "unverified_resources": {},
-  "content_signals": {},
-  "github_meta": null,
+  "content_signals": {
+    "accessibility_conformance": "Section 508",
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 273,
+    "last_pushed": "2026-09-03T16:19:38Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://mongodb.design/foundation/accessibility",
+      "title": "Accessibility"
+    },
+    {
+      "url": "https://mongodb.design/pattern/chat",
+      "title": "Chat"
+    },
+    {
+      "url": "https://mongodb.design/pattern/control-list",
+      "title": "Control List"
+    },
+    {
+      "url": "https://mongodb.design/pattern/date-and-time",
+      "title": "Date & Time"
+    },
+    {
+      "url": "https://mongodb.design/component/inline-definition/design-docs",
+      "title": "Design docs"
+    },
+    {
+      "url": "https://mongodb.design/component/date-picker/design-docs",
+      "title": "Design docs"
+    },
+    {
+      "url": "https://mongodb.design/component/tooltip/design-docs",
+      "title": "Design docs"
+    },
+    {
+      "url": "https://mongodb.design/component/modal/design-docs",
+      "title": "Design docs"
+    },
+    {
+      "url": "https://mongodb.design/component/drawer/design-docs",
+      "title": "Design docs"
+    },
+    {
+      "url": "https://mongodb.design/component/card/design-docs",
+      "title": "Design docs"
+    },
+    {
+      "url": "https://mongodb.design/pattern/forms",
+      "title": "Forms"
+    },
+    {
+      "url": "https://mongodb.design/foundation/grid",
+      "title": "Grid"
+    },
+    {
+      "url": "https://mongodb.design/foundation/icon-creation",
+      "title": "Icon creation guide"
+    },
+    {
       "url": "https://mongodb.design/",
-      "title": "https://mongodb.design/"
+      "title": "LeafyGreen Design System"
     }
   ]
 }

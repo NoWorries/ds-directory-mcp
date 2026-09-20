@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "siemens-ix",
   "organization": null,
   "design_system": "Siemens iX",
@@ -9,47 +9,70 @@
     "https://ix.siemens.io/"
   ],
   "detail_url": "/systems/siemens-ix",
-  "pages_indexed": 100,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 270,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T12:56:24+00:00",
+  "last_checked": "2026-09-20T00:34:22+00:00",
   "last_modified": "Wed, 09 Sep 2026 07:20:45 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/siemens/ix"
+      "https://github.com/yagizhanNY/siemens-ix-blazor",
+      "https://github.com/siemens/ix",
+      "https://www.github.com/siemens/ix",
+      "https://github.com/siemens/ix-icons"
     ],
     "figma": [
       "https://www.figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology",
       "https://www.figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines"
     ],
+    "markdown_docs": [
+      "https://github.com/siemens/ix/blob/main/CONTRIBUTING.md"
+    ],
     "mcp": [
-      "https://ix.siemens.io/docs/home/mcp-server"
+      "https://ix.siemens.io/docs/home/mcp-server",
+      "https://ix.siemens.io/docs/home/mcp-server.md"
     ],
     "icons": [
+      "https://ix.siemens.io/docs/icons/icon-library.md",
+      "https://ix.siemens.io/docs/icons/design-new-icons",
       "https://ix.siemens.io/docs/icons/icon-library",
-      "https://ix.siemens.io/docs/icons/icon-usage"
+      "https://ix.siemens.io/docs/icons/design-new-icons.md",
+      "https://ix.siemens.io/docs/icons/developing-with-icons.md",
+      "https://ix.siemens.io/docs/icons/developing-with-icons",
+      "https://ix.siemens.io/docs/icons/icon-usage.md",
+      "https://ix.siemens.io/docs/icons/icon-usage",
+      "https://brandville.siemens.com/en/design-elements/icons/ui-icons"
     ],
     "agent_instructions": [
       "https://ix.siemens.io/llms.txt",
       "https://ix.siemens.io/llms-full.txt"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/Rich-Harris/degit"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@axe-core/playwright"
+    ]
+  },
   "content_signals": {
+    "exemplars": true,
+    "prohibition": true,
     "dark_mode": true,
     "frameworks": [
-      "Angular",
+      "Web Components",
       "React",
       "Vue",
-      "Web Components"
+      "Angular"
     ]
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 374,
-    "last_pushed": "2026-09-18T12:12:03Z"
+    "stars": 35,
+    "last_pushed": "2026-09-14T17:54:52Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -66,6 +89,22 @@
       "title": "About and legal - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/acknowledging-users",
+      "title": "Acknowledging users | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/ad-hoc-conversations",
+      "title": "Ad hoc conversations | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/addresses",
+      "title": "Addresses | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/support-and-resources/AI-and-UX-writing",
+      "title": "AI and UX writing | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/ai-message/code",
       "title": "AI message - Code | Siemens Industrial Experience"
     },
@@ -76,6 +115,14 @@
     {
       "url": "https://ix.siemens.io/docs/components/grid/code",
       "title": "Angular data grid - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/installation/angular",
+      "title": "Angular | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/animation",
+      "title": "Animations | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/application/code",
@@ -122,6 +169,10 @@
       "title": "Bar chart | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/home/installation/blazor",
+      "title": "Blazor | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/blind/code",
       "title": "Blind - Code | Siemens Industrial Experience"
     },
@@ -130,8 +181,8 @@
       "title": "Blind - Usage | Siemens Industrial Experience"
     },
     {
-      "url": "https://ix.siemens.io/blog",
-      "title": "Blog | Siemens Industrial Experience"
+      "url": "https://ix.siemens.io/docs/styles/borders",
+      "title": "Borders | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/breadcrumb/code",
@@ -142,12 +193,24 @@
       "title": "Breadcrumb - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/home/mcp-server",
+      "title": "Build with AI | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/button/code",
       "title": "Button - Code | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/button/guide",
       "title": "Button - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/button-labels",
+      "title": "Button labels | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/basics/capitalization-and-proper-nouns",
+      "title": "Capitalization and proper nouns | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/card/code",
@@ -198,6 +261,10 @@
       "title": "Chat input - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/resources/chatbot-checklist",
+      "title": "Chatbot checklist | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/checkbox/code",
       "title": "Checkbox - Code | Siemens Industrial Experience"
     },
@@ -214,8 +281,32 @@
       "title": "Chip - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/accessibility/code",
+      "title": "code | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/message-modal/code",
       "title": "code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/colors",
+      "title": "Color palette | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/overview",
+      "title": "Components overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/confirming-request",
+      "title": "Confirming requests | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/cli/consistent",
+      "title": "Consistent | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/support/contact-us",
+      "title": "Contact us | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/content/code",
@@ -234,12 +325,20 @@
       "title": "Content header - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/home/installation/csp",
+      "title": "Content Security Policy Nonces | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/custom-field/code",
       "title": "Custom field - Code | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/custom-field/guide",
       "title": "Custom field - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/modal/guide",
+      "title": "Custom modal - Usage | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/grid/guide",
@@ -282,8 +381,32 @@
       "title": "Date time picker - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/date",
+      "title": "Dates | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/icons/design-new-icons",
+      "title": "Designing new icons | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/theming/usage-designers",
+      "title": "Designing with themes | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/icons/developing-with-icons",
+      "title": "Developing with icons | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/theming/usage-developers",
+      "title": "Developing with themes | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/group/code",
       "title": "Development | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/dialogs-and-buttons",
+      "title": "Dialogs and buttons | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/dropdown/code",
@@ -302,6 +425,14 @@
       "title": "Dropdown button - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/cli/efficient",
+      "title": "Efficient | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/elevation",
+      "title": "Elevation | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/empty-state/code",
       "title": "Empty state - Code | Siemens Industrial Experience"
     },
@@ -310,20 +441,68 @@
       "title": "Empty state - Language | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/empty-state-messages",
+      "title": "Empty-state messages | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/ending-conversations",
+      "title": "Ending conversations | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/error-messages",
+      "title": "Error messages | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/error-pages",
+      "title": "Error pages | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/event-list/code",
       "title": "Event list - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/general-information-and-administrative-emails/examples",
+      "title": "Examples | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/operative-alarms-and-events/examples",
+      "title": "Examples | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/overview-operational-emails/examples",
+      "title": "Examples | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/reports-and-data-provisioning-emails/examples",
+      "title": "Examples | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/system-and-product-lifecycle-emails/examples",
+      "title": "Examples | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/user-and-access-management-emails/examples",
+      "title": "Examples | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/workflow-and-task-management-emails/examples",
+      "title": "Examples | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/expanding-search/code",
       "title": "Expanding search - Code | Siemens Industrial Experience"
     },
     {
-      "url": "https://ix.siemens.io/docs/components/flip/code",
-      "title": "Flip - Code | Siemens Industrial Experience"
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/external-links-and-resources",
+      "title": "External links and resources | Siemens Industrial Experience"
     },
     {
-      "url": "https://ix.siemens.io/docs/components/forms-behavior",
-      "title": "Forms behavior | Siemens Industrial Experience"
+      "url": "https://ix.siemens.io/docs/home/support/faq",
+      "title": "FAQ | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/flip/code",
+      "title": "Flip - Code | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/forms-field/code",
@@ -350,8 +529,52 @@
       "title": "Forms validation - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/language/frequent-app-functions",
+      "title": "Frequent app functions | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/funneling-input",
+      "title": "Funneling input | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/gauge-chart/overview",
       "title": "Gauge chart | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/cli/getting-started",
+      "title": "Getting started with CLI design | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/getting-started",
+      "title": "Getting started with Conversational design | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/writing-style-guide-getting-started",
+      "title": "Getting started with UX writing | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/basics/grammar",
+      "title": "Grammar | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/greeting-users",
+      "title": "Greeting users | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/overview",
+      "title": "Guidelines overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/handing-off-users",
+      "title": "Handing off users | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/handling-errors",
+      "title": "Handling errors | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/cli/helpful",
+      "title": "Helpful | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/html-grid/code",
@@ -362,12 +585,32 @@
       "title": "HTML Table - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/cli/human",
+      "title": "Human | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/icon-button/code",
       "title": "Icon button - Code | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/icon-button/guide",
       "title": "Icon button - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/icons/icon-library",
+      "title": "Icon library | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/icons/icon-usage",
+      "title": "Icon usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/basics/inclusive-language",
+      "title": "Inclusive language | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/infotips",
+      "title": "Infotips | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/input/code",
@@ -390,6 +633,10 @@
       "title": "KPI - Code | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/language",
+      "title": "Language | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/layout-auto/code",
       "title": "Layout auto - Code | Siemens Industrial Experience"
     },
@@ -400,6 +647,10 @@
     {
       "url": "https://ix.siemens.io/docs/components/layout-grid/guide",
       "title": "Layout grid - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/license-management",
+      "title": "License management | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/line-chart/overview",
@@ -414,12 +665,76 @@
       "title": "Link button - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/resources/links",
+      "title": "Links | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/loading-modal/code",
       "title": "Loading modal - code | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/loading-modal/guide",
       "title": "Loading modal - usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/support-and-resources/uxw-localization/overview",
+      "title": "Localization - Overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/support-and-resources/uxw-localization/writing",
+      "title": "Localization - Writing | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/logging-in-and-out",
+      "title": "Logging in and out | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/cli/logical",
+      "title": "Logical | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/measurements",
+      "title": "Measurements and units | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/messagebar/code",
+      "title": "Message bar - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/message-modal/guide",
+      "title": "Message modal - usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/migration/core-ui",
+      "title": "Migration from Core UI 6.5.0 | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/migration/uxt",
+      "title": "Migration from UXT 2.7.0 | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/mobile/mobile-app-dev",
+      "title": "Mobile experience | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/modal/code",
+      "title": "Modal - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/money",
+      "title": "Money and currencies | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/names-titles",
+      "title": "Names and titles | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/essentials/natural-language",
+      "title": "Natural language | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/non-critical-information-messages",
+      "title": "Non-critical information messages | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/input-number/code",
@@ -430,8 +745,148 @@
       "title": "Number input - Usage | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/numbers",
+      "title": "Numbers and percentages | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/basics/offensive-language",
+      "title": "Offensive language | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/onboarding",
+      "title": "Onboarding | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/mobile/mobile-ux",
+      "title": "Optimizing mobile user experience | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/overview",
+      "title": "Overview Conversational design | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/accessibility/overview",
+      "title": "overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/overview",
+      "title": "Overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/messages-overview",
+      "title": "Overview | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/charts-overview/overview",
       "title": "Overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/pagination/code",
+      "title": "Pagination - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/panes/code",
+      "title": "Panes - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/panes/guide",
+      "title": "Panes - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/pie-chart/overview",
+      "title": "Pie chart | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/pill/code",
+      "title": "Pill - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/pill/guide",
+      "title": "Pill - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/popover/code",
+      "title": "Popover - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/popover/uxwriting",
+      "title": "Popover - Language | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/popover/guide",
+      "title": "Popover - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/popover-news/code",
+      "title": "Popover news - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/popover-news/guide",
+      "title": "Popover news - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/progress-indicator/guide",
+      "title": "Progress indicator - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/progress-updates",
+      "title": "Progress updates | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/progress-indicator/code",
+      "title": "Progress-Indicator - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/basics/punctuation",
+      "title": "Punctuation | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/radio/code",
+      "title": "Radio - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/radio/guide",
+      "title": "Radio button - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/range-field/code",
+      "title": "Range field - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/range-field/guide",
+      "title": "Range field - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/installation/react",
+      "title": "React | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/releases/roadmap",
+      "title": "Roadmap | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/search-and-filter",
+      "title": "Search and filter | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/select/code",
+      "title": "Select - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/select/guide",
+      "title": "Select - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/settings/code",
+      "title": "Settings - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/settings/guide",
+      "title": "Settings - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/shadows",
+      "title": "Shadows | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/llms.txt",
@@ -442,6 +897,58 @@
       "title": "Siemens iX — llms.txt"
     },
     {
+      "url": "https://ix.siemens.io/docs/components/slider/code",
+      "title": "Slider - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/software-versions",
+      "title": "Software versions | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/special-chart/overview",
+      "title": "Special chart | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/spinner/code",
+      "title": "Spinner - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/split-button/code",
+      "title": "Split button - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/split-button/guide",
+      "title": "Split button - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/getting-started/starter-app",
+      "title": "Starter apps | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/essentials/system-presonas",
+      "title": "System personas | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/tabs/code",
+      "title": "Tabs - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/textarea/code",
+      "title": "Textarea - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/textarea/guide",
+      "title": "Textarea - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/tile/code",
+      "title": "Tile - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/formatting/timezones",
+      "title": "Time and time zones | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/input-time/code",
       "title": "Time input - Code | Siemens Industrial Experience"
     },
@@ -450,8 +957,204 @@
       "title": "Time input - Usage | Siemens Industrial Experience"
     },
     {
-      "url": "https://ix.siemens.io/todo",
-      "title": "To do for documentation redesign | Siemens Industrial Experience"
+      "url": "https://ix.siemens.io/docs/components/time-picker/code",
+      "title": "Time picker - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/time-picker/guide",
+      "title": "Time picker - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/time-related-messages",
+      "title": "Time-related messages | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/toast/code",
+      "title": "Toast - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/toast/language",
+      "title": "Toast - Language | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/toast/guide",
+      "title": "Toast - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/toast-messages",
+      "title": "Toast messages | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/toggle/code",
+      "title": "Toggle - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/toggle/guide",
+      "title": "Toggle - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/toggle-button/code",
+      "title": "Toggle button - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/toggle-button/guide",
+      "title": "Toggle button - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/tooltip/code",
+      "title": "Tooltip - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/tooltip/uxwriting",
+      "title": "Tooltip - Language | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/tooltip/guide",
+      "title": "Tooltip - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/tooltips",
+      "title": "Tooltips | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/tree/code",
+      "title": "Tree - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/troubleshooting",
+      "title": "Troubleshooting | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/typography/code",
+      "title": "Typography - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/styles/typography/guide",
+      "title": "Typography - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/ui-terminology",
+      "title": "UI terminology | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/migration/2_0_0",
+      "title": "Upgrade to V2 | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/migration/3_0_0",
+      "title": "Upgrade to V3 | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/migration/4_0_0",
+      "title": "Upgrade to V4 | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/migration/5_0_0",
+      "title": "Upgrade to V5 | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/upload/code",
+      "title": "Upload - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/upload/guide",
+      "title": "Upload - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/general-information-and-administrative-emails/usage",
+      "title": "Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/operative-alarms-and-events/usage",
+      "title": "Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/overview-operational-emails/usage",
+      "title": "Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/reports-and-data-provisioning-emails/usage",
+      "title": "Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/system-and-product-lifecycle-emails/usage",
+      "title": "Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/user-and-access-management-emails/usage",
+      "title": "Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/operational-emails/workflow-and-task-management-emails/usage",
+      "title": "Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/essentials/user-intent",
+      "title": "User intent | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/user-management",
+      "title": "User management | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/user-message/code",
+      "title": "User message - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/user-message/guide",
+      "title": "User message - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/support-and-resources/ux-writer-role",
+      "title": "UX writer role | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/support-and-resources/UX-writing-principles",
+      "title": "UX writing principles | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/support-and-resources/UX-writing-resources",
+      "title": "UX writing resources | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/releases/release-version",
+      "title": "Versioning and releases | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/basics/vocabulary",
+      "title": "Vocabulary | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/basics/voice-and-tone",
+      "title": "Voice and tone | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/installation/vue",
+      "title": "Vue | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/messaging/warning-messages",
+      "title": "Warning messages | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/installation/javascript",
+      "title": "Web components | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/home/overview",
+      "title": "Welcome to Siemens Industrial Experience | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/whats-new-announcements",
+      "title": "What’s new announcements | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/conversational-design/essentials/wording-terms",
+      "title": "Wording and terms | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/workflow/code",
+      "title": "Workflow - Code | Siemens Industrial Experience"
     }
   ]
 }

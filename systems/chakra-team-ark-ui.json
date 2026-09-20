@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "chakra-team-ark-ui",
   "organization": "Chakra team",
   "design_system": "Ark UI",
@@ -9,11 +9,11 @@
     "https://ark-ui.com/"
   ],
   "detail_url": "/systems/chakra-team-ark-ui",
-  "pages_indexed": 100,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 107,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T15:34:10+00:00",
+  "last_checked": "2026-09-20T01:15:17+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -24,15 +24,16 @@
       "https://ark-ui.com/blog/using-ark-ui-with-storybook"
     ],
     "mcp": [
-      "https://modelcontextprotocol.io/introduction",
+      "https://ark-ui.com/docs/ai/mcp-server",
       "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
-      "https://ark-ui.com/docs/ai/mcp-server.mdx",
       "https://ark-ui.com/blog/announcing-ark-ui-mcp-server",
-      "https://ark-ui.com/docs/ai/mcp-server"
+      "https://modelcontextprotocol.io/introduction",
+      "https://ark-ui.com/docs/ai/mcp-server.mdx",
+      "https://ark-ui.com/react/docs/ai/mcp-server"
     ],
     "agent_instructions": [
-      "https://ark-ui.com/docs/ai/llms.txt",
       "https://ark-ui.com/llms.txt",
+      "https://ark-ui.com/docs/ai/llms.txt",
       "https://ark-ui.com/llms-full.txt"
     ]
   },
@@ -50,8 +51,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 5394,
-    "last_pushed": "2026-09-18T12:44:42Z"
+    "stars": 5397,
+    "last_pushed": "2026-09-19T21:41:52Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -82,6 +83,10 @@
     {
       "url": "https://ark-ui.com/docs/collections/async-list",
       "title": "Async List | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/async-select",
+      "title": "Async Select | Ark UI"
     },
     {
       "url": "https://ark-ui.com/docs/components/avatar",
@@ -252,6 +257,10 @@
       "title": "JSON Tree View | Ark UI"
     },
     {
+      "url": "https://ark-ui.com/license",
+      "title": "License Agreement"
+    },
+    {
       "url": "https://ark-ui.com/docs/collections/list-collection",
       "title": "List Collection | Ark UI"
     },
@@ -368,6 +377,10 @@
       "title": "Segment Group | Ark UI"
     },
     {
+      "url": "https://ark-ui.com/examples/select-tabs",
+      "title": "Select Tabs | Ark UI"
+    },
+    {
       "url": "https://ark-ui.com/docs/components/select",
       "title": "Select | Ark UI"
     },
@@ -382,6 +395,10 @@
     {
       "url": "https://ark-ui.com/examples/slider-with-number-input",
       "title": "Slider with Number Input | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/slider-with-tooltip",
+      "title": "Slider with Tooltip | Ark UI"
     },
     {
       "url": "https://ark-ui.com/docs/components/slider",
@@ -416,6 +433,10 @@
       "title": "Table of Contents | Ark UI"
     },
     {
+      "url": "https://ark-ui.com/examples/tabs-with-links",
+      "title": "Tabs with links | Ark UI"
+    },
+    {
       "url": "https://ark-ui.com/docs/components/tabs",
       "title": "Tabs | Ark UI"
     },
@@ -440,6 +461,10 @@
       "title": "Toggle | Ark UI"
     },
     {
+      "url": "https://ark-ui.com/examples/tooltip-with-following-cursor",
+      "title": "Tooltip with following cursor | Ark UI"
+    },
+    {
       "url": "https://ark-ui.com/docs/components/tooltip",
       "title": "Tooltip | Ark UI"
     },
@@ -454,6 +479,10 @@
     {
       "url": "https://ark-ui.com/docs/components/tree-view",
       "title": "Tree View | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/virtualized-select",
+      "title": "Virtualized Select | Ark UI"
     }
   ]
 }

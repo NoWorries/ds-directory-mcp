@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-19T21:58:10+00:00",
+  "generated_at": "2026-09-20T22:58:25+00:00",
   "id": "bbc-global-experience-language-gel",
   "organization": "BBC",
   "design_system": "Global Experience Language (GEL)",
@@ -9,24 +9,27 @@
     "https://www.bbc.co.uk/gel/"
   ],
   "detail_url": "/systems/bbc-global-experience-language-gel",
-  "pages_indexed": 137,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 183,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T05:15:52+00:00",
+  "last_checked": "2026-09-20T01:33:34+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/bbc/gel-grid",
+      "https://github.com/bbc/gel-typography",
       "https://github.com/bbc/gel-iconography",
-      "https://github.com/bbc/gel-typography"
+      "https://github.com/bbc/gel-grid"
     ],
     "storybook": [
       "https://storybook.js.org/"
     ],
     "figma": [
       "https://www.figma.com/design/ruFjOr9wFZRWmrNSA1oP10/Icon-Baseline-Grid-Template---Master"
+    ],
+    "icons": [
+      "https://fonts.google.com/icons"
     ]
   },
   "unverified_resources": {},
@@ -37,8 +40,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 132,
-    "last_pushed": "2026-08-25T10:33:27Z"
+    "stars": 118,
+    "last_pushed": "2026-08-25T10:35:14Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -47,12 +50,32 @@
       "title": "BBC GEL"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/a-final-checklist",
+      "title": "BBC GEL | A final checklist"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/about-text-descriptions",
+      "title": "BBC GEL | About text descriptions"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/accordion",
+      "title": "BBC GEL | Accordion"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/account-in-apps",
       "title": "BBC GEL | Account in apps"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/affinity-mapping",
+      "title": "BBC GEL | Affinity mapping"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/an-emergent-ar-design-framework",
       "title": "BBC GEL | An emergent AR design framework"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/app-information",
+      "title": "BBC GEL | App information"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/how-to-design-for-children",
@@ -61,6 +84,10 @@
     {
       "url": "https://www.bbc.co.uk/gel/articles",
       "title": "BBC GEL | Articles"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/autoplay",
+      "title": "BBC GEL | Autoplay"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/subtitles-customisation",
@@ -75,8 +102,24 @@
       "title": "BBC GEL | BBC World Service: Designing for Global Users"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/become-the-user",
+      "title": "BBC GEL | Become the user"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/beetle-give-it-legs",
+      "title": "BBC GEL | Beetle (Give it legs)"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/meet-the-design-trainees-2021",
       "title": "BBC GEL | Biscuits, ethics and elephants: meet the design trainees of 2021"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/bottom-navigation",
+      "title": "BBC GEL | Bottom navigation"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/the-difference-between-captions-and-text-descriptions",
+      "title": "BBC GEL | Captions vs text descriptions"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/cards",
@@ -95,6 +138,10 @@
       "title": "BBC GEL | Comments"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/complex-images",
+      "title": "BBC GEL | Complex images"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/creative-decision-making-playbook-concept",
       "title": "BBC GEL | Concept"
     },
@@ -105,6 +152,14 @@
     {
       "url": "https://www.bbc.co.uk/gel/features/construing-cognitive-design",
       "title": "BBC GEL | Construing Cognitive Design"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/content-utilities",
+      "title": "BBC GEL | Content utilities"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/crazy-eights",
+      "title": "BBC GEL | Crazy eights"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/smash-your-ux-portfolio",
@@ -121,6 +176,14 @@
     {
       "url": "https://www.bbc.co.uk/gel/features/creative-duo-win-black-pencil-new-blood-awards",
       "title": "BBC GEL | Creative student duo win Black Pencil at the D&AD New Blood Awards"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/decorative-images",
+      "title": "BBC GEL | Decorative images"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/describing-people",
+      "title": "BBC GEL | Describing people"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/design-for-the-mind-toolkit",
@@ -143,6 +206,14 @@
       "title": "BBC GEL | External linking"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/extreme-users",
+      "title": "BBC GEL | Extreme users"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/fake-the-future",
+      "title": "BBC GEL | Fake the future"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/filter",
       "title": "BBC GEL | Filter"
     },
@@ -155,8 +226,16 @@
       "title": "BBC GEL | Five things I learned while designing VR experiences"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/fly-on-the-wall",
+      "title": "BBC GEL | Fly on the wall"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/guidelines/category/foundations",
       "title": "BBC GEL | Foundations"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/functional-images",
+      "title": "BBC GEL | Functional images"
     },
     {
       "url": "https://www.bbc.co.uk/gel/futures-bazaar",
@@ -191,12 +270,24 @@
       "title": "BBC GEL | Grid"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/grow",
+      "title": "BBC GEL | Grow"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/guidelines",
       "title": "BBC GEL | Guidelines"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/handsome-is-as-handsome-does",
       "title": "BBC GEL | Handsome is as handsome does"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/hearing-thinking-doing",
+      "title": "BBC GEL | Hearing, thinking, doing"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/heart-head-hand",
+      "title": "BBC GEL | Heart, head, hand"
     },
     {
       "url": "https://www.bbc.co.uk/gel",
@@ -295,6 +386,14 @@
       "title": "BBC GEL | How-tos"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/images-of-text",
+      "title": "BBC GEL | Images of text"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/impact-effort",
+      "title": "BBC GEL | Impact/effort"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/information-architecture-voice-euroia-2018",
       "title": "BBC GEL | Information architecture and voice at EuroIA 2018"
     },
@@ -303,8 +402,16 @@
       "title": "BBC GEL | Information panel"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/informative-images",
+      "title": "BBC GEL | Informative images"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/inputs",
       "title": "BBC GEL | Inputs"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/interviewing",
+      "title": "BBC GEL | Interviewing"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/introducing-the-keyboard-shortcuts-megapedia",
@@ -319,8 +426,24 @@
       "title": "BBC GEL | Introducing Reith – the new face of the BBC"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/launch-screen",
+      "title": "BBC GEL | Launch screen"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/lets-meet",
+      "title": "BBC GEL | Let's Meet"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/lifecycle-a-simple-service-design-mapping-technique",
       "title": "BBC GEL | Lifecycle: a simple service design mapping technique"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/local-search",
+      "title": "BBC GEL | Local search"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/location-settings",
+      "title": "BBC GEL | Location settings"
     },
     {
       "url": "https://www.bbc.co.uk/gel/creative-decision-making-playbook-make",
@@ -399,6 +522,10 @@
       "title": "BBC GEL | Meet the UX Design Trainees, class of 2019"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/more-research-methods-for-ux-writing",
+      "title": "BBC GEL | More research methods for UX writing"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/motion-design-principles",
       "title": "BBC GEL | Motion Design Principles"
     },
@@ -407,8 +534,20 @@
       "title": "BBC GEL | Never letting wonder go to waste"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/numbered-pagination",
+      "title": "BBC GEL | Numbered pagination"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/onboarding",
       "title": "BBC GEL | Onboarding"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/point",
+      "title": "BBC GEL | P.O.I.N.T"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/pen-portraits",
+      "title": "BBC GEL | Pen portraits"
     },
     {
       "url": "https://www.bbc.co.uk/gel/playbooks",
@@ -431,12 +570,36 @@
       "title": "BBC GEL | Principles of spatial mapping"
     },
     {
+      "url": "https://www.bbc.co.uk/gel/features/promos",
+      "title": "BBC GEL | Promos"
+    },
+    {
       "url": "https://www.bbc.co.uk/gel/features/ratings",
       "title": "BBC GEL | Ratings"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/rebranding-bbc-bitesize",
       "title": "BBC GEL | Rebranding BBC Bitesize: How to keep your cool as a UX designer"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/recommendations-feedback",
+      "title": "BBC GEL | Recommend­ations feedback"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/red-ant-man",
+      "title": "BBC GEL | Red ant man"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/rose-thorn-bud",
+      "title": "BBC GEL | Rose, thorn, bud"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/rough-and-ready-prototyping",
+      "title": "BBC GEL | Rough and ready prototyping"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/round-robin",
+      "title": "BBC GEL | Round Robin"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/settings",
@@ -461,6 +624,14 @@
     {
       "url": "https://www.bbc.co.uk/gel/features/starting-out-in-design",
       "title": "BBC GEL | Starting out in design? Our doors are still open..."
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/sticky-steps",
+      "title": "BBC GEL | Sticky steps"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/storyboard",
+      "title": "BBC GEL | Storyboard"
     },
     {
       "url": "https://www.bbc.co.uk/gel/studio-culture",
@@ -489,6 +660,10 @@
     {
       "url": "https://www.bbc.co.uk/gel/features/working-with-other-disciplines",
       "title": "BBC GEL | Studio Culture: Working with other disciplines"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/t-bar",
+      "title": "BBC GEL | T-Bar"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/tabs",
@@ -533,6 +708,18 @@
     {
       "url": "https://www.bbc.co.uk/gel/features/secret-life-of-a-uxd-trainee-2022",
       "title": "BBC GEL | The secret life of a UX Design Trainee"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/thin-prototyping",
+      "title": "BBC GEL | Thin prototyping"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/think-aloud-testing",
+      "title": "BBC GEL | Think-aloud testing"
+    },
+    {
+      "url": "https://www.bbc.co.uk/gel/features/topic-management",
+      "title": "BBC GEL | Topic management"
     },
     {
       "url": "https://www.bbc.co.uk/gel/features/typography",
