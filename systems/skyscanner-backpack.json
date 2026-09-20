@@ -1,0 +1,34 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "skyscanner-backpack",
+  "organization": "Skyscanner",
+  "design_system": "Backpack",
+  "full_name": "Skyscanner — Backpack",
+  "start_urls": [
+    "https://backpack.github.io/"
+  ],
+  "detail_url": "/systems/skyscanner-backpack",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:42:06+00:00",
+  "last_modified": "Wed, 08 Feb 2023 14:19:36 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://www.skyscanner.design/latest/foundations/icons/overview-GqEdq0zt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://backpack.github.io/",
+      "title": "Skyscanner — Backpack"
+    }
+  ]
+}

@@ -157,19 +157,90 @@
 
   .nav-search { display: flex; align-items: center; }
   .nav-search-toggle {
-    background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
-    display: flex; align-items: center; border-radius: 6px;
+    background: none; border: none; padding: 6px 8px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; border-radius: 6px;
   }
   .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
-  /* Same [hidden]-vs-explicit-display fix needed a third time here — see the
-     .cards-grid/.card comments in generate_directory.py for the full story. */
-  .nav-search-form[hidden] { display: none; }
-  .nav-search-form { display: flex; align-items: center; }
-  .nav-search-form input {
-    width: 220px; font: inherit; font-size: 0.85rem; padding: 6px 10px; margin-left: 6px;
-    border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
+  .nav-search-kbd {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; line-height: 1.4;
   }
-  .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+  /* Narrow viewports have no room for the shortcut hint next to the icon —
+     the shortcut itself still works, this is just the visible reminder. */
+  @media (max-width: 640px) {
+    .nav-search-kbd { display: none; }
+  }
+
+  /* --- Cmd+K command palette (see PAGEFIND_JS/COMMAND_PALETTE_JS) — a
+     full-screen overlay, reachable from any page via the nav's search icon
+     or the Cmd+K/Ctrl+K shortcut. Kept visually distinct from the small
+     inline .ds-typeahead-dropdown below: this is a modal takeover (real
+     page-content search, more room for an excerpt), that one's a quick
+     inline suggestion list under a page's own search box. */
+  .cmdk-backdrop {
+    position: fixed; inset: 0; z-index: 100; background: rgba(15, 23, 42, 0.5);
+    display: flex; align-items: flex-start; justify-content: center; padding: 12vh 16px 0;
+  }
+  .cmdk-backdrop[hidden] { display: none; }
+  .cmdk-panel {
+    width: 100%; max-width: 560px; max-height: 60vh; display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .cmdk-input-row {
+    display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); flex: none;
+  }
+  .cmdk-input-row svg { color: var(--text-faint); flex: none; }
+  .cmdk-input-row input {
+    flex: 1; border: none; background: none; font: inherit; font-size: 1rem; color: var(--text);
+  }
+  .cmdk-input-row input:focus { outline: none; }
+  .cmdk-esc {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; flex: none;
+  }
+  .cmdk-results { overflow-y: auto; }
+  .cmdk-item {
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 16px;
+    text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border);
+  }
+  .cmdk-item:hover, .cmdk-item.is-active { background: var(--surface-sunken); }
+  .cmdk-item-title { font-weight: 500; font-size: 0.9rem; }
+  .cmdk-item-excerpt {
+    font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cmdk-item-excerpt mark { background: var(--accent-soft); color: var(--accent-soft-text); }
+  .cmdk-empty { padding: 14px 16px; font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+  .cmdk-footer {
+    display: block; padding: 12px 16px; font-size: 0.85rem; color: var(--accent);
+    text-decoration: none; border-top: 1px solid var(--border);
+  }
+  .cmdk-footer:hover { background: var(--surface-sunken); }
+
+  /* --- Search typeahead dropdown (see SEARCH_TYPEAHEAD_JS) — shared by the
+     homepage hero search box and the search results page's own input. The
+     wrapping element each consumer places this inside needs its own
+     position: relative for the absolute positioning here to anchor
+     correctly against the input rather than the page. */
+  .ds-typeahead-dropdown {
+    position: absolute; z-index: 60; top: 100%; left: 0; right: 0; margin-top: 6px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .ds-typeahead-dropdown[hidden] { display: none; }
+  .ds-typeahead-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 14px; text-decoration: none; color: var(--text); font-size: 0.9rem;
+  }
+  .ds-typeahead-item:hover, .ds-typeahead-item.is-active { background: var(--surface-sunken); }
+  .ds-typeahead-name { font-weight: 500; }
+  .ds-typeahead-type {
+    font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--text-faint); background: var(--surface-sunken); border-radius: 4px;
+    padding: 2px 6px; flex: none;
+  }
+  .ds-typeahead-item.is-active .ds-typeahead-type { color: var(--accent); }
 
   /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
      .site-nav-links already fits inline. Fixed box size (rather than sizing
@@ -263,7 +334,6 @@
        daylight between the search and menu icons, not their own margins. */
     .site-nav-inner { gap: 8px; }
     .nav-menu-toggle { margin-left: 0; }
-    .nav-search-form input { width: 140px; }
     .site-brand-full { display: none; }
     .site-brand-short { display: inline; }
   }
@@ -418,6 +488,7 @@
         <div class="site-nav-links" id="siteNavLinks">
           <a href="/" class="">Home</a>
           <a href="/directory" class="">All Systems</a>
+          <a href="/compare" class="">Compare</a>
           <a href="/components" class="current">Components</a>
           <a href="/patterns" class="">Patterns</a>
           <a href="/foundations" class="">Foundations</a>
@@ -428,30 +499,153 @@
           <a class="nav-suggest" href="/suggest" aria-label="Suggest a system"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span class="nav-suggest-label">Suggest a system</span></a>
         </div>
         <div class="nav-search">
-          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-          <form class="nav-search-form" id="navSearchForm" hidden>
-            <input type="text" id="navSearchInput" placeholder="Search design systems...">
-          </form>
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search everything (Cmd+K)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><kbd class="nav-search-kbd">&#8984;K</kbd>
+          </button>
         </div>
         <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
           <span class="icon-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span class="icon-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
         </button>
       </div>
     </nav>
+
+    <div class="cmdk-backdrop" id="cmdkBackdrop" hidden>
+      <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+        <form class="cmdk-input-row" id="cmdkForm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="cmdkInput" placeholder="Search every page on this site..." autocomplete="off">
+          <kbd class="cmdk-esc">Esc</kbd>
+        </form>
+        <div class="cmdk-results" id="cmdkResults"></div>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var pagefindPromise = null;
+
+  function loadPagefind() {
+    if (!pagefindPromise) {
+      pagefindPromise = import("/pagefind/pagefind.js")
+        .then(function (mod) { return mod.init().then(function () { return mod; }); })
+        .catch(function () { return null; });
+    }
+    return pagefindPromise;
+  }
+
+  // [{title, url, excerpt}], best-effort empty on any failure (offline,
+  // pagefind.js 404 on a local/dev preview that skipped the build step,
+  // etc.) — same "never breaks the page, just shows nothing" contract
+  // dsMatchSearchIndex above already follows.
+  window.dsMatchPagefind = function (query, limit) {
+    var q = (query || "").trim();
+    if (!q) return Promise.resolve([]);
+    return loadPagefind().then(function (pagefind) {
+      if (!pagefind) return [];
+      return pagefind.search(q).then(function (search) {
+        var picked = search.results.slice(0, limit || 6);
+        return Promise.all(picked.map(function (r) { return r.data(); }));
+      }).then(function (data) {
+        return data.map(function (d) {
+          return { title: (d.meta && d.meta.title) || d.url, url: d.url, excerpt: d.excerpt || "" };
+        });
+      });
+    }).catch(function () { return []; });
+  };
+})();
+</script>
     <script>
 (function () {
   var toggle = document.getElementById("navSearchToggle");
-  var form = document.getElementById("navSearchForm");
-  var input = document.getElementById("navSearchInput");
-  if (!toggle || !form) return;
-  toggle.addEventListener("click", function () {
-    form.hidden = !form.hidden;
-    if (!form.hidden) input.focus();
+  var backdrop = document.getElementById("cmdkBackdrop");
+  var form = document.getElementById("cmdkForm");
+  var input = document.getElementById("cmdkInput");
+  var results = document.getElementById("cmdkResults");
+  if (!backdrop || !form || !input || !results) return;
+
+  var activeIndex = -1;
+  var debounceTimer;
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function open() {
+    backdrop.hidden = false;
+    document.body.style.overflow = "hidden";
+    input.value = "";
+    results.innerHTML = "";
+    activeIndex = -1;
+    input.focus();
+  }
+
+  function close() {
+    backdrop.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function setActive(items, i) {
+    activeIndex = i;
+    items.forEach(function (el, j) { el.classList.toggle("is-active", j === activeIndex); });
+  }
+
+  function render(matches, query) {
+    activeIndex = -1;
+    var footer = '<a class="cmdk-footer" href="/search?q=' + encodeURIComponent(query) + '">'
+      + "Search across every design system's own docs for \u201c" + escapeHtml(query) + "\u201d</a>";
+    if (!matches.length) {
+      results.innerHTML = '<p class="cmdk-empty">No matching page here — try the full search below.</p>' + footer;
+      return;
+    }
+    results.innerHTML = matches.map(function (item) {
+      return '<a class="cmdk-item" href="' + item.url + '">'
+        + '<span class="cmdk-item-title">' + escapeHtml(item.title) + '</span>'
+        + (item.excerpt ? '<span class="cmdk-item-excerpt">' + item.excerpt + '</span>' : '')
+        + '</a>';
+    }).join("") + footer;
+  }
+
+  if (toggle) toggle.addEventListener("click", open);
+
+  document.addEventListener("keydown", function (e) {
+    var isK = e.key === "k" || e.key === "K";
+    if (isK && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      if (backdrop.hidden) open(); else close();
+      return;
+    }
+    if (!backdrop.hidden && e.key === "Escape") { close(); return; }
+    if (backdrop.hidden) return;
+
+    var items = Array.prototype.slice.call(results.querySelectorAll(".cmdk-item"));
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(items, Math.min(activeIndex + 1, items.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(items, Math.max(activeIndex - 1, -1)); }
+    else if (e.key === "Enter" && activeIndex >= 0 && items[activeIndex]) {
+      e.preventDefault();
+      window.location.href = items[activeIndex].getAttribute("href");
+    }
   });
+
+  backdrop.addEventListener("click", function (e) {
+    if (e.target === backdrop) close();
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
     if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+
+  input.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    var query = input.value;
+    debounceTimer = setTimeout(function () {
+      window.dsMatchPagefind(query, 6).then(function (matches) {
+        if (input.value === query) render(matches, query.trim());
+      });
+    }, 150);
   });
 })();
 </script>
@@ -580,18 +774,18 @@
     
     <nav class="component-sidebar">
       <p class="sidebar-label">All components</p>
-      <ul><li><a href="/components/button" class="">Button <span class="sidebar-count">1</span></a></li><li><a href="/components/checkbox" class="">Checkbox <span class="sidebar-count">1</span></a></li><li><a href="/components/dropdown" class="">Dropdown <span class="sidebar-count">1</span></a></li><li><a href="/components/icon" class="">Icon <span class="sidebar-count">1</span></a></li><li><a href="/components/input" class="">Input <span class="sidebar-count">1</span></a></li><li><a href="/components/menu" class="">Menu <span class="sidebar-count">1</span></a></li><li><a href="/components/sidebar" class="current">Sidebar <span class="sidebar-count">1</span></a></li></ul>
+      <ul><li><a href="/components/accordion" class="">Accordion <span class="sidebar-count">22</span></a></li><li><a href="/components/alert" class="">Alert <span class="sidebar-count">27</span></a></li><li><a href="/components/avatar" class="">Avatar <span class="sidebar-count">11</span></a></li><li><a href="/components/badge" class="">Badge <span class="sidebar-count">14</span></a></li><li><a href="/components/breadcrumb" class="">Breadcrumb <span class="sidebar-count">22</span></a></li><li><a href="/components/button" class="">Button <span class="sidebar-count">35</span></a></li><li><a href="/components/button-group" class="">Button Group <span class="sidebar-count">2</span></a></li><li><a href="/components/card" class="">Card <span class="sidebar-count">24</span></a></li><li><a href="/components/carousel" class="">Carousel <span class="sidebar-count">6</span></a></li><li><a href="/components/checkbox" class="">Checkbox <span class="sidebar-count">26</span></a></li><li><a href="/components/chip" class="">Chip <span class="sidebar-count">16</span></a></li><li><a href="/components/code-snippet" class="">Code Snippet <span class="sidebar-count">2</span></a></li><li><a href="/components/color-picker" class="">Color Picker <span class="sidebar-count">3</span></a></li><li><a href="/components/combobox" class="">Combobox <span class="sidebar-count">12</span></a></li><li><a href="/components/date-picker" class="">Date Picker <span class="sidebar-count">20</span></a></li><li><a href="/components/divider" class="">Divider <span class="sidebar-count">13</span></a></li><li><a href="/components/drawer" class="">Drawer <span class="sidebar-count">12</span></a></li><li><a href="/components/dropdown" class="">Dropdown <span class="sidebar-count">29</span></a></li><li><a href="/components/file-upload" class="">File Upload <span class="sidebar-count">9</span></a></li><li><a href="/components/footer" class="">Footer <span class="sidebar-count">10</span></a></li><li><a href="/components/icon" class="">Icon <span class="sidebar-count">22</span></a></li><li><a href="/components/input" class="">Input <span class="sidebar-count">32</span></a></li><li><a href="/components/label" class="">Label <span class="sidebar-count">8</span></a></li><li><a href="/components/link" class="">Link <span class="sidebar-count">15</span></a></li><li><a href="/components/list" class="">List <span class="sidebar-count">14</span></a></li><li><a href="/components/menu" class="">Menu <span class="sidebar-count">13</span></a></li><li><a href="/components/modal" class="">Modal <span class="sidebar-count">27</span></a></li><li><a href="/components/navigation-bar" class="">Navigation Bar <span class="sidebar-count">14</span></a></li><li><a href="/components/page-header" class="">Page Header <span class="sidebar-count">3</span></a></li><li><a href="/components/pagination" class="">Pagination <span class="sidebar-count">20</span></a></li><li><a href="/components/popover" class="">Popover <span class="sidebar-count">12</span></a></li><li><a href="/components/progress-bar" class="">Progress Bar <span class="sidebar-count">12</span></a></li><li><a href="/components/radio" class="">Radio <span class="sidebar-count">23</span></a></li><li><a href="/components/rich-text-editor" class="">Rich Text Editor <span class="sidebar-count">1</span></a></li><li><a href="/components/segmented-control" class="">Segmented Control <span class="sidebar-count">3</span></a></li><li><a href="/components/sidebar" class="current">Sidebar <span class="sidebar-count">7</span></a></li><li><a href="/components/skeleton" class="">Skeleton <span class="sidebar-count">9</span></a></li><li><a href="/components/slider" class="">Slider <span class="sidebar-count">13</span></a></li><li><a href="/components/spinner" class="">Spinner <span class="sidebar-count">10</span></a></li><li><a href="/components/stepper" class="">Stepper <span class="sidebar-count">9</span></a></li><li><a href="/components/switch" class="">Switch <span class="sidebar-count">20</span></a></li><li><a href="/components/table" class="">Table <span class="sidebar-count">26</span></a></li><li><a href="/components/tabs" class="">Tabs <span class="sidebar-count">24</span></a></li><li><a href="/components/toast" class="">Toast <span class="sidebar-count">13</span></a></li><li><a href="/components/tooltip" class="">Tooltip <span class="sidebar-count">21</span></a></li><li><a href="/components/tree" class="">Tree <span class="sidebar-count">7</span></a></li></ul>
     </nav>
     <details class="component-sidebar-mobile">
       <summary aria-label="Browse all components, currently viewing Sidebar">
         <span class="sidebar-mobile-current">Sidebar</span>
       </summary>
-      <ul><li><a href="/components/button" class="">Button <span class="sidebar-count">1</span></a></li><li><a href="/components/checkbox" class="">Checkbox <span class="sidebar-count">1</span></a></li><li><a href="/components/dropdown" class="">Dropdown <span class="sidebar-count">1</span></a></li><li><a href="/components/icon" class="">Icon <span class="sidebar-count">1</span></a></li><li><a href="/components/input" class="">Input <span class="sidebar-count">1</span></a></li><li><a href="/components/menu" class="">Menu <span class="sidebar-count">1</span></a></li><li><a href="/components/sidebar" class="current">Sidebar <span class="sidebar-count">1</span></a></li></ul>
+      <ul><li><a href="/components/accordion" class="">Accordion <span class="sidebar-count">22</span></a></li><li><a href="/components/alert" class="">Alert <span class="sidebar-count">27</span></a></li><li><a href="/components/avatar" class="">Avatar <span class="sidebar-count">11</span></a></li><li><a href="/components/badge" class="">Badge <span class="sidebar-count">14</span></a></li><li><a href="/components/breadcrumb" class="">Breadcrumb <span class="sidebar-count">22</span></a></li><li><a href="/components/button" class="">Button <span class="sidebar-count">35</span></a></li><li><a href="/components/button-group" class="">Button Group <span class="sidebar-count">2</span></a></li><li><a href="/components/card" class="">Card <span class="sidebar-count">24</span></a></li><li><a href="/components/carousel" class="">Carousel <span class="sidebar-count">6</span></a></li><li><a href="/components/checkbox" class="">Checkbox <span class="sidebar-count">26</span></a></li><li><a href="/components/chip" class="">Chip <span class="sidebar-count">16</span></a></li><li><a href="/components/code-snippet" class="">Code Snippet <span class="sidebar-count">2</span></a></li><li><a href="/components/color-picker" class="">Color Picker <span class="sidebar-count">3</span></a></li><li><a href="/components/combobox" class="">Combobox <span class="sidebar-count">12</span></a></li><li><a href="/components/date-picker" class="">Date Picker <span class="sidebar-count">20</span></a></li><li><a href="/components/divider" class="">Divider <span class="sidebar-count">13</span></a></li><li><a href="/components/drawer" class="">Drawer <span class="sidebar-count">12</span></a></li><li><a href="/components/dropdown" class="">Dropdown <span class="sidebar-count">29</span></a></li><li><a href="/components/file-upload" class="">File Upload <span class="sidebar-count">9</span></a></li><li><a href="/components/footer" class="">Footer <span class="sidebar-count">10</span></a></li><li><a href="/components/icon" class="">Icon <span class="sidebar-count">22</span></a></li><li><a href="/components/input" class="">Input <span class="sidebar-count">32</span></a></li><li><a href="/components/label" class="">Label <span class="sidebar-count">8</span></a></li><li><a href="/components/link" class="">Link <span class="sidebar-count">15</span></a></li><li><a href="/components/list" class="">List <span class="sidebar-count">14</span></a></li><li><a href="/components/menu" class="">Menu <span class="sidebar-count">13</span></a></li><li><a href="/components/modal" class="">Modal <span class="sidebar-count">27</span></a></li><li><a href="/components/navigation-bar" class="">Navigation Bar <span class="sidebar-count">14</span></a></li><li><a href="/components/page-header" class="">Page Header <span class="sidebar-count">3</span></a></li><li><a href="/components/pagination" class="">Pagination <span class="sidebar-count">20</span></a></li><li><a href="/components/popover" class="">Popover <span class="sidebar-count">12</span></a></li><li><a href="/components/progress-bar" class="">Progress Bar <span class="sidebar-count">12</span></a></li><li><a href="/components/radio" class="">Radio <span class="sidebar-count">23</span></a></li><li><a href="/components/rich-text-editor" class="">Rich Text Editor <span class="sidebar-count">1</span></a></li><li><a href="/components/segmented-control" class="">Segmented Control <span class="sidebar-count">3</span></a></li><li><a href="/components/sidebar" class="current">Sidebar <span class="sidebar-count">7</span></a></li><li><a href="/components/skeleton" class="">Skeleton <span class="sidebar-count">9</span></a></li><li><a href="/components/slider" class="">Slider <span class="sidebar-count">13</span></a></li><li><a href="/components/spinner" class="">Spinner <span class="sidebar-count">10</span></a></li><li><a href="/components/stepper" class="">Stepper <span class="sidebar-count">9</span></a></li><li><a href="/components/switch" class="">Switch <span class="sidebar-count">20</span></a></li><li><a href="/components/table" class="">Table <span class="sidebar-count">26</span></a></li><li><a href="/components/tabs" class="">Tabs <span class="sidebar-count">24</span></a></li><li><a href="/components/toast" class="">Toast <span class="sidebar-count">13</span></a></li><li><a href="/components/tooltip" class="">Tooltip <span class="sidebar-count">21</span></a></li><li><a href="/components/tree" class="">Tree <span class="sidebar-count">7</span></a></li></ul>
     </details>
     <div class="component-main">
       <h1>Sidebar</h1>
-      <p class="subtitle">1 indexed system document sidebar — click through to the actual page.</p>
-      <ul class="system-list"><li><a class="name-block-link" href="/systems/hewlett-packard-grommet"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=grommet.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Hewlett Packard</span><span class="ds-name">Grommet</span></div></div></a><a class="page-title" href="https://grommet.io/sidebar" target="_blank" rel="noopener" title="Open the actual page on Hewlett Packard — Grommet's site — Sidebar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar</span></a></li></ul>
+      <p class="subtitle">7 indexed systems document sidebar — click through to the actual page.</p>
+      <ul class="system-list"><li><a class="name-block-link" href="/systems/equinor-eds"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=eds.equinor.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Equinor</span><span class="ds-name">EDS</span></div></div></a><a class="page-title" href="https://eds.equinor.com/docs/components/navigation/sidebar" target="_blank" rel="noopener" title="Open the actual page on Equinor — EDS's site — Sidebar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar</span></a></li><li><a class="name-block-link" href="/systems/italian-public-administration-it-designers-italy"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designers.italia.it&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Italian Public Administration</span><span class="ds-name">.it Designers Italy</span></div></div></a><a class="page-title" href="https://designers.italia.it/design-system/componenti/sidebar" target="_blank" rel="noopener" title="Open the actual page on Italian Public Administration — .it Designers Italy's site — Sidebar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar</span></a></li><li><a class="name-block-link" href="/systems/mozilla-protocol"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=protocol.mozilla.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Mozilla</span><span class="ds-name">Protocol</span></div></div></a><a class="page-title" href="https://protocol.mozilla.org/components/detail/sidebar-menu" target="_blank" rel="noopener" title="Open the actual page on Mozilla — Protocol's site — Sidebar Menu"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar Menu</span></a></li><li><a class="name-block-link" href="/systems/nulogy-nulogy-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=nulogy.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Nulogy</span><span class="ds-name">Nulogy Design System</span></div></div></a><a class="page-title" href="https://nulogy.design/components/sidebar" target="_blank" rel="noopener" title="Open the actual page on Nulogy — Nulogy Design System's site — Sidebar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar</span></a></li><li><a class="name-block-link" href="/systems/semantic-semantic-ui"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semantic-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Semantic</span><span class="ds-name">Semantic UI</span></div></div></a><a class="page-title" href="https://semantic-ui.com/modules/sidebar.html" target="_blank" rel="noopener" title="Open the actual page on Semantic — Semantic UI's site — Sidebar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar</span></a></li><li><a class="name-block-link" href="/systems/semi-design"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semi.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Semi Design</span></div></div></a><a class="page-title" href="https://semi.design/en-US/ai/sidebar" target="_blank" rel="noopener" title="Open the actual page on Semi Design's site — Sidebar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar</span></a></li><li><a class="name-block-link" href="/systems/singapore-government-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.designsystem.tech.gov.sg&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Singapore Government Design System</span></div></div></a><a class="page-title" href="https://www.designsystem.tech.gov.sg/components/sidebar" target="_blank" rel="noopener" title="Open the actual page on Singapore Government Design System's site — Sidebar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Sidebar</span></a></li></ul>
     </div>
   </div>
 </div>

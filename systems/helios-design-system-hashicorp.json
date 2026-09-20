@@ -1,0 +1,520 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "helios-design-system-hashicorp",
+  "organization": "Helios Design System",
+  "design_system": "Hashicorp",
+  "full_name": "Helios Design System — Hashicorp",
+  "start_urls": [
+    "https://helios.hashicorp.design"
+  ],
+  "detail_url": "/systems/helios-design-system-hashicorp",
+  "pages_indexed": 110,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T07:51:54+00:00",
+  "last_modified": "Fri, 18 Sep 2026 00:20:47 GMT",
+  "sitemap_last_modified": "2026-09-17",
+  "resources": {
+    "github": [
+      "https://github.com/hashicorp/design-system",
+      "https://github.com/hashicorp/react-components"
+    ],
+    "figma": [
+      "https://www.figma.com/design/MYiw4kiVpunIMMw0sBkE1t/%E2%9C%8F%EF%B8%8F-HDS-Icons-%5BDevelopment%5D",
+      "https://www.figma.com/design/w0ukydeAsbv6sJirLxZMBo/HDS-Wireframes",
+      "https://www.figma.com/design/EEfM1jjqLfUv59eYLopn5x/HDS-A11Y-Helper-UI-Kit",
+      "https://www.figma.com/design/k34tT4poC2p1RBQxVwZhW5/-Alpha--Carbon-Charts-Library-Kit-%E2%80%93-Carbon-Design-System--Copy-",
+      "https://www.figma.com/design/5Pv32j4QiOOD8lkFTD1dxC/HDS-Patterns-v2.0",
+      "https://www.figma.com/design/iweq3r2Pi8xiJfD9e6lOhF/HDS-Components-v2.0",
+      "https://www.figma.com/design/vqhh0wWZ8PwnRkvh1jk7jB/Utilities-UI-Kit",
+      "https://www.figma.com/design/uX4OEaJQdWfzULADchjAeN/HDS-Foundations-v2.0",
+      "https://www.figma.com/design/TLnoT5AYQfy3tZ0H68BgOr/HDS-Icons"
+    ],
+    "markdown_docs": [
+      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/README.md",
+      "https://github.com/hashicorp/design-system/blob/main/packages/components/README.md",
+      "https://github.com/hashicorp/design-system/blob/main/packages/components/CONTRIBUTING.md",
+      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/CONTRIBUTING.md"
+    ],
+    "icons": [
+      "https://helios.hashicorp.design/components/icon",
+      "https://helios.hashicorp.design/icons/library"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/cibernox/ember-power-select",
+      "https://github.com/ember-template-lint/ember-template-lint",
+      "https://github.com/simplabs/ember-test-selectors",
+      "https://github.com/NullVoxPopuli/ember-composable-helpers",
+      "https://github.com/ember-cli/ember-page-title",
+      "https://github.com/josemarluedke/ember-focus-trap",
+      "https://github.com/ember-a11y/ember-a11y-refocus",
+      "https://github.com/ember-a11y/ember-a11y-testing",
+      "https://github.com/patterns/form-patterns",
+      "https://github.com/ember-a11y/a11y-announcer",
+      "https://github.com/ember-intl/ember-intl"
+    ]
+  },
+  "content_signals": {
+    "tokens_format": "Style Dictionary",
+    "dark_mode": true,
+    "codemods": true,
+    "accessibility_conformance": "WCAG 2.2 AA",
+    "validation_loop": true,
+    "frameworks": [
+      "Web Components",
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MPL-2.0",
+    "stars": 513,
+    "last_pushed": "2026-09-17T19:29:06Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://helios.hashicorp.design/about",
+      "title": "About | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/about/accessibility-statement",
+      "title": "Accessibility statement | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/accessibility",
+      "title": "Accessibility | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/accordion",
+      "title": "Accordion | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/table/advanced-table",
+      "title": "Advanced Table | Helios Design System | Advanced Table | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/alert",
+      "title": "Alert | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/app-footer",
+      "title": "App Footer | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/app-header",
+      "title": "App Header | Helios Design System | App Header | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/app-side-nav",
+      "title": "App Side Nav | Helios Design System | App Side Nav | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/layouts/app-frame",
+      "title": "AppFrame | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/application-state",
+      "title": "Application State | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/badge-count",
+      "title": "Badge Count | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/badge",
+      "title": "Badge | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/basic-spacing",
+      "title": "Basic spacing | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/basic-styling",
+      "title": "Basic styling | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/border",
+      "title": "Borders | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/breadcrumb",
+      "title": "Breadcrumb | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/breakpoints",
+      "title": "Breakpoints | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/button-organization",
+      "title": "Button organization | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/button-set",
+      "title": "Button Set | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/button",
+      "title": "Button | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/card",
+      "title": "Card | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/checkbox",
+      "title": "Checkbox | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/code-block",
+      "title": "Code Block | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/code-editor",
+      "title": "Code Editor | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/colors",
+      "title": "Colors | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components",
+      "title": "Components | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/utilities/composite",
+      "title": "Composite | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/about/contribution",
+      "title": "Contribution | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/copy/button",
+      "title": "Copy Button | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/copy/snippet",
+      "title": "Copy Snippet | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/data-visualization",
+      "title": "Data visualization | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/content/components/date-and-time",
+      "title": "Date and time | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/description-list-patterns",
+      "title": "Description list | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/utilities/dialog-primitive",
+      "title": "DialogPrimitive | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/utilities/disclosure-primitive",
+      "title": "DisclosurePrimitive | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/utilities/dismiss-button",
+      "title": "Dismiss Button | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/components/badge",
+      "title": "Doc::Badge | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/components/banner",
+      "title": "Doc::Banner | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/components/layout",
+      "title": "Doc::Layout | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/dropdown",
+      "title": "Dropdown | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/elevation",
+      "title": "Elevation | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/file-input",
+      "title": "File Input | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/filter-bar",
+      "title": "Filter Bar | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/filter-patterns",
+      "title": "Filter patterns | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/flyout",
+      "title": "Flyout | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/focus-ring",
+      "title": "Focus ring | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/layout",
+      "title": "Form Layout | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/form-patterns",
+      "title": "Form patterns | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations",
+      "title": "Foundations | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/getting-started/for-designers",
+      "title": "Getting started for designers | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/getting-started/for-engineers",
+      "title": "Getting started for engineers | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/",
+      "title": "Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/icons/library",
+      "title": "Icon library | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/icon-tile",
+      "title": "Icon Tile | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/icon",
+      "title": "Icon | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/link/inline",
+      "title": "Inline Link | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/utilities/interactive",
+      "title": "Interactive | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/key-value-inputs",
+      "title": "Key Value Inputs | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/layouts/flex",
+      "title": "Layout::Flex | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/layouts/grid",
+      "title": "Layout::Grid | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/masked-input",
+      "title": "Masked Input | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/modal",
+      "title": "Modal | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/more-complex-code",
+      "title": "More complex code | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/more-complex-images",
+      "title": "More complex images | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/more-complex-lists",
+      "title": "More complex lists | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/more-complex-tables",
+      "title": "More complex tables | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/about/overview",
+      "title": "Overview | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/page-header",
+      "title": "Page Header | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/pagination",
+      "title": "Pagination | Helios Design System | Pagination | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns",
+      "title": "Patterns | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/utilities/popover-primitive",
+      "title": "PopoverPrimitive | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/overrides/power-select",
+      "title": "PowerSelect | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/primitives",
+      "title": "Primitives | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/about/principles",
+      "title": "Principles | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/radio-card",
+      "title": "Radio Card | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/radio",
+      "title": "Radio | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/whats-new/release-notes",
+      "title": "Release notes | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/remove-auto-p-playground",
+      "title": "Remove auto p playground | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/reveal",
+      "title": "Reveal | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/rich-tooltip",
+      "title": "Rich Tooltip | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/scraping-playground",
+      "title": "Scraping playground | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/segmented-group",
+      "title": "Segmented Group | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/select",
+      "title": "Select | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/separator",
+      "title": "Separator | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/disabled-patterns",
+      "title": "Show, hide, and disable | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/link/standalone",
+      "title": "Standalone Link | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/stepper/indicator",
+      "title": "Stepper Indicator | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/stepper/list",
+      "title": "Stepper List | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/stepper/nav",
+      "title": "Stepper Nav | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/super-select",
+      "title": "Super Select | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/about/support",
+      "title": "Support | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/table-multi-select",
+      "title": "Table multi-select | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/table/table",
+      "title": "Table | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/content/components/tables",
+      "title": "Tables | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/tabs",
+      "title": "Tabs | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/tag",
+      "title": "Tag | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/text-input",
+      "title": "Text Input | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/text",
+      "title": "Text | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/textarea",
+      "title": "Textarea | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/time",
+      "title": "Time | Helios Design System | Time | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/toast",
+      "title": "Toast | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/form/toggle",
+      "title": "Toggle | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/tokens",
+      "title": "Tokens | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/components/tooltip",
+      "title": "Tooltip | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/typography",
+      "title": "Typography | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/components/typography",
+      "title": "Typography | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/content/voice-tone",
+      "title": "Voice and tone | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/testing/markdown/with-ember-components",
+      "title": "With Ember components | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/content/writing-style",
+      "title": "Writing style | Helios Design System"
+    }
+  ]
+}

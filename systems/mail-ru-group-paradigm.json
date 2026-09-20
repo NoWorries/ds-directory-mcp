@@ -1,0 +1,40 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "mail-ru-group-paradigm",
+  "organization": "Mail.ru",
+  "design_system": "Group Paradigm",
+  "full_name": "Mail.ru — Group Paradigm",
+  "start_urls": [
+    "https://design.mail.ru/"
+  ],
+  "detail_url": "/systems/mail-ru-group-paradigm",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T08:51:47+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://design.mail.ru/llms.txt",
+      "https://design.mail.ru/llms-full.txt",
+      "https://design.mail.ru/AGENTS.md",
+      "https://design.mail.ru/CLAUDE.md"
+    ],
+    "mcp": [
+      "https://design.mail.ru/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design.mail.ru/",
+      "title": "Дизайн в Mail.ru"
+    }
+  ]
+}

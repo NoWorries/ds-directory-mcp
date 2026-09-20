@@ -1,0 +1,36 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "futurelearn-futurelearn-pattern-library",
+  "organization": "FutureLearn",
+  "design_system": "FutureLearn Pattern Library",
+  "full_name": "FutureLearn — FutureLearn Pattern Library",
+  "start_urls": [
+    "https://storybook.futurelearn.com/"
+  ],
+  "detail_url": "/systems/futurelearn-futurelearn-pattern-library",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:49:04+00:00",
+  "last_modified": "Fri, 18 Sep 2026 16:16:10 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://storybook.futurelearn.com/?path=%2Fstory%2Fwelcome--page",
+      "https://storybook.futurelearn.com/iframe.html?args=&id=welcome--page",
+      "https://storybook.futurelearn.com/?path=%2Fdocs%2Fwelcome--page"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://storybook.futurelearn.com/",
+      "title": "FutureLearn — FutureLearn Pattern Library"
+    }
+  ]
+}

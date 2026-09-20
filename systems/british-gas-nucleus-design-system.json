@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "british-gas-nucleus-design-system",
+  "organization": "British Gas",
+  "design_system": "Nucleus Design System",
+  "full_name": "British Gas — Nucleus Design System",
+  "start_urls": [
+    "https://britishgas.design/"
+  ],
+  "detail_url": "/systems/british-gas-nucleus-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:17:24+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/centrica-engineering/nucleus-checker"
+    ],
+    "figma": [
+      "https://www.figma.com/design/HdnAatpIIliZhoj6C77aHx/Nucleus-BritishGas---Components?m=auto&node-id=10894-239&t=0cyP8uC7iqnlpc2w-1",
+      "https://www.figma.com/design/HdnAatpIIliZhoj6C77aHx/Nucleus-BritishGas---Components?m=auto&node-id=1876-35073&t=IwNdEWK1sFgZAbou-1"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

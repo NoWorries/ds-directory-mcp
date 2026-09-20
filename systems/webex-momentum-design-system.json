@@ -1,0 +1,34 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "webex-momentum-design-system",
+  "organization": "Webex",
+  "design_system": "Momentum Design System",
+  "full_name": "Webex — Momentum Design System",
+  "start_urls": [
+    "https://momentum.design/"
+  ],
+  "detail_url": "/systems/webex-momentum-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:44:25+00:00",
+  "last_modified": "Fri, 18 Sep 2026 11:54:45 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "skills": [
+      "https://momentum.design/en/skills/momentum-concierge"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://momentum.design/",
+      "title": "Webex — Momentum Design System"
+    }
+  ]
+}

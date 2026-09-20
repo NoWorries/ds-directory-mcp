@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "hudl-uniform",
+  "organization": "Hudl",
+  "design_system": "Uniform",
+  "full_name": "Hudl — Uniform",
+  "start_urls": [
+    "https://uniform.hudl.com/"
+  ],
+  "detail_url": "/systems/hudl-uniform",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T20:26:42+00:00",
+  "last_modified": "Fri, 31 May 2024 13:19:04 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://uniform.hudl.com/",
+      "title": "Hudl — Uniform"
+    }
+  ]
+}

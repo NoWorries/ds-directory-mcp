@@ -1,0 +1,652 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "servicetitan-anvil",
+  "organization": "ServiceTitan",
+  "design_system": "Anvil",
+  "full_name": "ServiceTitan — Anvil",
+  "start_urls": [
+    "https://anvil.servicetitan.com/"
+  ],
+  "detail_url": "/systems/servicetitan-anvil",
+  "pages_indexed": 144,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T12:52:26+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": "2026-09-17T17:54:49.231Z",
+  "resources": {
+    "github": [
+      "https://github.com/servicetitan/hammer"
+    ],
+    "storybook": [
+      "https://storybook.js.org/",
+      "https://www.chromatic.com/",
+      "https://storybook.js.org/docs/writing-tests/accessibility-testing"
+    ],
+    "figma": [
+      "https://www.figma.com/design/6WeJz8JMm1in6Wb4g0wLP5/Carto-Design-Tokens",
+      "https://www.figma.com/design/QEIsArLktLeJAaFvcpw3PO/Carto-Web-Components",
+      "https://www.figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates",
+      "https://www.figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library",
+      "https://www.figma.com/design/KfMPM2hzHLX6Sr1YGWNXHc/Anvil2"
+    ],
+    "markdown_docs": [
+      "https://github.com/servicetitan/hammer/tree/master/packages/anvil2/README.md",
+      "https://github.com/servicetitan/hammer/blob/main/CONTRIBUTING.md",
+      "https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md",
+      "https://github.com/servicetitan/anvil2/blob/master/README.md"
+    ],
+    "agent_instructions": [
+      "https://anvil.servicetitan.com/llms.txt",
+      "https://anvil.servicetitan.com/llms-full.txt",
+      "https://anvil.servicetitan.com/AGENTS.md"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@servicetitan/startup",
+      "https://www.npmjs.com/package/@servicetitan/anvil2"
+    ],
+    "mcp": [
+      "https://anvil.servicetitan.com/.well-known/mcp.json"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/dequelabs/axe-core"
+    ]
+  },
+  "content_signals": {
+    "accessibility_conformance": "WCAG 2.2 AA",
+    "dark_mode": true,
+    "tokens_format": "Figma Variables",
+    "prohibition": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": {
+    "latest_version": "39.3.0",
+    "last_published": "2026-09-10T17:38:18.644Z",
+    "weekly_downloads": 18576
+  },
+  "indexed_pages": [
+    {
+      "url": "https://anvil.servicetitan.com/docs/about-anvil2",
+      "title": "About Anvil2 - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/action-log/code",
+      "title": "Action Log – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/action-log/design",
+      "title": "ActionLog – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-media-card/code",
+      "title": "Agent Media Card – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-message/code",
+      "title": "Agent Message – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-prompt/code",
+      "title": "Agent Prompt – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-prompt/design",
+      "title": "Agent Prompt – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-thinking/code",
+      "title": "Agent Thinking – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/patterns/agentic-experience-shell",
+      "title": "Agentic Experience Shell - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit",
+      "title": "AI Kit - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/ai-tooling-and-anvil2",
+      "title": "AI Tooling and Anvil2 - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/app-header/code",
+      "title": "App Header – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/app-shell/code",
+      "title": "App Shell – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/app-header/design",
+      "title": "AppHeader – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/app-shell/design",
+      "title": "AppShell – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react/area",
+      "title": "Area – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/area",
+      "title": "Area – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/artifact-card/code",
+      "title": "Artifact Card – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/artifact-card/code",
+      "title": "Artifact Card – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/artifact-card/design",
+      "title": "Artifact Card – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/artifact-panel-layout/code",
+      "title": "Artifact Panel Layout – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/artifact-panel/code",
+      "title": "Artifact Panel – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/messages/assistant-message/code",
+      "title": "Assistant Message – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas",
+      "title": "Atlas - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/atlas-header/code",
+      "title": "Atlas Header – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react/bar",
+      "title": "Bar – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/bar",
+      "title": "Bar – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/blocks",
+      "title": "Blocks - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/bottom-sheet/code",
+      "title": "Bottom Sheet – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/bottom-sheet/design",
+      "title": "BottomSheet – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/button-toggle/code",
+      "title": "Button Toggle – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/button/code",
+      "title": "Button – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/button/design",
+      "title": "Button – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/card/code",
+      "title": "Card – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/card/design",
+      "title": "Card – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes/categorical",
+      "title": "Categorical palette – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/accessibility/changing-content",
+      "title": "Changing Content - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react/chart",
+      "title": "Chart Component – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/chart",
+      "title": "Chart Component – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react",
+      "title": "Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native",
+      "title": "Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/chat-composer-rich/code",
+      "title": "Chat Composer Rich – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/chat-history/code",
+      "title": "Chat History – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/patterns/chat-layout",
+      "title": "Chat Layout - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/chat-layout/code",
+      "title": "Chat Layout – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/chat-window/code",
+      "title": "Chat Window – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/chat-history/design",
+      "title": "ChatHistory – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/chat-layout/design",
+      "title": "ChatLayout – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/checkbox/code",
+      "title": "Checkbox – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/checkbox/design",
+      "title": "Checkbox – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/citation/code",
+      "title": "Citation – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/citation/design",
+      "title": "Citation – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/colors",
+      "title": "Colors - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/blocks/column-editor",
+      "title": "Column Editor - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react/combined",
+      "title": "Combined – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/combined",
+      "title": "Combined – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/blocks/coming-soon",
+      "title": "Coming Soon - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/ai-ux/complex-reasoning-with-ai",
+      "title": "Complex Reasoning with AI - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/recommendations/confirmation-card/code",
+      "title": "Confirmation Card – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/content/code",
+      "title": "Content – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/accessibility/learning-and-tools",
+      "title": "Continued Learning and Tools - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/accessibility/custom-components",
+      "title": "Creating Custom Components - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/data-visualization",
+      "title": "Data Visualization - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/blocks/decorative-icon",
+      "title": "Decorative Icon - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/decorative-icon/code",
+      "title": "Decorative Icon – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/dialog/code",
+      "title": "Dialog – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/dialog/design",
+      "title": "Dialog – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/diff-value/code",
+      "title": "Diff Value – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/diff-value/design",
+      "title": "DiffValue – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react/donut",
+      "title": "Donut – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/donut",
+      "title": "Donut – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/blocks/empty-state",
+      "title": "Empty States - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/messages/error-message/code",
+      "title": "Error Message – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/patterns/evidence-disclosure",
+      "title": "Evidence Disclosure - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/footer/code",
+      "title": "Footer – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/getting-started",
+      "title": "Getting Started - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/getting-started",
+      "title": "Getting Started - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react/grouped-bar",
+      "title": "Grouped bar – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/grouped-bar",
+      "title": "Grouped bar – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/guidance-card/code",
+      "title": "Guidance Card – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/guidance-card/design",
+      "title": "GuidanceCard – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/header/code",
+      "title": "Header – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/iconography",
+      "title": "Iconography - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/illustrations",
+      "title": "Illustrations - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/infinite-content/code",
+      "title": "Infinite Content – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/utilities/intl-provider",
+      "title": "Intl Provider – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/accessibility/labels-and-ctas",
+      "title": "Labels and Call to Actions - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react/line",
+      "title": "Line – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/line",
+      "title": "Line – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/link/code",
+      "title": "Link – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/link/design",
+      "title": "Link – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/loader/code",
+      "title": "Loader – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/messages/markdown-message/code",
+      "title": "Markdown Message – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/markdown-text/code",
+      "title": "Markdown Text – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/markdown/code",
+      "title": "Markdown – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/markdown/design",
+      "title": "Markdown – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/accessibility/media-and-animation",
+      "title": "Media and Animation - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/menu/code",
+      "title": "Menu – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/menu/design",
+      "title": "Menu – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes/monochrome",
+      "title": "Monochrome palette – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/recommendations/multiple-recommendation-card/code",
+      "title": "Multiple Recommendation Card – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/notification-card/code",
+      "title": "Notification Card – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/accessibility",
+      "title": "Overview - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/ai-and-anvil2",
+      "title": "Overview - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes",
+      "title": "Palettes – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/blocks/peek",
+      "title": "Peek - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/prompt-bar/code",
+      "title": "Prompt Bar – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/prompt-bar/design",
+      "title": "PromptBar – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/accessibility/semantic-markup",
+      "title": "Semantic Markup - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes/semantic",
+      "title": "Semantic palette – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs",
+      "title": "ServiceTitan Design System - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/llms.txt",
+      "title": "ServiceTitan — Anvil — llms.txt"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/AGENTS.md",
+      "title": "ServiceTitan — Anvil — llms.txt"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/recommendations/single-recommendation-card/code",
+      "title": "Single Recommendation Card – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/messages/small-action/code",
+      "title": "Small Action – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/spinner/code",
+      "title": "Spinner – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/stacked-bar",
+      "title": "Stacked bar – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/suggestion/code",
+      "title": "Suggestion – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/suggestion/code",
+      "title": "Suggestion – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/suggestion/design",
+      "title": "Suggestion – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/screens/system-error/code",
+      "title": "System Error – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/messages/system-message/code",
+      "title": "System Message – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/tabbed-layout/code",
+      "title": "Tabbed Layout – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/tabbed-layout/design",
+      "title": "TabbedLayout – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/blocks/tables",
+      "title": "Tables - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/text/code",
+      "title": "Text – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/text/design",
+      "title": "Text – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/tone-and-trust",
+      "title": "Tone & Trust - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/toolbox/code",
+      "title": "Toolbox – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/tooltip-surface/code",
+      "title": "Tooltip Surface – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/truncated-text/code",
+      "title": "Truncated Text – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/truncated-text/design",
+      "title": "TruncatedText – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/typography",
+      "title": "Typography - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/hooks/use-draggable",
+      "title": "useDraggable - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/hooks/use-infinite-scroll",
+      "title": "useInfiniteScroll - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/user-media-message/code",
+      "title": "User Media Message – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/messages/user-message/code",
+      "title": "User Message – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/user-message/code",
+      "title": "User Message – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/user-message/design",
+      "title": "UserMessage – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/hooks/use-scroll-callback",
+      "title": "useScrollCallback - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/ai-ux/ux-and-the-five-parts-of-a-moment",
+      "title": "UX and the Five Parts of a Moment - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/screens/welcome/code",
+      "title": "Welcome – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/window/code",
+      "title": "Window – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/window/design",
+      "title": "Window – Design – AI Kit"
+    }
+  ]
+}

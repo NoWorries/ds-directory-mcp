@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "morningstar-morningstar-design-system",
   "organization": "Morningstar",
   "design_system": "Morningstar Design System",
@@ -11,14 +11,14 @@
   "detail_url": "/systems/morningstar-morningstar-design-system",
   "pages_indexed": 1,
   "coverage_status": "partial",
-  "hit_max_pages": true,
-  "likely_spa": true,
-  "last_checked": "2026-09-17T00:56:13+00:00",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T20:29:37+00:00",
   "last_modified": "Mon, 22 Jun 2026 13:11:25 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "figma": [
-      "https://www.figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns?type=design&node-id=0%3A1&mode=design&t=ldHKHxiogxXtwToh-1"
+      "https://www.figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns?mode=design&node-id=0%3A1&t=ldHKHxiogxXtwToh-1&type=design"
     ]
   },
   "unverified_resources": {},
@@ -28,7 +28,7 @@
   "indexed_pages": [
     {
       "url": "https://designsystem.morningstar.com/",
-      "title": "Home - Morningstar Design System"
+      "title": "Morningstar — Morningstar Design System"
     }
   ]
 }

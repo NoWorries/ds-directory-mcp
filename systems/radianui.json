@@ -1,0 +1,345 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "radianui",
+  "organization": null,
+  "design_system": "RadianUI",
+  "full_name": "RadianUI",
+  "start_urls": [
+    "https://radianui.com/"
+  ],
+  "detail_url": "/systems/radianui",
+  "pages_indexed": 72,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:54:33+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/Radian-os/radianui"
+    ],
+    "figma": [
+      "https://www.figma.com/design/qYQGVpM2Ax7a1Tfj8Gxyga/Documentation",
+      "https://www.figma.com/design/ZB8gTZwafZOYY7rdJjSRz6/%E2%9D%96-Preview-%E2%9D%96-Radian-Design-System-%E2%9D%96-Version-0.3"
+    ],
+    "agent_instructions": [
+      "https://radianui.com/llms.txt"
+    ]
+  },
+  "unverified_resources": {
+    "npm": [
+      "https://www.npmjs.com/package/react-resizable-panels",
+      "https://www.npmjs.com/package/react-international-phone",
+      "https://www.npmjs.com/package/cmdk",
+      "https://www.npmjs.com/package/react-currency-input-field"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular",
+      "Svelte",
+      "Web Components"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 54,
+    "last_pushed": "2026-09-18T08:33:00Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://radianui.com/docs/components/accordion",
+      "title": "Accordion — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/alert-dialog",
+      "title": "Alert Dialog — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/alert",
+      "title": "Alert — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/aspect-ratio",
+      "title": "Aspect Ratio — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/avatar",
+      "title": "Avatar — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/badge",
+      "title": "Badge — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/banner",
+      "title": "Banner — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/breadcrumb",
+      "title": "Breadcrumb — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/button",
+      "title": "Button — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/calendar",
+      "title": "Calendar — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/card",
+      "title": "Card — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/carousel",
+      "title": "Carousel — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/checkbox",
+      "title": "Checkbox — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/code-area",
+      "title": "Code Area — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/collapsible",
+      "title": "Collapsible — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/fundamentals/colors",
+      "title": "Colors — Radian UI Design System | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/combobox",
+      "title": "Combobox — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/command",
+      "title": "Command — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/context-menu",
+      "title": "Context Menu — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/currency-input",
+      "title": "Currency Input — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/date-picker",
+      "title": "Date Picker — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/dialog",
+      "title": "Dialog — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/divider",
+      "title": "Divider — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/drawer",
+      "title": "Drawer — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/dropdown-menu",
+      "title": "Dropdown Menu — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/empty",
+      "title": "Empty Component — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/file-upload",
+      "title": "File Upload — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/form",
+      "title": "Form — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/resources/avatar",
+      "title": "Free Open Source Avatar Library for UI design"
+    },
+    {
+      "url": "https://radianui.com/docs/components/hover-card",
+      "title": "Hover Card — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/fundamentals/iconography",
+      "title": "Iconography — Radian UI Design System | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/input",
+      "title": "Input — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/installation/next",
+      "title": "Install Radian UI in Next.js | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/installation/vite",
+      "title": "Install Radian UI in Vite | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/getting-started/installation",
+      "title": "Install Radian UI — React/Tailwind Setup Guide | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/getting-started/introduction",
+      "title": "Introduction to Radian UI — React/Tailwind Component Library"
+    },
+    {
+      "url": "https://radianui.com/docs/components/label",
+      "title": "Label — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/installation/manual",
+      "title": "Manual Installation — Radian UI Without CLI | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/menubar",
+      "title": "Menubar — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/navigation-menu",
+      "title": "Navigation Menu — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/fundamentals/theme/nextjs",
+      "title": "Next.js Theme Integration — Radian UI Design System | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/otp-field",
+      "title": "OTP Field — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/pagination",
+      "title": "Pagination — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/phone-input",
+      "title": "Phone Input — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/popover",
+      "title": "Popover — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/progress",
+      "title": "Progress — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/",
+      "title": "Radian UI - Open Source React Components and Figma Design System"
+    },
+    {
+      "url": "https://radianui.com/blog",
+      "title": "Radian UI Blogs - Latest Updates & Insights"
+    },
+    {
+      "url": "https://radianui.com/docs/getting-started/cli",
+      "title": "Radian UI CLI — Install Components via Command Line | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/getting-started/figma",
+      "title": "Radian UI Figma Kit — Design System File | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/llms.txt",
+      "title": "RadianUI — llms.txt"
+    },
+    {
+      "url": "https://radianui.com/docs/components/radio-group",
+      "title": "Radio Group — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/resizable",
+      "title": "Resizable — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/getting-started/resources",
+      "title": "Resources — Getting Started Guide | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/scroll-area",
+      "title": "Scroll Area — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/select",
+      "title": "Select — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/skeleton",
+      "title": "Skeleton — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/getting-started/skills",
+      "title": "Skills — Getting Started Guide | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/slider",
+      "title": "Slider — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/sonner",
+      "title": "Sonner — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/spinner",
+      "title": "Spinner — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/stepper",
+      "title": "Stepper — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/switch",
+      "title": "Switch — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/table",
+      "title": "Table — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/tabs",
+      "title": "Tabs — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/text-area",
+      "title": "Text Area — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/fundamentals/theme",
+      "title": "Theme — Radian UI Design System | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/toggle-group",
+      "title": "Toggle Group — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/toggle",
+      "title": "Toggle — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/components/tooltip",
+      "title": "Tooltip — Open Source React/Tailwind Component | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/fundamentals/typography",
+      "title": "Typography — Radian UI Design System | Radian UI"
+    },
+    {
+      "url": "https://radianui.com/docs/fundamentals/theme/vite",
+      "title": "Vite Theme Integration — Radian UI Design System | Radian UI"
+    }
+  ]
+}

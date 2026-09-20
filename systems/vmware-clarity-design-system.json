@@ -1,0 +1,41 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "vmware-clarity-design-system",
+  "organization": "VMware",
+  "design_system": "Clarity Design System",
+  "full_name": "VMware — Clarity Design System",
+  "start_urls": [
+    "https://clarity.design/"
+  ],
+  "detail_url": "/systems/vmware-clarity-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:43:47+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://storybook.clarity.design"
+    ],
+    "icons": [
+      "/documentation/icons"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "Angular"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://clarity.design/",
+      "title": "VMware — Clarity Design System"
+    }
+  ]
+}

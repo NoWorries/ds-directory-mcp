@@ -1,0 +1,179 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "dutchy-design-system",
+  "organization": null,
+  "design_system": "Dutchy Design System",
+  "full_name": "Dutchy Design System",
+  "start_urls": [
+    "https://dutchy.demothat.app/"
+  ],
+  "detail_url": "/systems/dutchy-design-system",
+  "pages_indexed": 35,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:57:10+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/skitsanos/dutchy-design-system"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Vue"
+    ]
+  },
+  "github_meta": {
+    "license": null,
+    "stars": 1,
+    "last_pushed": "2026-08-20T12:14:57Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://dutchy.demothat.app/components/accordion",
+      "title": "Accordion - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/admin",
+      "title": "Admin Dashboard | Dutchy"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/alerts",
+      "title": "Alerts - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/badges",
+      "title": "Badges & Tags - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/blog",
+      "title": "Blog | Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/cards",
+      "title": "Cards - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/categories",
+      "title": "Categories | Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/colors",
+      "title": "Colors - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components",
+      "title": "Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/contact",
+      "title": "Contact Us | Dutchy"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/register",
+      "title": "Create Account | Dutchy"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/datatable",
+      "title": "Data Table - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/",
+      "title": "Dutchy Design System - Bold, Structural, Dutch-Inspired"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/emptystate",
+      "title": "Empty State - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/flex",
+      "title": "Flex - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/forms",
+      "title": "Forms - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/image",
+      "title": "Image - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/menu",
+      "title": "Menu - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/modals",
+      "title": "Modal / Drawer - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/notifications",
+      "title": "Notifications | Dutchy"
+    },
+    {
+      "url": "https://dutchy.demothat.app/patterns",
+      "title": "Patterns - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/progress",
+      "title": "Progress - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/scribble",
+      "title": "Scribble - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/search",
+      "title": "Search: button | Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase",
+      "title": "Showcase | Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/stats",
+      "title": "Stats - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/tabs",
+      "title": "Tabs - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/text",
+      "title": "Text - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/textarea",
+      "title": "Textarea - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/themes",
+      "title": "Theme Switcher | Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/components/toasts",
+      "title": "Toast Notifications - Components - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/typography",
+      "title": "Typography - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/data",
+      "title": "User Management | Dutchy"
+    },
+    {
+      "url": "https://dutchy.demothat.app/bun",
+      "title": "Using with Bun - Dutchy Design System"
+    },
+    {
+      "url": "https://dutchy.demothat.app/showcase/cart",
+      "title": "Your Cart | Dutchy"
+    }
+  ]
+}

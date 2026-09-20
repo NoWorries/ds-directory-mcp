@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "helsinki-helsinki-design-system",
+  "organization": "Helsinki",
+  "design_system": "Helsinki Design System",
+  "full_name": "Helsinki — Helsinki Design System",
+  "start_urls": [
+    "https://hds.hel.fi/"
+  ],
+  "detail_url": "/systems/helsinki-helsinki-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T20:26:25+00:00",
+  "last_modified": "Fri, 17 Jul 2026 11:00:11 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://hds.hel.fi/",
+      "title": "Helsinki — Helsinki Design System"
+    }
+  ]
+}

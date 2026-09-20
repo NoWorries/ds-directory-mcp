@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "uswitch-ustyle",
   "organization": "uSwitch",
   "design_system": "uStyle",
@@ -9,11 +9,11 @@
     "https://ustyle.guide/"
   ],
   "detail_url": "/systems/uswitch-ustyle",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-17T01:15:37+00:00",
+  "last_checked": "2026-09-16T14:49:26+00:00",
   "last_modified": "Tue, 24 Mar 2020 16:21:54 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -23,7 +23,12 @@
       "https://github.com/postcss/autoprefixer"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/ai/browserslist",
+      "https://github.com/postcss/autoprefixer"
+    ]
+  },
   "content_signals": {},
   "github_meta": {
     "license": "MIT",
@@ -34,6 +39,10 @@
   "indexed_pages": [
     {
       "url": "https://ustyle.guide/",
+      "title": "uStyle styleguide"
+    },
+    {
+      "url": "https://ustyle.guide/pattern-library/",
       "title": "uStyle styleguide"
     }
   ]

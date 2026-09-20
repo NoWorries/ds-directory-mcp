@@ -1,0 +1,308 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "nulogy-nulogy-design-system",
+  "organization": "Nulogy",
+  "design_system": "Nulogy Design System",
+  "full_name": "Nulogy — Nulogy Design System",
+  "start_urls": [
+    "https://nulogy.design/"
+  ],
+  "detail_url": "/systems/nulogy-nulogy-design-system",
+  "pages_indexed": 62,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T10:49:29+00:00",
+  "last_modified": "Fri, 04 Nov 2022 15:26:29 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/nulogy/nds-test-releases",
+      "https://github.com/nulogy/design-system"
+    ],
+    "storybook": [
+      "https://master--5f60c6c285eaad0022dce67f.chromatic.com/"
+    ],
+    "figma": [
+      "https://www.figma.com/file/IH4gk9P2E4xEYiNKoD22Jd/NDS-v1",
+      "https://www.figma.com/file/jRQxfwCL27gfqfrdCxOIQG/NDS"
+    ],
+    "markdown_docs": [
+      "https://github.com/nulogy/design-system/blob/master/components/README.md"
+    ],
+    "icons": [
+      "https://fonts.google.com/icons",
+      "https://nulogy.design/components/icon"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/semantic-release/release-notes-generator",
+      "https://github.com/semantic-release/npm",
+      "https://github.com/semantic-release/changelog",
+      "https://github.com/semantic-release/github",
+      "https://github.com/semantic-release/commit-analyzer",
+      "https://github.com/semantic-release/semantic-release",
+      "https://github.com/features/actions",
+      "https://github.com/semantic-release/git"
+    ]
+  },
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://nulogy.design/components/alert",
+      "title": "Alert"
+    },
+    {
+      "url": "https://nulogy.design/components/application-frame",
+      "title": "Application Frame"
+    },
+    {
+      "url": "https://nulogy.design/components/async-select",
+      "title": "AsyncSelect"
+    },
+    {
+      "url": "https://nulogy.design/components/box",
+      "title": "Box"
+    },
+    {
+      "url": "https://nulogy.design/components/branded-nav-bar",
+      "title": "BrandedNavBar"
+    },
+    {
+      "url": "https://nulogy.design/components/branding",
+      "title": "Branding"
+    },
+    {
+      "url": "https://nulogy.design/components/breadcrumbs",
+      "title": "Breadcrumbs"
+    },
+    {
+      "url": "https://nulogy.design/components/buttons",
+      "title": "Button"
+    },
+    {
+      "url": "https://nulogy.design/components/button-group",
+      "title": "ButtonGroup"
+    },
+    {
+      "url": "https://nulogy.design/components/checkbox",
+      "title": "Checkbox"
+    },
+    {
+      "url": "https://nulogy.design/components/checkbox-group",
+      "title": "CheckboxGroup"
+    },
+    {
+      "url": "https://nulogy.design/patterns/data-visualization",
+      "title": "Data Visualization"
+    },
+    {
+      "url": "https://nulogy.design/components/date-range",
+      "title": "Date Range"
+    },
+    {
+      "url": "https://nulogy.design/components/date-picker",
+      "title": "DatePicker"
+    },
+    {
+      "url": "https://nulogy.design/design-language/principles",
+      "title": "Design principles"
+    },
+    {
+      "url": "https://nulogy.design/guides/designers",
+      "title": "Designers' Guide"
+    },
+    {
+      "url": "https://nulogy.design/guides/developer-workflow",
+      "title": "Developer workflow"
+    },
+    {
+      "url": "https://nulogy.design/components/divider",
+      "title": "Divider"
+    },
+    {
+      "url": "https://nulogy.design/components/dropdown-menu",
+      "title": "DropdownMenu"
+    },
+    {
+      "url": "https://nulogy.design/components/flex",
+      "title": "Flex"
+    },
+    {
+      "url": "https://nulogy.design/components/form",
+      "title": "Form"
+    },
+    {
+      "url": "https://nulogy.design/components/form-section",
+      "title": "FormSection"
+    },
+    {
+      "url": "https://nulogy.design/components/headings",
+      "title": "Headings"
+    },
+    {
+      "url": "https://nulogy.design/guides/packages",
+      "title": "How the Nulogy Design Ops team releases packages"
+    },
+    {
+      "url": "https://nulogy.design/components/icon",
+      "title": "Icon"
+    },
+    {
+      "url": "https://nulogy.design/components/iconic-button",
+      "title": "IconicButton"
+    },
+    {
+      "url": "https://nulogy.design/components/input",
+      "title": "Input"
+    },
+    {
+      "url": "https://nulogy.design/components/link",
+      "title": "Link"
+    },
+    {
+      "url": "https://nulogy.design/components/list",
+      "title": "List"
+    },
+    {
+      "url": "https://nulogy.design/patterns/loading",
+      "title": "Loading content"
+    },
+    {
+      "url": "https://nulogy.design/components/loading-animation",
+      "title": "LoadingAnimation"
+    },
+    {
+      "url": "https://nulogy.design/guides/localization",
+      "title": "Localization"
+    },
+    {
+      "url": "https://nulogy.design/components/modal",
+      "title": "Modal"
+    },
+    {
+      "url": "https://nulogy.design/",
+      "title": "nulogy.design"
+    },
+    {
+      "url": "https://nulogy.design/components/overlay",
+      "title": "Overlay"
+    },
+    {
+      "url": "https://nulogy.design/components/page",
+      "title": "Page"
+    },
+    {
+      "url": "https://nulogy.design/components/pagination",
+      "title": "Pagination"
+    },
+    {
+      "url": "https://nulogy.design/components/radio",
+      "title": "Radio"
+    },
+    {
+      "url": "https://nulogy.design/components/radio-group",
+      "title": "RadioGroup"
+    },
+    {
+      "url": "https://nulogy.design/components/select",
+      "title": "Select"
+    },
+    {
+      "url": "https://nulogy.design/design-language/shadows",
+      "title": "Shadows"
+    },
+    {
+      "url": "https://nulogy.design/components/sidebar",
+      "title": "Sidebar"
+    },
+    {
+      "url": "https://nulogy.design/design-language/spacing",
+      "title": "Spacing"
+    },
+    {
+      "url": "https://nulogy.design/components/status-indicator",
+      "title": "StatusIndicator"
+    },
+    {
+      "url": "https://nulogy.design/guides/style-props",
+      "title": "Style Props"
+    },
+    {
+      "url": "https://nulogy.design/components/switcher",
+      "title": "Switcher"
+    },
+    {
+      "url": "https://nulogy.design/components/table",
+      "title": "Table"
+    },
+    {
+      "url": "https://nulogy.design/components/tabs",
+      "title": "Tabs"
+    },
+    {
+      "url": "https://nulogy.design/guides/testing",
+      "title": "Testing"
+    },
+    {
+      "url": "https://nulogy.design/components/text",
+      "title": "Text"
+    },
+    {
+      "url": "https://nulogy.design/components/textarea",
+      "title": "Textarea"
+    },
+    {
+      "url": "https://nulogy.design/theme",
+      "title": "Theme"
+    },
+    {
+      "url": "https://nulogy.design/components/time-picker",
+      "title": "TimePicker"
+    },
+    {
+      "url": "https://nulogy.design/components/time-range",
+      "title": "TimeRange"
+    },
+    {
+      "url": "https://nulogy.design/components/toast",
+      "title": "Toast"
+    },
+    {
+      "url": "https://nulogy.design/components/toggle",
+      "title": "Toggle"
+    },
+    {
+      "url": "https://nulogy.design/components/tooltip",
+      "title": "Tooltip"
+    },
+    {
+      "url": "https://nulogy.design/components/truncated-text",
+      "title": "TruncatedText"
+    },
+    {
+      "url": "https://nulogy.design/design-language/typography",
+      "title": "Typography"
+    },
+    {
+      "url": "https://nulogy.design/guides/ops-core",
+      "title": "Using NDS in Operational Solution Core"
+    },
+    {
+      "url": "https://nulogy.design/guides/versioning",
+      "title": "Versioning"
+    },
+    {
+      "url": "https://nulogy.design/design-language/colour",
+      "title": "🎨 Colour"
+    }
+  ]
+}

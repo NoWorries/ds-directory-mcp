@@ -1,0 +1,167 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "kde-human-interface-guidelines",
+  "organization": "KDE",
+  "design_system": "Human Interface Guidelines",
+  "full_name": "KDE — Human Interface Guidelines",
+  "start_urls": [
+    "https://develop.kde.org/hig/"
+  ],
+  "detail_url": "/systems/kde-human-interface-guidelines",
+  "pages_indexed": 23,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:51:15+00:00",
+  "last_modified": "Fri, 18 Sep 2026 15:14:55 GMT",
+  "sitemap_last_modified": "2026-09-17T17:22:41-04:00",
+  "resources": {
+    "markdown_docs": [
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/README.md"
+    ],
+    "icons": [
+      "https://develop.kde.org/hig/icons/places",
+      "https://develop.kde.org/hig/icons/monochrome/emblem",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/monochrome/emblem.md",
+      "https://develop.kde.org/hig/icons/monochrome/places",
+      "https://develop.kde.org/hig/icons/colorful/application",
+      "https://develop.kde.org/hig/icons/colorful/mimetype",
+      "https://develop.kde.org/hig/icons/colorful/places",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/colorful/_index.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/colorful/application.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/monochrome/status.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/colorful/places.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/monochrome/_index.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/colorful/application.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/monochrome/places.md",
+      "https://develop.kde.org/hig/icons/localization",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/monochrome/action.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/monochrome/mimetype.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/_index.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/monochrome/action.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/colorful/places.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/localization/index.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/monochrome/status.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/colorful/mimetype.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/colorful/category_preferences.md",
+      "https://develop.kde.org/hig/icons/monochrome",
+      "https://develop.kde.org/hig/icons",
+      "https://develop.kde.org/hig/icons/action",
+      "https://develop.kde.org/hig/icons/monochrome/mimetype",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/monochrome/mimetype.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/colorful/category_preferences.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/monochrome/_index.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/colorful/mimetype.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/monochrome/emblem.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/colorful/_index.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/monochrome/places.md",
+      "https://develop.kde.org/icons",
+      "https://develop.kde.org/hig/icons/colorful/category_preferences",
+      "https://develop.kde.org/hig/icons/mimetype",
+      "https://develop.kde.org/hig/icons/monochrome/status",
+      "https://invent.kde.org/documentation/develop-kde-org/-/blob/master/content/hig/icons/_index.md",
+      "https://invent.kde.org/documentation/develop-kde-org/-/edit/master/content/hig/icons/localization/index.md",
+      "https://develop.kde.org/hig/icons/colorful",
+      "https://develop.kde.org/hig/icons/monochrome/action"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://develop.kde.org/hig/accessibility",
+      "title": "Accessibility and inclusiveness | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/monochrome/action",
+      "title": "Action Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/colorful/application",
+      "title": "Application Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/colorful/category_preferences",
+      "title": "Category and Preferences Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/colorful",
+      "title": "Colorful Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/status_changes",
+      "title": "Communicating status changes | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/displaying_content",
+      "title": "Displaying content | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/monochrome/emblem",
+      "title": "Emblem Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/getting_input",
+      "title": "Getting input | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/localization",
+      "title": "Icon Localization | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons",
+      "title": "Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig",
+      "title": "KDE Human Interface Guidelines | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/layout_and_nav",
+      "title": "Layout and navigation | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/monochrome/mimetype",
+      "title": "MIME Type Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/colorful/mimetype",
+      "title": "MIME Type Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/monochrome",
+      "title": "Monochromatic Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/monochrome/places",
+      "title": "Places Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/colorful/places",
+      "title": "Places Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/powerful_when_needed",
+      "title": "Powerful when needed | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/simple_by_default",
+      "title": "Simple by default | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/icons/monochrome/status",
+      "title": "Status Icons | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/text_and_labels",
+      "title": "Text and labels | Developer"
+    },
+    {
+      "url": "https://develop.kde.org/hig/kde_app_design",
+      "title": "What makes a KDE app a KDE app? | Developer"
+    }
+  ]
+}

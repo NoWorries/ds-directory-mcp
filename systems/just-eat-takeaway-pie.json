@@ -1,0 +1,670 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "just-eat-takeaway-pie",
+  "organization": "Just Eat Takeaway",
+  "design_system": "PIE",
+  "full_name": "Just Eat Takeaway — PIE",
+  "start_urls": [
+    "https://pie.design/"
+  ],
+  "detail_url": "/systems/just-eat-takeaway-pie",
+  "pages_indexed": 143,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T08:12:28+00:00",
+  "last_modified": "Thu, 17 Sep 2026 12:24:22 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/justeattakeaway/fozzie-components",
+      "https://github.com/justeat/pie-project",
+      "https://github.com/justeattakeaway/pie"
+    ],
+    "storybook": [
+      "https://storybook.js.org/addons/@storybook/addon-a11y"
+    ],
+    "figma": [
+      "https://www.figma.com/design/3nSkAn3xL6jEOXKt1MePPd/-BA--Logistics-Delco---Components",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8--Core--Web-Components--PIE-3-",
+      "https://www.figma.com/design/x5tFJvtA7GNxSjHIrybQJl/-BA--Documentation--Customer-%E2%80%93-JE---TA--PIE-2.0-",
+      "https://www.figma.com/design/mJiLMfnMfnEYWJh2Njutdq/-Core--Motion--PIE-3-",
+      "https://www.figma.com/design/KAsRXLmSLSQ8a2JLXg6OsS/-BA--Customer-%E2%80%93-Skip--PIE-3-",
+      "https://www.figma.com/design/WxPDYsTycTVhPac6nCbbgN/-Core--Apps-Component-Documentation--PIE-3-",
+      "https://www.figma.com/file/Rqz8KHogVsGCS4j0nDueNo/[Core]-Patterns-%E2%9A%AA%EF%B8%8F-[PIE-2.0]",
+      "https://www.figma.com/design/qVVNVoZgeqkQhlMxsrUhd7/Core-AI-Components",
+      "https://www.figma.com/design/eUOZTTYaTYbmy73i0wpkL9/-Core--Brand-assets--PIE-3-",
+      "https://www.figma.com/design/2JSAh62IcfXyVffR5yT6Sg/-BA--Fintech--PIE-3-",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8-%5BCore%5D-Web-Components-%5BPIE-3%5D",
+      "https://www.figma.com/design/Rqz8KHogVsGCS4j0nDueNo/-Core--Patterns--PIE-3-",
+      "https://www.figma.com/design/OOgnT2oNMdGFytj5AanYvt/-Core--Web-Component-Documentation--PIE-3-",
+      "https://www.figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op",
+      "https://www.figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op/-Core--Icons--PIE-3-",
+      "https://www.figma.com/design/XoCqFBgXafCrQR6hkuFaRj/-BA--Scoober-Logistics-%E2%80%93-Patterns--PIE-3-",
+      "https://www.figma.com/design/64d6BFbEaP9tjrDmOCJpQh/%E2%9C%A8--Core--Foundations--PIE-3-",
+      "https://www.figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3.0-",
+      "https://www.figma.com/design/2c3RYLNtwjPhUdrmKlPg8D/-BA--Logistics-Delco---Patterns",
+      "https://www.figma.com/design/26iAOwvB5lRVsoHJscqRqs/-Core--Accessibility--PIE-3-",
+      "https://www.figma.com/design/7Auqy3S8J787NywZ0gtgZm/-BA--Customer-%E2%80%93-JE---TA--PIE-3-",
+      "https://www.figma.com/design/W4DEzDRBQOBohZ7yZr3LXf/-BA--Partner-Portal-%E2%80%93-Skip--PIE-3-",
+      "https://www.figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3-",
+      "https://www.figma.com/design/DVKOT2HOucOpWglwIUsVr8/-Core--JET-Brand-Documentation",
+      "https://www.figma.com/design/tGv7rwthRgAOQP0Xx86Bm0/-AI--Foundations--PIE-3-",
+      "https://www.figma.com/design/XK2nYzvIZ0QCATVuccBJUJ/-BA--Partner-Patterns--PIE-3-",
+      "https://www.figma.com/design/r0e4dnGSg9qS8MmdTehw0n/-BA--Internal-Tools-%E2%9A%AA%EF%B8%8F--PIE-3-",
+      "https://www.figma.com/design/K11XNe5NKsreTkubGEC6z4/-BA--PLO---Skip--%E2%9C%A8-PIE-3.0-",
+      "https://www.figma.com/design/pPSC73rPin4csb8DiK1CRr",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3",
+      "https://www.figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process",
+      "https://www.figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-",
+      "https://www.figma.com/design/CSxFGnwnBBBNPF6FYeB8qs/-BA--Partner--PIE-3-",
+      "https://www.figma.com/design/0olH9rKFUmtbp3R6KmFqm1/Customer---JET---OA-OW-",
+      "https://www.figma.com/design/hvXst0EMuOpwgMcWp6mbib/-BA--Scoober-Logistics-%E2%80%93-Components--PIE-3-",
+      "https://www.figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@justeattakeaway/pie-webc"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/google/Accessibility-Test-Framework-for-Android",
+      "https://github.com/google/GTXiLib"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "tokens_format": "Figma Variables",
+    "frameworks": [
+      "React",
+      "Vue",
+      "Web Components",
+      "SwiftUI"
+    ]
+  },
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 14,
+    "last_pushed": "2025-05-07T09:50:27Z"
+  },
+  "npm_meta": {
+    "latest_version": "0.11.20",
+    "last_published": "2026-09-10T07:31:50.291Z",
+    "weekly_downloads": 2833
+  },
+  "indexed_pages": [
+    {
+      "url": "https://pie.design/accessibility/overview",
+      "title": "Accessibility — Accessibility overview | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/accessibility/resources",
+      "title": "Accessibility — Accessibility resources | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/accessibility/testing-for-accessibility",
+      "title": "Accessibility — Testing for accessibility | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/accessibility/text-scaling",
+      "title": "Accessibility — Text Scaling | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/agents/resources",
+      "title": "Agents — Agentic AI Resources | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/blur",
+      "title": "Blur | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/blur/tokens/global",
+      "title": "Blur | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/blur/tokens/alias",
+      "title": "Blur | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/colour",
+      "title": "Colour | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/colour/tokens/global",
+      "title": "Colour | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/colour/tokens/alias/light",
+      "title": "Colour | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/accordion",
+      "title": "Components — Accordion | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/app-bar",
+      "title": "Components — App Bar | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/assistive-text",
+      "title": "Components — Assistive Text | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/avatar",
+      "title": "Components — Avatar | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/badge",
+      "title": "Components — Badge | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/bottom-sheet",
+      "title": "Components — Bottom Sheet | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/breadcrumb",
+      "title": "Components — Breadcrumb | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/button",
+      "title": "Components — Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/card",
+      "title": "Components — Card | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/carousel-indicator",
+      "title": "Components — Carousel Indicator | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/carousel-indicator/apps",
+      "title": "Components — Carousel Indicator | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/carousel-indicator/web",
+      "title": "Components — Carousel Indicator | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox-group",
+      "title": "Components — Checkbox Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox",
+      "title": "Components — Checkbox | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox/web",
+      "title": "Components — Checkbox | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox/motion",
+      "title": "Components — Checkbox | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox/ios",
+      "title": "Components — Checkbox | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox/android",
+      "title": "Components — Checkbox | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/checkbox/code",
+      "title": "Components — Checkbox | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/chip",
+      "title": "Components — Chip | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components",
+      "title": "Components — Components | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/data-table",
+      "title": "Components — Data Table | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/date-picker",
+      "title": "Components — Date Picker | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/divider",
+      "title": "Components — Divider | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/dropdown",
+      "title": "Components — Dropdown | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/fab",
+      "title": "Components — FAB | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/form-label",
+      "title": "Components — Form Label | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-button",
+      "title": "Components — Icon Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-button/web",
+      "title": "Components — Icon Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-button/ios",
+      "title": "Components — Icon Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-button/code",
+      "title": "Components — Icon Button | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-with-background",
+      "title": "Components — Icon With Background | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/icon-with-background/web",
+      "title": "Components — Icon With Background | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/link",
+      "title": "Components — Link | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/link/web",
+      "title": "Components — Link | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/link/code",
+      "title": "Components — Link | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/link/apps",
+      "title": "Components — Link | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/map-pin",
+      "title": "Components — Map Pin | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/modal-native",
+      "title": "Components — Modal - Native | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/modal",
+      "title": "Components — Modal | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/notification",
+      "title": "Components — Notification | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/pagination",
+      "title": "Components — Pagination | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/payment-method-card",
+      "title": "Components — Payment Method Card | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/popover",
+      "title": "Components — Popover | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/progress-bar",
+      "title": "Components — Progress Bar | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/progress-stepper",
+      "title": "Components — Progress Stepper | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio-group",
+      "title": "Components — Radio Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio-group/web",
+      "title": "Components — Radio Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio-group/ios",
+      "title": "Components — Radio Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio-group/android",
+      "title": "Components — Radio Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio-group/code",
+      "title": "Components — Radio Group | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio",
+      "title": "Components — Radio | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio/web",
+      "title": "Components — Radio | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio/android",
+      "title": "Components — Radio | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio/code",
+      "title": "Components — Radio | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio/ios",
+      "title": "Components — Radio | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/radio/motion",
+      "title": "Components — Radio | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/rating",
+      "title": "Components — Rating | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/segmented-controls",
+      "title": "Components — Segmented Controls | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/select-input",
+      "title": "Components — Select Input | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/show-more",
+      "title": "Components — Show More | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/side-sheet",
+      "title": "Components — Side Sheet | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/skeleton",
+      "title": "Components — Skeleton | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/slider",
+      "title": "Components — Slider | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/spinner",
+      "title": "Components — Spinner | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/stacked-notification",
+      "title": "Components — Stacked Notification | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/switch",
+      "title": "Components — Switch | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/switch/ios",
+      "title": "Components — Switch | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/switch/android",
+      "title": "Components — Switch | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/switch/web",
+      "title": "Components — Switch | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/switch/code",
+      "title": "Components — Switch | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tabs",
+      "title": "Components — Tabs | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tabs/apps",
+      "title": "Components — Tabs | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tabs/web",
+      "title": "Components — Tabs | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tag-icon-only",
+      "title": "Components — Tag - Icon Only | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tag",
+      "title": "Components — Tag | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/text-input",
+      "title": "Components — Text Input | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/textarea",
+      "title": "Components — Textarea | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/thumbnail",
+      "title": "Components — Thumbnail | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/toast",
+      "title": "Components — Toast | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tooltip",
+      "title": "Components — Tooltip | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tooltip/ios",
+      "title": "Components — Tooltip | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/tooltip/android",
+      "title": "Components — Tooltip | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/uploader",
+      "title": "Components — Uploader | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/support/contact-us",
+      "title": "Contact us | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/data-visualisation/bar-chart",
+      "title": "Data Visualisation — Bar Chart | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/data-visualisation/line-chart",
+      "title": "Data Visualisation — Line Chart | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/design-tokens",
+      "title": "Design Tokens | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/contributing",
+      "title": "Designers — Contributing | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/getting-started/figma-files",
+      "title": "Designers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/getting-started",
+      "title": "Designers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/designers/how-we-support-you",
+      "title": "Designers — How we support you | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/elevation",
+      "title": "Elevation | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/elevation/tokens/alias/light",
+      "title": "Elevation | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/elevation/android",
+      "title": "Elevation | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/elevation/tokens/global",
+      "title": "Elevation | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/contributing",
+      "title": "Engineers — Contributing | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/getting-started",
+      "title": "Engineers — Getting started | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/guidelines",
+      "title": "Engineers — Guidelines | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/engineers/web-components",
+      "title": "Engineers — Web Components | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/support/faq",
+      "title": "FAQs | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/gradients",
+      "title": "Gradients | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/gradients/alias-tokens/light",
+      "title": "Gradients | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/iconography",
+      "title": "Iconography | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/list-item/list-item-interactive",
+      "title": "List Item — List Item - Interactive | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/list-item/list-item",
+      "title": "List Item — List Item | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/motion",
+      "title": "Motion — Motion | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/motion/timing",
+      "title": "Motion — Motion | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/motion/easing",
+      "title": "Motion — Motion | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper/numeric-stepper-form",
+      "title": "Numeric Stepper — Numeric Stepper - Form | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper/numeric-stepper-input",
+      "title": "Numeric Stepper — Numeric Stepper - Input | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper/numeric-stepper-simple",
+      "title": "Numeric Stepper — Numeric Stepper - Simple | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/numeric-stepper/numeric-stepper",
+      "title": "Numeric Stepper — Numeric Stepper | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/all-about-pie/our-vision",
+      "title": "Our vision | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/cookie-banner",
+      "title": "Patterns — Cookie Banner | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/errors",
+      "title": "Patterns — Errors | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/focus-state",
+      "title": "Patterns — Focus State | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/forms",
+      "title": "Patterns — Forms | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/haptic-feedback",
+      "title": "Patterns — Haptic Feedback | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/jet-ai",
+      "title": "Patterns — JET AI | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/just-eat-plus",
+      "title": "Patterns — Just Eat + | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/messaging-and-chatbots",
+      "title": "Patterns — Messaging and Chatbots | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/nested-overrides",
+      "title": "Patterns — Nested Overrides | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/onboarding-and-guided-tour/web-guidance",
+      "title": "Patterns — Onboarding and Guided Tour | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/overlay-patterns",
+      "title": "Patterns — Overlay Patterns | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/patterns/selected-state",
+      "title": "Patterns — Selected State | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/",
+      "title": "PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/radius",
+      "title": "Radius | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/all-about-pie/roadmap",
+      "title": "Roadmap | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/spacing",
+      "title": "Spacing | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/foundations/typography",
+      "title": "Typography | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/all-about-pie/what-is-pie",
+      "title": "What is PIE? | PIE Design System"
+    }
+  ]
+}

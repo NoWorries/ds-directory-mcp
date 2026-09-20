@@ -1,0 +1,46 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "meta-astryx",
+  "organization": "Meta",
+  "design_system": "Astryx",
+  "full_name": "Meta — Astryx",
+  "start_urls": [
+    "https://astryx.atmeta.com/"
+  ],
+  "detail_url": "/systems/meta-astryx",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:45:45+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": "2026-09-10T00:00:00.000Z",
+  "resources": {
+    "github": [
+      "https://github.com/facebook/astryx"
+    ],
+    "agent_instructions": [
+      "https://astryx.atmeta.com/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 13246,
+    "last_pushed": "2026-09-19T20:55:19Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://astryx.atmeta.com/",
+      "title": "Meta — Astryx"
+    }
+  ]
+}

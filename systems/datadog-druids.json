@@ -1,0 +1,34 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "datadog-druids",
+  "organization": "Datadog",
+  "design_system": "Druids",
+  "full_name": "Datadog — Druids",
+  "start_urls": [
+    "https://druids.datadoghq.com/"
+  ],
+  "detail_url": "/systems/datadog-druids",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:34:37+00:00",
+  "last_modified": "Sat, 19 Sep 2026 00:33:06 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://druids.datadoghq.com/icons"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://druids.datadoghq.com/",
+      "title": "Datadog — Druids"
+    }
+  ]
+}

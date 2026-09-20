@@ -1,0 +1,58 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "priceline-priceline-one",
+  "organization": "Priceline",
+  "design_system": "Priceline One",
+  "full_name": "Priceline — Priceline One",
+  "start_urls": [
+    "https://priceline.github.io/design-system/"
+  ],
+  "detail_url": "/systems/priceline-priceline-one",
+  "pages_indexed": 8,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": null,
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://priceline.github.io/design-system/",
+      "title": "Priceline One Design System"
+    },
+    {
+      "url": "https://priceline.github.io/design-system/palette",
+      "title": "Priceline One Design System"
+    },
+    {
+      "url": "https://priceline.github.io/design-system/Input",
+      "title": "Priceline One Design System"
+    },
+    {
+      "url": "https://priceline.github.io/design-system/Icon",
+      "title": "Priceline One Design System"
+    },
+    {
+      "url": "https://priceline.github.io/design-system/Checkbox",
+      "title": "Priceline One Design System"
+    },
+    {
+      "url": "https://priceline.github.io/design-system/utilities/borders",
+      "title": "Priceline One Design System"
+    },
+    {
+      "url": "https://priceline.github.io/design-system/typography",
+      "title": "Priceline One Design System"
+    },
+    {
+      "url": "https://priceline.github.io/design-system/BlockLink",
+      "title": "Priceline One Design System"
+    }
+  ]
+}

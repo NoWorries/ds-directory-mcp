@@ -1,7 +1,8 @@
 """
 Builds home.html — the site's actual homepage. Kept deliberately simple: search
 box (the primary action), the MCP connection callout, and links out to the
-full directory (list/grid matrix) and component index.
+full directory (list/grid — see generate_directory.py) and component index.
+The resource-comparison matrix is its own separate page now (generate_compare.py).
 
 Deploys as index.html — see the workflows' Netlify deploy step. Root-absolute
 links ("/directory.html" etc., via page_shell.routes_nav) work correctly from
@@ -14,13 +15,14 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from generate_directory import compute_stats, indexed_only, load_systems
+from generate_directory import compute_stats, indexed_only, load_systems, visible_by_default
 from page_shell import (
     COPY_ICON_SVG,
     FAVICON_LINK,
     FONT_LINK,
     GRID_ICON_SVG_LARGE,
     PACKAGE_ICON_SVG,
+    SEARCH_TYPEAHEAD_JS,
     TOKENS_CSS,
     routes_nav,
 )
@@ -50,6 +52,7 @@ def render_page(entries: list[dict]) -> str:
 <style>
 {TOKENS_CSS}
   .hero {{ padding-top: 8px; margin-bottom: 36px; }}
+  .hero-search-wrap {{ position: relative; }}
   .hero h1 {{ margin-bottom: 10px; }}
   .hero-subtitle {{ font-size: 1.05rem; color: var(--text-muted); line-height: 1.5; max-width: 62ch; margin: 0 0 22px; }}
   #q {{
@@ -166,7 +169,10 @@ def render_page(entries: list[dict]) -> str:
     <h1>Search {stats['total_systems']} design systems</h1>
     <p class="hero-subtitle">Find component patterns, tokens, and guidance across every publicly documented design system indexed here — or connect it to your AI agent via MCP.</p>
     <form id="searchForm" action="/search" method="get">
-      <input id="q" name="q" type="text" placeholder="e.g. table column resizing, disabled button states...">
+      <div class="hero-search-wrap">
+        <input id="q" name="q" type="text" placeholder="e.g. table column resizing, disabled button states..." autocomplete="off">
+        <div class="ds-typeahead-dropdown" id="qSuggestions" hidden></div>
+      </div>
     </form>
   </section>
 
@@ -223,7 +229,10 @@ def render_page(entries: list[dict]) -> str:
   </div>
 </div>
 
+<script>{SEARCH_TYPEAHEAD_JS}</script>
 <script>
+  dsAttachTypeahead(document.getElementById("q"), document.getElementById("qSuggestions"));
+
   const HEALTH_URL = {json.dumps(HEALTH_API_URL)};
 
   // --- Copy MCP install command ---
@@ -371,6 +380,6 @@ def render_page(entries: list[dict]) -> str:
 
 
 if __name__ == "__main__":
-    systems = indexed_only(load_systems())
+    systems = visible_by_default(indexed_only(load_systems()))
     OUTPUT_FILE.write_text(render_page(systems))
     print(f"Wrote {OUTPUT_FILE} with stats for {len(systems)} systems.")

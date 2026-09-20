@@ -1,0 +1,459 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "chakra-team-ark-ui",
+  "organization": "Chakra team",
+  "design_system": "Ark UI",
+  "full_name": "Chakra team — Ark UI",
+  "start_urls": [
+    "https://ark-ui.com/"
+  ],
+  "detail_url": "/systems/chakra-team-ark-ui",
+  "pages_indexed": 100,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:34:10+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/chakra-ui/ark"
+    ],
+    "storybook": [
+      "https://ark-ui.com/blog/using-ark-ui-with-storybook"
+    ],
+    "mcp": [
+      "https://modelcontextprotocol.io/introduction",
+      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
+      "https://ark-ui.com/docs/ai/mcp-server.mdx",
+      "https://ark-ui.com/blog/announcing-ark-ui-mcp-server",
+      "https://ark-ui.com/docs/ai/mcp-server"
+    ],
+    "agent_instructions": [
+      "https://ark-ui.com/docs/ai/llms.txt",
+      "https://ark-ui.com/llms.txt",
+      "https://ark-ui.com/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {
+    "npm": [
+      "https://www.npmjs.com/package/check-password-strength"
+    ]
+  },
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Vue",
+      "Svelte"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 5394,
+    "last_pushed": "2026-09-18T12:44:42Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://ark-ui.com/docs/overview/about",
+      "title": "About Ark UI | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/accordion",
+      "title": "Accordion | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/angle-slider",
+      "title": "Angle Slider | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/guides/animation",
+      "title": "Animation | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/plus",
+      "title": "Ark Plus | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/",
+      "title": "Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/collections/async-list",
+      "title": "Async List | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/avatar",
+      "title": "Avatar | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/blog",
+      "title": "Blog | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/carousel",
+      "title": "Carousel | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/llms.txt",
+      "title": "Chakra team — Ark UI — llms.txt"
+    },
+    {
+      "url": "https://ark-ui.com/llms-full.txt",
+      "title": "Chakra team — Ark UI — llms.txt"
+    },
+    {
+      "url": "https://ark-ui.com/examples/checkbox-group",
+      "title": "Checkbox Group | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/checkbox",
+      "title": "Checkbox | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/client-only",
+      "title": "Client Only | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/clipboard",
+      "title": "Clipboard | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/collapsible",
+      "title": "Collapsible | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/color-picker",
+      "title": "Color Picker | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/combobox-in-textarea",
+      "title": "Combobox in Textarea | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/combobox-with-tags-input",
+      "title": "Combobox with TagsInput | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/combobox",
+      "title": "Combobox | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/command-menu",
+      "title": "Command Menu | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/guides/component-state",
+      "title": "Component State | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/guides/composition",
+      "title": "Composition | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/date-input",
+      "title": "Date Input | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/date-picker",
+      "title": "Date Picker | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/dialog-with-tooltip",
+      "title": "Dialog with Tooltip | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/dialog",
+      "title": "Dialog | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/download-trigger",
+      "title": "Download Trigger | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/drawer",
+      "title": "Drawer | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/editable",
+      "title": "Editable | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/environment",
+      "title": "Environment | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/field",
+      "title": "Field | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/fieldset",
+      "title": "Fieldset | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/file-upload",
+      "title": "File Upload | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/floating-panel",
+      "title": "Floating Panel | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/focus-trap",
+      "title": "Focus Trap | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/format-byte",
+      "title": "Format Byte | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/format-number",
+      "title": "Format Number | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/format-relative-time",
+      "title": "Format Relative Time | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/format-time",
+      "title": "Format Time | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/guides/forms",
+      "title": "Forms | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/frame",
+      "title": "Frame | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/overview/getting-started",
+      "title": "Getting Started | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/highlight",
+      "title": "Highlight | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/hotkeys",
+      "title": "Hotkeys | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/hover-card",
+      "title": "Hover Card | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/image-cropper",
+      "title": "Image Cropper | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/json-tree-view",
+      "title": "JSON Tree View | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/collections/list-collection",
+      "title": "List Collection | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/collections/list-selection",
+      "title": "List Selection | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/listbox",
+      "title": "Listbox | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/ai/llms.txt",
+      "title": "LLMs.txt | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/locale",
+      "title": "Locale | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/marquee",
+      "title": "Marquee | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/ai/mcp-server",
+      "title": "MCP Server | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/menu-with-async-combobox",
+      "title": "Menu with Async Combobox | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/menu-with-combobox",
+      "title": "Menu with Combobox | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/menu-with-links",
+      "title": "Menu with Links | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/menu",
+      "title": "Menu | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/navigation-menu",
+      "title": "Navigation Menu | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/nested-menu",
+      "title": "Nested Menu | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/number-input",
+      "title": "Number Input | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/pagination",
+      "title": "Pagination | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/password-input",
+      "title": "Password Input | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/pin-input",
+      "title": "Pin Input | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/popover-selection",
+      "title": "Popover Selection | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/popover-with-tooltip",
+      "title": "Popover with Tooltip | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/popover",
+      "title": "Popover | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/presence",
+      "title": "Presence | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/progress-circular",
+      "title": "Progress - Circular | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/progress-linear",
+      "title": "Progress - Linear | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/qr-code",
+      "title": "QR Code | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/radio-group",
+      "title": "Radio Group | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/rating-group",
+      "title": "Rating Group | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/guides/ref",
+      "title": "Refs | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/scroll-area",
+      "title": "Scroll Area | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/segment-group",
+      "title": "Segment Group | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/select",
+      "title": "Select | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/showcase",
+      "title": "Showcase | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/signature-pad",
+      "title": "Signature Pad | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/slider-with-number-input",
+      "title": "Slider with Number Input | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/slider",
+      "title": "Slider | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/splitter",
+      "title": "Splitter | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/examples/standalone-date-picker",
+      "title": "Standalone Date Picker | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/steps",
+      "title": "Steps | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/guides/styling",
+      "title": "Styling | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/utilities/swap",
+      "title": "Swap | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/switch",
+      "title": "Switch | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/toc",
+      "title": "Table of Contents | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/tabs",
+      "title": "Tabs | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/tags-input",
+      "title": "Tags Input | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/timer",
+      "title": "Timer | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/toast",
+      "title": "Toast | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/toggle-group",
+      "title": "Toggle Group | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/toggle",
+      "title": "Toggle | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/tooltip",
+      "title": "Tooltip | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/tour",
+      "title": "Tour | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/collections/tree-collection",
+      "title": "Tree Collection | Ark UI"
+    },
+    {
+      "url": "https://ark-ui.com/docs/components/tree-view",
+      "title": "Tree View | Ark UI"
+    }
+  ]
+}

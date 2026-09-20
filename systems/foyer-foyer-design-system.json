@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "foyer-foyer-design-system",
+  "organization": "Foyer",
+  "design_system": "Foyer Design System",
+  "full_name": "Foyer — Foyer Design System",
+  "start_urls": [
+    "https://design.foyer.lu/"
+  ],
+  "detail_url": "/systems/foyer-foyer-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:56:20+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design.foyer.lu/",
+      "title": "Foyer — Foyer Design System"
+    }
+  ]
+}

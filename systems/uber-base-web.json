@@ -1,0 +1,43 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "uber-base-web",
+  "organization": "Uber",
+  "design_system": "Base Web",
+  "full_name": "Uber — Base Web",
+  "start_urls": [
+    "https://baseweb.design/"
+  ],
+  "detail_url": "/systems/uber-base-web",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:43:12+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/uber/baseweb"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Web Components"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 9010,
+    "last_pushed": "2026-09-04T20:40:46Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://baseweb.design/",
+      "title": "Uber — Base Web"
+    }
+  ]
+}

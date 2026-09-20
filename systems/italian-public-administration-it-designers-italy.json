@@ -1,0 +1,655 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "italian-public-administration-it-designers-italy",
+  "organization": "Italian Public Administration",
+  "design_system": ".it Designers Italy",
+  "full_name": "Italian Public Administration — .it Designers Italy",
+  "start_urls": [
+    "https://designers.italia.it/"
+  ],
+  "detail_url": "/systems/italian-public-administration-it-designers-italy",
+  "pages_indexed": 148,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T08:07:22+00:00",
+  "last_modified": "Tue, 15 Sep 2026 10:27:37 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/italia/design-tokens-italia",
+      "https://github.com/italia/feedback.designers.italia.it",
+      "https://github.com/italia/design-react-kit",
+      "https://github.com/italia/design-ui-kit",
+      "https://github.com/italia/design-angular-kit",
+      "https://github.com/italia/designers.italia.it",
+      "https://github.com/italia/design-ui-kit-template",
+      "https://github.com/italia/bootstrap-italia",
+      "https://github.com/italia/dev-kit-italia"
+    ],
+    "figma": [
+      "https://www.figma.com/proto/FHlE0r9lhfvDR0SgkDRmVi/Comuni---Modello-sito-e-servizi",
+      "https://www.figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito",
+      "https://www.figma.com/proto/1hQobutdZFwlo2Y4mVt9Rl/Musei-civici---Modello-sito"
+    ],
+    "markdown_docs": [
+      "https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/sketch-hq/fig2sketch",
+      "https://github.com/sketch-hq/sketch-document",
+      "https://github.com/gjtorikian/html-proofer",
+      "https://github.com/chialab/titillium_pro"
+    ]
+  },
+  "content_signals": {
+    "frameworks": [
+      "Web Components",
+      "React",
+      "Angular"
+    ]
+  },
+  "github_meta": {
+    "license": "BSD-3-Clause",
+    "stars": 24,
+    "last_pushed": "2026-07-20T21:01:33Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/accessibilita",
+      "title": "Accessibilità"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/accessibilita",
+      "title": "Accessibilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/accordion",
+      "title": "Accordion - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/adozione-modelli",
+      "title": "Adozione modelli - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/affix",
+      "title": "Affix - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/alert",
+      "title": "Alert - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/architettura-dell-informazione",
+      "title": "Architettura dell'informazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/architettura-informazione",
+      "title": "Architettura informazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti",
+      "title": "Argomenti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/autocomplete",
+      "title": "Autocomplete - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/avatar",
+      "title": "Avatar - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/aziende-sanitarie-locali",
+      "title": "Aziende sanitarie locali (ASL) - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/back",
+      "title": "Back - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/back-to-top",
+      "title": "Back to top - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/badge",
+      "title": "Badge - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/bordi-e-raggi",
+      "title": "Bordi e raggi"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/bottomnav",
+      "title": "Bottomnav - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/breadcrumbs",
+      "title": "Breadcrumbs - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/buttons",
+      "title": "Buttons - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/callout",
+      "title": "Callout - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/card",
+      "title": "Card - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/carousel",
+      "title": "Carousel - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/checkbox",
+      "title": "Checkbox - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/chips",
+      "title": "Chips - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/co-progettazione",
+      "title": "Co-progettazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/co-progettazione",
+      "title": "Co-progettazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/collapse",
+      "title": "Collapse - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/colori",
+      "title": "Colori"
+    },
+    {
+      "url": "https://designers.italia.it/community",
+      "title": "Community"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/community",
+      "title": "Community - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere",
+      "title": "Comprendere - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/contatti",
+      "title": "Contatti - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/contenuti",
+      "title": "Contenuti"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/contenuti-e-linguaggio",
+      "title": "Contenuti e linguaggio - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/contenuti-e-linguaggio",
+      "title": "Contenuti e linguaggio - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/contribuisci-ai-modelli",
+      "title": "Contribuisci ai modelli"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/cultura-progettuale",
+      "title": "Cultura progettuale - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/datepicker",
+      "title": "Datepicker - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/design-system",
+      "title": "Design system - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system",
+      "title": "Design system .italia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/design-tokens",
+      "title": "Design tokens"
+    },
+    {
+      "url": "https://designers.italia.it/",
+      "title": "Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/dimensioni",
+      "title": "Dimensioni"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/dimmer",
+      "title": "Dimmer - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/disseminazione",
+      "title": "Disseminazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/divulgazione-e-disseminazione",
+      "title": "Divulgazione e disseminazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/dropdown",
+      "title": "Dropdown - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/esperienza-utente",
+      "title": "Esperienza utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/ricerca",
+      "title": "Esplora - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/eventi",
+      "title": "Eventi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/footer",
+      "title": "Footer - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/form",
+      "title": "Form - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione",
+      "title": "Formazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/formazione",
+      "title": "Formazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/forward",
+      "title": "Forward - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/griglia",
+      "title": "Griglia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/header",
+      "title": "Header - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/hero",
+      "title": "Hero - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/icone",
+      "title": "Icone"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/identita",
+      "title": "Identità"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/imparare",
+      "title": "Imparare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/input",
+      "title": "Input - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/insegnare",
+      "title": "Insegnare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/intelligenza-artificiale",
+      "title": "Intelligenza artificiale - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/interfaccia-utente",
+      "title": "Interfaccia utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/linee-guida",
+      "title": "Linee guida - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-accessibilita",
+      "title": "Linee guida accessibilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design",
+      "title": "Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/linguaggio",
+      "title": "Linguaggio"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/list",
+      "title": "List - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/manuale-operativo-di-design",
+      "title": "Manuale operativo di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/media",
+      "title": "Media - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/megamenu",
+      "title": "Megamenu - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/microtesti",
+      "title": "Microtesti"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/modal",
+      "title": "Modal - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli",
+      "title": "Modelli - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/modelli-di-sito",
+      "title": "Modelli di sito - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/comuni",
+      "title": "Modello Comuni - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/modello-di-contribuzione",
+      "title": "Modello di contribuzione"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/scuole",
+      "title": "Modello scuole - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/modelli/musei-civici",
+      "title": "Musei civici - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/navscroll",
+      "title": "Navscroll - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa",
+      "title": "Normativa - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/note-legali",
+      "title": "Note legali"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/notifications",
+      "title": "Notifications - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/community/notizie",
+      "title": "Notizie - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/number-input",
+      "title": "Number input - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/ombre",
+      "title": "Ombre"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/open-source",
+      "title": "Open source - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/organizzare",
+      "title": "Organizzare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/overlay",
+      "title": "Overlay - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/pagination",
+      "title": "Pagination - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire",
+      "title": "Panoramica come contribuire"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare",
+      "title": "Panoramica come iniziare"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti",
+      "title": "Panoramica componenti"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti",
+      "title": "Panoramica fondamenti"
+    },
+    {
+      "url": "https://designers.italia.it/community/partecipa",
+      "title": "Partecipa - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/partecipazione",
+      "title": "Partecipazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare/per-designer",
+      "title": "Per designer"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/per-il-design",
+      "title": "Per il design"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/per-la-documentazione",
+      "title": "Per la documentazione"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-contribuire/per-lo-sviluppo",
+      "title": "Per lo sviluppo"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare/per-responsabili-progetto",
+      "title": "Per responsabili progetto"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/come-iniziare/per-sviluppatori",
+      "title": "Per sviluppatori"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/piano-attivita",
+      "title": "Piano attività - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/popover",
+      "title": "Popover - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/principi-e-intenzioni",
+      "title": "Princìpi e intenzioni"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/processi-e-servizi",
+      "title": "Processi e servizi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare",
+      "title": "Progettare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/progettazione-interfaccia",
+      "title": "Progettazione interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/progettazione-servizi",
+      "title": "Progettazione servizi - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto",
+      "title": "Progetto - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/progress-indicators",
+      "title": "Progress indicators - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/prototipazione",
+      "title": "Prototipazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/radio-button",
+      "title": "Radio button - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/rating",
+      "title": "Rating - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare",
+      "title": "Realizzare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/ricerca-utente",
+      "title": "Ricerca utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare",
+      "title": "Risorse per progettare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/sections",
+      "title": "Sections - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/select",
+      "title": "Select - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/progettare/seo",
+      "title": "SEO - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/seo",
+      "title": "SEO - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/sidebar",
+      "title": "Sidebar - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/skiplinks",
+      "title": "Skiplinks - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/spaziature",
+      "title": "Spaziature"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/steppers",
+      "title": "Steppers - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/sticky",
+      "title": "Sticky - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/storia",
+      "title": "Storia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/sviluppo-interfaccia",
+      "title": "Sviluppo interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/tables",
+      "title": "Tables - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/tabs",
+      "title": "Tabs - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/test-di-usabilita",
+      "title": "Test di usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/thumbnav",
+      "title": "Thumbnav - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/timeline",
+      "title": "Timeline - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/timepicker",
+      "title": "Timepicker - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/tipografia",
+      "title": "Tipografia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/toggles",
+      "title": "Toggles - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/tono-di-voce",
+      "title": "Tono di voce"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/toolbar",
+      "title": "Toolbar - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/tooltip",
+      "title": "Tooltip - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/transfer",
+      "title": "Transfer - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/upload",
+      "title": "Upload - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/usabilita",
+      "title": "Usabilità - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/validare",
+      "title": "Validare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/versionamento",
+      "title": "Versionamento"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/componenti/video-player",
+      "title": "Video player - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/visione-e-missione",
+      "title": "Visione e missione - Designers Italia"
+    }
+  ]
+}

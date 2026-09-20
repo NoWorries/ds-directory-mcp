@@ -19,13 +19,13 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-from generate_directory import indexed_only, load_systems
+from generate_directory import indexed_only, load_systems, visible_by_default
 from slug import slugify
 from text_utils import full_name
 
 OUTPUT_FILE = Path(__file__).parent / "sitemap.xml"
 
-STATIC_PATHS = ["/", "/directory", "/search", "/components", "/patterns", "/foundations", "/suggest", "/report"]
+STATIC_PATHS = ["/", "/directory", "/compare", "/search", "/components", "/patterns", "/foundations", "/suggest", "/report"]
 
 # Taxonomy routes whose individual pages (components/button.html, etc.) get
 # their own sitemap entries — generate_components.py writes these three
@@ -78,7 +78,7 @@ if __name__ == "__main__":
             "domain (e.g. https://your-site.netlify.app) to enable this."
         )
     else:
-        systems = indexed_only(load_systems())
+        systems = visible_by_default(indexed_only(load_systems()))
         taxonomy_paths = taxonomy_page_paths()
         OUTPUT_FILE.write_text(render_sitemap(site_url, systems))
         print(f"Wrote {OUTPUT_FILE} with {len(systems) + len(STATIC_PATHS) + len(taxonomy_paths)} URLs "

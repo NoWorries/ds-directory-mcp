@@ -6,3 +6,12 @@ lxml>=5.0.0
 crawl4ai>=0.4.0
 python-dotenv>=1.0.0
 PyYAML>=6.0
+
+# Local embeddings (see embeddings.py) — server.py's embed_query() needs
+# this at request time too, not just ingest.py's crawl+embed. CPU-only
+# torch via the extra index: a plain `pip install torch` on Linux pulls the
+# CUDA-enabled build (multi-GB) even though Render's free-tier web service
+# has no GPU to use it.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+sentence-transformers>=3.0.0

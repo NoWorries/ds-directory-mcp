@@ -1,0 +1,49 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "aws-cloudscape-design-system",
+  "organization": "AWS",
+  "design_system": "Cloudscape Design System",
+  "full_name": "AWS — Cloudscape Design System",
+  "start_urls": [
+    "https://cloudscape.design/"
+  ],
+  "detail_url": "/systems/aws-cloudscape-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:18:44+00:00",
+  "last_modified": "Fri, 18 Sep 2026 19:31:52 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/cloudscape-design/components"
+    ],
+    "markdown_docs": [
+      "https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md"
+    ],
+    "agent_instructions": [
+      "https://cloudscape.design/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 2646,
+    "last_pushed": "2026-09-19T09:45:35Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://cloudscape.design/",
+      "title": "AWS — Cloudscape Design System"
+    }
+  ]
+}

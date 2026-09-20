@@ -1,8 +1,9 @@
 # Account setup
 
-Five services needed, all with free tiers. For each: create the account, then copy the
+Four services needed, all with free tiers. For each: create the account, then copy the
 listed value(s) into your local `.env` (`cp .env.example .env`), GitHub repo secrets, and
-Render's environment settings — the same three values go in all three places.
+Render's environment settings — the same two values go in all three places. Embeddings run
+locally (see embeddings.py) — no account or API key needed for those at all.
 
 ---
 
@@ -23,54 +24,45 @@ QDRANT_API_KEY=<api key>
 
 ---
 
-## 2. Google Gemini (embeddings)
-
-1. Go to https://aistudio.google.com/apikey and sign in with a Google account.
-2. Click **Create API key**. Free tier is 1,500 requests/minute, no card required.
-
-Copy into `.env` as:
-```
-GEMINI_API_KEY=<api key>
-```
-
----
-
-## 3. GitHub (already have this — just add secrets)
+## 2. GitHub (already have this — just add secrets)
 
 This repo needs to exist on GitHub for the scheduled re-indexing workflow to run.
 
 1. Push this repo to GitHub if you haven't: `gh repo create ds-directory-mcp --private --source=. --push`
    (or create it manually on github.com and `git push` to it).
 2. In the repo: **Settings → Secrets and variables → Actions → New repository secret**.
-3. Add three secrets, using the same values as your `.env`:
+3. Add two secrets, using the same values as your `.env`:
    - `QDRANT_URL`
    - `QDRANT_API_KEY`
-   - `GEMINI_API_KEY`
 
 No new account needed here, just repo secrets — nothing else to sign up for.
 
 ---
 
-## 4. Render (MCP server hosting)
+## 3. Render (MCP server hosting)
 
 1. Go to https://render.com and sign up (GitHub login is easiest — it can read your repos directly).
 2. **New + → Blueprint**, then select this GitHub repo. Render will detect `render.yaml`
    and propose the `ds-directory-mcp` web service on the free plan.
 3. Before/during creation, Render will ask for the environment variables marked
-   `sync: false` in `render.yaml` — enter the same three values:
+   `sync: false` in `render.yaml` — enter the same two values:
    - `QDRANT_URL`
    - `QDRANT_API_KEY`
-   - `GEMINI_API_KEY`
 4. Deploy. Render will build (`pip install -r requirements.txt`) and run (`python server.py`).
+   The first build also downloads the local embedding model (~130MB) — this happens on
+   every deploy since Render's free tier doesn't persist a build cache between them.
 5. Copy the service's public URL (e.g. `https://ds-directory-mcp.onrender.com`) — this is
    what you'll point an MCP client at.
 
 Note: Render's free tier sleeps after ~15 min of no traffic; the next request cold-starts
 (30-60s). Fine for occasional use, just don't expect instant responses after idle periods.
+It's also only 512MB RAM — untested whether that's enough headroom for the embedding
+model alongside the MCP server itself; if it OOMs in practice, the fix is a smaller model
+or Render's cheapest paid tier, not a code change.
 
 ---
 
-## 5. Netlify (static directory site hosting)
+## 4. Netlify (static directory site hosting)
 
 The searchable listing page (`directory.html`) and its `components/`/`systems/` subpages
 are static — they don't need Render, and deploy separately via the workflows to a Netlify
@@ -94,7 +86,7 @@ site so browsing has no cold start.
    (a sitemap's URLs must be absolute) — until it's set, sitemap.xml is skipped rather than
    generated with a wrong domain baked in.
 
-### 5a. Issue-filing bot token (for the "Suggest a system" / "Report an issue" forms)
+### 4a. Issue-filing bot token (for the "Suggest a system" / "Report an issue" forms)
 
 `/suggest` and `/report` (see `generate_forms.py`) are real forms, not GitHub Issue Forms —
 a visitor doesn't need their own GitHub account. They POST to
@@ -121,7 +113,6 @@ they run `netlify-cli deploy --prod`.
 |---|---|---|
 | `QDRANT_URL` | Qdrant Cloud cluster page | `.env`, GitHub secrets, Render env vars |
 | `QDRANT_API_KEY` | Qdrant Cloud → API Keys | `.env`, GitHub secrets, Render env vars |
-| `GEMINI_API_KEY` | Google AI Studio → API keys | `.env`, GitHub secrets, Render env vars |
 | Render service URL | Render dashboard, after deploy | Your MCP client config (Claude Code/Desktop) |
 | `NETLIFY_AUTH_TOKEN` | Netlify → User settings → Applications | GitHub secrets only |
 | `NETLIFY_SITE_ID` | Netlify → Site configuration → General | GitHub secrets only |

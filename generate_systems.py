@@ -517,6 +517,11 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
         meta_parts.append(f'{github_meta["stars"]:,}★')
     if npm_meta.get("latest_version"):
         meta_parts.append(f'v{npm_meta["latest_version"]}')
+    if entry.get("has_localized_docs"):
+        # The crawl itself only ever indexes the English side (see
+        # LANGUAGE_EXCLUDE_PATTERNS in ingest.py) — this just tells a visitor
+        # the system's docs exist in other languages too, at the same site.
+        meta_parts.append("also documented in other languages (English indexed here)")
 
     slug = slugify(name_text)
     thumb_html = ""

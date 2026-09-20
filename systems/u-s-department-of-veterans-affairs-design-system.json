@@ -1,0 +1,36 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "u-s-department-of-veterans-affairs-design-system",
+  "organization": "U.S. Department of Veterans Affairs",
+  "design_system": "Design system",
+  "full_name": "U.S. Department of Veterans Affairs — Design system",
+  "start_urls": [
+    "https://design.va.gov/"
+  ],
+  "detail_url": "/systems/u-s-department-of-veterans-affairs-design-system",
+  "pages_indexed": 8,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:15:45+00:00",
+  "last_modified": "Tue, 15 Sep 2026 18:49:10 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://design.va.gov/storybook",
+      "https://design.va.gov/storybook/"
+    ],
+    "figma": [
+      "https://www.figma.com/file/afurtw4iqQe6y4gXfNfkkk/VADS-Component-Library?type=design&node-id=121%3A1484&mode=design&t=ygQCLqlAL5VdSPil-1"
+    ],
+    "agent_instructions": [
+      "https://design.va.gov/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": []
+}

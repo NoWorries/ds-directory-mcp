@@ -14,12 +14,11 @@ from pathlib import Path
 import requests
 import yaml
 from mcp.server.fastmcp import FastMCP
-from qdrant_client import QdrantClient
 from qdrant_client.models import FieldCondition, Filter, MatchAny
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from config import GITHUB_ISSUE_TOKEN, GITHUB_REPO, QDRANT_API_KEY, QDRANT_COLLECTION, QDRANT_URL
+from config import GITHUB_ISSUE_TOKEN, GITHUB_REPO, QDRANT_COLLECTION, get_qdrant_client
 from embeddings import embed_query
 from text_utils import full_name
 
@@ -28,7 +27,7 @@ mcp = FastMCP(
     host="0.0.0.0",
     port=int(os.environ.get("PORT", 8000)),
 )
-qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+qdrant_client = get_qdrant_client()
 
 # Set once, at process start — Render's free tier spins up a brand new process
 # on every cold start, so this timestamp doubles as "how long has the current

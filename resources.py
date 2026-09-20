@@ -14,6 +14,7 @@ worth recording in the systems registry for humans (and future tooling) to use.
 from __future__ import annotations
 
 import re
+from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -187,6 +188,16 @@ def _find_sitemap(start_url: str) -> tuple[str, str] | None:
     return None
 
 
+# A sitemap INDEX (<sitemapindex>) lists other sitemap files, not pages —
+# each <sitemap><loc> points at a further document that itself needs
+# fetching. Confirmed live: Adeo's Mozaic Design System publishes exactly
+# this shape (sitemap-index.xml -> one child, sitemap-0.xml, which holds the
+# real per-page <url><loc> entries) — treating the index's own <loc> as a
+# seed URL fed a sitemap XML document into the crawler as if it were a page,
+# and the real page list underneath it was never fetched at all.
+MAX_CHILD_SITEMAPS = 50
+
+
 def fetch_sitemap_urls(start_url: str, limit: int = 1000) -> list[str]:
     """Every <loc> a site's sitemap lists (capped at `limit`), for seeding
     ingest.crawl()'s BFS queue — a capped crawl currently always starts from
@@ -195,11 +206,29 @@ def fetch_sitemap_urls(start_url: str, limit: int = 1000) -> list[str]:
     getting re-visited. A sitemap is the site's own authoritative page list;
     when one exists, it's a far better crawl order than nav-link BFS order.
     Best-effort: empty if there's no sitemap or it doesn't parse — the
-    ordinary BFS crawl is unaffected either way, this only ever adds seeds."""
+    ordinary BFS crawl is unaffected either way, this only ever adds seeds.
+
+    Transparently follows one level of sitemap index (see MAX_CHILD_SITEMAPS
+    above) — a real urlset is returned as-is, an index's own child sitemaps
+    are fetched and their <loc> entries combined instead."""
     found = _find_sitemap(start_url)
     if not found:
         return []
-    _, text = found
+    sitemap_url, text = found
+    if "<sitemapindex" in text:
+        child_sitemap_urls = re.findall(r"<sitemap>\s*<loc>\s*([^<\s]+)\s*</loc>", text, re.IGNORECASE)
+        locs = []
+        headers = {"User-Agent": "ds-directory-mcp/1.0"}
+        for child_url in child_sitemap_urls[:MAX_CHILD_SITEMAPS]:
+            try:
+                response = requests.get(child_url, timeout=10, headers=headers)
+                if response.status_code == 200:
+                    locs += re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", response.text, re.IGNORECASE)
+            except requests.RequestException:
+                continue
+            if len(locs) >= limit:
+                break
+        return locs[:limit]
     locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", text, re.IGNORECASE)
     return locs[:limit]
 
@@ -304,6 +333,49 @@ def enrich_resources(resources: dict[str, list[str]]) -> dict:
         if npm_meta:
             enrichment["npm_meta"] = npm_meta
     return enrichment
+
+
+# ~2 years — long enough that a project between releases or in genuine
+# maintenance mode doesn't get flagged, short enough to actually catch
+# things that have gone quiet. A judgment call, not a hard industry
+# standard; adjust here if it turns out to be too aggressive/lenient once
+# it's run against the real registry.
+UNMAINTAINED_THRESHOLD_DAYS = 730
+
+
+def compute_likely_unmaintained(enrichment: dict) -> bool:
+    """True when the most recent activity signal available (GitHub's last
+    real commit, or npm's last publish — whichever is more recent, if both
+    exist) is older than UNMAINTAINED_THRESHOLD_DAYS. Distinct from the
+    hand-set `archived` field: this is for a project whose docs site is
+    still up and crawlable just fine, but the underlying design system
+    itself looks dead (confirmed live: GOLD Design System's last real
+    commit was 5+ years ago while its docs site was still partially
+    resolving).
+
+    A system with NEITHER signal (no known GitHub/npm link) is never
+    flagged — no evidence of staleness isn't evidence of freshness either,
+    and guessing here would be worse than staying silent."""
+    dates = []
+    last_pushed = (enrichment.get("github_meta") or {}).get("last_pushed")
+    if last_pushed:
+        dates.append(last_pushed)
+    last_published = (enrichment.get("npm_meta") or {}).get("last_published")
+    if last_published:
+        dates.append(last_published)
+    if not dates:
+        return False
+
+    # ISO 8601 timestamps sort correctly as plain strings — same trick
+    # probe_sitemap() already uses for lastmod — so the more recent of the
+    # two (if both exist) is just whichever string is greater.
+    most_recent = max(dates)
+    try:
+        parsed = datetime.fromisoformat(most_recent.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    age_days = (datetime.now(timezone.utc) - parsed).days
+    return age_days > UNMAINTAINED_THRESHOLD_DAYS
 
 
 def merge_resources(*dicts: dict[str, list[str]]) -> dict[str, list[str]]:

@@ -1,0 +1,662 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "foundation",
+  "organization": null,
+  "design_system": "Foundation",
+  "full_name": "Foundation",
+  "start_urls": [
+    "https://get.foundation/"
+  ],
+  "detail_url": "/systems/foundation",
+  "pages_indexed": 127,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T07:03:05+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/RemcoJanssen/foundation6-template",
+      "https://github.com/stephenway/sketch-foundation-kit",
+      "https://github.com/meridiansoftech/joomla_foundation_template",
+      "https://github.com/pixelspring/SlideUpTopBar-for-Foundation",
+      "https://github.com/rememberlenny/underscore-foundation",
+      "https://github.com/drewkennelly/foundation7",
+      "https://github.com/core77/jekyll-foundation",
+      "https://github.com/samvloeberghs/foundation-sites-typings",
+      "https://github.com/ryanwachtl/silverstripe-foundation",
+      "https://github.com/mindblaze/foundation-daterangepicker",
+      "https://github.com/ppinette/pyramid_foundation",
+      "https://github.com/axyz/middleman-zurb-foundation",
+      "https://github.com/olefredrik/foundationpress",
+      "https://github.com/zaiste/foundation-icons-sass-rails",
+      "https://github.com/geoffgraham/FoundationWP",
+      "https://github.com/ianpatrickhines/nationbuilder-foundation",
+      "https://github.com/GBratsos/atom-zurb-foundation",
+      "https://github.com/hb-agency/contao_zurb_foundation",
+      "https://github.com/zurb/foundation-5-sublime-snippets",
+      "https://github.com/zurb/foundation",
+      "https://github.com/thedannywahl/foundation4-for-moodle2",
+      "https://github.com/bassjobsen/generator-foundation6",
+      "https://github.com/rememberlenny/foundation4-yeoman",
+      "https://github.com/zacksmash/foundation-5-coda-2-clips",
+      "https://github.com/foundation/foundation-sites",
+      "https://github.com/matalin/FoundationLess",
+      "https://github.com/coreysyms/foundationStickyFooter",
+      "https://github.com/jamesakers/generator-foundation-ext",
+      "https://github.com/iotbzh/healthy-gulp-angular-foundation6",
+      "https://github.com/zurb/foundation-emails",
+      "https://github.com/justinmarsan/FoundationLess",
+      "https://github.com/marnen/foundation_form_builder",
+      "https://github.com/GBratsos/brackets-zurb-foundation",
+      "https://github.com/rememberlenny/Jekyll-Foundation-SASS",
+      "https://github.com/liamr/Zurb-Foundation-Textmate-Bundle",
+      "https://github.com/nandroid/MagentoFoundation",
+      "https://github.com/zacksmash/foundation-coda-clips",
+      "https://github.com/gattadesmond/Foundation6-metalsmith-nunjucks",
+      "https://github.com/bomberstudios/serve-foundation",
+      "https://github.com/bassjobsen/brunch-foundation6",
+      "https://github.com/mgmartel/timber-foundation",
+      "https://github.com/CIRCUITLLC/foundation_templates_haml",
+      "https://github.com/drewsymo/Foundation",
+      "https://github.com/foundation/proton",
+      "https://github.com/groovemonkey/jekyll-foundation-base",
+      "https://github.com/lukebussey/foundationify",
+      "https://github.com/chrisdev/wagtail-cookiecutter-foundation",
+      "https://github.com/lyphtec/express-foundation-template",
+      "https://github.com/4ebstudio/foundation-v5-sketch-kit",
+      "https://github.com/django-blog-zinnia/zinnia-theme-foundation",
+      "https://github.com/joshmedeski/foundation-font-awesome-buttons",
+      "https://github.com/troymcginnis/Jekyll-Base-Foundation",
+      "https://github.com/joshmedeski/foundation-alfred",
+      "https://github.com/zurb/foundation-sites",
+      "https://github.com/timothyasp/pyrocms-theme-foundation",
+      "https://github.com/zurb/foundation-emails-template",
+      "https://github.com/zurb/foundation-code-standards",
+      "https://github.com/foundation/foundation",
+      "https://github.com/DavidJoyceIre/Foundation-5-Snippet-Manager"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/foundation-sites"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/brettsmason/croft",
+      "https://github.com/hb-agency/contao_slick",
+      "https://github.com/mfontani/p5-Inky",
+      "https://github.com/r3wt/superuser",
+      "https://github.com/gargoyle/slim-fast",
+      "https://github.com/javorszky/f415",
+      "https://github.com/Team-Sass/modular-scale",
+      "https://github.com/adaminfinitum/grunterie",
+      "https://github.com/modlearning/Yeti",
+      "https://github.com/zurb/inky",
+      "https://github.com/thetemplateblog/JoomberUI",
+      "https://help.github.com/articles/set-up-git",
+      "https://help.github.com/articles/closing-issues-via-commit-messages",
+      "https://github.com/zeljkoprsa/waterlee-boilerplate",
+      "https://github.com/Cam/Shopify-Theme-Framework",
+      "https://github.com/sixteenbit/generator-scratch",
+      "https://github.com/bschram/revamp-framework",
+      "https://guides.github.com/activities/hello-world",
+      "https://github.com/jfeldstein/jQuery.EpochChart.js",
+      "https://github.com/juliancwirko/abc",
+      "https://github.com/slateb/phantom-yeti",
+      "https://github.com/SimonPadbury/FST",
+      "https://github.com/meridiansoftech/meridian_ci_codebase",
+      "https://github.com/SimonHayter/Project-Yeti",
+      "https://github.com/jimbobbennett/FauxGhost",
+      "https://github.com/razor-x/jekyll-and-zurb",
+      "https://help.github.com/articles/using-pull-requests",
+      "https://github.com/penibelst/jekyll-noita",
+      "https://github.com/thewirelessguy/cornerstone",
+      "https://github.com/felixrieseberg/windows-build-tools",
+      "https://github.com/skaterkamp/streichelzoo-faces",
+      "https://github.com/ten1seven/what-input",
+      "https://github.com/joshmedeski/rootbeer",
+      "https://github.com/gpspake/grunterie",
+      "https://github.com/zslabs/basey-theme",
+      "https://github.com/mattolson/middleman-zurb-template",
+      "https://github.com/faustgertz/sassy-ink",
+      "https://github.com/shelob9/app_starter",
+      "https://github.com/gpspake/laravation",
+      "https://github.com/sennza/Flair",
+      "https://github.com/outsmartit/foundout6",
+      "https://github.com/roblevintennis/ditbi"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/generator-frontcow",
+      "https://www.npmjs.com/package/gulp-uncss",
+      "https://www.npmjs.com/package/generator-aspnet-xtianus",
+      "https://www.npmjs.com/package/generator-zurb-ink"
+    ]
+  },
+  "content_signals": {
+    "governance_model": true,
+    "accessibility_conformance": "Section 508",
+    "frameworks": [
+      "Angular",
+      "React",
+      "Vue"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": {
+    "latest_version": "6.9.0",
+    "last_published": "2024-09-27T20:02:35.745Z",
+    "weekly_downloads": 103520
+  },
+  "indexed_pages": [
+    {
+      "url": "https://get.foundation/showcase/about.html",
+      "title": "About Foundation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/sites/docs/accessibility.html",
+      "title": "Accessibility | Foundation for Sites 6 Docs"
+    },
+    {
+      "url": "https://get.foundation/learn/learn-the-zurb-stack-panini.html",
+      "title": "All about the ZURB Stack and Panini | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/brands.html",
+      "title": "Brands Built on Foundation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/building-a-hero-unit-with-foundation-6.html",
+      "title": "Building a Hero Unit with Foundation 6 | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/building-a-responsive-footer-with-foundation-6-gary-jenning.html",
+      "title": "Building a Responsive Footer with Foundation 6 | Foundation"
+    },
+    {
+      "url": "https://get.foundation/develop/building-blocks.html",
+      "title": "Building Blocks | Foundation"
+    },
+    {
+      "url": "https://get.foundation/building-blocks",
+      "title": "Building Blocks | Foundation 6"
+    },
+    {
+      "url": "https://get.foundation/learn/building-the-mobile-off-canvas-menu-gary-jennings.html",
+      "title": "Building the Mobile Off-Canvas Menu | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/certification.html",
+      "title": "Business Certification | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-arlington.html",
+      "title": "Case Studies - Arlington Public Schools | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-meundies.html",
+      "title": "Case Studies - MeUndies | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-ths.html",
+      "title": "Case Studies - The Honors Society | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-washington-post.html",
+      "title": "Case Studies - Washington Post | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-wcb.html",
+      "title": "Case Studies - WCB Design Agency | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-studies.html",
+      "title": "Case Studies | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-jacquelinewest.html",
+      "title": "Case Studies | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-jekyll.html",
+      "title": "Case Studies | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-flite.html",
+      "title": "Case Studies | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-nge.html",
+      "title": "Case Studies | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/case-swizzle.html",
+      "title": "Case Studies | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/code-contributor-guide.html",
+      "title": "Contribute Code to Foundation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/contribute.html",
+      "title": "Contribute to Foundation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/create-a-responsive-layout-with-foundation-6-gary-jenning.html",
+      "title": "Creating a Responsive Layout with Foundation 6 | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-reusable-layouts-panini.html",
+      "title": "Creating Reusable Layouts with Panini | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/custom-training.html",
+      "title": "Custom Foundation Training for Businesses | Foundation"
+    },
+    {
+      "url": "https://get.foundation/upload.html",
+      "title": "Design the Code | Foundation"
+    },
+    {
+      "url": "https://get.foundation/email-sponsorships.html",
+      "title": "Email Sponsorships | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-4-explicit-positioning.html",
+      "title": "Explicit Dropdown Positioning | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/faq.html",
+      "title": "FAQ | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/flexbox-helper-classes.html",
+      "title": "Flexbox Helper Classes | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-installing-js-plugins.html",
+      "title": "Foundation 6.4 JavaScript Integration Tutorial | Foundation"
+    },
+    {
+      "url": "https://get.foundation/frameworks-docs.html",
+      "title": "Foundation Documentation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/emails/docs",
+      "title": "Foundation for Emails 2 Docs"
+    },
+    {
+      "url": "https://get.foundation/emails/docs/compatibility.html",
+      "title": "Foundation for Emails 2 Docs | Compatibility"
+    },
+    {
+      "url": "https://get.foundation/emails/docs/migration.html",
+      "title": "Foundation for Emails 2 Docs | Foundation for Emails 2 Migration Guide"
+    },
+    {
+      "url": "https://get.foundation/emails/docs/css-guide.html",
+      "title": "Foundation for Emails 2 Docs | Getting Started with CSS"
+    },
+    {
+      "url": "https://get.foundation/emails/docs/sass-guide.html",
+      "title": "Foundation for Emails 2 Docs | Getting Started with Sass"
+    },
+    {
+      "url": "https://get.foundation/learn/working-with-foundation-for-emails-layouts-pages-partials.html",
+      "title": "Foundation for Emails Layouts, Pages, and Partials | Foundation"
+    },
+    {
+      "url": "https://get.foundation/emails.html",
+      "title": "Foundation for Emails | A Responsive Email Framework from ZURB"
+    },
+    {
+      "url": "https://get.foundation/emails/drip.html",
+      "title": "Foundation for Emails | Create Drip Email Campains that convert"
+    },
+    {
+      "url": "https://get.foundation/emails/transactional.html",
+      "title": "Foundation for Emails | Create Transactional Emails that sell"
+    },
+    {
+      "url": "https://get.foundation/emails/getting-started.html",
+      "title": "Foundation for Emails | Getting started - creating a Responsive Email"
+    },
+    {
+      "url": "https://get.foundation/emails/zurb-stack.html",
+      "title": "Foundation for Emails | Getting started - creating a Responsive Email"
+    },
+    {
+      "url": "https://get.foundation/emails/marketing.html",
+      "title": "Foundation for Emails | Marketing Emails"
+    },
+    {
+      "url": "https://get.foundation/emails/inliner.html",
+      "title": "Foundation for Emails | Responsive Email CSS Inliner"
+    },
+    {
+      "url": "https://get.foundation/emails/email-templates.html",
+      "title": "Foundation for Emails | Responsive Email Templates"
+    },
+    {
+      "url": "https://get.foundation/emails/resources.html",
+      "title": "Foundation for Emails | Tools and Resources"
+    },
+    {
+      "url": "https://get.foundation/sites/docs",
+      "title": "Foundation for Sites 6 Docs"
+    },
+    {
+      "url": "https://get.foundation/sites.html",
+      "title": "Foundation for Sites | Foundation for Sites"
+    },
+    {
+      "url": "https://get.foundation/sites/getting-started.html",
+      "title": "Foundation for Sites | Getting started"
+    },
+    {
+      "url": "https://get.foundation/sites/resources.html",
+      "title": "Foundation for Sites | Resources and tools"
+    },
+    {
+      "url": "https://get.foundation/get-involved/partners.html",
+      "title": "Foundation Partners | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/social-circles.html",
+      "title": "Foundation Social Circles | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/support.html",
+      "title": "Foundation Support Channels | Foundation"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/ecommerce.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/real-estate.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/blog-simple.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/blog-simple.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/agency.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/blog.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/ecommerce.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/portfolio.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/product-page.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/blog.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/news-magazine.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/agency.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/real-estate.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/downloads/templates-sites/product-page.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/portfolio.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/templates-previews-sites-f6-xy-grid/news-magazine.html",
+      "title": "Foundation | Welcome"
+    },
+    {
+      "url": "https://get.foundation/learn/intro-to-foundation-flexbox-cards.html",
+      "title": "Foundation's Card component in Flexbox mode | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-started-with-sass.html",
+      "title": "Getting Started with Foundation 6 Sass | Foundation"
+    },
+    {
+      "url": "https://get.foundation/develop/getting-started.html",
+      "title": "Getting Started | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/documentation-contributing-guide.html",
+      "title": "Help Others Learn Foundation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/use-foundation-building-blocks.html",
+      "title": "How to Use Foundation Building Blocks | Foundation"
+    },
+    {
+      "url": "https://get.foundation/templates.html",
+      "title": "HTML Templates | Foundation"
+    },
+    {
+      "url": "https://get.foundation/templates-legacy.html",
+      "title": "HTML Templates | Foundation"
+    },
+    {
+      "url": "https://get.foundation/templates-f5.html",
+      "title": "HTML Templates | Foundation 5 | Foundation"
+    },
+    {
+      "url": "https://get.foundation/icon-fonts.html",
+      "title": "Icon Fonts | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-4-incanvas-offcanvas.html",
+      "title": "In-canvas to Off-canvas | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/email-strategy-inline-css.html",
+      "title": "Inline Your Email's CSS | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/install-foundation-6-sass-on-windows.html",
+      "title": "Install Foundation 6 Sass on Windows | Foundation"
+    },
+    {
+      "url": "https://get.foundation/sites/docs/installation.html",
+      "title": "Installation | Foundation for Sites 6 Docs"
+    },
+    {
+      "url": "https://get.foundation/learn/installing-the-zurb-stack-foundation-for-emails-dave-horan.html",
+      "title": "Installing Foundation for Emails and the ZURB Stack | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/email-strategy-intro-coding-responsive.html",
+      "title": "Intro to Coding <br>a Responsive Email | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/introduction-to-the-foundation-grid.html",
+      "title": "Introduction to the Foundation Grid | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/learn-the-basics-of-css-grid.html",
+      "title": "Learn the basics of CSS Grid | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-panini-helpers-data.html",
+      "title": "Mastering Panini Helpers and Data | Foundation"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/basic.html",
+      "title": "My Basic Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/drip.html",
+      "title": "My Drip Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/hero.html",
+      "title": "My Hero Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/marketing.html",
+      "title": "My Marketing Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/order.html",
+      "title": "My Order Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/password-reset.html",
+      "title": "My Password Reset Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/sidebar-hero.html",
+      "title": "My Sidebar Hero Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/sidebar.html",
+      "title": "My Sidebar Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/emails/templates/welcome.html",
+      "title": "My Welcome Template Email Template Subject"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-new-features-getting-started.html",
+      "title": "New Features in Foundation 6 and Ways to Get Started | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-optimizing-sass-organization.html",
+      "title": "Optimizing Foundation 6 Sass and Organization | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-stack-file-structure.html",
+      "title": "Overview of Foundation's ZURB Stack and File Structure | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/premium-support.html",
+      "title": "PLZ Halp | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-block-grid-tutorial.html",
+      "title": "Prototyping with the Foundation 6 Block Grid | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/refining-the-responsive-navigation-gary-jenning.html",
+      "title": "Refining and Styling the Foundation 6 Responsive Navigation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/refining-the-responsive-navigation-p2-gary-jenning.html",
+      "title": "Refining and Styling the Foundation 6 Responsive Navigation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/refining-and-styling-the-hero-and-footer-gary-jennings.html",
+      "title": "Refining and Styling the Hero and Footer | Foundation"
+    },
+    {
+      "url": "https://get.foundation/responsive-tables.html",
+      "title": "Responsive Tables | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/email-strategy-testing.html",
+      "title": "Sending Your Emails | Foundation"
+    },
+    {
+      "url": "https://get.foundation/social-icons.html",
+      "title": "Social Icons | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/forum-community-participation.html",
+      "title": "Start Sharing on the Forum | Foundation"
+    },
+    {
+      "url": "https://get.foundation/stencils.html",
+      "title": "Stencils | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-grid-basics-mobile-first.html",
+      "title": "The basics of the Foundation 6 Grid <br>and Mobile First | Foundation"
+    },
+    {
+      "url": "https://get.foundation/showcase/buzz.html",
+      "title": "The Buzz About Foundation | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-dropdown.html",
+      "title": "The Foundation 6.4 Dropdown | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-add-js-libraries.html",
+      "title": "The Foundation 6.4 Off-Canvas | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-offcanvas.html",
+      "title": "The Foundation 6.4 Off-Canvas | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-reveal-modal.html",
+      "title": "The Foundation 6.4 Reveal Modal | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-toggler.html",
+      "title": "The Foundation 6.4 Toggler | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-4-xy-grid.html",
+      "title": "The Foundation 6.4 XY Grid | Foundation"
+    },
+    {
+      "url": "https://get.foundation/",
+      "title": "The most advanced responsive front-end framework in the world. | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/tutorials.html",
+      "title": "Tutorials | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/events.html",
+      "title": "Upcoming Events | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/upgrade-foundation-6-rails-gem.html",
+      "title": "Upgrade to the Foundation 6 Rails Gem | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/foundation-6-panini-variables-helpers-simplify-components.html",
+      "title": "Using Panini Variables and Helpers to Simplify Components | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/what-is-flexbox.html",
+      "title": "What is Flexbox? | Foundation"
+    },
+    {
+      "url": "https://get.foundation/learn/why-foundation.html",
+      "title": "Why Foundation for Sites | Foundation"
+    },
+    {
+      "url": "https://get.foundation/get-involved/yetinauts.html",
+      "title": "Yetinauts - Foundation Development Team | Foundation"
+    }
+  ]
+}

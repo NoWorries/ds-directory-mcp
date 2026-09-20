@@ -1,0 +1,76 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "arcgis-calcite",
+  "organization": "ArcGIS",
+  "design_system": "Calcite",
+  "full_name": "ArcGIS — Calcite",
+  "start_urls": [
+    "https://developers.arcgis.com/calcite-design-system/"
+  ],
+  "detail_url": "/systems/arcgis-calcite",
+  "pages_indexed": 7,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T20:38:18+00:00",
+  "last_modified": "Fri, 18 Sep 2026 13:31:04 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "npm": [
+      "https://www.npmjs.com/package/@esri/calcite-components"
+    ],
+    "icons": [
+      "https://developers.arcgis.com/calcite-design-system/icons"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "accessibility_conformance": "Section 508",
+    "frameworks": [
+      "Web Components",
+      "Angular"
+    ]
+  },
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 373,
+    "last_pushed": "2026-09-13T13:57:42Z"
+  },
+  "npm_meta": {
+    "latest_version": "5.1.2",
+    "last_published": "2026-07-03T00:23:11.561Z",
+    "weekly_downloads": 217753
+  },
+  "indexed_pages": [
+    {
+      "url": "https://developers.arcgis.com/calcite-design-system/archive",
+      "title": "Archived documentation | Calcite Design System | Esri Developer"
+    },
+    {
+      "url": "https://developers.arcgis.com/calcite-design-system",
+      "title": "Calcite Design System | Esri Developer"
+    },
+    {
+      "url": "https://developers.arcgis.com/calcite-design-system/core-concepts",
+      "title": "Core concepts | Calcite Design System | Esri Developer"
+    },
+    {
+      "url": "https://developers.arcgis.com/calcite-design-system/get-started",
+      "title": "Get started | Calcite Design System | Esri Developer"
+    },
+    {
+      "url": "https://developers.arcgis.com/calcite-design-system/releases/summaries/2023-01",
+      "title": "January 2023 Summary | Calcite Design System | Esri Developer"
+    },
+    {
+      "url": "https://developers.arcgis.com/calcite-design-system/releases/summaries/2023-05",
+      "title": "May 2023 Summary | Calcite Design System | Esri Developer"
+    },
+    {
+      "url": "https://developers.arcgis.com/calcite-design-system/tutorials",
+      "title": "Tutorials | Calcite Design System | Esri Developer"
+    }
+  ]
+}

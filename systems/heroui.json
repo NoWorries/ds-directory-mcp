@@ -1,0 +1,49 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "heroui",
+  "organization": null,
+  "design_system": "HeroUI",
+  "full_name": "HeroUI",
+  "start_urls": [
+    "https://www.heroui.com/"
+  ],
+  "detail_url": "/systems/heroui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:43:31+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": "2026-09-18T06:29:05.587Z",
+  "resources": {
+    "github": [
+      "https://github.com/heroui-inc/heroui"
+    ],
+    "agent_instructions": [
+      "https://www.heroui.com/llms.txt",
+      "https://www.heroui.com/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "exemplars": true,
+    "frameworks": [
+      "React",
+      "Web Components"
+    ]
+  },
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 30740,
+    "last_pushed": "2026-09-18T10:15:39Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://www.heroui.com/llms.txt",
+      "title": "HeroUI — llms.txt"
+    }
+  ]
+}

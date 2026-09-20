@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search 119 design systems</title>
+<meta name="build-date" content="2026-09-18">
+<meta name="last-crawl-activity" content="2026-09-18">
+<meta name="description" content="Semantic search across 119 publicly documented design systems (2,950 pages indexed) — searchable in a browser or via MCP for AI agents.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+
+  @view-transition { navigation: auto; }
+
+  /* Named transition (view-transition-name: thumb-<slug>, tagged
+     view-transition-class: thumb — set inline in generate_directory.py's
+     render_card/generate_systems.py's thumb_html, since the name itself must
+     be unique per element but the *class* lets every card share one
+     animation rule) gets a slightly slower, eased morph than the default
+     page crossfade, so a card's thumbnail visibly glides into the detail
+     page's hero image instead of just cutting; everything else keeps the
+     plain default root crossfade, intentionally quick. (A matching
+     title-<slug> transition on the heading was tried and dropped — morphing
+     text at a different size/weight read as glitchy, not smooth.)
+     Chrome/Edge only (view-transition-class needs Chrome 125+) — a no-op
+     elsewhere, same as @view-transition itself. */
+  ::view-transition-group(*) { animation-duration: 0.3s; }
+  ::view-transition-group(*.thumb) {
+    animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  :root {
+    --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
+    --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
+    --accent: #1d4ed8; --accent-strong: #1638a8; --accent-soft: #e8edfc; --accent-soft-text: #1d4ed8;
+    --shadow: 0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -10px rgba(15,23,42,0.14);
+    /* Faint fractal-noise grain (alpha-only, so it reads as texture rather
+       than color) — the shared look for .textured containers below. Kept as
+       a token so light/dark could each tune it without touching every
+       container's markup. */
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --surface: #151a21; --surface-sunken: #1b212a; --border: #2a323d;
+      --text: #e7eaee; --text-muted: #98a2b0; --text-faint: #626b78;
+      --accent: #7ea2ff; --accent-strong: #a4c0ff; --accent-soft: rgba(126,162,255,0.12); --accent-soft-text: #a4c0ff;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 18px -10px rgba(0,0,0,0.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  /* A faint grain treatment for card-like containers (the MCP callout, nav
+     cards, grid cards) — applied via ::before so it layers over each
+     container's own background without fighting its other background-image
+     uses (e.g. a card's own thumbnail). Needs the container to have
+     `position: relative` (each usage sets it) and `overflow: hidden`
+     (usually already there) so it respects rounded corners instead of
+     bleeding past them. */
+  .textured { position: relative; }
+  .textured::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background-image: var(--noise);
+    background-repeat: repeat;
+    opacity: 0.7;
+  }
+  .textured > * { position: relative; }
+  body {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); margin: 0; padding: calc(60px + 32px) 24px 80px;
+  }
+  a { color: var(--accent); }
+  .page { max-width: 1040px; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; }
+  h1 {
+    font-family: "JetBrains Mono", monospace; font-weight: 700;
+    font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); letter-spacing: -0.01em; line-height: 1.25;
+    margin: 0 0 12px; text-wrap: balance;
+  }
+  .subtitle { color: var(--text-muted); font-size: 0.98rem; line-height: 1.55; max-width: 64ch; margin: 0 0 28px; }
+
+  /* --- Fixed global top nav --- */
+  .site-nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 100;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+  }
+  .site-nav-inner {
+    max-width: 1040px; margin: 0 auto; width: 100%; padding: 0 24px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .site-brand {
+    font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.86rem;
+    color: var(--text); text-decoration: none; white-space: nowrap;
+  }
+  /* Two text variants swapped by viewport rather than one truncated/wrapped
+     string — "Design Systems Directory" is the real name everywhere there's
+     room for it; only the mobile bar (already tight with search+menu on the
+     same row) gets the shortened form. Both live in the DOM at once but
+     only one is ever visible, so a screen reader announces exactly one
+     (the other is display:none, which removes it from the accessibility
+     tree — not a duplicate-announcement risk). */
+  .site-brand-short { display: none; }
+  /* NAV_OVERFLOW_JS's own, width-independent trigger for the same swap —
+     shortening the title is the first, least disruptive space-saving move
+     it tries whenever the nav doesn't fit, before it ever touches Suggest
+     or collapses a route into the "More" menu. Separate from (and additive
+     to) the phone-only media query below, which still applies its own
+     floor regardless of what JS decides. */
+  .site-nav-inner.brand-compact .site-brand-full { display: none; }
+  .site-nav-inner.brand-compact .site-brand-short { display: inline; }
+  /* nowrap rather than wrapping to a second line — a wrapped ragged row was
+     the original bug report here. NAV_OVERFLOW_JS keeps this from actually
+     overflowing: it measures whenever the row doesn't fit and moves the
+     lowest-priority route link into the "More" dropdown one at a time until
+     what's left fits on one line. Deliberately NOT `overflow: hidden` here
+     even as a pre-JS safety net — the "More" dropdown menu below is a
+     descendant of this element, and hidden overflow on an ancestor clips an
+     absolutely-positioned descendant's paint regardless of its own
+     position/containing-block, which made the open dropdown invisible.
+     min-width: 0 overrides the flex default of `auto`, which otherwise
+     refuses to shrink a flex item below its content's own min-content size
+     — with several nowrap links inside, that min-content size is the full
+     unwrapped width of every link combined, so without this override the
+     row never actually shrank at all (scrollWidth == clientWidth always),
+     and NAV_OVERFLOW_JS's overflow check never had anything real to catch. */
+  .site-nav-links { display: flex; flex-wrap: nowrap; align-items: center; gap: 4px; flex: 1; min-width: 0; }
+  .site-nav-links a {
+    font-size: 0.86rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 6px; white-space: nowrap;
+  }
+  .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
+  .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+  /* "Suggest a system" lives in the same link list as the routes (so the
+     mobile menu below doesn't need a second, separately-toggled element)
+     but keeps its own accent treatment so it still reads as a distinct
+     call-to-action rather than one more route. */
+  .site-nav-links a.nav-suggest {
+    display: inline-flex; align-items: center; gap: 5px;
+    color: var(--accent); font-weight: 600; margin-left: auto;
+  }
+  .site-nav-links a.nav-suggest svg { flex: none; }
+  /* Second space-saving move NAV_OVERFLOW_JS tries (after shortening the
+     title, before collapsing any route into "More") — the label hides but
+     the link keeps its aria-label, so the CTA stays a real, accessible
+     target at every width, just icon-only when space is tight. */
+  .site-nav-links a.nav-suggest.compact .nav-suggest-label { display: none; }
+  /* Deliberately the same neutral hover as every other link (not
+     accent-soft) — accent-soft is reserved for .current below, so hovering
+     Suggest never reads as "this is the page you're on" the way it would if
+     hover and current shared a background. */
+  .site-nav-links a.nav-suggest:hover { background: var(--surface-sunken); }
+
+  .nav-search { display: flex; align-items: center; }
+  .nav-search-toggle {
+    background: none; border: none; padding: 6px 8px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; border-radius: 6px;
+  }
+  .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-search-kbd {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; line-height: 1.4;
+  }
+  /* Narrow viewports have no room for the shortcut hint next to the icon —
+     the shortcut itself still works, this is just the visible reminder. */
+  @media (max-width: 640px) {
+    .nav-search-kbd { display: none; }
+  }
+
+  /* --- Cmd+K command palette (see PAGEFIND_JS/COMMAND_PALETTE_JS) — a
+     full-screen overlay, reachable from any page via the nav's search icon
+     or the Cmd+K/Ctrl+K shortcut. Kept visually distinct from the small
+     inline .ds-typeahead-dropdown below: this is a modal takeover (real
+     page-content search, more room for an excerpt), that one's a quick
+     inline suggestion list under a page's own search box. */
+  .cmdk-backdrop {
+    position: fixed; inset: 0; z-index: 100; background: rgba(15, 23, 42, 0.5);
+    display: flex; align-items: flex-start; justify-content: center; padding: 12vh 16px 0;
+  }
+  .cmdk-backdrop[hidden] { display: none; }
+  .cmdk-panel {
+    width: 100%; max-width: 560px; max-height: 60vh; display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .cmdk-input-row {
+    display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); flex: none;
+  }
+  .cmdk-input-row svg { color: var(--text-faint); flex: none; }
+  .cmdk-input-row input {
+    flex: 1; border: none; background: none; font: inherit; font-size: 1rem; color: var(--text);
+  }
+  .cmdk-input-row input:focus { outline: none; }
+  .cmdk-esc {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; flex: none;
+  }
+  .cmdk-results { overflow-y: auto; }
+  .cmdk-item {
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 16px;
+    text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border);
+  }
+  .cmdk-item:hover, .cmdk-item.is-active { background: var(--surface-sunken); }
+  .cmdk-item-title { font-weight: 500; font-size: 0.9rem; }
+  .cmdk-item-excerpt {
+    font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cmdk-item-excerpt mark { background: var(--accent-soft); color: var(--accent-soft-text); }
+  .cmdk-empty { padding: 14px 16px; font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+  .cmdk-footer {
+    display: block; padding: 12px 16px; font-size: 0.85rem; color: var(--accent);
+    text-decoration: none; border-top: 1px solid var(--border);
+  }
+  .cmdk-footer:hover { background: var(--surface-sunken); }
+
+  /* --- Search typeahead dropdown (see SEARCH_TYPEAHEAD_JS) — shared by the
+     homepage hero search box and the search results page's own input. The
+     wrapping element each consumer places this inside needs its own
+     position: relative for the absolute positioning here to anchor
+     correctly against the input rather than the page. */
+  .ds-typeahead-dropdown {
+    position: absolute; z-index: 60; top: 100%; left: 0; right: 0; margin-top: 6px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .ds-typeahead-dropdown[hidden] { display: none; }
+  .ds-typeahead-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 14px; text-decoration: none; color: var(--text); font-size: 0.9rem;
+  }
+  .ds-typeahead-item:hover, .ds-typeahead-item.is-active { background: var(--surface-sunken); }
+  .ds-typeahead-name { font-weight: 500; }
+  .ds-typeahead-type {
+    font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--text-faint); background: var(--surface-sunken); border-radius: 4px;
+    padding: 2px 6px; flex: none;
+  }
+  .ds-typeahead-item.is-active .ds-typeahead-type { color: var(--accent); }
+
+  /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
+     .site-nav-links already fits inline. Fixed box size (rather than sizing
+     to whichever icon is currently showing) matters here: the menu glyph
+     and the close glyph aren't the same size, so without a fixed box the
+     button itself resized by a couple of px on toggle — and since it's the
+     last item in a row right-aligned via nav-search's margin-left:auto,
+     that resize shifted the search icon beside it on every open/close.
+     Both icon layers are stacked via position:absolute inset:0 inside that
+     fixed box so swapping which one is visible never changes the box. */
+  .nav-menu-toggle {
+    display: none; position: relative; width: 32px; height: 32px; background: none; border: none;
+    padding: 0; margin-left: 4px; cursor: pointer; color: var(--text-muted); border-radius: 6px; flex: none;
+  }
+  .nav-menu-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-menu-toggle .icon-menu, .nav-menu-toggle .icon-close {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  }
+  .nav-menu-toggle .icon-close { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-close { display: flex; }
+
+  /* --- "More" overflow menu (see NAV_OVERFLOW_JS) — the in-between state
+     for widths too narrow to fit every route inline but not phone-narrow
+     enough to need the full hamburger sheet below. Hidden by default (both
+     the [hidden] attribute and having nothing in the menu yet); JS reveals
+     it only once it's actually moved a link in. */
+  .nav-more { position: relative; }
+  .nav-more-toggle {
+    display: inline-flex; align-items: center; gap: 4px; font: inherit; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); background: none; border: none; padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; white-space: nowrap;
+  }
+  .nav-more-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  /* Reuses the same chevron as everywhere else on the site (see .name-chevron
+     in generate_directory.py) rotated to point down at rest, up when open —
+     one icon asset, two orientations, instead of a second glyph. */
+  .nav-more-toggle svg { flex: none; transform: rotate(90deg); transition: transform 0.15s; }
+  .nav-more-toggle[aria-expanded="true"] svg { transform: rotate(270deg); }
+  .nav-more-menu {
+    display: none; position: absolute; top: 100%; left: 0; margin-top: 4px; min-width: 170px;
+    flex-direction: column; gap: 2px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; box-shadow: var(--shadow); padding: 6px; z-index: 110;
+  }
+  .nav-more-menu.open { display: flex; }
+  .nav-more-menu a {
+    padding: 8px 10px; border-radius: 6px; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); text-decoration: none; white-space: nowrap;
+  }
+  .nav-more-menu a:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-more-menu a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  /* Collapsed into a hamburger only below this TRUE phone-narrow width.
+     Above it (see NAV_OVERFLOW_JS), a route link that no longer fits inline
+     moves into the "More" dropdown above one at a time instead — so getting
+     narrower on a tablet/small-laptop first thins out the inline row, and
+     only falls back to the full mobile sheet once there's no longer room
+     for even brand + search + one route + Suggest. Below this width the
+     link list itself becomes the toggled panel: hidden by default, dropped
+     down as a full-width sheet under the fixed bar once opened. */
+  @media (max-width: 640px) {
+    .nav-menu-toggle { display: flex; }
+    .site-nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 2px; margin: 0;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow); padding: 8px 16px 14px; max-height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+    .site-nav-links.nav-open { display: flex; }
+    .site-nav-links a { padding: 11px 10px; font-size: 0.95rem; }
+    /* Still visually separated from the plain routes above it (margin-top +
+       border-top divider) but keeps the same rounded-pill shape as every
+       other item — an unrounded, edge-to-edge row here read as a leftover
+       fragment of a different component, not an intentional design. */
+    .site-nav-links a.nav-suggest { margin-left: 0; margin-top: 6px; border-top: 1px solid var(--border); padding-top: 14px; }
+    /* The "More" button never applies at this width (NAV_OVERFLOW_JS bails
+       out and restores every link to the flat sheet whenever this same
+       breakpoint matches), so it never needs its own mobile styling. */
+    .nav-more { display: none; }
+    /* .site-nav-links no longer occupies flex:1 once it's the hidden/
+       toggled panel above, so without this, search+menu just sat right
+       after the brand text with a dead gap stretching to the bar's far edge
+       instead of anchoring there — margin-left: auto on the first remaining
+       flex item claims all that leftover space for itself, pushing
+       everything from here on right-aligned as a group. */
+    .nav-search { margin-left: auto; }
+    /* The wide desktop inter-item gap (used for spacing out the full link
+       row) is much too loose for a two-icon cluster once the link list
+       stops being an in-flow sibling here — this is what actually put
+       daylight between the search and menu icons, not their own margins. */
+    .site-nav-inner { gap: 8px; }
+    .nav-menu-toggle { margin-left: 0; }
+    .site-brand-full { display: none; }
+    .site-brand-short { display: inline; }
+  }
+
+  .hero { padding-top: 8px; margin-bottom: 36px; }
+  .hero-search-wrap { position: relative; }
+  .hero h1 { margin-bottom: 10px; }
+  .hero-subtitle { font-size: 1.05rem; color: var(--text-muted); line-height: 1.5; max-width: 62ch; margin: 0 0 22px; }
+  #q {
+    width: 100%; padding: 20px 22px; font: inherit; font-size: 1.2rem; box-sizing: border-box;
+    border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text);
+    box-shadow: 0 2px 4px rgba(15,23,42,0.05), 0 12px 32px -14px rgba(15,23,42,0.18);
+  }
+  #q:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  .nav-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+  .nav-card {
+    display: flex; align-items: center; gap: 14px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; text-decoration: none; color: var(--text);
+    box-shadow: var(--shadow); transition: border-color 0.15s, transform 0.15s;
+    overflow: hidden;
+  }
+  .nav-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .nav-card-icon {
+    flex: none; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px;
+    border-radius: 9px; background: var(--accent-soft); color: var(--accent);
+  }
+  .nav-card-text { flex: 1; min-width: 0; }
+  .nav-card-text h3 { margin: 0 0 2px; font-size: 0.96rem; font-weight: 600; color: var(--text); }
+  .nav-card-text p { margin: 0; font-size: 0.8rem; color: var(--text-muted); }
+  .nav-card-arrow { flex: none; color: var(--text-faint); font-size: 1.2rem; }
+  .nav-card:hover .nav-card-arrow { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    /* #q's font-size drove the placeholder's own character width — at
+       1.2rem on a ~340px-wide input, "e.g. table column resizing, disabled
+       button sta..." clipped after a handful of words with no visual hint
+       there was more. Smaller text fits meaningfully more of it before the
+       same clipping (the field's real limitation, not this one's to fully
+       solve) sets in. */
+    #q { font-size: 1rem; padding: 16px 18px; }
+    /* The 42px icon box read as disproportionately large once the card
+       itself was full viewport width but still narrow in absolute terms —
+       shrunk alongside the card's own tighter padding so the text gets
+       more of the available room back. */
+    .nav-card { padding: 14px 16px; gap: 12px; }
+    .nav-card-icon { width: 32px; height: 32px; }
+    .nav-card-icon svg { width: 16px; height: 16px; }
+  }
+
+  .mcp-bar {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+    background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 36px; box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .mcp-badge {
+    display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft);
+    border-radius: 4px; padding: 2px 7px; margin-bottom: 4px;
+  }
+  .mcp-card-text h2 { font-family: "JetBrains Mono", monospace; font-size: 0.82rem; margin: 0; font-weight: 700; color: var(--text); }
+  .mcp-card-text p { margin: 0; font-size: 0.78rem; color: var(--text-muted); max-width: 48ch; }
+  /* Every status state (checking/awake/sleeping/waking) renders the exact
+     same three elements — dot, text, wake button — so the row never
+     reflows between states; only their content/visibility changes (see
+     renderMcpStatus() below). The button is hidden with `visibility`, not
+     `hidden`/`display: none`, specifically so it keeps occupying its slot
+     even when invisible — that's what keeps .mcp-bar's height constant
+     across every state instead of the button's appearance/disappearance
+     reshuffling the row. min-height covers the text wrapping to two lines
+     on narrow widths, for the same reason. */
+  .mcp-status { margin-top: 6px !important; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; line-height: 1.3; min-height: 2.6em; }
+  .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .status-dot.checking { background: var(--text-faint); }
+  .status-dot.awake { background: #22c55e; }
+  .status-dot.sleeping { background: #f59e0b; }
+  .status-dot.waking { background: var(--accent); animation: status-pulse 2s ease-in-out infinite; }
+  @keyframes status-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+  .wake-button {
+    font: inherit; font-size: 0.76rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--surface); color: var(--accent); cursor: pointer;
+  }
+  .wake-button:hover { background: var(--accent-soft); }
+  .wake-button:disabled { opacity: 0.6; cursor: default; }
+  /* min-width: 0 is what actually lets .mcp-command shrink below its
+     content's natural width inside this flex row — a flex item's default
+     min-width is auto (its unshrunk content size), so without this the row
+     just overflowed the card instead of the command scrolling internally
+     as intended, squeezing Copy half off the edge. */
+  .mcp-install { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .mcp-command {
+    font-family: "JetBrains Mono", monospace; font-size: 0.78rem; background: var(--surface-sunken);
+    color: var(--text); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px;
+    white-space: nowrap; overflow-x: auto; max-width: 380px; flex: 1 1 auto; min-width: 0;
+  }
+  .mcp-copy {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex: none;
+    font-family: "IBM Plex Sans", sans-serif; font-size: 0.78rem; font-weight: 600; padding: 8px 12px;
+    border-radius: 6px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--accent); cursor: pointer; white-space: nowrap;
+  }
+  .mcp-copy svg { flex: none; }
+  .mcp-copy:hover { background: var(--accent-soft); }
+  @media (max-width: 640px) {
+    /* Side-by-side left too little room for both the command and a legible
+       Copy button on a phone-width card — stacked, the command gets the
+       full card width (still scrolling internally if it's still too long
+       for that) and Copy becomes a proper full-width tap target instead of
+       a sliver squeezed against it. */
+    .mcp-install { flex-direction: column; align-items: stretch; }
+    .mcp-command { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+    <nav class="site-nav">
+      <div class="site-nav-inner" id="siteNavInner">
+        <a href="/" class="site-brand">
+          <span class="site-brand-full">Design Systems Directory</span>
+          <span class="site-brand-short">DS Directory</span>
+        </a>
+        <div class="site-nav-links" id="siteNavLinks">
+          <a href="/" class="current">Home</a>
+          <a href="/directory" class="">All Systems</a>
+          <a href="/compare" class="">Compare</a>
+          <a href="/components" class="">Components</a>
+          <a href="/patterns" class="">Patterns</a>
+          <a href="/foundations" class="">Foundations</a>
+          <div class="nav-more" id="navMore" hidden>
+            <button type="button" class="nav-more-toggle" id="navMoreToggle" aria-haspopup="true" aria-expanded="false">More<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            <div class="nav-more-menu" id="navMoreMenu"></div>
+          </div>
+          <a class="nav-suggest" href="/suggest" aria-label="Suggest a system"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span class="nav-suggest-label">Suggest a system</span></a>
+        </div>
+        <div class="nav-search">
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search everything (Cmd+K)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><kbd class="nav-search-kbd">&#8984;K</kbd>
+          </button>
+        </div>
+        <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
+          <span class="icon-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span class="icon-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="cmdk-backdrop" id="cmdkBackdrop" hidden>
+      <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+        <form class="cmdk-input-row" id="cmdkForm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="cmdkInput" placeholder="Search every page on this site..." autocomplete="off">
+          <kbd class="cmdk-esc">Esc</kbd>
+        </form>
+        <div class="cmdk-results" id="cmdkResults"></div>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var pagefindPromise = null;
+
+  function loadPagefind() {
+    if (!pagefindPromise) {
+      pagefindPromise = import("/pagefind/pagefind.js")
+        .then(function (mod) { return mod.init().then(function () { return mod; }); })
+        .catch(function () { return null; });
+    }
+    return pagefindPromise;
+  }
+
+  // [{title, url, excerpt}], best-effort empty on any failure (offline,
+  // pagefind.js 404 on a local/dev preview that skipped the build step,
+  // etc.) — same "never breaks the page, just shows nothing" contract
+  // dsMatchSearchIndex above already follows.
+  window.dsMatchPagefind = function (query, limit) {
+    var q = (query || "").trim();
+    if (!q) return Promise.resolve([]);
+    return loadPagefind().then(function (pagefind) {
+      if (!pagefind) return [];
+      return pagefind.search(q).then(function (search) {
+        var picked = search.results.slice(0, limit || 6);
+        return Promise.all(picked.map(function (r) { return r.data(); }));
+      }).then(function (data) {
+        return data.map(function (d) {
+          return { title: (d.meta && d.meta.title) || d.url, url: d.url, excerpt: d.excerpt || "" };
+        });
+      });
+    }).catch(function () { return []; });
+  };
+})();
+</script>
+    <script>
+(function () {
+  var toggle = document.getElementById("navSearchToggle");
+  var backdrop = document.getElementById("cmdkBackdrop");
+  var form = document.getElementById("cmdkForm");
+  var input = document.getElementById("cmdkInput");
+  var results = document.getElementById("cmdkResults");
+  if (!backdrop || !form || !input || !results) return;
+
+  var activeIndex = -1;
+  var debounceTimer;
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function open() {
+    backdrop.hidden = false;
+    document.body.style.overflow = "hidden";
+    input.value = "";
+    results.innerHTML = "";
+    activeIndex = -1;
+    input.focus();
+  }
+
+  function close() {
+    backdrop.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function setActive(items, i) {
+    activeIndex = i;
+    items.forEach(function (el, j) { el.classList.toggle("is-active", j === activeIndex); });
+  }
+
+  function render(matches, query) {
+    activeIndex = -1;
+    var footer = '<a class="cmdk-footer" href="/search?q=' + encodeURIComponent(query) + '">'
+      + "Search across every design system's own docs for \u201c" + escapeHtml(query) + "\u201d</a>";
+    if (!matches.length) {
+      results.innerHTML = '<p class="cmdk-empty">No matching page here — try the full search below.</p>' + footer;
+      return;
+    }
+    results.innerHTML = matches.map(function (item) {
+      return '<a class="cmdk-item" href="' + item.url + '">'
+        + '<span class="cmdk-item-title">' + escapeHtml(item.title) + '</span>'
+        + (item.excerpt ? '<span class="cmdk-item-excerpt">' + item.excerpt + '</span>' : '')
+        + '</a>';
+    }).join("") + footer;
+  }
+
+  if (toggle) toggle.addEventListener("click", open);
+
+  document.addEventListener("keydown", function (e) {
+    var isK = e.key === "k" || e.key === "K";
+    if (isK && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      if (backdrop.hidden) open(); else close();
+      return;
+    }
+    if (!backdrop.hidden && e.key === "Escape") { close(); return; }
+    if (backdrop.hidden) return;
+
+    var items = Array.prototype.slice.call(results.querySelectorAll(".cmdk-item"));
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(items, Math.min(activeIndex + 1, items.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(items, Math.max(activeIndex - 1, -1)); }
+    else if (e.key === "Enter" && activeIndex >= 0 && items[activeIndex]) {
+      e.preventDefault();
+      window.location.href = items[activeIndex].getAttribute("href");
+    }
+  });
+
+  backdrop.addEventListener("click", function (e) {
+    if (e.target === backdrop) close();
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+
+  input.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    var query = input.value;
+    debounceTimer = setTimeout(function () {
+      window.dsMatchPagefind(query, 6).then(function (matches) {
+        if (input.value === query) render(matches, query.trim());
+      });
+    }, 150);
+  });
+})();
+</script>
+    <script>
+(function () {
+  var toggle = document.getElementById("navMenuToggle");
+  var panel = document.getElementById("siteNavLinks");
+  if (!toggle || !panel) return;
+
+  function setOpen(open) {
+    panel.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  toggle.addEventListener("click", function () {
+    setOpen(!panel.classList.contains("nav-open"));
+  });
+  panel.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setOpen(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setOpen(false);
+  });
+  document.addEventListener("click", function (e) {
+    if (panel.classList.contains("nav-open") && !panel.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      setOpen(false);
+    }
+  });
+})();
+</script>
+    <script>
+(function () {
+  var inner = document.getElementById("siteNavInner");
+  var links = document.getElementById("siteNavLinks");
+  var moreWrap = document.getElementById("navMore");
+  var moreToggle = document.getElementById("navMoreToggle");
+  var moreMenu = document.getElementById("navMoreMenu");
+  var suggest = links ? links.querySelector(".nav-suggest") : null;
+  if (!inner || !links || !moreWrap || !moreToggle || !moreMenu || !suggest) return;
+
+  var mobileQuery = window.matchMedia("(max-width: 640px)");
+
+  function fits() {
+    return links.scrollWidth <= links.clientWidth + 1;
+  }
+
+  function routeLinks() {
+    return Array.prototype.slice.call(links.children).filter(function (el) {
+      return el.tagName === "A" && el !== suggest;
+    });
+  }
+
+  function closeMoreMenu() {
+    moreMenu.classList.remove("open");
+    moreToggle.setAttribute("aria-expanded", "false");
+  }
+
+  // Three space-saving measures, applied in order from least to most
+  // disruptive, each only reached once the previous one still isn't enough:
+  // (1) shorten the site title, (2) shrink "Suggest a system" to its icon,
+  // (3) move a route link into the "More" dropdown. Every run starts by
+  // undoing all three (cheaper and more robust than tracking incremental
+  // deltas) and re-measures from a clean slate.
+  function layout() {
+    closeMoreMenu();
+    Array.prototype.slice.call(moreMenu.children).forEach(function (a) {
+      links.insertBefore(a, moreWrap);
+    });
+    moreWrap.hidden = true;
+    inner.classList.remove("brand-compact");
+    suggest.classList.remove("compact");
+
+    if (mobileQuery.matches) return; // the full hamburger sheet handles this range on its own
+
+    if (fits()) return;
+    inner.classList.add("brand-compact");
+
+    if (fits()) return;
+    suggest.classList.add("compact");
+
+    var guard = 0;
+    while (!fits() && guard < 20) {
+      guard++;
+      var candidates = routeLinks();
+      if (candidates.length <= 1) break; // always leave at least one route visible inline
+      var victim = null;
+      for (var i = candidates.length - 1; i >= 0; i--) {
+        if (!candidates[i].classList.contains("current")) { victim = candidates[i]; break; }
+      }
+      if (!victim) victim = candidates[candidates.length - 1];
+      moreMenu.insertBefore(victim, moreMenu.firstChild);
+      moreWrap.hidden = false;
+    }
+  }
+
+  var resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 100);
+  });
+  if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", layout);
+  else mobileQuery.addListener(layout); // Safari <14
+
+  moreToggle.addEventListener("click", function () {
+    var open = !moreMenu.classList.contains("open");
+    moreMenu.classList.toggle("open", open);
+    moreToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  moreMenu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMoreMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMoreMenu();
+  });
+  document.addEventListener("click", function (e) {
+    if (moreMenu.classList.contains("open") && !moreWrap.contains(e.target)) closeMoreMenu();
+  });
+
+  layout();
+})();
+</script>
+    
+<div class="page">
+  <section class="hero" id="search">
+    <h1>Search 119 design systems</h1>
+    <p class="hero-subtitle">Find component patterns, tokens, and guidance across every publicly documented design system indexed here — or connect it to your AI agent via MCP.</p>
+    <form id="searchForm" action="/search" method="get">
+      <div class="hero-search-wrap">
+        <input id="q" name="q" type="text" placeholder="e.g. table column resizing, disabled button states..." autocomplete="off">
+        <div class="ds-typeahead-dropdown" id="qSuggestions" hidden></div>
+      </div>
+    </form>
+  </section>
+
+  <div class="nav-cards">
+    <a class="nav-card textured" href="/directory">
+      <span class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+      <span class="nav-card-text">
+        <h3>Browse all systems</h3>
+        <p>Every indexed design system, as a sortable list or grid.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a class="nav-card textured" href="/components">
+      <span class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
+      <span class="nav-card-text">
+        <h3>Browse by component</h3>
+        <p>See which systems have documented a given UI component.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a class="nav-card textured" href="/patterns">
+      <span class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
+      <span class="nav-card-text">
+        <h3>Browse by pattern</h3>
+        <p>Task-level compositions built from several components.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a class="nav-card textured" href="/foundations">
+      <span class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
+      <span class="nav-card-text">
+        <h3>Browse by foundation</h3>
+        <p>System-wide design principles that aren't components.</p>
+      </span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <div class="mcp-bar textured">
+    <div class="mcp-card-text">
+      <span class="mcp-badge">MCP Server</span>
+      <h2>Connect this to Claude (or any MCP-compatible client)</h2>
+      <p>One command adds this whole index as a tool your agent can call directly.</p>
+      <p class="mcp-status" id="mcpStatus">
+        <span class="status-dot checking"></span>
+        <span class="status-text">Checking server status…</span>
+        <button type="button" class="wake-button" id="wakeButton" style="visibility: hidden" disabled>Wake it up</button>
+      </p>
+    </div>
+    <div class="mcp-install">
+      <code class="mcp-command" id="mcpCommand">claude mcp add ds-directory --transport http https://ds-directory-mcp.onrender.com/mcp</code>
+      <button class="mcp-copy" id="mcpCopy" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span id="mcpCopyLabel">Copy</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var INDEX_URL = "/search-index.json";
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch(INDEX_URL).then(function (r) { return r.json(); }).catch(function () { return []; });
+    }
+    return indexPromise;
+  }
+
+  var TYPE_LABELS = { system: "System", components: "Component", patterns: "Pattern", foundations: "Foundation" };
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function matchIndex(items, query, limit) {
+    var q = query.trim().toLowerCase();
+    if (!q) return [];
+    return items.filter(function (item) { return item.name.toLowerCase().indexOf(q) !== -1; }).slice(0, limit || 6);
+  }
+
+  // Exposed globally (not just used internally by dsAttachTypeahead below)
+  // so generate_search.py can also fold these same curated matches into its
+  // real results list once a full search actually runs, not just the
+  // pre-submit dropdown.
+  window.dsMatchSearchIndex = function (query, limit) {
+    return loadIndex().then(function (items) { return matchIndex(items, query, limit); });
+  };
+
+  window.dsAttachTypeahead = function (input, dropdown) {
+    if (!input || !dropdown) return;
+    var activeIndex = -1;
+
+    function render(matches) {
+      activeIndex = -1;
+      if (!matches.length) {
+        dropdown.hidden = true;
+        dropdown.innerHTML = "";
+        return;
+      }
+      dropdown.innerHTML = matches.map(function (item) {
+        return '<a class="ds-typeahead-item" href="' + item.url + '">' +
+          '<span class="ds-typeahead-name">' + escapeHtml(item.name) + '</span>' +
+          '<span class="ds-typeahead-type">' + (TYPE_LABELS[item.type] || item.type) + '</span></a>';
+      }).join("");
+      dropdown.hidden = false;
+    }
+
+    input.addEventListener("input", function () {
+      var query = input.value;
+      window.dsMatchSearchIndex(query, 6).then(function (matches) {
+        if (input.value === query) render(matches);
+      });
+    });
+    input.addEventListener("focus", function () {
+      if (input.value.trim()) window.dsMatchSearchIndex(input.value, 6).then(render);
+    });
+    input.addEventListener("keydown", function (e) {
+      if (dropdown.hidden) return;
+      var items = Array.prototype.slice.call(dropdown.querySelectorAll(".ds-typeahead-item"));
+      if (e.key === "ArrowDown") { e.preventDefault(); activeIndex = Math.min(activeIndex + 1, items.length - 1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); activeIndex = Math.max(activeIndex - 1, -1); }
+      else if (e.key === "Escape") { dropdown.hidden = true; return; }
+      else if (e.key === "Enter" && activeIndex >= 0) { e.preventDefault(); window.location.href = items[activeIndex].getAttribute("href"); return; }
+      else return;
+      items.forEach(function (el, i) { el.classList.toggle("is-active", i === activeIndex); });
+    });
+    document.addEventListener("click", function (e) {
+      if (!dropdown.contains(e.target) && e.target !== input) dropdown.hidden = true;
+    });
+  };
+})();
+</script>
+<script>
+  dsAttachTypeahead(document.getElementById("q"), document.getElementById("qSuggestions"));
+
+  const HEALTH_URL = "https://ds-directory-mcp.onrender.com/health";
+
+  // --- Copy MCP install command ---
+  const mcpCopy = document.getElementById("mcpCopy");
+  const mcpCopyLabel = document.getElementById("mcpCopyLabel");
+  const mcpCommand = document.getElementById("mcpCommand");
+  mcpCopy.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(mcpCommand.textContent);
+      mcpCopyLabel.textContent = "Copied!";
+      setTimeout(() => { mcpCopyLabel.textContent = "Copy"; }, 1500);
+    } catch (err) {
+      // Clipboard API unavailable (e.g. insecure context) — text is still selectable manually.
+    }
+  });
+
+  // --- MCP server status: awake/sleeping + when last confirmed awake, plus a
+  // manual "wake it up" button so a visitor doesn't have to wait for their
+  // first real search to trigger the cold start.
+  // "Last awake" is remembered per-viewer in localStorage — there's no shared
+  // backend for this, and it doesn't need to be. Polls every 2 minutes
+  // (Render's sleep timeout is 15 min, so that's plenty granular) and ONLY
+  // while this tab is actually visible — a backgrounded tab makes zero
+  // requests, and switching back triggers an immediate re-check.
+  const mcpStatusEl = document.getElementById("mcpStatus");
+  // Queried once — every state (checking/awake/sleeping/waking) reuses these
+  // same three elements rather than replacing mcpStatusEl's innerHTML, so the
+  // row's structure (and therefore its height) never changes between states;
+  // setStatus() below only ever edits their class/text/visibility.
+  const statusDotEl = mcpStatusEl.querySelector(".status-dot");
+  const statusTextEl = mcpStatusEl.querySelector(".status-text");
+  const wakeButtonEl = document.getElementById("wakeButton");
+  let healthPollTimer = null;
+  let waking = false;
+
+  wakeButtonEl.addEventListener("click", () => wakeServer());
+
+  function relativeTime(isoString) {
+    const diffMin = Math.round((Date.now() - new Date(isoString).getTime()) / 60000);
+    if (diffMin < 1) return "just now";
+    if (diffMin < 60) return `${diffMin}m ago`;
+    const diffHr = Math.round(diffMin / 60);
+    if (diffHr < 24) return `${diffHr}h ago`;
+    return `${Math.round(diffHr / 24)}d ago`;
+  }
+
+  // dotClass: "awake" | "sleeping" | "waking". showButton: whether the wake
+  // button should actually be usable right now (it's only ever hidden via
+  // `visibility`, never removed, so it keeps its layout slot regardless).
+  function setStatus(dotClass, text, showButton) {
+    statusDotEl.className = `status-dot ${dotClass}`;
+    statusTextEl.textContent = text;
+    wakeButtonEl.style.visibility = showButton ? "visible" : "hidden";
+    wakeButtonEl.disabled = !showButton;
+  }
+
+  function renderMcpStatus(awake) {
+    if (awake) {
+      setStatus("awake", "MCP server awake", false);
+      return;
+    }
+    let lastAwake = null;
+    try { lastAwake = localStorage.getItem("mcp-last-awake"); } catch (err) { /* private browsing etc. */ }
+    const lastText = lastAwake ? ` (last awake ${relativeTime(lastAwake)})` : "";
+    setStatus("sleeping", `MCP server sleeping — takes ~30-60s to wake up${lastText}`, true);
+  }
+
+  async function checkMcpHealth() {
+    if (waking) return; // wakeServer() owns mcpStatusEl until it finishes
+    try {
+      const res = await fetch(HEALTH_URL, { signal: AbortSignal.timeout(3000) });
+      if (!res.ok) throw new Error("not ok");
+      try { localStorage.setItem("mcp-last-awake", new Date().toISOString()); } catch (err) { /* fine */ }
+      renderMcpStatus(true);
+    } catch (err) {
+      renderMcpStatus(false);
+    }
+  }
+
+  // A single 3s-timeout health check (fine for the background poll) isn't
+  // enough to tell whether a click actually did anything — Render's real
+  // cold start is 30-60s, so the first probe after clicking almost always
+  // still fails and renderMcpStatus(false) would immediately overwrite the
+  // button with an identical-looking "sleeping" state, making the click feel
+  // like a no-op. Wake gets its own persistent, visibly-different state
+  // (pulsing dot, explicit "waking" copy) that survives across several
+  // retries instead of being wiped out by the first failed poll.
+  async function wakeServer() {
+    if (waking) return;
+    waking = true;
+    setStatus("waking", "Waking the server up… (usually takes 30-60s)", false);
+
+    const deadline = Date.now() + 75000;
+    while (Date.now() < deadline) {
+      try {
+        const res = await fetch(HEALTH_URL, { signal: AbortSignal.timeout(5000) });
+        if (res.ok) {
+          try { localStorage.setItem("mcp-last-awake", new Date().toISOString()); } catch (err) { /* fine */ }
+          waking = false;
+          renderMcpStatus(true);
+          return;
+        }
+      } catch (err) { /* still waking — keep polling until the deadline */ }
+      await new Promise(resolve => setTimeout(resolve, 4000));
+    }
+    waking = false;
+    setStatus("sleeping", "Still not responding — it may need another try.", false);
+    setTimeout(() => renderMcpStatus(false), 2500);
+  }
+
+  function startMcpPolling() {
+    checkMcpHealth();
+    if (healthPollTimer) return;
+    healthPollTimer = setInterval(checkMcpHealth, 120000);
+  }
+
+  function stopMcpPolling() {
+    if (healthPollTimer) {
+      clearInterval(healthPollTimer);
+      healthPollTimer = null;
+    }
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      startMcpPolling();
+    } else {
+      stopMcpPolling();
+    }
+  });
+
+  if (document.visibilityState === "visible") startMcpPolling();
+
+  // Old links/bookmarks may still point at "/?q=..." (the nav's mini-search
+  // used to run the search right here) — forward them to the real results
+  // page instead of silently ignoring the query.
+  const urlQuery = new URLSearchParams(window.location.search).get("q");
+  if (urlQuery) {
+    window.location.replace("/search?q=" + encodeURIComponent(urlQuery));
+  }
+</script>
+</body>
+</html>

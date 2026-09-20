@@ -1,0 +1,342 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "samsung-tizen-circularui",
+  "organization": "Samsung",
+  "design_system": "Tizen CircularUI",
+  "full_name": "Samsung — Tizen CircularUI",
+  "start_urls": [
+    "https://developer.samsung.com/one-ui-watch-tizen/"
+  ],
+  "detail_url": "/systems/samsung-tizen-circularui",
+  "pages_indexed": 79,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T12:01:12+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": "2026-09-04",
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/accessibility/overview.html",
+      "title": "Accessibility | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/visual/animation.html",
+      "title": "Animation | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/app-start-process.html",
+      "title": "Application Start Process | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/structure/apps.html",
+      "title": "Apps | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/assist-panel.html",
+      "title": "Assist panel | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/interaction/bezel.html",
+      "title": "Bezel Interactions | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/buttons.html",
+      "title": "Buttons | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/chooser.html",
+      "title": "Chooser | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/circular-ux.html",
+      "title": "Circular UX | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/visual/colors.html",
+      "title": "Colors | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/watch-face/complications.html",
+      "title": "Complications | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/continue-activities-paired-device.html",
+      "title": "Continue activities on a paired device | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/wearables/lasting-impression.html",
+      "title": "Create a lasting impression with your designs | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/delete.html",
+      "title": "Delete | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/wearables/overview.html",
+      "title": "Design for Wearables | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/principle.html",
+      "title": "Design Principles | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/resource.html",
+      "title": "Design Resource | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/watch-face/design.html",
+      "title": "Design Types of Watch Faces | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/dialogs.html",
+      "title": "Dialogs | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/empty-states.html",
+      "title": "Empty States | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/errors.html",
+      "title": "Errors | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/interaction/feedback.html",
+      "title": "Feedback | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/asset-creator.html",
+      "title": "Galaxy Store Asset Creator | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/lifestyle-photo-assets/galaxy-watch-active2.html",
+      "title": "Galaxy Watch Active2 Lifestyle Photo Assets | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/lifestyle-photo-assets/galaxy-watch.html",
+      "title": "Galaxy Watch Lifestyle Photo Assets | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/lifestyle-photo-assets/galaxy-watch3.html",
+      "title": "Galaxy Watch3 Lifestyle Photo Assets | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/lifestyle-photo-assets/gear-s3.html",
+      "title": "Gear S3 Lifestyle Photo Assets | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/interaction/gesture.html",
+      "title": "Gesture Interaction | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/accessibility/gray-neg-color.html",
+      "title": "Grayscale / Negative color | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/watch-face/hourly-chime.html",
+      "title": "Hourly chime | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/visual/iconography.html",
+      "title": "Iconography | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/wearables/diverse-interactions.html",
+      "title": "Improve the user experience through the watch's diverse interactions | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/input.html",
+      "title": "Input | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/interaction/overview.html",
+      "title": "Interaction | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/internationalization.html",
+      "title": "Internationalization | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/visual/layout.html",
+      "title": "Layout patterns | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/lifestyle-photo-assets.html",
+      "title": "Lifestyle Photo Assets for Galaxy Store | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/list.html",
+      "title": "List | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/more-options.html",
+      "title": "More Options | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/navigation/flow.html",
+      "title": "Navigation Flow | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/navigation/overview.html",
+      "title": "Navigation | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/structure/notifications.html",
+      "title": "Notifications | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/overscroll.html",
+      "title": "Overscroll | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/page-indicators.html",
+      "title": "Page Indicators | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/pages.html",
+      "title": "Pages | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/overview.html",
+      "title": "Patterns | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/permissions.html",
+      "title": "Permissions | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/pickers.html",
+      "title": "Pickers | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/progress.html",
+      "title": "Progress and Activity Indicators | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/wearables/clear-navigation.html",
+      "title": "Provide clear navigation | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/wearables/bezel-controls.html",
+      "title": "Provide precise and unique control with the bezel | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/wearables/timely-info.html",
+      "title": "Provide timely information when users need it | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/structure/quick-panel.html",
+      "title": "Quick Panel | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/refresh.html",
+      "title": "Refresh | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/reserved-app.html",
+      "title": "Reserved app | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/rotary-selectors.html",
+      "title": "Rotary selectors | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/bezel-less-ux.html",
+      "title": "Rotating bezel, touch bezel, and bezel-less UX | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/navigation/screen-views.html",
+      "title": "Screen Views | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/scroll-bars.html",
+      "title": "Scroll Bars | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/search.html",
+      "title": "Search | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/select-mode.html",
+      "title": "Select Mode | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/selection-controls.html",
+      "title": "Selection Controls | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/share.html",
+      "title": "Share | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/sliders.html",
+      "title": "Sliders | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/structure/overview.html",
+      "title": "Structure | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/watch-face/system-icons.html",
+      "title": "System Icons | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/text-fields.html",
+      "title": "Text fields | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/toasts.html",
+      "title": "Toasts | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/interaction/touch.html",
+      "title": "Touch | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/visual/typography.html",
+      "title": "Typography | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/ui-components/overview.html",
+      "title": "UI Components | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/accessibility/voice-assistant.html",
+      "title": "Voice Assistant | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/interaction/voice.html",
+      "title": "Voice interactions | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/patterns/volume-controls.html",
+      "title": "Volume Controls | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/watch-face/states.html",
+      "title": "Watch Face States | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/watch-face/overview.html",
+      "title": "Watch Face | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/structure/watch-faces.html",
+      "title": "Watch Faces | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/structure/widgets.html",
+      "title": "Widgets | Samsung Developer"
+    },
+    {
+      "url": "https://developer.samsung.com/one-ui-watch-tizen/writing-style.html",
+      "title": "Writing Style | Samsung Developer"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "canonical-vanilla-framework",
+  "organization": "Canonical",
+  "design_system": "Vanilla framework",
+  "full_name": "Canonical — Vanilla framework",
+  "start_urls": [
+    "https://vanillaframework.io/"
+  ],
+  "detail_url": "/systems/canonical-vanilla-framework",
+  "pages_indexed": 37,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T21:57:58+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/canonical/latest-news",
+      "https://github.com/canonical/dotrun",
+      "https://github.com/canonical/vanilla-framework"
+    ],
+    "markdown_docs": [
+      "https://github.com/canonical/latest-news/blob/4c7bbf8b3c48456fd66a4d895166c4e4f1c02b84/README.md"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/vanilla-framework"
+    ],
+    "icons": [
+      "https://vanillaframework.io/docs/examples/patterns/icons/icons-dark-deprecated",
+      "https://vanillaframework.io/docs/examples/patterns/icons/icons-social",
+      "https://vanillaframework.io/docs/examples/patterns/buttons/icon",
+      "https://vanillaframework.io/docs/examples/patterns/icons/standard",
+      "https://vanillaframework.io/docs/examples/patterns/icons/icons-links",
+      "https://vanillaframework.io/docs/examples/patterns/icons/icons-additional",
+      "https://vanillaframework.io/docs/patterns/icons",
+      "https://vanillaframework.io/docs/examples/patterns/tab-buttons/icons",
+      "https://vanillaframework.io/docs/examples/patterns/segmented-control/icons",
+      "https://vanillaframework.io/docs/examples/patterns/side-navigation/icons",
+      "https://vanillaframework.io/docs/examples/patterns/code-snippet/icon"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/justinribeiro/lite-youtube",
+      "https://github.com/marketplace/axe-linter"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@axe-core/cli"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "exemplars": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": null,
+    "stars": 4,
+    "last_pushed": "2026-09-17T22:39:31Z"
+  },
+  "npm_meta": {
+    "latest_version": "4.59.0",
+    "last_published": "2026-08-27T12:15:04.864Z",
+    "weekly_downloads": 19720
+  },
+  "indexed_pages": [
+    {
+      "url": "https://vanillaframework.io/docs/accessibility",
+      "title": "Accessibility | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/accordion",
+      "title": "Accordion | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/align",
+      "title": "Align | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/blog",
+      "title": "Blog | Patterns | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/settings/breakpoint-settings",
+      "title": "Breakpoints | Settings | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/layouts/brochure",
+      "title": "Brochure site | Layouts | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/browser-support",
+      "title": "Browser support | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/buttons",
+      "title": "Buttons | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/card",
+      "title": "Cards | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/base/code",
+      "title": "Code | Base elements | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/contribute",
+      "title": "Contribute to code | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/customising-vanilla",
+      "title": "Customising Vanilla | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/divided-section",
+      "title": "Divided section | Patterns | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/layouts/documentation",
+      "title": "Documentation layout | Layouts | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/equal-height",
+      "title": "Equal height | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/equal-heights",
+      "title": "Equal heights | Patterns | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/floats",
+      "title": "Floats | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/baseline-grid",
+      "title": "Font metrics | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/settings/font-settings",
+      "title": "Font | Settings | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/layouts/full-width",
+      "title": "Full-width site layout | Layouts | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs",
+      "title": "Get started | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/image-position",
+      "title": "Image position | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/margin-collapse",
+      "title": "Margin collapse | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/no-print",
+      "title": "No print | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/notification",
+      "title": "Notification | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/off-screen",
+      "title": "Off screen | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/pull-quote",
+      "title": "Pull quote | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/section",
+      "title": "Section | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/slider",
+      "title": "Slider | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/status-labels",
+      "title": "Status labels | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/layouts/sticky-footer",
+      "title": "Sticky footer | Layouts | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/switch",
+      "title": "Switch | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/table-of-contents",
+      "title": "Table of contents | Components | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/has-icon",
+      "title": "Text with icon | Utilities | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/base/themes",
+      "title": "Themes | Base elements | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/patterns/tiered-list",
+      "title": "Tiered list | Patterns | Vanilla documentation"
+    },
+    {
+      "url": "https://vanillaframework.io/docs/utilities/vertical-spacing",
+      "title": "Vertical spacing | Utilities | Vanilla documentation"
+    }
+  ]
+}

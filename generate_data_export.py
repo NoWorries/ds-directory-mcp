@@ -19,7 +19,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from generate_directory import coverage_status, indexed_only, load_pages_index, load_systems
+from generate_directory import coverage_status, indexed_only, load_pages_index, load_systems, visible_by_default
 from slug import slugify
 from text_utils import full_name, split_org_name
 
@@ -168,7 +168,7 @@ SCHEMA = {
 
 
 def main() -> None:
-    entries = indexed_only(load_systems())
+    entries = visible_by_default(indexed_only(load_systems()))
     pages_index = load_pages_index()
     export = build_export(entries, pages_index)
 

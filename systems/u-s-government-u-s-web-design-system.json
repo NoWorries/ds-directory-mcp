@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "u-s-government-u-s-web-design-system",
   "organization": "U.S. Government",
   "design_system": "U.S. Web Design System",
@@ -9,28 +9,204 @@
     "https://designsystem.digital.gov/"
   ],
   "detail_url": "/systems/u-s-government-u-s-web-design-system",
-  "pages_indexed": 7,
+  "pages_indexed": 41,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:15:24+00:00",
-  "last_modified": "Fri, 28 Aug 2026 03:22:05 GMT",
-  "sitemap_last_modified": null,
+  "last_checked": "2026-09-19T06:54:30+00:00",
+  "last_modified": "Thu, 17 Sep 2026 00:10:43 GMT",
+  "sitemap_last_modified": "2026-09-18T07:20:16+00:00",
   "resources": {
-    "github": [
-      "https://github.com/postcss/autoprefixer"
+    "icons": [
+      "https://designsystem.digital.gov/components/icon",
+      "https://designsystem.digital.gov/components/icon/accessibility-tests"
     ],
     "agent_instructions": [
       "https://designsystem.digital.gov/llms.txt"
     ]
   },
-  "unverified_resources": {},
-  "content_signals": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/uswds/uswds-compile",
+      "https://github.com/uswds/uswds"
+    ]
+  },
+  "content_signals": {
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "frameworks": [
+      "Web Components"
+    ]
+  },
   "github_meta": {
     "license": "MIT",
     "stars": 22229,
     "last_pushed": "2026-09-15T13:44:00Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://designsystem.digital.gov/components/accordion/accessibility-tests",
+      "title": "Accordion accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/accordion",
+      "title": "Accordion | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/alert/accessibility-tests",
+      "title": "Alert accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/alert",
+      "title": "Alert | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/banner/accessibility-tests",
+      "title": "Banner accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/banner",
+      "title": "Banner | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/breadcrumb/accessibility-tests",
+      "title": "Breadcrumb accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/breadcrumb",
+      "title": "Breadcrumb | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/button/accessibility-tests",
+      "title": "Button accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/button-group/accessibility-tests",
+      "title": "Button group accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/button-group",
+      "title": "Button group | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/button",
+      "title": "Button | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/card/accessibility-tests",
+      "title": "Card accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/card",
+      "title": "Card | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/character-count/accessibility-tests",
+      "title": "Character count accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/character-count",
+      "title": "Character count | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/checkbox/accessibility-tests",
+      "title": "Checkbox accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/checkbox",
+      "title": "Checkbox | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/collection/accessibility-tests",
+      "title": "Collection accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/collection",
+      "title": "Collection | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/combo-box/accessibility-tests",
+      "title": "Combo box accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/combo-box",
+      "title": "Combo box | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/data-visualizations",
+      "title": "Data visualizations | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/date-picker/accessibility-tests",
+      "title": "Date picker accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/date-picker",
+      "title": "Date picker | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/date-range-picker/accessibility-tests",
+      "title": "Date range picker accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/date-range-picker",
+      "title": "Date range picker | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/file-input/accessibility-tests",
+      "title": "File input accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/file-input",
+      "title": "File input | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/footer/accessibility-tests",
+      "title": "Footer accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/footer",
+      "title": "Footer | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/form",
+      "title": "Form | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/header/accessibility-tests",
+      "title": "Header accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/header",
+      "title": "Header | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/icon/accessibility-tests",
+      "title": "Icon accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/icon-list/accessibility-tests",
+      "title": "Icon list accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/icon-list",
+      "title": "Icon list | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/icon",
+      "title": "Icon | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/components/identifier/accessibility-tests",
+      "title": "Identifier accessibility tests | U.S. Web Design System (USWDS)"
+    },
+    {
+      "url": "https://designsystem.digital.gov/llms.txt",
+      "title": "U.S. Government — U.S. Web Design System — llms.txt"
+    },
+    {
+      "url": "https://designsystem.digital.gov/",
+      "title": "USWDS: The United States Web Design System | U.S. Web Design System (USWDS)"
+    }
+  ]
 }

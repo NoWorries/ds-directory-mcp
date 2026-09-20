@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "transport-for-west-midlands",
   "organization": null,
   "design_system": "Transport for West Midlands",
@@ -9,17 +9,14 @@
     "https://designsystem.tfwm.org.uk/"
   ],
   "detail_url": "/systems/transport-for-west-midlands",
-  "pages_indexed": 8,
+  "pages_indexed": 39,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:10:46+00:00",
+  "last_checked": "2026-09-19T06:44:31+00:00",
   "last_modified": null,
-  "sitemap_last_modified": null,
+  "sitemap_last_modified": "2026-06-01T14:49:16Z",
   "resources": {
-    "github": [
-      "https://github.com/alphagov/govuk-design-system-backlog"
-    ],
     "markdown_docs": [
       "https://github.com/wmcadigital/wmn-design-system/blob/master/doc/contributing.md"
     ],
@@ -27,7 +24,14 @@
       "https://designsystem.tfwm.org.uk/styles/icons"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/alphagov/govuk-design-system-backlog"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/wmn-design-system"
+    ]
+  },
   "content_signals": {},
   "github_meta": {
     "license": null,
@@ -35,5 +39,162 @@
     "last_pushed": "2026-09-09T13:45:34Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/accordion",
+      "title": "Accordion – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/patterns/autocomplete",
+      "title": "Autocomplete – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/patterns/banner",
+      "title": "Banner – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/breadcrumb",
+      "title": "Breadcrumb – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/buttons",
+      "title": "Buttons – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/patterns/buy-a-ticket",
+      "title": "Buy a ticket – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/checkboxes",
+      "title": "Checkboxes – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components",
+      "title": "Components – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/patterns/contact-details",
+      "title": "Contact details – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/content-card",
+      "title": "Content card – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/content-tiles",
+      "title": "Content tiles – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/date-input",
+      "title": "Date Input – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/details",
+      "title": "Details – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/disruption-indicators",
+      "title": "Disruption indicators – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/dropdown",
+      "title": "Dropdown – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/file-download",
+      "title": "File download – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/file-upload",
+      "title": "File upload – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/form-label",
+      "title": "Form label – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/docs/get-started",
+      "title": "Get started – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/",
+      "title": "Home – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/in-text-step",
+      "title": "In-text step – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/inset-text",
+      "title": "Inset Text – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/links",
+      "title": "Links – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/loader",
+      "title": "Loader – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/message",
+      "title": "Message – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/number-input",
+      "title": "Number Input – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/patterns",
+      "title": "Patterns – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/phase-indicator",
+      "title": "Phase indicators – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/progress-indicator",
+      "title": "Progress indicator – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/question",
+      "title": "Question – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/radios",
+      "title": "Radios – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/docs/releases",
+      "title": "Releases – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/styles",
+      "title": "Styles – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/table",
+      "title": "Table – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/text-input",
+      "title": "Text Input – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/textarea",
+      "title": "Textarea – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/ticket-summary-message",
+      "title": "Ticket summary message – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/user-research",
+      "title": "User research – Transport for West Midlands Design System"
+    },
+    {
+      "url": "https://designsystem.tfwm.org.uk/components/warning-text",
+      "title": "Warning Text – Transport for West Midlands Design System"
+    }
+  ]
 }

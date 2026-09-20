@@ -1,0 +1,38 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "brightcore-ui",
+  "organization": "Brightcore",
+  "design_system": "UI",
+  "full_name": "Brightcore — UI",
+  "start_urls": [
+    "https://ui.britecore.com/"
+  ],
+  "detail_url": "/systems/brightcore-ui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:33:13+00:00",
+  "last_modified": "Thu, 19 Mar 2026 23:21:30 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "icons": [
+      "https://ui.britecore.com/en-US/components/icon"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "Vue"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://ui.britecore.com/",
+      "title": "Brightcore — UI"
+    }
+  ]
+}

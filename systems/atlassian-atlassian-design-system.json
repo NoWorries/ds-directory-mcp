@@ -1,0 +1,160 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "atlassian-atlassian-design-system",
+  "organization": "Atlassian",
+  "design_system": "Atlassian Design System",
+  "full_name": "Atlassian — Atlassian Design System",
+  "start_urls": [
+    "https://atlassian.design/"
+  ],
+  "detail_url": "/systems/atlassian-atlassian-design-system",
+  "pages_indexed": 26,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T08:40:30+00:00",
+  "last_modified": "Thu, 17 Sep 2026 03:13:09 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://atlassian.design/components/storybook-addon-design-system"
+    ],
+    "icons": [
+      "https://atlassian.design/components/icon/code",
+      "https://atlassian.design/components/icon/icon-tile/usage",
+      "https://atlassian.design/components/icon/usage",
+      "https://atlassian.design/components/icon/icon-tile",
+      "https://atlassian.design/components/icon/changelog",
+      "https://atlassian.design/components/icon",
+      "https://atlassian.design/components/icon/examples",
+      "https://atlassian.design/components/icon/icon-explorer"
+    ],
+    "agent_instructions": [
+      "https://atlassian.design/llms.txt",
+      "https://atlassian.design/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {
+    "npm": [
+      "https://www.npmjs.com/package/@atlaskit/primitives"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "codemods": true,
+    "validation_loop": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://atlassian.design/",
+      "title": "Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/llms.txt",
+      "title": "Atlassian — Atlassian Design System — llms.txt"
+    },
+    {
+      "url": "https://atlassian.design/components/code/examples",
+      "title": "Code - Examples - Components - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/components/icon/usage",
+      "title": "Icon - Usage - Components - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/accessibility",
+      "title": "Overview - Accessibility - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/typography/applying-typography",
+      "title": "Overview - Applying typography - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/border",
+      "title": "Overview - Border - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/color",
+      "title": "Overview - Color - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/content",
+      "title": "Overview - Content - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/content/date-time",
+      "title": "Overview - Date time - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/content/designing-messages",
+      "title": "Overview - Designing messages - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/elevation",
+      "title": "Overview - Elevation - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/grid",
+      "title": "Overview - Grid - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/iconography",
+      "title": "Overview - Iconography - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/illustrations",
+      "title": "Overview - Illustrations - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/content/inclusive-writing",
+      "title": "Overview - Inclusive writing - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/content/language-and-grammar",
+      "title": "Overview - Language and grammar - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/logos",
+      "title": "Overview - Logos - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/motion",
+      "title": "Overview - Motion - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/typography/product-typefaces-and-scale",
+      "title": "Overview - Product typefaces and scale - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/radius",
+      "title": "Overview - Radius - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/spacing",
+      "title": "Overview - Spacing - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/tokens",
+      "title": "Overview - Tokens - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/typography",
+      "title": "Overview - Typography - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/foundations/content/voice-tone",
+      "title": "Overview - Voice tone - Atlassian Design"
+    },
+    {
+      "url": "https://atlassian.design/components/primitives/stack/examples",
+      "title": "Stack - Examples - Components - Atlassian Design"
+    }
+  ]
+}

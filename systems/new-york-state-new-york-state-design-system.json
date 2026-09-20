@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "new-york-state-new-york-state-design-system",
   "organization": "New York State",
   "design_system": "New York State Design System",
@@ -9,25 +9,200 @@
     "http://designsystem.ny.gov/"
   ],
   "detail_url": "/systems/new-york-state-new-york-state-design-system",
-  "pages_indexed": 8,
+  "pages_indexed": 39,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:04:46+00:00",
-  "last_modified": "Fri, 11 Sep 2026 15:35:29 GMT",
-  "sitemap_last_modified": null,
+  "last_checked": "2026-09-19T00:30:49+00:00",
+  "last_modified": "Fri, 18 Sep 2026 16:31:11 GMT",
+  "sitemap_last_modified": "2026-09-18T16:30:26.167Z",
   "resources": {
-    "github": [
-      "https://github.com/ITS-HCD/nysds-fonts",
-      "https://github.com/ITS-HCD/nysds"
-    ],
     "figma": [
+      "https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template",
       "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System"
     ]
   },
-  "unverified_resources": {},
-  "content_signals": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/its-hcd/nysds",
+      "https://github.com/ITS-HCD/nysds-fonts"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@nysds/styles",
+      "https://www.npmjs.com/package/@nysds/components"
+    ]
+  },
+  "content_signals": {
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "exemplars": true,
+    "tokens_format": "Figma Variables",
+    "dark_mode": true,
+    "prohibition": true,
+    "frameworks": [
+      "Web Components",
+      "React",
+      "Angular",
+      "Vue"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://designsystem.ny.gov/videos/accessible-by-design",
+      "title": "Accessible by Design"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/themes",
+      "title": "Agency Themes"
+    },
+    {
+      "url": "https://designsystem.ny.gov/tokens",
+      "title": "Color Tokens"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/tokens",
+      "title": "Design Tokens"
+    },
+    {
+      "url": "https://designsystem.ny.gov/get-started/designers",
+      "title": "Designers"
+    },
+    {
+      "url": "https://designsystem.ny.gov/get-started/developers",
+      "title": "Developers"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/display",
+      "title": "Display"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/first-steps-with-the-nys-design-system-component-library",
+      "title": "First Steps with the NYS Design System Component Library"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/flex",
+      "title": "Flexbox"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/float",
+      "title": "Float"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations",
+      "title": "Foundations"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/four-ways-you-can-use-the-nys-design-system",
+      "title": "Four Ways You Can Use the NYS Design System"
+    },
+    {
+      "url": "https://designsystem.ny.gov/get-started",
+      "title": "Get Started"
+    },
+    {
+      "url": "https://designsystem.ny.gov/get-started/leadership",
+      "title": "Get Started as a Leader"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/getting-help-and-giving-feedback",
+      "title": "Getting Help and Giving Feedback"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/grid",
+      "title": "Grid"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system",
+      "title": "Intro to Designing with the New York State Design System"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/intro-to-nys-design-system-web-components",
+      "title": "Intro to NYS Design System Web Components"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/introducing-the-nys-design-system",
+      "title": "Introducing the NYS Design System"
+    },
+    {
+      "url": "https://designsystem.ny.gov/learn",
+      "title": "Learn about the New York State Design System"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/margin-padding",
+      "title": "Margin and Padding"
+    },
+    {
+      "url": "https://designsystem.ny.gov/2025-wrapped",
+      "title": "NYS Design System 2025 Wrapped"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/opacity",
+      "title": "Opacity"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/overflow",
+      "title": "Overflow"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/position",
+      "title": "Position"
+    },
+    {
+      "url": "https://designsystem.ny.gov/tokens/primitives",
+      "title": "Primitive Tokens"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/responsive",
+      "title": "Responsive Utilities"
+    },
+    {
+      "url": "https://designsystem.ny.gov/tokens/other",
+      "title": "Spacing & Layout Tokens"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/styles",
+      "title": "Styles Framework"
+    },
+    {
+      "url": "https://designsystem.ny.gov/i18n",
+      "title": "Testing Localize"
+    },
+    {
+      "url": "https://designsystem.ny.gov/",
+      "title": "The New York State Design System"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/typography",
+      "title": "Typography"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/typography",
+      "title": "Typography"
+    },
+    {
+      "url": "https://designsystem.ny.gov/tokens/typography",
+      "title": "Typography Tokens"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/using-the-nys-design-system-css-framework",
+      "title": "Using the NYS Design System CSS Framework"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/using-the-project-template",
+      "title": "Using the Project Template"
+    },
+    {
+      "url": "https://designsystem.ny.gov/videos/using-the-visual-component-library",
+      "title": "Using the Visual Component Library"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities",
+      "title": "Utilities"
+    },
+    {
+      "url": "https://designsystem.ny.gov/foundations/utilities/zindex",
+      "title": "Z-Index"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "wise-design-system",
   "organization": "Wise",
   "design_system": "Design system",
@@ -12,8 +12,8 @@
   "pages_indexed": 1,
   "coverage_status": "partial",
   "hit_max_pages": false,
-  "likely_spa": true,
-  "last_checked": "2026-09-17T01:19:56+00:00",
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:44:53+00:00",
   "last_modified": "Wed, 15 Jul 2026 14:36:51 GMT",
   "sitemap_last_modified": "2026-07-15T14:37:05Z",
   "resources": {},
@@ -23,8 +23,8 @@
   "npm_meta": null,
   "indexed_pages": [
     {
-      "url": "https://wise.design/direction",
-      "title": "Wise Design | Building a System for a Borderless World"
+      "url": "https://wise.design/",
+      "title": "Wise — Design system"
     }
   ]
 }

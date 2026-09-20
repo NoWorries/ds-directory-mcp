@@ -1,0 +1,660 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "ionic-framework",
+  "organization": null,
+  "design_system": "Ionic Framework",
+  "full_name": "Ionic Framework",
+  "start_urls": [
+    "https://ionicframework.com/"
+  ],
+  "detail_url": "/systems/ionic-framework",
+  "pages_indexed": 148,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:49:14+00:00",
+  "last_modified": "Thu, 10 Sep 2026 01:51:05 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/ionic-team/photo-gallery-capacitor-ng",
+      "https://github.com/ionic-team/slides-migration-samples",
+      "https://github.com/ionic-team/native-run",
+      "https://github.com/ionic-team/ionic-framework",
+      "https://github.com/ionic-team/ionic-angular-standalone-codemods",
+      "https://github.com/ionic-team/cordova-res",
+      "https://github.com/ionic-team/pwa-elements",
+      "https://github.com/ionic-team/tutorial-photo-gallery-angular",
+      "https://github.com/ionic-team/ionic-cli",
+      "https://github.com/ionic-team/ionic",
+      "https://github.com/ionic-team/ionic-docs"
+    ],
+    "storybook": [
+      "https://twitter.com/storybookjs"
+    ],
+    "icons": [
+      "https://ionicframework.com/docs/api/icon",
+      "https://ionicframework.com/docs/ja/v8/api/icon",
+      "https://ionicframework.com/docs/v8/api/icon"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/storesafe/cordova-sqlite-storage",
+      "https://github.com/marnusw/date-fns-tz",
+      "https://github.com/capacitor-community/sqlite"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "governance_model": true,
+    "codemods": true,
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular",
+      "Web Components"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 145,
+    "last_pushed": "2026-09-14T14:35:51Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/add-to-existing",
+      "title": "Add Ionic Angular to Existing Project: Integration Guide"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app/adding-mobile",
+      "title": "Adding Mobile Support with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app/deploying-mobile",
+      "title": "Adding Mobile Support with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/storage",
+      "title": "Angular App Data Storage Options - Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/injection-tokens",
+      "title": "Angular Injection Tokens | Access Ionic Elements via Dependency Injection"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/navigation",
+      "title": "Angular Navigation: How Routing & Redirects Work in Angular Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/overlays",
+      "title": "Angular Overlay Components: Modals, Popovers with Custom Injectors"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/lifecycle",
+      "title": "Angular Page Component Life Cycle - App Events Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/performance",
+      "title": "Angular Performance: Manage App Component Change with ngFor"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/testing",
+      "title": "Angular Unit and End-to-End Testing for Ionic App Components"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api",
+      "title": "API Index | Ionic Docs API Index for all API Custom Elements"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app/distribute",
+      "title": "Build and Deploy your App with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/build-options",
+      "title": "Build Options | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app",
+      "title": "Build Your First Ionic Mobile App with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/accordion-group",
+      "title": "ion-accordion-group | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/accordion",
+      "title": "ion-accordion: Accordion Components: How to Build & Examples"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/action-sheet",
+      "title": "ion-action-sheet: Action Sheet Dialog for iOS and Android"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/alert",
+      "title": "ion-alert: Ionic Alert Buttons with Custom Message Prompts"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/app",
+      "title": "ion-app: Container Element for an Ionic Application"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/avatar",
+      "title": "ion-avatar: Circular Application Avatar Icon Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/back-button",
+      "title": "ion-back-button: Custom Menu Back Button for Applications"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/backdrop",
+      "title": "ion-backdrop | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/badge",
+      "title": "ion-badge: iOS & Android App Notification Badge Icons"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/breadcrumb",
+      "title": "ion-breadcrumb | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/breadcrumbs",
+      "title": "ion-breadcrumbs | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/button",
+      "title": "ion-button: Style Buttons with Custom CSS Properties"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/buttons",
+      "title": "ion-buttons: Toolbar Element with Named Slots for Buttons"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/card-content",
+      "title": "ion-card-content | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/card-header",
+      "title": "ion-card-header | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/card-subtitle",
+      "title": "ion-card-subtitle | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/card-title",
+      "title": "ion-card-title: Ionic App Card Title Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/card",
+      "title": "ion-card: Card UI Components for Ionic Framework API"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/checkbox",
+      "title": "ion-checkbox: Ionic App Checkbox to Select Multiple Options"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/chip",
+      "title": "ion-chip: Text, Icon and Avatar for Ionic Framework Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/col",
+      "title": "ion-col: Column Component Padding and Other Properties"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/content",
+      "title": "ion-content: Scrollable Component for Ionic App Content"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/datetime-button",
+      "title": "ion-datetime-button: Ionic Input for Datetime Picker"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/datetime",
+      "title": "ion-datetime: Ionic API Input for Datetime Format Picker"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/fab-button",
+      "title": "ion-fab-button: Ionic FAB Button Icon for Primary Action"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/fab-list",
+      "title": "ion-fab-list | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/fab",
+      "title": "ion-fab: Ionic Floating Action Button for Android and iOS"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/footer",
+      "title": "ion-footer: Page Footer | Ionic App Footer Root Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/grid",
+      "title": "ion-grid: Display Grids for Mobile-First Custom App Layout"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/header",
+      "title": "ion-header: Header Parent Component for Ionic Framework Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/icon",
+      "title": "ion-icon: Icon Component for Ionic Framework Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/img",
+      "title": "ion-img: Img Tag to Lazy Load Images in Viewport"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/infinite-scroll-content",
+      "title": "ion-infinite-scroll-content | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/infinite-scroll",
+      "title": "ion-infinite-scroll: Infinite Scroller Action Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/input-otp",
+      "title": "ion-input-otp: One-Time Password Input Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/input-password-toggle",
+      "title": "ion-input-password-toggle: Toggle the visibility of a password in Input"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/input",
+      "title": "ion-input: Custom Input With Styling and CSS Properties"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/item-divider",
+      "title": "ion-item-divider: Item Divider Block Element for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/item-group",
+      "title": "ion-item-group: Group Items to Divide into Multiple Sections"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/item-option",
+      "title": "ion-item-option: Option Button for Sliding Item in Ionic"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/item-options",
+      "title": "ion-item-options: Option Button Components for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/item-sliding",
+      "title": "ion-item-sliding: Slide Buttons | Slide Right to Left"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/item",
+      "title": "ion-item: Input, Edit, or Delete iOS and Android Item Elements"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/label",
+      "title": "ion-label: Item Label Color and Properties for Applications"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/list-header",
+      "title": "ion-list-header | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/list",
+      "title": "ion-list: Item List View Component for iOS and Android Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/loading",
+      "title": "ion-loading: Loading | Application Loading Indicator Overlay"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/menu-button",
+      "title": "ion-menu-button: Menu Button to Open an App Menu on a Page"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/menu-toggle",
+      "title": "ion-menu-toggle: MenuToggle Component to Open/Close Menus"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/menu",
+      "title": "ion-menu: API Framework Docs for Types of Menu Components"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/modal",
+      "title": "ion-modal: Ionic Mobile App Custom Modal API Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/nav-link",
+      "title": "ion-nav-link: Navigation Links to a Specified Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/nav",
+      "title": "ion-nav: Nav View Component for Ionic Framework Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/note",
+      "title": "ion-note: Note Text Elements for iOS and Android Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/picker-column-option",
+      "title": "ion-picker-column-option: The individual options within a column in a picker."
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/picker-column",
+      "title": "ion-picker-column: Individual columns within a picker"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/picker-legacy",
+      "title": "ion-picker-legacy: A Dialog That Displays Buttons and Columns"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/picker",
+      "title": "ion-picker: Display a list of options in columns"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/popover",
+      "title": "ion-popover: iOS / Android Popover UI Dialog Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/progress-bar",
+      "title": "ion-progress-bar: App Progress Bar for Loading Indicator"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/radio-group",
+      "title": "ion-radio-group: Radio Button Group Usage for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/radio",
+      "title": "ion-radio: Radio Component for iOS and Android"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/range",
+      "title": "ion-range: Range Slider Knob Controls with Labels"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/refresher-content",
+      "title": "ion-refresher-content | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/refresher",
+      "title": "ion-refresher: Pull-to-Refresh Page Content on Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/reorder-group",
+      "title": "ion-reorder-group: Wrapper Component for Reorder Items"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/reorder",
+      "title": "ion-reorder: Drag and Drop Icon to Reorder Items"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/ripple-effect",
+      "title": "ion-ripple-effect: Ripple Effect Component for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/route-redirect",
+      "title": "ion-route-redirect: Redirect 'from' a URL 'to' Another URL"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/route",
+      "title": "ion-route: API Route Component for Ionic Framework Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/router-link",
+      "title": "ion-router-link: Navigate To a Specified Link"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/router-outlet",
+      "title": "ion-router-outlet | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/router",
+      "title": "ion-router: Router Component to Coordinate URL Navigation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/row",
+      "title": "ion-row: Horizontal Row Components of the Grid System"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/searchbar",
+      "title": "ion-searchbar: Search Bar for Searching a Collection"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/segment-button",
+      "title": "ion-segment-button | Segment Button Icon and Segment Value"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/segment-content",
+      "title": "ion-segment-content: Display control element for swipeable segments"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/segment-view",
+      "title": "ion-segment-view: Controller element for swipeable segments"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/segment",
+      "title": "ion-segment: API Documentation for Segmented Controls"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/select-option",
+      "title": "ion-select-option: Option For a Select Dialog"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/select",
+      "title": "ion-select: Select One or Multiple Value Boxes or Placeholders"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/skeleton-text",
+      "title": "ion-skeleton-text: Skeleton Loading Placeholder for Text"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/spinner",
+      "title": "ion-spinner: Animated Spinner Icon Components and Properties"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/split-pane",
+      "title": "ion-split-pane: Split Plane for Menus and Multi-View Layouts"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/tab-bar",
+      "title": "ion-tab-bar: Tab Bar Component with CSS Custom Properties"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/tab-button",
+      "title": "ion-tab-button | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/tab",
+      "title": "ion-tab: Ionic Framework Application Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/tabs",
+      "title": "ion-tabs: Tab-Based Component for App Top-Level Navigation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/text",
+      "title": "ion-text: Ionic App Component to Style or Change Text Color"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/thumbnail",
+      "title": "ion-thumbnail: Thumbnail App Component for Images or Icons"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/title",
+      "title": "ion-title: Ionic Framework App Title Component for Toolbars"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/toast",
+      "title": "ion-toast: A Dismissible App Notification Alert Component"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/toggle",
+      "title": "ion-toggle: Custom Toggle Button for Ionic Applications"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/toolbar",
+      "title": "ion-toolbar: Customize App Menu Toolbar Buttons and Icons"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/overview",
+      "title": "Ionic Angular Overview | Angular Version Support and Tooling"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/quickstart",
+      "title": "Ionic Angular Quickstart Using Ionic CLI: Angular Basics"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/build",
+      "title": "ionic build | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/capacitor-add",
+      "title": "ionic capacitor add | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/capacitor-build",
+      "title": "ionic capacitor build | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/capacitor-copy",
+      "title": "ionic capacitor copy | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/capacitor-open",
+      "title": "ionic capacitor open | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/capacitor-run",
+      "title": "ionic capacitor run | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/capacitor-sync",
+      "title": "ionic capacitor sync | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/capacitor-update",
+      "title": "ionic capacitor update | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli",
+      "title": "Ionic CLI Framework: Command-Line Interface to Develop Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/completion",
+      "title": "ionic completion | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/config-get",
+      "title": "ionic config get | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/config-set",
+      "title": "ionic config set | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/config-unset",
+      "title": "ionic config unset | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-build",
+      "title": "ionic cordova build | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-compile",
+      "title": "ionic cordova compile | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-emulate",
+      "title": "ionic cordova emulate | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-platform",
+      "title": "ionic cordova platform | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-plugin",
+      "title": "ionic cordova plugin | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-prepare",
+      "title": "ionic cordova prepare | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-requirements",
+      "title": "ionic cordova requirements | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-resources",
+      "title": "ionic cordova resources | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/cordova-run",
+      "title": "ionic cordova run | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/enterprise-register",
+      "title": "ionic enterprise register | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/",
+      "title": "Ionic Framework - The Cross-Platform App Development Leader"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/generate",
+      "title": "ionic generate | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/git-remote",
+      "title": "ionic git remote | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/info",
+      "title": "ionic info | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/cli/commands/init",
+      "title": "ionic init | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/api/textarea",
+      "title": "Ionic Textarea Component and CSS Properties for Multi-Line Input"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app/loading-photos",
+      "title": "Loading Photos from the Filesystem with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/pwa",
+      "title": "Make Progressive Web Apps (PWA) in Angular - Ionic Tutorial"
+    },
+    {
+      "url": "https://ionicframework.com/docs",
+      "title": "Open-Source UI Toolkit to Create Your Own Mobile Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/platform",
+      "title": "Platform | Ionic Platform to Customize Apps to Fit Any Device"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app/live-reload",
+      "title": "Rapid App Development with Live Reload with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app/saving-photos",
+      "title": "Saving Photos to the Filesystem with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/slides",
+      "title": "Set Up Swiper.js for Angular Slides [Example] | Ionic"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/your-first-app/taking-photos",
+      "title": "Take Photos with Camera API for iOS, Android & Web with Angular | Ionic Capacitor Camera"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/virtual-scroll",
+      "title": "Virtual Scroll | Ionic Framework"
+    }
+  ]
+}

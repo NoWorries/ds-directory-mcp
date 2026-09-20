@@ -1,0 +1,50 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "horizonx",
+  "organization": null,
+  "design_system": "HorizonX",
+  "full_name": "HorizonX",
+  "start_urls": [
+    "https://horizonx.so/docs"
+  ],
+  "detail_url": "/systems/horizonx",
+  "pages_indexed": 3,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:52:14+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": "2026-09-18",
+  "resources": {
+    "agent_instructions": [
+      "https://horizonx.so/llms.txt",
+      "https://horizonx.so/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Vue",
+      "Svelte",
+      "Angular"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://horizonx.so/docs",
+      "title": "Docs | What HorizonX Is & How to Use the Library"
+    },
+    {
+      "url": "https://horizonx.so/llms.txt",
+      "title": "HorizonX — llms.txt"
+    },
+    {
+      "url": "https://horizonx.so/llms-full.txt",
+      "title": "HorizonX — llms.txt"
+    }
+  ]
+}

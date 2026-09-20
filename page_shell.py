@@ -185,19 +185,90 @@ TOKENS_CSS = f"""
 
   .nav-search {{ display: flex; align-items: center; }}
   .nav-search-toggle {{
-    background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
-    display: flex; align-items: center; border-radius: 6px;
+    background: none; border: none; padding: 6px 8px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; border-radius: 6px;
   }}
   .nav-search-toggle:hover {{ background: var(--surface-sunken); color: var(--text); }}
-  /* Same [hidden]-vs-explicit-display fix needed a third time here — see the
-     .cards-grid/.card comments in generate_directory.py for the full story. */
-  .nav-search-form[hidden] {{ display: none; }}
-  .nav-search-form {{ display: flex; align-items: center; }}
-  .nav-search-form input {{
-    width: 220px; font: inherit; font-size: 0.85rem; padding: 6px 10px; margin-left: 6px;
-    border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
+  .nav-search-kbd {{
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; line-height: 1.4;
   }}
-  .nav-search-form input:focus {{ outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }}
+  /* Narrow viewports have no room for the shortcut hint next to the icon —
+     the shortcut itself still works, this is just the visible reminder. */
+  @media (max-width: 640px) {{
+    .nav-search-kbd {{ display: none; }}
+  }}
+
+  /* --- Cmd+K command palette (see PAGEFIND_JS/COMMAND_PALETTE_JS) — a
+     full-screen overlay, reachable from any page via the nav's search icon
+     or the Cmd+K/Ctrl+K shortcut. Kept visually distinct from the small
+     inline .ds-typeahead-dropdown below: this is a modal takeover (real
+     page-content search, more room for an excerpt), that one's a quick
+     inline suggestion list under a page's own search box. */
+  .cmdk-backdrop {{
+    position: fixed; inset: 0; z-index: 100; background: rgba(15, 23, 42, 0.5);
+    display: flex; align-items: flex-start; justify-content: center; padding: 12vh 16px 0;
+  }}
+  .cmdk-backdrop[hidden] {{ display: none; }}
+  .cmdk-panel {{
+    width: 100%; max-width: 560px; max-height: 60vh; display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }}
+  .cmdk-input-row {{
+    display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); flex: none;
+  }}
+  .cmdk-input-row svg {{ color: var(--text-faint); flex: none; }}
+  .cmdk-input-row input {{
+    flex: 1; border: none; background: none; font: inherit; font-size: 1rem; color: var(--text);
+  }}
+  .cmdk-input-row input:focus {{ outline: none; }}
+  .cmdk-esc {{
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; flex: none;
+  }}
+  .cmdk-results {{ overflow-y: auto; }}
+  .cmdk-item {{
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 16px;
+    text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border);
+  }}
+  .cmdk-item:hover, .cmdk-item.is-active {{ background: var(--surface-sunken); }}
+  .cmdk-item-title {{ font-weight: 500; font-size: 0.9rem; }}
+  .cmdk-item-excerpt {{
+    font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+  }}
+  .cmdk-item-excerpt mark {{ background: var(--accent-soft); color: var(--accent-soft-text); }}
+  .cmdk-empty {{ padding: 14px 16px; font-size: 0.85rem; color: var(--text-muted); margin: 0; }}
+  .cmdk-footer {{
+    display: block; padding: 12px 16px; font-size: 0.85rem; color: var(--accent);
+    text-decoration: none; border-top: 1px solid var(--border);
+  }}
+  .cmdk-footer:hover {{ background: var(--surface-sunken); }}
+
+  /* --- Search typeahead dropdown (see SEARCH_TYPEAHEAD_JS) — shared by the
+     homepage hero search box and the search results page's own input. The
+     wrapping element each consumer places this inside needs its own
+     position: relative for the absolute positioning here to anchor
+     correctly against the input rather than the page. */
+  .ds-typeahead-dropdown {{
+    position: absolute; z-index: 60; top: 100%; left: 0; right: 0; margin-top: 6px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }}
+  .ds-typeahead-dropdown[hidden] {{ display: none; }}
+  .ds-typeahead-item {{
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 14px; text-decoration: none; color: var(--text); font-size: 0.9rem;
+  }}
+  .ds-typeahead-item:hover, .ds-typeahead-item.is-active {{ background: var(--surface-sunken); }}
+  .ds-typeahead-name {{ font-weight: 500; }}
+  .ds-typeahead-type {{
+    font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--text-faint); background: var(--surface-sunken); border-radius: 4px;
+    padding: 2px 6px; flex: none;
+  }}
+  .ds-typeahead-item.is-active .ds-typeahead-type {{ color: var(--accent); }}
 
   /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
      .site-nav-links already fits inline. Fixed box size (rather than sizing
@@ -291,7 +362,6 @@ TOKENS_CSS = f"""
        daylight between the search and menu icons, not their own margins. */
     .site-nav-inner {{ gap: 8px; }}
     .nav-menu-toggle {{ margin-left: 0; }}
-    .nav-search-form input {{ width: 140px; }}
     .site-brand-full {{ display: none; }}
     .site-brand-short {{ display: inline; }}
   }}
@@ -318,6 +388,10 @@ LIST_ICON_SVG = _icon(
     '<line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line>'
     '<line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line>'
     '<line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line>',
+    size=15,
+)
+SORT_ICON_SVG = _icon(
+    '<path d="M11 5 7 9M7 9 3 5M7 9V1"></path><path d="M13 15l4-4M17 11l4 4M17 11v8"></path>',
     size=15,
 )
 COPY_ICON_SVG = _icon(
@@ -503,25 +577,243 @@ GRID_ICON_SVG_LARGE = _icon(
     size=20,
 )
 
-# Submitting always navigates to "/search?q=..." — that page reads the
-# query param on load and runs the search immediately (see generate_search.py).
-# Keeps the nav's mini-search simple and identical on every page, instead of
-# duplicating full search results UI (API calls, rendering, restrict-filter)
-# on every single page.
-NAV_SEARCH_JS = """
+# Instant, client-side suggestions from search-index.json (see
+# generate_search_index.py) — every system/component/pattern/foundation this
+# site actually has its own page for, matched by plain substring as the
+# visitor types. Surfaced BEFORE a full semantic search runs, the same
+# pattern a help site's search box uses to suggest a knowledgebase article
+# before someone files a ticket: if what they're typing is a page we
+# already have, they can jump straight there instead of waiting on a
+# search round-trip. Deliberately not wired into the nav's own mini-search —
+# that one's a quick-jump affordance, not the primary search experience;
+# see generate_home.py's hero box and generate_search.py's own input, the
+# two places a visitor is actually in "search mode".
+SEARCH_TYPEAHEAD_JS = """
+(function () {
+  var INDEX_URL = "/search-index.json";
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch(INDEX_URL).then(function (r) { return r.json(); }).catch(function () { return []; });
+    }
+    return indexPromise;
+  }
+
+  var TYPE_LABELS = { system: "System", components: "Component", patterns: "Pattern", foundations: "Foundation" };
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function matchIndex(items, query, limit) {
+    var q = query.trim().toLowerCase();
+    if (!q) return [];
+    return items.filter(function (item) { return item.name.toLowerCase().indexOf(q) !== -1; }).slice(0, limit || 6);
+  }
+
+  // Exposed globally (not just used internally by dsAttachTypeahead below)
+  // so generate_search.py can also fold these same curated matches into its
+  // real results list once a full search actually runs, not just the
+  // pre-submit dropdown.
+  window.dsMatchSearchIndex = function (query, limit) {
+    return loadIndex().then(function (items) { return matchIndex(items, query, limit); });
+  };
+
+  window.dsAttachTypeahead = function (input, dropdown) {
+    if (!input || !dropdown) return;
+    var activeIndex = -1;
+
+    function render(matches) {
+      activeIndex = -1;
+      if (!matches.length) {
+        dropdown.hidden = true;
+        dropdown.innerHTML = "";
+        return;
+      }
+      dropdown.innerHTML = matches.map(function (item) {
+        return '<a class="ds-typeahead-item" href="' + item.url + '">' +
+          '<span class="ds-typeahead-name">' + escapeHtml(item.name) + '</span>' +
+          '<span class="ds-typeahead-type">' + (TYPE_LABELS[item.type] || item.type) + '</span></a>';
+      }).join("");
+      dropdown.hidden = false;
+    }
+
+    input.addEventListener("input", function () {
+      var query = input.value;
+      window.dsMatchSearchIndex(query, 6).then(function (matches) {
+        if (input.value === query) render(matches);
+      });
+    });
+    input.addEventListener("focus", function () {
+      if (input.value.trim()) window.dsMatchSearchIndex(input.value, 6).then(render);
+    });
+    input.addEventListener("keydown", function (e) {
+      if (dropdown.hidden) return;
+      var items = Array.prototype.slice.call(dropdown.querySelectorAll(".ds-typeahead-item"));
+      if (e.key === "ArrowDown") { e.preventDefault(); activeIndex = Math.min(activeIndex + 1, items.length - 1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); activeIndex = Math.max(activeIndex - 1, -1); }
+      else if (e.key === "Escape") { dropdown.hidden = true; return; }
+      else if (e.key === "Enter" && activeIndex >= 0) { e.preventDefault(); window.location.href = items[activeIndex].getAttribute("href"); return; }
+      else return;
+      items.forEach(function (el, i) { el.classList.toggle("is-active", i === activeIndex); });
+    });
+    document.addEventListener("click", function (e) {
+      if (!dropdown.contains(e.target) && e.target !== input) dropdown.hidden = true;
+    });
+  };
+})();
+"""
+
+# Real full-text search over every page this site actually generated
+# (components/patterns/foundations/systems/home/search), built at deploy
+# time by Pagefind (see scripts/build_site.sh's indexing step) into
+# site/pagefind/ — a purely static, client-side (WASM) index with no
+# service to call and no API key, same "no third-party dependency" bar the
+# rest of this project holds itself to. Distinct from SEARCH_TYPEAHEAD_JS
+# above: that one matches against the small curated search-index.json (page
+# NAMES only — systems/components/patterns/foundations as a fixed list) for
+# instant-as-you-type jump suggestions; this one matches actual page
+# CONTENT, so a query that doesn't happen to BE a name (e.g. a real
+# question) still surfaces the right page.
+PAGEFIND_JS = """
+(function () {
+  var pagefindPromise = null;
+
+  function loadPagefind() {
+    if (!pagefindPromise) {
+      pagefindPromise = import("/pagefind/pagefind.js")
+        .then(function (mod) { return mod.init().then(function () { return mod; }); })
+        .catch(function () { return null; });
+    }
+    return pagefindPromise;
+  }
+
+  // [{title, url, excerpt}], best-effort empty on any failure (offline,
+  // pagefind.js 404 on a local/dev preview that skipped the build step,
+  // etc.) — same "never breaks the page, just shows nothing" contract
+  // dsMatchSearchIndex above already follows.
+  window.dsMatchPagefind = function (query, limit) {
+    var q = (query || "").trim();
+    if (!q) return Promise.resolve([]);
+    return loadPagefind().then(function (pagefind) {
+      if (!pagefind) return [];
+      return pagefind.search(q).then(function (search) {
+        var picked = search.results.slice(0, limit || 6);
+        return Promise.all(picked.map(function (r) { return r.data(); }));
+      }).then(function (data) {
+        return data.map(function (d) {
+          return { title: (d.meta && d.meta.title) || d.url, url: d.url, excerpt: d.excerpt || "" };
+        });
+      });
+    }).catch(function () { return []; });
+  };
+})();
+"""
+
+# The Cmd+K / Ctrl+K command palette — a full-screen overlay (see its markup
+# in routes_nav()) searching real page content via PAGEFIND_JS above,
+# reachable from anywhere on the site, not just the two pages with their own
+# search box. The nav's search icon opens the same overlay, so there's one
+# search experience for "I hit a shortcut" and "I clicked the icon" instead
+# of two different UIs to maintain. A plain Enter with nothing arrow-
+# selected falls through to the real semantic-search results page — this
+# overlay is the fast, static "jump to a page we already have" tier, not a
+# replacement for the Qdrant-backed search over external systems' own docs.
+COMMAND_PALETTE_JS = """
 (function () {
   var toggle = document.getElementById("navSearchToggle");
-  var form = document.getElementById("navSearchForm");
-  var input = document.getElementById("navSearchInput");
-  if (!toggle || !form) return;
-  toggle.addEventListener("click", function () {
-    form.hidden = !form.hidden;
-    if (!form.hidden) input.focus();
+  var backdrop = document.getElementById("cmdkBackdrop");
+  var form = document.getElementById("cmdkForm");
+  var input = document.getElementById("cmdkInput");
+  var results = document.getElementById("cmdkResults");
+  if (!backdrop || !form || !input || !results) return;
+
+  var activeIndex = -1;
+  var debounceTimer;
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function open() {
+    backdrop.hidden = false;
+    document.body.style.overflow = "hidden";
+    input.value = "";
+    results.innerHTML = "";
+    activeIndex = -1;
+    input.focus();
+  }
+
+  function close() {
+    backdrop.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function setActive(items, i) {
+    activeIndex = i;
+    items.forEach(function (el, j) { el.classList.toggle("is-active", j === activeIndex); });
+  }
+
+  function render(matches, query) {
+    activeIndex = -1;
+    var footer = '<a class="cmdk-footer" href="/search?q=' + encodeURIComponent(query) + '">'
+      + "Search across every design system's own docs for \\u201c" + escapeHtml(query) + "\\u201d</a>";
+    if (!matches.length) {
+      results.innerHTML = '<p class="cmdk-empty">No matching page here — try the full search below.</p>' + footer;
+      return;
+    }
+    results.innerHTML = matches.map(function (item) {
+      return '<a class="cmdk-item" href="' + item.url + '">'
+        + '<span class="cmdk-item-title">' + escapeHtml(item.title) + '</span>'
+        + (item.excerpt ? '<span class="cmdk-item-excerpt">' + item.excerpt + '</span>' : '')
+        + '</a>';
+    }).join("") + footer;
+  }
+
+  if (toggle) toggle.addEventListener("click", open);
+
+  document.addEventListener("keydown", function (e) {
+    var isK = e.key === "k" || e.key === "K";
+    if (isK && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      if (backdrop.hidden) open(); else close();
+      return;
+    }
+    if (!backdrop.hidden && e.key === "Escape") { close(); return; }
+    if (backdrop.hidden) return;
+
+    var items = Array.prototype.slice.call(results.querySelectorAll(".cmdk-item"));
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(items, Math.min(activeIndex + 1, items.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(items, Math.max(activeIndex - 1, -1)); }
+    else if (e.key === "Enter" && activeIndex >= 0 && items[activeIndex]) {
+      e.preventDefault();
+      window.location.href = items[activeIndex].getAttribute("href");
+    }
   });
+
+  backdrop.addEventListener("click", function (e) {
+    if (e.target === backdrop) close();
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
     if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+
+  input.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    var query = input.value;
+    debounceTimer = setTimeout(function () {
+      window.dsMatchPagefind(query, 6).then(function (matches) {
+        if (input.value === query) render(matches, query.trim());
+      });
+    }, 150);
   });
 })();
 """
@@ -673,7 +965,8 @@ def routes_nav(current: str) -> str:
     filename-literal link breaks once live. "/" always resolves to it
     correctly regardless of how deep the current page is nested.
 
-    current: "search" (home), "directory" (the full list/grid), "components",
+    current: "search" (home), "directory" (the full list/grid), "compare"
+    (the resource matrix — see generate_compare.py), "components",
     "patterns", or "foundations" (see generate_components.py — three
     separate taxonomy browse routes, not one shared bucket). "search" is the
     internal identifier every existing caller already passes for the
@@ -683,7 +976,7 @@ def routes_nav(current: str) -> str:
     Nav labels: "Home" (the "search" route above — it's the homepage, and
     "Search" read as one more nav item rather than the site's own front
     door), "All Systems" (directory — avoids repeating "Directory" from the
-    site name), "Components", "Patterns", "Foundations".
+    site name), "Compare", "Components", "Patterns", "Foundations".
     """
     return f"""
     <nav class="site-nav">
@@ -695,6 +988,7 @@ def routes_nav(current: str) -> str:
         <div class="site-nav-links" id="siteNavLinks">
           <a href="/" class="{'current' if current == 'search' else ''}">Home</a>
           <a href="/directory" class="{'current' if current == 'directory' else ''}">All Systems</a>
+          <a href="/compare" class="{'current' if current == 'compare' else ''}">Compare</a>
           <a href="/components" class="{'current' if current == 'components' else ''}">Components</a>
           <a href="/patterns" class="{'current' if current == 'patterns' else ''}">Patterns</a>
           <a href="/foundations" class="{'current' if current == 'foundations' else ''}">Foundations</a>
@@ -705,17 +999,29 @@ def routes_nav(current: str) -> str:
           <a class="nav-suggest" href="{SUBMISSION_URL}" aria-label="Suggest a system">{PLUS_ICON_SVG}<span class="nav-suggest-label">Suggest a system</span></a>
         </div>
         <div class="nav-search">
-          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search">{SEARCH_ICON_SVG}</button>
-          <form class="nav-search-form" id="navSearchForm" hidden>
-            <input type="text" id="navSearchInput" placeholder="Search design systems...">
-          </form>
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search everything (Cmd+K)">
+            {SEARCH_ICON_SVG}<kbd class="nav-search-kbd">&#8984;K</kbd>
+          </button>
         </div>
         <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
           <span class="icon-menu">{MENU_ICON_SVG}</span><span class="icon-close">{CLOSE_ICON_SVG}</span>
         </button>
       </div>
     </nav>
-    <script>{NAV_SEARCH_JS}</script>
+
+    <div class="cmdk-backdrop" id="cmdkBackdrop" hidden>
+      <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+        <form class="cmdk-input-row" id="cmdkForm">
+          {SEARCH_ICON_SVG}
+          <input type="text" id="cmdkInput" placeholder="Search every page on this site..." autocomplete="off">
+          <kbd class="cmdk-esc">Esc</kbd>
+        </form>
+        <div class="cmdk-results" id="cmdkResults"></div>
+      </div>
+    </div>
+
+    <script>{PAGEFIND_JS}</script>
+    <script>{COMMAND_PALETTE_JS}</script>
     <script>{NAV_MENU_JS}</script>
     <script>{NAV_OVERFLOW_JS}</script>
     """

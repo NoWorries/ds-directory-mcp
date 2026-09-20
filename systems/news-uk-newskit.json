@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "news-uk-newskit",
   "organization": "News UK",
   "design_system": "NewsKit",
@@ -9,41 +9,205 @@
     "https://www.newskit.co.uk/"
   ],
   "detail_url": "/systems/news-uk-newskit",
-  "pages_indexed": 8,
+  "pages_indexed": 40,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:08:40+00:00",
+  "last_checked": "2026-09-19T00:45:41+00:00",
   "last_modified": "Wed, 02 Sep 2026 09:38:50 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
+      "https://github.com/newsuk/nuk-rfcs",
       "https://github.com/newscorp-ghfb/newskit"
     ],
     "storybook": [
       "https://storybook.newskit.co.uk/"
     ],
     "figma": [
-      "https://www.figma.com/proto/kXCrh9MHKAJ878KE2dQOz8/Handoff-Guides---for-engineers-%26-designers?page-id=1%3A544&node-id=275%3A21221&viewport=350%2C48%2C0.13&scaling=min-zoom&starting-point-node-id=275%3A21221&show-proto-sidebar=1&hide-ui=1",
-      "https://www.figma.com/file/FSbCQa6SzVR3K48ZWLeD77/NK-Web-Components?node-id=1%3A393",
-      "https://www.figma.com/file/jHs7EB68a57xVA3NKmMbgy/NK-Icons?node-id=1%3A12626",
-      "https://www.figma.com/file/oSjjLxC27fa6Jh6AHM7ja9/NK-NewsKit-Theme?node-id=1%3A393",
-      "https://www.figma.com/file/Q3OTJ4RZWJGTCaWuS8sWsL/NK-Utilities?node-id=0%3A1",
-      "https://www.figma.com/file/A8kKCGhZ5wFi78l3DOlPUQ/v5.0-%F0%9F%9F%A2-NewsKit-theme?node-id=574%3A7406&t=fMjmVd7ulhTXIsYO-1",
-      "https://www.figma.com/file/3l0UDvk1l2vsXpbtWlYWoP/%F0%9F%9F%A2-NK-NewsKit-Theme"
+      "https://www.figma.com/proto/44FDCMcOPHd5m29NKTESm7/Component-Documentation-Sheets",
+      "https://www.figma.com/file/FSbCQa6SzVR3K48ZWLeD77/%F0%9F%9F%A2-NK-Web-Components",
+      "https://www.figma.com/file/MkU4xtY2yPcCpfhzQCuSnK/v5.0-%F0%9F%9F%A2-NewsKit-component-library",
+      "https://www.figma.com/file/VYOAzpSq02PoR7cci6SJlE"
     ],
     "icons": [
-      "https://fonts.google.com/icons",
-      "https://www.newskit.co.uk/components/icons/"
+      "https://www.newskit.co.uk/components/icons"
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "dark_mode": true,
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": {
     "license": "NOASSERTION",
     "stars": 141,
     "last_pushed": "2026-09-08T13:00:03Z"
   },
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://www.newskit.co.uk/patterns/forms/address",
+      "title": "Address"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/audio-player",
+      "title": "Audio Player"
+    },
+    {
+      "url": "https://www.newskit.co.uk/theme/foundation/borders",
+      "title": "Borders"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/button",
+      "title": "Button"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/checkbox",
+      "title": "Checkbox"
+    },
+    {
+      "url": "https://www.newskit.co.uk/getting-started/accessibility/code",
+      "title": "Code for accessibility"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/utils/get-defaults",
+      "title": "Component Defaults Utils"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/consent-settings-link",
+      "title": "Consent Settings Link"
+    },
+    {
+      "url": "https://www.newskit.co.uk/patterns/forms/date-picker",
+      "title": "Date picker"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/date-time",
+      "title": "Date Time"
+    },
+    {
+      "url": "https://www.newskit.co.uk/getting-started/accessibility/design",
+      "title": "Design for accessibility"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/drawer",
+      "title": "Drawer"
+    },
+    {
+      "url": "https://www.newskit.co.uk/patterns/forms/email-address",
+      "title": "Email address"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/fieldset",
+      "title": "Fieldset"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/form",
+      "title": "Form"
+    },
+    {
+      "url": "https://www.newskit.co.uk/getting-started/code/form-step-by-step",
+      "title": "Form step-by-step"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/utils/get-css-from-theme",
+      "title": "Get CSS from theme utils"
+    },
+    {
+      "url": "https://www.newskit.co.uk/getting-started/code/testing",
+      "title": "Getting Started with Testing"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/headline",
+      "title": "Headline"
+    },
+    {
+      "url": "https://www.newskit.co.uk/theme/foundation/iconography",
+      "title": "Iconography"
+    },
+    {
+      "url": "https://www.newskit.co.uk/getting-started/code/instrumentation",
+      "title": "Instrumentation setup"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/layer",
+      "title": "Layer"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/menu",
+      "title": "Menu"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/modal",
+      "title": "Modal"
+    },
+    {
+      "url": "https://www.newskit.co.uk/patterns/forms/names",
+      "title": "Names"
+    },
+    {
+      "url": "https://www.newskit.co.uk/help/accessibility-statement",
+      "title": "NewsKit Accessibility Statement"
+    },
+    {
+      "url": "https://www.newskit.co.uk/",
+      "title": "NewsKit design system"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/ordered-list",
+      "title": "Ordered List"
+    },
+    {
+      "url": "https://www.newskit.co.uk/theme/foundation/overlays",
+      "title": "Overlays"
+    },
+    {
+      "url": "https://www.newskit.co.uk/theme/theming/overview",
+      "title": "Overview"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/pagination",
+      "title": "Pagination"
+    },
+    {
+      "url": "https://www.newskit.co.uk/patterns/overview",
+      "title": "Patterns"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/popover",
+      "title": "Popover"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/radio-button",
+      "title": "Radio Button"
+    },
+    {
+      "url": "https://www.newskit.co.uk/about/roadmap",
+      "title": "Roadmap"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/slider",
+      "title": "Slider"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/standfirst",
+      "title": "Standfirst"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/tabs",
+      "title": "Tabs"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/text-field",
+      "title": "Text Field"
+    },
+    {
+      "url": "https://www.newskit.co.uk/components/text-input",
+      "title": "Text Input"
+    }
+  ]
 }

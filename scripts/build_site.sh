@@ -27,11 +27,24 @@ cp robots.txt site/robots.txt
 cp systems.json site/systems.json
 cp design-system.schema.json site/design-system.schema.json
 cp directory.html site/directory.html
+cp compare.html site/compare.html
 if [ -d screenshots ]; then cp -r screenshots site/screenshots; fi
 if [ -d components ]; then cp -r components site/components; fi
 if [ -d patterns ]; then cp -r patterns site/patterns; fi
 if [ -d foundations ]; then cp -r foundations site/foundations; fi
 if [ -d systems ]; then cp -r systems site/systems; fi
+
+# Indexes the real, assembled site (must run AFTER every cp/mkdir above, not
+# before — Pagefind only finds what's actually sitting in site/ at the
+# moment it runs) into site/pagefind/, deployed alongside everything else
+# below. Purely static output (a WASM search index + a small JS runtime) —
+# no service to call at request time, no API key, same bar the rest of this
+# project holds itself to since the local-embeddings migration. Version
+# pinned for the same reason netlify-cli is pinned just below: an unpinned
+# `npx pagefind` can silently pick up a newer major version whose index
+# format or JS API changed underneath page_shell.py's PAGEFIND_JS, which
+# expects today's pagefind.js `search()`/`data()` shape specifically.
+npx --yes pagefind@1 --site site
 
 # --site pinned explicitly (not just via the NETLIFY_SITE_ID env var) and the
 # CLI version pinned too — an unpinned `npx netlify-cli` can pick up a newer

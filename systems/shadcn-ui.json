@@ -1,0 +1,232 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "shadcn-ui",
+  "organization": null,
+  "design_system": "shadcn/ui",
+  "full_name": "shadcn/ui",
+  "start_urls": [
+    "https://ui.shadcn.com/"
+  ],
+  "detail_url": "/systems/shadcn-ui",
+  "pages_indexed": 39,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T07:42:29+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/shadcn-ui/cn",
+      "https://github.com/shadcn-ui/ui"
+    ],
+    "mcp": [
+      "https://modelcontextprotocol.io/",
+      "https://code.visualstudio.com/docs/copilot/chat/mcp-servers"
+    ],
+    "agent_instructions": [
+      "https://ui.shadcn.com/llms.txt"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/shadcn"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/reactjs/react-codemod"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/lucide-react",
+      "https://www.npmjs.com/package/react-day-picker",
+      "https://www.npmjs.com/package/embla-carousel-react",
+      "https://www.npmjs.com/package/cmdk",
+      "https://www.npmjs.com/package/sonner",
+      "https://www.npmjs.com/package/@radix-ui/react-icons",
+      "https://www.npmjs.com/package/vaul",
+      "https://www.npmjs.com/package/tailwindcss-animate",
+      "https://www.npmjs.com/package/react",
+      "https://www.npmjs.com/package/recharts",
+      "https://www.npmjs.com/package/class-variance-authority",
+      "https://www.npmjs.com/package/react-resizable-panels",
+      "https://www.npmjs.com/package/react-hook-form",
+      "https://www.npmjs.com/package/input-otp"
+    ]
+  },
+  "content_signals": {
+    "tokens_format": "Figma Variables",
+    "dark_mode": true,
+    "codemods": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 1543,
+    "last_pushed": "2026-09-12T11:09:59Z"
+  },
+  "npm_meta": {
+    "latest_version": "4.21.0",
+    "last_published": "2026-09-04T05:34:07.022Z",
+    "weekly_downloads": 8636954
+  },
+  "indexed_pages": [
+    {
+      "url": "https://ui.shadcn.com/docs/helpers/ai-sdk",
+      "title": "AI SDK - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/dark-mode/astro",
+      "title": "Astro - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/installation/astro",
+      "title": "Astro - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/_blocks",
+      "title": "Blocks - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/blocks",
+      "title": "Building Blocks for the Web - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/components",
+      "title": "Components - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/components-json",
+      "title": "components.json - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/dark-mode",
+      "title": "Dark Mode - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/figma",
+      "title": "Figma - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/forms/formisch",
+      "title": "Formisch - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/forms",
+      "title": "Forms - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/sera",
+      "title": "Introducing Sera - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs",
+      "title": "Introduction - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/javascript",
+      "title": "JavaScript - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/legacy",
+      "title": "Legacy Docs - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/mcp",
+      "title": "MCP Server - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/monorepo",
+      "title": "Monorepo - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/dark-mode/next",
+      "title": "Next.js - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/forms/next",
+      "title": "Next.js - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/react-19",
+      "title": "Next.js 15 + React 19 - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/official",
+      "title": "Official shadcn/ui Website - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/_v0",
+      "title": "Open in v0 - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/package-imports",
+      "title": "Package Imports - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/forms/react-hook-form",
+      "title": "React Hook Form - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/directory",
+      "title": "Registry Directory - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/dark-mode/remix",
+      "title": "Remix - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/cli",
+      "title": "shadcn - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/",
+      "title": "shadcn/ui - The Foundation for your Design System"
+    },
+    {
+      "url": "https://ui.shadcn.com/llms.txt",
+      "title": "shadcn/ui — llms.txt"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/skills",
+      "title": "Skills - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/colors",
+      "title": "Tailwind Colors in Every Format - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/tailwind-v4",
+      "title": "Tailwind v4 - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/helpers/tanstack-ai",
+      "title": "TanStack AI - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/forms/tanstack-form",
+      "title": "TanStack Form - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/dark-mode/tanstack-start",
+      "title": "TanStack Start - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/theming",
+      "title": "Theming - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/typeset",
+      "title": "Typeset - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/dark-mode/vite",
+      "title": "Vite - shadcn/ui"
+    },
+    {
+      "url": "https://ui.shadcn.com/docs/new",
+      "title": "Your project is ready! - shadcn/ui"
+    }
+  ]
+}

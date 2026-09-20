@@ -15,3 +15,17 @@ beautifulsoup4>=4.12.0
 lxml>=5.0.0
 python-dotenv>=1.0.0
 PyYAML>=6.0
+
+# Local embeddings (see embeddings.py) — CPU-only torch explicitly, via the
+# extra index below: a plain `pip install torch` on Linux pulls the CUDA-
+# enabled build (multi-GB) even on a CPU-only GitHub Actions runner, which
+# neither needs it nor has a GPU to use it. sentence-transformers itself
+# stays off PyPI's default index (it's not a torch build) so both indexes
+# are consulted. embeddings.py's lazy import means jobs that never actually
+# call embed_texts()/embed_query() (submission-check's dry run, merge_
+# shards.py) still pay the install cost here, but not a heavier one at
+# import/run time — splitting this into its own requirements file for just
+# that case wasn't worth it at one non-sharded job's expense.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+sentence-transformers>=3.0.0

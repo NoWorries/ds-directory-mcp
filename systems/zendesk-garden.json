@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "zendesk-garden",
   "organization": "Zendesk",
   "design_system": "Garden",
@@ -9,26 +9,211 @@
     "https://garden.zendesk.com/"
   ],
   "detail_url": "/systems/zendesk-garden",
-  "pages_indexed": 2,
-  "coverage_status": "partial",
+  "pages_indexed": 37,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-17T01:18:52+00:00",
+  "last_checked": "2026-09-19T07:35:24+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
-  "resources": {},
-  "unverified_resources": {},
+  "resources": {
+    "github": [
+      "https://github.com/zendeskgarden/tailwindcss"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@zendeskgarden/react-theming",
+      "https://www.npmjs.com/package/@zendeskgarden/react-pagination",
+      "https://www.npmjs.com/package/@zendeskgarden/react-breadcrumbs",
+      "https://www.npmjs.com/package/@zendeskgarden/react-forms",
+      "https://www.npmjs.com/package/@zendeskgarden/react-buttons",
+      "https://www.npmjs.com/package/@zendeskgarden/react-modals",
+      "https://www.npmjs.com/package/@zendeskgarden/react-chrome",
+      "https://www.npmjs.com/package/@zendeskgarden/react-tabs",
+      "https://www.npmjs.com/package/@zendeskgarden/react-loaders",
+      "https://www.npmjs.com/package/@zendeskgarden/react-tooltips",
+      "https://www.npmjs.com/package/@zendeskgarden/react-colorpickers",
+      "https://www.npmjs.com/package/@zendeskgarden/react-dropdowns",
+      "https://www.npmjs.com/package/@zendeskgarden/react-notifications",
+      "https://www.npmjs.com/package/@zendeskgarden/react-tags",
+      "https://www.npmjs.com/package/@zendeskgarden/react-grid",
+      "https://www.npmjs.com/package/@zendeskgarden/react-accordions",
+      "https://www.npmjs.com/package/@zendeskgarden/react-avatars",
+      "https://www.npmjs.com/package/@zendeskgarden/react-datepickers",
+      "https://www.npmjs.com/package/@zendeskgarden/react-draggable",
+      "https://www.npmjs.com/package/@zendeskgarden/react-typography",
+      "https://www.npmjs.com/package/@zendeskgarden/react-tables"
+    ],
+    "icons": [
+      "https://garden.zendesk.com/design/icons",
+      "https://garden.zendesk.com/design/icons/library"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/bvaughn/react-window",
+      "https://github.com/clauderic/dnd-kit"
+    ]
+  },
   "content_signals": {
+    "dark_mode": true,
     "frameworks": [
       "React"
     ]
   },
-  "github_meta": null,
-  "npm_meta": null,
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 50,
+    "last_pushed": "2026-09-19T00:49:34Z"
+  },
+  "npm_meta": {
+    "latest_version": "9.15.8",
+    "last_published": "2026-08-20T20:40:33.755Z",
+    "weekly_downloads": 59494
+  },
   "indexed_pages": [
+    {
+      "url": "https://garden.zendesk.com/components/accordion",
+      "title": "Accordion / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/alerts",
+      "title": "Alerts / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/anchor",
+      "title": "Anchor / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/avatar",
+      "title": "Avatar / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/patterns/tables/basic-formatting",
+      "title": "Basic formatting / Patterns / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/breadcrumbs",
+      "title": "Breadcrumbs / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/button",
+      "title": "Button / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/checkbox",
+      "title": "Checkbox / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/code",
+      "title": "Code / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/code-block",
+      "title": "Code block / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/color-picker",
+      "title": "Color picker / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/color-scheme-provider",
+      "title": "Color scheme provider / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/color-swatch",
+      "title": "Color swatch / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/date-picker",
+      "title": "Date picker / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/dots",
+      "title": "Dots / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/draggable",
+      "title": "Draggable / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/drawer",
+      "title": "Drawer / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/grid",
+      "title": "Grid / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/menu",
+      "title": "Menu / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/modal",
+      "title": "Modal / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/pagination",
+      "title": "Pagination / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/pane",
+      "title": "Pane / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/patterns/rich-text-editor",
+      "title": "Rich-text editor / Patterns / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/patterns/save",
+      "title": "Save / Patterns / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/sheet",
+      "title": "Sheet / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/status-indicator",
+      "title": "Status indicator / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/stepper",
+      "title": "Stepper / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/table",
+      "title": "Table / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/tabs",
+      "title": "Tabs / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/tags",
+      "title": "Tags / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/tiles",
+      "title": "Tiles / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/timeline",
+      "title": "Timeline / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/tooltip",
+      "title": "Tooltip / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/tooltip-dialog",
+      "title": "Tooltip dialog / Components / Zendesk Garden"
+    },
     {
       "url": "https://garden.zendesk.com/components/versions",
       "title": "Versions / Components / Zendesk Garden"
+    },
+    {
+      "url": "https://garden.zendesk.com/components/well",
+      "title": "Well / Components / Zendesk Garden"
     },
     {
       "url": "https://garden.zendesk.com/",

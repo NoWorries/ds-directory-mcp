@@ -1,0 +1,46 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "rei-cedar",
+  "organization": "REI",
+  "design_system": "Cedar",
+  "full_name": "REI — Cedar",
+  "start_urls": [
+    "https://rei.github.io/rei-cedar-docs/"
+  ],
+  "detail_url": "/systems/rei-cedar",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:40:53+00:00",
+  "last_modified": "Tue, 18 Jul 2023 18:25:19 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "npm": [
+      "https://www.npmjs.com/package/@rei/cedar"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "Vue"
+    ]
+  },
+  "github_meta": {
+    "license": null,
+    "stars": 0,
+    "last_pushed": "2021-07-07T17:45:16Z"
+  },
+  "npm_meta": {
+    "latest_version": "17.1.0",
+    "last_published": "2026-07-31T16:49:39.607Z",
+    "weekly_downloads": 585
+  },
+  "indexed_pages": [
+    {
+      "url": "https://rei.github.io/rei-cedar-docs/",
+      "title": "REI — Cedar"
+    }
+  ]
+}

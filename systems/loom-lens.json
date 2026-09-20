@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "loom-lens",
   "organization": "Loom",
   "design_system": "Lens",
@@ -9,12 +9,12 @@
     "https://lens.loom.dev/"
   ],
   "detail_url": "/systems/loom-lens",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 8,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-17T00:44:57+00:00",
-  "last_modified": "Thu, 10 Sep 2026 03:10:28 GMT",
+  "last_checked": "2026-09-16T07:07:24+00:00",
+  "last_modified": "Mon, 14 Sep 2026 15:04:56 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -30,7 +30,11 @@
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": null,
   "npm_meta": {
     "latest_version": "12.20.6",
@@ -40,7 +44,35 @@
   "indexed_pages": [
     {
       "url": "https://lens.loom.dev/",
-      "title": "Lens — the design system for Loom products"
+      "title": "<!-- --> Lens"
+    },
+    {
+      "url": "https://lens.loom.dev/components/align",
+      "title": "align<!-- --> <!-- -->—<!-- --> Lens"
+    },
+    {
+      "url": "https://lens.loom.dev/components/container",
+      "title": "container<!-- --> <!-- -->—<!-- --> Lens"
+    },
+    {
+      "url": "https://lens.loom.dev/components/icon-tile",
+      "title": "icon-tile<!-- --> <!-- -->—<!-- --> Lens"
+    },
+    {
+      "url": "https://lens.loom.dev/components/logo-loader",
+      "title": "logo-loader<!-- --> <!-- -->—<!-- --> Lens"
+    },
+    {
+      "url": "https://lens.loom.dev/styles/shadows",
+      "title": "shadows<!-- --> <!-- -->—<!-- --> Lens"
+    },
+    {
+      "url": "https://lens.loom.dev/components/skeleton",
+      "title": "skeleton<!-- --> <!-- -->—<!-- --> Lens"
+    },
+    {
+      "url": "https://lens.loom.dev/styles/spacing",
+      "title": "spacing<!-- --> <!-- -->—<!-- --> Lens"
     }
   ]
 }

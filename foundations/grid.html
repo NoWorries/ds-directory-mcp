@@ -157,19 +157,90 @@
 
   .nav-search { display: flex; align-items: center; }
   .nav-search-toggle {
-    background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
-    display: flex; align-items: center; border-radius: 6px;
+    background: none; border: none; padding: 6px 8px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; border-radius: 6px;
   }
   .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
-  /* Same [hidden]-vs-explicit-display fix needed a third time here — see the
-     .cards-grid/.card comments in generate_directory.py for the full story. */
-  .nav-search-form[hidden] { display: none; }
-  .nav-search-form { display: flex; align-items: center; }
-  .nav-search-form input {
-    width: 220px; font: inherit; font-size: 0.85rem; padding: 6px 10px; margin-left: 6px;
-    border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
+  .nav-search-kbd {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; line-height: 1.4;
   }
-  .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+  /* Narrow viewports have no room for the shortcut hint next to the icon —
+     the shortcut itself still works, this is just the visible reminder. */
+  @media (max-width: 640px) {
+    .nav-search-kbd { display: none; }
+  }
+
+  /* --- Cmd+K command palette (see PAGEFIND_JS/COMMAND_PALETTE_JS) — a
+     full-screen overlay, reachable from any page via the nav's search icon
+     or the Cmd+K/Ctrl+K shortcut. Kept visually distinct from the small
+     inline .ds-typeahead-dropdown below: this is a modal takeover (real
+     page-content search, more room for an excerpt), that one's a quick
+     inline suggestion list under a page's own search box. */
+  .cmdk-backdrop {
+    position: fixed; inset: 0; z-index: 100; background: rgba(15, 23, 42, 0.5);
+    display: flex; align-items: flex-start; justify-content: center; padding: 12vh 16px 0;
+  }
+  .cmdk-backdrop[hidden] { display: none; }
+  .cmdk-panel {
+    width: 100%; max-width: 560px; max-height: 60vh; display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .cmdk-input-row {
+    display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); flex: none;
+  }
+  .cmdk-input-row svg { color: var(--text-faint); flex: none; }
+  .cmdk-input-row input {
+    flex: 1; border: none; background: none; font: inherit; font-size: 1rem; color: var(--text);
+  }
+  .cmdk-input-row input:focus { outline: none; }
+  .cmdk-esc {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; flex: none;
+  }
+  .cmdk-results { overflow-y: auto; }
+  .cmdk-item {
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 16px;
+    text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border);
+  }
+  .cmdk-item:hover, .cmdk-item.is-active { background: var(--surface-sunken); }
+  .cmdk-item-title { font-weight: 500; font-size: 0.9rem; }
+  .cmdk-item-excerpt {
+    font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cmdk-item-excerpt mark { background: var(--accent-soft); color: var(--accent-soft-text); }
+  .cmdk-empty { padding: 14px 16px; font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+  .cmdk-footer {
+    display: block; padding: 12px 16px; font-size: 0.85rem; color: var(--accent);
+    text-decoration: none; border-top: 1px solid var(--border);
+  }
+  .cmdk-footer:hover { background: var(--surface-sunken); }
+
+  /* --- Search typeahead dropdown (see SEARCH_TYPEAHEAD_JS) — shared by the
+     homepage hero search box and the search results page's own input. The
+     wrapping element each consumer places this inside needs its own
+     position: relative for the absolute positioning here to anchor
+     correctly against the input rather than the page. */
+  .ds-typeahead-dropdown {
+    position: absolute; z-index: 60; top: 100%; left: 0; right: 0; margin-top: 6px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .ds-typeahead-dropdown[hidden] { display: none; }
+  .ds-typeahead-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 14px; text-decoration: none; color: var(--text); font-size: 0.9rem;
+  }
+  .ds-typeahead-item:hover, .ds-typeahead-item.is-active { background: var(--surface-sunken); }
+  .ds-typeahead-name { font-weight: 500; }
+  .ds-typeahead-type {
+    font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--text-faint); background: var(--surface-sunken); border-radius: 4px;
+    padding: 2px 6px; flex: none;
+  }
+  .ds-typeahead-item.is-active .ds-typeahead-type { color: var(--accent); }
 
   /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
      .site-nav-links already fits inline. Fixed box size (rather than sizing
@@ -263,7 +334,6 @@
        daylight between the search and menu icons, not their own margins. */
     .site-nav-inner { gap: 8px; }
     .nav-menu-toggle { margin-left: 0; }
-    .nav-search-form input { width: 140px; }
     .site-brand-full { display: none; }
     .site-brand-short { display: inline; }
   }
@@ -418,6 +488,7 @@
         <div class="site-nav-links" id="siteNavLinks">
           <a href="/" class="">Home</a>
           <a href="/directory" class="">All Systems</a>
+          <a href="/compare" class="">Compare</a>
           <a href="/components" class="">Components</a>
           <a href="/patterns" class="">Patterns</a>
           <a href="/foundations" class="current">Foundations</a>
@@ -428,30 +499,153 @@
           <a class="nav-suggest" href="/suggest" aria-label="Suggest a system"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span class="nav-suggest-label">Suggest a system</span></a>
         </div>
         <div class="nav-search">
-          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-          <form class="nav-search-form" id="navSearchForm" hidden>
-            <input type="text" id="navSearchInput" placeholder="Search design systems...">
-          </form>
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search everything (Cmd+K)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><kbd class="nav-search-kbd">&#8984;K</kbd>
+          </button>
         </div>
         <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
           <span class="icon-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span class="icon-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
         </button>
       </div>
     </nav>
+
+    <div class="cmdk-backdrop" id="cmdkBackdrop" hidden>
+      <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+        <form class="cmdk-input-row" id="cmdkForm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="cmdkInput" placeholder="Search every page on this site..." autocomplete="off">
+          <kbd class="cmdk-esc">Esc</kbd>
+        </form>
+        <div class="cmdk-results" id="cmdkResults"></div>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var pagefindPromise = null;
+
+  function loadPagefind() {
+    if (!pagefindPromise) {
+      pagefindPromise = import("/pagefind/pagefind.js")
+        .then(function (mod) { return mod.init().then(function () { return mod; }); })
+        .catch(function () { return null; });
+    }
+    return pagefindPromise;
+  }
+
+  // [{title, url, excerpt}], best-effort empty on any failure (offline,
+  // pagefind.js 404 on a local/dev preview that skipped the build step,
+  // etc.) — same "never breaks the page, just shows nothing" contract
+  // dsMatchSearchIndex above already follows.
+  window.dsMatchPagefind = function (query, limit) {
+    var q = (query || "").trim();
+    if (!q) return Promise.resolve([]);
+    return loadPagefind().then(function (pagefind) {
+      if (!pagefind) return [];
+      return pagefind.search(q).then(function (search) {
+        var picked = search.results.slice(0, limit || 6);
+        return Promise.all(picked.map(function (r) { return r.data(); }));
+      }).then(function (data) {
+        return data.map(function (d) {
+          return { title: (d.meta && d.meta.title) || d.url, url: d.url, excerpt: d.excerpt || "" };
+        });
+      });
+    }).catch(function () { return []; });
+  };
+})();
+</script>
     <script>
 (function () {
   var toggle = document.getElementById("navSearchToggle");
-  var form = document.getElementById("navSearchForm");
-  var input = document.getElementById("navSearchInput");
-  if (!toggle || !form) return;
-  toggle.addEventListener("click", function () {
-    form.hidden = !form.hidden;
-    if (!form.hidden) input.focus();
+  var backdrop = document.getElementById("cmdkBackdrop");
+  var form = document.getElementById("cmdkForm");
+  var input = document.getElementById("cmdkInput");
+  var results = document.getElementById("cmdkResults");
+  if (!backdrop || !form || !input || !results) return;
+
+  var activeIndex = -1;
+  var debounceTimer;
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function open() {
+    backdrop.hidden = false;
+    document.body.style.overflow = "hidden";
+    input.value = "";
+    results.innerHTML = "";
+    activeIndex = -1;
+    input.focus();
+  }
+
+  function close() {
+    backdrop.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function setActive(items, i) {
+    activeIndex = i;
+    items.forEach(function (el, j) { el.classList.toggle("is-active", j === activeIndex); });
+  }
+
+  function render(matches, query) {
+    activeIndex = -1;
+    var footer = '<a class="cmdk-footer" href="/search?q=' + encodeURIComponent(query) + '">'
+      + "Search across every design system's own docs for \u201c" + escapeHtml(query) + "\u201d</a>";
+    if (!matches.length) {
+      results.innerHTML = '<p class="cmdk-empty">No matching page here — try the full search below.</p>' + footer;
+      return;
+    }
+    results.innerHTML = matches.map(function (item) {
+      return '<a class="cmdk-item" href="' + item.url + '">'
+        + '<span class="cmdk-item-title">' + escapeHtml(item.title) + '</span>'
+        + (item.excerpt ? '<span class="cmdk-item-excerpt">' + item.excerpt + '</span>' : '')
+        + '</a>';
+    }).join("") + footer;
+  }
+
+  if (toggle) toggle.addEventListener("click", open);
+
+  document.addEventListener("keydown", function (e) {
+    var isK = e.key === "k" || e.key === "K";
+    if (isK && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      if (backdrop.hidden) open(); else close();
+      return;
+    }
+    if (!backdrop.hidden && e.key === "Escape") { close(); return; }
+    if (backdrop.hidden) return;
+
+    var items = Array.prototype.slice.call(results.querySelectorAll(".cmdk-item"));
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(items, Math.min(activeIndex + 1, items.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(items, Math.max(activeIndex - 1, -1)); }
+    else if (e.key === "Enter" && activeIndex >= 0 && items[activeIndex]) {
+      e.preventDefault();
+      window.location.href = items[activeIndex].getAttribute("href");
+    }
   });
+
+  backdrop.addEventListener("click", function (e) {
+    if (e.target === backdrop) close();
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
     if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+
+  input.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    var query = input.value;
+    debounceTimer = setTimeout(function () {
+      window.dsMatchPagefind(query, 6).then(function (matches) {
+        if (input.value === query) render(matches, query.trim());
+      });
+    }, 150);
   });
 })();
 </script>
@@ -580,18 +774,18 @@
     
     <nav class="component-sidebar">
       <p class="sidebar-label">All foundations</p>
-      <ul><li><a href="/foundations/color" class="">Color <span class="sidebar-count">3</span></a></li><li><a href="/foundations/elevation" class="">Elevation <span class="sidebar-count">1</span></a></li><li><a href="/foundations/grid" class="current">Grid <span class="sidebar-count">2</span></a></li><li><a href="/foundations/motion" class="">Motion <span class="sidebar-count">1</span></a></li><li><a href="/foundations/spacing" class="">Spacing <span class="sidebar-count">2</span></a></li><li><a href="/foundations/typography" class="">Typography <span class="sidebar-count">2</span></a></li><li><a href="/foundations/voice-and-tone" class="">Voice and Tone <span class="sidebar-count">1</span></a></li></ul>
+      <ul><li><a href="/foundations/accessibility" class="">Accessibility <span class="sidebar-count">19</span></a></li><li><a href="/foundations/color" class="">Color <span class="sidebar-count">23</span></a></li><li><a href="/foundations/elevation" class="">Elevation <span class="sidebar-count">11</span></a></li><li><a href="/foundations/grid" class="current">Grid <span class="sidebar-count">14</span></a></li><li><a href="/foundations/iconography" class="">Iconography <span class="sidebar-count">11</span></a></li><li><a href="/foundations/motion" class="">Motion <span class="sidebar-count">12</span></a></li><li><a href="/foundations/spacing" class="">Spacing <span class="sidebar-count">15</span></a></li><li><a href="/foundations/theming" class="">Theming <span class="sidebar-count">10</span></a></li><li><a href="/foundations/tokens" class="">Tokens <span class="sidebar-count">13</span></a></li><li><a href="/foundations/typography" class="">Typography <span class="sidebar-count">23</span></a></li><li><a href="/foundations/voice-and-tone" class="">Voice and Tone <span class="sidebar-count">5</span></a></li></ul>
     </nav>
     <details class="component-sidebar-mobile">
       <summary aria-label="Browse all foundations, currently viewing Grid">
         <span class="sidebar-mobile-current">Grid</span>
       </summary>
-      <ul><li><a href="/foundations/color" class="">Color <span class="sidebar-count">3</span></a></li><li><a href="/foundations/elevation" class="">Elevation <span class="sidebar-count">1</span></a></li><li><a href="/foundations/grid" class="current">Grid <span class="sidebar-count">2</span></a></li><li><a href="/foundations/motion" class="">Motion <span class="sidebar-count">1</span></a></li><li><a href="/foundations/spacing" class="">Spacing <span class="sidebar-count">2</span></a></li><li><a href="/foundations/typography" class="">Typography <span class="sidebar-count">2</span></a></li><li><a href="/foundations/voice-and-tone" class="">Voice and Tone <span class="sidebar-count">1</span></a></li></ul>
+      <ul><li><a href="/foundations/accessibility" class="">Accessibility <span class="sidebar-count">19</span></a></li><li><a href="/foundations/color" class="">Color <span class="sidebar-count">23</span></a></li><li><a href="/foundations/elevation" class="">Elevation <span class="sidebar-count">11</span></a></li><li><a href="/foundations/grid" class="current">Grid <span class="sidebar-count">14</span></a></li><li><a href="/foundations/iconography" class="">Iconography <span class="sidebar-count">11</span></a></li><li><a href="/foundations/motion" class="">Motion <span class="sidebar-count">12</span></a></li><li><a href="/foundations/spacing" class="">Spacing <span class="sidebar-count">15</span></a></li><li><a href="/foundations/theming" class="">Theming <span class="sidebar-count">10</span></a></li><li><a href="/foundations/tokens" class="">Tokens <span class="sidebar-count">13</span></a></li><li><a href="/foundations/typography" class="">Typography <span class="sidebar-count">23</span></a></li><li><a href="/foundations/voice-and-tone" class="">Voice and Tone <span class="sidebar-count">5</span></a></li></ul>
     </details>
     <div class="component-main">
       <h1>Grid</h1>
-      <p class="subtitle">2 indexed systems document grid — click through to the actual page.</p>
-      <ul class="system-list"><li><a class="name-block-link" href="/systems/goodbarber-goodbarber-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.goodbarber.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GoodBarber</span><span class="ds-name">GoodBarber Design System</span></div></div></a><a class="page-title" href="https://www.goodbarber.com/uxdesign/grid/" target="_blank" rel="noopener" title="Open the actual page on GoodBarber — GoodBarber Design System's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/hewlett-packard-grommet"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=grommet.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Hewlett Packard</span><span class="ds-name">Grommet</span></div></div></a><a class="page-title" href="https://grommet.io/grid" target="_blank" rel="noopener" title="Open the actual page on Hewlett Packard — Grommet's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li></ul>
+      <p class="subtitle">14 indexed systems document grid — click through to the actual page.</p>
+      <ul class="system-list"><li><a class="name-block-link" href="/systems/atlassian-atlassian-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=atlassian.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Atlassian</span><span class="ds-name">Atlassian Design System</span></div></div></a><a class="page-title" href="https://atlassian.design/foundations/grid" target="_blank" rel="noopener" title="Open the actual page on Atlassian — Atlassian Design System's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/city-of-boston-fleet"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=patterns.boston.gov&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">City of Boston</span><span class="ds-name">Fleet</span></div></div></a><a class="page-title" href="https://patterns.boston.gov/components/detail/grid_cards--default.html" target="_blank" rel="noopener" title="Open the actual page on City of Boston — Fleet's site — Grid of Cards: Default"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid of Cards: Default</span></a></li><li><a class="name-block-link" href="/systems/consumer-financial-protection-bureau-cfpb-design-manual"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=cfpb.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Consumer Financial Protection Bureau</span><span class="ds-name">CFPB Design Manual</span></div></div></a><a class="page-title" href="https://cfpb.github.io/design-system/foundation/grid" target="_blank" rel="noopener" title="Open the actual page on Consumer Financial Protection Bureau — CFPB Design Manual's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/equinor-eds"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=eds.equinor.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Equinor</span><span class="ds-name">EDS</span></div></div></a><a class="page-title" href="https://eds.equinor.com/docs/Next/foundation/design-tokens/grid" target="_blank" rel="noopener" title="Open the actual page on Equinor — EDS's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/github-primer"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=primer.style&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Github</span><span class="ds-name">Primer</span></div></div></a><a class="page-title" href="https://primer.style/product/css-utilities/grid" target="_blank" rel="noopener" title="Open the actual page on Github — Primer's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/goodbarber-goodbarber-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.goodbarber.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GoodBarber</span><span class="ds-name">GoodBarber Design System</span></div></div></a><a class="page-title" href="https://www.goodbarber.com/uxdesign/grid/" target="_blank" rel="noopener" title="Open the actual page on GoodBarber — GoodBarber Design System's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/materialize-materialize-css"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=materializecss.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Materialize</span><span class="ds-name">Materialize CSS</span></div></div></a><a class="page-title" href="https://materializecss.com/grid.html" target="_blank" rel="noopener" title="Open the actual page on Materialize — Materialize CSS's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/new-york-state-new-york-state-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.ny.gov&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">New York State</span><span class="ds-name">New York State Design System</span></div></div></a><a class="page-title" href="https://designsystem.ny.gov/foundations/utilities/grid" target="_blank" rel="noopener" title="Open the actual page on New York State — New York State Design System's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/semantic-semantic-ui"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semantic-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Semantic</span><span class="ds-name">Semantic UI</span></div></div></a><a class="page-title" href="https://semantic-ui.com/collections/grid.html" target="_blank" rel="noopener" title="Open the actual page on Semantic — Semantic UI's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/semi-design"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semi.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Semi Design</span></div></div></a><a class="page-title" href="https://semi.design/en-US/basic/grid" target="_blank" rel="noopener" title="Open the actual page on Semi Design's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/servicetitan-anvil"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=anvil.servicetitan.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">ServiceTitan</span><span class="ds-name">Anvil</span></div></div></a><a class="page-title" href="https://anvil.servicetitan.com/docs/web/components/grid/code" target="_blank" rel="noopener" title="Open the actual page on ServiceTitan — Anvil's site — Grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid</span></a></li><li><a class="name-block-link" href="/systems/siemens-ix"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ix.siemens.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Siemens iX</span></div></div></a><a class="page-title" href="https://ix.siemens.io/docs/components/layout-grid/code" target="_blank" rel="noopener" title="Open the actual page on Siemens iX's site — Layout grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Layout grid</span></a></li><li><a class="name-block-link" href="/systems/singapore-government-design-system"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.designsystem.tech.gov.sg&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Singapore Government Design System</span></div></div></a><a class="page-title" href="https://www.designsystem.tech.gov.sg/foundations/layout/responsive-grid" target="_blank" rel="noopener" title="Open the actual page on Singapore Government Design System's site — Responsive grid"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Responsive grid</span></a></li><li><a class="name-block-link" href="/systems/zendesk-garden"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=garden.zendesk.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Zendesk</span><span class="ds-name">Garden</span></div></div></a><a class="page-title" href="https://garden.zendesk.com/components/grid" target="_blank" rel="noopener" title="Open the actual page on Zendesk — Garden's site — Grid / Components / Zendesk Garden"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span>Grid / Components / Zendesk Garden</span></a></li></ul>
     </div>
   </div>
 </div>

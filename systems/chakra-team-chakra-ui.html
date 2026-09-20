@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chakra UI — Design Systems Directory</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+
+  @view-transition { navigation: auto; }
+
+  /* Named transition (view-transition-name: thumb-<slug>, tagged
+     view-transition-class: thumb — set inline in generate_directory.py's
+     render_card/generate_systems.py's thumb_html, since the name itself must
+     be unique per element but the *class* lets every card share one
+     animation rule) gets a slightly slower, eased morph than the default
+     page crossfade, so a card's thumbnail visibly glides into the detail
+     page's hero image instead of just cutting; everything else keeps the
+     plain default root crossfade, intentionally quick. (A matching
+     title-<slug> transition on the heading was tried and dropped — morphing
+     text at a different size/weight read as glitchy, not smooth.)
+     Chrome/Edge only (view-transition-class needs Chrome 125+) — a no-op
+     elsewhere, same as @view-transition itself. */
+  ::view-transition-group(*) { animation-duration: 0.3s; }
+  ::view-transition-group(*.thumb) {
+    animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  :root {
+    --bg: #ffffff; --surface: #ffffff; --surface-sunken: #f4f6f8; --border: #e2e6ea;
+    --text: #12151a; --text-muted: #5b6472; --text-faint: #9aa3af;
+    --accent: #1d4ed8; --accent-strong: #1638a8; --accent-soft: #e8edfc; --accent-soft-text: #1d4ed8;
+    --shadow: 0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -10px rgba(15,23,42,0.14);
+    /* Faint fractal-noise grain (alpha-only, so it reads as texture rather
+       than color) — the shared look for .textured containers below. Kept as
+       a token so light/dark could each tune it without touching every
+       container's markup. */
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --surface: #151a21; --surface-sunken: #1b212a; --border: #2a323d;
+      --text: #e7eaee; --text-muted: #98a2b0; --text-faint: #626b78;
+      --accent: #7ea2ff; --accent-strong: #a4c0ff; --accent-soft: rgba(126,162,255,0.12); --accent-soft-text: #a4c0ff;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 18px -10px rgba(0,0,0,0.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  /* A faint grain treatment for card-like containers (the MCP callout, nav
+     cards, grid cards) — applied via ::before so it layers over each
+     container's own background without fighting its other background-image
+     uses (e.g. a card's own thumbnail). Needs the container to have
+     `position: relative` (each usage sets it) and `overflow: hidden`
+     (usually already there) so it respects rounded corners instead of
+     bleeding past them. */
+  .textured { position: relative; }
+  .textured::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background-image: var(--noise);
+    background-repeat: repeat;
+    opacity: 0.7;
+  }
+  .textured > * { position: relative; }
+  body {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); margin: 0; padding: calc(60px + 32px) 24px 80px;
+  }
+  a { color: var(--accent); }
+  .page { max-width: 1040px; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; }
+  h1 {
+    font-family: "JetBrains Mono", monospace; font-weight: 700;
+    font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); letter-spacing: -0.01em; line-height: 1.25;
+    margin: 0 0 12px; text-wrap: balance;
+  }
+  .subtitle { color: var(--text-muted); font-size: 0.98rem; line-height: 1.55; max-width: 64ch; margin: 0 0 28px; }
+
+  /* --- Fixed global top nav --- */
+  .site-nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 100;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+  }
+  .site-nav-inner {
+    max-width: 1040px; margin: 0 auto; width: 100%; padding: 0 24px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .site-brand {
+    font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.86rem;
+    color: var(--text); text-decoration: none; white-space: nowrap;
+  }
+  /* Two text variants swapped by viewport rather than one truncated/wrapped
+     string — "Design Systems Directory" is the real name everywhere there's
+     room for it; only the mobile bar (already tight with search+menu on the
+     same row) gets the shortened form. Both live in the DOM at once but
+     only one is ever visible, so a screen reader announces exactly one
+     (the other is display:none, which removes it from the accessibility
+     tree — not a duplicate-announcement risk). */
+  .site-brand-short { display: none; }
+  /* NAV_OVERFLOW_JS's own, width-independent trigger for the same swap —
+     shortening the title is the first, least disruptive space-saving move
+     it tries whenever the nav doesn't fit, before it ever touches Suggest
+     or collapses a route into the "More" menu. Separate from (and additive
+     to) the phone-only media query below, which still applies its own
+     floor regardless of what JS decides. */
+  .site-nav-inner.brand-compact .site-brand-full { display: none; }
+  .site-nav-inner.brand-compact .site-brand-short { display: inline; }
+  /* nowrap rather than wrapping to a second line — a wrapped ragged row was
+     the original bug report here. NAV_OVERFLOW_JS keeps this from actually
+     overflowing: it measures whenever the row doesn't fit and moves the
+     lowest-priority route link into the "More" dropdown one at a time until
+     what's left fits on one line. Deliberately NOT `overflow: hidden` here
+     even as a pre-JS safety net — the "More" dropdown menu below is a
+     descendant of this element, and hidden overflow on an ancestor clips an
+     absolutely-positioned descendant's paint regardless of its own
+     position/containing-block, which made the open dropdown invisible.
+     min-width: 0 overrides the flex default of `auto`, which otherwise
+     refuses to shrink a flex item below its content's own min-content size
+     — with several nowrap links inside, that min-content size is the full
+     unwrapped width of every link combined, so without this override the
+     row never actually shrank at all (scrollWidth == clientWidth always),
+     and NAV_OVERFLOW_JS's overflow check never had anything real to catch. */
+  .site-nav-links { display: flex; flex-wrap: nowrap; align-items: center; gap: 4px; flex: 1; min-width: 0; }
+  .site-nav-links a {
+    font-size: 0.86rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 6px; white-space: nowrap;
+  }
+  .site-nav-links a:hover { background: var(--surface-sunken); color: var(--text); }
+  .site-nav-links a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+  /* "Suggest a system" lives in the same link list as the routes (so the
+     mobile menu below doesn't need a second, separately-toggled element)
+     but keeps its own accent treatment so it still reads as a distinct
+     call-to-action rather than one more route. */
+  .site-nav-links a.nav-suggest {
+    display: inline-flex; align-items: center; gap: 5px;
+    color: var(--accent); font-weight: 600; margin-left: auto;
+  }
+  .site-nav-links a.nav-suggest svg { flex: none; }
+  /* Second space-saving move NAV_OVERFLOW_JS tries (after shortening the
+     title, before collapsing any route into "More") — the label hides but
+     the link keeps its aria-label, so the CTA stays a real, accessible
+     target at every width, just icon-only when space is tight. */
+  .site-nav-links a.nav-suggest.compact .nav-suggest-label { display: none; }
+  /* Deliberately the same neutral hover as every other link (not
+     accent-soft) — accent-soft is reserved for .current below, so hovering
+     Suggest never reads as "this is the page you're on" the way it would if
+     hover and current shared a background. */
+  .site-nav-links a.nav-suggest:hover { background: var(--surface-sunken); }
+
+  .nav-search { display: flex; align-items: center; }
+  .nav-search-toggle {
+    background: none; border: none; padding: 6px 8px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; border-radius: 6px;
+  }
+  .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-search-kbd {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; line-height: 1.4;
+  }
+  /* Narrow viewports have no room for the shortcut hint next to the icon —
+     the shortcut itself still works, this is just the visible reminder. */
+  @media (max-width: 640px) {
+    .nav-search-kbd { display: none; }
+  }
+
+  /* --- Cmd+K command palette (see PAGEFIND_JS/COMMAND_PALETTE_JS) — a
+     full-screen overlay, reachable from any page via the nav's search icon
+     or the Cmd+K/Ctrl+K shortcut. Kept visually distinct from the small
+     inline .ds-typeahead-dropdown below: this is a modal takeover (real
+     page-content search, more room for an excerpt), that one's a quick
+     inline suggestion list under a page's own search box. */
+  .cmdk-backdrop {
+    position: fixed; inset: 0; z-index: 100; background: rgba(15, 23, 42, 0.5);
+    display: flex; align-items: flex-start; justify-content: center; padding: 12vh 16px 0;
+  }
+  .cmdk-backdrop[hidden] { display: none; }
+  .cmdk-panel {
+    width: 100%; max-width: 560px; max-height: 60vh; display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .cmdk-input-row {
+    display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); flex: none;
+  }
+  .cmdk-input-row svg { color: var(--text-faint); flex: none; }
+  .cmdk-input-row input {
+    flex: 1; border: none; background: none; font: inherit; font-size: 1rem; color: var(--text);
+  }
+  .cmdk-input-row input:focus { outline: none; }
+  .cmdk-esc {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; flex: none;
+  }
+  .cmdk-results { overflow-y: auto; }
+  .cmdk-item {
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 16px;
+    text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border);
+  }
+  .cmdk-item:hover, .cmdk-item.is-active { background: var(--surface-sunken); }
+  .cmdk-item-title { font-weight: 500; font-size: 0.9rem; }
+  .cmdk-item-excerpt {
+    font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cmdk-item-excerpt mark { background: var(--accent-soft); color: var(--accent-soft-text); }
+  .cmdk-empty { padding: 14px 16px; font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+  .cmdk-footer {
+    display: block; padding: 12px 16px; font-size: 0.85rem; color: var(--accent);
+    text-decoration: none; border-top: 1px solid var(--border);
+  }
+  .cmdk-footer:hover { background: var(--surface-sunken); }
+
+  /* --- Search typeahead dropdown (see SEARCH_TYPEAHEAD_JS) — shared by the
+     homepage hero search box and the search results page's own input. The
+     wrapping element each consumer places this inside needs its own
+     position: relative for the absolute positioning here to anchor
+     correctly against the input rather than the page. */
+  .ds-typeahead-dropdown {
+    position: absolute; z-index: 60; top: 100%; left: 0; right: 0; margin-top: 6px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .ds-typeahead-dropdown[hidden] { display: none; }
+  .ds-typeahead-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 14px; text-decoration: none; color: var(--text); font-size: 0.9rem;
+  }
+  .ds-typeahead-item:hover, .ds-typeahead-item.is-active { background: var(--surface-sunken); }
+  .ds-typeahead-name { font-weight: 500; }
+  .ds-typeahead-type {
+    font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--text-faint); background: var(--surface-sunken); border-radius: 4px;
+    padding: 2px 6px; flex: none;
+  }
+  .ds-typeahead-item.is-active .ds-typeahead-type { color: var(--accent); }
+
+  /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
+     .site-nav-links already fits inline. Fixed box size (rather than sizing
+     to whichever icon is currently showing) matters here: the menu glyph
+     and the close glyph aren't the same size, so without a fixed box the
+     button itself resized by a couple of px on toggle — and since it's the
+     last item in a row right-aligned via nav-search's margin-left:auto,
+     that resize shifted the search icon beside it on every open/close.
+     Both icon layers are stacked via position:absolute inset:0 inside that
+     fixed box so swapping which one is visible never changes the box. */
+  .nav-menu-toggle {
+    display: none; position: relative; width: 32px; height: 32px; background: none; border: none;
+    padding: 0; margin-left: 4px; cursor: pointer; color: var(--text-muted); border-radius: 6px; flex: none;
+  }
+  .nav-menu-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-menu-toggle .icon-menu, .nav-menu-toggle .icon-close {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  }
+  .nav-menu-toggle .icon-close { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+  .nav-menu-toggle[aria-expanded="true"] .icon-close { display: flex; }
+
+  /* --- "More" overflow menu (see NAV_OVERFLOW_JS) — the in-between state
+     for widths too narrow to fit every route inline but not phone-narrow
+     enough to need the full hamburger sheet below. Hidden by default (both
+     the [hidden] attribute and having nothing in the menu yet); JS reveals
+     it only once it's actually moved a link in. */
+  .nav-more { position: relative; }
+  .nav-more-toggle {
+    display: inline-flex; align-items: center; gap: 4px; font: inherit; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); background: none; border: none; padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; white-space: nowrap;
+  }
+  .nav-more-toggle:hover { background: var(--surface-sunken); color: var(--text); }
+  /* Reuses the same chevron as everywhere else on the site (see .name-chevron
+     in generate_directory.py) rotated to point down at rest, up when open —
+     one icon asset, two orientations, instead of a second glyph. */
+  .nav-more-toggle svg { flex: none; transform: rotate(90deg); transition: transform 0.15s; }
+  .nav-more-toggle[aria-expanded="true"] svg { transform: rotate(270deg); }
+  .nav-more-menu {
+    display: none; position: absolute; top: 100%; left: 0; margin-top: 4px; min-width: 170px;
+    flex-direction: column; gap: 2px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; box-shadow: var(--shadow); padding: 6px; z-index: 110;
+  }
+  .nav-more-menu.open { display: flex; }
+  .nav-more-menu a {
+    padding: 8px 10px; border-radius: 6px; font-size: 0.86rem; font-weight: 500;
+    color: var(--text-muted); text-decoration: none; white-space: nowrap;
+  }
+  .nav-more-menu a:hover { background: var(--surface-sunken); color: var(--text); }
+  .nav-more-menu a.current { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  /* Collapsed into a hamburger only below this TRUE phone-narrow width.
+     Above it (see NAV_OVERFLOW_JS), a route link that no longer fits inline
+     moves into the "More" dropdown above one at a time instead — so getting
+     narrower on a tablet/small-laptop first thins out the inline row, and
+     only falls back to the full mobile sheet once there's no longer room
+     for even brand + search + one route + Suggest. Below this width the
+     link list itself becomes the toggled panel: hidden by default, dropped
+     down as a full-width sheet under the fixed bar once opened. */
+  @media (max-width: 640px) {
+    .nav-menu-toggle { display: flex; }
+    .site-nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 2px; margin: 0;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow); padding: 8px 16px 14px; max-height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+    .site-nav-links.nav-open { display: flex; }
+    .site-nav-links a { padding: 11px 10px; font-size: 0.95rem; }
+    /* Still visually separated from the plain routes above it (margin-top +
+       border-top divider) but keeps the same rounded-pill shape as every
+       other item — an unrounded, edge-to-edge row here read as a leftover
+       fragment of a different component, not an intentional design. */
+    .site-nav-links a.nav-suggest { margin-left: 0; margin-top: 6px; border-top: 1px solid var(--border); padding-top: 14px; }
+    /* The "More" button never applies at this width (NAV_OVERFLOW_JS bails
+       out and restores every link to the flat sheet whenever this same
+       breakpoint matches), so it never needs its own mobile styling. */
+    .nav-more { display: none; }
+    /* .site-nav-links no longer occupies flex:1 once it's the hidden/
+       toggled panel above, so without this, search+menu just sat right
+       after the brand text with a dead gap stretching to the bar's far edge
+       instead of anchoring there — margin-left: auto on the first remaining
+       flex item claims all that leftover space for itself, pushing
+       everything from here on right-aligned as a group. */
+    .nav-search { margin-left: auto; }
+    /* The wide desktop inter-item gap (used for spacing out the full link
+       row) is much too loose for a two-icon cluster once the link list
+       stops being an in-flow sibling here — this is what actually put
+       daylight between the search and menu icons, not their own margins. */
+    .site-nav-inner { gap: 8px; }
+    .nav-menu-toggle { margin-left: 0; }
+    .site-brand-full { display: none; }
+    .site-brand-short { display: inline; }
+  }
+
+  .system-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .org-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }
+  .meta-line { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px; }
+  .meta-line .badge { background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px; }
+  .coverage-dot { font-size: 1.05rem; line-height: 1; vertical-align: -1px; }
+  .coverage-dot.coverage-full { color: #22c55e; }
+  .coverage-dot.coverage-partial { color: #f59e0b; }
+  .coverage-dot.coverage-unknown { color: var(--text-faint); }
+  /* No commits in over a year (see format_repo_activity's threshold) — a
+     cue to look closer, not a claim the system is dead. */
+  .stale-repo { color: #f59e0b; }
+
+  .hero-thumb {
+    display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--surface-sunken); margin-bottom: 28px;
+  }
+
+  .freshness {
+    display: flex; gap: 24px; flex-wrap: wrap; background: var(--surface-sunken); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.85rem;
+  }
+  .freshness dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint); margin: 0; }
+  .freshness dd { margin: 2px 0 0; font-family: "JetBrains Mono", monospace; color: var(--text); }
+
+  section.block { margin-bottom: 32px; }
+  section.block h2 {
+    font-family: "JetBrains Mono", monospace; font-size: 0.95rem; font-weight: 700; margin: 0 0 12px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  }
+  .signal-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .signal-pill {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
+    background: var(--surface-sunken); border: 1px solid var(--border); font-size: 0.82rem;
+  }
+  .signal-label {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-faint);
+  }
+  .signal-value { color: var(--text); font-weight: 500; }
+  /* Small linked-source icon riding along on a pill that has one — muted at
+     rest so it doesn't compete with the pill's own text, accent on hover so
+     it still reads as clickable. */
+  .signal-source { display: inline-flex; color: var(--text-faint); }
+  .signal-source:hover { color: var(--accent); }
+  .section-note { font-size: 0.82rem; color: var(--text-muted); margin: -6px 0 14px; max-width: 68ch; }
+  .section-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  /* Deliberately shows every taxonomy item, detected or not (see
+     render_ai_native()) — a muted dash for "not detected" instead of hiding
+     the row, so the list reads as a coverage checklist against the whole
+     taxonomy rather than just a list of hits. */
+  .ai-native-list {
+    list-style: none; margin: 0; padding: 0; display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 16px;
+  }
+  .ai-native-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; padding: 4px 0; }
+  .ai-native-mark { flex: none; display: flex; align-items: center; justify-content: center; width: 18px; color: #22c55e; }
+  .ai-native-item.is-absent { color: var(--text-faint); }
+  .ai-native-item.is-absent .ai-native-mark { color: var(--text-faint); }
+  /* A detected item with a known source page is a real link, not just bold
+     text — underlined so it reads as clickable evidence, same visual
+     language as .section-note's own link to the survey above. */
+  .ai-native-item a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .ai-native-item a:hover { color: var(--accent); }
+  .resource-list, .page-list { list-style: none; margin: 0; padding: 0; }
+  /* One full-width row per link rather than wrapped inline pills — a path
+     like ".well-known/mcp.json" needs real width to stay readable, and a
+     fixed-width pill either clipped it outright or wrapped the row in a way
+     that made a handful of links look like a much longer list. */
+  .resource-list { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
+  .resource-list li { display: flex; align-items: center; gap: 8px; }
+  .resource-list li a {
+    display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;
+    padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px;
+    text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  }
+  .resource-list li a svg { flex: none; }
+  .resource-list li a:hover { border-color: var(--accent); color: var(--accent); }
+  /* Middle truncation: .link-text-head shrinks and ellipsizes on the right
+     as space runs out, while .link-text-tail (the last _TRUNCATE_TAIL_CHARS
+     characters — see item_html) never shrinks and always renders in full,
+     so a long path reads as "start/of/the/path…file.json" rather than
+     losing the filename/extension at the end, which is usually the one
+     part that actually distinguishes it from a sibling link. */
+  .link-text { display: flex; min-width: 0; overflow: hidden; }
+  .link-text-head { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  .link-text-tail { white-space: nowrap; flex: none; }
+  .resource-activity { font-size: 0.76rem; color: var(--text-faint); white-space: nowrap; flex: none; }
+  /* One collapsible <details> per resource type — see render_resource_list.
+     A system with a couple dozen GitHub repos or Figma files no longer
+     dumps every single one into view; the count in the header tells you
+     what's there before you open it. */
+  .resource-group { border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
+  .resource-group summary {
+    display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600;
+    list-style: none;
+  }
+  .resource-group summary::-webkit-details-marker { display: none; }
+  .resource-group summary svg { flex: none; }
+  /* A plain chevron drawn from the summary's own box model rather than an
+     inline SVG — rotates open/closed via the <details>'s [open] state,
+     matching the name-cell chevron's language elsewhere on the site
+     without needing a second icon asset. */
+  .resource-group summary::after {
+    content: ""; width: 7px; height: 7px; margin-left: auto;
+    border-right: 1.5px solid var(--text-faint); border-bottom: 1.5px solid var(--text-faint);
+    transform: rotate(-45deg); transition: transform 0.15s;
+  }
+  .resource-group[open] summary::after { transform: rotate(45deg); }
+  .resource-group-label { color: var(--text); }
+  .resource-group-count {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; font-weight: 700; color: var(--text-muted);
+    background: var(--surface-sunken); border-radius: 999px; padding: 1px 8px;
+  }
+  .page-list { columns: 2; column-gap: 24px; }
+  .page-list li { padding: 6px 0; border-bottom: 1px solid var(--border); break-inside: avoid; }
+  .page-list a { text-decoration: none; }
+  .page-list a:hover { text-decoration: underline; }
+  .empty-note { color: var(--text-faint); font-size: 0.88rem; }
+  .report-issue { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .report-issue a {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 0.82rem; color: var(--text-faint); text-decoration: underline; text-underline-offset: 2px;
+  }
+  .report-issue a svg { flex: none; }
+  .report-issue a:hover { color: var(--accent); }
+  @media (max-width: 600px) { .page-list { columns: 1; } }
+</style>
+</head>
+<body>
+
+    <nav class="site-nav">
+      <div class="site-nav-inner" id="siteNavInner">
+        <a href="/" class="site-brand">
+          <span class="site-brand-full">Design Systems Directory</span>
+          <span class="site-brand-short">DS Directory</span>
+        </a>
+        <div class="site-nav-links" id="siteNavLinks">
+          <a href="/" class="">Home</a>
+          <a href="/directory" class="current">All Systems</a>
+          <a href="/compare" class="">Compare</a>
+          <a href="/components" class="">Components</a>
+          <a href="/patterns" class="">Patterns</a>
+          <a href="/foundations" class="">Foundations</a>
+          <div class="nav-more" id="navMore" hidden>
+            <button type="button" class="nav-more-toggle" id="navMoreToggle" aria-haspopup="true" aria-expanded="false">More<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            <div class="nav-more-menu" id="navMoreMenu"></div>
+          </div>
+          <a class="nav-suggest" href="/suggest" aria-label="Suggest a system"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span class="nav-suggest-label">Suggest a system</span></a>
+        </div>
+        <div class="nav-search">
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search everything (Cmd+K)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><kbd class="nav-search-kbd">&#8984;K</kbd>
+          </button>
+        </div>
+        <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
+          <span class="icon-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span class="icon-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="cmdk-backdrop" id="cmdkBackdrop" hidden>
+      <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+        <form class="cmdk-input-row" id="cmdkForm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="cmdkInput" placeholder="Search every page on this site..." autocomplete="off">
+          <kbd class="cmdk-esc">Esc</kbd>
+        </form>
+        <div class="cmdk-results" id="cmdkResults"></div>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var pagefindPromise = null;
+
+  function loadPagefind() {
+    if (!pagefindPromise) {
+      pagefindPromise = import("/pagefind/pagefind.js")
+        .then(function (mod) { return mod.init().then(function () { return mod; }); })
+        .catch(function () { return null; });
+    }
+    return pagefindPromise;
+  }
+
+  // [{title, url, excerpt}], best-effort empty on any failure (offline,
+  // pagefind.js 404 on a local/dev preview that skipped the build step,
+  // etc.) — same "never breaks the page, just shows nothing" contract
+  // dsMatchSearchIndex above already follows.
+  window.dsMatchPagefind = function (query, limit) {
+    var q = (query || "").trim();
+    if (!q) return Promise.resolve([]);
+    return loadPagefind().then(function (pagefind) {
+      if (!pagefind) return [];
+      return pagefind.search(q).then(function (search) {
+        var picked = search.results.slice(0, limit || 6);
+        return Promise.all(picked.map(function (r) { return r.data(); }));
+      }).then(function (data) {
+        return data.map(function (d) {
+          return { title: (d.meta && d.meta.title) || d.url, url: d.url, excerpt: d.excerpt || "" };
+        });
+      });
+    }).catch(function () { return []; });
+  };
+})();
+</script>
+    <script>
+(function () {
+  var toggle = document.getElementById("navSearchToggle");
+  var backdrop = document.getElementById("cmdkBackdrop");
+  var form = document.getElementById("cmdkForm");
+  var input = document.getElementById("cmdkInput");
+  var results = document.getElementById("cmdkResults");
+  if (!backdrop || !form || !input || !results) return;
+
+  var activeIndex = -1;
+  var debounceTimer;
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function open() {
+    backdrop.hidden = false;
+    document.body.style.overflow = "hidden";
+    input.value = "";
+    results.innerHTML = "";
+    activeIndex = -1;
+    input.focus();
+  }
+
+  function close() {
+    backdrop.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function setActive(items, i) {
+    activeIndex = i;
+    items.forEach(function (el, j) { el.classList.toggle("is-active", j === activeIndex); });
+  }
+
+  function render(matches, query) {
+    activeIndex = -1;
+    var footer = '<a class="cmdk-footer" href="/search?q=' + encodeURIComponent(query) + '">'
+      + "Search across every design system's own docs for \u201c" + escapeHtml(query) + "\u201d</a>";
+    if (!matches.length) {
+      results.innerHTML = '<p class="cmdk-empty">No matching page here — try the full search below.</p>' + footer;
+      return;
+    }
+    results.innerHTML = matches.map(function (item) {
+      return '<a class="cmdk-item" href="' + item.url + '">'
+        + '<span class="cmdk-item-title">' + escapeHtml(item.title) + '</span>'
+        + (item.excerpt ? '<span class="cmdk-item-excerpt">' + item.excerpt + '</span>' : '')
+        + '</a>';
+    }).join("") + footer;
+  }
+
+  if (toggle) toggle.addEventListener("click", open);
+
+  document.addEventListener("keydown", function (e) {
+    var isK = e.key === "k" || e.key === "K";
+    if (isK && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      if (backdrop.hidden) open(); else close();
+      return;
+    }
+    if (!backdrop.hidden && e.key === "Escape") { close(); return; }
+    if (backdrop.hidden) return;
+
+    var items = Array.prototype.slice.call(results.querySelectorAll(".cmdk-item"));
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(items, Math.min(activeIndex + 1, items.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(items, Math.max(activeIndex - 1, -1)); }
+    else if (e.key === "Enter" && activeIndex >= 0 && items[activeIndex]) {
+      e.preventDefault();
+      window.location.href = items[activeIndex].getAttribute("href");
+    }
+  });
+
+  backdrop.addEventListener("click", function (e) {
+    if (e.target === backdrop) close();
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+
+  input.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    var query = input.value;
+    debounceTimer = setTimeout(function () {
+      window.dsMatchPagefind(query, 6).then(function (matches) {
+        if (input.value === query) render(matches, query.trim());
+      });
+    }, 150);
+  });
+})();
+</script>
+    <script>
+(function () {
+  var toggle = document.getElementById("navMenuToggle");
+  var panel = document.getElementById("siteNavLinks");
+  if (!toggle || !panel) return;
+
+  function setOpen(open) {
+    panel.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  toggle.addEventListener("click", function () {
+    setOpen(!panel.classList.contains("nav-open"));
+  });
+  panel.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setOpen(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setOpen(false);
+  });
+  document.addEventListener("click", function (e) {
+    if (panel.classList.contains("nav-open") && !panel.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      setOpen(false);
+    }
+  });
+})();
+</script>
+    <script>
+(function () {
+  var inner = document.getElementById("siteNavInner");
+  var links = document.getElementById("siteNavLinks");
+  var moreWrap = document.getElementById("navMore");
+  var moreToggle = document.getElementById("navMoreToggle");
+  var moreMenu = document.getElementById("navMoreMenu");
+  var suggest = links ? links.querySelector(".nav-suggest") : null;
+  if (!inner || !links || !moreWrap || !moreToggle || !moreMenu || !suggest) return;
+
+  var mobileQuery = window.matchMedia("(max-width: 640px)");
+
+  function fits() {
+    return links.scrollWidth <= links.clientWidth + 1;
+  }
+
+  function routeLinks() {
+    return Array.prototype.slice.call(links.children).filter(function (el) {
+      return el.tagName === "A" && el !== suggest;
+    });
+  }
+
+  function closeMoreMenu() {
+    moreMenu.classList.remove("open");
+    moreToggle.setAttribute("aria-expanded", "false");
+  }
+
+  // Three space-saving measures, applied in order from least to most
+  // disruptive, each only reached once the previous one still isn't enough:
+  // (1) shorten the site title, (2) shrink "Suggest a system" to its icon,
+  // (3) move a route link into the "More" dropdown. Every run starts by
+  // undoing all three (cheaper and more robust than tracking incremental
+  // deltas) and re-measures from a clean slate.
+  function layout() {
+    closeMoreMenu();
+    Array.prototype.slice.call(moreMenu.children).forEach(function (a) {
+      links.insertBefore(a, moreWrap);
+    });
+    moreWrap.hidden = true;
+    inner.classList.remove("brand-compact");
+    suggest.classList.remove("compact");
+
+    if (mobileQuery.matches) return; // the full hamburger sheet handles this range on its own
+
+    if (fits()) return;
+    inner.classList.add("brand-compact");
+
+    if (fits()) return;
+    suggest.classList.add("compact");
+
+    var guard = 0;
+    while (!fits() && guard < 20) {
+      guard++;
+      var candidates = routeLinks();
+      if (candidates.length <= 1) break; // always leave at least one route visible inline
+      var victim = null;
+      for (var i = candidates.length - 1; i >= 0; i--) {
+        if (!candidates[i].classList.contains("current")) { victim = candidates[i]; break; }
+      }
+      if (!victim) victim = candidates[candidates.length - 1];
+      moreMenu.insertBefore(victim, moreMenu.firstChild);
+      moreWrap.hidden = false;
+    }
+  }
+
+  var resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 100);
+  });
+  if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", layout);
+  else mobileQuery.addListener(layout); // Safari <14
+
+  moreToggle.addEventListener("click", function () {
+    var open = !moreMenu.classList.contains("open");
+    moreMenu.classList.toggle("open", open);
+    moreToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  moreMenu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMoreMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMoreMenu();
+  });
+  document.addEventListener("click", function (e) {
+    if (moreMenu.classList.contains("open") && !moreWrap.contains(e.target)) closeMoreMenu();
+  });
+
+  layout();
+})();
+</script>
+    
+<div class="page">
+  <p class="eyebrow"><a href="/directory">All Systems</a></p>
+  <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=chakra-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><span class="org-label">Chakra team</span></div>
+  <h1>Chakra UI</h1>
+  <p class="meta-line"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span> 8 pages indexed · MIT · 5,206★</p>
+  <a href="https://chakra-ui.com/" target="_blank" rel="noopener"><img class="hero-thumb" src="screenshots/chakra-team-chakra-ui-large.jpg" alt="" loading="lazy" style="view-transition-name: thumb-chakra-team-chakra-ui; view-transition-class: thumb"></a>
+
+  <dl class="freshness">
+    <div><dt>Site last updated</dt><dd>unknown</dd></div>
+    <div><dt>Last checked here</dt><dd>15 Sep 2026, 23:40 UTC</dd></div>
+    <div><dt>Repo last updated</dt><dd>15 Sep 2026</dd></div>
+  </dl>
+
+  <section class="block" id="resources">
+    <h2>Resources</h2>
+    <details class="resource-group" open><summary><svg width="16" height="16" viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg"><path d="M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z" fill="#161614"></path></svg> <span class="resource-group-label">GitHub</span><span class="resource-group-count">3</span></summary><ul class="resource-list"><li><a href="https://github.com/chakra-ui/zag" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">chakra-ui/zag</span></span></a> <span class="resource-activity" title="Last commit: 2026-09-15T20:20:21Z">15 Sep 2026</span></li><li><a href="https://github.com/chakra-ui/chakra-ui" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">chakra-ui/chakra-ui</span></span></a></li><li><a href="https://github.com/chakra-ui/ark" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">chakra-ui/ark</span></span></a></li></ul></details><details class="resource-group" open><summary><svg width="13" height="16" viewBox="0 0 256 319" xmlns="http://www.w3.org/2000/svg"><defs><path d="M9.87245893,293.324145 L0.0114611411,30.5732167 C-0.314208957,21.8955842 6.33948896,14.5413918 15.0063196,13.9997149 L238.494389,0.0317105427 C247.316188,-0.519651867 254.914637,6.18486163 255.466,15.0066607 C255.486773,15.339032 255.497167,15.6719708 255.497167,16.0049907 L255.497167,302.318596 C255.497167,311.157608 248.331732,318.323043 239.492719,318.323043 C239.253266,318.323043 239.013844,318.317669 238.774632,318.306926 L25.1475605,308.712253 C16.8276309,308.338578 10.1847994,301.646603 9.87245893,293.324145 L9.87245893,293.324145 Z" id="sb-path"></path></defs><mask id="sb-mask" fill="white"><use xlink:href="#sb-path"></use></mask><use fill="#FF4785" fill-rule="nonzero" xlink:href="#sb-path"></use><path d="M188.665358,39.126973 L190.191903,2.41148534 L220.883535,0 L222.205755,37.8634126 C222.251771,39.1811466 221.22084,40.2866846 219.903106,40.3327009 C219.338869,40.3524045 218.785907,40.1715096 218.342409,39.8221376 L206.506729,30.4984116 L192.493574,41.1282444 C191.443077,41.9251106 189.945493,41.7195021 189.148627,40.6690048 C188.813185,40.2267976 188.6423,39.6815326 188.665358,39.126973 Z M149.413703,119.980309 C149.413703,126.206975 191.355678,123.222696 196.986019,118.848893 C196.986019,76.4467826 174.234041,54.1651411 132.57133,54.1651411 C90.9086182,54.1651411 67.5656805,76.7934542 67.5656805,110.735941 C67.5656805,169.85244 147.345341,170.983856 147.345341,203.229219 C147.345341,212.280549 142.913138,217.654777 133.162291,217.654777 C120.456641,217.654777 115.433477,211.165914 116.024438,189.103298 C116.024438,184.317101 67.5656805,182.824962 66.0882793,189.103298 C62.3262146,242.56887 95.6363019,257.990394 133.753251,257.990394 C170.688279,257.990394 199.645341,238.303123 199.645341,202.663511 C199.645341,139.304202 118.683759,141.001326 118.683759,109.604526 C118.683759,96.8760922 128.139127,95.178968 133.753251,95.178968 C139.662855,95.178968 150.300143,96.2205679 149.413703,119.980309 Z" fill="#FFFFFF" fill-rule="nonzero" mask="url(#sb-mask)"></path></svg> <span class="resource-group-label">Storybook</span><span class="resource-group-count">1</span></summary><ul class="resource-list"><li><a href="https://chakra-ui.com/docs/get-started/frameworks/storybook" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/docs/get-star</span><span class="link-text-tail">ted/frameworks/storybook</span></span></a></li></ul></details><details class="resource-group" open><summary><svg width="14" height="16" viewBox="0 0 256 285" xmlns="http://www.w3.org/2000/svg"><path d="M184.912588,14.4984503 C196.363516,25.9487671 201.031836,41.6132025 198.917593,56.499546 C213.803648,54.3850952 229.469497,59.054364 240.923381,70.5077614 L241.500743,71.085945 C260.833056,90.4174329 260.833056,121.760183 241.500921,141.091287 L140.199441,242.393592 C138.910969,243.681981 138.910969,245.770603 140.199887,247.059438 L161.000619,267.861491 C164.866781,271.727898 164.866582,277.996382 161.000175,281.862544 C157.133769,285.728705 150.865284,285.728506 146.999123,281.862099 L126.198836,261.060493 C117.177199,252.039433 117.177199,237.413151 126.198584,228.392344 L227.500027,127.090076 C239.099324,115.491398 239.099324,96.6861357 227.494887,85.0821908 L226.917525,84.5040072 C215.462946,73.0499167 196.981217,72.9067406 185.351143,84.0742949 L184.912802,84.5038305 L100.323674,169.093619 C96.4574047,172.959918 90.1889199,172.959943 86.3226209,169.093674 C82.456322,165.227405 82.4562975,158.95892 86.3225663,155.092621 L170.911872,70.5026559 C182.511206,58.9038165 182.511206,40.0985546 170.911498,28.4994655 C159.313616,16.900841 140.508239,16.900841 128.909262,28.4996948 L16.9007603,140.508031 C13.0344736,144.374312 6.76598883,144.374308 2.89970777,140.508021 C-0.966573285,136.641734 -0.966568668,130.373249 2.89971809,126.506968 L114.908252,14.4985997 C134.239899,-4.83284167 165.582534,-4.83284167 184.912588,14.4984503 Z M156.911612,42.5006526 C160.777889,46.3669442 160.777876,52.6354289 156.911585,56.5017051 L74.0716022,139.341358 C62.4729435,150.939769 62.4729435,169.745376 74.0714528,181.344504 C85.6703838,192.942693 104.476251,192.942693 116.074944,181.344742 L198.914535,98.5048208 C202.780811,94.6385292 209.049296,94.6385167 212.915588,98.5047929 C216.781879,102.371069 216.781892,108.639554 212.915616,112.505845 L130.075786,195.346005 C110.74439,214.676164 79.4022447,214.676164 60.0704376,195.345594 C40.7393604,176.013486 40.7393604,144.671082 60.0706383,125.340216 L142.91056,42.5006247 C146.776851,38.6343485 153.045336,38.634361 156.911612,42.5006526 Z" fill="currentColor"></path></svg> <span class="resource-group-label">MCP server</span><span class="resource-group-count">1</span></summary><ul class="resource-list"><li><a href="https://chakra-ui.com/docs/get-started/ai/mcp-server" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/docs/g</span><span class="link-text-tail">et-started/ai/mcp-server</span></span></a></li></ul></details><details class="resource-group" open><summary><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> <span class="resource-group-label">Agent instructions</span><span class="resource-group-count">2</span></summary><ul class="resource-list"><li><a href="https://chakra-ui.com/llms-full.txt" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">/llms-full.txt</span></span></a></li><li><a href="https://chakra-ui.com/llms.txt" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">/llms.txt</span></span></a></li></ul></details>
+  </section>
+
+
+  <section class="block">
+    <h2>AI-Native</h2>
+    <p class="section-note">Techniques this system uses to keep a model from inventing components or tokens instead of using real ones — see <a href="https://state-of-ai-in-design-systems.netlify.app/techniques" target="_blank" rel="noopener">the survey</a> this taxonomy is drawn from. Detected independently from this system's own crawled pages, not copied from that survey's own per-system data. A dash means not detected, not confirmed absent; a linked item names the page it was found on.</p>
+    <ul class="ai-native-list"><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Validation loop</li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Prohibition</li><li class="ai-native-item"><span class="ai-native-mark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> <a href="https://chakra-ui.com/llms-full.txt" target="_blank" rel="noopener" title="Source: https://chakra-ui.com/llms-full.txt">Curated context</a></li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Tool-gating</li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Token enforcement</li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Exemplars</li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Instruction files</li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Registry metadata</li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Scaffolding</li><li class="ai-native-item is-absent"><span class="ai-native-mark">–</span> Design–code mapping</li></ul>
+  </section>
+
+  <section class="block">
+    <h2>Indexed pages</h2>
+    <p class="empty-note">No pages indexed yet.</p>
+  </section>
+
+  <p class="report-issue">
+    <a href="/report?system=Chakra%20team%20%E2%80%94%20Chakra%20UI" id="reportIssueLink"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg> Report an issue with this system</a>
+  </p>
+</div>
+<script>
+  // The page's own live URL can't be known at build time (the site's actual
+  // domain isn't fixed here) — filled in from what the visitor is looking
+  // at, so /report arrives with its "Link to the system's detail page"
+  // field already prefilled.
+  (function () {
+    var link = document.getElementById("reportIssueLink");
+    if (link) link.href += "&url=" + encodeURIComponent(window.location.href);
+  })();
+</script>
+</body>
+</html>

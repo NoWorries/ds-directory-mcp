@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "microsoft-fluent-ui",
+  "organization": "Microsoft",
+  "design_system": "Fluent UI",
+  "full_name": "Microsoft — Fluent UI",
+  "start_urls": [
+    "https://developer.microsoft.com/en-us/fluentui#/"
+  ],
+  "detail_url": "/systems/microsoft-fluent-ui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T20:29:01+00:00",
+  "last_modified": "Sat, 19 Sep 2026 20:02:42 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Web Components"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://developer.microsoft.com/en-us/fluentui#/",
+      "title": "Microsoft — Fluent UI"
+    }
+  ]
+}

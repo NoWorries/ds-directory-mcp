@@ -157,19 +157,90 @@
 
   .nav-search { display: flex; align-items: center; }
   .nav-search-toggle {
-    background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-muted);
-    display: flex; align-items: center; border-radius: 6px;
+    background: none; border: none; padding: 6px 8px; cursor: pointer; color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; border-radius: 6px;
   }
   .nav-search-toggle:hover { background: var(--surface-sunken); color: var(--text); }
-  /* Same [hidden]-vs-explicit-display fix needed a third time here — see the
-     .cards-grid/.card comments in generate_directory.py for the full story. */
-  .nav-search-form[hidden] { display: none; }
-  .nav-search-form { display: flex; align-items: center; }
-  .nav-search-form input {
-    width: 220px; font: inherit; font-size: 0.85rem; padding: 6px 10px; margin-left: 6px;
-    border: 1px solid var(--border); border-radius: 6px; background: var(--surface-sunken); color: var(--text);
+  .nav-search-kbd {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; line-height: 1.4;
   }
-  .nav-search-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--surface); }
+  /* Narrow viewports have no room for the shortcut hint next to the icon —
+     the shortcut itself still works, this is just the visible reminder. */
+  @media (max-width: 640px) {
+    .nav-search-kbd { display: none; }
+  }
+
+  /* --- Cmd+K command palette (see PAGEFIND_JS/COMMAND_PALETTE_JS) — a
+     full-screen overlay, reachable from any page via the nav's search icon
+     or the Cmd+K/Ctrl+K shortcut. Kept visually distinct from the small
+     inline .ds-typeahead-dropdown below: this is a modal takeover (real
+     page-content search, more room for an excerpt), that one's a quick
+     inline suggestion list under a page's own search box. */
+  .cmdk-backdrop {
+    position: fixed; inset: 0; z-index: 100; background: rgba(15, 23, 42, 0.5);
+    display: flex; align-items: flex-start; justify-content: center; padding: 12vh 16px 0;
+  }
+  .cmdk-backdrop[hidden] { display: none; }
+  .cmdk-panel {
+    width: 100%; max-width: 560px; max-height: 60vh; display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .cmdk-input-row {
+    display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); flex: none;
+  }
+  .cmdk-input-row svg { color: var(--text-faint); flex: none; }
+  .cmdk-input-row input {
+    flex: 1; border: none; background: none; font: inherit; font-size: 1rem; color: var(--text);
+  }
+  .cmdk-input-row input:focus { outline: none; }
+  .cmdk-esc {
+    font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-faint);
+    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; flex: none;
+  }
+  .cmdk-results { overflow-y: auto; }
+  .cmdk-item {
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 16px;
+    text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border);
+  }
+  .cmdk-item:hover, .cmdk-item.is-active { background: var(--surface-sunken); }
+  .cmdk-item-title { font-weight: 500; font-size: 0.9rem; }
+  .cmdk-item-excerpt {
+    font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cmdk-item-excerpt mark { background: var(--accent-soft); color: var(--accent-soft-text); }
+  .cmdk-empty { padding: 14px 16px; font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+  .cmdk-footer {
+    display: block; padding: 12px 16px; font-size: 0.85rem; color: var(--accent);
+    text-decoration: none; border-top: 1px solid var(--border);
+  }
+  .cmdk-footer:hover { background: var(--surface-sunken); }
+
+  /* --- Search typeahead dropdown (see SEARCH_TYPEAHEAD_JS) — shared by the
+     homepage hero search box and the search results page's own input. The
+     wrapping element each consumer places this inside needs its own
+     position: relative for the absolute positioning here to anchor
+     correctly against the input rather than the page. */
+  .ds-typeahead-dropdown {
+    position: absolute; z-index: 60; top: 100%; left: 0; right: 0; margin-top: 6px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .ds-typeahead-dropdown[hidden] { display: none; }
+  .ds-typeahead-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 14px; text-decoration: none; color: var(--text); font-size: 0.9rem;
+  }
+  .ds-typeahead-item:hover, .ds-typeahead-item.is-active { background: var(--surface-sunken); }
+  .ds-typeahead-name { font-weight: 500; }
+  .ds-typeahead-type {
+    font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--text-faint); background: var(--surface-sunken); border-radius: 4px;
+    padding: 2px 6px; flex: none;
+  }
+  .ds-typeahead-item.is-active .ds-typeahead-type { color: var(--accent); }
 
   /* Hamburger toggle — hidden entirely above the mobile breakpoint, where
      .site-nav-links already fits inline. Fixed box size (rather than sizing
@@ -263,7 +334,6 @@
        daylight between the search and menu icons, not their own margins. */
     .site-nav-inner { gap: 8px; }
     .nav-menu-toggle { margin-left: 0; }
-    .nav-search-form input { width: 140px; }
     .site-brand-full { display: none; }
     .site-brand-short { display: inline; }
   }
@@ -406,6 +476,7 @@
         <div class="site-nav-links" id="siteNavLinks">
           <a href="/" class="">Home</a>
           <a href="/directory" class="current">All Systems</a>
+          <a href="/compare" class="">Compare</a>
           <a href="/components" class="">Components</a>
           <a href="/patterns" class="">Patterns</a>
           <a href="/foundations" class="">Foundations</a>
@@ -416,30 +487,153 @@
           <a class="nav-suggest" href="/suggest" aria-label="Suggest a system"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span class="nav-suggest-label">Suggest a system</span></a>
         </div>
         <div class="nav-search">
-          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-          <form class="nav-search-form" id="navSearchForm" hidden>
-            <input type="text" id="navSearchInput" placeholder="Search design systems...">
-          </form>
+          <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search everything (Cmd+K)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><kbd class="nav-search-kbd">&#8984;K</kbd>
+          </button>
         </div>
         <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavLinks">
           <span class="icon-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span class="icon-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
         </button>
       </div>
     </nav>
+
+    <div class="cmdk-backdrop" id="cmdkBackdrop" hidden>
+      <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+        <form class="cmdk-input-row" id="cmdkForm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="cmdkInput" placeholder="Search every page on this site..." autocomplete="off">
+          <kbd class="cmdk-esc">Esc</kbd>
+        </form>
+        <div class="cmdk-results" id="cmdkResults"></div>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var pagefindPromise = null;
+
+  function loadPagefind() {
+    if (!pagefindPromise) {
+      pagefindPromise = import("/pagefind/pagefind.js")
+        .then(function (mod) { return mod.init().then(function () { return mod; }); })
+        .catch(function () { return null; });
+    }
+    return pagefindPromise;
+  }
+
+  // [{title, url, excerpt}], best-effort empty on any failure (offline,
+  // pagefind.js 404 on a local/dev preview that skipped the build step,
+  // etc.) — same "never breaks the page, just shows nothing" contract
+  // dsMatchSearchIndex above already follows.
+  window.dsMatchPagefind = function (query, limit) {
+    var q = (query || "").trim();
+    if (!q) return Promise.resolve([]);
+    return loadPagefind().then(function (pagefind) {
+      if (!pagefind) return [];
+      return pagefind.search(q).then(function (search) {
+        var picked = search.results.slice(0, limit || 6);
+        return Promise.all(picked.map(function (r) { return r.data(); }));
+      }).then(function (data) {
+        return data.map(function (d) {
+          return { title: (d.meta && d.meta.title) || d.url, url: d.url, excerpt: d.excerpt || "" };
+        });
+      });
+    }).catch(function () { return []; });
+  };
+})();
+</script>
     <script>
 (function () {
   var toggle = document.getElementById("navSearchToggle");
-  var form = document.getElementById("navSearchForm");
-  var input = document.getElementById("navSearchInput");
-  if (!toggle || !form) return;
-  toggle.addEventListener("click", function () {
-    form.hidden = !form.hidden;
-    if (!form.hidden) input.focus();
+  var backdrop = document.getElementById("cmdkBackdrop");
+  var form = document.getElementById("cmdkForm");
+  var input = document.getElementById("cmdkInput");
+  var results = document.getElementById("cmdkResults");
+  if (!backdrop || !form || !input || !results) return;
+
+  var activeIndex = -1;
+  var debounceTimer;
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function open() {
+    backdrop.hidden = false;
+    document.body.style.overflow = "hidden";
+    input.value = "";
+    results.innerHTML = "";
+    activeIndex = -1;
+    input.focus();
+  }
+
+  function close() {
+    backdrop.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function setActive(items, i) {
+    activeIndex = i;
+    items.forEach(function (el, j) { el.classList.toggle("is-active", j === activeIndex); });
+  }
+
+  function render(matches, query) {
+    activeIndex = -1;
+    var footer = '<a class="cmdk-footer" href="/search?q=' + encodeURIComponent(query) + '">'
+      + "Search across every design system's own docs for \u201c" + escapeHtml(query) + "\u201d</a>";
+    if (!matches.length) {
+      results.innerHTML = '<p class="cmdk-empty">No matching page here — try the full search below.</p>' + footer;
+      return;
+    }
+    results.innerHTML = matches.map(function (item) {
+      return '<a class="cmdk-item" href="' + item.url + '">'
+        + '<span class="cmdk-item-title">' + escapeHtml(item.title) + '</span>'
+        + (item.excerpt ? '<span class="cmdk-item-excerpt">' + item.excerpt + '</span>' : '')
+        + '</a>';
+    }).join("") + footer;
+  }
+
+  if (toggle) toggle.addEventListener("click", open);
+
+  document.addEventListener("keydown", function (e) {
+    var isK = e.key === "k" || e.key === "K";
+    if (isK && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      if (backdrop.hidden) open(); else close();
+      return;
+    }
+    if (!backdrop.hidden && e.key === "Escape") { close(); return; }
+    if (backdrop.hidden) return;
+
+    var items = Array.prototype.slice.call(results.querySelectorAll(".cmdk-item"));
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(items, Math.min(activeIndex + 1, items.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(items, Math.max(activeIndex - 1, -1)); }
+    else if (e.key === "Enter" && activeIndex >= 0 && items[activeIndex]) {
+      e.preventDefault();
+      window.location.href = items[activeIndex].getAttribute("href");
+    }
   });
+
+  backdrop.addEventListener("click", function (e) {
+    if (e.target === backdrop) close();
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
     if (q) window.location.href = "/search?q=" + encodeURIComponent(q);
+  });
+
+  input.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    var query = input.value;
+    debounceTimer = setTimeout(function () {
+      window.dsMatchPagefind(query, 6).then(function (matches) {
+        if (input.value === query) render(matches, query.trim());
+      });
+    }, 150);
   });
 })();
 </script>
@@ -566,25 +760,33 @@
   <p class="eyebrow"><a href="/directory">All Systems</a></p>
   <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.newskit.co.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><span class="org-label">News UK</span></div>
   <h1>NewsKit</h1>
-  <p class="meta-line"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span> 8 pages indexed · NOASSERTION · 141★</p>
+  <p class="meta-line"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span> 40 pages indexed · NOASSERTION · 141★</p>
   <a href="https://www.newskit.co.uk/" target="_blank" rel="noopener"><img class="hero-thumb" src="screenshots/news-uk-newskit-large.jpg" alt="" loading="lazy" style="view-transition-name: thumb-news-uk-newskit; view-transition-class: thumb"></a>
 
   <dl class="freshness">
     <div><dt>Site last updated</dt><dd>2 Sep 2026</dd></div>
-    <div><dt>Last checked here</dt><dd>15 Sep 2026, 22:08 UTC</dd></div>
+    <div><dt>Last checked here</dt><dd>19 Sep 2026, 00:45 UTC</dd></div>
     <div><dt>Repo last updated</dt><dd>8 Sep 2026</dd></div>
   </dl>
 
   <section class="block" id="resources">
     <h2>Resources</h2>
-    <details class="resource-group" open><summary><svg width="16" height="16" viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg"><path d="M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z" fill="#161614"></path></svg> <span class="resource-group-label">GitHub</span><span class="resource-group-count">1</span></summary><ul class="resource-list"><li><a href="https://github.com/newscorp-ghfb/newskit" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">newscorp-ghfb/newskit</span></span></a> <span class="resource-activity" title="Last commit: 2026-09-08T13:00:03Z">8 Sep 2026</span></li></ul></details><details class="resource-group" open><summary><svg width="13" height="16" viewBox="0 0 256 319" xmlns="http://www.w3.org/2000/svg"><defs><path d="M9.87245893,293.324145 L0.0114611411,30.5732167 C-0.314208957,21.8955842 6.33948896,14.5413918 15.0063196,13.9997149 L238.494389,0.0317105427 C247.316188,-0.519651867 254.914637,6.18486163 255.466,15.0066607 C255.486773,15.339032 255.497167,15.6719708 255.497167,16.0049907 L255.497167,302.318596 C255.497167,311.157608 248.331732,318.323043 239.492719,318.323043 C239.253266,318.323043 239.013844,318.317669 238.774632,318.306926 L25.1475605,308.712253 C16.8276309,308.338578 10.1847994,301.646603 9.87245893,293.324145 L9.87245893,293.324145 Z" id="sb-path"></path></defs><mask id="sb-mask" fill="white"><use xlink:href="#sb-path"></use></mask><use fill="#FF4785" fill-rule="nonzero" xlink:href="#sb-path"></use><path d="M188.665358,39.126973 L190.191903,2.41148534 L220.883535,0 L222.205755,37.8634126 C222.251771,39.1811466 221.22084,40.2866846 219.903106,40.3327009 C219.338869,40.3524045 218.785907,40.1715096 218.342409,39.8221376 L206.506729,30.4984116 L192.493574,41.1282444 C191.443077,41.9251106 189.945493,41.7195021 189.148627,40.6690048 C188.813185,40.2267976 188.6423,39.6815326 188.665358,39.126973 Z M149.413703,119.980309 C149.413703,126.206975 191.355678,123.222696 196.986019,118.848893 C196.986019,76.4467826 174.234041,54.1651411 132.57133,54.1651411 C90.9086182,54.1651411 67.5656805,76.7934542 67.5656805,110.735941 C67.5656805,169.85244 147.345341,170.983856 147.345341,203.229219 C147.345341,212.280549 142.913138,217.654777 133.162291,217.654777 C120.456641,217.654777 115.433477,211.165914 116.024438,189.103298 C116.024438,184.317101 67.5656805,182.824962 66.0882793,189.103298 C62.3262146,242.56887 95.6363019,257.990394 133.753251,257.990394 C170.688279,257.990394 199.645341,238.303123 199.645341,202.663511 C199.645341,139.304202 118.683759,141.001326 118.683759,109.604526 C118.683759,96.8760922 128.139127,95.178968 133.753251,95.178968 C139.662855,95.178968 150.300143,96.2205679 149.413703,119.980309 Z" fill="#FFFFFF" fill-rule="nonzero" mask="url(#sb-mask)"></path></svg> <span class="resource-group-label">Storybook</span><span class="resource-group-count">1</span></summary><ul class="resource-list"><li><a href="https://storybook.newskit.co.uk/" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">storybook.newskit.co.uk</span></span></a></li></ul></details><details class="resource-group"><summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path></svg> <span class="resource-group-label">Figma</span><span class="resource-group-count">7</span></summary><ul class="resource-list"><li><a href="https://www.figma.com/proto/kXCrh9MHKAJ878KE2dQOz8/Handoff-Guides---for-engineers-%26-designers?page-id=1%3A544&amp;node-id=275%3A21221&amp;viewport=350%2C48%2C0.13&amp;scaling=min-zoom&amp;starting-point-node-id=275%3A21221&amp;show-proto-sidebar=1&amp;hide-ui=1" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/proto/kXCrh9MHKAJ878KE2dQOz8/Handoff-Guides---for-engineers-%26-designers?page-id=1%3A544&amp;node-id=275%3A21221&amp;viewport=350%2C48%2C0.13&amp;scaling=min-zoom&amp;starting-point-node-id=275%3A21221&amp;show-p</span><span class="link-text-tail">roto-sidebar=1&amp;hide-ui=1</span></span></a></li><li><a href="https://www.figma.com/file/FSbCQa6SzVR3K48ZWLeD77/NK-Web-Components?node-id=1%3A393" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/FSbCQa6SzVR3K48ZWLeD77/NK-Web-Co</span><span class="link-text-tail">mponents?node-id=1%3A393</span></span></a></li><li><a href="https://www.figma.com/file/jHs7EB68a57xVA3NKmMbgy/NK-Icons?node-id=1%3A12626" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/jHs7EB68a57xVA3NKmMbgy/NK</span><span class="link-text-tail">-Icons?node-id=1%3A12626</span></span></a></li><li><a href="https://www.figma.com/file/oSjjLxC27fa6Jh6AHM7ja9/NK-NewsKit-Theme?node-id=1%3A393" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/oSjjLxC27fa6Jh6AHM7ja9/NK-NewsK</span><span class="link-text-tail">it-Theme?node-id=1%3A393</span></span></a></li><li><a href="https://www.figma.com/file/Q3OTJ4RZWJGTCaWuS8sWsL/NK-Utilities?node-id=0%3A1" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/Q3OTJ4RZWJGTCaWuS8sWsL/NK</span><span class="link-text-tail">-Utilities?node-id=0%3A1</span></span></a></li><li><a href="https://www.figma.com/file/A8kKCGhZ5wFi78l3DOlPUQ/v5.0-%F0%9F%9F%A2-NewsKit-theme?node-id=574%3A7406&amp;t=fMjmVd7ulhTXIsYO-1" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/A8kKCGhZ5wFi78l3DOlPUQ/v5.0-%F0%9F%9F%A2-NewsKit-theme?node-id=574%3A7</span><span class="link-text-tail">406&amp;t=fMjmVd7ulhTXIsYO-1</span></span></a></li><li><a href="https://www.figma.com/file/3l0UDvk1l2vsXpbtWlYWoP/%F0%9F%9F%A2-NK-NewsKit-Theme" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/3l0UDvk1l2vsXpbtWlYWoP/%F0%9</span><span class="link-text-tail">F%9F%A2-NK-NewsKit-Theme</span></span></a></li></ul></details><details class="resource-group" open><summary><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> <span class="resource-group-label">Icons</span><span class="resource-group-count">2</span></summary><ul class="resource-list"><li><a href="https://fonts.google.com/icons" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">/icons</span></span></a></li><li><a href="https://www.newskit.co.uk/components/icons/" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">/components/icons</span></span></a></li></ul></details>
+    <details class="resource-group" open><summary><svg width="16" height="16" viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg"><path d="M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z" fill="#161614"></path></svg> <span class="resource-group-label">GitHub</span><span class="resource-group-count">2</span></summary><ul class="resource-list"><li><a href="https://github.com/newsuk/nuk-rfcs" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">newsuk/nuk-rfcs</span></span></a> <span class="resource-activity" title="Last commit: 2026-09-08T13:00:03Z">8 Sep 2026</span></li><li><a href="https://github.com/newscorp-ghfb/newskit" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">newscorp-ghfb/newskit</span></span></a></li></ul></details><details class="resource-group" open><summary><svg width="13" height="16" viewBox="0 0 256 319" xmlns="http://www.w3.org/2000/svg"><defs><path d="M9.87245893,293.324145 L0.0114611411,30.5732167 C-0.314208957,21.8955842 6.33948896,14.5413918 15.0063196,13.9997149 L238.494389,0.0317105427 C247.316188,-0.519651867 254.914637,6.18486163 255.466,15.0066607 C255.486773,15.339032 255.497167,15.6719708 255.497167,16.0049907 L255.497167,302.318596 C255.497167,311.157608 248.331732,318.323043 239.492719,318.323043 C239.253266,318.323043 239.013844,318.317669 238.774632,318.306926 L25.1475605,308.712253 C16.8276309,308.338578 10.1847994,301.646603 9.87245893,293.324145 L9.87245893,293.324145 Z" id="sb-path"></path></defs><mask id="sb-mask" fill="white"><use xlink:href="#sb-path"></use></mask><use fill="#FF4785" fill-rule="nonzero" xlink:href="#sb-path"></use><path d="M188.665358,39.126973 L190.191903,2.41148534 L220.883535,0 L222.205755,37.8634126 C222.251771,39.1811466 221.22084,40.2866846 219.903106,40.3327009 C219.338869,40.3524045 218.785907,40.1715096 218.342409,39.8221376 L206.506729,30.4984116 L192.493574,41.1282444 C191.443077,41.9251106 189.945493,41.7195021 189.148627,40.6690048 C188.813185,40.2267976 188.6423,39.6815326 188.665358,39.126973 Z M149.413703,119.980309 C149.413703,126.206975 191.355678,123.222696 196.986019,118.848893 C196.986019,76.4467826 174.234041,54.1651411 132.57133,54.1651411 C90.9086182,54.1651411 67.5656805,76.7934542 67.5656805,110.735941 C67.5656805,169.85244 147.345341,170.983856 147.345341,203.229219 C147.345341,212.280549 142.913138,217.654777 133.162291,217.654777 C120.456641,217.654777 115.433477,211.165914 116.024438,189.103298 C116.024438,184.317101 67.5656805,182.824962 66.0882793,189.103298 C62.3262146,242.56887 95.6363019,257.990394 133.753251,257.990394 C170.688279,257.990394 199.645341,238.303123 199.645341,202.663511 C199.645341,139.304202 118.683759,141.001326 118.683759,109.604526 C118.683759,96.8760922 128.139127,95.178968 133.753251,95.178968 C139.662855,95.178968 150.300143,96.2205679 149.413703,119.980309 Z" fill="#FFFFFF" fill-rule="nonzero" mask="url(#sb-mask)"></path></svg> <span class="resource-group-label">Storybook</span><span class="resource-group-count">1</span></summary><ul class="resource-list"><li><a href="https://storybook.newskit.co.uk/" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">storybook.newskit.co.uk</span></span></a></li></ul></details><details class="resource-group" open><summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path></svg> <span class="resource-group-label">Figma</span><span class="resource-group-count">4</span></summary><ul class="resource-list"><li><a href="https://www.figma.com/proto/44FDCMcOPHd5m29NKTESm7/Component-Documentation-Sheets" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/proto/44FDCMcOPHd5m29NKTESm7/Compon</span><span class="link-text-tail">ent-Documentation-Sheets</span></span></a></li><li><a href="https://www.figma.com/file/FSbCQa6SzVR3K48ZWLeD77/%F0%9F%9F%A2-NK-Web-Components" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/FSbCQa6SzVR3K48ZWLeD77/%F0%9F</span><span class="link-text-tail">%9F%A2-NK-Web-Components</span></span></a></li><li><a href="https://www.figma.com/file/MkU4xtY2yPcCpfhzQCuSnK/v5.0-%F0%9F%9F%A2-NewsKit-component-library" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/file/MkU4xtY2yPcCpfhzQCuSnK/v5.0-%F0%9F%9F%A2-N</span><span class="link-text-tail">ewsKit-component-library</span></span></a></li><li><a href="https://www.figma.com/file/VYOAzpSq02PoR7cci6SJlE" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head">/fil</span><span class="link-text-tail">e/VYOAzpSq02PoR7cci6SJlE</span></span></a></li></ul></details><details class="resource-group" open><summary><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> <span class="resource-group-label">Icons</span><span class="resource-group-count">1</span></summary><ul class="resource-list"><li><a href="https://www.newskit.co.uk/components/icons" target="_blank" rel="noopener"><span class="link-text"><span class="link-text-head"></span><span class="link-text-tail">/components/icons</span></span></a></li></ul></details>
   </section>
 
+  <section class="block">
+    <h2>Tech stack</h2>
+    <div class="signal-pills"><span class="signal-pill"><span class="signal-value">React</span><a class="signal-source" href="https://www.newskit.co.uk/components/ordered-list" target="_blank" rel="noopener" title="Source: https://www.newskit.co.uk/components/ordered-list"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></span></div>
+  </section>
+  <section class="block">
+    <h2>Capabilities</h2>
+    <div class="signal-pills"><span class="signal-pill"><span class="signal-label">Accessibility</span><span class="signal-value">WCAG 2.1 AA</span><a class="signal-source" href="https://www.newskit.co.uk/help/accessibility-statement" target="_blank" rel="noopener" title="Source: https://www.newskit.co.uk/help/accessibility-statement"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></span><span class="signal-pill"><span class="signal-value">Dark mode</span><a class="signal-source" href="https://www.newskit.co.uk/theme/foundation/overlays" target="_blank" rel="noopener" title="Source: https://www.newskit.co.uk/theme/foundation/overlays"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></span></div>
+  </section>
 
 
   <section class="block">
     <h2>Indexed pages</h2>
-    <p class="empty-note">No pages indexed yet.</p>
+    <ul class="page-list"><li><a href="https://www.newskit.co.uk/patterns/forms/address" target="_blank" rel="noopener">Address</a></li><li><a href="https://www.newskit.co.uk/components/audio-player" target="_blank" rel="noopener">Audio Player</a></li><li><a href="https://www.newskit.co.uk/theme/foundation/borders" target="_blank" rel="noopener">Borders</a></li><li><a href="https://www.newskit.co.uk/components/button" target="_blank" rel="noopener">Button</a></li><li><a href="https://www.newskit.co.uk/components/checkbox" target="_blank" rel="noopener">Checkbox</a></li><li><a href="https://www.newskit.co.uk/getting-started/accessibility/code" target="_blank" rel="noopener">Code for accessibility</a></li><li><a href="https://www.newskit.co.uk/components/utils/get-defaults" target="_blank" rel="noopener">Component Defaults Utils</a></li><li><a href="https://www.newskit.co.uk/components/consent-settings-link" target="_blank" rel="noopener">Consent Settings Link</a></li><li><a href="https://www.newskit.co.uk/patterns/forms/date-picker" target="_blank" rel="noopener">Date picker</a></li><li><a href="https://www.newskit.co.uk/components/date-time" target="_blank" rel="noopener">Date Time</a></li><li><a href="https://www.newskit.co.uk/getting-started/accessibility/design" target="_blank" rel="noopener">Design for accessibility</a></li><li><a href="https://www.newskit.co.uk/components/drawer" target="_blank" rel="noopener">Drawer</a></li><li><a href="https://www.newskit.co.uk/patterns/forms/email-address" target="_blank" rel="noopener">Email address</a></li><li><a href="https://www.newskit.co.uk/components/fieldset" target="_blank" rel="noopener">Fieldset</a></li><li><a href="https://www.newskit.co.uk/components/form" target="_blank" rel="noopener">Form</a></li><li><a href="https://www.newskit.co.uk/getting-started/code/form-step-by-step" target="_blank" rel="noopener">Form step-by-step</a></li><li><a href="https://www.newskit.co.uk/components/utils/get-css-from-theme" target="_blank" rel="noopener">Get CSS from theme utils</a></li><li><a href="https://www.newskit.co.uk/getting-started/code/testing" target="_blank" rel="noopener">Getting Started with Testing</a></li><li><a href="https://www.newskit.co.uk/components/headline" target="_blank" rel="noopener">Headline</a></li><li><a href="https://www.newskit.co.uk/theme/foundation/iconography" target="_blank" rel="noopener">Iconography</a></li><li><a href="https://www.newskit.co.uk/getting-started/code/instrumentation" target="_blank" rel="noopener">Instrumentation setup</a></li><li><a href="https://www.newskit.co.uk/components/layer" target="_blank" rel="noopener">Layer</a></li><li><a href="https://www.newskit.co.uk/components/menu" target="_blank" rel="noopener">Menu</a></li><li><a href="https://www.newskit.co.uk/components/modal" target="_blank" rel="noopener">Modal</a></li><li><a href="https://www.newskit.co.uk/patterns/forms/names" target="_blank" rel="noopener">Names</a></li><li><a href="https://www.newskit.co.uk/help/accessibility-statement" target="_blank" rel="noopener">NewsKit Accessibility Statement</a></li><li><a href="https://www.newskit.co.uk/" target="_blank" rel="noopener">NewsKit design system</a></li><li><a href="https://www.newskit.co.uk/components/ordered-list" target="_blank" rel="noopener">Ordered List</a></li><li><a href="https://www.newskit.co.uk/theme/foundation/overlays" target="_blank" rel="noopener">Overlays</a></li><li><a href="https://www.newskit.co.uk/theme/theming/overview" target="_blank" rel="noopener">Overview</a></li><li><a href="https://www.newskit.co.uk/components/pagination" target="_blank" rel="noopener">Pagination</a></li><li><a href="https://www.newskit.co.uk/patterns/overview" target="_blank" rel="noopener">Patterns</a></li><li><a href="https://www.newskit.co.uk/components/popover" target="_blank" rel="noopener">Popover</a></li><li><a href="https://www.newskit.co.uk/components/radio-button" target="_blank" rel="noopener">Radio Button</a></li><li><a href="https://www.newskit.co.uk/about/roadmap" target="_blank" rel="noopener">Roadmap</a></li><li><a href="https://www.newskit.co.uk/components/slider" target="_blank" rel="noopener">Slider</a></li><li><a href="https://www.newskit.co.uk/components/standfirst" target="_blank" rel="noopener">Standfirst</a></li><li><a href="https://www.newskit.co.uk/components/tabs" target="_blank" rel="noopener">Tabs</a></li><li><a href="https://www.newskit.co.uk/components/text-field" target="_blank" rel="noopener">Text Field</a></li><li><a href="https://www.newskit.co.uk/components/text-input" target="_blank" rel="noopener">Text Input</a></li></ul>
   </section>
 
   <p class="report-issue">

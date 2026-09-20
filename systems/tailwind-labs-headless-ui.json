@@ -1,0 +1,195 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "tailwind-labs-headless-ui",
+  "organization": "Tailwind Labs",
+  "design_system": "Headless UI",
+  "full_name": "Tailwind Labs — Headless UI",
+  "start_urls": [
+    "https://headlessui.com/"
+  ],
+  "detail_url": "/systems/tailwind-labs-headless-ui",
+  "pages_indexed": 39,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:44:44+00:00",
+  "last_modified": "Wed, 02 Sep 2026 00:54:41 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/tailwindlabs/headlessui"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Vue"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 28744,
+    "last_pushed": "2026-04-13T16:12:31Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://headlessui.com/react/button",
+      "title": "Button - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/checkbox",
+      "title": "Checkbox - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/combobox",
+      "title": "Combobox (Autocomplete) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/combobox",
+      "title": "Combobox (Autocomplete) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/combobox",
+      "title": "Combobox - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/dialog",
+      "title": "Dialog (Modal) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/dialog",
+      "title": "Dialog (Modal) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/dialog",
+      "title": "Dialog - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/disclosure",
+      "title": "Disclosure - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/disclosure",
+      "title": "Disclosure - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/disclosure",
+      "title": "Disclosure - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/menu",
+      "title": "Dropdown Menu - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/fieldset",
+      "title": "Fieldset - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/",
+      "title": "Headless UI - Unstyled, fully accessible UI components"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue",
+      "title": "Headless UI - Unstyled, fully accessible UI components"
+    },
+    {
+      "url": "https://headlessui.com/v1",
+      "title": "Headless UI - Unstyled, fully accessible UI components"
+    },
+    {
+      "url": "https://headlessui.com/react/input",
+      "title": "Input - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/listbox",
+      "title": "Listbox (Select) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/listbox",
+      "title": "Listbox (Select) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/listbox",
+      "title": "Listbox - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/menu",
+      "title": "Menu (Dropdown) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/menu",
+      "title": "Menu (Dropdown) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/popover",
+      "title": "Popover - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/popover",
+      "title": "Popover - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/popover",
+      "title": "Popover - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/radio-group",
+      "title": "Radio Group - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/radio-group",
+      "title": "Radio Group - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/radio-group",
+      "title": "Radio Group - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/select",
+      "title": "Select - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/switch",
+      "title": "Switch (Toggle) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/switch",
+      "title": "Switch (Toggle) - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/switch",
+      "title": "Switch - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/tabs",
+      "title": "Tabs - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/tabs",
+      "title": "Tabs - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/tabs",
+      "title": "Tabs - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/textarea",
+      "title": "Textarea - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/react/transition",
+      "title": "Transition - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/vue/transition",
+      "title": "Transition - Headless UI"
+    },
+    {
+      "url": "https://headlessui.com/v1/react/transition",
+      "title": "Transition - Headless UI"
+    }
+  ]
+}

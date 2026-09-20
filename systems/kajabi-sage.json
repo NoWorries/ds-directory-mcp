@@ -1,0 +1,65 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "kajabi-sage",
+  "organization": "Kajabi",
+  "design_system": "Sage",
+  "full_name": "Kajabi — Sage",
+  "start_urls": [
+    "https://sage.kajabi.com"
+  ],
+  "detail_url": "/systems/kajabi-sage",
+  "pages_indexed": 6,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-16T12:56:01+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/Kajabi/sage-lib"
+    ],
+    "storybook": [
+      "https://sage-lib-storybook.production.kajabi.farm/?path=/docs/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 25,
+    "last_pushed": "2026-08-28T22:14:38Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://sage.kajabi.com/pages/search",
+      "title": "Component Search | Sage Design System"
+    },
+    {
+      "url": "https://sage.kajabi.com/pages/layout/container",
+      "title": "Container | Sage Design System"
+    },
+    {
+      "url": "https://sage.kajabi.com/pages/foundations/design_principles",
+      "title": "Design Principles | Sage Design System"
+    },
+    {
+      "url": "https://sage.kajabi.com/pages/component/sage_component",
+      "title": "Sage Component | Sage Design System"
+    },
+    {
+      "url": "https://sage.kajabi.com",
+      "title": "Sage Design System"
+    },
+    {
+      "url": "https://sage.kajabi.com/pages/helpers/spacing",
+      "title": "Spacing | Sage Design System"
+    }
+  ]
+}

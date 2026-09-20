@@ -1,0 +1,390 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "consumer-financial-protection-bureau-cfpb-design-manual",
+  "organization": "Consumer Financial Protection Bureau",
+  "design_system": "CFPB Design Manual",
+  "full_name": "Consumer Financial Protection Bureau — CFPB Design Manual",
+  "start_urls": [
+    "https://cfpb.github.io/design-system/"
+  ],
+  "detail_url": "/systems/consumer-financial-protection-bureau-cfpb-design-manual",
+  "pages_indexed": 85,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T06:22:51+00:00",
+  "last_modified": "Thu, 17 Sep 2026 14:40:43 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/cfpb/design-system"
+    ],
+    "storybook": [
+      "https://cfpb.github.io/design-system/development/web-component-storybook"
+    ],
+    "markdown_docs": [
+      "https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://gist.github.com/craigmdennis/6655047"
+    ]
+  },
+  "content_signals": {
+    "accessibility_conformance": "Section 508",
+    "frameworks": [
+      "React",
+      "Web Components"
+    ]
+  },
+  "github_meta": {
+    "license": "CC0-1.0",
+    "stars": 60,
+    "last_pushed": "2026-09-17T14:40:02Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/accessibility-audit-tools",
+      "title": "Accessibility audit tools - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/accessibility-principles",
+      "title": "Accessibility principles - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/alerts",
+      "title": "Alerts - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/animation",
+      "title": "Animation - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/atomic-components",
+      "title": "Atomic components - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/banner-notification",
+      "title": "Banner (notification) - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/banner-us-gov",
+      "title": "Banner (US gov) - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/blocks",
+      "title": "Blocks - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/pages/browse-pages",
+      "title": "Browse pages - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/buttons",
+      "title": "Buttons - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/cards",
+      "title": "Cards - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/checkboxes",
+      "title": "Checkboxes - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/color",
+      "title": "Color - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components",
+      "title": "Components - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/conducting-research",
+      "title": "Conducting research - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/contributing-to-the-cfpb-design-system",
+      "title": "Contributing to the CFPB Design System - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines",
+      "title": "Data visualization guidelines - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/date-picker",
+      "title": "Date picker - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/design-and-development",
+      "title": "Design and development - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/design-tokens",
+      "title": "Design Tokens - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/designing-forms",
+      "title": "Designing forms - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/pages/document-detail-pages",
+      "title": "Document detail pages - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/email-signup-forms",
+      "title": "Email signup forms - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/expandables",
+      "title": "Expandables - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/fallback-strategies",
+      "title": "Fallback strategies - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/featured-content-module",
+      "title": "Featured content module - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/fieldsets",
+      "title": "Fieldsets - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/filterable-list-control-panels",
+      "title": "Filterable list control panels - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/pages/filterable-list-pages",
+      "title": "Filterable list pages - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/fonts",
+      "title": "Fonts - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation",
+      "title": "Foundation - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system//guidelines/frames-of-reference-mural-template",
+      "title": "Frames of reference mural template - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/general-principles",
+      "title": "General principles - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/getting-started",
+      "title": "Getting Started - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/grid",
+      "title": "Grid - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/headings",
+      "title": "Headings - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/helper-classes-and-mixins",
+      "title": "Helper classes and mixins - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/helper-text",
+      "title": "Helper text - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/heroes",
+      "title": "Heroes - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/iconography",
+      "title": "Iconography - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/illustration",
+      "title": "Illustration - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/info-unit-groups",
+      "title": "Info unit groups - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/integrating-the-design-system-into-your-project",
+      "title": "Integrating the Design System into your project - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/item-introductions",
+      "title": "Item introductions - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/labels-and-legends",
+      "title": "Labels and legends - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/pages/landing-pages",
+      "title": "Landing pages - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/pages/learn-pages",
+      "title": "Learn pages - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/links",
+      "title": "Links - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/lists",
+      "title": "Lists - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/logo",
+      "title": "Logo - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/main-content-and-sidebars",
+      "title": "Main content and sidebars - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/media-queries",
+      "title": "Media queries - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/motion",
+      "title": "Motion - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/overview",
+      "title": "Overview - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/pagination",
+      "title": "Pagination - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/paragraphs",
+      "title": "Paragraphs - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns",
+      "title": "Patterns - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/photography",
+      "title": "Photography - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/print-styles",
+      "title": "Print styles - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/radio-buttons",
+      "title": "Radio buttons - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/range-sliders",
+      "title": "Range sliders - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/reference-for-component-states",
+      "title": "Reference for component states - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/reference-for-custom-elements",
+      "title": "Reference for custom elements - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/sample-component-page",
+      "title": "Sample component page - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/seal",
+      "title": "Seal - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/selects",
+      "title": "Selects - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/guidelines/setting-the-foundation",
+      "title": "Setting the foundation - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/pages/story-pages",
+      "title": "Story pages - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/pages/sublanding-pages",
+      "title": "Sublanding pages - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/summaries",
+      "title": "Summaries - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/tables",
+      "title": "Tables - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/taglines-legacy",
+      "title": "Taglines (legacy) - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/taglines",
+      "title": "Taglines - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/tags",
+      "title": "Tags - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/text-inputs",
+      "title": "Text inputs - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/text-introductions",
+      "title": "Text introductions - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/components/tooltips",
+      "title": "Tooltips - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/transition-patterns",
+      "title": "Transition patterns - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/updating-this-website",
+      "title": "Updating this website - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/updating-this-website/index",
+      "title": "Updating this website - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/variables",
+      "title": "Variables - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/foundation/video",
+      "title": "Video - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/development/web-component-storybook",
+      "title": "Web Component Storybook - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system",
+      "title": "Welcome to the CFPB Design System - CFPB Design System"
+    },
+    {
+      "url": "https://cfpb.github.io/design-system/patterns/wells",
+      "title": "Wells - CFPB Design System"
+    }
+  ]
+}

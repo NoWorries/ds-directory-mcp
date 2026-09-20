@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "apple-human-interface-guidelines",
+  "organization": "Apple",
+  "design_system": "Human Interface Guidelines",
+  "full_name": "Apple — Human Interface Guidelines",
+  "start_urls": [
+    "https://developer.apple.com/design/human-interface-guidelines/"
+  ],
+  "detail_url": "/systems/apple-human-interface-guidelines",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:15:23+00:00",
+  "last_modified": "Fri, 18 Sep 2026 20:04:18 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/",
+      "title": "Apple — Human Interface Guidelines"
+    }
+  ]
+}

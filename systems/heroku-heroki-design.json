@@ -1,0 +1,73 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "heroku-heroki-design",
+  "organization": "Heroku",
+  "design_system": "Heroki Design",
+  "full_name": "Heroku — Heroki Design",
+  "start_urls": [
+    "https://design.herokai.com/"
+  ],
+  "detail_url": "/systems/heroku-heroki-design",
+  "pages_indexed": 8,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T07:53:04+00:00",
+  "last_modified": "Tue, 06 Jun 2023 20:46:14 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/heroku/design-systems",
+      "https://github.com/heroku/ember-malibu-icon",
+      "https://github.com/heroku/react-malibu",
+      "https://github.com/heroku/malibu"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/postcss/postcss"
+    ]
+  },
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design.herokai.com/",
+      "title": "Heroku Design"
+    },
+    {
+      "url": "https://design.herokai.com/malibu",
+      "title": "malibu - Get Started"
+    },
+    {
+      "url": "https://design.herokai.com/purple3/docs",
+      "title": "purple3 - Documentation"
+    },
+    {
+      "url": "https://design.herokai.com/purple3",
+      "title": "purple3 - Get started"
+    },
+    {
+      "url": "https://design.herokai.com/purple3/glossary",
+      "title": "purple3 - Glossary"
+    },
+    {
+      "url": "https://design.herokai.com/shibori3/docs",
+      "title": "shibori3 - Documentation"
+    },
+    {
+      "url": "https://design.herokai.com/shibori3",
+      "title": "shibori3 - Get started"
+    },
+    {
+      "url": "https://design.herokai.com/shibori3/glossary",
+      "title": "shibori3 - Glossary"
+    }
+  ]
+}

@@ -1,170 +1,101 @@
 from __future__ import annotations
 
-import random
-import time
-from datetime import datetime, timezone
-from email.utils import parsedate_to_datetime
+from config import EMBEDDING_DIM, EMBEDDING_MODEL
 
-import requests
-
-from config import EMBEDDING_MODEL, GEMINI_API_KEY, GEMINI_EMBED_URL
-
-# The Gemini API's free tier is generous (1,500 requests/minute at time of
-# writing) but still finite, and a full reindex fires a lot of embedding
-# calls back to back — a 429 here used to crash the whole shard (see
-# ingest.py's --shard workflow) rather than just slowing down. Retry with
-# exponential backoff instead of a fixed/linear wait, so repeated 429s space
-# out fast (20s, 40s, 80s, 160s, 320s) rather than hammering the API at a
-# near-constant cadence — and add jitter so the 4 parallel reindex-shard
-# runners don't all wake up and retry in the same instant, which would just
-# trip the rate limit again. Retry-After from the API (a direct signal of
-# the real window) always wins when present.
-MAX_RETRIES = 5
-BASE_BACKOFF_SECONDS = 20
-JITTER_SECONDS = 5
-
-# Response codes/exceptions worth retrying with the same backoff as a 429 —
-# a transient 5xx or a dropped connection is exactly as recoverable as a rate
-# limit, and previously crashed the whole shard just the same.
-RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
-
-# 401/403 are a different category of failure from the retryable ones
-# above: an invalid/expired API key, a disabled API, or an exhausted account
-# quota (confirmed live on the previous embedding provider — Jina returned
-# 403 once its key ran out of free tokens, and every remaining embed call in
-# the shard failed the exact same way, one page at a time, each just logged
-# as "will retry next run" while the crawl for every remaining system still
-# ran to completion first — wasting the whole run's worth of time before
-# the exact same wall got hit again on the next scheduled run). No amount
-# of retrying or waiting fixes this; it needs a human to go check the key/
-# quota/billing. EmbeddingAuthError lets callers tell this apart from a
-# per-page retryable failure and stop the whole run immediately instead of
-# ploughing through every other system only to hit this same error hundreds
-# more times. Named for the failure mode, not the provider, since whichever
-# embedding API is behind config.py next hits the same category of error.
+# Local, self-hosted embeddings (sentence-transformers) — no API key, no
+# quota, no billing, no network call at all once the model weights are
+# cached. Switched here after burning through two different cloud
+# providers' free tiers in one session (Jina's tokens ran out mid-run;
+# Gemini's 100-RPM/1,000-RPD free-tier caps were blown past by a handful of
+# parallel reindex shards) — a model small enough to run on a GitHub
+# Actions runner's CPU (and on Render's free-tier query server, see
+# server.py's embed_query() call) sidesteps that whole category of problem
+# permanently, at the cost of needing the `sentence-transformers` package
+# installed (see requirements.txt/requirements-ingest.txt) and a few
+# hundred MB downloaded once and cached (see the reindex workflows'
+# actions/cache step, keyed on EMBEDDING_MODEL).
 #
-# 400 is deliberately NOT included here even though it sounds similar —
-# confirmed live, Gemini also returns 400 for a well-formed request that's
-# simply too big ("at most 100 requests can be in one batch", hit on
-# Atlassian's 570KB llms-full.txt, which chunks into 800+ pieces). That's a
-# per-call shape problem MAX_BATCH_SIZE below already prevents, not an
-# account problem — treating every 400 as fatal would abort the whole run
-# over something batching alone fixes.
-class EmbeddingAuthError(Exception):
-    pass
+# Loaded lazily (not at import time) and cached in a module-level global —
+# constructing a SentenceTransformer loads the model weights from disk/
+# HuggingFace's cache, which is slow enough (seconds) that doing it once per
+# process rather than once per embed_texts() call matters. Every caller in
+# this codebase (ingest.py's per-batch embed calls, server.py's per-query
+# embed) already goes through embed_texts()/embed_query() below, so a single
+# shared instance is transparent to all of them.
+_model = None
 
 
-def _parse_retry_after(value: str | None, default_wait: float) -> float:
-    """Retry-After is usually a plain integer seconds count, but per RFC 7231
-    it may instead be an HTTP-date — float(...) on one of those raises
-    ValueError, which used to propagate uncaught and fail every remaining
-    page in the batch while the rate limit was still in effect. Falls back
-    to the computed exponential-backoff wait on anything that doesn't parse
-    either way."""
-    if not value:
-        return default_wait
-    try:
-        return float(value)
-    except ValueError:
-        pass
-    try:
-        dt = parsedate_to_datetime(value)
-        if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
-        return max((dt - datetime.now(timezone.utc)).total_seconds(), 0.0)
-    except (TypeError, ValueError, OverflowError):
-        return default_wait
+def _get_model():
+    global _model
+    if _model is None:
+        # Deferred import — sentence-transformers (and its torch dependency)
+        # is a heavy enough import that modules which never actually embed
+        # anything (generate_*.py's static-page rendering, merge_shards.py)
+        # shouldn't pay for it just by importing this module's embed_texts/
+        # embed_query for type-checking purposes or via a shared import chain.
+        from sentence_transformers import SentenceTransformer
+
+        _model = SentenceTransformer(EMBEDDING_MODEL)
+    return _model
 
 
-# Gemini's real, confirmed-live hard limit for batchEmbedContents ("at most
-# 100 requests can be in one batch") — NOT the 2,048 figure floating around
-# in some third-party write-ups, which does not hold for this endpoint. A
-# single big page (Atlassian's llms-full.txt: 570KB, 800+ chunks at
-# CHUNK_SIZE=800) blows past this in one call otherwise.
+# A reasonable chunk size for encode() calls — unlike the old cloud-API
+# providers, there's no hard per-request limit to respect locally, but
+# encoding many hundreds of chunks in one Python call still uses more
+# memory at once than encoding them in smaller batches, and batching is
+# also how ingest.py's _chunk_and_upsert() amortizes one call across many
+# small pages' chunks rather than one call per page. 100 mirrors the limit
+# the previous (cloud) provider enforced, kept for continuity rather than
+# any actual local constraint.
 MAX_BATCH_SIZE = 100
 
 
+# A local model failing to load (missing package, corrupted/incomplete
+# HuggingFace cache download, out-of-memory) is the equivalent failure mode
+# to the old cloud providers' "your API key/quota is broken" — it affects
+# every remaining embed call in this run identically, not just one page, so
+# it's raised as its own type rather than a generic Exception. See
+# ingest.py's _chunk_and_upsert()/safe_run(), which let this propagate
+# instead of treating it as a per-page/per-system retryable failure.
+class EmbeddingFatalError(Exception):
+    pass
+
+
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    """Embed any number of text chunks, splitting into <=MAX_BATCH_SIZE calls
-    to Gemini's batchEmbedContents endpoint as needed — transparent to the
-    caller, which just gets back one vector per input text in order, same
-    as the single-call-per-page pattern the rest of ingest.py relies on."""
-    vectors: list[list[float]] = []
-    for i in range(0, len(texts), MAX_BATCH_SIZE):
-        vectors.extend(_embed_batch(texts[i : i + MAX_BATCH_SIZE]))
-    return vectors
-
-
-def _embed_batch(texts: list[str]) -> list[list[float]]:
-    """One HTTP call, <=MAX_BATCH_SIZE texts."""
+    """Embed any number of text chunks locally, in batches of
+    <=MAX_BATCH_SIZE (mainly for memory headroom — see above), returning one
+    vector per input text in order."""
     if not texts:
         return []
+    try:
+        model = _get_model()
+    except Exception as exc:
+        raise EmbeddingFatalError(
+            f"Failed to load the local embedding model ({EMBEDDING_MODEL!r}): {exc}. Check that "
+            f"sentence-transformers is installed (see requirements.txt) and that the model weights "
+            f"downloaded correctly (first run needs network access to HuggingFace; after that they're "
+            f"cached locally)."
+        ) from exc
 
-    headers = {
-        "x-goog-api-key": GEMINI_API_KEY,
-        "Content-Type": "application/json",
-    }
-    model_name = f"models/{EMBEDDING_MODEL}"
-    # Deliberately NOT requesting a truncated outputDimensionality — see
-    # config.py's EMBEDDING_DIM comment for why this uses the model's native
-    # 3072-dim output as-is rather than trying to get Google's truncation
-    # parameter shape exactly right with no way to test it live.
-    payload = {
-        "requests": [
-            {
-                "model": model_name,
-                "content": {"parts": [{"text": text}]},
-            }
-            for text in texts
-        ]
-    }
-
-    for attempt in range(MAX_RETRIES + 1):
-        default_wait = BASE_BACKOFF_SECONDS * (2**attempt)
-        jitter = random.uniform(0, JITTER_SECONDS)
+    vectors: list[list[float]] = []
+    for i in range(0, len(texts), MAX_BATCH_SIZE):
+        batch = texts[i : i + MAX_BATCH_SIZE]
         try:
-            response = requests.post(GEMINI_EMBED_URL, json=payload, headers=headers, timeout=60)
-        except (requests.Timeout, requests.ConnectionError) as exc:
-            if attempt >= MAX_RETRIES:
-                raise
-            wait = default_wait + jitter
-            print(f"  Gemini request failed ({exc}) — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
-            time.sleep(wait)
-            continue
+            # normalize_embeddings=True: Qdrant's collection here uses cosine
+            # distance, which assumes unit-length vectors.
+            batch_vectors = model.encode(batch, normalize_embeddings=True, show_progress_bar=False)
+        except Exception as exc:
+            raise EmbeddingFatalError(f"Local embedding inference failed: {exc}") from exc
+        vectors.extend(vector.tolist() for vector in batch_vectors)
 
-        if response.status_code in RETRYABLE_STATUS_CODES and attempt < MAX_RETRIES:
-            # A numeric/parsed Retry-After is a real signal from the server
-            # about the actual window, so it takes priority over our own
-            # backoff estimate — but jitter is still added on top so parallel
-            # shards retrying off the same Retry-After value don't
-            # re-synchronise and immediately re-trip the limit together.
-            wait = max(_parse_retry_after(response.headers.get("Retry-After"), default_wait), default_wait) + jitter
-            print(f"  Gemini returned {response.status_code} — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
-            time.sleep(wait)
-            continue
-
-        if response.status_code in (401, 403):
-            raise EmbeddingAuthError(
-                f"Gemini returned {response.status_code} — this means an invalid/expired GEMINI_API_KEY, the "
-                f"Generative Language API not being enabled for this key's project, or an exhausted quota, not "
-                f"a transient error, so it won't be retried. Check https://aistudio.google.com/apikey. "
-                f"Response body: {response.text[:500]}"
-            )
-
-        response.raise_for_status()
-        try:
-            embeddings = response.json()["embeddings"]
-            vectors = [item["values"] for item in embeddings]
-        except (ValueError, KeyError) as exc:
-            if attempt >= MAX_RETRIES:
-                raise
-            wait = default_wait + jitter
-            print(f"  Gemini response malformed ({exc}) — waiting {wait:.0f}s before retry {attempt + 1}/{MAX_RETRIES}")
-            time.sleep(wait)
-            continue
-        if len(vectors) != len(texts):
-            raise ValueError(f"Gemini returned {len(vectors)} embeddings for {len(texts)} input texts")
-        return vectors
+    if len(vectors) != len(texts):
+        raise ValueError(f"Local model returned {len(vectors)} embeddings for {len(texts)} input texts")
+    if vectors and len(vectors[0]) != EMBEDDING_DIM:
+        raise ValueError(
+            f"Local model {EMBEDDING_MODEL!r} produced {len(vectors[0])}-dim vectors, expected "
+            f"EMBEDDING_DIM={EMBEDDING_DIM} — update EMBEDDING_DIM (and re-embed the corpus) to match."
+        )
+    return vectors
 
 
 def embed_query(query: str) -> list[float]:

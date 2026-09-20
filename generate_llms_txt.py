@@ -16,7 +16,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from generate_data_export import SCHEMA_FILE, SYSTEMS_JSON_FILE
-from generate_directory import compute_stats, indexed_only, load_systems
+from generate_directory import compute_stats, indexed_only, load_systems, visible_by_default
 from generate_home import MCP_INSTALL_COMMAND, MCP_URL
 from generate_search import SEARCH_API_URL
 
@@ -94,8 +94,9 @@ dead systems and anything with zero pages indexed, same as every page below.
 
 Relative to this file's own URL (llms.txt lives at the site root):
 
-- /directory — every indexed system, sortable/filterable, with per-system \
-resource coverage (GitHub, npm, Storybook, Figma, MCP server, agent instructions, etc.)
+- /directory — every indexed system, sortable/filterable, as a plain list or card grid
+- /compare — the same systems cross-referenced by resource coverage \
+(GitHub, npm, Storybook, Figma, MCP server, agent instructions, etc.)
 - /systems/<slug> — one system's full detail: resources, indexed pages, \
 freshness, and any detected accessibility/tokens/framework/governance signals
 - /components — which systems document a given UI component (Button, Modal, Table, ...)
@@ -117,6 +118,6 @@ crawl looks complete.
 
 
 if __name__ == "__main__":
-    systems = indexed_only(load_systems())
+    systems = visible_by_default(indexed_only(load_systems()))
     OUTPUT_FILE.write_text(render_llms_txt(systems))
     print(f"Wrote {OUTPUT_FILE}")

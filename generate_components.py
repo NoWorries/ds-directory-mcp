@@ -23,7 +23,7 @@ from component_taxonomy import COMPONENTS, FOUNDATIONS, NEGATIVE_TITLE_PATTERNS,
 from generate_directory import favicon_html, load_pages_index, load_systems
 from page_shell import EXTERNAL_LINK_ICON_SVG, FAVICON_LINK, FONT_LINK, NAV_HEIGHT, TOKENS_CSS, routes_nav
 from slug import slugify
-from text_utils import clean_title, dedupe_system_name, full_name, in_any_scope, path_scope, split_org_name
+from text_utils import clean_title, dedupe_system_name, full_name, in_any_scope, is_blog_style_url, path_scope, split_org_name
 
 # One taxonomy -> one route, each with its own output dir, nav-current key,
 # and page copy. Loop over this instead of writing the same three functions
@@ -117,7 +117,14 @@ def build_all_indexes(pages_index: dict, systems_by_name: dict[str, dict]) -> di
     for why an off-scope page can still end up in pages_index.json at all:
     a redirect, an included external link, or content crawled before the
     path-scoping fix existed). A page from a system with no recorded
-    start_urls (shouldn't happen, but not fatal) is kept rather than dropped."""
+    start_urls (shouldn't happen, but not fatal) is kept rather than dropped.
+
+    A page under a blog/editorial-shaped path (is_blog_style_url()) is
+    skipped too, in-scope or not — confirmed live, BBC GEL's own /features/
+    section is a staff-profile/editorial blog, and one page there ("Meet Dan
+    Ramsden") is fully within GEL's own crawl scope yet matched "Navigation
+    Pattern" purely because its title happened to start with matching
+    wording. Being in scope doesn't make a page documentation."""
     indexes: dict[str, dict[str, list[dict]]] = {route["key"]: {} for route in ROUTES}
     seen: set[tuple[str, str, str]] = set()  # (route_key, canonical, system_name)
 
@@ -129,6 +136,8 @@ def build_all_indexes(pages_index: dict, systems_by_name: dict[str, dict]) -> di
 
         for page in sorted(pages, key=lambda p: clean_title(p["title"], site_titles=site_titles)):
             if scopes and not in_any_scope(page["url"], scopes):
+                continue
+            if is_blog_style_url(page["url"]):
                 continue
             head = clean_title(page.get("title", ""), site_titles=site_titles).lower()
             match = classify_title(head)

@@ -1,0 +1,210 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "australian-government-department-of-agriculture-fisheries-and-forestry-agriculture-design-system-agds",
+  "organization": "Australian Government, Department of Agriculture, Fisheries and Forestry",
+  "design_system": "Agriculture Design System (AgDS)",
+  "full_name": "Australian Government, Department of Agriculture, Fisheries and Forestry — Agriculture Design System (AgDS)",
+  "start_urls": [
+    "https://design-system.agriculture.gov.au/"
+  ],
+  "detail_url": "/systems/australian-government-department-of-agriculture-fisheries-and-forestry-agriculture-design-system-agds",
+  "pages_indexed": 37,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T21:24:59+00:00",
+  "last_modified": "Fri, 28 Aug 2026 02:47:43 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/agriculturegovau/agds-next",
+      "https://github.com/agriculturegovau/agds-starter-kit"
+    ],
+    "storybook": [
+      "https://design-system.agriculture.gov.au/storybook"
+    ],
+    "figma": [
+      "https://www.figma.com/file/MivOblJvHi3nJ4bQMDfnf3/AgDS---gallery"
+    ],
+    "markdown_docs": [
+      "https://github.com/agriculturegovau/agds-next/blob/main/CONTRIBUTING.md"
+    ],
+    "icons": [
+      "https://design-system.agriculture.gov.au/components/icon",
+      "https://design-system.agriculture.gov.au/foundations/icons"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/jquense/yup",
+      "https://github.com/changesets/changesets"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@ag.ds-next/react"
+    ]
+  },
+  "content_signals": {
+    "cli_scaffolding": true,
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 61,
+    "last_pushed": "2026-08-28T02:41:22Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design-system.agriculture.gov.au/about",
+      "title": "About AgDS | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/accessible-form-validation-and-recovery",
+      "title": "Accessible form validation and error recovery pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/",
+      "title": "Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/ask-users-for-dates-and-times",
+      "title": "Ask users for dates and times pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides/change-management",
+      "title": "Change management | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/components",
+      "title": "Components | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/conditional-reveal",
+      "title": "Conditionally revealed form content pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/templates/content",
+      "title": "Content page template | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/content",
+      "title": "Content | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides/contribution",
+      "title": "Contribution guidelines | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/crud-data-tables",
+      "title": "Create, read, update and delete data in tables pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides/custom-theme",
+      "title": "Creating a custom theme | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/templates/error-page",
+      "title": "Error page template | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/focus-mode",
+      "title": "Focus mode pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides/forms",
+      "title": "Forms | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/foundations",
+      "title": "Foundations | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides/getting-started",
+      "title": "Getting started | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides",
+      "title": "Guides | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/helpful-form-content",
+      "title": "Helpful form content pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/templates/home",
+      "title": "Home page template | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides/how-to-write-guidance",
+      "title": "How to create guidance in the Export Service | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/loading-error-empty-states",
+      "title": "Loading, empty and error states pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/messaging",
+      "title": "Messaging pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/templates/multi-page-form",
+      "title": "Multi-page form template | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/multi-task-form",
+      "title": "Multi-task form pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns",
+      "title": "Patterns | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/review-and-submit",
+      "title": "Review and submit pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/search-filters",
+      "title": "Search filters pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/selectable-table-with-batch-actions",
+      "title": "Selectable tables with batch actions pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/selecting-an-option-from-a-list",
+      "title": "Selecting an option from a list pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/selecting-multiple-options-from-a-list",
+      "title": "Selecting multiple options from a list pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/templates/single-page-form",
+      "title": "Single-page form template | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/templates",
+      "title": "Templates | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/updates",
+      "title": "Updates | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/guides/figma",
+      "title": "Using Figma | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/warn-before-leaving",
+      "title": "Warn before leaving pattern | Agriculture Design System"
+    },
+    {
+      "url": "https://design-system.agriculture.gov.au/patterns/yourgov-example-application",
+      "title": "yourGov example application pattern | Agriculture Design System"
+    }
+  ]
+}

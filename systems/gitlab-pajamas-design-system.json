@@ -1,0 +1,227 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "gitlab-pajamas-design-system",
+  "organization": "GitLab",
+  "design_system": "Pajamas Design System",
+  "full_name": "GitLab — Pajamas Design System",
+  "start_urls": [
+    "https://design.gitlab.com/"
+  ],
+  "detail_url": "/systems/gitlab-pajamas-design-system",
+  "pages_indexed": 39,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T23:15:16+00:00",
+  "last_modified": "Fri, 18 Sep 2026 16:58:45 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://design.gitlab.com/storybook",
+      "https://design-system-pages-2b622b.gitlab.io/storybook"
+    ],
+    "figma": [
+      "https://www.figma.com/design/1ui9w228X0S5WxaD0SRdIA/GitLab-Product-Illustrations",
+      "https://www.figma.com/design/qEddyqCrI7kPSBjGmwkZzQ/%F0%9F%93%99-Component-library",
+      "https://www.figma.com/file/mjAZxHkK95TlQ6L14aNp2M/Type-scale---Compact-Markdown",
+      "https://www.figma.com/design/qEddyqCrI7kPSBjGmwkZzQ",
+      "https://www.figma.com/design/17NxNEMa7i28Is8sMetO2H/Data-Visualization",
+      "https://www.figma.com/proto/5MrZGllC83sH3HHnlOtyl7/GitLab-Duo-Style-Guide",
+      "https://www.figma.com/file/h4YjjttHL5YI0mXZfQ4uuU/GitLab-Product-Icons",
+      "https://www.figma.com/file/V3HKN83B7rf2T6sseLMrxa/Type-scale---Documentation-Markdown",
+      "https://www.figma.com/file/qEddyqCrI7kPSBjGmwkZzQ",
+      "https://www.figma.com/design/tiAetVi1j5MGP8WA5FswcD/Beta%3A-Design-tokens",
+      "https://www.figma.com/file/17NxNEMa7i28Is8sMetO2H/Data-Visualization",
+      "https://www.figma.com/design/hNzYQqH44lSSdWCSvWNzwS/UIK-utilities",
+      "https://www.figma.com/file/J68bePHXIN5OPWqaFFY9ri/Conceptual-model",
+      "https://www.figma.com/file/shVF8UZwrQtkNfMDjcrsyH/Semantic-layouts",
+      "https://www.figma.com/design/Amn6vBN9edRtuaTgy6ygkl/%F0%9F%9A%A7-DRAFT%3A-Patterns-and-Page-Templates",
+      "https://www.figma.com/file/h4YjjttHL5YI0mXZfQ4uuU",
+      "https://www.figma.com/file/Amn6vBN9edRtuaTgy6ygkl",
+      "https://www.figma.com/proto/yrIimnhvjBvspfSPawHovn/Culture-%26-Community-style-guide",
+      "https://www.figma.com/file/1ui9w228X0S5WxaD0SRdIA",
+      "https://www.figma.com/design/dWP1ldkBU4jeUqx5rO3jrn/Annotations-and-utilities",
+      "https://www.figma.com/file/dWP1ldkBU4jeUqx5rO3jrn/Annotations-and-utilities",
+      "https://www.figma.com/design/tiAetVi1j5MGP8WA5FswcD",
+      "https://www.figma.com/file/dWP1ldkBU4jeUqx5rO3jrn",
+      "https://www.figma.com/design/Amn6vBN9edRtuaTgy6ygkl/Patterns-and-Page-Templates",
+      "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/GitLab-Product-Icons",
+      "https://www.figma.com/design/tiAetVi1j5MGP8WA5FswcD/Design-tokens",
+      "https://www.figma.com/design/VqpH0V6joIOokfeXS71Yqz/Duo-Agent-Platform-Side-Panel",
+      "https://www.figma.com/file/qEddyqCrI7kPSBjGmwkZzQ/%F0%9F%93%99-Component-library"
+    ],
+    "icons": [
+      "https://design.gitlab.com/components/icon"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "exemplars": true,
+    "dark_mode": true,
+    "frameworks": [
+      "Angular",
+      "Vue"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design.gitlab.com/patterns/affordance",
+      "title": "Affordance | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/product-foundations/iconography-animated",
+      "title": "Animated icon | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/product-foundations/border",
+      "title": "Border | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/brand-messaging/brand-voice",
+      "title": "Brand voice | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/breadcrumb",
+      "title": "Breadcrumb | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/get-started/uik-breaking-changes",
+      "title": "Breaking changes | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/collapse",
+      "title": "Collapse | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/dropdown-combobox",
+      "title": "Combobox | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/dashboard-panel",
+      "title": "Dashboard panel | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/content/date-and-time",
+      "title": "Date and time | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/product-foundations/design-tokens-directory",
+      "title": "Design token directory | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/brand-design/visual-design-diagrams-infographics",
+      "title": "Diagrams | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/dropdown-disclosure",
+      "title": "Disclosure | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/patterns/feature-discovery",
+      "title": "Feature discovery | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/patterns/filtering",
+      "title": "Filtering | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/patterns/duo-chat",
+      "title": "GitLab Duo Chat Interface | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/infinite-scroll",
+      "title": "Infinite scroll | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/label",
+      "title": "Label | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/product-foundations/layout",
+      "title": "Layout | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/link",
+      "title": "Link | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/brand-logo/logomark",
+      "title": "Logomark | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/objects/merge-request",
+      "title": "Merge request | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/data-visualization/mini-pipeline-graph",
+      "title": "Mini pipeline graph | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/brand-design/motion",
+      "title": "Motion | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/form-multi-step",
+      "title": "Multi-step form template | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/nav-item",
+      "title": "Nav item | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/objects/overview",
+      "title": "Overview | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/",
+      "title": "Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/about/principles",
+      "title": "Principles | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/progress-bar",
+      "title": "Progress bar | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/content/punctuation",
+      "title": "Punctuation | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/get-started/uik-release-notes",
+      "title": "Release notes | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/directives/safe-link",
+      "title": "Safe Link | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/patterns/searching",
+      "title": "Searching | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/data-visualization/single-stat",
+      "title": "Single stat | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/accessibility/a11y",
+      "title": "Statement of compliance | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/style-guides",
+      "title": "Style guides | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/toggle",
+      "title": "Toggle | Pajamas Design System"
+    },
+    {
+      "url": "https://design.gitlab.com/components/banner",
+      "title": "⚠️ Banner | Pajamas Design System"
+    }
+  ]
+}

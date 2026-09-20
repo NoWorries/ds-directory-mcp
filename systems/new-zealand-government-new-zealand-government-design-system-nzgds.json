@@ -1,0 +1,306 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "new-zealand-government-new-zealand-government-design-system-nzgds",
+  "organization": "New Zealand Government",
+  "design_system": "New Zealand Government Design System (NZGDS)",
+  "full_name": "New Zealand Government — New Zealand Government Design System (NZGDS)",
+  "start_urls": [
+    "https://design-system-alpha.digital.govt.nz/"
+  ],
+  "detail_url": "/systems/new-zealand-government-new-zealand-government-design-system-nzgds",
+  "pages_indexed": 67,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T10:06:43+00:00",
+  "last_modified": "Thu, 16 Jul 2020 04:29:12 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/alphagov/govuk-frontend",
+      "https://github.com/GOVTNZ/govtnz-design-system",
+      "https://github.com/kristoferjoseph/flexboxgrid"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "React",
+      "Vue"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/about",
+      "title": "About | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics",
+      "title": "Basics | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Button",
+      "title": "Button | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Checkboxes",
+      "title": "Checkboxes | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/colours",
+      "title": "Colours | Design System - Alpha | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/community",
+      "title": "Community | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components",
+      "title": "Components | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Date",
+      "title": "Date input | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Alerts__example5.html",
+      "title": "Example title: Error summary alert | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Alerts__example1.html",
+      "title": "Example title: Information alert: Live | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Alerts__example0.html",
+      "title": "Example title: Warning alert: Static | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Alerts__example2.html",
+      "title": "Example title: Warning alert: Static | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/FlexGrid__example0.html",
+      "title": "Example: 3-column Flexbox grid | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Alerts__example4.html",
+      "title": "Example: Alerts (static) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example8.html",
+      "title": "Example: Bulleted lists (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Checkboxes__example2.html",
+      "title": "Example: Checkboxes with hints | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Checkboxes__example0.html",
+      "title": "Example: Checkboxes | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Date__example0.html",
+      "title": "Example: Date input | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Date__example1.html",
+      "title": "Example: Error state #1 (Date input) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example7.html",
+      "title": "Example: Error state #1 (Radio buttons) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Input__example1.html",
+      "title": "Example: Error state #1 (Text input) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Date__example3.html",
+      "title": "Example: Error state #2 (Date input) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example6.html",
+      "title": "Example: Error state #2 (Radio buttons) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Input__example6.html",
+      "title": "Example: Error state #2 (Text input) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Checkboxes__example1.html",
+      "title": "Example: Error state (Checkboxes) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Fieldset__example1.html",
+      "title": "Example: Fieldset legend as page heading | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Fieldset__example0.html",
+      "title": "Example: Fieldset | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Input__example2.html",
+      "title": "Example: Fixed-width text input | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/FlexGrid__example1.html",
+      "title": "Example: Flexgrid column variants (Flexbox grid) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/themes__examples__example0.html",
+      "title": "Example: Header containing a MainNav | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example0.html",
+      "title": "Example: Headings (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example2.html",
+      "title": "Example: Headings with captions (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example3.html",
+      "title": "Example: Headings with captions inside the h1 (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Input__example3.html",
+      "title": "Example: Hint text (Text input) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example2.html",
+      "title": "Example: Inline radio buttons | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/InsetText__example0.html",
+      "title": "Example: Inset text | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example4.html",
+      "title": "Example: Large size for lead paragraph (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example7.html",
+      "title": "Example: Links (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example5.html",
+      "title": "Example: Medium size for standard body text (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example9.html",
+      "title": "Example: Numbered lists (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Button__example2.html",
+      "title": "Example: Primary and secondary combination (Button) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example4.html",
+      "title": "Example: Radio button items with a text divider | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example3.html",
+      "title": "Example: Radio button items with hints | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example0.html",
+      "title": "Example: Radio buttons | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example5.html",
+      "title": "Example: Radio buttons | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example1.html",
+      "title": "Example: Same heading level varying by size only (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Select__example0.html",
+      "title": "Example: Select | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography__example6.html",
+      "title": "Example: Small size for small body text (Typography) | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios__example1.html",
+      "title": "Example: Stacked radio buttons | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Textarea__example1.html",
+      "title": "Example: Textarea error | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Textarea__example0.html",
+      "title": "Example: Textarea | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Fieldset",
+      "title": "Fieldset | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/FileUpload",
+      "title": "File upload | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/FlexGrid",
+      "title": "Flexbox grid | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Footer",
+      "title": "Footer | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/get-started",
+      "title": "Get started | Design System - Alpha | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Header",
+      "title": "Header | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/InsetText",
+      "title": "Inset text | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Alerts",
+      "title": "Page alerts | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/patterns",
+      "title": "Patterns | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/prototypes",
+      "title": "Prototypes | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Radios",
+      "title": "Radio buttons | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Select",
+      "title": "Select | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Input",
+      "title": "Text input | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/components/Textarea",
+      "title": "Textarea | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/themes",
+      "title": "Themes | Design System - Alpha | Design System - Alpha | NZ Government"
+    },
+    {
+      "url": "https://design-system-alpha.digital.govt.nz/basics/typography",
+      "title": "Typography | Design System - Alpha | NZ Government"
+    }
+  ]
+}

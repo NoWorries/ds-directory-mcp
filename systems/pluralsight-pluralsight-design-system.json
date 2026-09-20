@@ -1,0 +1,37 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "pluralsight-pluralsight-design-system",
+  "organization": "Pluralsight",
+  "design_system": "Pluralsight Design System",
+  "full_name": "Pluralsight — Pluralsight Design System",
+  "start_urls": [
+    "https://design-system.pluralsight.com/"
+  ],
+  "detail_url": "/systems/pluralsight-pluralsight-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:57:30+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://pando-storybook.pluralsight.com/storybook"
+    ],
+    "figma": [
+      "https://www.figma.com/design/ZmH4XsZS5WnKeo28ylM5x1/Pando-UI-kit--Web-?node-id=1214-50531&p=f&t=WTcgkIPIDXvTeFcc-0"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design-system.pluralsight.com/",
+      "title": "Pluralsight — Pluralsight Design System"
+    }
+  ]
+}

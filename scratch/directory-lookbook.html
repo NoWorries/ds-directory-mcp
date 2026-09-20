@@ -1,0 +1,425 @@
+<title>Directory Lookbook</title>
+<meta name="description" content="Three distinct visual directions for the Design Systems Directory homepage, each built from the same swappable token set.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Work+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+  /* ============================================================
+     GALLERY CHROME — the "meta" page around the three mockups.
+     Light/dark aware like any normal artifact. Deliberately quiet:
+     all the color belongs to the three directions below.
+  ============================================================ */
+  :root {
+    --page-bg: #fbfbfa;
+    --page-surface: #ffffff;
+    --page-ink: #14181c;
+    --page-muted: #5b6472;
+    --page-faint: #9aa3af;
+    --page-border: #e4e7ea;
+    --page-accent: #3d4f5c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page-bg: #0c0f12;
+      --page-surface: #14181d;
+      --page-ink: #e7eaee;
+      --page-muted: #9aa5b0;
+      --page-faint: #626d78;
+      --page-border: #262c33;
+      --page-accent: #9fb3c2;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page-bg: #0c0f12;
+    --page-surface: #14181d;
+    --page-ink: #e7eaee;
+    --page-muted: #9aa5b0;
+    --page-faint: #626d78;
+    --page-border: #262c33;
+    --page-accent: #9fb3c2;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--page-bg);
+    color: var(--page-ink);
+    font-family: "IBM Plex Sans", -apple-system, sans-serif;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 56px 24px 96px; }
+
+  .kicker {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--page-muted); margin: 0 0 14px;
+  }
+  h1.title {
+    font-size: clamp(1.7rem, 1.2rem + 2vw, 2.4rem); font-weight: 600; margin: 0 0 16px;
+    letter-spacing: -0.01em; text-wrap: balance;
+  }
+  p.lede {
+    font-size: 1.05rem; color: var(--page-muted); max-width: 62ch; margin: 0 0 12px;
+  }
+  p.lede.small { font-size: 0.94rem; max-width: 66ch; }
+
+  nav.jump {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 32px 0 64px;
+    border-top: 1px solid var(--page-border); border-bottom: 1px solid var(--page-border);
+    padding: 14px 0;
+  }
+  nav.jump a {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; font-weight: 600;
+    color: var(--page-muted); text-decoration: none; padding: 6px 12px; border-radius: 6px;
+    border: 1px solid var(--page-border);
+  }
+  nav.jump a:hover { color: var(--page-ink); border-color: var(--page-accent); }
+
+  section.variant { margin-bottom: 88px; scroll-margin-top: 24px; }
+  section.variant:last-child { margin-bottom: 0; }
+
+  .variant-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 6px; flex-wrap: wrap; }
+  .variant-head h2 {
+    font-size: 1.3rem; font-weight: 600; margin: 0; letter-spacing: -0.01em;
+  }
+  .variant-num {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; color: var(--page-faint);
+  }
+  .variant-pitch { color: var(--page-muted); font-size: 0.94rem; max-width: 68ch; margin: 6px 0 20px; }
+
+  .swatch-legend {
+    display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 14px 0 22px;
+    font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; color: var(--page-muted);
+  }
+  .swatch-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch-legend i {
+    width: 11px; height: 11px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,0.15);
+  }
+
+  /* ============================================================
+     SHARED MOCK STRUCTURE — every rule below reads ONLY from the
+     custom properties each .variant-* block defines further down.
+     Nothing here ever hardcodes a color, a font, or a radius — that
+     is the entire pitch: change the token block, the look changes,
+     the markup and layout logic never do.
+  ============================================================ */
+  .mock-frame {
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-body);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--frame-shadow, none);
+  }
+  .mock-inner { padding: clamp(20px, 4vw, 44px) clamp(20px, 5vw, 56px) clamp(28px, 5vw, 52px); position: relative; }
+
+  .mock-nav {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 16px clamp(20px, 5vw, 56px); border-bottom: 1px solid var(--line);
+  }
+  .mock-brand { font-family: var(--font-display); font-weight: 700; font-size: 0.86rem; color: var(--ink); }
+  .mock-links { display: flex; gap: 22px; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; }
+  .mock-links span { color: var(--muted); }
+  .mock-links span.current { color: var(--accent); }
+
+  .mock-hero h1 {
+    font-family: var(--font-display); font-weight: 700; margin: 0 0 10px; line-height: 1.15;
+    font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem); letter-spacing: var(--tracking, -0.01em);
+    text-transform: var(--heading-case, none);
+  }
+  .mock-hero p.sub { color: var(--muted); max-width: 56ch; margin: 0 0 26px; font-size: 1rem; }
+
+  .mock-search { position: relative; margin-bottom: 12px; }
+  .mock-search input {
+    width: 100%; box-sizing: border-box; font: inherit; font-size: 1.02rem; padding: 16px 18px;
+    background: var(--field, var(--surface)); color: var(--ink); border: var(--field-border, 1px solid var(--line));
+    border-radius: var(--field-radius, var(--radius)); font-family: var(--font-body);
+  }
+  .mock-search .cursor {
+    position: absolute; top: 50%; transform: translateY(-50%); left: 84px;
+    font-family: var(--font-mono); color: var(--accent); animation: blink 1.1s step-end infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { .mock-search .cursor { animation: none; opacity: 0.6; } }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+  .mock-filter { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin: 0 0 26px; display: inline-flex; align-items: center; gap: 6px; }
+
+  .mock-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 22px; }
+  .mock-card {
+    display: flex; align-items: center; gap: 13px; padding: 16px 18px;
+    background: var(--card-bg, var(--surface)); border: 1px solid var(--line); border-radius: var(--radius);
+    position: relative;
+  }
+  .mock-card .icon {
+    flex: none; width: 34px; height: 34px; border-radius: calc(var(--radius) * 0.7 + 2px);
+    display: flex; align-items: center; justify-content: center; background: var(--accent-soft); color: var(--accent);
+  }
+  .mock-card .icon svg { width: 18px; height: 18px; }
+  .mock-card h3 { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; margin: 0 0 2px; }
+  .mock-card p { margin: 0; font-size: 0.78rem; color: var(--muted); }
+
+  .mock-mcp {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 16px 20px; border: 1px solid var(--line); border-radius: var(--radius);
+    background: var(--card-bg, var(--surface)); border-left: var(--mcp-rail, 3px solid var(--accent));
+  }
+  .mock-mcp .badge {
+    font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--accent); background: var(--accent-soft); padding: 2px 7px;
+    border-radius: 4px; display: inline-block; margin-bottom: 6px;
+  }
+  .mock-mcp h4 { font-family: var(--font-display); font-size: 0.86rem; margin: 0 0 3px; font-weight: 700; }
+  .mock-mcp p { margin: 0; font-size: 0.78rem; color: var(--muted); max-width: 40ch; }
+  .mock-mcp code {
+    font-family: var(--font-mono); font-size: 0.75rem; background: var(--field, var(--surface));
+    border: 1px solid var(--line); padding: 8px 11px; border-radius: calc(var(--radius) * 0.6 + 2px); white-space: nowrap;
+  }
+
+  /* -------- Variant 1: Blueprint (spec / redline annotation) -------- */
+  .variant-blueprint {
+    --surface: #f2f5f4; --ink: #12212b; --muted: #5b6b72; --line: #c9d3d3;
+    --accent: #d6482f; --accent-soft: #fbe1da;
+    --font-display: "IBM Plex Mono", monospace; --font-body: "Work Sans", sans-serif; --font-mono: "IBM Plex Mono", monospace;
+    --radius: 3px; --tracking: 0; --field-border: 1px solid var(--line); --field: #ffffff;
+  }
+  .variant-blueprint .mock-frame::before,
+  .variant-blueprint .mock-frame::after {
+    content: ""; position: absolute; width: 14px; height: 14px; border: 1.5px solid var(--accent); z-index: 2;
+  }
+  .variant-blueprint .mock-frame::before { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+  .variant-blueprint .mock-frame::after { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+  .variant-blueprint .mock-search::after {
+    content: "SEARCH INDEX →"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+    font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.05em; color: var(--accent);
+  }
+  .variant-blueprint .mock-filter::before { content: "§"; color: var(--accent); font-weight: 700; }
+  .variant-blueprint .mock-card { border-style: dashed; }
+  .variant-blueprint .mock-card h3::before { content: "// "; color: var(--muted); font-weight: 400; }
+
+  /* -------- Variant 2: Card Catalog (library index) -------- */
+  .variant-catalog {
+    --surface: #f1e8d3; --ink: #2b3b2e; --muted: #6d7a63; --line: #c9b98a;
+    --accent: #4f6b45; --accent-soft: #dfe6cf;
+    --font-display: "Fraunces", serif; --font-body: "Fraunces", serif; --font-mono: "Space Mono", monospace;
+    --radius: 2px; --tracking: -0.01em; --card-bg: #f8f1de; --field: #f8f1de; --field-border: 1px solid var(--line);
+    --frame-shadow: 0 14px 34px -18px rgba(43,59,46,0.45); --mcp-rail: 1px solid var(--line);
+  }
+  .variant-catalog .mock-frame { background-image: radial-gradient(rgba(43,59,46,0.05) 1px, transparent 1px); background-size: 4px 4px; }
+  .variant-catalog .mock-nav { font-variant: small-caps; }
+  .variant-catalog .mock-brand::before { content: "🗂 "; }
+  .variant-catalog .mock-card { clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%); }
+  .variant-catalog .mock-mcp .badge::before { content: "№ "; }
+  .variant-catalog .mock-filter { font-style: italic; }
+  .variant-catalog .mock-filter::before { content: "card "; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.68rem; }
+
+  /* -------- Variant 3: Terminal (agent console) -------- */
+  .variant-terminal {
+    --surface: #0b1210; --ink: #ece7dc; --muted: #7f9187; --line: #223129;
+    --accent: #f2b155; --accent-soft: rgba(242,177,85,0.14);
+    --font-display: "JetBrains Mono", monospace; --font-body: "JetBrains Mono", monospace; --font-mono: "JetBrains Mono", monospace;
+    --radius: 0px; --tracking: 0.01em; --heading-case: none; --card-bg: #101a17; --field: #0e1815; --field-border: 1px solid var(--line);
+    --mcp-rail: 3px solid var(--accent);
+  }
+  .variant-terminal .mock-frame {
+    background-image: repeating-linear-gradient(0deg, rgba(242,177,85,0.025) 0px, rgba(242,177,85,0.025) 1px, transparent 1px, transparent 3px);
+  }
+  .variant-terminal .mock-hero h1::before { content: "$ "; color: var(--accent); }
+  .variant-terminal .mock-search input { caret-color: var(--accent); }
+  .variant-terminal .mock-search .cursor { left: auto; right: 16px; }
+  .variant-terminal .mock-filter::before { content: "--"; color: var(--accent); }
+  .variant-terminal .mock-card h3::before { content: "> "; color: var(--accent); }
+  .variant-terminal .mock-mcp code { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .mock-links span:nth-child(3) { display: none; }
+  }
+</style>
+
+<div class="wrap">
+  <p class="kicker">Design exploration — homepage visual direction</p>
+  <h1 class="title">Three ways to not look like State of AI</h1>
+  <p class="lede">
+    The current styling leans on the same monospace-label / blue-accent / card-grid language as
+    <em>State of AI in Design Systems</em> — close enough to read as borrowed rather than considered.
+    Below are three alternate directions, each grounded in something from the actual subject
+    (spec annotation, library cataloguing, the agent/CLI side of the product) instead of a generic
+    "clean SaaS" default.
+  </p>
+  <p class="lede small">
+    All three mockups share <em>identical</em> HTML and CSS rules — every color, typeface, and radius
+    comes from one swappable set of custom properties per variant (<code>--surface</code>,
+    <code>--ink</code>, <code>--accent</code>, <code>--font-display</code>…). Picking a direction is
+    then a matter of copying one token block into <code>page_shell.py</code>, not restyling every page.
+  </p>
+
+  <nav class="jump">
+    <a href="#blueprint">01 — Blueprint</a>
+    <a href="#catalog">02 — Card Catalog</a>
+    <a href="#terminal">03 — Terminal</a>
+  </nav>
+
+  <!-- ============ VARIANT 1 ============ -->
+  <section class="variant" id="blueprint">
+    <div class="variant-head">
+      <h2>Blueprint</h2>
+      <span class="variant-num">01 / 03</span>
+    </div>
+    <p class="variant-pitch">
+      Drafting-table spec sheets and design-review redlines — crop marks at the corners, a
+      measurement-red accent instead of blue, dashed "unconfirmed" card edges. Reads as a tool
+      <em>for</em> people who annotate specs all day, not a generic dashboard.
+    </p>
+    <div class="swatch-legend">
+      <span><i style="background:#f2f5f4"></i>--surface #f2f5f4</span>
+      <span><i style="background:#12212b"></i>--ink #12212b</span>
+      <span><i style="background:#d6482f"></i>--accent #d6482f</span>
+      <span>IBM Plex Mono / Work Sans</span>
+    </div>
+
+    <div class="mock-frame variant-blueprint">
+      <div class="mock-nav">
+        <span class="mock-brand">DESIGN SYSTEMS DIRECTORY</span>
+        <div class="mock-links"><span class="current">Search</span><span>All Systems</span><span>Components</span></div>
+      </div>
+      <div class="mock-inner">
+        <div class="mock-hero">
+          <h1>Search 11 design systems</h1>
+          <p class="sub">Find component patterns, tokens, and guidance across every publicly documented design system indexed here — or connect it to your AI agent via MCP.</p>
+        </div>
+        <div class="mock-search">
+          <input readonly value="table column resizing, disabled button states">
+        </div>
+        <p class="mock-filter">Filter by system</p>
+        <div class="mock-cards">
+          <div class="mock-card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+            <div><h3>Browse all systems</h3><p>Every indexed design system, sortable</p></div>
+          </div>
+          <div class="mock-card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.9 1.5l8 4a2 2 0 0 1 1.1 1.8v9.5a2 2 0 0 1-1.1 1.8l-8 4a2 2 0 0 1-1.8 0l-8-4a2 2 0 0 1-1.1-1.8V7.3a2 2 0 0 1 1.1-1.8l8-4a2 2 0 0 1 1.8 0z"/></svg></span>
+            <div><h3>Browse by component</h3><p>Which systems document a pattern</p></div>
+          </div>
+        </div>
+        <div class="mock-mcp">
+          <div>
+            <span class="badge">MCP Server</span>
+            <h4>Connect this to Claude</h4>
+            <p>One command adds this whole index as a callable tool.</p>
+          </div>
+          <code>claude mcp add ds-directory --transport http</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VARIANT 2 ============ -->
+  <section class="variant" id="catalog">
+    <div class="variant-head">
+      <h2>Card Catalog</h2>
+      <span class="variant-num">02 / 03</span>
+    </div>
+    <p class="variant-pitch">
+      This product's whole job is being an index — so it looks like one. Manila-and-ink card tones,
+      a library-stamp green, a dog-eared corner on every card, small-caps navigation like a drawer
+      label. Warm without falling into cream-paper-plus-terracotta territory.
+    </p>
+    <div class="swatch-legend">
+      <span><i style="background:#f1e8d3"></i>--surface #f1e8d3</span>
+      <span><i style="background:#2b3b2e"></i>--ink #2b3b2e</span>
+      <span><i style="background:#4f6b45"></i>--accent #4f6b45</span>
+      <span>Fraunces / Space Mono</span>
+    </div>
+
+    <div class="mock-frame variant-catalog">
+      <div class="mock-nav">
+        <span class="mock-brand">Design Systems Directory</span>
+        <div class="mock-links"><span class="current">Search</span><span>All Systems</span><span>Components</span></div>
+      </div>
+      <div class="mock-inner">
+        <div class="mock-hero">
+          <h1>Search 11 design systems</h1>
+          <p class="sub">Find component patterns, tokens, and guidance across every publicly documented design system indexed here — or connect it to your AI agent via MCP.</p>
+        </div>
+        <div class="mock-search">
+          <input readonly value="table column resizing, disabled button states">
+        </div>
+        <p class="mock-filter">by system</p>
+        <div class="mock-cards">
+          <div class="mock-card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+            <div><h3>Browse all systems</h3><p>Every indexed design system, sortable</p></div>
+          </div>
+          <div class="mock-card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.9 1.5l8 4a2 2 0 0 1 1.1 1.8v9.5a2 2 0 0 1-1.1 1.8l-8 4a2 2 0 0 1-1.8 0l-8-4a2 2 0 0 1-1.1-1.8V7.3a2 2 0 0 1 1.1-1.8l8-4a2 2 0 0 1 1.8 0z"/></svg></span>
+            <div><h3>Browse by component</h3><p>Which systems document a pattern</p></div>
+          </div>
+        </div>
+        <div class="mock-mcp">
+          <div>
+            <span class="badge">MCP Server</span>
+            <h4>Connect this to Claude</h4>
+            <p>One command adds this whole index as a callable tool.</p>
+          </div>
+          <code>claude mcp add ds-directory --transport http</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VARIANT 3 ============ -->
+  <section class="variant" id="terminal">
+    <div class="variant-head">
+      <h2>Terminal</h2>
+      <span class="variant-num">03 / 03</span>
+    </div>
+    <p class="variant-pitch">
+      This is also an MCP server — half its real users are agents in a shell, not people in a browser.
+      Leans into that: full monospace, amber CRT glow instead of the expected neon green, a faint
+      scanline texture, prompt markers (<code>$</code>, <code>&gt;</code>, <code>--flag</code>) standing
+      in for section labels.
+    </p>
+    <div class="swatch-legend">
+      <span><i style="background:#0b1210"></i>--surface #0b1210</span>
+      <span><i style="background:#ece7dc"></i>--ink #ece7dc</span>
+      <span><i style="background:#f2b155"></i>--accent #f2b155</span>
+      <span>JetBrains Mono</span>
+    </div>
+
+    <div class="mock-frame variant-terminal">
+      <div class="mock-nav">
+        <span class="mock-brand">design-systems-directory</span>
+        <div class="mock-links"><span class="current">search</span><span>all-systems</span><span>components</span></div>
+      </div>
+      <div class="mock-inner">
+        <div class="mock-hero">
+          <h1>Search 11 design systems</h1>
+          <p class="sub">Find component patterns, tokens, and guidance across every publicly documented design system indexed here — or connect it to your AI agent via MCP.</p>
+        </div>
+        <div class="mock-search">
+          <input readonly value="table column resizing, disabled button states"><span class="cursor">▌</span>
+        </div>
+        <p class="mock-filter">system</p>
+        <div class="mock-cards">
+          <div class="mock-card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+            <div><h3>browse-all-systems</h3><p>Every indexed design system, sortable</p></div>
+          </div>
+          <div class="mock-card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.9 1.5l8 4a2 2 0 0 1 1.1 1.8v9.5a2 2 0 0 1-1.1 1.8l-8 4a2 2 0 0 1-1.8 0l-8-4a2 2 0 0 1-1.1-1.8V7.3a2 2 0 0 1 1.1-1.8l8-4a2 2 0 0 1 1.8 0z"/></svg></span>
+            <div><h3>browse-by-component</h3><p>Which systems document a pattern</p></div>
+          </div>
+        </div>
+        <div class="mock-mcp">
+          <div>
+            <span class="badge">MCP Server</span>
+            <h4>Connect this to Claude</h4>
+            <p>One command adds this whole index as a callable tool.</p>
+          </div>
+          <code>claude mcp add ds-directory --transport http</code>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,63 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "flowbite",
+  "organization": null,
+  "design_system": "Flowbite",
+  "full_name": "Flowbite",
+  "start_urls": [
+    "https://flowbite.com/"
+  ],
+  "detail_url": "/systems/flowbite",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:45:28+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/themesberg/flowbite-vue",
+      "https://github.com/themesberg/flowbite-illustrations",
+      "https://github.com/themesberg/flowbite-icons",
+      "https://github.com/themesberg/flowbite-angular",
+      "https://github.com/themesberg/flowbite"
+    ],
+    "figma": [
+      "https://www.figma.com/design/BwJpLnMEFPsqLDaSgylB0V/flowbite-pro-figma-v2.10.0?node-id=18-0&node-type=canvas&t=dvpyXN5deopbkCyE-0"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/flowbite"
+    ],
+    "icons": [
+      "https://flowbite.com/icons/"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular",
+      "Svelte"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 953,
+    "last_pushed": "2026-07-28T17:10:03Z"
+  },
+  "npm_meta": {
+    "latest_version": "4.0.2",
+    "last_published": "2026-05-13T17:26:07.580Z",
+    "weekly_downloads": 460115
+  },
+  "indexed_pages": [
+    {
+      "url": "https://flowbite.com/",
+      "title": "Flowbite"
+    }
+  ]
+}

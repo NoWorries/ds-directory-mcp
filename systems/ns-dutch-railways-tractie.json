@@ -1,0 +1,32 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "ns-dutch-railways-tractie",
+  "organization": "NS Dutch Railways",
+  "design_system": "Tractie",
+  "full_name": "NS Dutch Railways — Tractie",
+  "start_urls": [
+    "https://tractie.ns.nl/"
+  ],
+  "detail_url": "/systems/ns-dutch-railways-tractie",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:56:54+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://tractie.ns.nl/",
+      "title": "NS Dutch Railways — Tractie"
+    }
+  ]
+}

@@ -1,0 +1,634 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "nhs-uk-service-manual",
+  "organization": "NHS.UK",
+  "design_system": "Service Manual",
+  "full_name": "NHS.UK — Service Manual",
+  "start_urls": [
+    "https://service-manual.nhs.uk/"
+  ],
+  "detail_url": "/systems/nhs-uk-service-manual",
+  "pages_indexed": 146,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T10:23:15+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/nhsuk/nhsuk-frontend",
+      "https://github.com/nhsuk/nhsuk-service-manual-backlog",
+      "https://github.com/NHSDigital/nhsuk-react-components",
+      "https://github.com/NHSDigital/nhsuk-frontend-jinja"
+    ],
+    "icons": [
+      "https://service-manual.nhs.uk/design-example/styles/icons/sizes",
+      "https://service-manual.nhs.uk/design-example/styles/icons/arrows",
+      "https://service-manual.nhs.uk/design-example/styles/icons/user",
+      "https://service-manual.nhs.uk/design-example/styles/icons/search",
+      "https://service-manual.nhs.uk/design-system/styles/icons",
+      "https://service-manual.nhs.uk/design-example/styles/icons/arrow-right-circle",
+      "https://service-manual.nhs.uk/design-example/styles/icons/tick-and-cross",
+      "https://service-manual.nhs.uk/design-example/styles/icons/chevron-right-circle"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "accessibility_conformance": "WCAG 2.2 AA",
+    "governance_model": true
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 683,
+    "last_pushed": "2026-09-18T07:42:12Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/1-understand-users-and-their-needs-context-health-and-care",
+      "title": "1. Understand users and their needs in the context of health and care – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
+      "title": "10. Define what success looks like and be open about how your service is performing – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology",
+      "title": "11. Choose the right tools and technology – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/12-make-new-source-code-open",
+      "title": "12. Make new source code open – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/13-use-and-contribute-to-open-standards-common-components-and-patterns",
+      "title": "13. Use and contribute to open standards, common components and patterns – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/14-operate-a-reliable-service",
+      "title": "14. Operate a reliable service – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/15-support-a-culture-of-care",
+      "title": "15. Support a culture of care – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/16-make-your-service-clinically-safe",
+      "title": "16. Make your service clinically safe – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/17-make-your-service-interoperable",
+      "title": "17. Make your service interoperable – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience",
+      "title": "2. and 3. Work towards solving a whole problem for users and provide a joined up experience across all channels – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/4-make-the-service-simple-to-use",
+      "title": "4. Make the service simple to use – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/5-make-sure-everyone-can-use-the-service",
+      "title": "5. Make sure everyone can use the service – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives",
+      "title": "6. Create a team that includes multidisciplinary skills and perspectives – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/7-use-agile-ways-of-working",
+      "title": "7. Use agile ways of working – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently",
+      "title": "8. Iterate and improve frequently – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy",
+      "title": "9. Create a secure service which protects people's privacy – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/a-to-z-of-nhs-health-writing",
+      "title": "A to Z of NHS health writing – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/a-to-z-page",
+      "title": "A to Z page – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/technology/about-technology",
+      "title": "About technology – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/about-the-service-standard",
+      "title": "About the NHS service standard – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility-statement",
+      "title": "Accessibility statement – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility",
+      "title": "Accessibility – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/action-link",
+      "title": "Action link – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/inclusive-content/age",
+      "title": "Age – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/back-link",
+      "title": "Back link – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution/backlog-of-components-and-patterns",
+      "title": "Backlog of components and patterns – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/whats-new/blog-posts",
+      "title": "Blog posts – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/breadcrumbs",
+      "title": "Breadcrumbs – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/british-sign-language-bsl-quality-assurance-standard",
+      "title": "British Sign Language (BSL) quality assurance standard – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/buttons",
+      "title": "Buttons – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/card",
+      "title": "Card – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/character-count",
+      "title": "Character count – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/check-answers",
+      "title": "Check answers – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/guides/check-frontend-version",
+      "title": "Check your frontend version – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/checkboxes",
+      "title": "Checkboxes – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/colour",
+      "title": "Colour – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution/coming-soon",
+      "title": "Coming soon – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution",
+      "title": "Community and contribution – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution/community-resources",
+      "title": "Community resources – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
+      "title": "Complete multiple tasks – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components",
+      "title": "Components – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
+      "title": "Confirmation page – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions",
+      "title": "Consider the sensitivities around your questions – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content",
+      "title": "Content guide – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/content",
+      "title": "Content – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/contents-list",
+      "title": "Contents list – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution/contribution-criteria",
+      "title": "Contribution criteria – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/cookie-policy",
+      "title": "Cookie policy – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/date-input",
+      "title": "Date input – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care",
+      "title": "Decide when and where to get care (care cards) – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/design-principles",
+      "title": "Design principles – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system",
+      "title": "Design system – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/design",
+      "title": "Design – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/details",
+      "title": "Details – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution/develop-component-pattern",
+      "title": "Develop a component or pattern – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/development",
+      "title": "Development – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/inclusive-content/disabilities-and-conditions",
+      "title": "Disabilities and conditions – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/do-and-dont-lists",
+      "title": "Do and Don't lists – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/download-accessibility-posters",
+      "title": "Download accessibility posters – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/error-message",
+      "title": "Error message – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/error-summary",
+      "title": "Error summary – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/inclusive-content/ethnicity-religion-and-nationality",
+      "title": "Ethnicity, religion and nationality – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/expander",
+      "title": "Expander – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution/feed-back-or-share-insights",
+      "title": "Feed back or share insights – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/fieldset",
+      "title": "Fieldset – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/file-upload",
+      "title": "File upload – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/find-bsl-content",
+      "title": "Find British Sign Language content – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/focus-state",
+      "title": "Focus state – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/footer",
+      "title": "Footer – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/formatting",
+      "title": "Formatting – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/get-in-touch",
+      "title": "Get in touch – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/get-the-questions-into-order",
+      "title": "Get the questions into order – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/getting-started",
+      "title": "Getting started with accessibility – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/header",
+      "title": "Header – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/health-literacy",
+      "title": "Health literacy – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/hint-text",
+      "title": "Hint text – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/how-to-make-digital-services-accessible",
+      "title": "How to make digital services accessible – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms",
+      "title": "How to write good questions for forms – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-we-write",
+      "title": "How we write – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/hub-page",
+      "title": "Hub page – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/icons",
+      "title": "Icons – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/images",
+      "title": "Images – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/inclusive-content",
+      "title": "Inclusive content – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/inset-text",
+      "title": "Inset text – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
+      "title": "Interruption page – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/know-that-a-page-is-up-to-date",
+      "title": "Know that a page is up to date – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/layout",
+      "title": "Layout – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question",
+      "title": "Make sure you need each question – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/mini-hub",
+      "title": "Mini-hub – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/new-criteria-in-wcag-2-2",
+      "title": "New criteria in WCAG 2.2 – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/",
+      "title": "NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/technology/NHS-login",
+      "title": "NHS login – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
+      "title": "NHS numbers – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/service-standard",
+      "title": "NHS service standard – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/notification-banners",
+      "title": "Notification banners – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/numbers-measurements-dates-time",
+      "title": "Numbers, measurements, dates and time – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/override-classes",
+      "title": "Override classes – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/page-template",
+      "title": "Page template – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/pagination",
+      "title": "Pagination – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/panel",
+      "title": "Panel – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/password-input",
+      "title": "Password input – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns",
+      "title": "Patterns – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/pdfs-and-other-non-html-documents",
+      "title": "PDFs and other non-HTML documents – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology/technology/personal-demographics-service-PDS",
+      "title": "Personal Demographics Service (PDS) – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/product-and-delivery",
+      "title": "Product and delivery – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/production",
+      "title": "Production code – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/community-and-contribution/propose-component-pattern",
+      "title": "Propose a component or pattern – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/prototyping",
+      "title": "Prototyping – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/punctuation",
+      "title": "Punctuation – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/question-pages",
+      "title": "Question pages – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/radios",
+      "title": "Radios – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/review-date",
+      "title": "Review date – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/search-input",
+      "title": "Search input – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/select",
+      "title": "Select – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/service-manual-team",
+      "title": "Service manual team – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/inclusive-content/sex-gender-and-sexuality",
+      "title": "Sex, gender and sexuality – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/inclusive-content/skin-symptoms",
+      "title": "Skin symptoms – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/skip-link",
+      "title": "Skip link – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/spacing",
+      "title": "Spacing – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/standard-for-creating-health-content",
+      "title": "Standard for creating health content – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/standards-and-technology",
+      "title": "Standards and technology – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/patterns/start-page",
+      "title": "Start page – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles",
+      "title": "Styles – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/summary-list",
+      "title": "Summary list – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/table",
+      "title": "Table – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/tabs",
+      "title": "Tabs – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/tag",
+      "title": "Tag – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/task-list",
+      "title": "Task list – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/test-your-questions",
+      "title": "Test your questions – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/testing",
+      "title": "Testing – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/text-input",
+      "title": "Text input – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/textarea",
+      "title": "Textarea – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
+      "title": "Think of the form as a conversation – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/typography",
+      "title": "Typography – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions",
+      "title": "Understand the problem before you write your questions – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/guides/updating-to-v10",
+      "title": "Updating to version 10 – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users",
+      "title": "Use filter questions to route users – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/styles/use-frutiger-font",
+      "title": "Use the NHS Frutiger font – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/user-research",
+      "title": "User research – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/voice-and-tone",
+      "title": "Voice and tone – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/design-system/components/warning-callout",
+      "title": "Warning callout – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/what-all-nhs-services-need-to-do",
+      "title": "What all NHS services need to do about accessibility – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/whats-new",
+      "title": "What's new – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form",
+      "title": "Write the supporting content for your form – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/content/writing-nhs-messages",
+      "title": "Writing NHS messages – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/your-privacy",
+      "title": "Your privacy – NHS digital service manual"
+    }
+  ]
+}

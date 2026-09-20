@@ -1,0 +1,180 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "paqt-graphite-design-system",
+  "organization": "PAQT",
+  "design_system": "Graphite Design System",
+  "full_name": "PAQT — Graphite Design System",
+  "start_urls": [
+    "https://graphitedesignsystem.com/"
+  ],
+  "detail_url": "/systems/paqt-graphite-design-system",
+  "pages_indexed": 31,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T10:52:22+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/paqtcom/graphite-design-system",
+      "https://github.com/paqtcom/graphite-design-system-site"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@graphiteds/vue2-gr-model"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/ixartz/Eleventy-Starter-Boilerplate",
+      "https://github.com/duetds/date-picker"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "Vue",
+      "Web Components",
+      "React",
+      "Angular",
+      "Svelte"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 27,
+    "last_pushed": "2025-03-24T11:15:50Z"
+  },
+  "npm_meta": {
+    "latest_version": "1.0.2",
+    "last_published": "2021-09-01T09:34:40.289Z",
+    "weekly_downloads": 9
+  },
+  "indexed_pages": [
+    {
+      "url": "https://graphitedesignsystem.com/tokens/border-radius",
+      "title": "Border radius tokens - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/button",
+      "title": "Button - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/checkbox",
+      "title": "Checkbox - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/tokens/color",
+      "title": "Color tokens - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/overview",
+      "title": "Components - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/guidelines/components-usage",
+      "title": "Components usage - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/help/contact-us",
+      "title": "Contact us - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/guidelines/customizing",
+      "title": "Customizing - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/date-picker",
+      "title": "Date Picker - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/getting-started/designers",
+      "title": "Designers - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/getting-started/developers",
+      "title": "Developers - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/dropdown",
+      "title": "Dropdown - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/tokens/elevation",
+      "title": "Elevation tokens - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/field-group",
+      "title": "Field Group - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/getting-started/overview",
+      "title": "Getting started - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/input",
+      "title": "Input - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/menu",
+      "title": "Menu - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/menu-divider",
+      "title": "Menu Divider - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/menu-item",
+      "title": "Menu Item - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/menu-label",
+      "title": "Menu Label - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/radio",
+      "title": "Radio - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/radio-group",
+      "title": "Radio Group - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/select",
+      "title": "Select - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/tokens/spacing",
+      "title": "Spacing tokens - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/spinner",
+      "title": "Spinner - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/tab",
+      "title": "Tab - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/tab-group",
+      "title": "Tab Group - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/tab-panel",
+      "title": "Tab Panel - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/tag",
+      "title": "Tag - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/components/textarea",
+      "title": "Textarea - Graphite Design System"
+    },
+    {
+      "url": "https://graphitedesignsystem.com/tokens/typography",
+      "title": "Typography tokens - Graphite Design System"
+    }
+  ]
+}

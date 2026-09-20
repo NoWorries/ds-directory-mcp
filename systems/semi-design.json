@@ -1,0 +1,472 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "semi-design",
+  "organization": null,
+  "design_system": "Semi Design",
+  "full_name": "Semi Design",
+  "start_urls": [
+    "https://semi.design/en-US/"
+  ],
+  "detail_url": "/systems/semi-design",
+  "pages_indexed": 100,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T12:41:34+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": "2026-09-01T09:19:17.652Z",
+  "resources": {
+    "github": [
+      "https://github.com/YannLynn/semi-ai-chat-demo"
+    ],
+    "figma": [
+      "https://www.figma.com/design/81rCf36kFTcxedsGgAibzd/Semi-Design--Base-",
+      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo",
+      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo%EF%BC%88Figma-Community%EF%BC%89"
+    ],
+    "mcp": [
+      "https://modelcontextprotocol.io/"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@douyinfe/semi-next"
+    ],
+    "icons": [
+      "https://semi.design/en-US/basic/icon"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/clauderic/react-sortable-hoc",
+      "https://github.com/yiminghe/async-validator",
+      "https://github.com/clauderic/dnd-kit",
+      "https://github.com/CassetteRocks/react-infinite-scroller",
+      "https://github.com/bvaughn/react-virtualized",
+      "https://github.com/microsoft/vscode",
+      "https://github.com/airbnb/lottie-web",
+      "https://github.com/stipsan/scroll-into-view-if-needed"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/reset-css"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "exemplars": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 12,
+    "last_pushed": "2025-11-12T09:26:27Z"
+  },
+  "npm_meta": {
+    "latest_version": "2.103.0",
+    "last_published": "2026-09-01T08:46:21.693Z",
+    "weekly_downloads": 790
+  },
+  "indexed_pages": [
+    {
+      "url": "https://semi.design/en-US/experience/accessibility",
+      "title": "Accessibility - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ai/aiComponent",
+      "title": "AI Ability Introduction - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/start/mcp-skills",
+      "title": "AI Agent MCP/Skills - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ai/aiChatDialogue",
+      "title": "AIChatDialogue - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ai/aiChatInput",
+      "title": "AIChatInput - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/anchor",
+      "title": "Anchor - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/audioPlayer",
+      "title": "AudioPlayer - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/autocomplete",
+      "title": "AutoComplete - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/avatar",
+      "title": "Avatar - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/backtop",
+      "title": "BackTop - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/badge",
+      "title": "Badge - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/banner",
+      "title": "Banner - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/breadcrumb",
+      "title": "Breadcrumb - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/button",
+      "title": "Button - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/calendar",
+      "title": "Calendar - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/card",
+      "title": "Card - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/carousel",
+      "title": "Carousel - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/cascader",
+      "title": "Cascader - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/chat",
+      "title": "Chat - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/checkbox",
+      "title": "Checkbox - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/codehighlight",
+      "title": "CodeHighlight - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/collapse",
+      "title": "Collapse - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/collapsible",
+      "title": "Collapsible - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/colorpicker",
+      "title": "ColorPicker - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/other/configprovider",
+      "title": "ConfigProvider - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/experience/content-guidelines",
+      "title": "Content Guidelines - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/cropper",
+      "title": "Cropper - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/advanced/customize-theme",
+      "title": "Customized Themes - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/advanced/dark-mode",
+      "title": "Dark Mode - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/chart",
+      "title": "Data Visualization - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/datepicker",
+      "title": "DatePicker - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/descriptions",
+      "title": "Description - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/advanced/design-source",
+      "title": "Design Resources - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/advanced/design-to-code",
+      "title": "Design to Code - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/divider",
+      "title": "Divider - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/dragMove",
+      "title": "DragMove - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/dropdown",
+      "title": "Dropdown - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/empty",
+      "title": "Empty - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/feedback",
+      "title": "Feedback - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/floatbutton",
+      "title": "FloatButton - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/form",
+      "title": "Form - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ecosystem/faq",
+      "title": "Frequently Asked Questions - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ecosystem/update-to-v2",
+      "title": "From 1.x to 2.0 - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/grid",
+      "title": "Grid - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/highlight",
+      "title": "Highlight - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/hotkeys",
+      "title": "HotKeys - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/image",
+      "title": "Image - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/input",
+      "title": "Input - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/inputnumber",
+      "title": "InputNumber - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/experience/internationalization",
+      "title": "Internationalization - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/start/introduction",
+      "title": "Introduction - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/jsonviewer",
+      "title": "JsonViewer - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/layout",
+      "title": "Layout - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/list",
+      "title": "List - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/other/locale",
+      "title": "LocaleProvider - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/lottie",
+      "title": "Lottie Animation - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/markdownrender",
+      "title": "Markdown Render - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/modal",
+      "title": "Modal - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/navigation",
+      "title": "Navigation - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/notification",
+      "title": "Notification - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/overflowlist",
+      "title": "OverflowList - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/start/overview",
+      "title": "Overview - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/pagination",
+      "title": "Pagination - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/pincode",
+      "title": "PinCode - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/popconfirm",
+      "title": "Popconfirm - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/popover",
+      "title": "Popover - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/progress",
+      "title": "Progress - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/start/getting-started",
+      "title": "Quick Start - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/radio",
+      "title": "Radio - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/rating",
+      "title": "Rating - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ecosystem/react19",
+      "title": "React 19 Adaptation - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/resizable",
+      "title": "Resizable - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/scrolllist",
+      "title": "ScrollList - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/select",
+      "title": "Select - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ai/sidebar",
+      "title": "Sidebar - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/sidesheet",
+      "title": "SideSheet - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/skeleton",
+      "title": "Skeleton - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/slider",
+      "title": "Slider - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/space",
+      "title": "Space - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/spin",
+      "title": "Spin - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/steps",
+      "title": "Steps - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/switch",
+      "title": "Switch - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/table",
+      "title": "Table - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/tabs",
+      "title": "Tabs - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/tag",
+      "title": "Tag - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/taginput",
+      "title": "TagInput - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/timeline",
+      "title": "Timeline - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/timepicker",
+      "title": "TimePicker - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/feedback/toast",
+      "title": "Toast - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/tokens",
+      "title": "Tokens - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/tooltip",
+      "title": "Tooltip - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/transfer",
+      "title": "Transfer - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/navigation/tree",
+      "title": "Tree - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/treeselect",
+      "title": "TreeSelect - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/basic/typography",
+      "title": "Typography - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/input/upload",
+      "title": "Upload - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/show/userGuide",
+      "title": "UserGuide - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/plus/videoPlayer",
+      "title": "VideoPlayer - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ecosystem/web-components",
+      "title": "Web Components - Semi Design"
+    },
+    {
+      "url": "https://semi.design/en-US/ecosystem/tailwind",
+      "title": "With TailwindCSS - Semi Design"
+    }
+  ]
+}

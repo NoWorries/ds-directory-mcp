@@ -1,0 +1,505 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "equinor-eds",
+  "organization": "Equinor",
+  "design_system": "EDS",
+  "full_name": "Equinor — EDS",
+  "start_urls": [
+    "https://eds.equinor.com/"
+  ],
+  "detail_url": "/systems/equinor-eds",
+  "pages_indexed": 109,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T06:46:37+00:00",
+  "last_modified": "Thu, 17 Sep 2026 08:21:01 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://www.github.com/equinor/design-system",
+      "https://github.com/equinor/design-system"
+    ],
+    "storybook": [
+      "https://storybook.eds.equinor.com/"
+    ],
+    "figma": [
+      "https://www.figma.com/design/hjpavZkeUoRfn1N7mhIniK/EDS-designer-sandbox"
+    ],
+    "markdown_docs": [
+      "https://github.com/equinor/design-system/tree/main/apps/design-system-docs/shared/docs/readme.md",
+      "https://github.com/equinor/design-system/tree/main/apps/design-system-docs/shared/versioned_docs/version-1.1.0/readme.md"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@equinor/eds-utils",
+      "https://www.npmjs.com/package/@equinor/eds-icons",
+      "https://www.npmjs.com/package/@equinor/eds-data-grid-react",
+      "https://www.npmjs.com/package/@equinor/eds-lab-react",
+      "https://www.npmjs.com/package/@equinor/eds-tokens",
+      "https://www.npmjs.com/package/@equinor/eds-core-react"
+    ],
+    "icons": [
+      "https://fonts.google.com/icons",
+      "https://eds.equinor.com/docs/Next/components/data-display/icon"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "governance_model": true,
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "dark_mode": true,
+    "exemplars": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 151,
+    "last_pushed": "2026-09-17T10:02:06Z"
+  },
+  "npm_meta": {
+    "latest_version": "2.2.1",
+    "last_published": "2026-05-20T21:51:37.859Z",
+    "weekly_downloads": 16455
+  },
+  "indexed_pages": [
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/about_eds",
+      "title": "About EDS | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/about_eds",
+      "title": "About EDS | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/accessibility",
+      "title": "Accessibility | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/accessibility",
+      "title": "Accessibility | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/surfaces/accordion",
+      "title": "Accordion | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/surfaces/accordion",
+      "title": "Accordion | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/app_launcher",
+      "title": "App launcher | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/autocomplete",
+      "title": "Autocomplete | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/autocomplete",
+      "title": "Autocomplete | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/feedback/banner",
+      "title": "Banner | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/feedback/banner",
+      "title": "Banner | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/breadcrumbs",
+      "title": "Breadcrumbs | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/button",
+      "title": "Button | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/button",
+      "title": "Button | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/surfaces/card",
+      "title": "Card | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/data-display/chip",
+      "title": "Chip | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/data-display/chip",
+      "title": "Chip | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/getting-started/develop/citizen_developers",
+      "title": "Citizen Developers | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/getting-started/develop/citizen_developers",
+      "title": "Citizen Developers | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components",
+      "title": "Components | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components",
+      "title": "Components | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/data-display",
+      "title": "Data Display | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/datavisualisation",
+      "title": "Data Visualisation | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/datavisualisation",
+      "title": "Data Visualisation | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/date_time_picker",
+      "title": "Date/time picker | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/feedback/dialog",
+      "title": "Dialog | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/surfaces/divider",
+      "title": "Divider | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/data-display/divider",
+      "title": "Divider | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/drawer",
+      "title": "Drawer | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next",
+      "title": "EDS Documentation Contribution Guide | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs",
+      "title": "EDS Documentation Contribution Guide | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/design-tokens/elevation",
+      "title": "Elevation | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/design-tokens/elevation",
+      "title": "Elevation | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/",
+      "title": "Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/field",
+      "title": "Field | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/getting-started/design/figma",
+      "title": "Figma | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/getting-started/design/figma",
+      "title": "Figma | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/getting-started/design/getting_started_design",
+      "title": "Getting started with design | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/getting-started/design/getting_started_design",
+      "title": "Getting started with design | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/getting-started/develop/getting_started_development",
+      "title": "Getting started with development | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/getting-started/develop/getting_started_development",
+      "title": "Getting started with development | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/getting-started/getting_started",
+      "title": "Getting started | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/colour/getting_started",
+      "title": "Getting Started | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/getting-started/getting_started",
+      "title": "Getting started | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/colour/getting_started",
+      "title": "Getting Started | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/design-tokens/grid",
+      "title": "Grid | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/design-tokens/grid",
+      "title": "Grid | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/data-display/icon",
+      "title": "Icon | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/assets/illustration",
+      "title": "Illustration | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/assets/illustration",
+      "title": "Illustration | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/assets/image_placeholder",
+      "title": "Image placeholder | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/assets/image_placeholder",
+      "title": "Image placeholder | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/input",
+      "title": "Input | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs",
+      "title": "Inputs | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/colour/intro",
+      "title": "Introduction | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/colour/intro",
+      "title": "Introduction | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/navigation/link",
+      "title": "Link | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/link",
+      "title": "Link | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/data-display/list",
+      "title": "List | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/assets/logos",
+      "title": "Logos | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/assets/logos",
+      "title": "Logos | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/menu",
+      "title": "Menu | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/pagination",
+      "title": "Pagination | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/patterns",
+      "title": "Patterns | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/patterns",
+      "title": "Patterns | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/assets/photography",
+      "title": "Photography | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/assets/photography",
+      "title": "Photography | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/data-display/popover",
+      "title": "Popover | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/assets/product_icons",
+      "title": "Product Icons | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/assets/product_icons",
+      "title": "Product Icons | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/feedback/progress_indicators",
+      "title": "Progress indicators | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/resources",
+      "title": "Resources | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/resources",
+      "title": "Resources | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/feedback/scrim",
+      "title": "Scrim | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/search",
+      "title": "Search | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/search",
+      "title": "Search | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/selection_controls",
+      "title": "Selection controls | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/selection_controls",
+      "title": "Selection controls | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/design-tokens/shape",
+      "title": "Shape | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/design-tokens/shape",
+      "title": "Shape | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/surfaces/side_sheet",
+      "title": "Side sheet | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/sidebar",
+      "title": "Sidebar | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/slider",
+      "title": "Slider | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/feedback/snackbar",
+      "title": "Snackbar | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/design-tokens/spacing",
+      "title": "Spacing | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/design-tokens/spacing",
+      "title": "Spacing | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/stepper",
+      "title": "Stepper | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/support",
+      "title": "Support | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/support",
+      "title": "Support | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/assets/system_icons",
+      "title": "System Icons | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/assets/system_icons",
+      "title": "System Icons | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/data-display/table_data_grid",
+      "title": "Table data grid | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/table_of_contents",
+      "title": "Table of contents | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/data-display/table",
+      "title": "Table | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/tabs",
+      "title": "Tabs | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/getting-started/team_roles",
+      "title": "Teams & Roles | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/getting-started/team_roles",
+      "title": "Teams & Roles | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/textarea",
+      "title": "Text area | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/inputs/textfield",
+      "title": "Text field | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/textfield",
+      "title": "Text field | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/about/team",
+      "title": "The Team | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/about/team",
+      "title": "The Team | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/inputs/toggle_button",
+      "title": "Toggle button | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/surfaces/toolbar",
+      "title": "Toolbar | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/components/data-display/tooltip",
+      "title": "Tooltip | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/data-display/tooltip",
+      "title": "Tooltip | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/components/navigation/topbar",
+      "title": "Top bar | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/Next/foundation/design-tokens/typography",
+      "title": "Typography | Equinor Design System"
+    },
+    {
+      "url": "https://eds.equinor.com/docs/foundation/design-tokens/typography",
+      "title": "Typography | Equinor Design System"
+    }
+  ]
+}

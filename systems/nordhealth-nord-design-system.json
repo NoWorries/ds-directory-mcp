@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "nordhealth-nord-design-system",
   "organization": "Nordhealth",
   "design_system": "Nord Design System",
@@ -9,80 +9,619 @@
     "https://nordhealth.design/"
   ],
   "detail_url": "/systems/nordhealth-nord-design-system",
-  "pages_indexed": 8,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 137,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-16T05:16:42+00:00",
-  "last_modified": "Wed, 09 Sep 2026 09:15:57 GMT",
+  "last_checked": "2026-09-18T10:47:15+00:00",
+  "last_modified": "Fri, 18 Sep 2026 10:38:18 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/salesforce-ux/theo"
+      "https://github.com/nordhealth/design-system"
+    ],
+    "storybook": [
+      "https://nordhealth.design/storybook",
+      "https://nordhealth.design/updates/march-2026-storybook-playground"
     ],
     "figma": [
-      "https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9",
-      "https://www.figma.com/file/n03Z6aG3GAP31Oc9V6IKYy/Component-Illustrations?node-id=0%3A1",
-      "https://www.figma.com/design/yarhTRV8eFffff0BIpevi6/Nord-Figma-Toolkit-v4?node-id=1696-298217",
-      "https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4?node-id=2-9&t=VRwF0X33GVvnkgdH-1",
-      "https://www.figma.com/file/2uz2VbPlyMR5QHi9eGDMFf/Nordicons?node-id=2%3A36"
-    ],
-    "icons": [
-      "https://nordhealth.design/components/icon"
+      "https://www.figma.com/file/n03Z6aG3GAP31Oc9V6IKYy/Component-Illustrations",
+      "https://www.figma.com/design/yarhTRV8eFffff0BIpevi6/-v4-WIP--Nord-Figma-Toolkit",
+      "https://www.figma.com/file/CEv0wTXRONi30bZglrYzEm/Nord-Dark-Theme",
+      "https://www.figma.com/file/dAkWrvqLZzDS7RA8cGjGUk/Brand-Core-Elements",
+      "https://www.figma.com/file/le5n5hH9G7rcEvNOsMnZR9/Figma-template-(product-design)",
+      "https://www.figma.com/file/iGUx4IYLFa8jPHM0VIGOGW",
+      "https://www.figma.com/file/aZDrttmLqVMrO1lQXk8Mbn/Provet-Light-Theme",
+      "https://www.figma.com/design/G6E9A44lTA7aOFcNXosKCR/Interface-Templates-v4",
+      "https://www.figma.com/file/7pIl9EuaLAMr9YxDUUpLRo/Brand-Guidelines-v01.2",
+      "https://www.figma.com/file/5y1YnQSu5yZLlo5N2c2PEG/Brand-Digital-Templates",
+      "https://www.figma.com/file/u32okMUqi5BlWsG2k1JZgH/Nord-Design-System",
+      "https://www.figma.com/file/u32okMUqi5BlWsG2k1JZgH/Nord-Figma-Toolkit",
+      "https://www.figma.com/file/Bk4HaOsbRzp1gyoEZJMeG1/Nord-Light-Theme",
+      "https://www.figma.com/file/WRScRzQz2In8FkYHEzPG0Q/Brand-Website",
+      "https://www.figma.com/design/yarhTRV8eFffff0BIpevi6/Nord-Figma-Toolkit-v4",
+      "https://www.figma.com/file/410C0vmc6TSzvQ98UT1fu6/Brand-Print-and-Merch",
+      "https://www.figma.com/file/aZDrttmLqVMrO1lQXk8Mbn/%E2%9D%8C-Provet-Theme",
+      "https://www.figma.com/file/2uz2VbPlyMR5QHi9eGDMFf/Nordicons",
+      "https://www.figma.com/proto/aS6BXI2k1hzux3HgixfT0p/Brand-Video-Guidelines"
     ],
     "agent_instructions": [
       "https://nordhealth.design/llms.txt",
       "https://nordhealth.design/llms-full.txt"
+    ],
+    "icons": [
+      "https://nordhealth.design/icons",
+      "https://nordhealth.design/components/icon"
     ]
   },
   "unverified_resources": {
     "github": [
       "https://github.com/salesforce-ux/theo"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/@lit-labs/react",
+      "https://www.npmjs.com/package/lit",
+      "https://www.npmjs.com/package/@floating-ui/dom",
+      "https://www.npmjs.com/package/typescript"
     ]
   },
   "content_signals": {
-    "tokens_format": "Figma Variables",
+    "validation_loop": true,
     "frameworks": [
       "React",
       "Vue",
       "Web Components"
-    ],
-    "validation_loop": true,
-    "token_enforcement": true
+    ]
   },
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
     {
-      "url": "https://nordhealth.design/core/tokens/",
+      "url": "https://nordhealth.design/updates/july-2026-component-updates",
+      "title": "18 New Components, 56 Component Parts, and a Redesigned Docs Website - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/resources/about",
+      "title": "About the design system - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/resources/accessibility-statement",
+      "title": "Accessibility Statement - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/accordion",
+      "title": "Accordion Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/application",
+      "title": "Application Template | Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/aside",
+      "title": "Aside Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/autocomplete",
+      "title": "Autocomplete Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/avatar",
+      "title": "Avatar Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/resources/backlog-prioritization",
+      "title": "Backlog Prioritization - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/badge",
+      "title": "Badge Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/banner",
+      "title": "Banner Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/blocks",
+      "title": "Blocks - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/design/assets",
+      "title": "Brand assets - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/button",
+      "title": "Button Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/button-group",
+      "title": "Button Group Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/calendar",
+      "title": "Calendar Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/card",
+      "title": "Card Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/resources/careers",
+      "title": "Careers - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/checkbox",
+      "title": "Checkbox Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/collapsible",
+      "title": "Collapsible Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/color-generator",
+      "title": "Color Generator - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/combobox",
+      "title": "Combobox Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/command-menu",
+      "title": "Command Menu Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/resources/contributing",
+      "title": "Contributing - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/core",
+      "title": "Core - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/dashboard",
+      "title": "Dashboard Template | Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/date-picker",
+      "title": "Date Picker Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/date-range-picker",
+      "title": "Date Range Picker Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/december-2021",
+      "title": "December, 2021 - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/core/tokens",
       "title": "Design Tokens - Nord Design System"
     },
     {
-      "url": "https://nordhealth.design/design/foundations/figma/",
-      "title": "Figma Toolkit - Nord Design System"
+      "url": "https://nordhealth.design/components/divider",
+      "title": "Divider Component - Nord Design System"
     },
     {
-      "url": "https://nordhealth.design/migrations/tailwind/",
+      "url": "https://nordhealth.design/components/drawer",
+      "title": "Drawer Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/dropdown",
+      "title": "Dropdown Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/empty-state",
+      "title": "Empty State Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/february-2021",
+      "title": "February, 2021 - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/field",
+      "title": "Field Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/fieldset",
+      "title": "Fieldset Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/may-2023-jammies-nomination-copy",
+      "title": "Finalist for the Best Design System Award - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/october-2022-jammies-nomination",
+      "title": "Finalist for the Jamstack Conf Jammies - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/footer",
+      "title": "Footer Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/design/foundations",
+      "title": "Foundations - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/july-2026-alpha-components",
+      "title": "Four Alpha Component Families for Product Interfaces - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/design",
+      "title": "Getting Started - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/docs/developer",
+      "title": "Getting Started - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/header",
+      "title": "Header Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/august-2022-custom-properties-web-components",
+      "title": "How we use Custom Properties in Web Components - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/january-2022",
+      "title": "How we use Figma - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/icon",
+      "title": "Icon Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/input",
+      "title": "Input Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/input-group-addon",
+      "title": "Input Group Add-on Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/input-group",
+      "title": "Input Group Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/february-2024-interview",
+      "title": "Interview with Design System Guide - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/june-2025-brands",
+      "title": "Introducing Brands for Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/march-2026-storybook-playground",
+      "title": "Introducing Storybook and the New Playground Experience - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/item",
+      "title": "Item Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/june-2021",
+      "title": "June, 2021 - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/kbd",
+      "title": "Kbd Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates",
+      "title": "Latest Updates - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/april-2022-launching-nord-design-system",
+      "title": "Launching Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/layout",
+      "title": "Layout Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/may-2021",
+      "title": "May, 2021 - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/message",
+      "title": "Message Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/meter",
+      "title": "Meter Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations",
+      "title": "Migration Guides - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/1.0.0",
+      "title": "Migration to 1.0.0 Web Components - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/2.0.0",
+      "title": "Migration to 2.0.0 Web Components - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/figma-3.0.0",
+      "title": "Migration to 3.0.0 Figma Toolkit - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/3.0.0",
+      "title": "Migration to 3.0.0 Web Components - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/figma-4.0.0",
+      "title": "Migration to 4.0.0 Figma Toolkit - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/4.0.0",
+      "title": "Migration to 4.0.0 Web Components - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/migrations/tailwind",
       "title": "Migration to Tailwind CSS - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/modal",
+      "title": "Modal Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/navigation",
+      "title": "Navigation Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/new-app-shell",
+      "title": "New App Shell Template | Nord Design System - Nord Design System"
     },
     {
       "url": "https://nordhealth.design/",
       "title": "Nord Design System"
     },
     {
-      "url": "https://nordhealth.design/components/progress",
-      "title": "Progress Component - Nord Design System"
+      "url": "https://nordhealth.design/blocks/preview",
+      "title": "Nord Design System - Nord Design System"
     },
     {
-      "url": "https://nordhealth.design/resources/support/",
+      "url": "https://nordhealth.design/css/examples/borders",
+      "title": "Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/css/examples/descriptionlist",
+      "title": "Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/css/examples/grid",
+      "title": "Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/february-2022-design-system-architecture",
+      "title": "Nord Design System architecture - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/llms.txt",
+      "title": "Nordhealth — Nord Design System — llms.txt"
+    },
+    {
+      "url": "https://nordhealth.design/llms-full.txt",
+      "title": "Nordhealth — Nord Design System — llms.txt"
+    },
+    {
+      "url": "https://nordhealth.design/icons",
+      "title": "Nordicons - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/notification",
+      "title": "Notification Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/number-field",
+      "title": "Number Field Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/october-2021",
+      "title": "October, 2021 - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/otp-field",
+      "title": "OTP Field Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/outline",
+      "title": "Outline Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/overflow-list",
+      "title": "Overflow List Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/overflow-list-count",
+      "title": "Overflow List Count Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/overflow-list-menu",
+      "title": "Overflow List Menu Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/pagination",
+      "title": "Pagination Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/popout",
+      "title": "Popout Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/profile",
+      "title": "Profile Template | Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/progress-bar",
+      "title": "Progress Bar Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/qrcode",
+      "title": "QR Code Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/radio",
+      "title": "Radio Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/range",
+      "title": "Range Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/february-2023-redesigning-nordicons-icon-library",
+      "title": "Redesigning Nordicons Icon Library - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/resizable",
+      "title": "Resizable Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/resizable-handle",
+      "title": "Resizable Handle Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/resizable-panel",
+      "title": "Resizable Panel Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/february-2026-nuxt-docs-rewrite",
+      "title": "Rewriting Nord Docs with Nuxt - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/rtl",
+      "title": "Right-to-left Template | Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/scroll-area",
+      "title": "Scroll Area Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/segmented-control",
+      "title": "Segmented control Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/select",
+      "title": "Select Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/september-2021",
+      "title": "September, 2021 - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/settings",
+      "title": "Settings Template | Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/skeleton",
+      "title": "Skeleton Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/spinner",
+      "title": "Spinner Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/stack",
+      "title": "Stack Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/march-2022-statistics-for-the-first-year",
+      "title": "Statistics for the first year - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/resources/support",
       "title": "Support - Nord Design System"
     },
     {
-      "url": "https://nordhealth.design/core/css/tailwind/",
+      "url": "https://nordhealth.design/components/table",
+      "title": "Table Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/tab",
+      "title": "Tabs Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/updates/june-2022-tabs-web-components",
+      "title": "Tabs components - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/tabs",
+      "title": "Tabs Template | Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/tag",
+      "title": "Tag Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/core/css",
       "title": "Tailwind CSS - Nord Design System"
     },
     {
-      "url": "https://nordhealth.design/components/",
+      "url": "https://nordhealth.design/core/css/tailwind",
+      "title": "Tailwind CSS - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates",
+      "title": "Templates - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/textarea",
+      "title": "Textarea Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/theme-builder",
+      "title": "Theme Builder - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/theme-builder-template",
+      "title": "Theme Builder Template - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/design/themes",
+      "title": "Themes - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/templates/theming",
+      "title": "Theming Template | Nord Design System - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/time-picker",
+      "title": "Time Picker Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/timestamp",
+      "title": "Timestamp Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/toast",
+      "title": "Toast Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/toggle",
+      "title": "Toggle Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/design/tools",
+      "title": "Tools - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/tooltip",
+      "title": "Tooltip Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/top-bar",
+      "title": "Top Bar Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/truncate",
+      "title": "Truncate Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components/visually-hidden",
+      "title": "Visually Hidden Component - Nord Design System"
+    },
+    {
+      "url": "https://nordhealth.design/components",
       "title": "Web Components - Nord Design System"
     }
   ]

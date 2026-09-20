@@ -6,15 +6,19 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: python server.py
     envVars:
+      - key: PYTHON_VERSION
+        # Render's default Python runtime (with no pin at all) predates
+        # 3.10 — the floor `mcp`/`torch`/`sentence-transformers` all need
+        # since the local-embeddings migration. Matches the 3.12 every
+        # GitHub Actions workflow already pins (see reindex-*.yml).
+        value: "3.12.7"
       - key: QDRANT_URL
         sync: false
       - key: QDRANT_API_KEY
         sync: false
-      - key: JINA_API_KEY
-        sync: false
       - key: QDRANT_COLLECTION
         value: design_system_index
       - key: EMBEDDING_MODEL
-        value: jina-embeddings-v2-base-en
+        value: BAAI/bge-small-en-v1.5
       - key: EMBEDDING_DIM
-        value: "768"
+        value: "384"

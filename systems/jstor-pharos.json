@@ -1,0 +1,35 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "jstor-pharos",
+  "organization": "JSTOR",
+  "design_system": "Pharos",
+  "full_name": "JSTOR — Pharos",
+  "start_urls": [
+    "https://pharos.jstor.org/"
+  ],
+  "detail_url": "/systems/jstor-pharos",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T20:27:36+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Web Components"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://pharos.jstor.org/",
+      "title": "JSTOR — Pharos"
+    }
+  ]
+}

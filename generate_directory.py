@@ -27,6 +27,7 @@ from page_shell import (
     FONT_LINK,
     GRID_ICON_SVG,
     LIST_ICON_SVG,
+    SORT_ICON_SVG,
     TOKENS_CSS,
     routes_nav,
 )
@@ -100,6 +101,20 @@ def indexed_only(entries: list[dict]) -> list[dict]:
     they just don't render anywhere on the public site until real content is
     found."""
     return [e for e in entries if e.get("pages_indexed")]
+
+
+def visible_by_default(entries: list[dict]) -> list[dict]:
+    """Further drops likely_unmaintained systems (see ingest.py's
+    compute_likely_unmaintained) — the underlying project looks dead even
+    though its docs are still real and indexed, so it's hidden from
+    "summary" outputs that have no way to offer a toggle (home page stats,
+    llms.txt, sitemap.xml, search-index.json, the data export) the same way
+    archived systems already are. The two browsing pages that DO have room
+    for an opt-in toggle (generate_directory.py's own page, generate_
+    compare.py) keep these systems in their rendered data instead of
+    calling this — see their own render_card()/render_row() marking and the
+    "Show N unmaintained systems" toggle in their JS."""
+    return [e for e in entries if not e.get("likely_unmaintained")]
 
 
 def compute_stats(entries: list[dict]) -> dict:
@@ -320,6 +335,12 @@ def render_docs_cell(entry: dict) -> str:
 
 
 def render_row(entry: dict) -> str:
+    """Full matrix row — System/Docs/Pages plus every COLUMNS resource dot
+    and a Found count. Used by generate_compare.py, not this page anymore
+    (see render_simple_row for the plain System/Docs/Pages version /directory
+    itself renders) — kept here since it's the natural home for anything
+    built from render_cell/COLUMNS, which several other pages already import
+    from this module."""
     name_text = full_name(entry)
     _org, ds_name = split_org_name(entry)
     row_id = slugify(name_text)
@@ -328,9 +349,10 @@ def render_row(entry: dict) -> str:
     status = coverage_status(entry)
     n_found = found_count(entry)
     cells = "".join(render_cell(entry, key) for key, _ in COLUMNS)
+    unmaintained_class = " is-unmaintained" if entry.get("likely_unmaintained") else ""
 
     return f"""
-    <tr id="{row_id}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
+    <tr id="{row_id}" class="{unmaintained_class.strip()}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
       <td class="name-cell">{render_name_block(entry, link_to_detail=True)}</td>
       {render_docs_cell(entry)}
       <td class="cell cell-pages" data-sort-value="{pages if pages is not None else -1}">
@@ -338,6 +360,35 @@ def render_row(entry: dict) -> str:
       </td>
       {cells}
       <td class="cell cell-found-count" data-sort-value="{n_found}">{n_found}/{len(COLUMNS)}</td>
+    </tr>
+    """
+
+
+def render_simple_row(entry: dict) -> str:
+    """The /directory page's own List view — just System/Docs/Pages, no
+    resource matrix (see generate_compare.py for that — a different lens on
+    the same registry, not something a visitor browsing "what systems exist"
+    needs in front of them). data-sort-name matches .card's own attribute so
+    the shared name-sort in render_page()'s script can reorder either view
+    with the same code."""
+    name_text = full_name(entry)
+    _org, ds_name = split_org_name(entry)
+    row_id = slugify(name_text)
+    pages = entry.get("pages_indexed")
+    pages_text = "—" if pages is None else str(pages)
+    status = coverage_status(entry)
+    # See visible_by_default()'s docstring — this page (unlike the summary
+    # outputs that call that function) keeps unmaintained systems in its
+    # rendered data, just CSS-hidden until the toolbar's toggle reveals them.
+    unmaintained_class = " is-unmaintained" if entry.get("likely_unmaintained") else ""
+
+    return f"""
+    <tr id="{row_id}" class="{unmaintained_class.strip()}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
+      <td class="name-cell">{render_name_block(entry, link_to_detail=True)}</td>
+      {render_docs_cell(entry)}
+      <td class="cell cell-pages">
+        <span class="pages-value"><span class="coverage-dot coverage-{status}" title="{html.escape(COVERAGE_LABEL[status])}">{COVERAGE_GLYPH[status]}</span>{pages_text}</span>
+      </td>
     </tr>
     """
 
@@ -376,6 +427,7 @@ def render_card(entry: dict) -> str:
     "view details" line needed. Cards are a preview, not a second copy of the
     full detail, so the resource-found count stays in the table view only."""
     name_text = full_name(entry)
+    _org, ds_name = split_org_name(entry)
     start_url = (entry.get("start_urls") or [None])[0]
     detail_href = f"systems/{slugify(name_text)}"
 
@@ -388,9 +440,14 @@ def render_card(entry: dict) -> str:
         thumb_html = f'<img class="card-thumb" src="{src}" alt="" loading="lazy" style="view-transition-name: thumb-{slug}; view-transition-class: thumb">'
 
     pages = entry.get("pages_indexed", 0)
+    unmaintained_class = " is-unmaintained" if entry.get("likely_unmaintained") else ""
 
+    # data-sort-name matches render_simple_row's own attribute (the plain
+    # design-system name, not the "Org — Name" identity string data-name
+    # holds for the filter box) so the page's one Sort control reorders
+    # List rows and Grid cards identically.
     return f"""
-    <a class="card panel-link" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(name_text.lower())}">
+    <a class="card panel-link{unmaintained_class}" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
       {thumb_html}
       <div class="card-body textured">
         {render_name_block(entry)}
@@ -403,15 +460,19 @@ def render_card(entry: dict) -> str:
 def render_page(entries: list[dict]) -> str:
     entries_sorted = sorted(entries, key=lambda e: full_name(e).lower())
 
-    # Column indices: 0 = name (text sort), 1 = docs link (not sortable),
-    # 2 = pages (number), 3..3+len(COLUMNS)-1 = resource dots (found),
-    # last = found-count (number, pinned).
-    header_cells = "".join(
-        f'<th data-col="{i + 3}" data-sort="found">{label}</th>' for i, (_, label) in enumerate(COLUMNS)
-    )
-    last_col = len(COLUMNS) + 3
-    rows = "".join(render_row(e) for e in entries_sorted)
+    rows = "".join(render_simple_row(e) for e in entries_sorted)
     cards = "".join(render_card(e) for e in entries_sorted)
+
+    # Only shown at all when there's actually at least one — see
+    # visible_by_default()'s docstring for why this page keeps them in its
+    # data (CSS-hidden) rather than dropping them like the summary outputs.
+    unmaintained_count = sum(1 for e in entries_sorted if e.get("likely_unmaintained"))
+    unmaintained_toggle_html = (
+        f'<label class="unmaintained-toggle">'
+        f'<input type="checkbox" id="unmaintainedToggle"> Show {unmaintained_count} unmaintained'
+        f'</label>'
+        if unmaintained_count else ""
+    )
 
     return f"""<!doctype html>
 <html lang="en">
@@ -426,21 +487,44 @@ def render_page(entries: list[dict]) -> str:
   /* .page (eyebrow/heading/subtitle) deliberately stays at the shared
      PAGE_MAX_WIDTH, same as every other page — no reason for the intro here
      to look different from the rest of the site. Only the table/grid itself
-     needs more room (with the full ~250-system registry and 9 resource
-     columns, it wants noticeably more than this sample data's 4 rows show),
-     so it lives in its own .table-breakout below: a separate block, centered
-     independently at a wider FIXED cap. Fixed (not shrink-to-fit) on purpose
-     — an earlier version sized this to the table's own content width, which
-     meant the toolbar (and the List/Grid toggle inside it) physically moved
-     between the two views, since Grid view has no table to size against.
-     A constant width means the toggle sits in the same place either way. */
-  .table-breakout {{ max-width: 1600px; margin: 0 auto; }}
+     needs more room, so it lives in its own .table-breakout below: a
+     separate block, centered independently at a wider FIXED cap. Fixed
+     (not shrink-to-fit) on purpose — an earlier version sized this to the
+     table's own content width, which meant the toolbar (List/Grid toggle,
+     Sort button) physically moved between the two views, since Grid view
+     has no table to size against. A constant width means the toolbar sits
+     in the same place either way. */
+  .table-breakout {{ max-width: 1200px; margin: 0 auto; }}
   .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
+  .table-toolbar-controls {{ display: flex; align-items: center; gap: 10px; }}
   #tableFilter {{
     padding: 8px 12px; font: inherit; font-size: 0.85rem; border: 1px solid var(--border);
     border-radius: 6px; width: 280px; max-width: 100%; background: var(--surface); color: var(--text);
   }}
   #tableFilter:focus {{ outline: 2px solid var(--accent); outline-offset: 1px; }}
+
+  .sort-toggle {{
+    display: flex; align-items: center; gap: 6px;
+    font: inherit; font-size: 0.82rem; font-weight: 600; padding: 7px 12px;
+    border: 1px solid var(--border); border-radius: 6px; cursor: pointer;
+    background: var(--surface); color: var(--text-muted);
+  }}
+  .sort-toggle:hover {{ color: var(--text); border-color: var(--accent); }}
+  .sort-toggle svg {{ flex: none; }}
+
+  .unmaintained-toggle {{
+    display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--text-muted); cursor: pointer;
+  }}
+  .unmaintained-toggle:hover {{ color: var(--text); }}
+  /* Hidden by default regardless of view — see render_simple_row()/
+     render_card()'s is-unmaintained class. !important beats the plain
+     [hidden] the name-filter script below also toggles on the same
+     element: a system correctly stays hidden here even when it matches a
+     search, unless the toggle checkbox has ALSO revealed it — the two
+     controls narrow independently, both must allow a row through. */
+  .is-unmaintained {{ display: none !important; }}
+  .show-unmaintained tr.is-unmaintained {{ display: table-row !important; }}
+  .show-unmaintained .card.is-unmaintained {{ display: flex !important; }}
 
   .view-toggle {{ display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }}
   .view-toggle button {{
@@ -452,25 +536,9 @@ def render_page(entries: list[dict]) -> str:
   .view-toggle button + button {{ border-left: 1px solid var(--border); }}
   .view-toggle button.current {{ background: var(--accent-soft); color: var(--accent); }}
 
-  /* Classic CSS-only "scroll shadow": two background-attachment:local layers
-     scroll WITH the content (so they only show at the true start/end, never
-     appearing over content past the very edges) and two background-attachment:
-     scroll shadow layers stay fixed to the viewport — the shadow only becomes
-     visible once the local layer has scrolled out from under it, i.e. exactly
-     when there's more table to the left/right than currently visible. */
   .table-wrap {{
     overflow-x: auto; border: 1px solid var(--border); border-radius: 10px;
-    box-shadow: var(--shadow);
-    background-color: var(--surface);
-    background-image:
-      linear-gradient(to right, var(--surface) 30%, rgba(0,0,0,0)),
-      linear-gradient(to left, var(--surface) 30%, rgba(0,0,0,0)),
-      linear-gradient(to right, rgba(15,23,42,0.15), rgba(15,23,42,0)),
-      linear-gradient(to left, rgba(15,23,42,0.15), rgba(15,23,42,0));
-    background-position: left center, right center, left center, right center;
-    background-repeat: no-repeat;
-    background-size: 24px 100%, 24px 100%, 10px 100%, 10px 100%;
-    background-attachment: local, local, scroll, scroll;
+    box-shadow: var(--shadow); background-color: var(--surface);
   }}
   table {{ border-collapse: collapse; width: 100%; font-size: 0.86rem; }}
   th {{
@@ -513,29 +581,10 @@ def render_page(entries: list[dict]) -> str:
   .coverage-dot.coverage-full {{ color: #22c55e; }}
   .coverage-dot.coverage-partial {{ color: #f59e0b; }}
   .coverage-dot.coverage-unknown {{ color: var(--text-faint); }}
-  /* A bare checkmark glyph doesn't read as clickable until you hover it —
-     giving it a pill background (same visual language as .badge/.chip
-     elsewhere) makes "this is a link" obvious at rest, not just on hover. */
-  .cell-found a {{
-    display: inline-flex; align-items: center; justify-content: center;
-    color: var(--accent); background: var(--accent-soft); text-decoration: none;
-    width: 26px; height: 22px; border-radius: 999px;
-  }}
-  .cell-found a:hover {{ background: var(--accent); color: #fff; }}
-  /* Small count badge for when more than one link was classified under the
-     same resource type (e.g. two npm packages) — sits at the pill's corner
-     so it reads as "there's more here" without needing its own column. */
-  .cell-multi a {{ position: relative; }}
-  .cell-count {{
-    position: absolute; top: -5px; right: -5px; min-width: 14px; height: 14px; padding: 0 3px;
-    display: inline-flex; align-items: center; justify-content: center; border-radius: 999px;
-    background: var(--accent); color: #fff; font-size: 0.6rem; font-weight: 700; line-height: 1;
-    font-family: "JetBrains Mono", monospace;
-  }}
   /* Distinct from the name link (which goes to this system's own detail
      page): same pill treatment, but muted rather than accent-colored so it
-     doesn't read as another "resource found" indicator — this one always
-     goes straight out to the system's real docs site. */
+     doesn't read as a "resource found" indicator — this one always goes
+     straight out to the system's real docs site. */
   .cell-docs a {{
     display: inline-flex; align-items: center; justify-content: center;
     color: var(--text-muted); background: var(--surface-sunken); text-decoration: none;
@@ -543,47 +592,6 @@ def render_page(entries: list[dict]) -> str:
   }}
   .cell-docs a:hover {{ color: var(--accent); border-color: var(--accent); }}
   .cell-none {{ color: var(--text-faint); }}
-  /* Both edge columns are always pinned (sticky) — the shadow that signals
-     "there's scrolled content hidden under here" is the part that's
-     conditional, toggled by JS only when the table actually overflows its
-     container (see the has-overflow class set near the bottom of the page's
-     script). Without that, every row showed a shadow implying hidden
-     content even on a table narrow enough to need no scrolling at all. */
-  .name-cell, th[data-col="0"] {{ position: sticky; left: 0; background: var(--surface); z-index: 2; }}
-  .cell-found-count, th:last-child {{ position: sticky; right: 0; background: var(--surface); z-index: 2; }}
-  .table-wrap.has-overflow .name-cell,
-  .table-wrap.has-overflow th[data-col="0"] {{ box-shadow: 6px 0 8px -8px rgba(15,23,42,0.25); }}
-  .table-wrap.has-overflow .cell-found-count,
-  .table-wrap.has-overflow th:last-child {{ box-shadow: -6px 0 8px -8px rgba(15,23,42,0.25); }}
-  /* Small viewports: the 9 individual resource-dot columns (GitHub, npm,
-     Storybook, ...) are the whole reason this table needs horizontal scroll
-     at all — dropping them leaves System/Docs/Pages/Found, the columns
-     visitors actually scan, and each system's full resource breakdown is
-     still one tap away via the name link's detail panel. nth-child counts
-     the *rendered* column position (1-based), not the data-col attribute:
-     1=System, 2=Docs, 3=Pages, 4-12=the 9 resource columns, 13=Found. */
-  @media (max-width: 640px) {{
-    #directoryTable th:nth-child(n+4):nth-child(-n+12),
-    #directoryTable td:nth-child(n+4):nth-child(-n+12) {{ display: none; }}
-    /* With the resource columns gone, System/Docs/Pages/Found comfortably
-       fit without horizontal scroll — drop the desktop layout's min-width
-       and sticky pinning (built for a much wider table) so the sticky Found
-       column doesn't sit pinned mid-row and overlap Pages while nothing
-       actually needs scrolling into view. */
-    #directoryTable .name-cell {{ min-width: 0; }}
-    #directoryTable .name-cell, #directoryTable th[data-col="0"],
-    #directoryTable .cell-found-count, #directoryTable th:last-child {{ position: static; }}
-    #directoryTable th, #directoryTable td {{ padding: 8px 6px; }}
-    #directoryTable .name-cell-link {{ padding: 8px 6px; }}
-  }}
-  .badge {{
-    background: var(--accent-soft); color: var(--accent-soft-text); border-radius: 4px; padding: 1px 6px;
-    font-size: 0.72rem; font-family: "JetBrains Mono", monospace; font-weight: 500;
-  }}
-  th[data-col] {{ cursor: pointer; user-select: none; }}
-  th[data-col]:hover {{ color: var(--accent); }}
-  th.sorted-asc::after {{ content: " ▲"; font-size: 0.65em; }}
-  th.sorted-desc::after {{ content: " ▼"; font-size: 0.65em; }}
 
   /* [hidden] must win over this class's own "display: grid" — an author-origin
      rule always overrides the UA stylesheet's hidden-implies-none regardless
@@ -661,15 +669,19 @@ def render_page(entries: list[dict]) -> str:
 <div class="page">
   <p class="eyebrow">All Systems</p>
   <h1>Every indexed design system</h1>
-  <p class="subtitle">{len(entries_sorted)} external design systems, cross-referenced by the resources each one has published — GitHub, Storybook, Figma, tokens, and more. Regenerated weekly.</p>
+  <p class="subtitle">{len(entries_sorted)} external design systems this site has real, indexed documentation for. Looking to cross-reference which ones publish which resources (GitHub, Storybook, Figma, tokens...)? See <a href="/compare">Compare</a>.</p>
 </div>
 
-<div class="table-breakout">
+<div class="table-breakout" id="tableBreakout">
   <div class="table-toolbar">
     <input id="tableFilter" type="text" placeholder="Filter by system or company name...">
-    <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
-      <button type="button" data-view="list" class="current">{LIST_ICON_SVG} List</button>
-      <button type="button" data-view="grid">{GRID_ICON_SVG} Grid</button>
+    <div class="table-toolbar-controls">
+      {unmaintained_toggle_html}
+      <button type="button" class="sort-toggle" id="sortToggle" aria-label="Sort by name">{SORT_ICON_SVG}<span id="sortToggleLabel">Name A–Z</span></button>
+      <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
+        <button type="button" data-view="list" class="current">{LIST_ICON_SVG} List</button>
+        <button type="button" data-view="grid">{GRID_ICON_SVG} Grid</button>
+      </div>
     </div>
   </div>
 
@@ -677,11 +689,9 @@ def render_page(entries: list[dict]) -> str:
   <table id="directoryTable">
     <thead>
       <tr>
-        <th data-col="0" data-sort="text">System</th>
+        <th>System</th>
         <th>Docs</th>
-        <th data-col="2" data-sort="number">Pages</th>
-        {header_cells}
-        <th data-col="{last_col}" data-sort="number">Found</th>
+        <th>Pages</th>
       </tr>
     </thead>
     <tbody>
@@ -704,48 +714,49 @@ def render_page(entries: list[dict]) -> str:
 </aside>
 
 <script>
-  // --- Table sort ---
-  let currentSort = {{ col: null, dir: 1 }};
+  // --- Sort by name (A-Z / Z-A) — the one sort dimension this simplified
+  // page needs, applied identically to List rows and Grid cards via the
+  // data-sort-name attribute they both carry (render_simple_row/render_card)
+  // so switching views keeps the same order instead of each view having its
+  // own separate sort state. Compare (generate_compare.py) is where the
+  // denser per-resource-column sorting lives instead.
+  let sortAscending = true;
 
-  function cellValue(row, col, type) {{
-    // Sorting the System column by the visible design-system name (e.g.
-    // "Mozaic Design System"), not by row.dataset.name — that's the "Org —
-    // Name" identity string used for the name-filter box, and sorting by it
-    // instead would order rows by the org prefix, which isn't what's visually
-    // prominent in the name cell and made the sort look wrong/arbitrary.
-    if (col === 0) return row.dataset.sortName || "";
-    const cell = row.children[col];
-    if (!cell) return "";
-    if (type === "found") return cell.classList.contains("cell-found") ? 1 : 0;
-    if (type === "number") return parseFloat(cell.dataset.sortValue ?? cell.textContent) || 0;
-    return (cell.textContent || "").trim().toLowerCase();
-  }}
-
-  function sortTable(th) {{
-    const col = parseInt(th.dataset.col, 10);
-    const type = th.dataset.sort;
+  function sortByName() {{
     const tbody = document.querySelector("#directoryTable tbody");
     const rows = Array.from(tbody.querySelectorAll("tr"));
-
-    const dir = (currentSort.col === col && currentSort.dir === 1) ? -1 : 1;
-    currentSort = {{ col, dir }};
-
     rows.sort((a, b) => {{
-      const va = cellValue(a, col, type);
-      const vb = cellValue(b, col, type);
-      if (va < vb) return -1 * dir;
-      if (va > vb) return 1 * dir;
-      return 0;
+      const cmp = (a.dataset.sortName || "").localeCompare(b.dataset.sortName || "");
+      return sortAscending ? cmp : -cmp;
     }});
     rows.forEach(row => tbody.appendChild(row));
 
-    document.querySelectorAll("#directoryTable th[data-col]").forEach(h => h.classList.remove("sorted-asc", "sorted-desc"));
-    th.classList.add(dir === 1 ? "sorted-asc" : "sorted-desc");
+    const grid = document.getElementById("cardsGrid");
+    const cards = Array.from(grid.querySelectorAll(".card"));
+    cards.sort((a, b) => {{
+      const cmp = (a.dataset.sortName || "").localeCompare(b.dataset.sortName || "");
+      return sortAscending ? cmp : -cmp;
+    }});
+    cards.forEach(card => grid.appendChild(card));
   }}
 
-  document.querySelectorAll("#directoryTable th[data-col]").forEach(th => {{
-    th.addEventListener("click", () => sortTable(th));
+  const sortToggle = document.getElementById("sortToggle");
+  const sortToggleLabel = document.getElementById("sortToggleLabel");
+  sortToggle.addEventListener("click", () => {{
+    sortAscending = !sortAscending;
+    sortToggleLabel.textContent = sortAscending ? "Name A–Z" : "Name Z–A";
+    sortByName();
   }});
+
+  // --- Unmaintained toggle (see .is-unmaintained/.show-unmaintained CSS) —
+  // absent from the toolbar entirely when nothing's flagged (see
+  // unmaintained_toggle_html above), so this only wires up when it exists.
+  const unmaintainedToggle = document.getElementById("unmaintainedToggle");
+  if (unmaintainedToggle) {{
+    unmaintainedToggle.addEventListener("change", () => {{
+      document.getElementById("tableBreakout").classList.toggle("show-unmaintained", unmaintainedToggle.checked);
+    }});
+  }}
 
   // --- Name filter (plain substring match, separate from the semantic search above) —
   // applies to both the table and the card gallery below it, since they show the same data.
@@ -780,18 +791,6 @@ def render_page(entries: list[dict]) -> str:
   let savedView = "list";
   try {{ savedView = localStorage.getItem("ds-directory-view") || "list"; }} catch (err) {{ /* fine */ }}
   setView(savedView);
-
-  // --- Pinned-column shadows: only shown when the table actually overflows
-  // its container (scrollWidth > clientWidth) — a table narrow enough to
-  // need no horizontal scrolling has nothing hidden under the pinned edges,
-  // so showing the shadow there would be a false "there's more, scroll" cue.
-  const tableWrapEl = document.getElementById("listView");
-  function updateStickyShadow() {{
-    if (!tableWrapEl) return;
-    tableWrapEl.classList.toggle("has-overflow", tableWrapEl.scrollWidth > tableWrapEl.clientWidth + 1);
-  }}
-  updateStickyShadow();
-  window.addEventListener("resize", updateStickyShadow);
 
   // --- Detail side panel: previews a system's systems/<slug>.html page
   // in-place, without leaving the list. Fetches and injects that same page's

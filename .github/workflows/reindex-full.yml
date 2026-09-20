@@ -92,6 +92,16 @@ jobs:
 
       - run: pip install -r requirements-ingest.txt
 
+      # Local embeddings (see embeddings.py) download their model weights
+      # from HuggingFace on first use — cached here so up to 4 parallel
+      # shards, and every subsequent scheduled run, don't each re-download
+      # the same ~130MB.
+      - name: Cache local embedding model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: huggingface-${{ hashFiles('config.py') }}
+
       # ingest.py --all always force-crawls regardless of --force (see its
       # own comment on that) — there used to be a workflow_dispatch `force`
       # input here that did nothing whatsoever; removed rather than left as
@@ -100,7 +110,6 @@ jobs:
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           rm -f shard_touched.json
           python ingest.py --all --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
@@ -174,6 +183,7 @@ jobs:
           python generate_security_txt.py
           python generate_robots_txt.py
           python generate_directory.py
+          python generate_compare.py
           python generate_components.py
           python generate_systems.py
           # sitemap.xml must run AFTER components/patterns/foundations are
@@ -204,7 +214,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json components patterns foundations systems .well-known robots.txt
+          git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html compare.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json dead_links.json components patterns foundations systems .well-known robots.txt
           if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           if ! git diff --cached --quiet; then
             git commit -m "Auto-update discovered resources and directory page [skip ci]"

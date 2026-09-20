@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "line-line-design-system",
+  "organization": "LINE",
+  "design_system": "LINE Design System",
+  "full_name": "LINE — LINE Design System",
+  "start_urls": [
+    "https://designsystem.line.me/"
+  ],
+  "detail_url": "/systems/line-line-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T20:27:55+00:00",
+  "last_modified": "Wed, 26 Feb 2025 09:02:07 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://designsystem.line.me/",
+      "title": "LINE — LINE Design System"
+    }
+  ]
+}

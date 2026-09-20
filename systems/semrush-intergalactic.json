@@ -1,0 +1,641 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "semrush-intergalactic",
+  "organization": "Semrush",
+  "design_system": "Intergalactic",
+  "full_name": "Semrush — Intergalactic",
+  "start_urls": [
+    "https://developer.semrush.com/intergalactic/"
+  ],
+  "detail_url": "/systems/semrush-intergalactic",
+  "pages_indexed": 148,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T12:46:11+00:00",
+  "last_modified": "Thu, 10 Sep 2026 13:48:17 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/semrush/intergalactic"
+    ],
+    "icons": [
+      "https://developer.semrush.com/intergalactic/style/icon/icon"
+    ],
+    "agent_instructions": [
+      "https://developer.semrush.com/llms.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "exemplars": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 184,
+    "last_pushed": "2026-09-18T10:02:50Z"
+  },
+  "npm_meta": {
+    "latest_version": "1.1.0",
+    "weekly_downloads": 43
+  },
+  "indexed_pages": [
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/accordion/accordion",
+      "title": "Accordion | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/accordion/accordion-a11y",
+      "title": "Accordion: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/accordion/accordion-api",
+      "title": "Accordion: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/accordion/accordion-changelog",
+      "title": "Accordion: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/accordion/accordion-code",
+      "title": "Accordion: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/badge/badge",
+      "title": "Badge | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/badge/badge-a11y",
+      "title": "Badge: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/badge/badge-api",
+      "title": "Badge: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/badge/badge-changelog",
+      "title": "Badge: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/badge/badge-code",
+      "title": "Badge: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/base-trigger/base-trigger",
+      "title": "BaseTrigger | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/base-trigger/base-trigger-a11y",
+      "title": "BaseTrigger: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/base-trigger/base-trigger-api",
+      "title": "BaseTrigger: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/base-trigger/base-trigger-changelog",
+      "title": "BaseTrigger: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/base-trigger/base-trigger-code",
+      "title": "BaseTrigger: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/breadcrumbs/breadcrumbs",
+      "title": "Breadcrumbs | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/breadcrumbs/breadcrumbs-a11y",
+      "title": "Breadcrumbs: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/breadcrumbs/breadcrumbs-api",
+      "title": "Breadcrumbs: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/breadcrumbs/breadcrumbs-changelog",
+      "title": "Breadcrumbs: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/breadcrumbs/breadcrumbs-code",
+      "title": "Breadcrumbs: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/bug-reporting/report-bug/report-bug",
+      "title": "Bug reporting | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/bulk-textarea/bulk-textarea",
+      "title": "BulkTextarea | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/bulk-textarea/bulk-textarea-a11y",
+      "title": "BulkTextarea: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/bulk-textarea/bulk-textarea-api",
+      "title": "BulkTextarea: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/bulk-textarea/bulk-textarea-changelog",
+      "title": "BulkTextarea: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/bulk-textarea/bulk-textarea-code",
+      "title": "BulkTextarea: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/button/button",
+      "title": "Button | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/button/button-a11y",
+      "title": "Button: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/button/button-api",
+      "title": "Button: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/button/button-changelog",
+      "title": "Button: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/button/button-code",
+      "title": "Button: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/card/card",
+      "title": "Card | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/card/card-a11y",
+      "title": "Card: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/card/card-api",
+      "title": "Card: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/card/card-changelog",
+      "title": "Card: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/card/card-code",
+      "title": "Card: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/carousel/carousel",
+      "title": "Carousel | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/carousel/carousel-a11y",
+      "title": "Carousel: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/carousel/carousel-api",
+      "title": "Carousel: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/carousel/carousel-changelog",
+      "title": "Carousel: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/carousel/carousel-code",
+      "title": "Carousel: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/checkbox/checkbox",
+      "title": "Checkbox | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/checkbox/checkbox-a11y",
+      "title": "Checkbox: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/checkbox/checkbox-api",
+      "title": "Checkbox: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/checkbox/checkbox-changelog",
+      "title": "Checkbox: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/checkbox/checkbox-code",
+      "title": "Checkbox: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/color-picker/color-picker",
+      "title": "ColorPicker | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/color-picker/color-picker-a11y",
+      "title": "ColorPicker: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/color-picker/color-picker-api",
+      "title": "ColorPicker: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/color-picker/color-picker-changelog",
+      "title": "ColorPicker: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/color-picker/color-picker-code",
+      "title": "ColorPicker: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/counter/counter",
+      "title": "Counter | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/counter/counter-a11y",
+      "title": "Counter: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/counter/counter-api",
+      "title": "Counter: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/counter/counter-changelog",
+      "title": "Counter: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/counter/counter-code",
+      "title": "Counter: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/date-picker/date-picker",
+      "title": "DatePicker | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/date-picker/date-picker-a11y",
+      "title": "DatePicker: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/date-picker/date-picker-api",
+      "title": "DatePicker: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/date-picker/date-picker-changelog",
+      "title": "DatePicker: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/date-picker/date-picker-code",
+      "title": "DatePicker: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/divider/divider",
+      "title": "Divider | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/divider/divider-a11y",
+      "title": "Divider: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/divider/divider-api",
+      "title": "Divider: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/divider/divider-changelog",
+      "title": "Divider: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/divider/divider-code",
+      "title": "Divider: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dot/dot",
+      "title": "Dot | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dot/dot-a11y",
+      "title": "Dot: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dot/dot-api",
+      "title": "Dot: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dot/dot-changelog",
+      "title": "Dot: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dot/dot-code",
+      "title": "Dot: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/drag-and-drop/drag-and-drop",
+      "title": "Drag and drop | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/drag-and-drop/drag-and-drop-a11y",
+      "title": "Drag and drop: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/drag-and-drop/drag-and-drop-api",
+      "title": "Drag and drop: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/drag-and-drop/drag-and-drop-changelog",
+      "title": "Drag and drop: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/drag-and-drop/drag-and-drop-code",
+      "title": "Drag and drop: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown/dropdown",
+      "title": "Dropdown | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown/dropdown-a11y",
+      "title": "Dropdown: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown/dropdown-api",
+      "title": "Dropdown: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown/dropdown-changelog",
+      "title": "Dropdown: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown/dropdown-code",
+      "title": "Dropdown: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown-menu/dropdown-menu",
+      "title": "DropdownMenu | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown-menu/dropdown-menu-a11y",
+      "title": "DropdownMenu: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown-menu/dropdown-menu-api",
+      "title": "DropdownMenu: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown-menu/dropdown-menu-changelog",
+      "title": "DropdownMenu: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/dropdown-menu/dropdown-menu-code",
+      "title": "DropdownMenu: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/ellipsis/ellipsis-api",
+      "title": "Ellipsis: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/ellipsis/ellipsis-changelog",
+      "title": "Ellipsis: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/ellipsis/ellipsis-code",
+      "title": "Ellipsis: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feature-popover/feature-popover",
+      "title": "FeaturePopover | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feature-popover/feature-popover-a11y",
+      "title": "FeaturePopover: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feature-popover/feature-popover-api",
+      "title": "FeaturePopover: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feature-popover/feature-popover-changelog",
+      "title": "FeaturePopover: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feature-popover/feature-popover-code",
+      "title": "FeaturePopover: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feedback-form/feedback-form-a11y",
+      "title": "Feedback: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feedback-form/feedback-form-api",
+      "title": "Feedback: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feedback-form/feedback-form-changelog",
+      "title": "Feedback: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feedback-form/feedback-form-code",
+      "title": "Feedback: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/feedback-form/feedback-form",
+      "title": "FeedbackForm | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/filter-trigger/filter-trigger",
+      "title": "FilterTrigger | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/filter-trigger/filter-trigger-a11y",
+      "title": "FilterTrigger: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/filter-trigger/filter-trigger-api",
+      "title": "FilterTrigger: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/filter-trigger/filter-trigger-changelog",
+      "title": "FilterTrigger: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/filter-trigger/filter-trigger-code",
+      "title": "FilterTrigger: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/flags/flags",
+      "title": "Flags | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/flags/flags-a11y",
+      "title": "Flags: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/flags/flags-api",
+      "title": "Flags: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/flags/flags-changelog",
+      "title": "Flags: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/fullscreen-modal/fullscreen-modal",
+      "title": "FullscreenModal | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/fullscreen-modal/fullscreen-modal-a11y",
+      "title": "FullscreenModal: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/fullscreen-modal/fullscreen-modal-api",
+      "title": "FullscreenModal: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/fullscreen-modal/fullscreen-modal-changelog",
+      "title": "FullscreenModal: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/fullscreen-modal/fullscreen-modal-code",
+      "title": "FullscreenModal: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-edit/inline-edit",
+      "title": "InlineEdit | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-edit/inline-edit-a11y",
+      "title": "InlineEdit: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-edit/inline-edit-api",
+      "title": "InlineEdit: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-edit/inline-edit-changelog",
+      "title": "InlineEdit: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-edit/inline-edit-code",
+      "title": "InlineEdit: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-input/inline-input",
+      "title": "InlineInput | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-input/inline-input-a11y",
+      "title": "InlineInput: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-input/inline-input-api",
+      "title": "InlineInput: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-input/inline-input-changelog",
+      "title": "InlineInput: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/inline-input/inline-input-code",
+      "title": "InlineInput: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input/input-a11y",
+      "title": "Input: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input/input-changelog",
+      "title": "Input: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-mask/input-mask",
+      "title": "InputMask | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-mask/input-mask-a11y",
+      "title": "InputMask: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-mask/input-mask-api",
+      "title": "InputMask: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-mask/input-mask-changelog",
+      "title": "InputMask: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-mask/input-mask-code",
+      "title": "InputMask: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-number/input-number",
+      "title": "InputNumber & InputRange | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-number/input-number-a11y",
+      "title": "InputNumber & InputRange: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-number/input-number-api",
+      "title": "InputNumber & InputRange: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-number/input-number-changelog",
+      "title": "InputNumber & InputRange: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-number/input-number-code",
+      "title": "InputNumber & InputRange: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-phone/input-phone",
+      "title": "InputPhone | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-phone/input-phone-a11y",
+      "title": "InputPhone: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-phone/input-phone-code",
+      "title": "InputPhone: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-tags/input-tags",
+      "title": "InputTags | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-tags/input-tags-a11y",
+      "title": "InputTags: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-tags/input-tags-api",
+      "title": "InputTags: API | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-tags/input-tags-changelog",
+      "title": "InputTags: Changelog | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/input-tags/input-tags-code",
+      "title": "InputTags: Examples | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic",
+      "title": "Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/link/link-a11y",
+      "title": "Link: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/modal/modal-a11y",
+      "title": "Modal: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/intergalactic/components/notice-bubble/notice-bubble-a11y",
+      "title": "NoticeBubble: A11y | Intergalactic Design System"
+    },
+    {
+      "url": "https://developer.semrush.com/llms.txt",
+      "title": "Semrush — Intergalactic — llms.txt"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "backbase-design-system",
+  "organization": "Backbase",
+  "design_system": "Design system",
+  "full_name": "Backbase — Design system",
+  "start_urls": [
+    "https://designsystem.backbase.com/v2/web-components/"
+  ],
+  "detail_url": "/systems/backbase-design-system",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:19:24+00:00",
+  "last_modified": "Thu, 17 Sep 2026 21:06:58 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://designsystem.backbase.com/v2/web-components/",
+      "title": "Backbase — Design system"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-17T02:22:44+00:00",
+  "generated_at": "2026-09-19T21:58:10+00:00",
   "id": "mantine",
   "organization": null,
   "design_system": "Mantine",
@@ -9,67 +9,243 @@
     "https://mantine.dev/"
   ],
   "detail_url": "/systems/mantine",
-  "pages_indexed": 8,
+  "pages_indexed": 38,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:45:23+00:00",
+  "last_checked": "2026-09-19T00:15:48+00:00",
   "last_modified": "Wed, 09 Sep 2026 13:26:36 GMT",
-  "sitemap_last_modified": null,
+  "sitemap_last_modified": "2026-09-09T13:26:28.891Z",
   "resources": {
     "github": [
-      "https://github.com/mantinedev/next-pages-template",
-      "https://github.com/tylim88/Tanstack-Start-Mantine-Tailwind-Template",
-      "https://github.com/KennethAduan/kenstack-bun-nextjs-mantine/",
-      "https://github.com/mantinedev/redwood-template",
-      "https://github.com/doiska/waku-mantine-starter",
-      "https://github.com/dipiash/nx-vite-react-ts-mantine-boilerplate",
-      "https://github.com/auronvila/mantine-template",
-      "https://github.com/gfazioli/next-app-nextra-template",
-      "https://github.com/mantinedev/next-app-template",
-      "https://github.com/paralect/ship",
-      "https://github.com/ynssenem/next-mantine-turborepo",
-      "https://github.com/mantinedev/next-vanilla-extract-template",
-      "https://github.com/gfazioli/next-app-fumadocs-template",
-      "https://github.com/AshutoshDash1999/nextjs-mantine-boilerplate",
-      "https://github.com/LewisDamy/bun-vite-template",
-      "https://github.com/WillKirkmanM/mantine-t3-template",
-      "https://github.com/saulotarsobc/sc-electron-boilerplate",
-      "https://github.com/mantinedev/vite-template",
-      "https://github.com/LanVukusic/mantine-supabase-template",
-      "https://github.com/mantinedev/vite-vanilla-extract-template",
-      "https://github.com/mantinedev/vite-min-template",
-      "https://github.com/mantinedev/next-pages-min-template",
       "https://github.com/mantinedev/gatsby-template",
+      "https://github.com/mantinedev/next-pages-template",
+      "https://github.com/auronvila/mantine-template",
+      "https://github.com/mantinedev/redwood-template",
+      "https://github.com/mantinedev/vite-vanilla-extract-template",
+      "https://github.com/doiska/waku-mantine-starter",
+      "https://github.com/mantinedev/vite-template",
+      "https://github.com/AshutoshDash1999/nextjs-mantine-boilerplate",
+      "https://github.com/mantinedev/vite-min-template",
       "https://github.com/songkeys/next-app-mantine-tailwind-template",
-      "https://github.com/mantinedev/next-app-min-template",
+      "https://github.com/mantinedev/next-app-template",
+      "https://github.com/mantinedev/next-vanilla-extract-template",
+      "https://github.com/ynssenem/next-mantine-turborepo",
       "https://github.com/samui-build/react-router-mantine",
-      "https://github.com/mantinedev/extension-template",
-      "https://github.com/mantinedev/mantine"
+      "https://github.com/WillKirkmanM/mantine-t3-template",
+      "https://github.com/KennethAduan/kenstack-bun-nextjs-mantine",
+      "https://github.com/tylim88/Tanstack-Start-Mantine-Tailwind-Template",
+      "https://github.com/mantinedev/next-pages-min-template",
+      "https://github.com/mantinedev/mantine",
+      "https://github.com/mantinedev/oxc-config-mantine",
+      "https://github.com/dipiash/nx-vite-react-ts-mantine-boilerplate",
+      "https://github.com/mantinedev/next-app-min-template",
+      "https://github.com/LanVukusic/mantine-supabase-template"
     ],
     "storybook": [
-      "https://mantine.dev/guides/storybook/",
-      "https://storybook.js.org/"
+      "https://storybook.js.org/",
+      "https://mantine.dev/guides/storybook"
     ],
     "npm": [
+      "https://www.npmjs.com/package/@mantine/charts",
       "https://www.npmjs.com/package/@mantine/hooks",
-      "https://www.npmjs.com/package/@mantine/form"
+      "https://www.npmjs.com/package/@mantine/core"
+    ],
+    "icons": [
+      "https://mantine.dev/guides/icons"
     ],
     "agent_instructions": [
       "https://mantine.dev/llms.txt",
       "https://mantine.dev/llms-full.txt"
     ]
   },
-  "unverified_resources": {},
-  "content_signals": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/saulotarsobc/sc-electron-boilerplate",
+      "https://github.com/nvm-sh/nvm",
+      "https://github.com/LewisDamy/bun-vite-template",
+      "https://github.com/paralect/ship",
+      "https://github.com/gfazioli/next-app-nextra-template",
+      "https://github.com/gfazioli/next-app-fumadocs-template"
+    ],
+    "npm": [
+      "https://www.npmjs.com/package/oxlint",
+      "https://www.npmjs.com/package/oxfmt",
+      "https://www.npmjs.com/package/syncpack"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "validation_loop": true,
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular",
+      "Svelte"
+    ]
+  },
   "github_meta": {
-    "license": "MIT",
-    "stars": 512,
-    "last_pushed": "2026-09-13T07:14:32Z"
+    "license": null,
+    "stars": 17,
+    "last_pushed": "2026-06-10T13:37:00Z"
   },
   "npm_meta": {
     "latest_version": "9.6.1",
-    "weekly_downloads": 1960761
+    "last_published": "2026-09-09T13:19:27.837Z",
+    "weekly_downloads": 362533
   },
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://mantine.dev/about",
+      "title": "About Mantine | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/core/accordion",
+      "title": "Accordion | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/core/action-bar",
+      "title": "ActionBar | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/core/action-icon",
+      "title": "ActionIcon | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/core/affix",
+      "title": "Affix | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/core/alert",
+      "title": "Alert | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/core/alpha-slider",
+      "title": "AlphaSlider | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/area-chart",
+      "title": "AreaChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/bar-chart",
+      "title": "BarChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/bars-list",
+      "title": "BarsList | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/browser-support",
+      "title": "Browser support | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/bubble-chart",
+      "title": "BubbleChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/bullet-chart",
+      "title": "BulletChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/candlestick-chart",
+      "title": "CandlestickChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/composite-chart",
+      "title": "CompositeChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/contribute",
+      "title": "Contributing to Mantine | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/donut-chart",
+      "title": "DonutChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/funnel-chart",
+      "title": "FunnelChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/gauge-chart",
+      "title": "GaugeChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/getting-started",
+      "title": "Getting started | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/getting-started",
+      "title": "Getting started | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/heatmap",
+      "title": "Heatmap | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/line-chart",
+      "title": "LineChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/",
+      "title": "Mantine"
+    },
+    {
+      "url": "https://mantine.dev/colors-generator",
+      "title": "Mantine"
+    },
+    {
+      "url": "https://mantine.dev/llms.txt",
+      "title": "Mantine — llms.txt"
+    },
+    {
+      "url": "https://mantine.dev/charts/matrix-chart",
+      "title": "MatrixChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/oxc-config-mantine",
+      "title": "oxc-config-mantine | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/pie-chart",
+      "title": "PieChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/radar-chart",
+      "title": "RadarChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/radial-bar-chart",
+      "title": "RadialBarChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/sankey-chart",
+      "title": "SankeyChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/scatter-chart",
+      "title": "ScatterChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/sparkline",
+      "title": "Sparkline | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/sunburst-chart",
+      "title": "SunburstChart | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/support",
+      "title": "Support | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/treemap",
+      "title": "Treemap | Mantine"
+    },
+    {
+      "url": "https://mantine.dev/charts/waffle-chart",
+      "title": "WaffleChart | Mantine"
+    }
+  ]
 }

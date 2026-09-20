@@ -1,0 +1,39 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "shizen-design-system",
+  "organization": null,
+  "design_system": "Shizen Design System",
+  "full_name": "Shizen Design System",
+  "start_urls": [
+    "https://csskitsune.com"
+  ],
+  "detail_url": "/systems/shizen-design-system",
+  "pages_indexed": 2,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:51:56+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "agent_instructions": [
+      "https://csskitsune.com/llms.txt",
+      "https://csskitsune.com/llms-full.txt"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://csskitsune.com/llms.txt",
+      "title": "Shizen Design System — llms.txt"
+    },
+    {
+      "url": "https://csskitsune.com/llms-full.txt",
+      "title": "Shizen Design System — llms.txt"
+    }
+  ]
+}

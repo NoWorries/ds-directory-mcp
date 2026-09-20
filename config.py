@@ -1,44 +1,39 @@
 import os
 
 from dotenv import load_dotenv
+from qdrant_client import QdrantClient
 
 load_dotenv()
 
 # .get(), not os.environ[...] — this module also supplies CHUNK_SIZE/
-# CHUNK_OVERLAP/CRAWL_DELAY_SECONDS to code paths that never touch Qdrant or
-# the embedding API at all (merge_shards.py, dry_run_submission.py's crawl-
-# only dry run, approve_submission.py's registry read/write) via ingest.py's/
-# chunking.py's module-level imports. A hard-required os.environ[...] here
-# meant merely *importing* those modules crashed with a KeyError in any
-# workflow step that (correctly, deliberately) didn't set these secrets —
-# e.g. the merge job and the sandboxed dry-run check, neither of which should
-# need live Qdrant/embedding credentials in the first place. The real usage
-# sites (embeddings.py, ingest.py's actual crawl+embed, server.py) still fail
-# clearly/loudly the moment they're actually called with these unset — this
-# only defers the failure from "unrelated import" to "actual use", which is
-# strictly better.
+# CHUNK_OVERLAP/CRAWL_DELAY_SECONDS to code paths that never touch Qdrant at
+# all (merge_shards.py, dry_run_submission.py's crawl-only dry run, approve_
+# submission.py's registry read/write) via ingest.py's/chunking.py's
+# module-level imports. A hard-required os.environ[...] here meant merely
+# *importing* those modules crashed with a KeyError in any workflow step
+# that (correctly, deliberately) didn't set these secrets — e.g. the merge
+# job and the sandboxed dry-run check, neither of which should need a live
+# Qdrant connection in the first place. The real usage sites (ingest.py's
+# actual crawl+embed, server.py) still fail clearly/loudly the moment
+# they're actually called with these unset — this only defers the failure
+# from "unrelated import" to "actual use", which is strictly better.
+# (Embeddings themselves need no such credential at all now — see
+# embeddings.py — so this concern is Qdrant-only these days.)
 QDRANT_URL = os.environ.get("QDRANT_URL")
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
-# Switched from Jina to Google's Gemini Embedding API (see embeddings.py) —
-# Jina's free tier ran out mid-session with no warning short of the account
-# dashboard, and Gemini's free tier (1,500 requests/minute, no credit card)
-# is a better fit for this project's actual scale.
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 QDRANT_COLLECTION = os.environ.get("QDRANT_COLLECTION", "design_system_index")
-EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "gemini-embedding-001")
-# gemini-embedding-001's NATIVE output size — confirmed live: an attempt to
-# request a truncated 768-dim output via embedContentConfig.outputDimension-
-# ality was silently ignored (Qdrant rejected every single upsert with
-# "expected dim: 768, got 3072", meaning the API returned full-size vectors
-# regardless of that parameter). Rather than keep guessing at the exact
-# request shape Google wants for truncation with no way to test it live,
-# this just uses the model's real native size — 4x the storage of a
-# truncated 768-dim vector, but trivial at this project's scale (a few
-# thousand chunks total) and well within Qdrant's free tier either way.
-EMBEDDING_DIM = int(os.environ.get("EMBEDDING_DIM", "3072"))
-
-GEMINI_EMBED_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{EMBEDDING_MODEL}:batchEmbedContents"
+# Local, self-hosted embeddings (see embeddings.py) — no API key, no request/
+# token quota, no billing, after burning through two different cloud
+# providers' free tiers in one session (Jina's tokens ran out mid-run;
+# Gemini's 100-RPM/1,000-RPD caps were blown past by a handful of parallel
+# reindex shards). bge-small-en-v1.5 specifically: small enough (~130MB) to
+# run on both a GitHub Actions runner (ingest) and Render's free-tier query
+# server (server.py's embed_query() calls), English-only docs being exactly
+# this project's use case so the larger multilingual models (BGE-M3, Nomic)
+# buy nothing here.
+EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
+EMBEDDING_DIM = int(os.environ.get("EMBEDDING_DIM", "384"))
 
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 100
@@ -50,3 +45,13 @@ CRAWL_DELAY_SECONDS = 1.0
 # Issues: write is enough; classic PATs need the "repo" scope.
 GITHUB_ISSUE_TOKEN = os.environ.get("GITHUB_ISSUE_TOKEN")
 GITHUB_REPO = os.environ.get("GITHUB_REPO", "NoWorries/ds-directory-mcp")
+
+
+def get_qdrant_client() -> QdrantClient:
+    """QdrantClient(url=QDRANT_URL, ...) alone defaults its REST calls to
+    port 6333 whenever QDRANT_URL has no explicit port — confirmed live,
+    that gets connection-reset on a network that otherwise handles plain
+    HTTPS on 443 (which is the same API, also served by Qdrant Cloud) just
+    fine. Forcing port=443 everywhere sidesteps that class of network/
+    firewall problem instead of only fixing it on one machine."""
+    return QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, port=443)

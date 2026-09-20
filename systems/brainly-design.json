@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "brainly-design",
+  "organization": "Brainly",
+  "design_system": "Design",
+  "full_name": "Brainly — Design",
+  "start_urls": [
+    "https://design.brainly.com/"
+  ],
+  "detail_url": "/systems/brainly-design",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T21:55:12+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design.brainly.com/",
+      "title": "Brainly — Design"
+    }
+  ]
+}

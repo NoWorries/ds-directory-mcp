@@ -1,0 +1,33 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "seek-braid-design-system",
+  "organization": "Seek",
+  "design_system": "Braid Design System",
+  "full_name": "Seek — Braid Design System",
+  "start_urls": [
+    "https://seek-oss.github.io/braid-design-system/"
+  ],
+  "detail_url": "/systems/seek-braid-design-system",
+  "pages_indexed": 7,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-15T22:47:23+00:00",
+  "last_modified": "Tue, 15 Sep 2026 19:47:14 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/seek-oss/playroom"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "MIT",
+    "stars": 4583,
+    "last_pushed": "2026-08-20T00:53:54Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": []
+}

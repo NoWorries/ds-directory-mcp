@@ -1,0 +1,223 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "mui-material-ui",
+  "organization": "MUI",
+  "design_system": "Material UI",
+  "full_name": "MUI — Material UI",
+  "start_urls": [
+    "https://mui.com/material-ui/"
+  ],
+  "detail_url": "/systems/mui-material-ui",
+  "pages_indexed": 40,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T08:05:30+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/jonatanklosko/material-ui-confirm",
+      "https://github.com/mui/material-ui",
+      "https://github.com/jcoreio/material-ui-popup-state",
+      "https://github.com/TeamWertarbyte/mdi-material-ui"
+    ],
+    "icons": [
+      "https://fontawesome.com/icons",
+      "https://mui.com/material-ui/api/icon",
+      "https://mui.com/material-ui/icons",
+      "https://fonts.google.com/icons"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/petyosi/react-virtuoso",
+      "https://github.com/moroshko/autosuggest-highlight",
+      "https://github.com/kentcdodds/match-sorter",
+      "https://github.com/gregberge/svgr",
+      "https://github.com/pmndrs/react-spring",
+      "https://github.com/necolas/normalize.css",
+      "https://github.com/bvaughn/react-window",
+      "https://github.com/reactjs/react-transition-group",
+      "https://github.com/react-grid-layout/react-draggable"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "exemplars": true,
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 366,
+    "last_pushed": "2026-04-07T09:33:09Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://mui.com/material-ui/react-app-bar",
+      "title": "App Bar React component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-backdrop",
+      "title": "Backdrop React Component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-bottom-navigation",
+      "title": "Bottom Navigation React component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-progress",
+      "title": "Circular, Linear progress React components - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-css-baseline",
+      "title": "CSS Baseline - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-click-away-listener",
+      "title": "Detect click outside React component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/customization/how-to-customize",
+      "title": "How to customize - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-image-list",
+      "title": "Image List React component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-init-color-scheme-script",
+      "title": "InitColorSchemeScript component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-link",
+      "title": "Links - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui",
+      "title": "Material UI: React components that implement Material Design"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-no-ssr",
+      "title": "No SSR React component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-number-field",
+      "title": "Number field React component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-accordion",
+      "title": "React Accordion component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-alert",
+      "title": "React Alert component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-autocomplete",
+      "title": "React Autocomplete component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-avatar",
+      "title": "React Avatar component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-badge",
+      "title": "React Badge component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-box",
+      "title": "React Box - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-breadcrumbs",
+      "title": "React Breadcrumbs component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-button",
+      "title": "React Button component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-button-group",
+      "title": "React Button Group component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-card",
+      "title": "React Card component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-checkbox",
+      "title": "React Checkbox component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-chip",
+      "title": "React Chip component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-container",
+      "title": "React Container component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-dialog",
+      "title": "React Dialog component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-divider",
+      "title": "React Divider component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-drawer",
+      "title": "React Drawer component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-floating-action-button",
+      "title": "React Floating Action Button (FAB) component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-grid",
+      "title": "React Grid component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/icons",
+      "title": "React Icon Component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-list",
+      "title": "React List component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-masonry",
+      "title": "React Masonry component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-menu",
+      "title": "React Menu component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-modal",
+      "title": "React Modal component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-pagination",
+      "title": "React Pagination component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-paper",
+      "title": "React Paper component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-popover",
+      "title": "React Popover component - Material UI"
+    },
+    {
+      "url": "https://mui.com/material-ui/react-popper",
+      "title": "React Popper component - Material UI"
+    }
+  ]
+}

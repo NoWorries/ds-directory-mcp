@@ -1,0 +1,48 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "elia-group-nova",
+  "organization": "Elia Group",
+  "design_system": "Nova",
+  "full_name": "Elia Group — Nova",
+  "start_urls": [
+    "https://nova.eliagroup.io/"
+  ],
+  "detail_url": "/systems/elia-group-nova",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:47:13+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://nova-storybook.eliagroup.io/vue",
+      "https://nova-storybook.eliagroup.io/blazor",
+      "https://nova-storybook.eliagroup.io/native",
+      "https://nova-storybook.eliagroup.io/react",
+      "https://nova-storybook.eliagroup.io/angular"
+    ],
+    "figma": [
+      "https://www.figma.com/design/3aG9ZI9nN7ecaplOPyOO55/%F0%9F%91%BE-Web---Nova-Tycho?m=auto&node-id=6975-4&t=o1tKlSJ9j3yNGs66-1"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular",
+      "Web Components"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://nova.eliagroup.io/",
+      "title": "Elia Group — Nova"
+    }
+  ]
+}

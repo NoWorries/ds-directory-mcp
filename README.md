@@ -16,16 +16,16 @@ patterns — exposed to any MCP-compatible AI assistant via one tool: `design_sy
 | Phase | Component | Free-tier service |
 |---|---|---|
 | 1 | Crawl & scrape | `requests` + `BeautifulSoup4` (local, or GitHub Actions) |
-| 1 | Embeddings | Google Gemini (`gemini-embedding-001`, 1,500 requests/min free) |
+| 1 | Embeddings | Local (`sentence-transformers`, `BAAI/bge-small-en-v1.5`) — no account, no API key |
 | 2 | Vector DB | Qdrant Cloud (1GB RAM / 4GB disk, free forever) |
 | 3 | MCP hosting | Render free web service |
 
 ## Setup
 
-1. Create a free [Qdrant Cloud](https://cloud.qdrant.io) cluster and a [Google AI Studio](https://aistudio.google.com/apikey) API key.
+1. Create a free [Qdrant Cloud](https://cloud.qdrant.io) cluster.
 2. `python -m venv .venv && source .venv/bin/activate`
-3. `pip install -r requirements.txt`
-4. `cp .env.example .env` and fill in `QDRANT_URL`, `QDRANT_API_KEY`, `GEMINI_API_KEY`.
+3. `pip install -r requirements.txt` (first run also downloads the local embedding model, ~130MB, cached after that)
+4. `cp .env.example .env` and fill in `QDRANT_URL`, `QDRANT_API_KEY`.
 
 ## Ingesting a design system
 
@@ -68,7 +68,6 @@ minutes — no always-on server needed, unlike the MCP server itself. Set these 
 
 - `QDRANT_URL`
 - `QDRANT_API_KEY`
-- `GEMINI_API_KEY`
 
 Render hosts the always-on MCP query server; GitHub Actions handles the periodic
 batch re-crawl — different lifecycles, so they're split across two free hosts.
@@ -76,10 +75,13 @@ batch re-crawl — different lifecycles, so they're split across two free hosts.
 ## Deploying (Render free tier)
 
 `render.yaml` is included — connect this repo in the Render dashboard ("New +" → "Blueprint"),
-and set `QDRANT_URL`, `QDRANT_API_KEY`, `GEMINI_API_KEY` as secrets in the service's environment
+and set `QDRANT_URL`, `QDRANT_API_KEY` as secrets in the service's environment
 settings (never commit them). Render's free tier sleeps on idle — the first request after
 a period of inactivity will be slow ("cold start"); surface a loading state for this in any
-client UI.
+client UI. It's also only 512MB RAM — untested whether that's enough headroom for
+`sentence-transformers` + the embedding model alongside the MCP server itself; if
+`embed_query()` OOMs in practice, the fix is either a smaller model or Render's
+cheapest paid tier, not a code change.
 
 ## Notes
 

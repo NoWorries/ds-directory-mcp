@@ -1,0 +1,715 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "github-primer",
+  "organization": "Github",
+  "design_system": "Primer",
+  "full_name": "Github — Primer",
+  "start_urls": [
+    "https://primer.style/"
+  ],
+  "detail_url": "/systems/github-primer",
+  "pages_indexed": 149,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T22:31:29+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": "2026-09-18T19:24:25.340Z",
+  "resources": {
+    "github": [
+      "https://github.com/github/hotkey",
+      "https://github.com/github/accessibility-champions",
+      "https://github.com/khiga8/github-a11y",
+      "https://github.com/github/accessibility",
+      "https://github.com/github/annotation-toolkit",
+      "https://github.com/github/scenarios",
+      "https://github.com/github/erblint-github",
+      "https://github.com/github/relative-time-element",
+      "https://github.com/primer/behaviors",
+      "https://github.com/github/accessibility-alt-text-bot",
+      "https://github.com/primer/octicons"
+    ],
+    "storybook": [
+      "https://primer.style/primitives/storybook",
+      "https://ui.githubapp.com/storybook",
+      "https://primer.style/react/storybook"
+    ],
+    "figma": [
+      "https://www.figma.com/file/GCvY3Qv8czRgZgvl1dG6lp",
+      "https://www.figma.com/design/YlBTqHTbdRwYQt0bfIHvGw/Interface-guidelines"
+    ],
+    "markdown_docs": [
+      "https://github.com/primer/octicons/blob/main/CONTRIBUTING.md",
+      "https://github.com/github/annotation-toolkit/blob/main/README.md",
+      "https://github.com/github/annotation-toolkit/blob/main/CONTRIBUTING.md",
+      "https://github.com/primer/react/blob/main/contributor-docs/CONTRIBUTING.md"
+    ],
+    "icons": [
+      "https://primer.style/octicons/icon/eye-closed-16",
+      "https://primer.style/octicons/icon/git-pull-request-draft-16",
+      "https://primer.style/product/getting-started/foundations/icons",
+      "https://primer.style/octicons/icon/heart-fill-16",
+      "https://primer.style/octicons/icon/check-circle-16",
+      "https://primer.style/octicons/icon/file-directory-fill-16",
+      "https://primer.style/octicons/icon/issue-opened-16",
+      "https://primer.style/octicons/icon/bookmark-16",
+      "https://primer.style/octicons/icon/rrow-right-16",
+      "https://primer.style/octicons/icon/issue-closed-16",
+      "https://primer.style/octicons/icon/bookmark-slash-16",
+      "https://primer.style/octicons/icon/git-pull-request-closed-16",
+      "https://primer.style/octicons/icon/git-merge-16",
+      "https://primer.style/octicons/icon/cloud-offline-16",
+      "https://primer.style/octicons/icon/alert-16",
+      "https://primer.style/octicons/icon/issue-reopened-16",
+      "https://primer.style/octicons/icon/bell-16",
+      "https://primer.style/octicons/icon/trash-16",
+      "https://primer.style/octicons/icon/x-16",
+      "https://primer.style/octicons/icon/info-16",
+      "https://primer.style/octicons/icon/heart-16",
+      "https://primer.style/octicons/icon/file-directory-open-fill-16",
+      "https://primer.style/octicons/icon/star-fill-16",
+      "https://primer.style/accessibility/patterns/primer-components/icons",
+      "https://primer.style/octicons/icon/logo-github-16",
+      "https://primer.style/octicons/icon/check-16",
+      "https://primer.style/octicons/icon/mark-github-16",
+      "https://primer.style/octicons/icon/issue-draft-16",
+      "https://primer.style/octicons/icon/repo-locked-16",
+      "https://primer.style/octicons/icon/cloud-16",
+      "https://primer.style/octicons/icon/triangle-down-16",
+      "https://primer.style/octicons/icon/git-pull-request-16",
+      "https://primer.style/octicons/icon/repo-16",
+      "https://primer.style/octicons/icon/git-commit-16",
+      "https://primer.style/octicons/icon/lock-16",
+      "https://primer.style/octicons/icon/x-circle-fill-16",
+      "https://primer.style/octicons/icon/star-16",
+      "https://primer.style/octicons/icon/pencil-16",
+      "https://primer.style/octicons/icon/eye-16",
+      "https://primer.style/octicons/icon/bell-slash-16"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/khiga8/alt-text-slack-bot",
+      "https://github.com/settings/accessibility",
+      "https://github.com/settings/appearance",
+      "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y",
+      "https://github.com/GoogleChrome/lighthouse"
+    ]
+  },
+  "content_signals": {
+    "governance_model": true,
+    "dark_mode": true,
+    "exemplars": true,
+    "validation_loop": true,
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "prohibition": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "MIT",
+    "stars": 3298,
+    "last_pushed": "2026-09-11T14:59:20Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://primer.style/product/components/action-bar/accessibility",
+      "title": "Accessibility - ActionBar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-list/accessibility",
+      "title": "Accessibility - ActionList | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-menu/accessibility",
+      "title": "Accessibility - ActionMenu | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/anchored-overlay/acessibility",
+      "title": "Accessibility - AnchoredOverlay | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/banner/accessibility",
+      "title": "Accessibility - Banner | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/branch-name/accessibility",
+      "title": "Accessibility - BranchName | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/breadcrumbs/accessibility",
+      "title": "Accessibility - Breadcrumbs | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/button/accessibility",
+      "title": "Accessibility - Button | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/button-group/accessibility",
+      "title": "Accessibility - ButtonGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/card/accessibility",
+      "title": "Accessibility - Card | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/checkbox/accessibility",
+      "title": "Accessibility - Checkbox | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/checkbox-group/accessibility",
+      "title": "Accessibility - CheckboxGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/confirmation-dialog/accessibility",
+      "title": "Accessibility - ConfirmationDialog | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/counter-label/accessibility",
+      "title": "Accessibility - CounterLabel | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/data-table/accessibility",
+      "title": "Accessibility - DataTable | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/details/accessibility",
+      "title": "Accessibility - Details | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/dialog/accessibility",
+      "title": "Accessibility - Dialog | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/form-control/accessibility",
+      "title": "Accessibility - FormControl | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/heading/accessibility",
+      "title": "Accessibility - Heading | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/icon-button/accessibility",
+      "title": "Accessibility - IconButton | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/label/accessibility",
+      "title": "Accessibility - Label | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/label-group/accessibility",
+      "title": "Accessibility - LabelGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/link/accessibility",
+      "title": "Accessibility - Link | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/nav-list/accessibility",
+      "title": "Accessibility - NavList | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/overlay/accessibility",
+      "title": "Accessibility - Overlay | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/page-header/accessibility",
+      "title": "Accessibility - PageHeader | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/page-layout/accessibility",
+      "title": "Accessibility - PageLayout | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/pagination/accessibility",
+      "title": "Accessibility - Pagination | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/popover/accessibility",
+      "title": "Accessibility - Popover | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/progress-bar/accessibility",
+      "title": "Accessibility - ProgressBar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/radio/accessibility",
+      "title": "Accessibility - Radio | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/radio-group/accessibility",
+      "title": "Accessibility - RadioGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/relative-time/accessibility",
+      "title": "Accessibility - RelativeTime | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/segmented-control/accessibility",
+      "title": "Accessibility - SegmentedControl | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/select/accessibility",
+      "title": "Accessibility - Select | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/select-panel/accessibility",
+      "title": "Accessibility - SelectPanel | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/skeleton-avatar/accessibility",
+      "title": "Accessibility - SkeletonAvatar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/skeleton-box/accessibility",
+      "title": "Accessibility - SkeletonBox | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/skeleton-text/accessibility",
+      "title": "Accessibility - SkeletonText | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/spinner/accessibility",
+      "title": "Accessibility - Spinner | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/foundations/accessibility-at-github",
+      "title": "Accessibility at GitHub | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/tools-and-resources/extensions-and-tools",
+      "title": "Accessibility extensions and tools | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/foundations",
+      "title": "Accessibility Foundations | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/foundations/accessibility-fundamentals",
+      "title": "Accessibility fundamentals | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/accessible-notifications-and-messages",
+      "title": "Accessible notifications and messages | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-bar",
+      "title": "ActionBar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-list",
+      "title": "ActionList | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-menu",
+      "title": "ActionMenu | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/alternative-text-for-images",
+      "title": "Alternative text for images | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/anchored-overlay",
+      "title": "AnchoredOverlay | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/tools-and-resources/annotation-toolkit",
+      "title": "Annotation Toolkit | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/app-like-web-experiences",
+      "title": "App-like web experiences | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/autocomplete",
+      "title": "Autocomplete | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/avatar",
+      "title": "Avatar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/avatar-stack",
+      "title": "AvatarStack | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/banner",
+      "title": "Banner | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/blankslate",
+      "title": "Blankslate | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/branch-name",
+      "title": "BranchName | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/breadcrumbs",
+      "title": "Breadcrumbs | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/button",
+      "title": "Button | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/button-group",
+      "title": "ButtonGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/primer-components/descriptive-buttons",
+      "title": "Buttons | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/card",
+      "title": "Card | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/checkbox",
+      "title": "Checkbox | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/checkbox-group",
+      "title": "CheckboxGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/tools-and-resources/checklists",
+      "title": "Checklists | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/circle-badge",
+      "title": "CircleBadge | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/color-considerations",
+      "title": "Color considerations | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components",
+      "title": "Components | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/confirmation-dialog",
+      "title": "ConfirmationDialog | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/copilot-accessibility-practices",
+      "title": "Copilot Accessibility Practices | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/foundations/copilot-principles",
+      "title": "Copilot Accessibility Principles | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/counter-label",
+      "title": "CounterLabel | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/data-table",
+      "title": "DataTable | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance",
+      "title": "Design guidance | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/tools-and-resources/checklists/designer-checklist",
+      "title": "Designer Checklist | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/details",
+      "title": "Details | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/dialog",
+      "title": "Dialog | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/drag-and-drop",
+      "title": "Drag and Drop | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/tools-and-resources/checklists/engineering-checklist",
+      "title": "Engineering Checklist | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/focus-management",
+      "title": "Focus management | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/form-control",
+      "title": "FormControl | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/tools-and-resources",
+      "title": "GitHub tools and resources | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-bar/guidelines",
+      "title": "Guidelines - ActionBar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-list/guidelines",
+      "title": "Guidelines - ActionList | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/action-menu/guidelines",
+      "title": "Guidelines - ActionMenu | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/autocomplete/guidelines",
+      "title": "Guidelines - Autocomplete | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/banner/guidelines",
+      "title": "Guidelines - Banner | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/blankslate/guidelines",
+      "title": "Guidelines - Blankslate | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/breadcrumbs/guidelines",
+      "title": "Guidelines - Breadcrumbs | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/button/guidelines",
+      "title": "Guidelines - Button | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/button-group/guidelines",
+      "title": "Guidelines - ButtonGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/checkbox-group/guidelines",
+      "title": "Guidelines - CheckboxGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/confirmation-dialog/guidelines",
+      "title": "Guidelines - ConfirmationDialog | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/data-table/guidelines",
+      "title": "Guidelines - DataTable | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/dialog/guidelines",
+      "title": "Guidelines - Dialog | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/icon-button/guidelines",
+      "title": "Guidelines - IconButton | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/link/guidelines",
+      "title": "Guidelines - Link | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/nav-list/guidlines",
+      "title": "Guidelines - NavList | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/page-header/guidelines",
+      "title": "Guidelines - PageHeader | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/pagination/guidelines",
+      "title": "Guidelines - Pagination | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/popover/guidelines",
+      "title": "Guidelines - Popover | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/radio-group/guidelines",
+      "title": "Guidelines - RadioGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/relative-time/guidelines",
+      "title": "Guidelines - RelativeTime | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/segmented-control/guidelines",
+      "title": "Guidelines - SegmentedControl | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/select/guidelines",
+      "title": "Guidelines - Select | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/select-panel/guidelines",
+      "title": "Guidelines - SelectPanel | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/heading",
+      "title": "Heading | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/primer-components/headings",
+      "title": "Headings | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/icon-button",
+      "title": "IconButton | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/primer-components/icons",
+      "title": "Icons | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/inline-message",
+      "title": "InlineMessage | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/keybinding-hint",
+      "title": "KeybindingHint | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/keyboard-shortcuts",
+      "title": "Keyboard shortcuts | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/label",
+      "title": "Label | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/label-group",
+      "title": "LabelGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/link",
+      "title": "Link | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/links-and-buttons",
+      "title": "Links and buttons | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/primer-components/links",
+      "title": "Links | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/tools-and-resources/checklists/mobile-checklist",
+      "title": "Mobile Checklist | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/motion-and-animation",
+      "title": "Motion and animation | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/nav-list",
+      "title": "NavList | Primer"
+    },
+    {
+      "url": "https://primer.style/octicons/code",
+      "title": "Octicons | Primer"
+    },
+    {
+      "url": "https://primer.style/octicons/design-guidelines",
+      "title": "Octicons | Primer"
+    },
+    {
+      "url": "https://primer.style/octicons/usage-guidelines",
+      "title": "Octicons | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/overlay",
+      "title": "Overlay | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/page-header",
+      "title": "PageHeader | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/page-layout",
+      "title": "PageLayout | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/pagination",
+      "title": "Pagination | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns",
+      "title": "Patterns | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/placeholders",
+      "title": "Placeholders | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/popover",
+      "title": "Popover | Primer"
+    },
+    {
+      "url": "https://primer.style/",
+      "title": "Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/primer-components",
+      "title": "Primer components | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/progress-bar",
+      "title": "ProgressBar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/radio",
+      "title": "Radio | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/radio-group",
+      "title": "RadioGroup | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/relative-time",
+      "title": "RelativeTime | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/foundations/scenarios-framework",
+      "title": "Scenarios Framework | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/segmented-control",
+      "title": "SegmentedControl | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/select",
+      "title": "Select | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/select-panel",
+      "title": "SelectPanel | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/semantic-html-and-aria",
+      "title": "Semantic HTML and ARIA | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/skeleton-avatar",
+      "title": "SkeletonAvatar | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/skeleton-box",
+      "title": "SkeletonBox | Primer"
+    },
+    {
+      "url": "https://primer.style/product/components/skeleton-text",
+      "title": "SkeletonText | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/design-guidance/text-resize-and-spacing",
+      "title": "Text resizing and spacing | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/primer-components/tooltips",
+      "title": "Tooltips | Primer"
+    },
+    {
+      "url": "https://primer.style/accessibility/patterns/truncation",
+      "title": "Truncation | Primer"
+    }
+  ]
+}

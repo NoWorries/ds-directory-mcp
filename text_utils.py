@@ -104,6 +104,29 @@ def in_any_scope(url: str, root_scopes: set[tuple[str, str]]) -> bool:
     return any(parsed.netloc == netloc and path.startswith(prefix) for netloc, prefix in root_scopes)
 
 
+# Same editorial/blog categories ingest.py's DEFAULT_EXCLUDE_PATTERNS keeps
+# out of the crawl in the first place — kept as a second, independent check
+# here rather than trusting that alone, since a page can still end up in
+# pages_index.json despite it (added to a system's own exclude_patterns
+# after the page was already crawled, or simply not yet added). Confirmed
+# live: BBC GEL's own "/features/" section is a staff-profile/editorial
+# blog ("Meet Dan Ramsden", "Never letting wonder go to waste"), and one of
+# those pages' title happened to start with wording generate_components.py's
+# alias matching read as "Navigation Pattern" — a conference-talk recap,
+# not pattern documentation. Deliberately a short, high-confidence list
+# (not ingest.py's full set, e.g. no bare "/press/" or "/events/" — those
+# are common enough as legitimate component/pattern doc path segments on
+# some site somewhere that the risk of a false exclusion here outweighs the
+# narrower benefit, since this is a display-page safety net, not the
+# primary crawl filter).
+BLOG_URL_PATTERNS = [r"/blog/", r"/posts/", r"/news/", r"/articles/", r"/features/", r"/insights/"]
+
+
+def is_blog_style_url(url: str) -> bool:
+    path = urlparse(url).path.lower()
+    return any(re.search(pattern, path) for pattern in BLOG_URL_PATTERNS)
+
+
 def humanize_url_path(url: str) -> str:
     """Last URL path segment, turned into something readable —
     "progress-bar" -> "Progress bar". Used as a last-resort display title

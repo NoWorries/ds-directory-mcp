@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "gnome-human-interface-guidelines",
+  "organization": "GNOME",
+  "design_system": "Human Interface Guidelines",
+  "full_name": "GNOME — Human Interface Guidelines",
+  "start_urls": [
+    "https://developer.gnome.org/hig/"
+  ],
+  "detail_url": "/systems/gnome-human-interface-guidelines",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-18T15:49:39+00:00",
+  "last_modified": "Sun, 21 Jun 2026 19:34:11 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://developer.gnome.org/hig",
+      "title": "GNOME Human Interface Guidelines"
+    }
+  ]
+}

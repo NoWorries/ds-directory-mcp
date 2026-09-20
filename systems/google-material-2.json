@@ -1,0 +1,32 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "google-material-2",
+  "organization": "Google",
+  "design_system": "Material 2",
+  "full_name": "Google — Material 2",
+  "start_urls": [
+    "https://material.io/guidelines/#introduction-goals/"
+  ],
+  "detail_url": "/systems/google-material-2",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T11:49:35+00:00",
+  "last_modified": "Tue, 01 Jan 1980 00:00:01 GMT",
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://material.io/guidelines/#introduction-goals/",
+      "title": "Google — Material 2"
+    }
+  ]
+}

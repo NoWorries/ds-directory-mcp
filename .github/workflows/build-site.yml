@@ -11,6 +11,7 @@ on:
     branches: [master]
     paths:
       - generate_directory.py
+      - generate_compare.py
       - generate_components.py
       - generate_systems.py
       - generate_home.py
@@ -70,6 +71,7 @@ jobs:
           python generate_security_txt.py
           python generate_robots_txt.py
           python generate_directory.py
+          python generate_compare.py
           python generate_components.py
           python generate_systems.py
           # sitemap.xml must run AFTER components/patterns/foundations are

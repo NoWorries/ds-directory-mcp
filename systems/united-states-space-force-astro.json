@@ -1,0 +1,164 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-19T21:58:10+00:00",
+  "id": "united-states-space-force-astro",
+  "organization": "United States Space Force",
+  "design_system": "Astro",
+  "full_name": "United States Space Force — Astro",
+  "start_urls": [
+    "https://www.astrouxds.com/"
+  ],
+  "detail_url": "/systems/united-states-space-force-astro",
+  "pages_indexed": 29,
+  "coverage_status": "full",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-19T07:18:41+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/RocketCommunicationsInc/astro",
+      "https://github.com/RocketCommunicationsInc/astro-www"
+    ],
+    "icons": [
+      "https://fonts.google.com/icons"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "React",
+      "Angular",
+      "Web Components"
+    ]
+  },
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 156,
+    "last_pushed": "2026-07-01T19:44:25Z"
+  },
+  "npm_meta": {
+    "latest_version": "8.0.0",
+    "weekly_downloads": 3493
+  },
+  "indexed_pages": [
+    {
+      "url": "https://www.astrouxds.com/components/accordion",
+      "title": "Accordion"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/application-state",
+      "title": "Application State"
+    },
+    {
+      "url": "https://www.astrouxds.com/",
+      "title": "Astro UXDS"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/button",
+      "title": "Button"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/button/specs",
+      "title": "Button"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/card",
+      "title": "Card"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/clock",
+      "title": "Clock"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/component-sandbox",
+      "title": "Component Sandbox"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/container",
+      "title": "Container"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/date-picker",
+      "title": "Date Picker"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/dialog",
+      "title": "Dialog"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/getting-started",
+      "title": "Getting Started"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/grm-service-ux-design/grm-equipment-manager",
+      "title": "GRM Equipment Manager"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/grm-service-ux-design/grm-schedule",
+      "title": "GRM Schedule"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/grm-service-ux-design/about-the-grm-designs",
+      "title": "Ground Resource Management"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/icon-library",
+      "title": "Icon Library"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/icons-and-symbols",
+      "title": "Icons and Symbols"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/input-field",
+      "title": "Input Field"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/input-field/specs",
+      "title": "Input Field"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/log",
+      "title": "Log"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/log/specs",
+      "title": "Log"
+    },
+    {
+      "url": "https://www.astrouxds.com/compliance/mil-std-1472",
+      "title": "MIL-STD-1472 Compliance"
+    },
+    {
+      "url": "https://www.astrouxds.com/components/notification-banner",
+      "title": "Notification Banner"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/service-specific-ux-design",
+      "title": "Service Specific UX Design"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/ttc-service-ux-design/about-the-ttc-designs",
+      "title": "Telemetry, Tracking, and Command"
+    },
+    {
+      "url": "https://www.astrouxds.com/checkout/success",
+      "title": "Thank You for Your Purchase!"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/ttc-service-ux-design/ttc-command",
+      "title": "TT&C Command"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/ttc-service-ux-design/ttc-investigate",
+      "title": "TT&C Investigate"
+    },
+    {
+      "url": "https://www.astrouxds.com/case-studies/ttc-service-ux-design/ttc-monitor",
+      "title": "TT&C Monitor"
+    }
+  ]
+}

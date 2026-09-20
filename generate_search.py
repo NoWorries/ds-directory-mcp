@@ -19,7 +19,7 @@ from pathlib import Path
 
 from generate_directory import indexed_only, load_systems
 from generate_home import MCP_INSTALL_COMMAND
-from page_shell import COPY_ICON_SVG, FAVICON_LINK, FILTER_ICON_SVG, FONT_LINK, TOKENS_CSS, routes_nav
+from page_shell import COPY_ICON_SVG, FAVICON_LINK, FILTER_ICON_SVG, FONT_LINK, PAGEFIND_JS, SEARCH_TYPEAHEAD_JS, TOKENS_CSS, routes_nav
 from slug import slugify
 from text_utils import full_name
 
@@ -47,6 +47,7 @@ def render_page(entries: list[dict]) -> str:
 <style>
 {TOKENS_CSS}
   .search-header {{ padding-top: 8px; margin-bottom: 28px; }}
+  .search-input-wrap {{ position: relative; }}
   #q {{
     width: 100%; padding: 16px 20px; font: inherit; font-size: 1.05rem; box-sizing: border-box;
     border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text);
@@ -83,6 +84,31 @@ def render_page(entries: list[dict]) -> str:
   .filter-hint {{ font-size: 0.78rem; color: var(--text-faint); margin: 6px 0 0; }}
 
   .results-count {{ font-size: 0.82rem; color: var(--text-muted); margin: 24px 0 12px; }}
+
+  /* Real pages THIS SITE has whose actual content matches the query (see
+     PAGEFIND_JS) — system/component/pattern/foundation pages, matched on
+     more than just their name — shown alongside the raw semantic-search
+     snippets below (Qdrant, over the EXTERNAL systems' own docs). Same
+     pattern a help site's search box uses to suggest a knowledgebase
+     article before someone files a ticket: "here's a page we already
+     have" up front, before the deeper cross-system search results. */
+  .index-matches-section[hidden] {{ display: none; }}
+  .index-matches-label {{
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint);
+    font-weight: 600; margin: 20px 0 8px;
+  }}
+  .index-matches {{ display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }}
+  .index-match-item {{
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 14px;
+    text-decoration: none; color: var(--text); background: var(--surface);
+  }}
+  .index-match-item:hover {{ background: var(--surface-sunken); }}
+  .index-match-title {{ font-size: 0.88rem; font-weight: 500; }}
+  .index-match-excerpt {{
+    font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+  }}
+  .index-match-excerpt mark {{ background: var(--accent-soft); color: var(--accent-soft-text); }}
   #results {{ display: flex; flex-direction: column; gap: 14px; }}
   .status {{ color: var(--text-muted); font-size: 0.9rem; }}
 
@@ -132,7 +158,10 @@ def render_page(entries: list[dict]) -> str:
 {routes_nav("search")}
 <div class="page">
   <div class="search-header">
-    <input id="q" type="text" placeholder="e.g. table column resizing, disabled button states...">
+    <div class="search-input-wrap">
+      <input id="q" type="text" placeholder="e.g. table column resizing, disabled button states..." autocomplete="off">
+      <div class="ds-typeahead-dropdown" id="qSuggestions" hidden></div>
+    </div>
 
     <button type="button" class="restrict-toggle" id="restrictToggle">{FILTER_ICON_SVG}<span id="restrictToggleLabel">Filter by system</span></button>
 
@@ -153,10 +182,17 @@ def render_page(entries: list[dict]) -> str:
     <button type="button" class="mcp-promo-copy" id="mcpPromoCopy">{COPY_ICON_SVG}<span id="mcpPromoCopyLabel">Copy install command</span></button>
   </div>
 
+  <div class="index-matches-section" id="indexMatchesSection" hidden>
+    <p class="index-matches-label">Pages you might want</p>
+    <div class="index-matches" id="indexMatches"></div>
+  </div>
+
   <div id="resultsCount" class="results-count"></div>
   <div id="results"></div>
 </div>
 
+<script>{SEARCH_TYPEAHEAD_JS}</script>
+<script>{PAGEFIND_JS}</script>
 <script>
   const API_URL = {json.dumps(SEARCH_API_URL)};
   const ALL_SYSTEMS = {system_names_json};
@@ -165,6 +201,9 @@ def render_page(entries: list[dict]) -> str:
   const input = document.getElementById("q");
   const resultsEl = document.getElementById("results");
   const resultsCountEl = document.getElementById("resultsCount");
+  const indexMatchesSection = document.getElementById("indexMatchesSection");
+  const indexMatchesEl = document.getElementById("indexMatches");
+  dsAttachTypeahead(input, document.getElementById("qSuggestions"));
   const filterInput = document.getElementById("systemFilter");
   const dropdown = document.getElementById("filterDropdown");
   const chipsEl = document.getElementById("chips");
@@ -188,6 +227,7 @@ def render_page(entries: list[dict]) -> str:
     if (!query) {{
       resultsEl.innerHTML = "";
       resultsCountEl.textContent = "";
+      indexMatchesSection.hidden = true;
       return;
     }}
     debounceTimer = setTimeout(() => runSearch(query), 400);
@@ -246,9 +286,25 @@ def render_page(entries: list[dict]) -> str:
     if (input.value.trim()) runSearch(input.value.trim());
   }});
 
+  function renderIndexMatches(matches) {{
+    if (!matches.length) {{
+      indexMatchesSection.hidden = true;
+      indexMatchesEl.innerHTML = "";
+      return;
+    }}
+    indexMatchesEl.innerHTML = matches.map(item => `
+      <a class="index-match-item" href="${{item.url}}">
+        <span class="index-match-title">${{escapeHtml(item.title)}}</span>
+        ${{item.excerpt ? `<span class="index-match-excerpt">${{item.excerpt}}</span>` : ""}}
+      </a>
+    `).join("");
+    indexMatchesSection.hidden = false;
+  }}
+
   async function runSearch(query) {{
     resultsCountEl.textContent = "";
     resultsEl.innerHTML = '<p class="status">Searching… (first request may take up to a minute if the server was idle)</p>';
+    dsMatchPagefind(query, 6).then(renderIndexMatches);
     try {{
       const params = new URLSearchParams({{ q: query }});
       selectedSystems.forEach(name => params.append("system", name));
