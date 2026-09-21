@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-21T09:49:26+00:00",
+  "generated_at": "2026-09-21T12:20:32+00:00",
   "id": "meta-astryx",
   "organization": "Meta",
   "design_system": "Astryx",
@@ -9,21 +9,27 @@
     "https://astryx.atmeta.com/"
   ],
   "detail_url": "/systems/meta-astryx",
-  "pages_indexed": 18,
+  "pages_indexed": 24,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-20T02:16:28+00:00",
+  "last_checked": "2026-09-21T04:23:10+00:00",
   "last_modified": null,
   "sitemap_last_modified": "2026-09-10T00:00:00.000Z",
   "resources": {
     "github": [
       "https://github.com/facebook/astryx"
     ],
+    "figma": [
+      "https://figma.com/community/file/1661363854016665156/astryx-design-system-for-figma-v0-1",
+      "https://figma.com/community/file/1659998707120781098/astryx-library-community",
+      "https://figma.com/community/file/1655939158795671259/astryx-for-figma",
+      "https://figma.com/community/file/1659998707120781098"
+    ],
     "icons": [
       "https://astryx.atmeta.com/docs/icons",
-      "https://astryx-canary.vercel.app/components/Icon",
-      "https://astryx.atmeta.com/components/Icon"
+      "https://astryx.atmeta.com/components/Icon",
+      "https://astryx-canary.vercel.app/components/Icon"
     ],
     "agent_instructions": [
       "https://astryx.atmeta.com/llms.txt"
@@ -31,15 +37,14 @@
   },
   "unverified_resources": {},
   "content_signals": {
-    "codemods": true,
     "frameworks": [
       "React"
     ]
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 13248,
-    "last_pushed": "2026-09-20T02:11:04Z"
+    "stars": 13281,
+    "last_pushed": "2026-09-21T04:23:03Z"
   },
   "npm_meta": null,
   "indexed_pages": [

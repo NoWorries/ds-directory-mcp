@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-21T09:49:26+00:00",
+  "generated_at": "2026-09-21T12:20:32+00:00",
   "id": "morningstar-morningstar-design-system",
   "organization": "Morningstar",
   "design_system": "Morningstar Design System",
@@ -11,14 +11,14 @@
   "detail_url": "/systems/morningstar-morningstar-design-system",
   "pages_indexed": 1,
   "coverage_status": "partial",
-  "hit_max_pages": false,
-  "likely_spa": false,
-  "last_checked": "2026-09-19T20:29:37+00:00",
+  "hit_max_pages": true,
+  "likely_spa": true,
+  "last_checked": "2026-09-21T02:18:08+00:00",
   "last_modified": "Mon, 22 Jun 2026 13:11:25 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "figma": [
-      "https://www.figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns?mode=design&node-id=0%3A1&t=ldHKHxiogxXtwToh-1&type=design"
+      "https://figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns"
     ]
   },
   "unverified_resources": {},

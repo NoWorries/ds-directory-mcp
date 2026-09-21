@@ -2,7 +2,7 @@
 
 > This is dated research about a fast-moving corpus — oldest record last checked 2026-09-13, refreshed on a rolling basis. A system's own detail page always shows its own last-checked date.
 
-> Semantic search across 162 publicly documented design systems (6,283 pages indexed) — GitHub, Storybook, Figma, npm packages, tokens, icons, and full-text content, all in one place.
+> Semantic search across 161 publicly documented design systems (6,140 pages indexed) — GitHub, Storybook, Figma, npm packages, tokens, icons, and full-text content, all in one place.
 
 This directory exists specifically to be used by AI coding agents, not just browsed by humans. The MCP server below is the intended way to query it — the same semantic search index, no HTML to parse, callable as a single tool.
 
@@ -28,7 +28,7 @@ Returns `{"results": [{"design_system_name", "url", "text", "score"}, ...]}` —
 
 Same records as the HTML pages, as plain JSON — for anything that wants to recompute a stat itself rather than trust a rendered number. Excludes archived/dead systems and anything with zero pages indexed, same as every page below.
 
-- /systems.json (1246 KB) — Every indexed system, merged into one file — the same records the HTML pages render.
+- /systems.json (1223 KB) — Every indexed system, merged into one file — the same records the HTML pages render.
 - /design-system.schema.json (7 KB) — JSON Schema for systems.json and each systems/<slug>.json.
 - /systems/<slug>.json — one system's own record (matches systems.json's shape)
 
