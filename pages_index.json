@@ -33469,5 +33469,761 @@
       "etag": "W/\"971d6a169c2b7ab9b9b682d89f975020\""
     }
   ],
-  "LocalTapiola — Duet": []
+  "LocalTapiola — Duet": [],
+  "daisyUI": [
+    {
+      "url": "https://daisyui.com/ai/frontend-code-generation",
+      "title": "AI frontend code generation",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/ai/ui-code-generation",
+      "title": "AI UI code generation",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/ai",
+      "title": "AI UI generation with daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/angular-component-library",
+      "title": "Angular component library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/angular-tailwind-css",
+      "title": "Angular Tailwind CSS",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/angular-ui-library",
+      "title": "Angular UI library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/astro-component-library",
+      "title": "Astro component library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/astro-tailwind-css",
+      "title": "Astro Tailwind CSS",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/astro-ui-library",
+      "title": "Astro UI library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/best-design-skill-2026",
+      "title": "Best Claude Code design skill 2026",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/best-design-skill-2026",
+      "title": "Best Codex design skill 2026",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/best-for-2026",
+      "title": "Best component library for 2026",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/for-beginners",
+      "title": "Best component library for beginners",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/best-design-skill-2026",
+      "title": "Best Cursor design skill 2026",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/best-free-component-library",
+      "title": "Best free component library for Claude Code",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/best-free-component-library",
+      "title": "Best free component library for Codex",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/best-free-component-library",
+      "title": "Best free component library for Cursor",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library",
+      "title": "Choose a component library for your project",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/free-design-skill",
+      "title": "Claude Code free design skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/frontend-design-plugin",
+      "title": "Claude Code frontend design plugin",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/frontend-skill",
+      "title": "Claude Code frontend skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/ui-design-skill",
+      "title": "Claude Code UI design skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code",
+      "title": "Claude Code UI design with daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/web-design-skill",
+      "title": "Claude Code web design skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude/ui-design-prompt",
+      "title": "Claude UI design prompt",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/free-design-skill",
+      "title": "Codex free design skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex",
+      "title": "Codex UI design with daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/for-school-projects",
+      "title": "CSS framework for school projects",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/css-library-for-html",
+      "title": "CSS library for HTML",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/free-design-skill",
+      "title": "Cursor free design skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/frontend-skill",
+      "title": "Cursor frontend skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/ui-design-skill",
+      "title": "Cursor UI design skill",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor",
+      "title": "Cursor UI design with daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/use-less-tokens",
+      "title": "Cursor use less tokens",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/",
+      "title": "daisyUI - Tailwind CSS Component Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blog",
+      "title": "daisyUI Blog — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint",
+      "title": "daisyUI Blueprint 1.5 | Official daisyUI MCP server",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/brand",
+      "title": "daisyUI Logo",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/llms.txt",
+      "title": "daisyUI — llms.txt"
+    },
+    {
+      "url": "https://daisyui.com/ai/design-website",
+      "title": "Design website with AI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/django-component-library",
+      "title": "Django component library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/easy",
+      "title": "Easy component library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/easy-css-library",
+      "title": "Easy CSS library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/ai/generate-ui-from-text",
+      "title": "Generate UI from text",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude/generate-ui",
+      "title": "Generate UI with Claude",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude",
+      "title": "Generate UI with Claude and daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/generate-ui",
+      "title": "Generate UI with Codex",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/ai/generate-ui-with-llm",
+      "title": "Generate UI with LLM",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/workflow",
+      "title": "How Blueprint MCP Works — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/how-to-design-ui",
+      "title": "How to design UI with Claude Code",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/how-to-design-ui",
+      "title": "How to design UI with Codex",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/how-to-design-ui",
+      "title": "How to design UI with Cursor",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/antigravity",
+      "title": "Install Blueprint MCP for Antigravity — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/claudecode",
+      "title": "Install Blueprint MCP for Claude Code — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/claude",
+      "title": "Install Blueprint MCP for Claude Desktop — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/cline",
+      "title": "Install Blueprint MCP for Cline — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/codex",
+      "title": "Install Blueprint MCP for Codex — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/cursor",
+      "title": "Install Blueprint MCP for Cursor — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/grok",
+      "title": "Install Blueprint MCP for Grok Build — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/openclaw",
+      "title": "Install Blueprint MCP for OpenClaw — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/opencode",
+      "title": "Install Blueprint MCP for OpenCode — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/vscode",
+      "title": "Install Blueprint MCP for VSCode Copilot — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/windsurf",
+      "title": "Install Blueprint MCP for Windsurf — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/zed",
+      "title": "Install Blueprint MCP for Zed — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/ai/llm-ui-generation",
+      "title": "LLM UI generation",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/minimal-css-framework",
+      "title": "Minimal CSS framework",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/ai/prompt-to-ui",
+      "title": "Prompt to UI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/scalable",
+      "title": "Scalable component library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/blueprint/figma",
+      "title": "Setup Figma API for Blueprint MCP — daisyUI Tailwind CSS Component UI Library",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/accordion",
+      "title": "Tailwind Accordion Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/alert",
+      "title": "Tailwind Alert Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/aura",
+      "title": "Tailwind Aura Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/avatar",
+      "title": "Tailwind Avatar Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/badge",
+      "title": "Tailwind Badge Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/breadcrumbs",
+      "title": "Tailwind Breadcrumbs Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/mockup-browser",
+      "title": "Tailwind Browser mockup Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/button",
+      "title": "Tailwind Button Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/calendar",
+      "title": "Tailwind Calendar Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/card",
+      "title": "Tailwind Card Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/carousel",
+      "title": "Tailwind Carousel Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/chat",
+      "title": "Tailwind Chat bubble Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/checkbox",
+      "title": "Tailwind Checkbox Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/mockup-code",
+      "title": "Tailwind Code mockup Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/collapse",
+      "title": "Tailwind Collapse Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/countdown",
+      "title": "Tailwind Countdown Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components",
+      "title": "Tailwind CSS Components",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/diff",
+      "title": "Tailwind Diff Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/divider",
+      "title": "Tailwind Divider Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/dock",
+      "title": "Tailwind Dock Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/drawer",
+      "title": "Tailwind Drawer sidebar Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/dropdown",
+      "title": "Tailwind Dropdown Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/fab",
+      "title": "Tailwind FAB / Speed Dial Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/fieldset",
+      "title": "Tailwind Fieldset Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/file-input",
+      "title": "Tailwind File Input Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/filter",
+      "title": "Tailwind Filter Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/footer",
+      "title": "Tailwind Footer Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/hero",
+      "title": "Tailwind Hero Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/hover-3d",
+      "title": "Tailwind Hover 3D Card Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/hover-gallery",
+      "title": "Tailwind Hover Gallery Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/indicator",
+      "title": "Tailwind Indicator Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/join",
+      "title": "Tailwind Join (group items) Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/kbd",
+      "title": "Tailwind Kbd Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/label",
+      "title": "Tailwind Label Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/link",
+      "title": "Tailwind Link Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/list",
+      "title": "Tailwind List Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/loading",
+      "title": "Tailwind Loading Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/mask",
+      "title": "Tailwind Mask Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/megamenu",
+      "title": "Tailwind Megamenu Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/menu",
+      "title": "Tailwind Menu Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/modal",
+      "title": "Tailwind Modal Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/navbar",
+      "title": "Tailwind Navbar Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/otp",
+      "title": "Tailwind OTP Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/pagination",
+      "title": "Tailwind Pagination Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/mockup-phone",
+      "title": "Tailwind Phone mockup Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/progress",
+      "title": "Tailwind Progress Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/radial-progress",
+      "title": "Tailwind Radial progress Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/radio",
+      "title": "Tailwind Radio Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/range",
+      "title": "Tailwind Range slider Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/rating",
+      "title": "Tailwind Rating Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/select",
+      "title": "Tailwind Select Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/skeleton",
+      "title": "Tailwind Skeleton Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/stack",
+      "title": "Tailwind Stack Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/stat",
+      "title": "Tailwind Stat Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/status",
+      "title": "Tailwind Status Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/steps",
+      "title": "Tailwind Steps Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/swap",
+      "title": "Tailwind Swap Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/table",
+      "title": "Tailwind Table Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/tab",
+      "title": "Tailwind Tabs Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/input",
+      "title": "Tailwind Text Input Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/text-rotate",
+      "title": "Tailwind Text Rotate Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/textarea",
+      "title": "Tailwind Textarea Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/theme-controller",
+      "title": "Tailwind Theme Controller Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/timeline",
+      "title": "Tailwind Timeline Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/toast",
+      "title": "Tailwind Toast Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/toggle",
+      "title": "Tailwind Toggle Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/tooltip",
+      "title": "Tailwind Tooltip Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/validator",
+      "title": "Tailwind Validator Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/components/mockup-window",
+      "title": "Tailwind Window mockup Component – daisyUI",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/ui-design-mcp-server",
+      "title": "UI design MCP server for Claude Code",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/ui-design-mcp-server",
+      "title": "UI design MCP server for Codex",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/ui-design-mcp-server",
+      "title": "UI design MCP server for Cursor",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/ui-design-plugin",
+      "title": "UI design plugin for Claude Code",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/ui-design-plugin",
+      "title": "UI design plugin for Codex",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/ui-design-plugin",
+      "title": "UI design plugin for Cursor",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/ui-design-skill-guide",
+      "title": "UI design skill for Claude Code",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/ui-design-skill",
+      "title": "UI design skill for Codex",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/ui-design-skill-guide",
+      "title": "UI design skill for Cursor",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/component-library/for-hackathons",
+      "title": "UI library for hackathons",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    },
+    {
+      "url": "https://daisyui.com/claude-code/use-less-tokens",
+      "title": "Use less token with Claude Code",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/codex/use-less-tokens",
+      "title": "Use less token with Codex",
+      "last_modified": "Fri, 18 Sep 2026 08:11:39 GMT"
+    },
+    {
+      "url": "https://daisyui.com/cursor/reduce-token-usage",
+      "title": "Use less token with Cursor",
+      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT"
+    }
+  ]
 }

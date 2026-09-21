@@ -6819,6 +6819,69 @@
   start_urls:
   - https://daisyui.com/
   likely_unmaintained: false
+  pages_indexed: 151
+  hit_max_pages: true
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: false
+  unverified_resources:
+    github:
+    - https://github.com/saadeghi/theme-change
+    - https://github.com/WickyNilliams/cally
+    - https://github.com/gpbl/react-day-picker
+    - https://github.com/uvarov-frontend/vanilla-calendar-pro
+  content_signals:
+    dark_mode: true
+    tokens_format: Figma Variables
+    exemplars: true
+    frameworks:
+    - Vue
+    - React
+    - Svelte
+    - Angular
+  content_signal_sources:
+    dark_mode: https://daisyui.com/
+    tokens_format: https://daisyui.com/blueprint/vscode
+    exemplars: https://daisyui.com/brand
+    frameworks:
+      Vue: https://daisyui.com/
+      React: https://daisyui.com/ai/design-website
+      Svelte: https://daisyui.com/ai/design-website
+      Angular: https://daisyui.com/angular-component-library
+  thin_page_ratio: -0.01
+  has_localized_docs: false
+  last_checked: '2026-09-21T09:48:12+00:00'
+  last_modified: Fri, 18 Sep 2026 08:11:38 GMT
+  sitemap_url: https://daisyui.com/sitemap.xml
+  resources:
+    github:
+    - https://github.com/saadeghi/daisyui
+    markdown_docs:
+    - https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md
+    mcp:
+    - https://daisyui.com/claude-code/ui-design-mcp-server
+    - https://daisyui.com/codex/ui-design-mcp-server
+    - https://docs.x.ai/build/features/mcp-servers
+    - https://daisyui.com/cursor/ui-design-mcp-server
+    - https://code.visualstudio.com/docs/copilot/customization/mcp-servers
+    skills:
+    - https://daisyui.com/docs/skill/codex
+    - https://daisyui.com/skills/daisyui-charts
+    - https://daisyui.com/docs/skill/cursor
+    - https://daisyui.com/docs/skill/claude-code
+    - https://daisyui.com/skills/daisyui-dashboard
+    agent_instructions:
+    - https://daisyui.com/llms.txt
+    npm:
+    - https://npmjs.com/package/daisyui
+  github_meta:
+    license: MIT
+    stars: 42441
+    last_pushed: '2026-09-18T08:11:11Z'
+  npm_meta:
+    latest_version: 5.7.42
+    last_published: '2026-09-18T08:12:17.313Z'
+    weekly_downloads: 768932
 - organization: ''
   design_system: HeroUI
   start_urls:
