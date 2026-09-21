@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from generate_directory import COLUMNS, indexed_only, load_systems, render_row
+from generate_directory import COLUMNS, found_count, indexed_only, load_systems, render_row
 from page_shell import CLOSE_ICON_SVG, EXPAND_ICON_SVG, FAVICON_LINK, FONT_LINK, TOKENS_CSS, routes_nav
 from text_utils import full_name
 
@@ -27,7 +27,12 @@ OUTPUT_FILE = Path(__file__).parent / "compare.html"
 
 
 def render_page(entries: list[dict]) -> str:
-    entries_sorted = sorted(entries, key=lambda e: full_name(e).lower())
+    # Default sort: highest Found count first, not alphabetical — this page's
+    # whole point is "which systems publish the most resources", so leading
+    # with the ones that publish the least buried the actually interesting
+    # rows below the fold. Name (secondary key) just keeps ties stable/
+    # deterministic between regenerations rather than reflecting yaml order.
+    entries_sorted = sorted(entries, key=lambda e: (-found_count(e), full_name(e).lower()))
 
     # Column indices: 0 = name (text sort), 1 = docs link (not sortable),
     # 2 = pages (number), 3..3+len(COLUMNS)-1 = resource dots (found),
@@ -275,7 +280,7 @@ def render_page(entries: list[dict]) -> str:
         <th>Docs</th>
         <th data-col="2" data-sort="number">Pages</th>
         {header_cells}
-        <th data-col="{last_col}" data-sort="number">Found</th>
+        <th data-col="{last_col}" data-sort="number" class="sorted-desc">Found</th>
       </tr>
     </thead>
     <tbody>
@@ -295,7 +300,12 @@ def render_page(entries: list[dict]) -> str:
 
 <script>
   // --- Table sort ---
-  let currentSort = {{ col: null, dir: 1 }};
+  // Rows arrive from the server already sorted by Found descending (see
+  // render_page()'s entries_sorted) — seeding currentSort to match means a
+  // click on the Found header toggles to ascending first, same as clicking
+  // any other already-sorted column a second time, instead of re-sorting
+  // descending again because the JS didn't know a sort was already applied.
+  let currentSort = {{ col: {last_col}, dir: -1 }};
 
   function cellValue(row, col, type) {{
     // Sorting the System column by the visible design-system name (e.g.
