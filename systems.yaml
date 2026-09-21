@@ -532,24 +532,26 @@
   design_system: Cloudscape Design System
   start_urls:
   - https://cloudscape.design/
-  pages_indexed: 1
+  pages_indexed: 35
   resources:
     github:
     - https://github.com/cloudscape-design/components
     markdown_docs:
     - https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md
+    icons:
+    - https://cloudscape.design/components/icon
     agent_instructions:
     - https://cloudscape.design/llms.txt
-  hit_max_pages: false
+  hit_max_pages: true
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: Apache-2.0
-    stars: 2646
-    last_pushed: '2026-09-19T09:45:35Z'
+    stars: 2647
+    last_pushed: '2026-09-19T14:40:39Z'
   etag: W/"af52c2a3d672ec0b883b1711261de12a"
   last_modified: Fri, 18 Sep 2026 19:31:52 GMT
-  last_checked: '2026-09-19T11:18:44+00:00'
+  last_checked: '2026-09-21T00:27:04+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources: {}
@@ -561,10 +563,10 @@
     dark_mode: https://cloudscape.design/
     frameworks:
       React: https://cloudscape.design/
-  thin_page_ratio: 0.95
+  thin_page_ratio: 0.77
   has_localized_docs: false
   sitemap_url: https://cloudscape.design/sitemap.xml
-  render_mode: spa
+  render_mode: ''
 - organization: AWS Amplify
   design_system: Amplify UI
   start_urls:
@@ -4799,7 +4801,7 @@
     npm:
     - https://www.npmjs.com/package/@rei/cedar
   hit_max_pages: false
-  crawl_error: ''
+  crawl_error: crawl returned 0 pages
   likely_spa: false
   github_meta:
     license: null
@@ -4811,9 +4813,9 @@
     weekly_downloads: 585
   etag: W/"64b6d90f-24a54"
   last_modified: Tue, 18 Jul 2023 18:25:19 GMT
-  last_checked: '2026-09-19T21:40:53+00:00'
+  last_checked: '2026-09-21T02:12:11+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 0
+  consecutive_crawl_failures: 1
   unverified_resources: {}
   content_signals:
     frameworks:

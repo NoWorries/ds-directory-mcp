@@ -442,6 +442,20 @@ def render_card(entry: dict) -> str:
     pages = entry.get("pages_indexed", 0)
     unmaintained_class = " is-unmaintained" if entry.get("likely_unmaintained") else ""
 
+    # The table/List/Compare views all show coverage_status() as a colored
+    # dot + hover tooltip, but a card is skimmed at a glance, not hovered —
+    # a card for a system stuck at 1-2 pages (see ingest.py's likely_spa/
+    # render_mode="spa" trap, confirmed live on dozens of systems) looked
+    # identical to a genuinely fully-indexed one otherwise. Only rendered
+    # for non-"full" status, in the same amber coverage-partial already
+    # used elsewhere, so a real full crawl's card stays exactly as before.
+    status = coverage_status(entry)
+    not_fully_indexed_html = (
+        f'<div class="meta meta-coverage coverage-{status}" title="{html.escape(COVERAGE_LABEL[status])}">'
+        f'{COVERAGE_GLYPH[status]} Not fully indexed</div>'
+        if status != "full" else ""
+    )
+
     # data-sort-name matches render_simple_row's own attribute (the plain
     # design-system name, not the "Org — Name" identity string data-name
     # holds for the filter box) so the page's one Sort control reorders
@@ -452,6 +466,7 @@ def render_card(entry: dict) -> str:
       <div class="card-body textured">
         {render_name_block(entry)}
         <div class="meta">{pages} pages indexed</div>
+        {not_fully_indexed_html}
       </div>
     </a>
     """
@@ -581,6 +596,12 @@ def render_page(entries: list[dict]) -> str:
   .coverage-dot.coverage-full {{ color: #22c55e; }}
   .coverage-dot.coverage-partial {{ color: #f59e0b; }}
   .coverage-dot.coverage-unknown {{ color: var(--text-faint); }}
+  /* Card-only "Not fully indexed" line — see render_card()'s comment.
+     Text itself takes the coverage color too (not just a leading dot) so
+     it reads clearly even at a glance, not just on hover. */
+  .meta-coverage {{ font-weight: 600; margin-top: 2px; }}
+  .meta-coverage.coverage-partial {{ color: #f59e0b; }}
+  .meta-coverage.coverage-unknown {{ color: var(--text-faint); }}
   /* Distinct from the name link (which goes to this system's own detail
      page): same pill treatment, but muted rather than accent-colored so it
      doesn't read as a "resource found" indicator — this one always goes

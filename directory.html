@@ -435,6 +435,12 @@
   .coverage-dot.coverage-full { color: #22c55e; }
   .coverage-dot.coverage-partial { color: #f59e0b; }
   .coverage-dot.coverage-unknown { color: var(--text-faint); }
+  /* Card-only "Not fully indexed" line — see render_card()'s comment.
+     Text itself takes the coverage color too (not just a leading dot) so
+     it reads clearly even at a glance, not just on hover. */
+  .meta-coverage { font-weight: 600; margin-top: 2px; }
+  .meta-coverage.coverage-partial { color: #f59e0b; }
+  .meta-coverage.coverage-unknown { color: var(--text-faint); }
   /* Distinct from the name link (which goes to this system's own detail
      page): same pill treatment, but muted rather than accent-colored so it
      doesn't read as a "resource found" indicator — this one always goes
@@ -812,14 +818,14 @@
 <div class="page">
   <p class="eyebrow">All Systems</p>
   <h1>Every indexed design system</h1>
-  <p class="subtitle">176 external design systems this site has real, indexed documentation for. Looking to cross-reference which ones publish which resources (GitHub, Storybook, Figma, tokens...)? See <a href="/compare">Compare</a>.</p>
+  <p class="subtitle">175 external design systems this site has real, indexed documentation for. Looking to cross-reference which ones publish which resources (GitHub, Storybook, Figma, tokens...)? See <a href="/compare">Compare</a>.</p>
 </div>
 
 <div class="table-breakout" id="tableBreakout">
   <div class="table-toolbar">
     <input id="tableFilter" type="text" placeholder="Filter by system or company name...">
     <div class="table-toolbar-controls">
-      <label class="unmaintained-toggle"><input type="checkbox" id="unmaintainedToggle"> Show 15 unmaintained</label>
+      <label class="unmaintained-toggle"><input type="checkbox" id="unmaintainedToggle"> Show 14 unmaintained</label>
       <button type="button" class="sort-toggle" id="sortToggle" aria-label="Sort by name"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 7 9M7 9 3 5M7 9V1"></path><path d="M13 15l4-4M17 11l4 4M17 11v8"></path></svg><span id="sortToggleLabel">Name A–Z</span></button>
       <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
         <button type="button" data-view="list" class="current"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg> List</button>
@@ -963,7 +969,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/aws-cloudscape-design-system" data-slug="aws-cloudscape-design-system" data-name="AWS — Cloudscape Design System"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=cloudscape.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">AWS</span><span class="ds-name">Cloudscape Design System</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://cloudscape.design/" target="_blank" rel="noopener" title="Open https://cloudscape.design/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
+        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>35</span>
       </td>
     </tr>
     
@@ -979,7 +985,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/bbc-global-experience-language-gel" data-slug="bbc-global-experience-language-gel" data-name="BBC — Global Experience Language (GEL)"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.bbc.co.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">BBC</span><span class="ds-name">Global Experience Language (GEL)</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://www.bbc.co.uk/gel/" target="_blank" rel="noopener" title="Open https://www.bbc.co.uk/gel/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>137</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>183</span>
       </td>
     </tr>
     
@@ -987,7 +993,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/benevity-skyline" data-slug="benevity-skyline" data-name="Benevity — Skyline"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=skyline.benevity.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Benevity</span><span class="ds-name">Skyline</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://skyline.benevity.org/" target="_blank" rel="noopener" title="Open https://skyline.benevity.org/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>147</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>156</span>
       </td>
     </tr>
     
@@ -1059,7 +1065,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/chakra-team-ark-ui" data-slug="chakra-team-ark-ui" data-name="Chakra team — Ark UI"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ark-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Chakra team</span><span class="ds-name">Ark UI</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://ark-ui.com/" target="_blank" rel="noopener" title="Open https://ark-ui.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>100</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>107</span>
       </td>
     </tr>
     
@@ -1251,7 +1257,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/general-electric-predix-design-system" data-slug="general-electric-predix-design-system" data-name="General Electric — Predix Design System"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.predix-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">General Electric</span><span class="ds-name">Predix Design System</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://www.predix-ui.com/" target="_blank" rel="noopener" title="Open https://www.predix-ui.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
+        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>2</span>
       </td>
     </tr>
     
@@ -1259,7 +1265,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/github-primer" data-slug="github-primer" data-name="Github — Primer"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=primer.style&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Github</span><span class="ds-name">Primer</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://primer.style/" target="_blank" rel="noopener" title="Open https://primer.style/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>149</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>99</span>
       </td>
     </tr>
     
@@ -1419,7 +1425,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/ibm-carbon-design-system" data-slug="ibm-carbon-design-system" data-name="IBM — Carbon Design System"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.carbondesignsystem.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">IBM</span><span class="ds-name">Carbon Design System</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://www.carbondesignsystem.com/" target="_blank" rel="noopener" title="Open https://www.carbondesignsystem.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>268</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>64</span>
       </td>
     </tr>
     
@@ -1491,7 +1497,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/just-eat-takeaway-pie" data-slug="just-eat-takeaway-pie" data-name="Just Eat Takeaway — PIE"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pie.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Just Eat Takeaway</span><span class="ds-name">PIE</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://pie.design/" target="_blank" rel="noopener" title="Open https://pie.design/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>143</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>266</span>
       </td>
     </tr>
     
@@ -1523,7 +1529,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/kolibri-kolibri-public-ui" data-slug="kolibri-kolibri-public-ui" data-name="KoliBri — KoliBri - Public UI"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=public-ui.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">KoliBri</span><span class="ds-name">KoliBri - Public UI</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://public-ui.github.io/" target="_blank" rel="noopener" title="Open https://public-ui.github.io/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>149</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>329</span>
       </td>
     </tr>
     
@@ -1531,7 +1537,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/kontur" data-slug="kontur" data-name="Kontur"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=guides.kontur.ru&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Kontur</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://guides.kontur.ru/" target="_blank" rel="noopener" title="Open https://guides.kontur.ru/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>84</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>83</span>
       </td>
     </tr>
     
@@ -1540,14 +1546,6 @@
       <td class="cell cell-docs"><a href="https://designsystem.line.me/" target="_blank" rel="noopener" title="Open https://designsystem.line.me/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
         <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
-      </td>
-    </tr>
-    
-    <tr id="localtapiola-duet" class="is-unmaintained" data-name="localtapiola — duet" data-sort-name="duet">
-      <td class="name-cell"><a class="name-cell-link panel-link" href="systems/localtapiola-duet" data-slug="localtapiola-duet" data-name="LocalTapiola — Duet"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.duetds.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">LocalTapiola</span><span class="ds-name">Duet</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
-      <td class="cell cell-docs"><a href="https://www.duetds.com/" target="_blank" rel="noopener" title="Open https://www.duetds.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
-      <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>8</span>
       </td>
     </tr>
     
@@ -1619,7 +1617,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/meta-astryx" data-slug="meta-astryx" data-name="Meta — Astryx"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=astryx.atmeta.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Meta</span><span class="ds-name">Astryx</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://astryx.atmeta.com/" target="_blank" rel="noopener" title="Open https://astryx.atmeta.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>18</span>
       </td>
     </tr>
     
@@ -1643,7 +1641,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/mongodb-mongodb-design-system" data-slug="mongodb-mongodb-design-system" data-name="MongoDB — MongoDB Design System"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.mongodb.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">MongoDB</span><span class="ds-name">MongoDB Design System</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://www.mongodb.design/" target="_blank" rel="noopener" title="Open https://www.mongodb.design/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>14</span>
       </td>
     </tr>
     
@@ -1675,7 +1673,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/mozilla-protocol" data-slug="mozilla-protocol" data-name="Mozilla — Protocol"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=protocol.mozilla.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Mozilla</span><span class="ds-name">Protocol</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://protocol.mozilla.org/" target="_blank" rel="noopener" title="Open https://protocol.mozilla.org/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>96</span>
       </td>
     </tr>
     
@@ -1703,11 +1701,11 @@
       </td>
     </tr>
     
-    <tr id="nasa-nasa-web-design-system" class="" data-name="nasa — nasa web design system" data-sort-name="nasa web design system">
-      <td class="name-cell"><a class="name-cell-link panel-link" href="systems/nasa-nasa-web-design-system" data-slug="nasa-nasa-web-design-system" data-name="NASA — NASA Web Design System"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NASA</span><span class="ds-name">NASA Web Design System</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
-      <td class="cell cell-docs"><a href="https://github.com/bruffridge/nasawds/" target="_blank" rel="noopener" title="Open https://github.com/bruffridge/nasawds/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
+    <tr id="nasa-horizon-design-system-hds" class="" data-name="nasa — horizon design system (hds)" data-sort-name="horizon design system (hds)">
+      <td class="name-cell"><a class="name-cell-link panel-link" href="systems/nasa-horizon-design-system-hds" data-slug="nasa-horizon-design-system-hds" data-name="NASA — Horizon Design System (HDS)"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NASA</span><span class="ds-name">Horizon Design System (HDS)</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
+      <td class="cell cell-docs"><a href="https://github.com/nasa/hds-core/" target="_blank" rel="noopener" title="Open https://github.com/nasa/hds-core/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>131</span>
+        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
       </td>
     </tr>
     
@@ -1715,7 +1713,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/national-instruments-fuse" data-slug="national-instruments-fuse" data-name="National Instruments — Fuse"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ni.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">National Instruments</span><span class="ds-name">Fuse</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://ni.github.io/design-system/" target="_blank" rel="noopener" title="Open https://ni.github.io/design-system/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>1</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>41</span>
       </td>
     </tr>
     
@@ -1771,7 +1769,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/nhs-uk-service-manual" data-slug="nhs-uk-service-manual" data-name="NHS.UK — Service Manual"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=service-manual.nhs.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NHS.UK</span><span class="ds-name">Service Manual</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://service-manual.nhs.uk/" target="_blank" rel="noopener" title="Open https://service-manual.nhs.uk/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>146</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>221</span>
       </td>
     </tr>
     
@@ -1963,7 +1961,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/semantic-semantic-ui" data-slug="semantic-semantic-ui" data-name="Semantic — Semantic UI"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semantic-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Semantic</span><span class="ds-name">Semantic UI</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://semantic-ui.com/" target="_blank" rel="noopener" title="Open https://semantic-ui.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>66</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>64</span>
       </td>
     </tr>
     
@@ -1979,7 +1977,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/semrush-intergalactic" data-slug="semrush-intergalactic" data-name="Semrush — Intergalactic"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.semrush.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Semrush</span><span class="ds-name">Intergalactic</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://developer.semrush.com/intergalactic/" target="_blank" rel="noopener" title="Open https://developer.semrush.com/intergalactic/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>148</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>429</span>
       </td>
     </tr>
     
@@ -1987,7 +1985,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/servicetitan-anvil" data-slug="servicetitan-anvil" data-name="ServiceTitan — Anvil"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=anvil.servicetitan.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">ServiceTitan</span><span class="ds-name">Anvil</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://anvil.servicetitan.com/" target="_blank" rel="noopener" title="Open https://anvil.servicetitan.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>144</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>442</span>
       </td>
     </tr>
     
@@ -2019,7 +2017,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/siemens-ix" data-slug="siemens-ix" data-name="Siemens iX"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ix.siemens.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Siemens iX</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://ix.siemens.io/" target="_blank" rel="noopener" title="Open https://ix.siemens.io/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>100</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>270</span>
       </td>
     </tr>
     
@@ -2027,7 +2025,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/singapore-government-design-system" data-slug="singapore-government-design-system" data-name="Singapore Government Design System"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.designsystem.tech.gov.sg&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Singapore Government Design System</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://www.designsystem.tech.gov.sg/" target="_blank" rel="noopener" title="Open https://www.designsystem.tech.gov.sg/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>148</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>231</span>
       </td>
     </tr>
     
@@ -2203,7 +2201,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/welcome-to-the-jungle-welcome-ui" data-slug="welcome-to-the-jungle-welcome-ui" data-name="Welcome to the Jungle — Welcome UI"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.welcome-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Welcome to the Jungle</span><span class="ds-name">Welcome UI</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://www.welcome-ui.com/" target="_blank" rel="noopener" title="Open https://www.welcome-ui.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>2</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>6</span>
       </td>
     </tr>
     
@@ -2211,7 +2209,7 @@
       <td class="name-cell"><a class="name-cell-link panel-link" href="systems/wework-ray" data-slug="wework-ray" data-name="WeWork — Ray"><div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ray.wework.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">WeWork</span><span class="ds-name">Ray</span></div></div><span class="name-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></td>
       <td class="cell cell-docs"><a href="https://ray.wework.com/" target="_blank" rel="noopener" title="Open https://ray.wework.com/" aria-label="Open external docs site"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></td>
       <td class="cell cell-pages">
-        <span class="pages-value"><span class="coverage-dot coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐</span>2</span>
+        <span class="pages-value"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span>23</span>
       </td>
     </tr>
     
@@ -2258,6 +2256,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=mozaic.adeo.cloud&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Adeo</span><span class="ds-name">Mozaic Design System</span></div></div>
         <div class="meta">30 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2266,6 +2265,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=spectrum.adobe.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Adobe</span><span class="ds-name">Spectrum</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2274,6 +2274,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=auro.alaskaair.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Alaska Airlines</span><span class="ds-name">Auro</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2282,6 +2283,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=docs.altinn.studio&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Altinn</span><span class="ds-name">Altinn Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2290,6 +2292,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ant.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Ant Financial</span><span class="ds-name">Ant Design</span></div></div>
         <div class="meta">30 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2298,6 +2301,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.apple.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Apple</span><span class="ds-name">Human Interface Guidelines</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2306,6 +2310,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.arbetsformedlingen.se&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Arbetsförmedlingen</span><span class="ds-name">Design system</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2314,6 +2319,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developers.arcgis.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">ArcGIS</span><span class="ds-name">Calcite</span></div></div>
         <div class="meta">7 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2322,6 +2328,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=atlassian.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Atlassian</span><span class="ds-name">Atlassian Design System</span></div></div>
         <div class="meta">26 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2330,6 +2337,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.audi.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Audi</span><span class="ds-name">Audi UI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2338,6 +2346,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design-system.agriculture.gov.au&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Australian Government, Department of Agriculture, Fisheries and Forestry</span><span class="ds-name">Agriculture Design System (AgDS)</span></div></div>
         <div class="meta">37 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2346,6 +2355,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.health.gov.au&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Australian Government, Department of Health</span><span class="ds-name">Health Design System</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2354,6 +2364,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=gold.designsystemau.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Australian Open Source Community</span><span class="ds-name">GOLD Design System</span></div></div>
         <div class="meta">300 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2362,6 +2373,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=dotcombrand.wordpress.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Automattic</span><span class="ds-name">Wordpress.com design handbook</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2370,6 +2382,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ui.docs.amplify.aws&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">AWS Amplify</span><span class="ds-name">Amplify UI</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2377,7 +2390,8 @@
       <img class="card-thumb" src="screenshots/aws-cloudscape-design-system.jpg" alt="" loading="lazy" style="view-transition-name: thumb-aws-cloudscape-design-system; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=cloudscape.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">AWS</span><span class="ds-name">Cloudscape Design System</span></div></div>
-        <div class="meta">1 pages indexed</div>
+        <div class="meta">35 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2386,6 +2400,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.backbase.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Backbase</span><span class="ds-name">Design system</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2393,7 +2408,8 @@
       <img class="card-thumb" src="screenshots/bbc-global-experience-language-gel.jpg" alt="" loading="lazy" style="view-transition-name: thumb-bbc-global-experience-language-gel; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.bbc.co.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">BBC</span><span class="ds-name">Global Experience Language (GEL)</span></div></div>
-        <div class="meta">137 pages indexed</div>
+        <div class="meta">183 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2401,7 +2417,8 @@
       <img class="card-thumb" src="screenshots/benevity-skyline.jpg" alt="" loading="lazy" style="view-transition-name: thumb-benevity-skyline; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=skyline.benevity.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Benevity</span><span class="ds-name">Skyline</span></div></div>
-        <div class="meta">147 pages indexed</div>
+        <div class="meta">156 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2410,6 +2427,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=biings.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Biings</span><span class="ds-name">Biings Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2418,6 +2436,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.brainly.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Brainly</span><span class="ds-name">Design</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2426,6 +2445,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=bold.bridge.ufsc.br&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Bridge</span><span class="ds-name">Bold design system</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2434,6 +2454,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ui.britecore.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Brightcore</span><span class="ds-name">UI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2442,6 +2463,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=britishgas.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">British Gas</span><span class="ds-name">Nucleus Design System</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2450,6 +2472,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=arc.bt.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">BT</span><span class="ds-name">Arc</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2458,6 +2481,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=solid.buzzfeed.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">BuzzFeed</span><span class="ds-name">Solid Style Guide</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2466,6 +2490,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vanillaframework.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Canonical</span><span class="ds-name">Vanilla framework</span></div></div>
         <div class="meta">37 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2473,7 +2498,8 @@
       <img class="card-thumb" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fark-ui.com%2F?w=320" alt="" loading="lazy" style="view-transition-name: thumb-chakra-team-ark-ui; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ark-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Chakra team</span><span class="ds-name">Ark UI</span></div></div>
-        <div class="meta">100 pages indexed</div>
+        <div class="meta">107 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2482,6 +2508,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=chakra-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Chakra team</span><span class="ds-name">Chakra UI</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2490,6 +2517,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=patterns.boston.gov&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">City of Boston</span><span class="ds-name">Fleet</span></div></div>
         <div class="meta">150 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2498,6 +2526,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=cloudflare.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Cloudflare</span><span class="ds-name">CF-UI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2506,6 +2535,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=cfpb.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Consumer Financial Protection Bureau</span><span class="ds-name">CFPB Design Manual</span></div></div>
         <div class="meta">85 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2514,6 +2544,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=f36.contentful.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Contentful</span><span class="ds-name">Forma 36</span></div></div>
         <div class="meta">6 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2522,6 +2553,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=druids.datadoghq.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Datadog</span><span class="ds-name">Druids</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2530,6 +2562,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=decathlon.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Decathlon</span><span class="ds-name">Design System - Vitamin</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2538,6 +2571,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=etrade.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Design Language</span><span class="ds-name">E-Trade</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2546,6 +2580,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=drawbotics.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Drawbotics</span><span class="ds-name">Drylus</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2554,6 +2589,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.duolingo.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Duolingo</span><span class="ds-name">Design guidelines</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2562,6 +2598,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=dutchy.demothat.app&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Dutchy Design System</span></div></div>
         <div class="meta">35 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2570,6 +2607,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ebay.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">eBay</span><span class="ds-name">Skin</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2578,6 +2616,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=nova.eliagroup.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Elia Group</span><span class="ds-name">Nova</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2586,6 +2625,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=boundless.js.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Enigma</span><span class="ds-name">Boundless</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2594,6 +2634,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=eds.equinor.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Equinor</span><span class="ds-name">EDS</span></div></div>
         <div class="meta">109 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2602,6 +2643,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=brand.estonia.ee&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Estonia</span><span class="ds-name">Brand Estonia</span></div></div>
         <div class="meta">30 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2610,6 +2652,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.familysearch.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Family Search</span><span class="ds-name">Frontier</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2618,6 +2661,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=origami.ft.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Financial Times</span><span class="ds-name">Origami</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2626,6 +2670,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.firefox.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Firefox</span><span class="ds-name">Photon Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2634,6 +2679,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=flowbite.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Flowbite</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2642,6 +2688,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=get.foundation&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Foundation</span></div></div>
         <div class="meta">127 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2650,6 +2697,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.foyer.lu&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Foyer</span><span class="ds-name">Foyer Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2658,6 +2706,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=storybook.futurelearn.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">FutureLearn</span><span class="ds-name">FutureLearn Pattern Library</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2665,7 +2714,8 @@
       <img class="card-thumb" src="screenshots/general-electric-predix-design-system.jpg" alt="" loading="lazy" style="view-transition-name: thumb-general-electric-predix-design-system; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.predix-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">General Electric</span><span class="ds-name">Predix Design System</span></div></div>
-        <div class="meta">1 pages indexed</div>
+        <div class="meta">2 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2673,7 +2723,8 @@
       <img class="card-thumb" src="screenshots/github-primer.jpg" alt="" loading="lazy" style="view-transition-name: thumb-github-primer; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=primer.style&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Github</span><span class="ds-name">Primer</span></div></div>
-        <div class="meta">149 pages indexed</div>
+        <div class="meta">99 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2682,6 +2733,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.gitlab.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GitLab</span><span class="ds-name">Pajamas Design System</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2690,6 +2742,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.gnome.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GNOME</span><span class="ds-name">Human Interface Guidelines</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2698,6 +2751,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=asphalt.gojek.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GO-JEK</span><span class="ds-name">Asphalt</span></div></div>
         <div class="meta">10 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2706,6 +2760,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.gs.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Goldman Sachs</span><span class="ds-name">Goldman Sachs Design System</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2714,6 +2769,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.goodbarber.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GoodBarber</span><span class="ds-name">GoodBarber Design System</span></div></div>
         <div class="meta">35 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2722,6 +2778,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=material.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Google</span><span class="ds-name">Material 2</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2730,6 +2787,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=material.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Google</span><span class="ds-name">Material Design</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2738,6 +2796,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design-system.service.gov.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">GOV.UK</span><span class="ds-name">GOV.UK Design System</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2746,6 +2805,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.gccollab.ca&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Government of Canada</span><span class="ds-name">Aurora Design System</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2754,6 +2814,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=gympass.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Gympass</span><span class="ds-name">Yoga</span></div></div>
         <div class="meta">4 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2762,6 +2823,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=helios.hashicorp.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Helios Design System</span><span class="ds-name">Hashicorp</span></div></div>
         <div class="meta">110 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2770,6 +2832,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=style.helpscout.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Help Scout</span><span class="ds-name">Help Scout Style Guide</span></div></div>
         <div class="meta">2 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2778,6 +2841,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=hds.hel.fi&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Helsinki</span><span class="ds-name">Helsinki Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2786,6 +2850,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.herokai.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Heroku</span><span class="ds-name">Heroki Design</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2794,6 +2859,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.heroui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">HeroUI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2802,6 +2868,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=v2.grommet.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Hewlett Packard</span><span class="ds-name">Grommet</span></div></div>
         <div class="meta">7 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2810,6 +2877,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=horizonx.so&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">HorizonX</span></div></div>
         <div class="meta">3 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2818,6 +2886,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=canvas.hubspot.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Hubspot</span><span class="ds-name">Canvas Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2826,6 +2895,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=uniform.hudl.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Hudl</span><span class="ds-name">Uniform</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2833,7 +2903,8 @@
       <img class="card-thumb" src="screenshots/ibm-carbon-design-system.jpg" alt="" loading="lazy" style="view-transition-name: thumb-ibm-carbon-design-system; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.carbondesignsystem.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">IBM</span><span class="ds-name">Carbon Design System</span></div></div>
-        <div class="meta">268 pages indexed</div>
+        <div class="meta">64 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2842,6 +2913,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=rivet.uits.iu.edu&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Indiana University</span><span class="ds-name">Rivet</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2850,6 +2922,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.infor.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Infor</span><span class="ds-name">Infor Design System</span></div></div>
         <div class="meta">2 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2858,6 +2931,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=instructure.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Instructure Inc</span><span class="ds-name">Instructure UI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2866,6 +2940,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.intuit.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Intuit</span><span class="ds-name">Design system</span></div></div>
         <div class="meta">33 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2874,6 +2949,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.intuit.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Intuit</span><span class="ds-name">QuickBooks Design System</span></div></div>
         <div class="meta">33 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2882,6 +2958,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ionicframework.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Ionic Framework</span></div></div>
         <div class="meta">148 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2890,6 +2967,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designers.italia.it&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Italian Public Administration</span><span class="ds-name">.it Designers Italy</span></div></div>
         <div class="meta">148 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2898,6 +2976,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pharos.jstor.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">JSTOR</span><span class="ds-name">Pharos</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2905,7 +2984,8 @@
       <img class="card-thumb" src="screenshots/just-eat-takeaway-pie.jpg" alt="" loading="lazy" style="view-transition-name: thumb-just-eat-takeaway-pie; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pie.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Just Eat Takeaway</span><span class="ds-name">PIE</span></div></div>
-        <div class="meta">143 pages indexed</div>
+        <div class="meta">266 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2914,6 +2994,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=sage.kajabi.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Kajabi</span><span class="ds-name">Sage</span></div></div>
         <div class="meta">6 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2922,6 +3003,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=develop.kde.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">KDE</span><span class="ds-name">Human Interface Guidelines</span></div></div>
         <div class="meta">23 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2930,6 +3012,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.kickstartds.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">kickstart</span><span class="ds-name">kickstartDS</span></div></div>
         <div class="meta">6 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2937,7 +3020,8 @@
       <img class="card-thumb" src="screenshots/kolibri-kolibri-public-ui.jpg" alt="" loading="lazy" style="view-transition-name: thumb-kolibri-kolibri-public-ui; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=public-ui.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">KoliBri</span><span class="ds-name">KoliBri - Public UI</span></div></div>
-        <div class="meta">149 pages indexed</div>
+        <div class="meta">329 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2945,7 +3029,8 @@
       <img class="card-thumb" src="screenshots/kontur.jpg" alt="" loading="lazy" style="view-transition-name: thumb-kontur; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=guides.kontur.ru&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Kontur</span></div></div>
-        <div class="meta">84 pages indexed</div>
+        <div class="meta">83 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2954,14 +3039,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.line.me&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">LINE</span><span class="ds-name">LINE Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
-      </div>
-    </a>
-    
-    <a class="card panel-link is-unmaintained" href="systems/localtapiola-duet" data-slug="localtapiola-duet" data-name="localtapiola — duet" data-sort-name="duet">
-      <img class="card-thumb" src="screenshots/localtapiola-duet.jpg" alt="" loading="lazy" style="view-transition-name: thumb-localtapiola-duet; view-transition-class: thumb">
-      <div class="card-body textured">
-        <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.duetds.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">LocalTapiola</span><span class="ds-name">Duet</span></div></div>
-        <div class="meta">8 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2970,6 +3048,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=lens.loom.dev&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Loom</span><span class="ds-name">Lens</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2978,6 +3057,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.louderthanten.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Louder Than Ten</span><span class="ds-name">Manual</span></div></div>
         <div class="meta">30 pages indexed</div>
+        
       </div>
     </a>
     
@@ -2986,6 +3066,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.mail.ru&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Mail.ru</span><span class="ds-name">Group Paradigm</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -2994,6 +3075,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=styleguide.mailchimp.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">MailChimp</span><span class="ds-name">Mailchimp Content Styleguide</span></div></div>
         <div class="meta">25 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3002,6 +3084,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=mantine.dev&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Mantine</span></div></div>
         <div class="meta">38 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3010,6 +3093,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=marvelapp.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Marvel</span><span class="ds-name">Marvel Styleguide</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3018,6 +3102,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=materializecss.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Materialize</span><span class="ds-name">Materialize CSS</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3026,6 +3111,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.emd.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Merck</span><span class="ds-name">Liquid</span></div></div>
         <div class="meta">3 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3033,7 +3119,8 @@
       <img class="card-thumb" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fastryx.atmeta.com%2F?w=320" alt="" loading="lazy" style="view-transition-name: thumb-meta-astryx; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=astryx.atmeta.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Meta</span><span class="ds-name">Astryx</span></div></div>
-        <div class="meta">1 pages indexed</div>
+        <div class="meta">18 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3042,6 +3129,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.microsoft.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Microsoft</span><span class="ds-name">Fluent</span></div></div>
         <div class="meta">285 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3050,6 +3138,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.microsoft.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Microsoft</span><span class="ds-name">Fluent UI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3057,7 +3146,8 @@
       <img class="card-thumb" src="screenshots/mongodb-mongodb-design-system.jpg" alt="" loading="lazy" style="view-transition-name: thumb-mongodb-mongodb-design-system; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.mongodb.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">MongoDB</span><span class="ds-name">MongoDB Design System</span></div></div>
-        <div class="meta">1 pages indexed</div>
+        <div class="meta">14 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3066,6 +3156,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=monzo.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Monzo</span><span class="ds-name">Monzo Tone of Voice</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3074,6 +3165,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.morningstar.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Morningstar</span><span class="ds-name">Morningstar Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3082,6 +3174,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=acorn.firefox.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Mozilla firefox</span><span class="ds-name">Acorn</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3089,7 +3182,8 @@
       <img class="card-thumb" src="screenshots/mozilla-protocol.jpg" alt="" loading="lazy" style="view-transition-name: thumb-mozilla-protocol; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=protocol.mozilla.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Mozilla</span><span class="ds-name">Protocol</span></div></div>
-        <div class="meta">1 pages indexed</div>
+        <div class="meta">96 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3098,6 +3192,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=mui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">MUI</span><span class="ds-name">Material UI</span></div></div>
         <div class="meta">40 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3106,6 +3201,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.mutualofomaha.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Mutual of Omaha</span><span class="ds-name">Digital Design Guide</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3114,14 +3210,16 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=feelix.myob.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">MYOB</span><span class="ds-name">Feelix</span></div></div>
         <div class="meta">18 pages indexed</div>
+        
       </div>
     </a>
     
-    <a class="card panel-link" href="systems/nasa-nasa-web-design-system" data-slug="nasa-nasa-web-design-system" data-name="nasa — nasa web design system" data-sort-name="nasa web design system">
-      <img class="card-thumb" src="screenshots/nasa-nasa-web-design-system.jpg" alt="" loading="lazy" style="view-transition-name: thumb-nasa-nasa-web-design-system; view-transition-class: thumb">
+    <a class="card panel-link" href="systems/nasa-horizon-design-system-hds" data-slug="nasa-horizon-design-system-hds" data-name="nasa — horizon design system (hds)" data-sort-name="horizon design system (hds)">
+      <img class="card-thumb" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fgithub.com%2Fnasa%2Fhds-core%2F?w=320" alt="" loading="lazy" style="view-transition-name: thumb-nasa-horizon-design-system-hds; view-transition-class: thumb">
       <div class="card-body textured">
-        <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NASA</span><span class="ds-name">NASA Web Design System</span></div></div>
-        <div class="meta">131 pages indexed</div>
+        <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NASA</span><span class="ds-name">Horizon Design System (HDS)</span></div></div>
+        <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3129,7 +3227,8 @@
       <img class="card-thumb" src="screenshots/national-instruments-fuse.jpg" alt="" loading="lazy" style="view-transition-name: thumb-national-instruments-fuse; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ni.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">National Instruments</span><span class="ds-name">Fuse</span></div></div>
-        <div class="meta">1 pages indexed</div>
+        <div class="meta">41 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3138,6 +3237,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.nationbuilder.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NationBuilder</span><span class="ds-name">Radius</span></div></div>
         <div class="meta">36 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3146,6 +3246,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=neurodiversity.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Neurodiversity</span><span class="ds-name">Design system</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3154,6 +3255,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.ny.gov&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">New York State</span><span class="ds-name">New York State Design System</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3162,6 +3264,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design-system-alpha.digital.govt.nz&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">New Zealand Government</span><span class="ds-name">New Zealand Government Design System (NZGDS)</span></div></div>
         <div class="meta">67 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3170,6 +3273,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.education.govt.nz&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">New Zealand Ministry of Education</span><span class="ds-name">Design System</span></div></div>
         <div class="meta">61 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3178,6 +3282,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.newskit.co.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">News UK</span><span class="ds-name">NewsKit</span></div></div>
         <div class="meta">40 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3185,7 +3290,8 @@
       <img class="card-thumb" src="screenshots/nhs-uk-service-manual.jpg" alt="" loading="lazy" style="view-transition-name: thumb-nhs-uk-service-manual; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=service-manual.nhs.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NHS.UK</span><span class="ds-name">Service Manual</span></div></div>
-        <div class="meta">146 pages indexed</div>
+        <div class="meta">221 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3194,6 +3300,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.meshdesignsystem.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">nib</span><span class="ds-name">Mesh Design System</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3202,6 +3309,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=nordhealth.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Nordhealth</span><span class="ds-name">Nord Design System</span></div></div>
         <div class="meta">137 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3210,6 +3318,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=tractie.ns.nl&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">NS Dutch Railways</span><span class="ds-name">Tractie</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3218,6 +3327,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=nulogy.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Nulogy</span><span class="ds-name">Nulogy Design System</span></div></div>
         <div class="meta">62 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3226,6 +3336,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=graphitedesignsystem.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">PAQT</span><span class="ds-name">Graphite Design System</span></div></div>
         <div class="meta">31 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3234,6 +3345,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=boltdesignsystem.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Pega Digital</span><span class="ds-name">Bolt Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3242,6 +3354,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pinterest.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Pinterest</span><span class="ds-name">Gestalt</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3250,6 +3363,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design-system.pluralsight.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Pluralsight</span><span class="ds-name">Pluralsight Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3258,6 +3372,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=priceline.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Priceline</span><span class="ds-name">Priceline One</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3266,6 +3381,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pusher.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Pusher</span><span class="ds-name">Chameleon</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3274,6 +3390,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=radianui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">RadianUI</span></div></div>
         <div class="meta">72 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3282,6 +3399,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.radix-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Radix</span><span class="ds-name">Radix UI</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3290,6 +3408,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=rambler-digital-solutions.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Rambler</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3298,6 +3417,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ui-kit.rambler.ru&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Rambler</span><span class="ds-name">Ratio</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3306,6 +3426,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.patternfly.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Red Hat</span><span class="ds-name">Patternfly Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3314,6 +3435,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=rei.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">REI</span><span class="ds-name">Cedar</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3322,6 +3444,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.royalcanin.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Royal Canin</span><span class="ds-name">Royal Canin&#x27;s Design Language</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3330,6 +3453,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.lightningdesignsystem.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Salesforce</span><span class="ds-name">Lightning Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3338,6 +3462,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.samsung.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Samsung</span><span class="ds-name">Tizen CircularUI</span></div></div>
         <div class="meta">79 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3346,6 +3471,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=openui5.org&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">SAP OpenUI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3354,6 +3480,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=sap.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">SAP</span><span class="ds-name">Fiori Fundamentals</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3362,6 +3489,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=seek-oss.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Seek</span><span class="ds-name">Braid Design System</span></div></div>
         <div class="meta">7 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3370,6 +3498,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=seek-oss.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Seek</span><span class="ds-name">Seek Style Guide</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3377,7 +3506,8 @@
       <img class="card-thumb" src="screenshots/semantic-semantic-ui.jpg" alt="" loading="lazy" style="view-transition-name: thumb-semantic-semantic-ui; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semantic-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Semantic</span><span class="ds-name">Semantic UI</span></div></div>
-        <div class="meta">66 pages indexed</div>
+        <div class="meta">64 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3386,6 +3516,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semi.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Semi Design</span></div></div>
         <div class="meta">100 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3393,7 +3524,8 @@
       <img class="card-thumb" src="screenshots/semrush-intergalactic.jpg" alt="" loading="lazy" style="view-transition-name: thumb-semrush-intergalactic; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.semrush.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Semrush</span><span class="ds-name">Intergalactic</span></div></div>
-        <div class="meta">148 pages indexed</div>
+        <div class="meta">429 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3401,7 +3533,8 @@
       <img class="card-thumb" src="screenshots/servicetitan-anvil.jpg" alt="" loading="lazy" style="view-transition-name: thumb-servicetitan-anvil; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=anvil.servicetitan.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">ServiceTitan</span><span class="ds-name">Anvil</span></div></div>
-        <div class="meta">144 pages indexed</div>
+        <div class="meta">442 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3410,6 +3543,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ui.shadcn.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">shadcn/ui</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3418,6 +3552,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=csskitsune.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Shizen Design System</span></div></div>
         <div class="meta">2 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3426,6 +3561,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=polaris.shopify.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Shopify</span><span class="ds-name">Polaris</span></div></div>
         <div class="meta">9 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3433,7 +3569,8 @@
       <img class="card-thumb" src="screenshots/siemens-ix.jpg" alt="" loading="lazy" style="view-transition-name: thumb-siemens-ix; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ix.siemens.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Siemens iX</span></div></div>
-        <div class="meta">100 pages indexed</div>
+        <div class="meta">270 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3441,7 +3578,8 @@
       <img class="card-thumb" src="screenshots/singapore-government-design-system.jpg" alt="" loading="lazy" style="view-transition-name: thumb-singapore-government-design-system; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.designsystem.tech.gov.sg&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Singapore Government Design System</span></div></div>
-        <div class="meta">148 pages indexed</div>
+        <div class="meta">231 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3450,6 +3588,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=backpack.github.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Skyscanner</span><span class="ds-name">Backpack</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3458,6 +3597,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.sparebank1.no&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">SpareBank 1</span><span class="ds-name">SpareBank 1 Designsystem</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3466,6 +3606,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=sproutsocial.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Sprout Social</span><span class="ds-name">Seeds</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3474,6 +3615,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=stackoverflow.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Stack Overflow</span><span class="ds-name">Stacks</span></div></div>
         <div class="meta">2 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3482,6 +3624,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.digital.nsw.gov.au&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">State of New South Wales</span><span class="ds-name">Digital NSW</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3490,6 +3633,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=headlessui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Tailwind Labs</span><span class="ds-name">Headless UI</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3498,6 +3642,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thumbprint.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Thumbtack</span><span class="ds-name">Thumbprint</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3506,6 +3651,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=po-ui.io&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">TOTVS</span><span class="ds-name">Portinari UI</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3514,6 +3660,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.tfwm.org.uk&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Transport for West Midlands</span></div></div>
         <div class="meta">39 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3522,6 +3669,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.trello.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Trello</span><span class="ds-name">Nachos</span></div></div>
         <div class="meta">12 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3530,6 +3678,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.va.gov&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">U.S. Department of Veterans Affairs</span><span class="ds-name">Design system</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3538,6 +3687,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=designsystem.digital.gov&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">U.S. Government</span><span class="ds-name">U.S. Web Design System</span></div></div>
         <div class="meta">41 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3546,6 +3696,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=baseweb.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Uber</span><span class="ds-name">Base Web</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3554,6 +3705,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.cms.gov&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">United States Centers for Medicare &amp; Medicaid Services</span><span class="ds-name">CMS Design System</span></div></div>
         <div class="meta">8 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3562,6 +3714,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.astrouxds.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">United States Space Force</span><span class="ds-name">Astro</span></div></div>
         <div class="meta">29 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3570,6 +3723,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ustyle.guide&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">uSwitch</span><span class="ds-name">uStyle</span></div></div>
         <div class="meta">2 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3578,6 +3732,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vercel.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Vercel</span><span class="ds-name">Geist</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3586,6 +3741,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=clarity.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">VMware</span><span class="ds-name">Clarity Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3594,6 +3750,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=styleguide.vtex.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">VTEX</span><span class="ds-name">Styleguide</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3602,6 +3759,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vueds.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="ds-name">Vue Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3610,6 +3768,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=momentum.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Webex</span><span class="ds-name">Momentum Design System</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3617,7 +3776,8 @@
       <img class="card-thumb" src="screenshots/welcome-to-the-jungle-welcome-ui.jpg" alt="" loading="lazy" style="view-transition-name: thumb-welcome-to-the-jungle-welcome-ui; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.welcome-ui.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Welcome to the Jungle</span><span class="ds-name">Welcome UI</span></div></div>
-        <div class="meta">2 pages indexed</div>
+        <div class="meta">6 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3625,7 +3785,8 @@
       <img class="card-thumb" src="screenshots/wework-ray.jpg" alt="" loading="lazy" style="view-transition-name: thumb-wework-ray; view-transition-class: thumb">
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=ray.wework.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">WeWork</span><span class="ds-name">Ray</span></div></div>
-        <div class="meta">2 pages indexed</div>
+        <div class="meta">23 pages indexed</div>
+        
       </div>
     </a>
     
@@ -3634,6 +3795,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=wise.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Wise</span><span class="ds-name">Design system</span></div></div>
         <div class="meta">1 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3642,6 +3804,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=design.wonderflow.ai&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Wonderflow</span><span class="ds-name">Wanda Design System</span></div></div>
         <div class="meta">4 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3650,6 +3813,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=www.yelp.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Yelp</span><span class="ds-name">Yelp Styleguide</span></div></div>
         <div class="meta">4 pages indexed</div>
+        <div class="meta meta-coverage coverage-partial" title="Incomplete — hit the max_pages ceiling with more still queued, or coverage looks thin">◐ Not fully indexed</div>
       </div>
     </a>
     
@@ -3658,6 +3822,7 @@
       <div class="card-body textured">
         <div class="name-block"><img class="favicon" src="https://www.google.com/s2/favicons?domain=garden.zendesk.com&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><div class="name-text"><span class="org">Zendesk</span><span class="ds-name">Garden</span></div></div>
         <div class="meta">37 pages indexed</div>
+        
       </div>
     </a>
     
