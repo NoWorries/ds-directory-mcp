@@ -53,10 +53,13 @@ link graph within the new budget clears the flag on its own.
 --spa: targets systems flagged likely_spa=True (see ingest()'s SPA-shell
 detection) — sites where a plain HTTP GET only ever returns an empty
 client-side-rendered shell, so the ordinary crawler finds nothing however
-many times you retry it. Renders just the start URL through crawl4ai
+many times you retry it. Does a full BFS crawl (crawl_spa(), same shape as
+crawl()'s own link-following) rendering every page through crawl4ai
 (Playwright under the hood) instead of requests+BeautifulSoup — see
-ingest_spa(). Requires `playwright install --with-deps chromium` to have
-been run once in the environment (see reindex-spa.yml).
+ingest_spa(). Each render is expensive (multi-second delay per page, by
+design), so this is meant for an occasional deep pass, not every reindex.
+Requires `playwright install --with-deps chromium` to have been run once
+in the environment (see reindex-spa.yml).
 
 Example:
     python ingest.py "Atlassian Design System" https://atlassian.design/components
@@ -202,11 +205,22 @@ BOILERPLATE_LINES = [
 # URL path fragments that are almost never useful design system documentation,
 # excluded from every crawl regardless of system.
 DEFAULT_EXCLUDE_PATTERNS = [
-    r"/blog/", r"/posts/", r"/news/", r"/articles/", r"/insights/",
-    r"/careers/", r"/jobs/", r"/legal/", r"/privacy",
+    # \b (not a literal trailing "/") so a bare "/blog" with nothing after it
+    # still matches, not just "/blog/anything" — confirmed live, Meta's
+    # Astryx links its blog INDEX as bare "https://astryx.atmeta.com/blog"
+    # (no trailing slash), which "/blog/" never matched. Same bug class the
+    # "changelog" entry below already fixed for a different shape of the
+    # same mistake (also missed a bare trailing segment); this is that fix
+    # applied to the whole trailing-slash-anchored batch at once, not just
+    # the one pattern that happened to get caught first. "/tag/" and
+    # "/tags/" both switch to "\b" too, and stay two separate entries — a
+    # bare "/tag" not being followed by a word character (\b) still means
+    # "/tags" itself doesn't accidentally match the "/tag" entry.
+    r"/blog\b", r"/posts\b", r"/news\b", r"/articles\b", r"/insights\b",
+    r"/careers\b", r"/jobs\b", r"/legal\b", r"/privacy",
     r"/terms", r"/pricing", r"/login", r"/signin",
-    r"/sign-in", r"/search\?", r"/tag/", r"/tags/", r"/about-us",
-    r"/press/", r"/events/", r"/newsletter",
+    r"/sign-in", r"/search\?", r"/tag\b", r"/tags\b", r"/about-us",
+    r"/press\b", r"/events\b", r"/newsletter",
     # "changelog" bare (was "/changelog", requiring a path-segment boundary)
     # — confirmed live, Semrush's Intergalactic names each component's
     # version-history page as a hyphenated suffix on the component's OWN
@@ -229,7 +243,7 @@ DEFAULT_EXCLUDE_PATTERNS = [
     # globally — it's also a common English word for an asset library or
     # the "Media Object" UI pattern, so it's a per-system exclude_patterns
     # entry on this one system's systems.yaml record instead.
-    r"/notizie/", r"/eventi/",
+    r"/notizie\b", r"/eventi\b",
     # Component-preview/sandbox routes some design-system sites generate one
     # of per component per viewport (Storybook, Playroom, an iframe sandbox)
     # — real content, but as a RESOURCE link (see resources.py), not a page
@@ -835,10 +849,18 @@ def extract_canonical(soup: BeautifulSoup, base_url: str) -> str | None:
 
 
 def has_noindex(soup: BeautifulSoup) -> bool:
-    """<meta name="robots" content="...noindex..."> — the page's own author
-    saying this shouldn't be indexed. A crawler that fetches it anyway (it
-    may still hold useful outgoing links) but embeds it regardless is
-    ignoring an explicit, deliberate signal."""
+    """<meta name="robots" content="...noindex..."> — the page author telling
+    SEARCH ENGINES not to rank this page. That's a signal about search
+    ranking, not about whether an AI agent should be able to find this
+    system's own real documentation — this tool's whole purpose, unlike a
+    search engine's. Confirmed live: REI's Cedar docs (rei.github.io/
+    rei-cedar-docs/) and Indiana University's Rivet (rivet.uits.iu.edu) are
+    both real, substantial documentation sites marked noindex sitewide with
+    no alternate canonical — almost certainly to avoid a GitHub Pages/staging
+    mirror competing with a "real" domain in Google, not a statement that
+    the content itself isn't real docs. No longer used to skip a page (see
+    its one call site) — kept only to log that the signal was present, which
+    is still useful context, just not disqualifying."""
     if not soup.head:
         return False
     for meta in soup.head.find_all("meta", attrs={"name": lambda v: v and v.lower() in ("robots", "googlebot")}):
@@ -1177,8 +1199,8 @@ def crawl(
                 to_visit_set.add(link)
 
         if has_noindex(soup):
-            print(f"  skip (noindex): {page_key}")
-        elif is_auth_or_error_title(title):
+            print(f"  (noindex — a search-ranking signal, not skipped here: {page_key})")
+        if is_auth_or_error_title(title):
             # A crawl that landed on a login wall, consent screen, or error
             # page — not this system's content at all. Confirmed live: an
             # OAuth redirect crawled 18 separate times (once per one-time
@@ -1393,13 +1415,26 @@ def update_registry_stats(
         fields["resources"] = resources
     if enrichment:
         fields.update(enrichment)
-    if render_mode:
-        # Sticky: once a system's content only shows up through a rendered
-        # (headless-browser) fetch, it stays flagged that way even after a
-        # successful render clears likely_spa — see ingest_spa()'s docstring
-        # for why: without this, --all's next plain crawl treats it as an
-        # ordinary system again, finds nothing (it still can't execute JS),
-        # and — before this existed — deleted the vectors the render wrote.
+    if render_mode is not None:
+        # Sticky by default: once a system's content only shows up through a
+        # rendered (headless-browser) fetch, it stays flagged that way even
+        # after a successful render clears likely_spa — see ingest_spa()'s
+        # docstring for why: without this, --all's next plain crawl treats it
+        # as an ordinary system again, finds nothing (it still can't execute
+        # JS), and — before this existed — deleted the vectors the render
+        # wrote.
+        #
+        # But "sticky" can't mean "permanent regardless of new evidence":
+        # confirmed live on AWS Cloudscape, which got stuck at render_mode
+        # "spa" (and therefore excluded from --all forever, per
+        # eligible_for_all()) after ONE crawl's thin_page_ratio false-
+        # positive — even though a plain crawl fetches hundreds of pages of
+        # real content there. ingest()'s plain-crawl path (unlike
+        # ingest_spa(), which only ever sets "spa") passes "" here
+        # specifically when THIS run's own plain crawl just found real,
+        # non-thin content — using the same "" (not None) distinction
+        # crawl_error already relies on above, since a bare `if render_mode`
+        # can set the field but can never clear it back to falsy.
         fields["render_mode"] = render_mode
     update_registry_fields(design_system_name, fields)
     mark_shard_touched(design_system_name)
@@ -1652,10 +1687,30 @@ def ingest(
     # thin shells. thin_page_ratio is recorded either way, for the health
     # report, regardless of which branch below actually flips likely_spa.
     thin_page_ratio = 1 - (len(pages) / fetched_count) if fetched_count else 0.0
-    if fetched_count >= 20 and thin_page_ratio > 0.9:
-        likely_spa = True
-    else:
-        likely_spa = not pages and not start_url_error
+    # A third signature, alongside the two above: the crawl fetched a page
+    # fine (so it isn't the zero-pages case) but found next to no <a href>
+    # links anywhere in it — all_links_seen includes off-domain and
+    # filtered-out links too, so a real docs homepage almost always has at
+    # least a handful (nav, footer, social) even when none of them end up
+    # followed. A handful-or-fewer total is the same "JS renders the real
+    # page client-side, the fetched HTML is just an empty shell" signature
+    # as the zero-pages case, just one page short of it — confirmed live on
+    # e.g. Adobe Spectrum and Biings (0 same-domain links in the fetched
+    # HTML, despite both having large real docs sites behind client-side
+    # routing). NOT every system stuck at 1 page fits this: AWS Cloudscape's
+    # homepage has 42 real same-domain links and still only yielded 1 page,
+    # which is a different bug elsewhere in the crawl/follow logic, not this
+    # one — this check deliberately stays narrow (<=3 total links) rather
+    # than trying to catch that case too, since a low-but-nonzero link count
+    # could also just be a real crawl bug worth its own investigation, not a
+    # site to route to the SPA renderer.
+    # Capped at fetched_count <= 1 so it can't misfire on a real multi-page
+    # site that simply has few external links from pages deeper in the crawl.
+    thin_link_shell = fetched_count <= 1 and len(all_links_seen) <= 3
+    # The thin_page_ratio > 0.9 signature (below, after persisted_pages/
+    # carried_over_pages are known) can override this — everything else
+    # decided right here.
+    likely_spa = (not pages and not start_url_error) or (bool(pages) and thin_link_shell)
 
     content_signals, content_signal_sources = detect_content_signals(pages)
     if content_signals:
@@ -1711,6 +1766,32 @@ def ingest(
             if url not in persisted_pages and url not in removed_urls
         }
 
+    # thin_page_ratio > 0.9 alone isn't enough — confirmed live on TWO real
+    # design systems now (AWS Cloudscape, Meta Astryx), both with a normal
+    # doc-site shape: a handful of substantial hub/index pages (/, /components,
+    # /patterns) plus hundreds of individually-brief per-component reference
+    # pages (each just a short description — real content, not a rendering
+    # failure). That shape trips a high ratio on ordinary max_pages budgets
+    # without the site being remotely SPA-only. A genuine JS-only shell keeps
+    # close to ZERO pages regardless of how many it fetches, so also
+    # requiring a low ABSOLUTE accumulated total (not just a high ratio on
+    # THIS run) tells the two apart.
+    #
+    # Deliberately checked against len(persisted_pages) + len(carried_over_
+    # pages) — the same accumulated total about to become pages_indexed
+    # below — rather than this run's raw len(pages). A capped run on a big
+    # site (crawl()'s seed sort favors reaching NEW pages over re-treading
+    # ones already indexed) can easily fetch mostly-new, mostly-thin leaf
+    # pages this run alone, while its real hub pages from a PRIOR run don't
+    # get re-visited at all — confirmed live, this is exactly what tripped
+    # Astryx even after switching the check to len(pages): 18 accumulated
+    # real pages, but len(pages) this run alone was still under 5. Checking
+    # the accumulated total instead means a site that's already proven it
+    # has substantial real content stays proven, regardless of how thin any
+    # one run's fresh fetches look next to it.
+    if fetched_count >= 20 and thin_page_ratio > 0.9 and (len(persisted_pages) + len(carried_over_pages)) < 5:
+        likely_spa = True
+
     update_registry_stats(
         design_system_name,
         pages_indexed=len(persisted_pages) + len(carried_over_pages),
@@ -1723,6 +1804,15 @@ def ingest(
         content_signals=content_signals,
         content_signal_sources=content_signal_sources,
         freshness_signal=fetch_freshness_signal(start_urls[0]),
+        # Clears a stale sticky render_mode=="spa" from an earlier run once
+        # THIS plain crawl proves it's no longer warranted — real pages
+        # persisted and this run didn't itself re-flag likely_spa (see
+        # update_registry_stats' render_mode param for the Cloudscape case
+        # this closes: a false-positive thin_page_ratio call, once, used to
+        # mean --all excluded it forever after). Left as None (untouched)
+        # otherwise, so a thin/failed run can't accidentally clear a
+        # genuinely-still-needed "spa" flag it didn't itself just disprove.
+        render_mode="" if persisted_pages and not likely_spa else None,
         thin_page_ratio=thin_page_ratio,
         has_localized_docs=has_localized_docs,
         likely_unmaintained=likely_unmaintained,
@@ -1898,30 +1988,58 @@ def fetch_rendered_page(url: str) -> tuple[str | None, set[str]]:
     different origin's iframe); MIN_CONTENT_LENGTH and the two checks below
     handle those instead."""
     import asyncio
-    from urllib.parse import urlparse as _urlparse
 
-    from crawl4ai import AsyncWebCrawler, CrawlerRunConfig
-
-    config = CrawlerRunConfig(excluded_tags=STRIP_TAGS, delay_before_return_html=5.0)
+    from crawl4ai import AsyncWebCrawler
 
     async def _run():
         async with AsyncWebCrawler() as crawler:
-            result = await crawler.arun(url=url, config=config)
-            # Some crawl4ai versions return a list-like container for a
-            # single URL rather than the CrawlResult itself.
-            if isinstance(result, list):
-                result = result[0] if result else None
-            return result
+            return await _render_one(crawler, url, RENDER_CONFIG)
 
     try:
-        result = asyncio.run(_run())
+        return asyncio.run(_run())[:2]
     except Exception as exc:
         print(f"  rendered fetch failed for {url}: {exc}")
         return None, set()
 
+
+# Shared between fetch_rendered_page() (one-off single-page render) and
+# crawl_spa() (a full BFS reusing one browser session across many pages,
+# rather than paying Chromium's launch cost per page like calling
+# fetch_rendered_page() in a loop would) — see fetch_rendered_page()'s own
+# docstring for why these two specific settings are tuned the way they are.
+RENDER_CONFIG = None  # set below, after CrawlerRunConfig is importable
+
+
+def _get_render_config():
+    global RENDER_CONFIG
+    if RENDER_CONFIG is None:
+        from crawl4ai import CrawlerRunConfig
+        RENDER_CONFIG = CrawlerRunConfig(excluded_tags=STRIP_TAGS, delay_before_return_html=5.0)
+    return RENDER_CONFIG
+
+
+async def _render_one(crawler, url: str, config) -> tuple[str | None, set[str], str | None]:
+    """One page's worth of fetch_rendered_page()'s old inline logic, pulled
+    out so crawl_spa() can call it many times against the SAME already-
+    launched crawler/browser session instead of relaunching Chromium per
+    page the way calling fetch_rendered_page() in a loop would. Returns
+    (text, links_seen, title) — title is best-effort (crawl4ai's own parsed
+    <title>, when it exposes one), None if unavailable."""
+    from urllib.parse import urlparse as _urlparse
+
+    try:
+        result = await crawler.arun(url=url, config=config)
+        # Some crawl4ai versions return a list-like container for a single
+        # URL rather than the CrawlResult itself.
+        if isinstance(result, list):
+            result = result[0] if result else None
+    except Exception as exc:
+        print(f"  rendered fetch failed for {url}: {exc}")
+        return None, set(), None
+
     if result is None or not getattr(result, "success", False):
         print(f"  rendered fetch did not succeed for {url}")
-        return None, set()
+        return None, set(), None
 
     # A docs site that now just 301s to a code host isn't a docs site
     # anymore — confirmed live, barista.dynatrace.com redirects straight to
@@ -1936,7 +2054,7 @@ def fetch_rendered_page(url: str) -> tuple[str | None, set[str]]:
     final_domain = _urlparse(redirected_url).netloc
     if final_domain != original_domain and final_domain in CODE_HOST_DOMAINS:
         print(f"  rendered fetch redirected to a code host ({final_domain}), not a docs site — treating as no content")
-        return None, set()
+        return None, set(), None
 
     # .markdown is a str-subclass in every crawl4ai version that's shipped
     # (kept backward-compatible on purpose per crawl4ai's own models.py) —
@@ -1954,7 +2072,7 @@ def fetch_rendered_page(url: str) -> tuple[str | None, set[str]]:
     # that don't).
     if any(marker in text for marker in STORYBOOK_CHROME_MARKERS):
         print("  rendered fetch is Storybook toolbar chrome, not real page content — treating as no content")
-        return None, set()
+        return None, set(), None
 
     links_seen: set[str] = set()
     links = getattr(result, "links", {}) or {}
@@ -1965,36 +2083,246 @@ def fetch_rendered_page(url: str) -> tuple[str | None, set[str]]:
                 if href:
                     links_seen.add(href)
 
-    return text, links_seen
+    title = None
+    metadata = getattr(result, "metadata", None) or {}
+    if isinstance(metadata, dict):
+        title = metadata.get("title") or None
+
+    return text, links_seen, title
 
 
-def ingest_spa(design_system_name: str, start_urls: list[str]) -> None:
-    """Single-page rendered ingest for a system already flagged likely_spa —
-    renders just the start URL through a real headless browser (see
-    fetch_rendered_page()) rather than doing a full BFS crawl. Deliberately
-    scoped to one page for now: a multi-page rendered crawl would need its
-    own link-following loop (same shape as crawl()'s, but rendering every
-    page is far slower/heavier than a plain GET), which is a reasonable next
-    step once this simpler version is confirmed working end to end."""
+def crawl_spa(
+    start_urls: list[str],
+    max_pages: int = DEFAULT_MAX_PAGES,
+    include_patterns: list[str] | None = None,
+    exclude_patterns: list[str] | None = None,
+    scope_paths: list[str] | None = None,
+    known_dead: set[str] | None = None,
+    on_page: "Callable[[str, str, str], None] | None" = None,
+    previously_indexed: set[str] | None = None,
+) -> tuple[dict[str, str], set[str], dict[str, str], bool, str | None, set[str]]:
+    """crawl()'s BFS shape, but rendering every page through a real headless
+    browser (_render_one(), one shared session for the whole crawl) instead
+    of a plain GET — for systems already flagged likely_spa/render_mode ==
+    "spa", where real per-page content only exists after client-side JS
+    runs. Confirmed live: Meta's Astryx has 235 real component pages
+    (Button, Badge, Avatar, ...) whose plain-fetched HTML is 100% nav/footer
+    chrome with ZERO real content — ingest_spa() rendering only the
+    homepage never reached any of them.
+
+    Same scope/exclude/include/known_dead filtering as crawl() (reused
+    directly — a page worth rendering is still subject to the same "is this
+    even part of the system's own docs" rules a plain-fetched page would
+    be), but deliberately without crawl()'s freshness/etag machinery: a
+    render is expensive enough that ingest_spa() re-renders everything on
+    every run rather than trying to skip unchanged pages.
+
+    on_page(url, text, title), when given, is called synchronously right
+    after each page clears MIN_CONTENT_LENGTH — before the crawl moves on
+    to the next URL. This is what lets ingest_spa() embed+upsert and
+    checkpoint pages_indexed incrementally rather than only at the very
+    end: confirmed live, a run rendering all 142 reachable pages
+    successfully still lost every one of them to an external SIGKILL
+    that hit during the batched embed step afterward (see this project's
+    own CLAUDE.md on the external killer). A render this expensive (multi-
+    second delay per page, real minutes for a whole run) makes losing
+    everything to one kill far costlier than crawl()'s plain-GET path,
+    where a batched-to-the-end embed is comparatively instant.
+
+    previously_indexed (a set of URLs, not the full previous_pages dict —
+    only membership matters here) biases the queue toward pages NOT in it,
+    the same way crawl()'s own seed sort favors reaching pages outside
+    previous_pages first. Confirmed live this matters a LOT for this path
+    specifically: an external SIGKILL (see this project's own CLAUDE.md)
+    striking early and often meant a naive retry-the-same-crawl loop kept
+    re-rendering the same already-persisted homepage/hub pages every single
+    attempt before dying, never advancing deeper into the hundreds of
+    still-unindexed leaf pages — 3 retries in a row added a total of 2 new
+    pages. crawl()'s plain-GET path has the same bias built in for exactly
+    this reason; render_spa()'s retries just hadn't needed it until a
+    kill-prone environment made "will this run even finish" the real
+    constraint rather than "is this URL reachable at all."
+
+    Returns (pages, all_links_seen, page_titles, hit_max_pages,
+    start_url_error, newly_dead) — same meaning as crawl()'s equivalents,
+    minus the two return values (unchanged_urls, page_freshness,
+    fetched_count, has_localized_docs) that only make sense for a plain
+    fetch. hit_max_pages/start_url_error/newly_dead let the caller reuse
+    ingest()'s exact carry-over/health-report logic unchanged. Still
+    returned in full (not just via the callback) so a caller that doesn't
+    need incremental checkpointing can use crawl_spa() exactly as before."""
+    import asyncio
+
+    from crawl4ai import AsyncWebCrawler
+
+    include_patterns = include_patterns or []
+    all_exclude_patterns = DEFAULT_EXCLUDE_PATTERNS + (exclude_patterns or [])
+    known_dead = known_dead or set()
+    previously_indexed = previously_indexed or set()
+    newly_dead: set[str] = set()
+    start_urls = [normalize_url(u) for u in start_urls]
+
+    if scope_paths:
+        root_scopes = {(urlparse(u).netloc, p) for u in start_urls for p in scope_paths}
+    else:
+        root_scopes = {path_scope(u) for u in start_urls}
+
+    config = _get_render_config()
+
+    async def _crawl():
+        pages: dict[str, str] = {}
+        page_titles: dict[str, str] = {}
+        all_links_seen: set[str] = set()
+        start_url_error: str | None = None
+        visited: set[str] = set()
+        to_visit = list(start_urls)
+        to_visit_set = set(to_visit)
+
+        async with AsyncWebCrawler() as crawler:
+            while to_visit and len(visited) < max_pages:
+                url = to_visit.pop(0)
+                to_visit_set.discard(url)
+                if url in visited:
+                    continue
+                visited.add(url)
+
+                print(f"Rendering: {url}")
+                text, raw_links, title = await _render_one(crawler, url, config)
+                if text is None:
+                    if url == start_urls[0]:
+                        start_url_error = "rendered fetch returned no content"
+                    continue
+
+                abs_links = {normalize_url(urljoin(url, href)) for href in raw_links}
+                all_links_seen |= abs_links
+
+                if len(text) >= MIN_CONTENT_LENGTH:
+                    pages[url] = text
+                    page_titles[url] = title or url
+                    if on_page:
+                        on_page(url, text, title or url)
+
+                for link in abs_links:
+                    if link in visited or link in to_visit_set:
+                        continue
+                    if link in known_dead:
+                        continue
+                    if not in_any_scope(link, root_scopes):
+                        continue
+                    if is_language_variant(link):
+                        continue
+                    if is_excluded(link, all_exclude_patterns):
+                        continue
+                    if not matches_include(link, include_patterns):
+                        continue
+                    to_visit.append(link)
+                    to_visit_set.add(link)
+
+                # Re-sort after every page, not just once at seed time (as
+                # crawl()'s equivalent does) — see this function's own
+                # docstring for why this matters much more here: an
+                # unpredictable external kill means "how far did we get
+                # before dying" is the real constraint, not just "will we
+                # eventually reach everything." Stable sort keeps FIFO
+                # order within each priority tier.
+                to_visit.sort(key=lambda u: u in previously_indexed)
+
+        hit_max_pages = len(visited) >= max_pages and bool(to_visit)
+        if hit_max_pages:
+            print(f"  hit max_pages ({max_pages}) with {len(to_visit)} more page(s) still queued — coverage is likely incomplete")
+        return pages, all_links_seen, page_titles, hit_max_pages, start_url_error, newly_dead
+
+    return asyncio.run(_crawl())
+
+
+def ingest_spa(design_system_name: str, start_urls: list[str], max_pages: int = DEFAULT_MAX_PAGES) -> None:
+    """Rendered ingest for a system already flagged likely_spa/render_mode ==
+    "spa" — a real BFS crawl (crawl_spa()) rendering every page through a
+    headless browser, not just the homepage. Confirmed live this matters:
+    Meta's Astryx has 235 real component pages whose plain-fetched HTML is
+    pure nav/footer chrome; rendering only the homepage (this function's
+    original scope) never reached a single one of them.
+
+    Every render is expensive (a multi-second delay per page, deliberately
+    — see fetch_rendered_page()'s docstring) compared to a plain GET, so
+    unlike ingest(), this doesn't try to skip unchanged pages — it always
+    re-renders everything crawl_spa() reaches, up to max_pages.
+
+    Persists INCREMENTALLY, one page at a time, via crawl_spa()'s on_page
+    callback — embedding/upserting to Qdrant and checkpointing pages_indexed
+    right after each page, rather than batching everything until the whole
+    crawl finishes. Confirmed live this matters a lot here specifically:
+    a run against Astryx successfully rendered all 142 reachable pages, then
+    lost every single one of them to an external SIGKILL (see this
+    project's own CLAUDE.md) that hit during the batched embed step
+    afterward — three such kills in a row, zero pages ever saved, despite
+    the rendering itself working perfectly each time. A kill between
+    incremental checkpoints now loses at most the one page in flight,
+    not the whole run.
+
+    The checkpoint deliberately only ever touches pages_indexed (via the
+    lighter update_registry_fields(), not the full update_registry_stats())
+    plus pages_index.json — update_registry_stats() unconditionally writes
+    hit_max_pages/content_signals/likely_unmaintained/etc with placeholder
+    defaults on every call, which would wipe real metadata to those
+    defaults on every single page if called that often. The one full
+    update_registry_stats() call, with everything actually known, still
+    only happens once, after the whole crawl completes normally."""
     client = get_qdrant_client()
     ensure_collection(client)
 
     start_url = start_urls[0]
-    text, links_seen = fetch_rendered_page(start_url)
-
-    pages: dict[str, str] = {}
-    page_titles: dict[str, str] = {}
-    if text and len(text) >= MIN_CONTENT_LENGTH:
-        pages[start_url] = text
-        page_titles[start_url] = design_system_name
-    print(f"\nRendered {len(pages)} page(s). Chunking + embedding...")
-
     previous_entry = get_registry_entry(design_system_name) or {}
-    if not pages and previous_entry.get("pages_indexed"):
+    previous_pages = load_previous_pages(design_system_name)
+    known_dead = load_dead_links(design_system_name)
+
+    persisted_pages: dict[str, str] = {}
+    persisted_titles: dict[str, str] = {}
+
+    def _checkpoint() -> None:
+        carried_over = {url: meta for url, meta in previous_pages.items() if url not in persisted_pages}
+        update_registry_fields(design_system_name, {"pages_indexed": len(persisted_pages) + len(carried_over)})
+        update_pages_index(
+            design_system_name,
+            [
+                {"url": url, "title": persisted_titles.get(url, url)}
+                for url in persisted_pages
+            ] + [
+                {"url": url, "title": meta.get("title") or url, **{k: v for k, v in meta.items() if k != "title" and v}}
+                for url, meta in carried_over.items()
+            ],
+        )
+
+    def _persist_page(url: str, text: str, title: str) -> None:
+        failed_urls, new_chunk_counts = _chunk_and_upsert(client, design_system_name, {url: text}, {url: title})
+        if url in failed_urls:
+            print(f"  {url} failed to embed — will retry next run")
+            return
+        delete_stale_chunks(client, design_system_name, new_chunk_counts)
+        persisted_pages[url] = text
+        persisted_titles[url] = title
+        _checkpoint()
+
+    pages, all_links_seen, page_titles, hit_max_pages, start_url_error, newly_dead = crawl_spa(
+        start_urls,
+        max_pages=max_pages,
+        include_patterns=previous_entry.get("include_patterns"),
+        exclude_patterns=previous_entry.get("exclude_patterns"),
+        scope_paths=previous_entry.get("scope_paths"),
+        known_dead=known_dead,
+        on_page=_persist_page,
+        previously_indexed=set(previous_pages),
+    )
+    update_dead_links(design_system_name, newly_dead)
+    print(f"\nRendered {len(pages)} page(s), {len(persisted_pages)} persisted.")
+
+    if not persisted_pages and previous_entry.get("pages_indexed"):
         # Same principle as ingest()'s empty-crawl guard: a render that came
         # back empty is far more likely this run's failure (a flaky headless
         # browser, a momentary bot-block) than proof the rendered content is
         # gone — don't wipe an already-indexed system's vectors over it.
+        # Checked against persisted_pages (what's actually IN Qdrant), not
+        # pages (what crawl_spa() rendered before any embed was attempted).
         print(f"\n  render came back empty for a previously-indexed system — "
               f"leaving its {previous_entry.get('pages_indexed')} existing page(s) untouched.")
         update_registry_stats(
@@ -2002,7 +2330,7 @@ def ingest_spa(design_system_name: str, start_urls: list[str]) -> None:
             pages_indexed=previous_entry.get("pages_indexed", 0),
             resources={},
             enrichment={},
-            crawl_error="rendered fetch returned 0 pages",
+            crawl_error=start_url_error or "rendered fetch returned 0 pages",
             unverified_resources=previous_entry.get("unverified_resources"),
             content_signals=previous_entry.get("content_signals"),
             content_signal_sources=previous_entry.get("content_signal_sources"),
@@ -2011,11 +2339,34 @@ def ingest_spa(design_system_name: str, start_urls: list[str]) -> None:
         )
         return
 
-    raw_resources = merge_resources(classify_links(links_seen, design_system_name), probe_well_known(start_url))
+    raw_resources = merge_resources(classify_links(all_links_seen, design_system_name), probe_well_known(start_url))
     unverified_resources = flag_unverified_resources(raw_resources, design_system_name)
     resources = filter_unverified_resources(raw_resources, unverified_resources)
     enrichment = enrich_resources(resources)
     likely_unmaintained = compute_likely_unmaintained(enrichment)
+
+    # MERGE with what the registry already knew, rather than replacing it
+    # outright — unlike ingest()'s plain-crawl path (which always does one
+    # comprehensive BFS and so can safely treat its own findings as the
+    # full current picture), a single ingest_spa() run's all_links_seen/
+    # persisted_pages can be a much NARROWER slice of the site than what's
+    # actually indexed overall. This got confirmed live as a real data-loss
+    # bug, not a hypothetical: previously_indexed prioritization (added to
+    # survive the external killer — see crawl_spa()'s docstring) means a
+    # run that happens to complete can easily have steered entirely clear
+    # of the homepage/hub pages where a resource or content signal was
+    # ORIGINALLY found, and the old blind-overwrite treated "didn't
+    # re-find it this narrow run" as "it's gone" — wiping Astryx's real
+    # figma/icons resources and its React content signal in exactly this
+    # way. A resource/signal is only ever additive here: nothing already
+    # known is ever dropped just because one particular run's slice didn't
+    # happen to pass through the page it lives on.
+    resources = merge_resources(previous_entry.get("resources") or {}, resources)
+    unverified_resources = {**(previous_entry.get("unverified_resources") or {}), **unverified_resources}
+    content_signals, content_signal_sources = detect_content_signals(persisted_pages)
+    content_signals = {**(previous_entry.get("content_signals") or {}), **content_signals}
+    content_signal_sources = {**(previous_entry.get("content_signal_sources") or {}), **content_signal_sources}
+
     if resources:
         print(f"  discovered resources: {resources}")
     if unverified_resources:
@@ -2024,40 +2375,59 @@ def ingest_spa(design_system_name: str, start_urls: list[str]) -> None:
         print(f"  enrichment: {enrichment}")
     if likely_unmaintained:
         print(f"  looks unmaintained (last real activity over {UNMAINTAINED_THRESHOLD_DAYS} days ago)")
-
-    content_signals, content_signal_sources = detect_content_signals(pages)
     if content_signals:
         print(f"  content signals: {content_signals}")
 
-    # Embed BEFORE writing registry stats — same reasoning as ingest()'s
-    # ordering: a page whose embedding fails shouldn't be recorded as
-    # indexed. Deterministic point IDs (chunk_point_id) mean upserting the
-    # same start_url again just overwrites its existing chunks in place, so
-    # unlike the old code, there's no full delete_existing() wipe needed at
-    # all — a failed render simply leaves whatever was there before intact.
-    failed_urls, new_chunk_counts = _chunk_and_upsert(client, design_system_name, pages, page_titles)
-    delete_stale_chunks(client, design_system_name, new_chunk_counts)
-    persisted_pages = {url: pages[url] for url in pages if url not in failed_urls}
+    # No embed step here — _persist_page() already embedded/upserted each
+    # page incrementally as crawl_spa() rendered it (see this function's
+    # own docstring for why). persisted_pages/persisted_titles are exactly
+    # what's actually in Qdrant right now, not a fresh re-embed of `pages`.
+    page_titles = persisted_titles
+
+    # This path has no removal-detection at all yet (crawl_spa() never
+    # populates newly_dead — unlike crawl()'s fetch_page(), it doesn't tell
+    # a real 404 apart from a page just not being reachable this run) — so,
+    # even more conservatively than ingest()'s hit_max_pages-gated carry-
+    # over, ALWAYS carry over a previously-rendered page this run didn't
+    # revisit, regardless of hit_max_pages. A page dropping out of the
+    # rendered link-graph (a nav change, a capped run landing elsewhere)
+    # is never treated as proof it's gone — same "removal is only ever
+    # deliberate" principle as the plain-crawl path, just with no positive
+    # signal available yet to ever prove otherwise on this one.
+    carried_over_pages = {
+        url: meta for url, meta in previous_pages.items() if url not in persisted_pages
+    }
 
     update_registry_stats(
         design_system_name,
-        pages_indexed=len(persisted_pages),
+        pages_indexed=len(persisted_pages) + len(carried_over_pages),
         resources=resources,
         enrichment=enrichment,
-        likely_spa=len(persisted_pages) == 0,
+        hit_max_pages=hit_max_pages,
+        crawl_error=start_url_error,
+        likely_spa=not persisted_pages and not carried_over_pages,
         # A successful render sticks: --all's plain-crawl filter excludes
         # render_mode == "spa" permanently, rather than relying on
         # likely_spa flipping False and being plain-recrawled next month,
         # finding 0 pages (since it can't execute JS either), and — before
         # this fix existed — deleting everything this render just wrote.
-        render_mode="spa" if persisted_pages else previous_entry.get("render_mode"),
+        render_mode="spa" if (persisted_pages or carried_over_pages) else previous_entry.get("render_mode"),
         unverified_resources=unverified_resources,
         content_signals=content_signals,
         content_signal_sources=content_signal_sources,
         freshness_signal=fetch_freshness_signal(start_url),
         likely_unmaintained=likely_unmaintained,
     )
-    update_pages_index(design_system_name, [{"url": url, "title": page_titles.get(url, url)} for url in persisted_pages])
+    update_pages_index(
+        design_system_name,
+        [
+            {"url": url, "title": page_titles.get(url, url)}
+            for url in persisted_pages
+        ] + [
+            {"url": url, "title": meta.get("title") or url, **{k: v for k, v in meta.items() if k != "title" and v}}
+            for url, meta in carried_over_pages.items()
+        ],
+    )
     print("\nDone.")
 
 
@@ -2122,11 +2492,28 @@ def now_iso() -> str:
 def eligible_for_all(entry: dict) -> bool:
     """--all's (and reindex-full.yml's prepare job's) filter, in one place so
     the two can't silently drift apart — see 1.8/eligible_for_spa(). A system
-    stays out of the plain-crawl rotation once it's flagged likely_spa OR has
-    a sticky render_mode == "spa": either way, a plain HTTP GET has already
-    been shown not to find real content there, and would just waste requests
-    finding nothing again. reindex-spa.yml's headless render is the only
-    thing that can make progress on it (see eligible_for_spa).
+    stays out of the plain-crawl rotation once it's flagged likely_spa — a
+    plain HTTP GET has already been shown not to find real content there,
+    and would just waste requests finding nothing again. reindex-spa.yml's
+    headless render is the only thing that can make progress on it (see
+    eligible_for_spa).
+
+    Deliberately does NOT also exclude on render_mode == "spa" (a past
+    successful render) the way it used to — confirmed live, that blanket
+    exclusion is actively wrong for a HYBRID system: Meta's Astryx has real,
+    substantial hub pages (/, /components, /patterns) a plain crawl finds
+    fine (likely_spa correctly False, per the accumulated-total fix above),
+    but 235 individual component pages that need rendering. Once ingest_spa()
+    ever renders anything for it, render_mode="spa" sticks permanently,
+    which under the old check meant --all would never plain-crawl its real
+    hub pages again either — the exact trap this whole area keeps almost
+    falling into, just from the other direction this time. The thing
+    render_mode=="spa" originally protected against — a plain re-crawl
+    finding nothing and deleting the vectors a render wrote — is already
+    independently handled by ingest()'s own "previous_pages and not pages"
+    empty-crawl guard, regardless of render_mode, so this exclusion was
+    redundant for a genuine SPA shell (already caught by likely_spa alone)
+    and only ever actively harmful for a hybrid one.
 
     Also excludes likely_unmaintained (see resources.compute_likely_
     unmaintained) — distinct from archived (site confirmed gone): here the
@@ -2139,7 +2526,6 @@ def eligible_for_all(entry: dict) -> bool:
     return (
         not entry.get("archived")
         and not entry.get("likely_spa")
-        and entry.get("render_mode") != "spa"
         and not entry.get("likely_unmaintained")
     )
 
@@ -2282,7 +2668,10 @@ if __name__ == "__main__":
         for entry in spa_entries:
             name = full_name(entry)
             print(f"\n=== {name} === (rendered)")
-            safe_run(name, ingest_spa, name, entry["start_urls"])
+            safe_run(
+                name, ingest_spa, name, entry["start_urls"],
+                max_pages=shallow_max_pages if shallow_max_pages is not None else DEFAULT_MAX_PAGES,
+            )
 
     elif args[0] == "--system":
         if len(args) < 2:

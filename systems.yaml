@@ -220,14 +220,14 @@
   - https://developer.apple.com/design/human-interface-guidelines/
   pages_indexed: 1
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: '"4511-65bc767d03082-df"'
+  etag: '"4511-65bc767d03082"'
   last_modified: Fri, 18 Sep 2026 20:04:18 GMT
-  last_checked: '2026-09-19T11:15:23+00:00'
+  last_checked: '2026-09-21T02:22:13+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -2711,14 +2711,14 @@
   - https://rivet.uits.iu.edu/
   pages_indexed: 1
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 2
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   etag: '"6aac315b-13cf"'
   last_modified: Thu, 17 Sep 2026 18:28:43 GMT
-  last_checked: '2026-09-19T20:27:06+00:00'
+  last_checked: '2026-09-21T02:35:13+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -3687,17 +3687,17 @@
   - https://developer.microsoft.com/en-us/fluentui#/
   pages_indexed: 1
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals:
     frameworks:
     - React
     - Web Components
-  last_modified: Sat, 19 Sep 2026 20:02:42 GMT
+  last_modified: Mon, 21 Sep 2026 01:44:23 GMT
   sitemap_url: https://developer.microsoft.com/_devcom/sitemap.xml
-  last_checked: '2026-09-19T20:29:01+00:00'
+  last_checked: '2026-09-21T02:18:14+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -3782,19 +3782,19 @@
   pages_indexed: 1
   resources:
     figma:
-    - https://www.figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns?mode=design&node-id=0%3A1&t=ldHKHxiogxXtwToh-1&type=design
-  hit_max_pages: false
+    - https://figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns
+  hit_max_pages: true
   crawl_error: ''
-  likely_spa: false
+  likely_spa: true
   last_modified: Mon, 22 Jun 2026 13:11:25 GMT
-  last_checked: '2026-09-19T20:29:37+00:00'
+  last_checked: '2026-09-21T02:18:08+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
   sitemap_url: https://designsystem.morningstar.com/sitemap.xml
   likely_unmaintained: false
   content_signal_sources: {}
-  thin_page_ratio: 0.97
+  thin_page_ratio: 0.99
   has_localized_docs: false
   render_mode: spa
 - organization: Mozilla
@@ -6457,13 +6457,13 @@
   design_system: Design system
   start_urls:
   - https://wise.design/
-  pages_indexed: 1
+  pages_indexed: 3
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: false
+  likely_spa: true
   etag: W/"a36780676b4be867f33a96235d0b10ac"
   last_modified: Wed, 15 Jul 2026 14:36:51 GMT
-  last_checked: '2026-09-19T21:44:53+00:00'
+  last_checked: '2026-09-21T02:21:55+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -6819,69 +6819,6 @@
   start_urls:
   - https://daisyui.com/
   likely_unmaintained: false
-  pages_indexed: 151
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
-  likely_spa: false
-  unverified_resources:
-    github:
-    - https://github.com/saadeghi/theme-change
-    - https://github.com/WickyNilliams/cally
-    - https://github.com/gpbl/react-day-picker
-    - https://github.com/uvarov-frontend/vanilla-calendar-pro
-  content_signals:
-    dark_mode: true
-    tokens_format: Figma Variables
-    exemplars: true
-    frameworks:
-    - Vue
-    - React
-    - Svelte
-    - Angular
-  content_signal_sources:
-    dark_mode: https://daisyui.com/
-    tokens_format: https://daisyui.com/blueprint/vscode
-    exemplars: https://daisyui.com/brand
-    frameworks:
-      Vue: https://daisyui.com/
-      React: https://daisyui.com/ai/design-website
-      Svelte: https://daisyui.com/ai/design-website
-      Angular: https://daisyui.com/angular-component-library
-  thin_page_ratio: -0.01
-  has_localized_docs: false
-  last_checked: '2026-09-21T09:48:12+00:00'
-  last_modified: Fri, 18 Sep 2026 08:11:38 GMT
-  sitemap_url: https://daisyui.com/sitemap.xml
-  resources:
-    github:
-    - https://github.com/saadeghi/daisyui
-    markdown_docs:
-    - https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md
-    mcp:
-    - https://daisyui.com/claude-code/ui-design-mcp-server
-    - https://daisyui.com/codex/ui-design-mcp-server
-    - https://docs.x.ai/build/features/mcp-servers
-    - https://daisyui.com/cursor/ui-design-mcp-server
-    - https://code.visualstudio.com/docs/copilot/customization/mcp-servers
-    skills:
-    - https://daisyui.com/docs/skill/codex
-    - https://daisyui.com/skills/daisyui-charts
-    - https://daisyui.com/docs/skill/cursor
-    - https://daisyui.com/docs/skill/claude-code
-    - https://daisyui.com/skills/daisyui-dashboard
-    agent_instructions:
-    - https://daisyui.com/llms.txt
-    npm:
-    - https://npmjs.com/package/daisyui
-  github_meta:
-    license: MIT
-    stars: 42441
-    last_pushed: '2026-09-18T08:11:11Z'
-  npm_meta:
-    latest_version: 5.7.42
-    last_published: '2026-09-18T08:12:17.313Z'
-    weekly_downloads: 768932
 - organization: ''
   design_system: HeroUI
   start_urls:
@@ -7288,35 +7225,39 @@
   start_urls:
   - https://astryx.atmeta.com/
   likely_unmaintained: false
-  pages_indexed: 18
+  pages_indexed: 24
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals:
-    codemods: true
     frameworks:
     - React
   content_signal_sources:
-    codemods: https://astryx.atmeta.com/blog
     frameworks:
       React: https://astryx.atmeta.com/docs/getting-started
-  thin_page_ratio: 0.88
+  thin_page_ratio: 0.99
   has_localized_docs: false
-  last_checked: '2026-09-20T02:16:28+00:00'
+  last_checked: '2026-09-21T04:23:10+00:00'
   sitemap_url: https://astryx.atmeta.com/sitemap.xml
   sitemap_last_modified: '2026-09-10T00:00:00.000Z'
   resources:
     github:
     - https://github.com/facebook/astryx
+    figma:
+    - https://figma.com/community/file/1661363854016665156/astryx-design-system-for-figma-v0-1
+    - https://figma.com/community/file/1659998707120781098/astryx-library-community
+    - https://figma.com/community/file/1655939158795671259/astryx-for-figma
+    - https://figma.com/community/file/1659998707120781098
     icons:
     - https://astryx.atmeta.com/docs/icons
-    - https://astryx-canary.vercel.app/components/Icon
     - https://astryx.atmeta.com/components/Icon
+    - https://astryx-canary.vercel.app/components/Icon
     agent_instructions:
     - https://astryx.atmeta.com/llms.txt
   github_meta:
     license: MIT
-    stars: 13248
-    last_pushed: '2026-09-20T02:11:04Z'
+    stars: 13281
+    last_pushed: '2026-09-21T04:23:03Z'
+  render_mode: spa

@@ -1,8 +1,8 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-21T09:49:26+00:00",
+  "generated_at": "2026-09-21T06:44:02+00:00",
   "data_as_of": "2026-09-13T22:41:54+00:00",
-  "total_systems": 162,
+  "total_systems": 161,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -206,7 +206,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-19T11:15:23+00:00",
+      "last_checked": "2026-09-21T02:22:13+00:00",
       "last_modified": "Fri, 18 Sep 2026 20:04:18 GMT",
       "sitemap_last_modified": null,
       "resources": {},
@@ -2041,8 +2041,144 @@
       "npm_meta": null,
       "indexed_pages": [
         {
+          "url": "https://cloudscape.design/about",
+          "title": "About Cloudscape - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/gen-ai",
+          "title": "About generative AI - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/annotation-context",
+          "title": "Annotation context - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/app-layout-toolbar",
+          "title": "App layout toolbar - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/area-chart",
+          "title": "Area chart - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/llms.txt",
+          "title": "AWS — Cloudscape Design System — llms.txt"
+        },
+        {
+          "url": "https://cloudscape.design/components/bar-chart",
+          "title": "Bar chart - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/board-components",
+          "title": "Board components - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/cartesian-chart",
+          "title": "Cartesian charts - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/charts-legacy",
+          "title": "Charts (Legacy) - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/charts",
+          "title": "Charts - Cloudscape Design System"
+        },
+        {
           "url": "https://cloudscape.design/",
-          "title": "AWS — Cloudscape Design System"
+          "title": "Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/collection-select-filter",
+          "title": "Collection select filter - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components",
+          "title": "Components - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/about/connect",
+          "title": "Connect - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/demos",
+          "title": "Demos - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/file-upload",
+          "title": "File upload - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/file-uploading-components",
+          "title": "File uploading components - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/flashbar",
+          "title": "Flashbar - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/foundation",
+          "title": "Foundation - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/genai-components",
+          "title": "Generative AI components - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/get-started",
+          "title": "Get started - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/grid",
+          "title": "Grid - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/hotspot",
+          "title": "Hotspot - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/line-chart",
+          "title": "Line chart - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/mixed-line-bar-chart",
+          "title": "Mixed line and bar chart - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/modal",
+          "title": "Modal - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/patterns",
+          "title": "Patterns - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/pie-chart",
+          "title": "Pie and donut charts - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/pie-chart-legacy",
+          "title": "Pie and donut charts - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/property-filter",
+          "title": "Property filter - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/split-panel",
+          "title": "Split panel - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/status-indicator",
+          "title": "Status indicator - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/hands-on-tutorials",
+          "title": "Tutorial components - Cloudscape Design System"
+        },
+        {
+          "url": "https://cloudscape.design/components/wizard",
+          "title": "Wizard - Cloudscape Design System"
         }
       ]
     },
@@ -8705,7 +8841,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-19T20:27:06+00:00",
+      "last_checked": "2026-09-21T02:35:13+00:00",
       "last_modified": "Thu, 17 Sep 2026 18:28:43 GMT",
       "sitemap_last_modified": null,
       "resources": {},
@@ -14408,8 +14544,8 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-19T20:29:01+00:00",
-      "last_modified": "Sat, 19 Sep 2026 20:02:42 GMT",
+      "last_checked": "2026-09-21T02:18:14+00:00",
+      "last_modified": "Mon, 21 Sep 2026 01:44:23 GMT",
       "sitemap_last_modified": null,
       "resources": {},
       "unverified_resources": {},
@@ -14567,14 +14703,14 @@
       "detail_url": "/systems/morningstar-morningstar-design-system",
       "pages_indexed": 1,
       "coverage_status": "partial",
-      "hit_max_pages": false,
-      "likely_spa": false,
-      "last_checked": "2026-09-19T20:29:37+00:00",
+      "hit_max_pages": true,
+      "likely_spa": true,
+      "last_checked": "2026-09-21T02:18:08+00:00",
       "last_modified": "Mon, 22 Jun 2026 13:11:25 GMT",
       "sitemap_last_modified": null,
       "resources": {
         "figma": [
-          "https://www.figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns?mode=design&node-id=0%3A1&t=ldHKHxiogxXtwToh-1&type=design"
+          "https://figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns"
         ]
       },
       "unverified_resources": {},
@@ -14584,7 +14720,7 @@
       "indexed_pages": [
         {
           "url": "https://designsystem.morningstar.com/",
-          "title": "Morningstar — Morningstar Design System"
+          "title": "Home - Morningstar Design System"
         }
       ]
     },
@@ -27255,11 +27391,11 @@
         "https://wise.design/"
       ],
       "detail_url": "/systems/wise-design-system",
-      "pages_indexed": 1,
+      "pages_indexed": 3,
       "coverage_status": "partial",
       "hit_max_pages": false,
-      "likely_spa": false,
-      "last_checked": "2026-09-19T21:44:53+00:00",
+      "likely_spa": true,
+      "last_checked": "2026-09-21T02:21:55+00:00",
       "last_modified": "Wed, 15 Jul 2026 14:36:51 GMT",
       "sitemap_last_modified": "2026-07-15T14:37:05Z",
       "resources": {},
@@ -27269,8 +27405,16 @@
       "npm_meta": null,
       "indexed_pages": [
         {
-          "url": "https://wise.design/",
-          "title": "Wise — Design system"
+          "url": "https://wise.design/brand",
+          "title": "Wise Design | Brand"
+        },
+        {
+          "url": "https://wise.design/images",
+          "title": "Wise Design | Building a System for a Borderless World"
+        },
+        {
+          "url": "https://wise.design/direction",
+          "title": "Wise Design | Building a System for a Borderless World"
         }
       ]
     },
@@ -28513,686 +28657,6 @@
         {
           "url": "https://ark-ui.com/examples/virtualized-select",
           "title": "Virtualized Select | Ark UI"
-        }
-      ]
-    },
-    {
-      "id": "daisyui",
-      "organization": null,
-      "design_system": "daisyUI",
-      "full_name": "daisyUI",
-      "start_urls": [
-        "https://daisyui.com/"
-      ],
-      "detail_url": "/systems/daisyui",
-      "pages_indexed": 151,
-      "coverage_status": "partial",
-      "hit_max_pages": true,
-      "likely_spa": false,
-      "last_checked": "2026-09-21T09:48:12+00:00",
-      "last_modified": "Fri, 18 Sep 2026 08:11:38 GMT",
-      "sitemap_last_modified": null,
-      "resources": {
-        "github": [
-          "https://github.com/saadeghi/daisyui"
-        ],
-        "markdown_docs": [
-          "https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md"
-        ],
-        "mcp": [
-          "https://daisyui.com/claude-code/ui-design-mcp-server",
-          "https://daisyui.com/codex/ui-design-mcp-server",
-          "https://docs.x.ai/build/features/mcp-servers",
-          "https://daisyui.com/cursor/ui-design-mcp-server",
-          "https://code.visualstudio.com/docs/copilot/customization/mcp-servers"
-        ],
-        "skills": [
-          "https://daisyui.com/docs/skill/codex",
-          "https://daisyui.com/skills/daisyui-charts",
-          "https://daisyui.com/docs/skill/cursor",
-          "https://daisyui.com/docs/skill/claude-code",
-          "https://daisyui.com/skills/daisyui-dashboard"
-        ],
-        "agent_instructions": [
-          "https://daisyui.com/llms.txt"
-        ],
-        "npm": [
-          "https://npmjs.com/package/daisyui"
-        ]
-      },
-      "unverified_resources": {
-        "github": [
-          "https://github.com/saadeghi/theme-change",
-          "https://github.com/WickyNilliams/cally",
-          "https://github.com/gpbl/react-day-picker",
-          "https://github.com/uvarov-frontend/vanilla-calendar-pro"
-        ]
-      },
-      "content_signals": {
-        "dark_mode": true,
-        "tokens_format": "Figma Variables",
-        "exemplars": true,
-        "frameworks": [
-          "Vue",
-          "React",
-          "Svelte",
-          "Angular"
-        ]
-      },
-      "github_meta": {
-        "license": "MIT",
-        "stars": 42441,
-        "last_pushed": "2026-09-18T08:11:11Z"
-      },
-      "npm_meta": {
-        "latest_version": "5.7.42",
-        "last_published": "2026-09-18T08:12:17.313Z",
-        "weekly_downloads": 768932
-      },
-      "indexed_pages": [
-        {
-          "url": "https://daisyui.com/ai/frontend-code-generation",
-          "title": "AI frontend code generation"
-        },
-        {
-          "url": "https://daisyui.com/ai/ui-code-generation",
-          "title": "AI UI code generation"
-        },
-        {
-          "url": "https://daisyui.com/ai",
-          "title": "AI UI generation with daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/angular-component-library",
-          "title": "Angular component library"
-        },
-        {
-          "url": "https://daisyui.com/angular-tailwind-css",
-          "title": "Angular Tailwind CSS"
-        },
-        {
-          "url": "https://daisyui.com/angular-ui-library",
-          "title": "Angular UI library"
-        },
-        {
-          "url": "https://daisyui.com/astro-component-library",
-          "title": "Astro component library"
-        },
-        {
-          "url": "https://daisyui.com/astro-tailwind-css",
-          "title": "Astro Tailwind CSS"
-        },
-        {
-          "url": "https://daisyui.com/astro-ui-library",
-          "title": "Astro UI library"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/best-design-skill-2026",
-          "title": "Best Claude Code design skill 2026"
-        },
-        {
-          "url": "https://daisyui.com/codex/best-design-skill-2026",
-          "title": "Best Codex design skill 2026"
-        },
-        {
-          "url": "https://daisyui.com/component-library/best-for-2026",
-          "title": "Best component library for 2026"
-        },
-        {
-          "url": "https://daisyui.com/component-library/for-beginners",
-          "title": "Best component library for beginners"
-        },
-        {
-          "url": "https://daisyui.com/cursor/best-design-skill-2026",
-          "title": "Best Cursor design skill 2026"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/best-free-component-library",
-          "title": "Best free component library for Claude Code"
-        },
-        {
-          "url": "https://daisyui.com/codex/best-free-component-library",
-          "title": "Best free component library for Codex"
-        },
-        {
-          "url": "https://daisyui.com/cursor/best-free-component-library",
-          "title": "Best free component library for Cursor"
-        },
-        {
-          "url": "https://daisyui.com/component-library",
-          "title": "Choose a component library for your project"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/free-design-skill",
-          "title": "Claude Code free design skill"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/frontend-design-plugin",
-          "title": "Claude Code frontend design plugin"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/frontend-skill",
-          "title": "Claude Code frontend skill"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/ui-design-skill",
-          "title": "Claude Code UI design skill"
-        },
-        {
-          "url": "https://daisyui.com/claude-code",
-          "title": "Claude Code UI design with daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/web-design-skill",
-          "title": "Claude Code web design skill"
-        },
-        {
-          "url": "https://daisyui.com/claude/ui-design-prompt",
-          "title": "Claude UI design prompt"
-        },
-        {
-          "url": "https://daisyui.com/codex/free-design-skill",
-          "title": "Codex free design skill"
-        },
-        {
-          "url": "https://daisyui.com/codex",
-          "title": "Codex UI design with daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/component-library/for-school-projects",
-          "title": "CSS framework for school projects"
-        },
-        {
-          "url": "https://daisyui.com/component-library/css-library-for-html",
-          "title": "CSS library for HTML"
-        },
-        {
-          "url": "https://daisyui.com/cursor/free-design-skill",
-          "title": "Cursor free design skill"
-        },
-        {
-          "url": "https://daisyui.com/cursor/frontend-skill",
-          "title": "Cursor frontend skill"
-        },
-        {
-          "url": "https://daisyui.com/cursor/ui-design-skill",
-          "title": "Cursor UI design skill"
-        },
-        {
-          "url": "https://daisyui.com/cursor",
-          "title": "Cursor UI design with daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/cursor/use-less-tokens",
-          "title": "Cursor use less tokens"
-        },
-        {
-          "url": "https://daisyui.com/",
-          "title": "daisyUI - Tailwind CSS Component Library"
-        },
-        {
-          "url": "https://daisyui.com/blog",
-          "title": "daisyUI Blog — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint",
-          "title": "daisyUI Blueprint 1.5 | Official daisyUI MCP server"
-        },
-        {
-          "url": "https://daisyui.com/brand",
-          "title": "daisyUI Logo"
-        },
-        {
-          "url": "https://daisyui.com/llms.txt",
-          "title": "daisyUI — llms.txt"
-        },
-        {
-          "url": "https://daisyui.com/ai/design-website",
-          "title": "Design website with AI"
-        },
-        {
-          "url": "https://daisyui.com/django-component-library",
-          "title": "Django component library"
-        },
-        {
-          "url": "https://daisyui.com/component-library/easy",
-          "title": "Easy component library"
-        },
-        {
-          "url": "https://daisyui.com/component-library/easy-css-library",
-          "title": "Easy CSS library"
-        },
-        {
-          "url": "https://daisyui.com/ai/generate-ui-from-text",
-          "title": "Generate UI from text"
-        },
-        {
-          "url": "https://daisyui.com/claude/generate-ui",
-          "title": "Generate UI with Claude"
-        },
-        {
-          "url": "https://daisyui.com/claude",
-          "title": "Generate UI with Claude and daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/codex/generate-ui",
-          "title": "Generate UI with Codex"
-        },
-        {
-          "url": "https://daisyui.com/ai/generate-ui-with-llm",
-          "title": "Generate UI with LLM"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/workflow",
-          "title": "How Blueprint MCP Works — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/how-to-design-ui",
-          "title": "How to design UI with Claude Code"
-        },
-        {
-          "url": "https://daisyui.com/codex/how-to-design-ui",
-          "title": "How to design UI with Codex"
-        },
-        {
-          "url": "https://daisyui.com/cursor/how-to-design-ui",
-          "title": "How to design UI with Cursor"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/antigravity",
-          "title": "Install Blueprint MCP for Antigravity — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/claudecode",
-          "title": "Install Blueprint MCP for Claude Code — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/claude",
-          "title": "Install Blueprint MCP for Claude Desktop — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/cline",
-          "title": "Install Blueprint MCP for Cline — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/codex",
-          "title": "Install Blueprint MCP for Codex — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/cursor",
-          "title": "Install Blueprint MCP for Cursor — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/grok",
-          "title": "Install Blueprint MCP for Grok Build — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/openclaw",
-          "title": "Install Blueprint MCP for OpenClaw — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/opencode",
-          "title": "Install Blueprint MCP for OpenCode — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/vscode",
-          "title": "Install Blueprint MCP for VSCode Copilot — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/windsurf",
-          "title": "Install Blueprint MCP for Windsurf — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/zed",
-          "title": "Install Blueprint MCP for Zed — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/ai/llm-ui-generation",
-          "title": "LLM UI generation"
-        },
-        {
-          "url": "https://daisyui.com/component-library/minimal-css-framework",
-          "title": "Minimal CSS framework"
-        },
-        {
-          "url": "https://daisyui.com/ai/prompt-to-ui",
-          "title": "Prompt to UI"
-        },
-        {
-          "url": "https://daisyui.com/component-library/scalable",
-          "title": "Scalable component library"
-        },
-        {
-          "url": "https://daisyui.com/blueprint/figma",
-          "title": "Setup Figma API for Blueprint MCP — daisyUI Tailwind CSS Component UI Library"
-        },
-        {
-          "url": "https://daisyui.com/components/accordion",
-          "title": "Tailwind Accordion Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/alert",
-          "title": "Tailwind Alert Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/aura",
-          "title": "Tailwind Aura Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/avatar",
-          "title": "Tailwind Avatar Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/badge",
-          "title": "Tailwind Badge Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/breadcrumbs",
-          "title": "Tailwind Breadcrumbs Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/mockup-browser",
-          "title": "Tailwind Browser mockup Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/button",
-          "title": "Tailwind Button Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/calendar",
-          "title": "Tailwind Calendar Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/card",
-          "title": "Tailwind Card Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/carousel",
-          "title": "Tailwind Carousel Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/chat",
-          "title": "Tailwind Chat bubble Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/checkbox",
-          "title": "Tailwind Checkbox Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/mockup-code",
-          "title": "Tailwind Code mockup Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/collapse",
-          "title": "Tailwind Collapse Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/countdown",
-          "title": "Tailwind Countdown Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components",
-          "title": "Tailwind CSS Components"
-        },
-        {
-          "url": "https://daisyui.com/components/diff",
-          "title": "Tailwind Diff Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/divider",
-          "title": "Tailwind Divider Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/dock",
-          "title": "Tailwind Dock Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/drawer",
-          "title": "Tailwind Drawer sidebar Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/dropdown",
-          "title": "Tailwind Dropdown Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/fab",
-          "title": "Tailwind FAB / Speed Dial Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/fieldset",
-          "title": "Tailwind Fieldset Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/file-input",
-          "title": "Tailwind File Input Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/filter",
-          "title": "Tailwind Filter Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/footer",
-          "title": "Tailwind Footer Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/hero",
-          "title": "Tailwind Hero Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/hover-3d",
-          "title": "Tailwind Hover 3D Card Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/hover-gallery",
-          "title": "Tailwind Hover Gallery Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/indicator",
-          "title": "Tailwind Indicator Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/join",
-          "title": "Tailwind Join (group items) Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/kbd",
-          "title": "Tailwind Kbd Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/label",
-          "title": "Tailwind Label Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/link",
-          "title": "Tailwind Link Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/list",
-          "title": "Tailwind List Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/loading",
-          "title": "Tailwind Loading Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/mask",
-          "title": "Tailwind Mask Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/megamenu",
-          "title": "Tailwind Megamenu Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/menu",
-          "title": "Tailwind Menu Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/modal",
-          "title": "Tailwind Modal Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/navbar",
-          "title": "Tailwind Navbar Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/otp",
-          "title": "Tailwind OTP Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/pagination",
-          "title": "Tailwind Pagination Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/mockup-phone",
-          "title": "Tailwind Phone mockup Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/progress",
-          "title": "Tailwind Progress Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/radial-progress",
-          "title": "Tailwind Radial progress Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/radio",
-          "title": "Tailwind Radio Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/range",
-          "title": "Tailwind Range slider Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/rating",
-          "title": "Tailwind Rating Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/select",
-          "title": "Tailwind Select Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/skeleton",
-          "title": "Tailwind Skeleton Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/stack",
-          "title": "Tailwind Stack Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/stat",
-          "title": "Tailwind Stat Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/status",
-          "title": "Tailwind Status Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/steps",
-          "title": "Tailwind Steps Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/swap",
-          "title": "Tailwind Swap Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/table",
-          "title": "Tailwind Table Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/tab",
-          "title": "Tailwind Tabs Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/input",
-          "title": "Tailwind Text Input Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/text-rotate",
-          "title": "Tailwind Text Rotate Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/textarea",
-          "title": "Tailwind Textarea Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/theme-controller",
-          "title": "Tailwind Theme Controller Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/timeline",
-          "title": "Tailwind Timeline Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/toast",
-          "title": "Tailwind Toast Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/toggle",
-          "title": "Tailwind Toggle Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/tooltip",
-          "title": "Tailwind Tooltip Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/validator",
-          "title": "Tailwind Validator Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/components/mockup-window",
-          "title": "Tailwind Window mockup Component – daisyUI"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/ui-design-mcp-server",
-          "title": "UI design MCP server for Claude Code"
-        },
-        {
-          "url": "https://daisyui.com/codex/ui-design-mcp-server",
-          "title": "UI design MCP server for Codex"
-        },
-        {
-          "url": "https://daisyui.com/cursor/ui-design-mcp-server",
-          "title": "UI design MCP server for Cursor"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/ui-design-plugin",
-          "title": "UI design plugin for Claude Code"
-        },
-        {
-          "url": "https://daisyui.com/codex/ui-design-plugin",
-          "title": "UI design plugin for Codex"
-        },
-        {
-          "url": "https://daisyui.com/cursor/ui-design-plugin",
-          "title": "UI design plugin for Cursor"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/ui-design-skill-guide",
-          "title": "UI design skill for Claude Code"
-        },
-        {
-          "url": "https://daisyui.com/codex/ui-design-skill",
-          "title": "UI design skill for Codex"
-        },
-        {
-          "url": "https://daisyui.com/cursor/ui-design-skill-guide",
-          "title": "UI design skill for Cursor"
-        },
-        {
-          "url": "https://daisyui.com/component-library/for-hackathons",
-          "title": "UI library for hackathons"
-        },
-        {
-          "url": "https://daisyui.com/claude-code/use-less-tokens",
-          "title": "Use less token with Claude Code"
-        },
-        {
-          "url": "https://daisyui.com/codex/use-less-tokens",
-          "title": "Use less token with Codex"
-        },
-        {
-          "url": "https://daisyui.com/cursor/reduce-token-usage",
-          "title": "Use less token with Cursor"
         }
       ]
     },
@@ -30962,21 +30426,27 @@
         "https://astryx.atmeta.com/"
       ],
       "detail_url": "/systems/meta-astryx",
-      "pages_indexed": 18,
+      "pages_indexed": 24,
       "coverage_status": "full",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-20T02:16:28+00:00",
+      "last_checked": "2026-09-21T04:23:10+00:00",
       "last_modified": null,
       "sitemap_last_modified": "2026-09-10T00:00:00.000Z",
       "resources": {
         "github": [
           "https://github.com/facebook/astryx"
         ],
+        "figma": [
+          "https://figma.com/community/file/1661363854016665156/astryx-design-system-for-figma-v0-1",
+          "https://figma.com/community/file/1659998707120781098/astryx-library-community",
+          "https://figma.com/community/file/1655939158795671259/astryx-for-figma",
+          "https://figma.com/community/file/1659998707120781098"
+        ],
         "icons": [
           "https://astryx.atmeta.com/docs/icons",
-          "https://astryx-canary.vercel.app/components/Icon",
-          "https://astryx.atmeta.com/components/Icon"
+          "https://astryx.atmeta.com/components/Icon",
+          "https://astryx-canary.vercel.app/components/Icon"
         ],
         "agent_instructions": [
           "https://astryx.atmeta.com/llms.txt"
@@ -30984,21 +30454,36 @@
       },
       "unverified_resources": {},
       "content_signals": {
-        "codemods": true,
         "frameworks": [
           "React"
         ]
       },
       "github_meta": {
         "license": "MIT",
-        "stars": 13248,
-        "last_pushed": "2026-09-20T02:11:04Z"
+        "stars": 13281,
+        "last_pushed": "2026-09-21T04:23:03Z"
       },
       "npm_meta": null,
       "indexed_pages": [
         {
+          "url": "https://astryx.atmeta.com/",
+          "title": "Astryx Design System"
+        },
+        {
+          "url": "https://astryx.atmeta.com/playground",
+          "title": "Astryx Playground · Astryx"
+        },
+        {
+          "url": "https://astryx.atmeta.com/components/Badge",
+          "title": "Badge · Astryx"
+        },
+        {
           "url": "https://astryx.atmeta.com/blog",
           "title": "Blog · Astryx"
+        },
+        {
+          "url": "https://astryx.atmeta.com/components/Button",
+          "title": "Button · Astryx"
         },
         {
           "url": "https://astryx.atmeta.com/components/ChatComposerTokenElement",
@@ -31007,6 +30492,14 @@
         {
           "url": "https://astryx.atmeta.com/components/ChatLayoutScrollButton",
           "title": "Chat Layout Scroll Button · Astryx"
+        },
+        {
+          "url": "https://astryx.atmeta.com/docs/cli",
+          "title": "CLI · Astryx"
+        },
+        {
+          "url": "https://astryx.atmeta.com/components",
+          "title": "Components · Astryx"
         },
         {
           "url": "https://astryx.atmeta.com/components/DropdownMenuCheckboxItem",
