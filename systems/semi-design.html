@@ -354,6 +354,17 @@
     display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
     border-radius: 10px; border: 1px solid var(--border); background: var(--surface-sunken); margin-bottom: 28px;
   }
+  /* Visible even when the hero-thumb below it fails to load (an access-gated
+     site, e.g. a GitHub Pages site behind SSO, or a slow/never-rendered
+     mshots screenshot) — that image's own <a> wrapper is otherwise the
+     ONLY way to reach the real site from this page, and a broken image has
+     no visible click target at all. */
+  .visit-site {
+    display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem;
+    color: var(--text-muted); text-decoration: none; margin: 4px 0 14px;
+  }
+  .visit-site:hover { color: var(--accent); text-decoration: underline; }
+  .visit-site svg { flex: none; }
 
   .freshness {
     display: flex; gap: 24px; flex-wrap: wrap; background: var(--surface-sunken); border: 1px solid var(--border);
@@ -760,8 +771,9 @@
   <p class="eyebrow"><a href="/directory">All Systems</a></p>
   <div class="system-header"><img class="favicon" src="https://www.google.com/s2/favicons?domain=semi.design&sz=64" alt="" width="22" height="22" loading="lazy" onload="if(this.naturalWidth&lt;=16){this.onload=null;this.src='/favicon-fallback.svg';}" onerror="this.onerror=null;this.src='/favicon-fallback.svg'"><span class="org-label">semi.design</span></div>
   <h1>Semi Design</h1>
+  <a class="visit-site" href="https://semi.design/en-US/" target="_blank" rel="noopener">Visit semi.design<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
   <p class="meta-line"><span class="coverage-dot coverage-full" title="Crawl completed on its own — this is everything the crawler found">●</span> 100 pages indexed · MIT · 12★ · v2.103.0</p>
-  <a href="https://semi.design/en-US/" target="_blank" rel="noopener"><img class="hero-thumb" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fsemi.design%2Fen-US%2F?w=800" alt="" loading="lazy" style="view-transition-name: thumb-semi-design; view-transition-class: thumb"></a>
+  <a href="https://semi.design/en-US/" target="_blank" rel="noopener"><img class="hero-thumb" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fsemi.design%2Fen-US%2F?w=800" alt="" loading="lazy" data-fallback="https://s0.wp.com/mshots/v1/https%3A%2F%2Fsemi.design%2Fen-US%2F?w=320" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;delete this.dataset.fallback;}else{this.removeAttribute('src');}" style="view-transition-name: thumb-semi-design; view-transition-class: thumb"></a>
 
   <dl class="freshness">
     <div><dt>Site last updated</dt><dd>1 Sep 2026, 09:19 UTC (via sitemap)</dd></div>
