@@ -106,13 +106,26 @@ jobs:
       # concurrently-running shards was reinstalling this ~300MB browser
       # from scratch every single run; caching it keyed on the pinned
       # crawl4ai/Playwright version (requirements-spa.txt) means only a
-      # genuine version bump ever pays that cost again.
+      # genuine version bump ever pays that cost again. Only really matters
+      # for Playwright's OWN bundled downloads (firefox/webkit/chromium) —
+      # channel installs like "chrome" below go through apt into /opt/
+      # google/chrome instead, so this cache mostly just saves the browser-
+      # driver/support files Playwright itself still keeps here.
       - uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('requirements-spa.txt') }}
 
-      - run: playwright install --with-deps chromium
+      # "chrome" (a channel install via apt), NOT "chromium" (Playwright's
+      # own bundled download) — see ingest._get_browser_config()'s
+      # docstring for the full story: a bare downloaded Chromium binary has
+      # no AppArmor profile at all and crashed with SIGTRAP on every single
+      # render on this runner, confirmed even after disabling Ubuntu 24.04's
+      # AppArmor unprivileged-userns restriction directly. Real installed
+      # Google Chrome ships its own registered AppArmor profile
+      # (/etc/apparmor.d/opt.google.chrome) and sidesteps the whole
+      # problem.
+      - run: playwright install --with-deps chrome
 
       # Confirmed live: every shard's render crashed identically with
       # "BrowserType.launch: Target page, context or browser has been

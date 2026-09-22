@@ -2013,7 +2013,7 @@ def fetch_rendered_page(url: str) -> tuple[str | None, set[str]]:
     from crawl4ai import AsyncWebCrawler
 
     async def _run():
-        async with AsyncWebCrawler() as crawler:
+        async with AsyncWebCrawler(config=_get_browser_config()) as crawler:
             return await _render_one(crawler, url, RENDER_CONFIG)
 
     try:
@@ -2037,6 +2037,38 @@ def _get_render_config():
         from crawl4ai import CrawlerRunConfig
         RENDER_CONFIG = CrawlerRunConfig(excluded_tags=STRIP_TAGS, delay_before_return_html=5.0)
     return RENDER_CONFIG
+
+
+BROWSER_CONFIG = None  # set below, after BrowserConfig is importable
+
+
+def _get_browser_config():
+    """channel="chrome" (real installed Google Chrome), not crawl4ai's
+    default "chromium" (Playwright's own bundled download) — confirmed live
+    on GitHub Actions (ubuntu-latest, Ubuntu 24.04 "noble"): every single
+    render crashed with chrome-headless-shell exiting on SIGTRAP immediately
+    on launch, regardless of which system it was rendering, and this
+    persisted even after (a) pinning crawl4ai to an exact known-working
+    version and (b) disabling Ubuntu 24.04's AppArmor unprivileged-userns
+    restriction via sysctl (confirmed via the workflow's own log output —
+    the sysctl command itself succeeded, "= 0" printed — so that specific
+    restriction genuinely wasn't the blocker here). Per Chromium's own
+    documentation on this exact class of failure
+    (chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-
+    userns-restrictions.md): Google Chrome's official .deb package ships
+    its OWN registered AppArmor profile (/etc/apparmor.d/opt.google.chrome)
+    that permits the sandbox operations properly; a bare Playwright-
+    downloaded Chromium binary has no such profile at all and depends
+    entirely on the system-wide sysctl instead — which evidently wasn't
+    sufficient in this environment. Real installed Chrome sidesteps the
+    whole problem by being covered its own profile. reindex-spa.yml
+    installs it via `playwright install --with-deps chrome` (not
+    `chromium`) specifically so this channel is actually present to use."""
+    global BROWSER_CONFIG
+    if BROWSER_CONFIG is None:
+        from crawl4ai import BrowserConfig
+        BROWSER_CONFIG = BrowserConfig(channel="chrome")
+    return BROWSER_CONFIG
 
 
 async def _render_one(crawler, url: str, config) -> tuple[str | None, set[str], str | None]:
@@ -2199,7 +2231,7 @@ def crawl_spa(
         to_visit = list(start_urls)
         to_visit_set = set(to_visit)
 
-        async with AsyncWebCrawler() as crawler:
+        async with AsyncWebCrawler(config=_get_browser_config()) as crawler:
             while to_visit and len(visited) < max_pages:
                 url = to_visit.pop(0)
                 to_visit_set.discard(url)
