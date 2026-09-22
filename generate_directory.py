@@ -437,7 +437,19 @@ def render_card(entry: dict) -> str:
         src = thumbnail_src(name_text, start_url)
         # Shared view-transition-name with the detail page's .hero-thumb —
         # see the comment on render_name_block's title transition above.
-        thumb_html = f'<img class="card-thumb" src="{src}" alt="" loading="lazy" style="view-transition-name: thumb-{slug}; view-transition-class: thumb">'
+        # onerror drops src entirely (no fallback tier below "card" size to
+        # try) rather than leaving the browser's own broken-image icon on
+        # screen — same reasoning as generate_systems.py's hero-thumb chain.
+        # Matters more now that a stale placeholder-detection bug (see
+        # fetch_screenshots.py's _PLACEHOLDER_MD5) got fixed and 246 cards'
+        # worth of "real" screenshots turned out to be the mshots
+        # "Generating Preview..." placeholder and were removed — this is
+        # what keeps those cards from looking broken until re-fetched.
+        thumb_html = (
+            f'<img class="card-thumb" src="{src}" alt="" loading="lazy" '
+            f'onerror="this.removeAttribute(\'src\')" '
+            f'style="view-transition-name: thumb-{slug}; view-transition-class: thumb">'
+        )
 
     pages = entry.get("pages_indexed", 0)
     unmaintained_class = " is-unmaintained" if entry.get("likely_unmaintained") else ""

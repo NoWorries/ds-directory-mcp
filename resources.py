@@ -22,7 +22,13 @@ import requests
 RESOURCE_PATTERNS = {
     "github": re.compile(r"github\.com/[\w.-]+/[\w.-]+/?$", re.IGNORECASE),
     "storybook": re.compile(r"storybook|chromatic\.com", re.IGNORECASE),
-    "figma": re.compile(r"figma\.com/(file|design|proto)/", re.IGNORECASE),
+    # "community/file/" is Figma's own URL shape for a publicly-shared
+    # Community file (figma.com/community/file/<id>/<slug>) — confirmed
+    # live, Meta's Astryx links its component library that way from its own
+    # /components page, and the plain "(file|design|proto)/" anchor (which
+    # requires one of those words RIGHT after figma.com/) never matched it,
+    # missing a real, common Figma link shape, not just this one system's.
+    "figma": re.compile(r"figma\.com/(community/file|file|design|proto)/", re.IGNORECASE),
     "markdown_docs": re.compile(r"/(design|contributing|readme)\.md$", re.IGNORECASE),
     "mcp": re.compile(r"mcp[-.]server|modelcontextprotocol|mcp\.json|mcp\.so", re.IGNORECASE),
     "skills": re.compile(r"/skills?/|skill\.md$", re.IGNORECASE),
@@ -378,13 +384,37 @@ def compute_likely_unmaintained(enrichment: dict) -> bool:
     return age_days > UNMAINTAINED_THRESHOLD_DAYS
 
 
+def _dedup_key(url: str) -> str:
+    """Same URL, different write-up — http vs https, www vs non-www — folded
+    to one key so merge_resources() doesn't keep both as separate entries.
+    Confirmed live: Equinor's resources.github ended up with both
+    "https://www.github.com/equinor/design-system" and the bare-domain
+    version side by side. ingest.normalize_url() already solves this exact
+    problem for crawled PAGE urls, but can't be imported here — ingest.py
+    imports FROM this module, so the reverse import would be circular — and
+    a page URL's fuller normalization (index.html collapsing, query-string
+    filtering, trailing-slash rules) isn't needed for "is this the same
+    resource link" anyway, just scheme+host+path. A deliberately narrower,
+    local copy of only the part that matters here."""
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    path = parsed.path.rstrip("/")
+    return f"{host}{path}"
+
+
 def merge_resources(*dicts: dict[str, list[str]]) -> dict[str, list[str]]:
     merged: dict[str, list[str]] = {}
+    seen_keys: dict[str, set[str]] = {}
     for d in dicts:
         for key, urls in d.items():
             merged.setdefault(key, [])
+            seen_keys.setdefault(key, set())
             for url in urls:
-                if url not in merged[key]:
+                dedup_key = _dedup_key(url)
+                if dedup_key not in seen_keys[key]:
+                    seen_keys[key].add(dedup_key)
                     merged[key].append(url)
     return merged
 

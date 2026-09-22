@@ -882,7 +882,6 @@
     - https://github.com/centrica-engineering/nucleus-checker
     figma:
     - https://www.figma.com/design/HdnAatpIIliZhoj6C77aHx/Nucleus-BritishGas---Components?m=auto&node-id=10894-239&t=0cyP8uC7iqnlpc2w-1
-    - https://www.figma.com/design/HdnAatpIIliZhoj6C77aHx/Nucleus-BritishGas---Components?m=auto&node-id=1876-35073&t=IwNdEWK1sFgZAbou-1
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
@@ -1558,7 +1557,6 @@
   resources:
     github:
     - https://www.github.com/equinor/design-system
-    - https://github.com/equinor/design-system
     storybook:
     - https://storybook.eds.equinor.com/
     figma:
@@ -1907,7 +1905,6 @@
     storybook:
     - https://storybook.futurelearn.com/?path=%2Fstory%2Fwelcome--page
     - https://storybook.futurelearn.com/iframe.html?args=&id=welcome--page
-    - https://storybook.futurelearn.com/?path=%2Fdocs%2Fwelcome--page
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -2462,10 +2459,6 @@
   resources:
     figma:
     - https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=890-53396&viewport=527%2C443%2C0.17&scaling=contain&starting-point-node-id=890%3A53396&t=Kye1XjV6lOBYskNr-1
-    - https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29295&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design
-    - https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29118&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design
-    - https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29290&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design
-    - https://www.figma.com/proto/3ptKrYEYpHR2rpLHiG9coQ/Brand-Guidelines?page-id=746%3A28973&type=design&node-id=746-29091&viewport=1052%2C365%2C0.07&t=39dcWPXPZQLPg0vq-1&scaling=contain&mode=design
   hit_max_pages: false
   crawl_error: crawl returned 0 pages
   likely_spa: false
@@ -2538,7 +2531,6 @@
     - https://github.com/grommet/grommet
     storybook:
     - https://storybook.grommet.io/?path=/story/Layout-Box
-    - https://storybook.grommet.io/?path=/story/Layout-Grid
     icons:
     - https://icons.grommet.io
     - https://v2.grommet.io/icons
@@ -3006,7 +2998,6 @@
     - https://www.figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices
     npm:
     - https://www.npmjs.com/package/@justeattakeaway/pie-webc
-    - https://npmjs.com/package/@justeattakeaway/pie-webc
     - https://www.npmjs.com/package/@justeattakeaway/pie-css
   hit_max_pages: false
   crawl_error: ''
@@ -3089,8 +3080,6 @@
     - https://www.kickstartds.com/docs/integration/storybook/
     - https://www.kickstartds.com/storybook/?path=/story/content-visual--box-inverted
     - https://www.kickstartds.com/docs/integration/storybook/controls
-    - https://www.kickstartds.com/storybook/
-    - https://www.kickstartds.com/storybook
     - https://www.kickstartds.com/docs/integration/storybook/story
     - https://www.kickstartds.com/docs/guides/create/storybook
     figma:
@@ -4216,14 +4205,9 @@
     - https://github.com/nib-group/nav-data
     storybook:
     - https://www.meshdesignsystem.com/storybook
-    - https://www.meshdesignsystem.com/storybook/?path=/story/components-stack
     - https://www.meshdesignsystem.com/resources/storybook/
-    - https://www.meshdesignsystem.com/storybook/?path=/story/components-textarea
-    - https://www.meshdesignsystem.com/storybook/?path=/story/components-tooltip
     figma:
     - https://www.figma.com/design/if2AnUKDXCewe0ZIZZXRyD/%F0%9F%92%A0-Mesh---Web-Components?node-id=74-13299&t=0TvmebBh6V9l2pku-4
-    - https://www.figma.com/design/if2AnUKDXCewe0ZIZZXRyD/%F0%9F%92%A0-Mesh---Web-Components?node-id=74-14419&t=0TvmebBh6V9l2pku-4
-    - https://www.figma.com/design/if2AnUKDXCewe0ZIZZXRyD/%F0%9F%92%A0-Mesh---Web-Components?node-id=19-9178&t=ag8bx5C02ZaqfwOc-0
     npm:
     - https://www.npmjs.com/package/@nib-group/mesh-textarea
     - https://www.npmjs.com/package/@nib-group/mesh-layout
@@ -5454,7 +5438,6 @@
     github:
     - https://github.com/yagizhanNY/siemens-ix-blazor
     - https://github.com/siemens/ix
-    - https://www.github.com/siemens/ix
     - https://github.com/siemens/ix-icons
     figma:
     - https://www.figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology
@@ -5950,7 +5933,6 @@
   resources:
     storybook:
     - https://design.va.gov/storybook
-    - https://design.va.gov/storybook/
     figma:
     - https://www.figma.com/file/afurtw4iqQe6y4gXfNfkkk/VADS-Component-Library?type=design&node-id=121%3A1484&mode=design&t=ygQCLqlAL5VdSPil-1
     agent_instructions:

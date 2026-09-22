@@ -28,6 +28,7 @@ Usage:
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import time
@@ -45,10 +46,19 @@ SYSTEMS_REGISTRY = Path(__file__).parent / "systems.yaml"
 SCREENSHOTS_DIR = Path(__file__).parent / "screenshots"
 SCREENSHOT_META_FILE = Path(__file__).parent / "screenshot_meta.json"
 
-# mshots' placeholder for "haven't rendered this URL yet" is a small, fixed
-# JPEG regardless of the requested width — comparing byte size is a cheap way
-# to tell it apart from a real screenshot without decoding the image.
-_PLACEHOLDER_SIZE_BYTES = 3268
+# mshots' placeholder for "haven't rendered this URL yet" (WordPress logo +
+# "Generating Preview...") is a small, fixed JPEG regardless of the requested
+# width. Compared by MD5 rather than byte size — confirmed live this had
+# silently broken: the byte-size check here was 3268 for a long time, but
+# mshots' actual placeholder is now 8737 bytes (presumably changed on their
+# end at some point), so the size check quietly stopped matching and 246 of
+# ~483 committed screenshots turned out to be this exact placeholder, saved
+# as if it were a real screenshot, for as long as this went unnoticed. A
+# content hash still breaks the same way if mshots changes the placeholder
+# again, but at least it can't silently match the WRONG thing the way a
+# stale byte count can — a real screenshot would need to coincidentally hash
+# identically, not just happen to be the same size.
+_PLACEHOLDER_MD5 = "e89e34619e53928489a0c703c761cd58"
 _RETRY_WAIT_SECONDS = 8
 
 
@@ -108,7 +118,7 @@ def fetch_screenshot(url: str, width: int) -> bytes | None:
             return None
         if response.status_code != 200 or not response.content:
             return None
-        if len(response.content) != _PLACEHOLDER_SIZE_BYTES:
+        if hashlib.md5(response.content).hexdigest() != _PLACEHOLDER_MD5:
             return response.content
         if attempt == 0:
             print(f"  still generating, waiting {_RETRY_WAIT_SECONDS}s and retrying once...")
