@@ -251,6 +251,27 @@ DEFAULT_EXCLUDE_PATTERNS = [
     # crawl budget were burned on these before the real docs were reached.
     r"/responsive-preview", r"/playroom", r"/storybook/", r"/iframe\.html",
     r"/sandbox",
+    # Same category, Indiana University Rivet's own convention: a standalone
+    # per-variant preview page per component/layout/utility ("/components/
+    # preview/default-accordion", "/layouts/preview/blank-page/single-
+    # column", "/utilities/flex/preview/large-right-item", ...) rather than
+    # Storybook/Playroom naming — confirmed live, every single one of these
+    # linked from Rivet's real docs pages came back "too little content"
+    # (just the live demo markup, no surrounding doc text), and there are
+    # hundreds of them under every section of the site, not just /components/
+    # — confirmed live the first, narrower attempt at this exclusion
+    # (literal "/components/preview/") correctly cut the ones under
+    # /components/ but the crawl just fell into the identical rabbit hole
+    # one level down, under /layouts/preview/ and /utilities/*/preview/
+    # instead. Enough of them to burn an entire max_pages budget (and,
+    # worse, enough elapsed crawl time to risk this project's own external-
+    # killer problem — see CLAUDE.md) on pure waste after the real docs
+    # pages were already reached via the sitemap. Bare "/preview/" (not
+    # anchored to any one parent section) is what actually needs excluding
+    # here — a real page having "preview" as a complete path segment
+    # anywhere is specific enough not to plausibly collide with genuine
+    # content on some other system.
+    r"/preview/",
     # Same category, Ant Design's own convention: a standalone isolated-demo
     # page per code example (e.g. "~demos/button-demo-loading") rather than
     # per component — confirmed live, 45 of 234 pages fetched in one crawl

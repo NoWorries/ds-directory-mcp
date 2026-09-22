@@ -6,7 +6,20 @@ on:
     # regardless of whether anything looks changed. reindex-new.yml (weekly) covers
     # newly added registry entries in between.
     - cron: "0 3 1 * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      system:
+        description: >-
+          Optional: exact "Org — Design System" name from systems.yaml (see
+          full_name()) to re-crawl just that ONE system instead of the whole
+          registry — a single un-sharded job running `ingest.py --system
+          "<name>" --force`, skipping eligible_for_all() entirely (same
+          escape hatch the CLI's own --system flag is). For testing a fix
+          on CI runners, which don't have whatever's SIGKILLing long-running
+          local crawls on a dev machine (see this project's own CLAUDE.md).
+          Leave blank for the normal full-registry sharded run.
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -45,8 +58,19 @@ jobs:
           cache-dependency-path: requirements-site.txt
       - run: pip install -r requirements-site.txt
       - id: gen
+        env:
+          SYSTEM_INPUT: ${{ github.event.inputs.system }}
         run: |
-          python3 -c "
+          if [ -n "$SYSTEM_INPUT" ]; then
+            # Single-system escape hatch: one un-sharded "shard" whose step
+            # below runs --system instead of --all --shard. Bypasses the
+            # eligible_for_all() filter below entirely, same as the CLI's
+            # own --system flag — this is for testing one specific fix, not
+            # a normal reindex pass.
+            echo "shard_count=1" >> "$GITHUB_OUTPUT"
+            echo "shards=[0]" >> "$GITHUB_OUTPUT"
+          else
+            python3 -c "
           import json
           import yaml
 
@@ -57,12 +81,19 @@ jobs:
           # directly). Sharding on the raw entry count used to spin up ~72
           # empty shards every run: they'd install deps, run ingest.py --all,
           # find zero eligible systems in their slice, and exit — pure wasted
-          # Actions minutes with nothing to show for it.
-          eligible = [e for e in entries if not e.get('archived') and not e.get('likely_spa') and e.get('render_mode') != 'spa']
+          # Actions minutes with nothing to show for it. NOTE
+          # render_mode==\"spa\" is deliberately NOT excluded here (confirmed
+          # live this got out of sync with the real eligible_for_all() once
+          # already — a HYBRID system with real plain-crawlable pages
+          # alongside ones needing rendering, e.g. Meta's Astryx, is wrongly
+          # excluded here otherwise even though ingest.py itself now
+          # includes it).
+          eligible = [e for e in entries if not e.get('archived') and not e.get('likely_spa')]
           n = min(len(eligible), 256)
           print(f'shard_count={n}')
           print(f'shards={json.dumps(list(range(n)))}')
-          " >> "$GITHUB_OUTPUT"
+            " >> "$GITHUB_OUTPUT"
+          fi
 
   # Split into independent shards so a runner getting killed mid-run (cancellation,
   # quota, transient infra issue) only loses one shard's work, not the whole
@@ -110,9 +141,14 @@ jobs:
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          SYSTEM_INPUT: ${{ github.event.inputs.system }}
         run: |
           rm -f shard_touched.json
-          python ingest.py --all --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
+          if [ -n "$SYSTEM_INPUT" ]; then
+            python ingest.py --system "$SYSTEM_INPUT" --force
+          else
+            python ingest.py --all --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
+          fi
 
       # if: always() is the whole point of sharding: ingest.py writes
       # systems.yaml/pages_index.json incrementally (after each system, well

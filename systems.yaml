@@ -2708,7 +2708,7 @@
 - organization: Indiana University
   design_system: Rivet
   start_urls:
-  - https://rivet.uits.iu.edu/
+  - https://rivet.iu.edu/
   pages_indexed: 1
   hit_max_pages: false
   crawl_error: crawl returned 0 pages
@@ -3663,7 +3663,7 @@
 - organization: Microsoft
   design_system: Fluent
   start_urls:
-  - https://www.microsoft.com/design/fluent/
+  - https://fluent2.microsoft.design/
   pages_indexed: 285
   hit_max_pages: false
   crawl_error: crawl returned 0 pages
