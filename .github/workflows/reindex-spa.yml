@@ -187,29 +187,103 @@ jobs:
           pattern: shard-*
           path: shards
 
-      - name: Merge shard results into systems.yaml + pages_index.json
-        run: python merge_shards.py ${{ needs.prepare.outputs.shard_count }}
-
-      - name: Generate static directory page
+      # Regenerates, commits, and pushes — retrying by re-merging and
+      # re-regenerating fresh against the new remote tip on a push
+      # rejection, NOT by git-rebasing the tree (see below for why).
+      - name: Merge, regenerate, commit, and push (re-syncing on conflict)
         env:
           SITE_URL: ${{ vars.SITE_URL }}
         run: |
-          python generate_home.py
-          python generate_search.py
-          python generate_forms.py
-          python generate_data_export.py
-          python generate_llms_txt.py
-          python generate_mcp_manifest.py
-          python generate_security_txt.py
-          python generate_robots_txt.py
-          python generate_directory.py
-          python generate_compare.py
-          python generate_components.py
-          python generate_systems.py
-          # sitemap.xml must run AFTER components/patterns/foundations are
-          # generated above — it enumerates those directories' pages
-          # (taxonomy_page_paths() in generate_sitemap.py).
-          python generate_sitemap.py
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Everything from the shard merge through sitemap generation is
+          # fully reproducible from systems.yaml/pages_index.json plus this
+          # run's own downloaded shard artifacts (still on disk in ./shards)
+          # — nothing here depends on which commit happens to be checked
+          # out, so it's safe (and correct) to just run it again from
+          # scratch against a newer base after a push rejection.
+          regenerate() {
+            python merge_shards.py ${{ needs.prepare.outputs.shard_count }}
+            python generate_home.py
+            python generate_search.py
+            python generate_forms.py
+            python generate_data_export.py
+            python generate_llms_txt.py
+            python generate_mcp_manifest.py
+            python generate_security_txt.py
+            python generate_robots_txt.py
+            python generate_directory.py
+            python generate_compare.py
+            python generate_components.py
+            python generate_systems.py
+            # sitemap.xml must run AFTER components/patterns/foundations are
+            # generated above — it enumerates those directories' pages
+            # (taxonomy_page_paths() in generate_sitemap.py).
+            python generate_sitemap.py
+          }
+
+          stage_and_commit() {
+            git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html compare.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json dead_links.json components patterns foundations systems .well-known robots.txt
+            if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+            if git diff --cached --quiet; then
+              return 1
+            fi
+            git commit -m "Render likely_spa design systems via headless browser [skip ci]"
+          }
+
+          regenerate
+
+          if stage_and_commit; then
+            pushed=false
+            for i in 1 2 3 4 5; do
+              if git push; then pushed=true; break; fi
+              # Confirmed live: another writer (not always another shard of
+              # THIS workflow — a separate agent/process entirely has
+              # pushed to this same branch before) can land a commit with
+              # its own independently-regenerated copy of the exact same
+              # systems/*.json and *.html files this job also writes.
+              # git pull --rebase then tries to line-merge two unrelated
+              # renders of the same derived output and conflicts on
+              # essentially every file — confirmed live, ~170 conflicts on
+              # one real run, none of them a REAL disagreement (both sides
+              # were regenerating the same kind of content from different
+              # source data). The shard artifacts on disk are the actual
+              # source of truth for what this run contributed, not the
+              # failed commit itself — so instead of merging the tree,
+              # reset straight to the new tip and rebuild from there:
+              # merge_shards.py applies only the systems THIS run's shards
+              # actually touched onto whatever base is currently checked
+              # out, so re-running it against the latest remote state
+              # incorporates the other writer's changes automatically,
+              # loses nothing of theirs, and never hits a text conflict in
+              # the first place.
+              echo "Push rejected (attempt $i/5) — another commit landed first. Resetting to the new tip and re-merging/regenerating fresh, rather than rebasing the tree..."
+              git fetch origin
+              git reset --hard "origin/${{ github.ref_name }}"
+              regenerate
+              if ! stage_and_commit; then
+                echo "Nothing left to push after re-merging onto the new tip."
+                pushed=true
+                break
+              fi
+            done
+            if [ "$pushed" != "true" ]; then
+              echo "::warning::Could not push after 5 attempts — this run's crawl results were NOT committed. See the uploaded 'unmerged-crawl-results' artifact."
+              touch .push_failed
+            fi
+          else
+            echo "No changes to commit"
+          fi
+
+      - if: always() && hashFiles('.push_failed') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: unmerged-crawl-results
+          path: |
+            systems.yaml
+            pages_index.json
+          retention-days: 30
 
       - name: Check crawl health (maintainer-facing only — not shown on the public page)
         run: python check_crawl_health.py
@@ -228,26 +302,6 @@ jobs:
             fi
           elif [ -n "$existing" ]; then
             gh issue close "$existing" --comment "All systems now have healthy crawl coverage — closing."
-          fi
-
-      - name: Commit newly-rendered systems + directory page
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html compare.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json dead_links.json components patterns foundations systems .well-known robots.txt
-          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
-          if ! git diff --cached --quiet; then
-            git commit -m "Render likely_spa design systems via headless browser [skip ci]"
-            # Other workflows commit to this same branch too, so a push can
-            # land after one of them — ordinary non-fast-forward race, not a
-            # real conflict most of the time. Rebase and retry a few times.
-            for i in 1 2 3 4 5; do
-              git push && break
-              echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
-              git pull --rebase
-            done
-          else
-            echo "No changes to commit"
           fi
 
       - name: Deploy directory page to Netlify
