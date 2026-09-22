@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-21T12:20:32+00:00",
+  "generated_at": "2026-09-22T03:31:20+00:00",
   "id": "futurelearn-futurelearn-pattern-library",
   "organization": "FutureLearn",
   "design_system": "FutureLearn Pattern Library",
@@ -19,8 +19,7 @@
   "resources": {
     "storybook": [
       "https://storybook.futurelearn.com/?path=%2Fstory%2Fwelcome--page",
-      "https://storybook.futurelearn.com/iframe.html?args=&id=welcome--page",
-      "https://storybook.futurelearn.com/?path=%2Fdocs%2Fwelcome--page"
+      "https://storybook.futurelearn.com/iframe.html?args=&id=welcome--page"
     ]
   },
   "unverified_resources": {},

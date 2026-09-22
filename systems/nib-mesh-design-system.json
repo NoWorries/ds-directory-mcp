@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-21T12:20:32+00:00",
+  "generated_at": "2026-09-22T03:31:20+00:00",
   "id": "nib-mesh-design-system",
   "organization": "nib",
   "design_system": "Mesh Design System",
@@ -22,15 +22,10 @@
     ],
     "storybook": [
       "https://www.meshdesignsystem.com/storybook",
-      "https://www.meshdesignsystem.com/storybook/?path=/story/components-stack",
-      "https://www.meshdesignsystem.com/resources/storybook/",
-      "https://www.meshdesignsystem.com/storybook/?path=/story/components-textarea",
-      "https://www.meshdesignsystem.com/storybook/?path=/story/components-tooltip"
+      "https://www.meshdesignsystem.com/resources/storybook/"
     ],
     "figma": [
-      "https://www.figma.com/design/if2AnUKDXCewe0ZIZZXRyD/%F0%9F%92%A0-Mesh---Web-Components?node-id=74-13299&t=0TvmebBh6V9l2pku-4",
-      "https://www.figma.com/design/if2AnUKDXCewe0ZIZZXRyD/%F0%9F%92%A0-Mesh---Web-Components?node-id=74-14419&t=0TvmebBh6V9l2pku-4",
-      "https://www.figma.com/design/if2AnUKDXCewe0ZIZZXRyD/%F0%9F%92%A0-Mesh---Web-Components?node-id=19-9178&t=ag8bx5C02ZaqfwOc-0"
+      "https://www.figma.com/design/if2AnUKDXCewe0ZIZZXRyD/%F0%9F%92%A0-Mesh---Web-Components?node-id=74-13299&t=0TvmebBh6V9l2pku-4"
     ],
     "npm": [
       "https://www.npmjs.com/package/@nib-group/mesh-textarea",

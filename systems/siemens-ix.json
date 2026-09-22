@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-21T12:20:32+00:00",
+  "generated_at": "2026-09-22T03:31:20+00:00",
   "id": "siemens-ix",
   "organization": null,
   "design_system": "Siemens iX",
@@ -20,7 +20,6 @@
     "github": [
       "https://github.com/yagizhanNY/siemens-ix-blazor",
       "https://github.com/siemens/ix",
-      "https://www.github.com/siemens/ix",
       "https://github.com/siemens/ix-icons"
     ],
     "figma": [

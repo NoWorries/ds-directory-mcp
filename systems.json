@@ -1,6 +1,6 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-22T01:59:57+00:00",
+  "generated_at": "2026-09-22T03:31:20+00:00",
   "data_as_of": "2026-09-13T22:41:54+00:00",
   "total_systems": 161,
   "systems": [
@@ -2041,144 +2041,8 @@
       "npm_meta": null,
       "indexed_pages": [
         {
-          "url": "https://cloudscape.design/about",
-          "title": "About Cloudscape - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/gen-ai",
-          "title": "About generative AI - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/annotation-context",
-          "title": "Annotation context - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/app-layout-toolbar",
-          "title": "App layout toolbar - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/area-chart",
-          "title": "Area chart - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/llms.txt",
-          "title": "AWS — Cloudscape Design System — llms.txt"
-        },
-        {
-          "url": "https://cloudscape.design/components/bar-chart",
-          "title": "Bar chart - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/board-components",
-          "title": "Board components - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/cartesian-chart",
-          "title": "Cartesian charts - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/charts-legacy",
-          "title": "Charts (Legacy) - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/charts",
-          "title": "Charts - Cloudscape Design System"
-        },
-        {
           "url": "https://cloudscape.design/",
-          "title": "Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/collection-select-filter",
-          "title": "Collection select filter - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components",
-          "title": "Components - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/about/connect",
-          "title": "Connect - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/demos",
-          "title": "Demos - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/file-upload",
-          "title": "File upload - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/file-uploading-components",
-          "title": "File uploading components - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/flashbar",
-          "title": "Flashbar - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/foundation",
-          "title": "Foundation - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/genai-components",
-          "title": "Generative AI components - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/get-started",
-          "title": "Get started - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/grid",
-          "title": "Grid - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/hotspot",
-          "title": "Hotspot - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/line-chart",
-          "title": "Line chart - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/mixed-line-bar-chart",
-          "title": "Mixed line and bar chart - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/modal",
-          "title": "Modal - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/patterns",
-          "title": "Patterns - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/pie-chart",
-          "title": "Pie and donut charts - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/pie-chart-legacy",
-          "title": "Pie and donut charts - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/property-filter",
-          "title": "Property filter - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/split-panel",
-          "title": "Split panel - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/status-indicator",
-          "title": "Status indicator - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/hands-on-tutorials",
-          "title": "Tutorial components - Cloudscape Design System"
-        },
-        {
-          "url": "https://cloudscape.design/components/wizard",
-          "title": "Wizard - Cloudscape Design System"
+          "title": "AWS — Cloudscape Design System"
         }
       ]
     },
@@ -14712,7 +14576,7 @@
       "indexed_pages": [
         {
           "url": "https://designsystem.morningstar.com/",
-          "title": "Home - Morningstar Design System"
+          "title": "Morningstar — Morningstar Design System"
         }
       ]
     },
@@ -27390,16 +27254,8 @@
       "npm_meta": null,
       "indexed_pages": [
         {
-          "url": "https://wise.design/brand",
-          "title": "Wise Design | Brand"
-        },
-        {
-          "url": "https://wise.design/images",
-          "title": "Wise Design | Building a System for a Borderless World"
-        },
-        {
-          "url": "https://wise.design/direction",
-          "title": "Wise Design | Building a System for a Borderless World"
+          "url": "https://wise.design/",
+          "title": "Wise — Design system"
         }
       ]
     },
@@ -30451,24 +30307,8 @@
       "npm_meta": null,
       "indexed_pages": [
         {
-          "url": "https://astryx.atmeta.com/",
-          "title": "Astryx Design System"
-        },
-        {
-          "url": "https://astryx.atmeta.com/playground",
-          "title": "Astryx Playground · Astryx"
-        },
-        {
-          "url": "https://astryx.atmeta.com/components/Badge",
-          "title": "Badge · Astryx"
-        },
-        {
           "url": "https://astryx.atmeta.com/blog",
           "title": "Blog · Astryx"
-        },
-        {
-          "url": "https://astryx.atmeta.com/components/Button",
-          "title": "Button · Astryx"
         },
         {
           "url": "https://astryx.atmeta.com/components/ChatComposerTokenElement",
@@ -30477,14 +30317,6 @@
         {
           "url": "https://astryx.atmeta.com/components/ChatLayoutScrollButton",
           "title": "Chat Layout Scroll Button · Astryx"
-        },
-        {
-          "url": "https://astryx.atmeta.com/docs/cli",
-          "title": "CLI · Astryx"
-        },
-        {
-          "url": "https://astryx.atmeta.com/components",
-          "title": "Components · Astryx"
         },
         {
           "url": "https://astryx.atmeta.com/components/DropdownMenuCheckboxItem",

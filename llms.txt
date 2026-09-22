@@ -28,7 +28,7 @@ Returns `{"results": [{"design_system_name", "url", "text", "score"}, ...]}` —
 
 Same records as the HTML pages, as plain JSON — for anything that wants to recompute a stat itself rather than trust a rendered number. Excludes archived/dead systems and anything with zero pages indexed, same as every page below.
 
-- /systems.json (1223 KB) — Every indexed system, merged into one file — the same records the HTML pages render.
+- /systems.json (1221 KB) — Every indexed system, merged into one file — the same records the HTML pages render.
 - /design-system.schema.json (7 KB) — JSON Schema for systems.json and each systems/<slug>.json.
 - /systems/<slug>.json — one system's own record (matches systems.json's shape)
 
