@@ -526,13 +526,26 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
     slug = slugify(name_text)
     thumb_html = ""
     if start_url:
-        src = thumbnail_src(name_text, start_url, size="detail")
-        # Shared view-transition-name with this same card's .card-thumb on the
-        # directory grid (see generate_directory.py's render_card) — the
-        # browser morphs one into the other on navigation instead of a hard cut.
+        large_src = thumbnail_src(name_text, start_url, size="detail")
+        small_src = thumbnail_src(name_text, start_url, size="card")
+        # Three-tier fallback, poorest-first: the large (800w) hero shot is
+        # the common case, but a system with only the small (320w) stored
+        # screenshot committed — or an mshots URL that renders one size and
+        # not the other — otherwise showed nothing at all. Second onerror
+        # (small failed too — e.g. Feelix's feelix.myob.com, a GitHub Pages
+        # site gated behind GitHub SSO, so even mshots' live fetch just
+        # renders a login wall/fails outright) drops the src entirely rather
+        # than leaving the browser's own broken-image icon on screen — the
+        # element stays an <img>, so .hero-thumb's own background/border/
+        # aspect-ratio (all apply with no image loaded) show through as a
+        # plain placeholder box instead.
         thumb_html = (
             f'<a href="{html.escape(start_url)}" target="_blank" rel="noopener">'
-            f'<img class="hero-thumb" src="{src}" alt="" loading="lazy" style="view-transition-name: thumb-{slug}; view-transition-class: thumb"></a>'
+            f'<img class="hero-thumb" src="{large_src}" alt="" loading="lazy" '
+            f'data-fallback="{html.escape(small_src)}" '
+            f"onerror=\"if(this.dataset.fallback){{this.src=this.dataset.fallback;delete this.dataset.fallback;}}"
+            f"else{{this.removeAttribute('src');}}\" "
+            f'style="view-transition-name: thumb-{slug}; view-transition-class: thumb"></a>'
         )
 
     domain = urlparse(start_url).netloc if start_url else ""
@@ -563,6 +576,17 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
     display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
     border-radius: 10px; border: 1px solid var(--border); background: var(--surface-sunken); margin-bottom: 28px;
   }}
+  /* Visible even when the hero-thumb below it fails to load (an access-gated
+     site, e.g. a GitHub Pages site behind SSO, or a slow/never-rendered
+     mshots screenshot) — that image's own <a> wrapper is otherwise the
+     ONLY way to reach the real site from this page, and a broken image has
+     no visible click target at all. */
+  .visit-site {{
+    display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem;
+    color: var(--text-muted); text-decoration: none; margin: 4px 0 14px;
+  }}
+  .visit-site:hover {{ color: var(--accent); text-decoration: underline; }}
+  .visit-site svg {{ flex: none; }}
 
   .freshness {{
     display: flex; gap: 24px; flex-wrap: wrap; background: var(--surface-sunken); border: 1px solid var(--border);
@@ -680,6 +704,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   <p class="eyebrow"><a href="/directory">All Systems</a></p>
   <div class="system-header">{favicon}<span class="org-label">{html.escape(org) if org else html.escape(domain)}</span></div>
   <h1>{html.escape(ds_name)}</h1>
+  {f'<a class="visit-site" href="{html.escape(start_url)}" target="_blank" rel="noopener">Visit {html.escape(domain)}{EXTERNAL_LINK_ICON_SVG}</a>' if start_url else ""}
   <p class="meta-line">{coverage_html}{" · ".join(html.escape(m) for m in meta_parts)}</p>
   {thumb_html}
 

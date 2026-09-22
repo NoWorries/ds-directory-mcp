@@ -12,3 +12,6 @@ health_report.md
 shard_touched.json
 /shards/
 index.html
+
+# Local Claude Code tooling config (dev-server preview launcher) — machine-specific, not project content
+.claude/
