@@ -3,5 +3,18 @@
 # to spare every other crawl job (reindex-full/new/shallow, hundreds of
 # shards combined) from installing a full browser-automation dependency tree
 # they never touch.
+#
+# Pinned to an EXACT version, not >=0.4.0 — confirmed live, reindex-spa.yml
+# runs hit "BrowserType.launch: Target page, context or browser has been
+# closed" (chrome-headless-shell crashing with SIGTRAP immediately on
+# launch) uniformly across every system in the shard, not a per-site
+# problem. This is a known, still-open upstream issue (crawl4ai's own
+# GitHub: #895, #920, #1029, #1326, among others), and an unbounded >=
+# constraint meant CI could pick up any crawl4ai/Playwright browser-
+# revision combination with zero guarantee it's actually been exercised.
+# 0.9.3 is what this repo's own local development environment has been
+# running against all along — confirmed working repeatedly (real headless
+# renders of multiple systems, no crashes) — so CI now matches exactly
+# rather than drifting to whatever's newest on a given run.
 -r requirements-ingest.txt
-crawl4ai>=0.4.0
+crawl4ai==0.9.3
