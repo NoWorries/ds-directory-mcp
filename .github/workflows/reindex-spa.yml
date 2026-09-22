@@ -114,6 +114,25 @@ jobs:
 
       - run: playwright install --with-deps chromium
 
+      # Confirmed live: every shard's render crashed identically with
+      # "BrowserType.launch: Target page, context or browser has been
+      # closed" / chrome-headless-shell exiting on SIGTRAP immediately on
+      # launch, regardless of which system it was rendering or which
+      # crawl4ai/Playwright version was pinned (same chromium_headless_
+      # shell-1243 build either way) — not a per-site or version-drift
+      # problem. Root cause: Ubuntu 24.04+'s ubuntu-latest runners restrict
+      # unprivileged user-namespace creation via AppArmor by default (see
+      # https://bugs.launchpad.net/ubuntu/+source/apparmor/+bug/2046844),
+      # which crashes any Chromium binary that isn't a distro package (a
+      # plain `playwright install` download, exactly what this is) in
+      # ZygoteHostImpl::Init with "No usable sandbox!" — even with
+      # --no-sandbox already on the launch command line, since the crash
+      # happens during zygote setup before that flag's effect fully
+      # applies. This sysctl only affects this ephemeral runner VM for the
+      # rest of this job.
+      - name: Allow unprivileged user namespaces (Ubuntu 24.04 AppArmor default breaks downloaded Chromium)
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
       - name: Render this shard's likely_spa systems
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
