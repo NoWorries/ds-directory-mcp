@@ -1,0 +1,223 @@
+name: Followup reindex (capped systems)
+
+# For systems whose last crawl hit_max_pages (real documentation was still
+# queued when the crawl stopped — see ingest.py's crawl() and
+# check_crawl_health.py's "systems hit the max_pages ceiling" section) — a
+# deeper pass with FOLLOWUP_MAX_PAGES instead of each entry's normal
+# max_pages/DEFAULT_MAX_PAGES, so these specifically get more real coverage
+# without waiting for reindex-full.yml's monthly full re-crawl (which reuses
+# the same cap that got hit last time, so it wouldn't reach any further on
+# its own — see ingest.py's --followup docstring).
+#
+# Confirmed live: of ~90 "not fully indexed" systems on the public site, 7
+# are stuck specifically on hit_max_pages, not on a rendering/crawl-error
+# problem reindex-spa.yml or a manual fix would help with — and nothing in
+# .github/workflows ran --followup at all before this file existed.
+
+on:
+  schedule:
+    # 04:00 UTC on Wednesdays — offset from reindex-new.yml's Monday run and
+    # reindex-full.yml's 1st-of-month / reindex-spa.yml's 15th-of-month runs
+    # so these heavy crawls don't compete for runners.
+    - cron: "0 4 * * 3"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+# Only one of these full-registry pipelines (reindex-full/new/shallow/
+# signals-refresh/spa, plus this one) committing to master or deploying to
+# Netlify at once — running two at a time doubled embedding-API 429s in practice
+# and made their push-retry loops fight each other for no benefit.
+concurrency:
+  group: ds-directory-mcp-write-pipeline
+  cancel-in-progress: false
+
+jobs:
+  # One shard per currently hit_max_pages system (capped at 256, floored at
+  # 1) — same rationale as the other reindex workflows: a shard's local
+  # progress only survives if it reaches its own end-of-job artifact
+  # upload, and a forced runner shutdown gives it no chance to run that
+  # step at all. The number of hit_max_pages systems shrinks every time
+  # this runs and a capped system finally finishes, so a fixed shard count
+  # would increasingly overshoot into empty shards the same way reindex-
+  # shallow.yml's originally did.
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      shard_count: ${{ steps.gen.outputs.shard_count }}
+      shards: ${{ steps.gen.outputs.shards }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-site.txt
+      - run: pip install -r requirements-site.txt
+      - id: gen
+        run: |
+          python3 -c "
+          import json
+          import yaml
+
+          with open('systems.yaml') as f:
+              entries = yaml.safe_load(f) or []
+          # Mirrors ingest.py's --followup filter exactly (kept in sync by
+          # hand — this job doesn't install ingest.py's heavier deps to
+          # import it directly).
+          total = len([e for e in entries if e.get('hit_max_pages') and not e.get('archived') and not e.get('likely_unmaintained')])
+          n = max(min(total, 256), 1)
+          print(f'shard_count={n}')
+          print(f'shards={json.dumps(list(range(n)))}')
+          " >> "$GITHUB_OUTPUT"
+
+  # Same sharding rationale as reindex-full.yml/reindex-shallow.yml: a
+  # runner getting killed mid-run only loses its own slice, not the whole
+  # pass.
+  followup-shard:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: ${{ fromJSON(needs.prepare.outputs.shards) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-ingest.txt
+
+      - run: pip install -r requirements-ingest.txt
+
+      # Local embeddings (see embeddings.py) download their model weights
+      # from HuggingFace on first use — cached here so parallel shards, and
+      # every subsequent scheduled run, don't each re-download the same
+      # ~130MB.
+      - name: Cache local embedding model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: huggingface-${{ hashFiles('config.py') }}
+
+      - name: Deepen this shard's capped systems
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+        run: |
+          rm -f shard_touched.json
+          python ingest.py --followup --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
+
+      # if: always() — same reasoning as the other reindex workflows:
+      # ingest.py writes systems.yaml/pages_index.json incrementally per
+      # system, well before that system's embedding calls (where a rate-
+      # limit or other failure actually happens), so whatever this shard
+      # got through before any failure is already on disk and worth
+      # uploading. shard_touched.json (see ingest.mark_shard_touched) tells
+      # merge_shards.py which names to take from this shard specifically.
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard }}
+          path: |
+            systems.yaml
+            pages_index.json
+            shard_touched.json
+          retention-days: 1
+          if-no-files-found: ignore
+
+  merge-and-deploy:
+    needs: [prepare, followup-shard]
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-ingest.txt
+
+      - run: pip install -r requirements-ingest.txt
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shards
+
+      - name: Merge shard results into systems.yaml + pages_index.json
+        run: python merge_shards.py ${{ needs.prepare.outputs.shard_count }}
+
+      - name: Generate static directory page
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          python generate_home.py
+          python generate_search.py
+          python generate_forms.py
+          python generate_data_export.py
+          python generate_llms_txt.py
+          python generate_mcp_manifest.py
+          python generate_security_txt.py
+          python generate_robots_txt.py
+          python generate_directory.py
+          python generate_compare.py
+          python generate_components.py
+          python generate_systems.py
+          # sitemap.xml must run AFTER components/patterns/foundations are
+          # generated above — it enumerates those directories' pages
+          # (taxonomy_page_paths() in generate_sitemap.py).
+          python generate_sitemap.py
+
+      - name: Check crawl health (maintainer-facing only — not shown on the public page)
+        run: python check_crawl_health.py
+
+      - name: Open/update/close maintainer issue for low-coverage systems
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list --search "Crawl health: systems needing attention in:title" --state open --json number --jq '.[0].number')
+          if [ -f health_report.md ]; then
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file health_report.md
+            else
+              gh issue create --title "Crawl health: systems needing attention" --body-file health_report.md --label "crawl-health" || \
+              gh issue create --title "Crawl health: systems needing attention" --body-file health_report.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All systems now have healthy crawl coverage — closing."
+          fi
+
+      - name: Commit deepened systems + directory page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html compare.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json dead_links.json components patterns foundations systems .well-known robots.txt
+          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Deepen coverage on capped design systems [skip ci]"
+            # Other workflows commit to this same branch too, so a push can
+            # land after one of them — ordinary non-fast-forward race, not a
+            # real conflict most of the time. Rebase and retry a few times.
+            for i in 1 2 3 4 5; do
+              git push && break
+              echo "Push rejected (attempt $i/5) — another commit landed first, rebasing and retrying..."
+              git pull --rebase
+            done
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Deploy directory page to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          bash scripts/build_site.sh
