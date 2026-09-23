@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T06:29:16+00:00",
+  "generated_at": "2026-09-23T09:33:10+00:00",
   "id": "aws-cloudscape-design-system",
   "organization": "AWS",
   "design_system": "Cloudscape Design System",
@@ -9,30 +9,52 @@
     "https://cloudscape.design/"
   ],
   "detail_url": "/systems/aws-cloudscape-design-system",
-  "pages_indexed": 35,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 157,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-21T00:27:04+00:00",
-  "last_modified": "Fri, 18 Sep 2026 19:31:52 GMT",
+  "last_checked": "2026-09-23T09:21:25+00:00",
+  "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/cloudscape-design/components"
+      "https://github.com/cloudscape-design/components",
+      "https://github.com/cloudscape-design/jest-preset"
+    ],
+    "figma": [
+      "https://figma.com/design/fwbGAQCAvHX0rcmxxTTmV8/%5BCDS%5D-Foundations"
     ],
     "markdown_docs": [
+      "https://github.com/cloudscape-design/jest-preset/blob/main/README.md",
       "https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md"
-    ],
-    "icons": [
-      "https://cloudscape.design/components/icon"
     ],
     "agent_instructions": [
       "https://cloudscape.design/llms.txt"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@cloudscape-design/global-styles",
+      "https://npmjs.com/package/@cloudscape-design/collection-hooks"
+    ],
+    "icons": [
+      "https://cloudscape.design/components/icon"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/NMFR/optimize-css-assets-webpack-plugin",
+      "https://github.com/modosc/global-jsdom",
+      "https://github.com/testing-library/react-testing-library",
+      "https://github.com/csstools/stylelint-use-logical",
+      "https://github.com/webpack-contrib/mini-css-extract-plugin"
+    ],
+    "npm": [
+      "https://npmjs.com/package/normalize.css"
+    ]
+  },
   "content_signals": {
     "dark_mode": true,
+    "tokens_format": "DTCG",
+    "cli_scaffolding": true,
     "frameworks": [
       "React"
     ]
@@ -40,13 +62,641 @@
   "github_meta": {
     "license": "Apache-2.0",
     "stars": 2647,
-    "last_pushed": "2026-09-19T14:40:39Z"
+    "last_pushed": "2026-09-23T08:07:31Z"
   },
-  "npm_meta": null,
+  "npm_meta": {
+    "latest_version": "1.0.70",
+    "last_published": "2026-09-13T00:36:06.660Z",
+    "weekly_downloads": 72911
+  },
   "indexed_pages": [
     {
+      "url": "https://cloudscape.design/about",
+      "title": "About Cloudscape - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai",
+      "title": "About generative AI - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/accessibility",
+      "title": "Accessibility - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/actions",
+      "title": "Actions - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/agent-management",
+      "title": "Agent management - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/ai-tools-support",
+      "title": "AI Tools Support - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/annotation-context",
+      "title": "Annotation context - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/announcing-beta-preview-features",
+      "title": "Announcing beta and preview features - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/announcing-new-features",
+      "title": "Announcing new features - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/app-layout-toolbar",
+      "title": "App layout toolbar - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/area-chart",
+      "title": "Area chart - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/artifact-previews",
+      "title": "Artifact previews - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit/attribute-editing",
+      "title": "Attribute editing - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/llms.txt",
+      "title": "AWS — Cloudscape Design System — llms.txt"
+    },
+    {
+      "url": "https://cloudscape.design/components/bar-chart",
+      "title": "Bar chart - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/bidirectionality",
+      "title": "Bidirectionality - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/bidirectionality",
+      "title": "Bidirectionality - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/board-components",
+      "title": "Board components - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/accessibility/Building-accessible-experiences",
+      "title": "Building accessible experiences - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/internationalization",
+      "title": "Built-in internationalization - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/card-view",
+      "title": "Card view - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/cartesian-chart",
+      "title": "Cartesian charts - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/data-vis/chart-metric-drill-down",
+      "title": "Chart metric drill down - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/charts-legacy",
+      "title": "Charts (Legacy) - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/charts",
+      "title": "Charts - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/charts-migration",
+      "title": "Charts migration - Cloudscape Design System"
+    },
+    {
       "url": "https://cloudscape.design/",
-      "title": "AWS — Cloudscape Design System"
+      "title": "Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/collection-hooks",
+      "title": "Collection hooks package - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/collection-select-filter",
+      "title": "Collection select filter - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/colors",
+      "title": "Colors - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation/colors",
+      "title": "Colors - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/unsaved-changes",
+      "title": "Communicating unsaved changes - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components",
+      "title": "Components - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/components",
+      "title": "Components - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard/configurable-dashboard",
+      "title": "Configurable dashboard - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/about/connect",
+      "title": "Connect - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/content-density",
+      "title": "Content density - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/csp",
+      "title": "Content security policy (CSP) - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/conversational-history",
+      "title": "Conversational history - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create",
+      "title": "Create resource - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard/dashboard-items",
+      "title": "Dashboard items - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/data-vis",
+      "title": "Data visualization - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/data-vis-colors",
+      "title": "Data visualization colors - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/defaults",
+      "title": "Defaults - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete",
+      "title": "Delete patterns - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete/delete-with-additional-confirmation",
+      "title": "Delete with additional confirmation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete/delete-with-simple-confirmation",
+      "title": "Delete with simple confirmation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/demos",
+      "title": "Demos - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/density-settings",
+      "title": "Density settings - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-designers/design-resources",
+      "title": "Design resources - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/design-tokens",
+      "title": "Design tokens - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details/details-page",
+      "title": "Details page - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details/details-page-as-hub",
+      "title": "Details page as a hub - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details/details-page-with-tabs",
+      "title": "Details page with tabs - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/dialog",
+      "title": "Dialog - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/disabled-and-read-only-states",
+      "title": "Disabled and read-only states - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/drag-and-drop",
+      "title": "Drag-and-drop - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit",
+      "title": "Edit resource - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/empty-states",
+      "title": "Empty states - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/errors/error-messages",
+      "title": "Error messages - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/errors",
+      "title": "Errors - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/user-feedback",
+      "title": "Feedback mechanisms - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/file-upload",
+      "title": "File upload - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/file-uploading-components",
+      "title": "File uploading components - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/filter-patterns/filter-persistence-in-collection-views",
+      "title": "Filter persistence in collection views - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/filter-patterns",
+      "title": "Filtering patterns - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/flashbar",
+      "title": "Flashbar - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/flexible-iconography",
+      "title": "Flexible iconography - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/accessibility/focus-management-principles",
+      "title": "Focus management principles - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/follow-up-questions",
+      "title": "Follow-up questions - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation",
+      "title": "Foundation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation",
+      "title": "Foundation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/generative-ai-chat",
+      "title": "Generative AI chat - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/genai-components",
+      "title": "Generative AI components - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/generative-ai-loading-states",
+      "title": "Generative AI loading states - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/generative-ai-output-label",
+      "title": "Generative AI output label - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started",
+      "title": "Get started - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/actions/global-actions",
+      "title": "Global actions - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/global-styles",
+      "title": "Global styles - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/grid",
+      "title": "Grid - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/onboarding/hands-on-tutorials",
+      "title": "Hands-on tutorials - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/help-system",
+      "title": "Help system - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/hero-header",
+      "title": "Hero header - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/hotspot",
+      "title": "Hotspot - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/iconography",
+      "title": "Iconography - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation/iconography",
+      "title": "Iconography - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/image-magnifier",
+      "title": "Image magnifier - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/in-chat-context",
+      "title": "In-chat context - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/actions/incontext-actions",
+      "title": "In-context actions - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/in-flow-user-input",
+      "title": "In-flow user input - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/ingress",
+      "title": "Ingress - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit/inline-edit",
+      "title": "Inline edit - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/testing/introduction",
+      "title": "Introduction to testing - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/layout",
+      "title": "Layout - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/line-chart",
+      "title": "Line chart - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/ai-tools/llms-txt-files",
+      "title": "LLMs.txt files - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/loading-and-refreshing",
+      "title": "Loading and refreshing - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/mixed-line-bar-chart",
+      "title": "Mixed line and bar chart - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/modal",
+      "title": "Modal - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/motion",
+      "title": "Motion - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/multi-page-create",
+      "title": "Multipage create - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/onboarding",
+      "title": "Onboarding - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete/one-click-delete",
+      "title": "One-click delete - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit/page-edit",
+      "title": "Page edit - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/pattern-abstraction",
+      "title": "Pattern abstraction - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns",
+      "title": "Patterns - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns",
+      "title": "Patterns - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/pie-chart",
+      "title": "Pie and donut charts - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/pie-chart-legacy",
+      "title": "Pie and donut charts - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/progressive-steps",
+      "title": "Progressive steps - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/property-filter",
+      "title": "Property filter - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details",
+      "title": "Resource details - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/response-regeneration",
+      "title": "Response regeneration - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/responsive-design",
+      "title": "Responsive design - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/responsive-development",
+      "title": "Responsive development - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/filter-patterns/saved-filter-sets",
+      "title": "Saved filter sets - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/secondary-panels",
+      "title": "Secondary panels - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/selection",
+      "title": "Selection in forms - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard",
+      "title": "Service dashboards - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-navigation",
+      "title": "Service navigation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/shortcut-menus",
+      "title": "Shortcut menus - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-navigation/side-navigation",
+      "title": "Side navigation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/single-page-create",
+      "title": "Single page create - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/spacing",
+      "title": "Spacing - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/split-panel",
+      "title": "Split panel - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/split-view",
+      "title": "Split view - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-designers/start-designing",
+      "title": "Start designing - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/start-developing",
+      "title": "Start developing - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/state-management",
+      "title": "State management - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard/static-dashboard",
+      "title": "Static dashboard - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/status-indicator",
+      "title": "Status indicator - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/sub-resource-create",
+      "title": "Sub-resource create - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/support-prompts",
+      "title": "Support prompts - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/table-view",
+      "title": "Table view - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/table-with-grouped-resources",
+      "title": "Table with grouped resources - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/table-with-nested-resources",
+      "title": "Table with nested resources - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/testing/core-classes",
+      "title": "Testing classes - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/testing/frameworks",
+      "title": "Testing frameworks integration - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/theming",
+      "title": "Theming - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/thinking",
+      "title": "Thinking - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/timeline-overview",
+      "title": "Timeline overview - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/timestamps",
+      "title": "Timestamps - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-navigation/top-navigation",
+      "title": "Top navigation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/hands-on-tutorials",
+      "title": "Tutorial components - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/typography",
+      "title": "Typography - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/user-authorized-actions",
+      "title": "User authorized actions - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/collect-user-feedback",
+      "title": "User feedback - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/using-cloudscape-components",
+      "title": "Using Cloudscape components - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/errors/validation",
+      "title": "Validation - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/variables",
+      "title": "Variables - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view",
+      "title": "View resources - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation/visual-affordance",
+      "title": "Visual affordance - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/visual-context",
+      "title": "Visual context - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/visual-modes",
+      "title": "Visual modes - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/visual-style",
+      "title": "Visual style - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/components/wizard",
+      "title": "Wizard - Cloudscape Design System"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/z-index",
+      "title": "Z-index - Cloudscape Design System"
     }
   ]
 }

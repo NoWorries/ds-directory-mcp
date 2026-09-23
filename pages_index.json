@@ -14385,7 +14385,8 @@
   "Morningstar — Morningstar Design System": [
     {
       "url": "https://designsystem.morningstar.com/",
-      "title": "Morningstar — Morningstar Design System"
+      "title": "Home - Morningstar Design System",
+      "last_modified": "Mon, 22 Jun 2026 13:11:25 GMT"
     }
   ],
   "Mozilla — Protocol": [
@@ -20396,8 +20397,944 @@
   ],
   "AWS — Cloudscape Design System": [
     {
+      "url": "https://cloudscape.design/about",
+      "title": "About Cloudscape - Cloudscape Design System",
+      "etag": "W/\"07d4419c68da838ea9cd080957095775\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:03 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai",
+      "title": "About generative AI - Cloudscape Design System",
+      "etag": "\"692414c47c5102797276ca1bd6654969\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/accessibility",
+      "title": "Accessibility - Cloudscape Design System",
+      "etag": "W/\"2631363dad47d9dab788c69b8dbe3855\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/actions",
+      "title": "Actions - Cloudscape Design System",
+      "etag": "W/\"e9e38c4dd57ec8c2c14c9dd4d56f5b2d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/agent-management",
+      "title": "Agent management - Cloudscape Design System",
+      "etag": "W/\"1b2672f9fa68c1aa96f1d5f4c98e19a2\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/ai-tools-support",
+      "title": "AI Tools Support - Cloudscape Design System",
+      "etag": "W/\"fa874727fe0bc28f9685252d0ada2ca7\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/annotation-context",
+      "title": "Annotation context - Cloudscape Design System",
+      "etag": "W/\"fa1fdf6b4d8753154e59d90894112653\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:03 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/announcing-beta-preview-features",
+      "title": "Announcing beta and preview features - Cloudscape Design System",
+      "etag": "W/\"0ca6154fc3235dd9f72651b91d04af34\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/announcing-new-features",
+      "title": "Announcing new features - Cloudscape Design System",
+      "etag": "W/\"b547e61c6a670a10c5824b5f10a698a5\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/app-layout-toolbar",
+      "title": "App layout toolbar - Cloudscape Design System",
+      "etag": "W/\"fb85d9678263735aded0a2d3405c9d52\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:03 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/area-chart",
+      "title": "Area chart - Cloudscape Design System",
+      "etag": "W/\"9a4c897eefb71d6fe8f138a0044901c3\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:03 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/artifact-previews",
+      "title": "Artifact previews - Cloudscape Design System",
+      "etag": "W/\"933f0fa86b5b560d11a3204ed815d41b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit/attribute-editing",
+      "title": "Attribute editing - Cloudscape Design System",
+      "etag": "W/\"b5daab832492b431a2b7283d12985283\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/llms.txt",
+      "title": "AWS — Cloudscape Design System — llms.txt"
+    },
+    {
+      "url": "https://cloudscape.design/components/bar-chart",
+      "title": "Bar chart - Cloudscape Design System",
+      "etag": "W/\"245bf32df85ea845fc6ef191663a26d4\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:04 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/bidirectionality",
+      "title": "Bidirectionality - Cloudscape Design System",
+      "etag": "W/\"79fb9b20b1e30be9a874fe448d93cf72\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/bidirectionality",
+      "title": "Bidirectionality - Cloudscape Design System",
+      "etag": "W/\"0a8210074d5ea8c40c4be6d810d74d63\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/board-components",
+      "title": "Board components - Cloudscape Design System",
+      "etag": "W/\"3c2b24994e5042d9d303caa63e6b5691\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:04 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/accessibility/Building-accessible-experiences",
+      "title": "Building accessible experiences - Cloudscape Design System",
+      "etag": "W/\"9528297e0a93e0b291e9a9cc9757ed52\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:18 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/internationalization",
+      "title": "Built-in internationalization - Cloudscape Design System",
+      "etag": "W/\"913ff99f27bbfba07354df5f340d27f6\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/card-view",
+      "title": "Card view - Cloudscape Design System",
+      "etag": "W/\"809ab96783deabecc63a5608aece1560\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/cartesian-chart",
+      "title": "Cartesian charts - Cloudscape Design System",
+      "etag": "W/\"9a0387490394fd813ec40936fd2958f0\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:05 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/data-vis/chart-metric-drill-down",
+      "title": "Chart metric drill down - Cloudscape Design System",
+      "etag": "W/\"ea22fe34b1f3e53bea1562cfac1c8576\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/charts-legacy",
+      "title": "Charts (Legacy) - Cloudscape Design System",
+      "etag": "W/\"2a7313769c0065460185eee3be5a8771\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:05 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/charts",
+      "title": "Charts - Cloudscape Design System",
+      "etag": "W/\"266a0025be156461c64d83169111adf9\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:05 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/charts-migration",
+      "title": "Charts migration - Cloudscape Design System",
+      "etag": "W/\"bf9af256194732b55d1913ab53923ccc\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
       "url": "https://cloudscape.design/",
-      "title": "AWS — Cloudscape Design System"
+      "title": "Cloudscape Design System",
+      "etag": "\"15ccb34b84a7decdeeb9cef32485c39b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/collection-hooks",
+      "title": "Collection hooks package - Cloudscape Design System",
+      "etag": "W/\"c0478a5b6690a2cf5a3014bec6a72836\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/collection-select-filter",
+      "title": "Collection select filter - Cloudscape Design System",
+      "etag": "W/\"4df84ed65f861ab0d726d2cb85078e07\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:06 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/colors",
+      "title": "Colors - Cloudscape Design System",
+      "etag": "W/\"cc0da5273e68b85688e6cba2fcdf78cf\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation/colors",
+      "title": "Colors - Cloudscape Design System",
+      "etag": "W/\"ccbb8ee7567e46ab7a90703f22fda719\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/unsaved-changes",
+      "title": "Communicating unsaved changes - Cloudscape Design System",
+      "etag": "W/\"8828b0e19f0ea8d68211675203f8a0c6\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components",
+      "title": "Components - Cloudscape Design System",
+      "etag": "W/\"e2eb930c7b9c28206b6e98571309e229\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:09 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/components",
+      "title": "Components - Cloudscape Design System",
+      "etag": "W/\"e1b2386ffb7dacfc287693e010979ea1\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard/configurable-dashboard",
+      "title": "Configurable dashboard - Cloudscape Design System",
+      "etag": "W/\"368d25dbbaaabe7b094ea3fde73f6ed4\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/about/connect",
+      "title": "Connect - Cloudscape Design System",
+      "etag": "W/\"aa31f7e2221f65253aed045c9cf2c63b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:03 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/content-density",
+      "title": "Content density - Cloudscape Design System",
+      "etag": "W/\"57bee3c1c8c643417458728489a5c56e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/csp",
+      "title": "Content security policy (CSP) - Cloudscape Design System",
+      "etag": "W/\"377a3022582d8e671671a19ee55302f5\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/conversational-history",
+      "title": "Conversational history - Cloudscape Design System",
+      "etag": "W/\"64c84314a00320a3402c20b93046c02e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create",
+      "title": "Create resource - Cloudscape Design System",
+      "etag": "W/\"300b7bf8e6957b4e5029d1365441b34e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard/dashboard-items",
+      "title": "Dashboard items - Cloudscape Design System",
+      "etag": "W/\"42dce50935beba3d2374c8617871d8b5\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/data-vis",
+      "title": "Data visualization - Cloudscape Design System",
+      "etag": "W/\"107c4b288d53c2ba284fe931da3a4b9a\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/data-vis-colors",
+      "title": "Data visualization colors - Cloudscape Design System",
+      "etag": "W/\"5465495bf30276db7713c1e968e8cf09\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/defaults",
+      "title": "Defaults - Cloudscape Design System",
+      "etag": "W/\"9c20bf21320b7479508ded8fe6de6e0c\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete",
+      "title": "Delete patterns - Cloudscape Design System",
+      "etag": "W/\"c3e834a62ffdfa11936acbda955b1e37\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete/delete-with-additional-confirmation",
+      "title": "Delete with additional confirmation - Cloudscape Design System",
+      "etag": "W/\"f400ab9b2fb5742827085b68fdd35b94\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete/delete-with-simple-confirmation",
+      "title": "Delete with simple confirmation - Cloudscape Design System",
+      "etag": "W/\"912b607ea9c5696a38bece3cda12c873\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/demos",
+      "title": "Demos - Cloudscape Design System",
+      "etag": "W/\"93326518ae97a04516131464fe134b1d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:15 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/density-settings",
+      "title": "Density settings - Cloudscape Design System",
+      "etag": "W/\"38d193c17cd3146dd70c38f8dc46739e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-designers/design-resources",
+      "title": "Design resources - Cloudscape Design System",
+      "etag": "W/\"1a98ca35fa1f058c2c997025d996a5de\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/design-tokens",
+      "title": "Design tokens - Cloudscape Design System",
+      "etag": "W/\"e89418567fc71bb830cb72ccd74984bd\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details/details-page",
+      "title": "Details page - Cloudscape Design System",
+      "etag": "W/\"4f8ae754302210af06fc2f20ce1d4d23\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details/details-page-as-hub",
+      "title": "Details page as a hub - Cloudscape Design System",
+      "etag": "W/\"9b250feaccbde2e6b93938684da3cc35\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details/details-page-with-tabs",
+      "title": "Details page with tabs - Cloudscape Design System",
+      "etag": "W/\"04843cc1f73677e17c4294bbf8334294\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/dialog",
+      "title": "Dialog - Cloudscape Design System",
+      "etag": "W/\"c96b8ca44163c1ab45fd1080725c8977\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:07 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/disabled-and-read-only-states",
+      "title": "Disabled and read-only states - Cloudscape Design System",
+      "etag": "W/\"efea2cafea66f2b2543adbb342762611\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/drag-and-drop",
+      "title": "Drag-and-drop - Cloudscape Design System",
+      "etag": "W/\"b0a3be1eb4bfbb36b62c1c402367e321\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit",
+      "title": "Edit resource - Cloudscape Design System",
+      "etag": "W/\"73d2553242ab685d9e49cdddd5826fc6\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/empty-states",
+      "title": "Empty states - Cloudscape Design System",
+      "etag": "W/\"3be0e685254766f93bdd1fb76d4c850d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/errors/error-messages",
+      "title": "Error messages - Cloudscape Design System",
+      "etag": "W/\"1424ce330a3ad6c1e512a205f595b299\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/errors",
+      "title": "Errors - Cloudscape Design System",
+      "etag": "W/\"203832c4166564fed373dae66bd6bcc0\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/user-feedback",
+      "title": "Feedback mechanisms - Cloudscape Design System",
+      "etag": "W/\"0c1a541eabd750a2ad81c19f3a92f594\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/file-upload",
+      "title": "File upload - Cloudscape Design System",
+      "etag": "W/\"fe62dca0782791aa53560070b6bce76e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:08 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/file-uploading-components",
+      "title": "File uploading components - Cloudscape Design System",
+      "etag": "W/\"a17ab8efdeeeb848c971ae7b76095895\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:08 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/filter-patterns/filter-persistence-in-collection-views",
+      "title": "Filter persistence in collection views - Cloudscape Design System",
+      "etag": "W/\"01f3b319e901d9608f6068a5d280a9a1\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/filter-patterns",
+      "title": "Filtering patterns - Cloudscape Design System",
+      "etag": "W/\"5d92ae96473d464bd11ba2c6e72bcf28\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/flashbar",
+      "title": "Flashbar - Cloudscape Design System",
+      "etag": "W/\"efbf0c43b22521d510dd59f2220becb9\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:08 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/flexible-iconography",
+      "title": "Flexible iconography - Cloudscape Design System",
+      "etag": "W/\"bdeb5fbfc0d222bd7ab4126e8a08a14b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/accessibility/focus-management-principles",
+      "title": "Focus management principles - Cloudscape Design System",
+      "etag": "W/\"7f3d215f03255008c502811245646d82\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/follow-up-questions",
+      "title": "Follow-up questions - Cloudscape Design System",
+      "etag": "W/\"e64b29fda82cac23fd11a22c4a4bb7fc\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation",
+      "title": "Foundation - Cloudscape Design System",
+      "etag": "\"fa0413001d2c9fdca58f5ada1a3be9a4\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation",
+      "title": "Foundation - Cloudscape Design System",
+      "etag": "W/\"78526b923cec2e081cc4c208319af9b7\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/generative-ai-chat",
+      "title": "Generative AI chat - Cloudscape Design System",
+      "etag": "W/\"3d8551a6ee0c7c74d9bbaa38c673de60\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/genai-components",
+      "title": "Generative AI components - Cloudscape Design System",
+      "etag": "W/\"4844b3520fb313bdcf0291fbf42e0520\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:08 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/generative-ai-loading-states",
+      "title": "Generative AI loading states - Cloudscape Design System",
+      "etag": "W/\"6999ab5c3b1f92c4651c218e90182c0b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/generative-ai-output-label",
+      "title": "Generative AI output label - Cloudscape Design System",
+      "etag": "W/\"0cac5b734785548310d999062204c2c2\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started",
+      "title": "Get started - Cloudscape Design System",
+      "etag": "\"1bdaa100a552ae1102794d2c4e50c277\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/actions/global-actions",
+      "title": "Global actions - Cloudscape Design System",
+      "etag": "W/\"86a630d331ac3d07477ce3d8fde4c149\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/global-styles",
+      "title": "Global styles - Cloudscape Design System",
+      "etag": "W/\"3ab0cdbd9e77fb4176805da9d1b0b69f\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/grid",
+      "title": "Grid - Cloudscape Design System",
+      "etag": "W/\"0e8b9ed90c4f7c33cd462dd9ebac925a\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:08 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/onboarding/hands-on-tutorials",
+      "title": "Hands-on tutorials - Cloudscape Design System",
+      "etag": "W/\"c67a0421827c9cdbf21a01f4ccdcdefa\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/help-system",
+      "title": "Help system - Cloudscape Design System",
+      "etag": "W/\"270baa5f2c8b8754f9d8d54e899c2e6b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/hero-header",
+      "title": "Hero header - Cloudscape Design System",
+      "etag": "W/\"6d400ec53050552e17f9575f3b91718a\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/hotspot",
+      "title": "Hotspot - Cloudscape Design System",
+      "etag": "W/\"5332ff657ae54ba11be50fb720982b7e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:09 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/iconography",
+      "title": "Iconography - Cloudscape Design System",
+      "etag": "W/\"7758640ade4f7c55cbfde9a4b46dd9ae\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation/iconography",
+      "title": "Iconography - Cloudscape Design System",
+      "etag": "W/\"c84df85e6a03e5855133e8572fd8bc25\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/image-magnifier",
+      "title": "Image magnifier - Cloudscape Design System",
+      "etag": "W/\"a23f7881f88d65baaf18dbef58f55b70\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/in-chat-context",
+      "title": "In-chat context - Cloudscape Design System",
+      "etag": "W/\"58b49a23967d829b0ae7044a5fcf772b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/actions/incontext-actions",
+      "title": "In-context actions - Cloudscape Design System",
+      "etag": "W/\"9e97e551b74f26772b2a8c81ffb93eb8\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/in-flow-user-input",
+      "title": "In-flow user input - Cloudscape Design System",
+      "etag": "W/\"bf0c3815561fca57c09ceecf82e86043\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/ingress",
+      "title": "Ingress - Cloudscape Design System",
+      "etag": "W/\"fbae1a9a0ef1d9252ca96a6dba7a7dbb\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit/inline-edit",
+      "title": "Inline edit - Cloudscape Design System",
+      "etag": "W/\"16b9a66439d5ffadd4bb8d0c9f635087\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/testing/introduction",
+      "title": "Introduction to testing - Cloudscape Design System",
+      "etag": "W/\"7e5c0c0d7078aab29ad5671351cae336\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/layout",
+      "title": "Layout - Cloudscape Design System",
+      "etag": "W/\"40b52bc2afc6f58fcd44d7cff243bad2\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/line-chart",
+      "title": "Line chart - Cloudscape Design System",
+      "etag": "W/\"1e2804964e911b276fe1d2e1818ed389\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:09 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/ai-tools/llms-txt-files",
+      "title": "LLMs.txt files - Cloudscape Design System",
+      "etag": "W/\"6cb14d29ac3bf706ea359d495f397a5f\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/loading-and-refreshing",
+      "title": "Loading and refreshing - Cloudscape Design System",
+      "etag": "W/\"27843eb936b2189ca6b158bb7835f90d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/mixed-line-bar-chart",
+      "title": "Mixed line and bar chart - Cloudscape Design System",
+      "etag": "W/\"2614d5c1333bdbfdaaa4dc923a8ca01b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:10 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/modal",
+      "title": "Modal - Cloudscape Design System",
+      "etag": "W/\"c46772997d1b9916b694183b5472a102\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:10 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/motion",
+      "title": "Motion - Cloudscape Design System",
+      "etag": "W/\"9116816696e585dc3dce5d226babaa18\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/multi-page-create",
+      "title": "Multipage create - Cloudscape Design System",
+      "etag": "W/\"4387c99b07846e1079a77fa285a6ea4d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/onboarding",
+      "title": "Onboarding - Cloudscape Design System",
+      "etag": "W/\"1796a0691e8d7a34d65265d1d8a9643b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/delete/one-click-delete",
+      "title": "One-click delete - Cloudscape Design System",
+      "etag": "W/\"432d4455d9c108024790e942db8b7444\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/edit/page-edit",
+      "title": "Page edit - Cloudscape Design System",
+      "etag": "W/\"7aa48299c9ecf61fcced12450dec0039\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/pattern-abstraction",
+      "title": "Pattern abstraction - Cloudscape Design System",
+      "etag": "W/\"35a003f6d827e84f9b4ffc3cfa808dc0\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns",
+      "title": "Patterns - Cloudscape Design System",
+      "etag": "\"2ea11dc216df694834d812d1c2542cd0\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns",
+      "title": "Patterns - Cloudscape Design System",
+      "etag": "W/\"f74547e32c4e9425d2ae6d0cec13e77f\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/pie-chart",
+      "title": "Pie and donut charts - Cloudscape Design System",
+      "etag": "W/\"13f7aa58337e8bdc59ebea859f6150d9\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:11 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/pie-chart-legacy",
+      "title": "Pie and donut charts - Cloudscape Design System",
+      "etag": "W/\"54329be0ab7f8294f92cf46a6411e383\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:11 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/progressive-steps",
+      "title": "Progressive steps - Cloudscape Design System",
+      "etag": "W/\"7a8c05668cbf3b690defbc1864bf5bc3\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/property-filter",
+      "title": "Property filter - Cloudscape Design System",
+      "etag": "W/\"68b8199ad9efe1d94e0564ed611ede67\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:11 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/details",
+      "title": "Resource details - Cloudscape Design System",
+      "etag": "W/\"5773395368d3bcccf71651b8f69ad2e9\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/response-regeneration",
+      "title": "Response regeneration - Cloudscape Design System",
+      "etag": "W/\"78964a29e6ada7a08028dbfcd7a699dd\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/core-principles/responsive-design",
+      "title": "Responsive design - Cloudscape Design System",
+      "etag": "W/\"eb9d5cde3e43a5c20deb390e93632dd4\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/responsive-development",
+      "title": "Responsive development - Cloudscape Design System",
+      "etag": "W/\"b0ce82003109bf2e4ebcaed9c6e446ab\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/filter-patterns/saved-filter-sets",
+      "title": "Saved filter sets - Cloudscape Design System",
+      "etag": "W/\"56fd91de69752d5a6f02fcc15fd7f288\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/secondary-panels",
+      "title": "Secondary panels - Cloudscape Design System",
+      "etag": "W/\"608a976a3501974d34eb74022b86056d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/selection",
+      "title": "Selection in forms - Cloudscape Design System",
+      "etag": "W/\"1ddd1812ff7782f69dfa18e4b0ab9ead\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard",
+      "title": "Service dashboards - Cloudscape Design System",
+      "etag": "W/\"73b85fc24794ebe21e519e721f70373b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-navigation",
+      "title": "Service navigation - Cloudscape Design System",
+      "etag": "W/\"120339abb11d7fae7d512bcdadca2417\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/shortcut-menus",
+      "title": "Shortcut menus - Cloudscape Design System",
+      "etag": "W/\"c4a90e2d34b26d55f3a9817173ee25a7\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-navigation/side-navigation",
+      "title": "Side navigation - Cloudscape Design System",
+      "etag": "W/\"d1b85f902054448d2da449a6d06cc481\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/single-page-create",
+      "title": "Single page create - Cloudscape Design System",
+      "etag": "W/\"567f2e6c7893eb5ab3b93c6f6f8cdfda\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/spacing",
+      "title": "Spacing - Cloudscape Design System",
+      "etag": "W/\"a7788a8a140fde300720ab7e3a93b0e1\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/split-panel",
+      "title": "Split panel - Cloudscape Design System",
+      "etag": "W/\"98f050a0e30210577406475c5797fe54\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:13 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/split-view",
+      "title": "Split view - Cloudscape Design System",
+      "etag": "W/\"e2b6bc53cb2edd297bd2fdaa4958fd60\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-designers/start-designing",
+      "title": "Start designing - Cloudscape Design System",
+      "etag": "W/\"7cec5154aae373adc8fdfe2b88e72891\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/start-developing",
+      "title": "Start developing - Cloudscape Design System",
+      "etag": "W/\"1925cf0747826bbbec89df84f34ae5b3\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/state-management",
+      "title": "State management - Cloudscape Design System",
+      "etag": "W/\"15f432a6db9bd805114da9240d0dfc0c\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-dashboard/static-dashboard",
+      "title": "Static dashboard - Cloudscape Design System",
+      "etag": "W/\"0c6ca641288c886b05c25d1a9871d0be\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/status-indicator",
+      "title": "Status indicator - Cloudscape Design System",
+      "etag": "W/\"01cea3e7581fc8d972bb72cf54eecf6c\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:13 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/create/sub-resource-create",
+      "title": "Sub-resource create - Cloudscape Design System",
+      "etag": "W/\"60fbe0005eb71c1b6be5e399c996aa80\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/support-prompts",
+      "title": "Support prompts - Cloudscape Design System",
+      "etag": "W/\"c8ec3d6c9dd8960f02aa4af1279f67dd\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/table-view",
+      "title": "Table view - Cloudscape Design System",
+      "etag": "W/\"d0aa40528ba4fdf9a1d057eaf23279c7\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/table-with-grouped-resources",
+      "title": "Table with grouped resources - Cloudscape Design System",
+      "etag": "W/\"f3cb5b83fc07bbe187a4f562d28baa1d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view/table-with-nested-resources",
+      "title": "Table with nested resources - Cloudscape Design System",
+      "etag": "W/\"543f91b361ada0172579f92d1e9cc6f7\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/testing/core-classes",
+      "title": "Testing classes - Cloudscape Design System",
+      "etag": "W/\"2d379e76fd05007c298ea35176c8a17f\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/testing/frameworks",
+      "title": "Testing frameworks integration - Cloudscape Design System",
+      "etag": "W/\"f987639b71fb96d159343a0b57e4a4e1\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/theming",
+      "title": "Theming - Cloudscape Design System",
+      "etag": "W/\"811889995acbc8c5db655dcbe12f502b\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/thinking",
+      "title": "Thinking - Cloudscape Design System",
+      "etag": "W/\"f1f81a541283394d985a58533f1c548d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/timeline-overview",
+      "title": "Timeline overview - Cloudscape Design System",
+      "etag": "W/\"217c9746206961093f6abd007fd3c92d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/timestamps",
+      "title": "Timestamps - Cloudscape Design System",
+      "etag": "W/\"f85d3b23122a1a03552c7d203ada553e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:25 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/service-navigation/top-navigation",
+      "title": "Top navigation - Cloudscape Design System",
+      "etag": "W/\"0be1d291d1678d00ccdaf38bc952b5b0\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:24 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/hands-on-tutorials",
+      "title": "Tutorial components - Cloudscape Design System",
+      "etag": "W/\"82d47853bbe2d8b21d0f443b0d3afc82\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:08 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/typography",
+      "title": "Typography - Cloudscape Design System",
+      "etag": "W/\"1798b1171b31d165ed68e1e4fba52d02\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/user-authorized-actions",
+      "title": "User authorized actions - Cloudscape Design System",
+      "etag": "W/\"3702125a9faacb3d8df66acbf76bb595\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/collect-user-feedback",
+      "title": "User feedback - Cloudscape Design System",
+      "etag": "W/\"37fac0321977819b33ccb396abf8918d\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/for-developers/using-cloudscape-components",
+      "title": "Using Cloudscape components - Cloudscape Design System",
+      "etag": "W/\"a6459015044ba295c83cea2df4d45323\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/general/errors/validation",
+      "title": "Validation - Cloudscape Design System",
+      "etag": "W/\"b6ac043e3337e905b9111582ef8529a4\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:23 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/patterns/variables",
+      "title": "Variables - Cloudscape Design System",
+      "etag": "W/\"59674835fde3f742ed304199a8ddfd20\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:21 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/patterns/resource-management/view",
+      "title": "View resources - Cloudscape Design System",
+      "etag": "W/\"0f487ab80e218a4a89641ae593c5f785\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:26 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/gen-ai/foundation/visual-affordance",
+      "title": "Visual affordance - Cloudscape Design System",
+      "etag": "W/\"a44be1d201b6138eef502b433831d128\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:20 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/visual-context",
+      "title": "Visual context - Cloudscape Design System",
+      "etag": "W/\"431c7e77e9fe6684044bc85d20cc3fd8\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/visual-modes",
+      "title": "Visual modes - Cloudscape Design System",
+      "etag": "W/\"b392038dd525a77a9d8ee31351474e15\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/foundation/visual-foundation/visual-style",
+      "title": "Visual style - Cloudscape Design System",
+      "etag": "W/\"24335c1260afea89da596c213101cc57\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:19 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/components/wizard",
+      "title": "Wizard - Cloudscape Design System",
+      "etag": "W/\"c92d1a1f6bc4a57719e177e5c9cff011\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:15 GMT"
+    },
+    {
+      "url": "https://cloudscape.design/get-started/dev-guides/z-index",
+      "title": "Z-index - Cloudscape Design System",
+      "etag": "W/\"8a5e34ef4343e384ceb87e4a8bd06a0e\"",
+      "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT"
     }
   ],
   "Consumer Financial Protection Bureau — CFPB Design Manual": [

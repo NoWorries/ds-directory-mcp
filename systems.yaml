@@ -532,41 +532,64 @@
   design_system: Cloudscape Design System
   start_urls:
   - https://cloudscape.design/
-  pages_indexed: 35
+  pages_indexed: 157
   resources:
     github:
     - https://github.com/cloudscape-design/components
+    - https://github.com/cloudscape-design/jest-preset
+    figma:
+    - https://figma.com/design/fwbGAQCAvHX0rcmxxTTmV8/%5BCDS%5D-Foundations
     markdown_docs:
+    - https://github.com/cloudscape-design/jest-preset/blob/main/README.md
     - https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md
-    icons:
-    - https://cloudscape.design/components/icon
     agent_instructions:
     - https://cloudscape.design/llms.txt
-  hit_max_pages: true
+    npm:
+    - https://npmjs.com/package/@cloudscape-design/global-styles
+    - https://npmjs.com/package/@cloudscape-design/collection-hooks
+    icons:
+    - https://cloudscape.design/components/icon
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: Apache-2.0
     stars: 2647
-    last_pushed: '2026-09-19T14:40:39Z'
-  etag: W/"af52c2a3d672ec0b883b1711261de12a"
-  last_modified: Fri, 18 Sep 2026 19:31:52 GMT
-  last_checked: '2026-09-21T00:27:04+00:00'
+    last_pushed: '2026-09-23T08:07:31Z'
+  etag: '"15ccb34b84a7decdeeb9cef32485c39b"'
+  last_modified: Tue, 22 Sep 2026 18:13:22 GMT
+  last_checked: '2026-09-23T09:21:25+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/NMFR/optimize-css-assets-webpack-plugin
+    - https://github.com/modosc/global-jsdom
+    - https://github.com/testing-library/react-testing-library
+    - https://github.com/csstools/stylelint-use-logical
+    - https://github.com/webpack-contrib/mini-css-extract-plugin
+    npm:
+    - https://npmjs.com/package/normalize.css
   content_signals:
     dark_mode: true
+    tokens_format: DTCG
+    cli_scaffolding: true
     frameworks:
     - React
   content_signal_sources:
     dark_mode: https://cloudscape.design/
+    tokens_format: https://cloudscape.design/foundation/visual-foundation/design-tokens
+    cli_scaffolding: https://cloudscape.design/gen-ai/ai-tools/llms-txt-files
     frameworks:
       React: https://cloudscape.design/
-  thin_page_ratio: 0.77
+  thin_page_ratio: 0.6
   has_localized_docs: false
   sitemap_url: https://cloudscape.design/sitemap.xml
   render_mode: ''
+  npm_meta:
+    latest_version: 1.0.70
+    last_published: '2026-09-13T00:36:06.660Z'
+    weekly_downloads: 72911
 - organization: AWS Amplify
   design_system: Amplify UI
   start_urls:
@@ -3772,18 +3795,18 @@
   resources:
     figma:
     - https://figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: true
   last_modified: Mon, 22 Jun 2026 13:11:25 GMT
-  last_checked: '2026-09-21T02:18:08+00:00'
+  last_checked: '2026-09-23T09:19:33+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
   sitemap_url: https://designsystem.morningstar.com/sitemap.xml
   likely_unmaintained: false
   content_signal_sources: {}
-  thin_page_ratio: 0.99
+  thin_page_ratio: 1.0
   has_localized_docs: false
   render_mode: spa
 - organization: Mozilla
