@@ -380,7 +380,8 @@ MIN_CONTENT_LENGTH = 200
 NON_HTML_EXTENSIONS = (
     ".pdf", ".zip", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp",
     ".mp4", ".webm", ".woff", ".woff2", ".ttf", ".css", ".js", ".json",
-    ".xml", ".txt", ".ico",
+    ".xml", ".txt", ".ico", ".vsdx", ".drawio", ".xd", ".sketch", ".fig",
+    ".ai", ".psd", ".eps",
 )
 
 # fetch_page() hard caps — a real confirmed incident: the crawler followed a
@@ -2300,6 +2301,18 @@ def crawl_spa(
                     if is_excluded(link, all_exclude_patterns):
                         continue
                     if not matches_include(link, include_patterns):
+                        continue
+                    # crawl()'s equivalent loop uses extract_links(), which
+                    # already applies this same check — crawl_spa() builds
+                    # abs_links straight from _render_one()'s raw hrefs
+                    # instead, so it never had this filter. Confirmed live:
+                    # a real shard burned page-budget slots (out of only
+                    # 150) rendering a Visio diagram, several .png
+                    # screenshots, and a 400KB Swagger .json spec (which
+                    # alone produced 412 junk embedding chunks) — all of
+                    # which "hit max_pages with N more page(s) still queued"
+                    # then pushed out of real, in-scope documentation pages.
+                    if _looks_like_non_html(urlparse(link).path or "/"):
                         continue
                     to_visit.append(link)
                     to_visit_set.add(link)
