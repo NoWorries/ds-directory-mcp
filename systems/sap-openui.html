@@ -338,6 +338,31 @@
     .site-brand-short { display: inline; }
   }
 
+
+  .resource-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px; margin-bottom: 32px;
+  }
+  .resource-tile {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--surface); text-decoration: none; color: inherit; font-size: 0.85rem;
+  }
+  .resource-tile.cell-found:hover { border-color: var(--accent); }
+  .resource-tile-label { font-weight: 500; }
+  .resource-tile-mark { display: inline-flex; align-items: center; position: relative; }
+  .resource-tile.cell-found .resource-tile-mark {
+    color: var(--accent); background: var(--accent-soft);
+    width: 22px; height: 22px; border-radius: 999px; justify-content: center;
+  }
+  .resource-tile.cell-none .resource-tile-mark { color: var(--text-faint); }
+  .resource-tile .cell-count {
+    position: absolute; top: -6px; right: -6px; min-width: 14px; height: 14px; padding: 0 3px;
+    display: inline-flex; align-items: center; justify-content: center; border-radius: 999px;
+    background: var(--accent); color: #fff; font-size: 0.6rem; font-weight: 700; line-height: 1;
+    font-family: "JetBrains Mono", monospace;
+  }
+
   .system-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
   .org-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }
   .meta-line { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px; }
@@ -776,10 +801,17 @@
   <a href="https://openui5.org/documentation" target="_blank" rel="noopener"><img class="hero-thumb" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fopenui5.org%2Fdocumentation?w=800" alt="" loading="lazy" data-fallback="https://s0.wp.com/mshots/v1/https%3A%2F%2Fopenui5.org%2Fdocumentation?w=320" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;delete this.dataset.fallback;}else{this.removeAttribute('src');}" style="view-transition-name: thumb-sap-openui; view-transition-class: thumb"></a>
 
   <dl class="freshness">
-    <div><dt>Site last updated</dt><dd>18 Sep 2026</dd></div>
-    <div><dt>Last checked here</dt><dd>18 Sep 2026, 12:03 UTC</dd></div>
+    <div><dt>Site last updated</dt><dd><span class="local-time" data-utc="2026-09-18T07:21:55.000+00:00">18 Sep 2026</span></dd></div>
+    <div><dt>Last checked here</dt><dd><span class="local-time" data-utc="2026-09-18T12:03:11.000+00:00">18 Sep 2026, 12:03 UTC</span></dd></div>
     <div><dt>Repo last updated</dt><dd>1 Sep 2026</dd></div>
   </dl>
+
+  <section class="block">
+    <h2>Resource types</h2>
+    <div class="resource-grid">
+      <a class="resource-tile cell-found" href="https://github.com/SAP/openui5-sample-app" target="_blank" rel="noopener" title="https://github.com/SAP/openui5-sample-app"><span class="resource-tile-label">GitHub</span><span class="resource-tile-mark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></a><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">npm</span><span class="resource-tile-mark">—</span></div><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">Storybook</span><span class="resource-tile-mark">—</span></div><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">Figma</span><span class="resource-tile-mark">—</span></div><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">Icons</span><span class="resource-tile-mark">—</span></div><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">Markdown docs</span><span class="resource-tile-mark">—</span></div><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">MCP server</span><span class="resource-tile-mark">—</span></div><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">Agent skill</span><span class="resource-tile-mark">—</span></div><div class="resource-tile cell-none" title="None found"><span class="resource-tile-label">Agent instructions</span><span class="resource-tile-mark">—</span></div>
+    </div>
+  </section>
 
   <section class="block" id="resources">
     <h2>Resources</h2>
@@ -805,6 +837,27 @@
   (function () {
     var link = document.getElementById("reportIssueLink");
     if (link) link.href += "&url=" + encodeURIComponent(window.location.href);
+  })();
+
+  // Every .local-time span (see _with_local_time() in generate_systems.py)
+  // is server-rendered in UTC — genuinely correct on its own, just not in
+  // the visitor's own timezone, which build time has no way to know. This
+  // rewrites each one's visible text using the BROWSER's timezone,
+  // determined only now, at view time. Left exactly as server-rendered
+  // (still correct, just always in UTC) if this fails for any reason — a
+  // pre-Intl browser, a malformed data-utc — rather than blanking the
+  // field or leaving a "loading..." placeholder.
+  (function () {
+    document.querySelectorAll(".local-time[data-utc]").forEach(function (el) {
+      try {
+        var d = new Date(el.dataset.utc);
+        if (isNaN(d.getTime())) return;
+        el.textContent = d.toLocaleString(undefined, {
+          day: "numeric", month: "short", year: "numeric",
+          hour: "2-digit", minute: "2-digit", timeZoneName: "short",
+        });
+      } catch (e) { /* leave the UTC fallback text as-is */ }
+    });
   })();
 </script>
 </body>

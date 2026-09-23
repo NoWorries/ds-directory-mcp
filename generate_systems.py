@@ -22,11 +22,13 @@ from generate_directory import (
     COVERAGE_GLYPH,
     COVERAGE_LABEL,
     DETAIL_ONLY_COLUMNS,
+    RESOURCE_GRID_CSS,
     coverage_status,
     favicon_html,
     indexed_only,
     load_pages_index,
     load_systems,
+    render_resource_grid,
     thumbnail_src,
 )
 from page_shell import (
@@ -50,13 +52,37 @@ from text_utils import clean_title, dedupe_system_name, full_name, humanize_url_
 SYSTEMS_DIR = Path(__file__).parent / "systems"
 
 
+def _with_local_time(dt: datetime, fallback_text: str) -> str:
+    """Wraps a server-rendered UTC display string in a span carrying the raw
+    instant as a data attribute — a small inline script (see this module's
+    own <script> block) rewrites the visible text into the VISITOR'S OWN
+    local timezone after the page loads. fallback_text stays exactly as
+    server-rendered for anyone whose JS doesn't run at all (a crawler, a
+    disabled-JS browser, or just the instant before the script runs) — never
+    blank, never a "loading..." flash, always a correct UTC reading on its
+    own."""
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    # timespec="milliseconds" — some sitemap <lastmod> values parse with
+    # microsecond precision (confirmed live: a real sitemap gave
+    # ".301000"), but the ECMA-262 date-time string grammar JS's Date
+    # constructor is spec-guaranteed to parse wants exactly 3 fractional
+    # digits, not 6. Browsers are mostly lenient about this in practice —
+    # confirmed this exact 6-digit case does parse in V8 — but there's no
+    # reason to depend on that leniency when truncating away precision
+    # nobody's showing anyway (fallback_text only ever displays to the
+    # minute) makes the string unambiguously spec-correct instead.
+    return f'<span class="local-time" data-utc="{dt.astimezone(timezone.utc).isoformat(timespec="milliseconds")}">{fallback_text}</span>'
+
+
 def format_http_date(value: str | None) -> str:
     if not value:
         return "unknown"
     try:
-        return parsedate_to_datetime(value).strftime("%-d %b %Y")
+        dt = parsedate_to_datetime(value)
     except (TypeError, ValueError):
         return value
+    return _with_local_time(dt, dt.strftime("%-d %b %Y"))
 
 
 def format_iso(value: str | None) -> str:
@@ -64,9 +90,9 @@ def format_iso(value: str | None) -> str:
         return "never"
     try:
         dt = datetime.fromisoformat(value)
-        return dt.strftime("%-d %b %Y, %H:%M UTC")
     except ValueError:
         return value
+    return _with_local_time(dt, dt.strftime("%-d %b %Y, %H:%M UTC"))
 
 
 # How long since the last commit before a repo reads as possibly-inactive
@@ -120,10 +146,18 @@ def format_site_updated(entry: dict) -> str:
     homepage's own Last-Modified header when both exist — a sitemap's
     <lastmod> reflects whatever page the site itself claims changed, not
     just the front door, so it catches a changed sub-page the header alone
-    would miss entirely (see ingest.py's content_unchanged())."""
+    would miss entirely (see ingest.py's content_unchanged()).
+
+    Empty string (not "unknown") when neither signal exists — same
+    principle as format_repo_activity() just below: the freshness box
+    should omit a row entirely rather than show a claim with nothing
+    behind it, not print a value that reads like real information but
+    isn't."""
     if entry.get("sitemap_last_modified"):
         return f'{format_iso(entry["sitemap_last_modified"])} (via sitemap)'
-    return format_http_date(entry.get("last_modified"))
+    if entry.get("last_modified"):
+        return format_http_date(entry["last_modified"])
+    return ""
 
 
 def resource_url_label(url: str) -> str:
@@ -560,6 +594,7 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
 {FONT_LINK}
 <style>
 {TOKENS_CSS}
+{RESOURCE_GRID_CSS}
   .system-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }}
   .org-label {{ font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }}
   .meta-line {{ font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px; }}
@@ -709,10 +744,17 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   {thumb_html}
 
   <dl class="freshness">
-    <div><dt>Site last updated</dt><dd>{format_site_updated(entry)}</dd></div>
+    {f'<div><dt>Site last updated</dt><dd>{format_site_updated(entry)}</dd></div>' if format_site_updated(entry) else ""}
     <div><dt>Last checked here</dt><dd>{format_iso(entry.get("last_checked"))}</dd></div>
     {f'<div><dt>Repo last updated</dt><dd>{format_repo_activity(github_meta)}</dd></div>' if format_repo_activity(github_meta) else ""}
   </dl>
+
+  <section class="block">
+    <h2>Resource types</h2>
+    <div class="resource-grid">
+      {render_resource_grid(entry)}
+    </div>
+  </section>
 
   <section class="block" id="resources">
     <h2>Resources</h2>
@@ -738,6 +780,27 @@ def render_system_page(entry: dict, pages_index: dict) -> str:
   (function () {{
     var link = document.getElementById("reportIssueLink");
     if (link) link.href += "&url=" + encodeURIComponent(window.location.href);
+  }})();
+
+  // Every .local-time span (see _with_local_time() in generate_systems.py)
+  // is server-rendered in UTC — genuinely correct on its own, just not in
+  // the visitor's own timezone, which build time has no way to know. This
+  // rewrites each one's visible text using the BROWSER's timezone,
+  // determined only now, at view time. Left exactly as server-rendered
+  // (still correct, just always in UTC) if this fails for any reason — a
+  // pre-Intl browser, a malformed data-utc — rather than blanking the
+  // field or leaving a "loading..." placeholder.
+  (function () {{
+    document.querySelectorAll(".local-time[data-utc]").forEach(function (el) {{
+      try {{
+        var d = new Date(el.dataset.utc);
+        if (isNaN(d.getTime())) return;
+        el.textContent = d.toLocaleString(undefined, {{
+          day: "numeric", month: "short", year: "numeric",
+          hour: "2-digit", minute: "2-digit", timeZoneName: "short",
+        }});
+      }} catch (e) {{ /* leave the UTC fallback text as-is */ }}
+    }});
   }})();
 </script>
 </body>

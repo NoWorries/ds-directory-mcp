@@ -294,9 +294,81 @@ def render_cell(entry: dict, key: str) -> str:
     )
 
 
+def render_resource_tile(entry: dict, key: str, label: str) -> str:
+    """One resource type's presence/absence as a small standalone tile —
+    same visual language as render_cell()'s table cell (check-pill, dash,
+    multi-count badge for more than one link under the same type), just not
+    shaped like a <td> — for generate_systems.py's own per-system "which
+    resource types were detected" grid, which needs the same found/not-found
+    read without a comparison table around it. Links to #resources (an
+    anchor on the SAME detail page, which already lists every URL under
+    Resources below) rather than compare.html's cross-page link to a detail
+    page it isn't already on."""
+    urls = (entry.get("resources") or {}).get(key)
+    label_html = f'<span class="resource-tile-label">{html.escape(label)}</span>'
+    if not urls:
+        return f'<div class="resource-tile cell-none" title="None found">{label_html}<span class="resource-tile-mark">—</span></div>'
+    if len(urls) == 1:
+        primary = html.escape(urls[0])
+        return (
+            f'<a class="resource-tile cell-found" href="{primary}" target="_blank" rel="noopener" title="{primary}">'
+            f'{label_html}<span class="resource-tile-mark">{CHECK_ICON_SVG}</span></a>'
+        )
+    return (
+        f'<a class="resource-tile cell-found cell-multi" href="#resources" title="{len(urls)} {key} links found — see Resources below">'
+        f'{label_html}<span class="resource-tile-mark">{CHECK_ICON_SVG}<span class="cell-count">{len(urls)}</span></span></a>'
+    )
+
+
+def render_resource_grid(entry: dict) -> str:
+    return "".join(render_resource_tile(entry, key, label) for key, label in COLUMNS)
+
+
+# Shared CSS for render_resource_tile()'s output — generate_compare.py
+# defines its own near-identical .cell-found/.cell-none/.cell-count rules
+# for the <td>-shaped version, but the grid/tile layout here is specific to
+# generate_systems.py's detail page, which doesn't otherwise pull in
+# compare's stylesheet at all.
+RESOURCE_GRID_CSS = """
+  .resource-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px; margin-bottom: 32px;
+  }
+  .resource-tile {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--surface); text-decoration: none; color: inherit; font-size: 0.85rem;
+  }
+  .resource-tile.cell-found:hover { border-color: var(--accent); }
+  .resource-tile-label { font-weight: 500; }
+  .resource-tile-mark { display: inline-flex; align-items: center; position: relative; }
+  .resource-tile.cell-found .resource-tile-mark {
+    color: var(--accent); background: var(--accent-soft);
+    width: 22px; height: 22px; border-radius: 999px; justify-content: center;
+  }
+  .resource-tile.cell-none .resource-tile-mark { color: var(--text-faint); }
+  .resource-tile .cell-count {
+    position: absolute; top: -6px; right: -6px; min-width: 14px; height: 14px; padding: 0 3px;
+    display: inline-flex; align-items: center; justify-content: center; border-radius: 999px;
+    background: var(--accent); color: #fff; font-size: 0.6rem; font-weight: 700; line-height: 1;
+    font-family: "JetBrains Mono", monospace;
+  }
+"""
+
+
 def found_count(entry: dict) -> int:
     resources = entry.get("resources") or {}
     return sum(1 for key, _ in COLUMNS if resources.get(key))
+
+
+def resource_keys_present(entry: dict) -> str:
+    """Space-separated COLUMNS keys this system has ANY resource under —
+    presence only (true/false per type), not the specific URLs — for the
+    /directory sidebar filter's data-resources attribute. Same COLUMNS list
+    the compare matrix and found_count() already use, so "has a Figma link"
+    means the same thing everywhere on the site."""
+    resources = entry.get("resources") or {}
+    return " ".join(key for key, _ in COLUMNS if resources.get(key))
 
 
 def render_name_block(entry: dict, link_to_detail: bool = False) -> str:
@@ -383,7 +455,7 @@ def render_simple_row(entry: dict) -> str:
     unmaintained_class = " is-unmaintained" if entry.get("likely_unmaintained") else ""
 
     return f"""
-    <tr id="{row_id}" class="{unmaintained_class.strip()}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
+    <tr id="{row_id}" class="{unmaintained_class.strip()}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}" data-resources="{html.escape(resource_keys_present(entry))}">
       <td class="name-cell">{render_name_block(entry, link_to_detail=True)}</td>
       {render_docs_cell(entry)}
       <td class="cell cell-pages">
@@ -473,7 +545,7 @@ def render_card(entry: dict) -> str:
     # holds for the filter box) so the page's one Sort control reorders
     # List rows and Grid cards identically.
     return f"""
-    <a class="card panel-link{unmaintained_class}" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}">
+    <a class="card panel-link{unmaintained_class}" href="{detail_href}" data-slug="{slug}" data-name="{html.escape(name_text.lower())}" data-sort-name="{html.escape(ds_name.lower())}" data-resources="{html.escape(resource_keys_present(entry))}">
       {thumb_html}
       <div class="card-body textured">
         {render_name_block(entry)}
@@ -489,6 +561,12 @@ def render_page(entries: list[dict]) -> str:
 
     rows = "".join(render_simple_row(e) for e in entries_sorted)
     cards = "".join(render_card(e) for e in entries_sorted)
+
+    # How many currently-shown systems have each resource type — computed
+    # once here (plain Python, not inside the f-string below) rather than
+    # as a nested f-string expression, which has its own brace-escaping
+    # rules distinct from the outer template's and is easy to get wrong.
+    resource_counts = {key: sum(1 for e in entries_sorted if (e.get("resources") or {}).get(key)) for key, _ in COLUMNS}
 
     # Only shown at all when there's actually at least one — see
     # visible_by_default()'s docstring for why this page keeps them in its
@@ -521,7 +599,44 @@ def render_page(entries: list[dict]) -> str:
      Sort button) physically moved between the two views, since Grid view
      has no table to size against. A constant width means the toolbar sits
      in the same place either way. */
-  .table-breakout {{ max-width: 1200px; margin: 0 auto; }}
+  /* .directory-layout replaces .table-breakout as the outer centered block
+     now that there's a sidebar beside it — .table-breakout keeps its name
+     (many other rules below still target it) but drops its own max-width/
+     centering, which the wrapper now owns, and instead just grows to fill
+     whatever space the flex layout gives it. */
+  .directory-layout {{ display: flex; align-items: flex-start; gap: 28px; max-width: 1420px; margin: 0 auto; }}
+  .table-breakout {{ min-width: 0; flex: 1 1 auto; }}
+  .filter-sidebar {{
+    flex: 0 0 200px; position: sticky; top: 20px;
+    border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+    box-shadow: var(--shadow); padding: 16px;
+  }}
+  .filter-sidebar h2 {{
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600;
+    color: var(--text-faint); margin: 0 0 12px; font-family: "JetBrains Mono", monospace;
+  }}
+  .filter-sidebar-list {{ display: flex; flex-direction: column; gap: 10px; }}
+  .filter-sidebar-option {{
+    display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text); cursor: pointer;
+  }}
+  .filter-sidebar-count {{
+    margin-left: auto; font-size: 0.72rem; color: var(--text-faint); font-variant-numeric: tabular-nums;
+    font-family: "JetBrains Mono", monospace;
+  }}
+  .filter-sidebar-clear {{
+    display: inline-block; margin-top: 12px; font-size: 0.78rem; color: var(--text-muted);
+    background: none; border: none; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px;
+  }}
+  .filter-sidebar-clear:hover {{ color: var(--accent); }}
+  .filter-sidebar-clear:disabled {{ color: var(--text-faint); text-decoration: none; cursor: default; }}
+  /* Sidebar becomes a horizontal wrapped row above the table on narrow
+     viewports rather than a cramped fixed-width column squeezed beside it —
+     same information, laid out the way that actually fits. */
+  @media (max-width: 820px) {{
+    .directory-layout {{ flex-direction: column; }}
+    .filter-sidebar {{ flex: 1 1 auto; width: 100%; position: static; }}
+    .filter-sidebar-list {{ flex-direction: row; flex-wrap: wrap; gap: 8px 16px; }}
+  }}
   .table-toolbar {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }}
   .table-toolbar-controls {{ display: flex; align-items: center; gap: 10px; }}
   #tableFilter {{
@@ -705,36 +820,52 @@ def render_page(entries: list[dict]) -> str:
   <p class="subtitle">{len(entries_sorted)} external design systems this site has real, indexed documentation for. Looking to cross-reference which ones publish which resources (GitHub, Storybook, Figma, tokens...)? See <a href="/compare">Compare</a>.</p>
 </div>
 
-<div class="table-breakout" id="tableBreakout">
-  <div class="table-toolbar">
-    <input id="tableFilter" type="text" placeholder="Filter by system or company name...">
-    <div class="table-toolbar-controls">
-      {unmaintained_toggle_html}
-      <button type="button" class="sort-toggle" id="sortToggle" aria-label="Sort by name">{SORT_ICON_SVG}<span id="sortToggleLabel">Name A–Z</span></button>
-      <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
-        <button type="button" data-view="list" class="current">{LIST_ICON_SVG} List</button>
-        <button type="button" data-view="grid">{GRID_ICON_SVG} Grid</button>
+<div class="directory-layout">
+  <aside class="filter-sidebar" id="filterSidebar" aria-label="Filter by resource">
+    <h2>Filter by resource</h2>
+    <div class="filter-sidebar-list">
+      {"".join(
+          f'<label class="filter-sidebar-option">'
+          f'<input type="checkbox" data-resource-filter="{key}"> {html.escape(label)}'
+          f'<span class="filter-sidebar-count">{resource_counts[key]}</span>'
+          f'</label>'
+          for key, label in COLUMNS
+      )}
+    </div>
+    <button type="button" class="filter-sidebar-clear" id="clearResourceFilters" disabled>Clear filters</button>
+  </aside>
+
+  <div class="table-breakout" id="tableBreakout">
+    <div class="table-toolbar">
+      <input id="tableFilter" type="text" placeholder="Filter by system or company name...">
+      <div class="table-toolbar-controls">
+        {unmaintained_toggle_html}
+        <button type="button" class="sort-toggle" id="sortToggle" aria-label="Sort by name">{SORT_ICON_SVG}<span id="sortToggleLabel">Name A–Z</span></button>
+        <div class="view-toggle" id="viewToggle" role="group" aria-label="View">
+          <button type="button" data-view="list" class="current">{LIST_ICON_SVG} List</button>
+          <button type="button" data-view="grid">{GRID_ICON_SVG} Grid</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="table-wrap" id="listView">
-  <table id="directoryTable">
-    <thead>
-      <tr>
-        <th>System</th>
-        <th>Docs</th>
-        <th>Pages</th>
-      </tr>
-    </thead>
-    <tbody>
-      {rows}
-    </tbody>
-  </table>
-  </div>
+    <div class="table-wrap" id="listView">
+    <table id="directoryTable">
+      <thead>
+        <tr>
+          <th>System</th>
+          <th>Docs</th>
+          <th>Pages</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows}
+      </tbody>
+    </table>
+    </div>
 
-  <div class="cards-grid" id="cardsGrid" hidden>
-    {cards}
+    <div class="cards-grid" id="cardsGrid" hidden>
+      {cards}
+    </div>
   </div>
 </div>
 
@@ -791,17 +922,40 @@ def render_page(entries: list[dict]) -> str:
     }});
   }}
 
-  // --- Name filter (plain substring match, separate from the semantic search above) —
-  // applies to both the table and the card gallery below it, since they show the same data.
+  // --- Name filter (plain substring match, separate from the semantic search above)
+  // AND resource-sidebar filter, combined into one applyFilters() — both narrow the
+  // same two views (table rows, cards), and a row/card only stays visible when it
+  // passes BOTH at once, not either independently overwriting the other's decision.
   const tableFilter = document.getElementById("tableFilter");
-  tableFilter.addEventListener("input", () => {{
+  const resourceCheckboxes = Array.from(document.querySelectorAll("[data-resource-filter]"));
+  const clearResourceFilters = document.getElementById("clearResourceFilters");
+
+  function applyFilters() {{
     const query = tableFilter.value.trim().toLowerCase();
-    document.querySelectorAll("#directoryTable tbody tr").forEach(row => {{
-      row.hidden = Boolean(query) && !row.dataset.name.includes(query);
-    }});
-    document.querySelectorAll("#cardsGrid .card").forEach(card => {{
-      card.hidden = Boolean(query) && !card.dataset.name.includes(query);
-    }});
+    // AND across checked types — "must have ALL of these", the more useful
+    // reading for narrowing down to systems matching a specific combination
+    // (e.g. Figma + MCP server) rather than broadening to "any of these".
+    const requiredResources = resourceCheckboxes.filter(cb => cb.checked).map(cb => cb.dataset.resourceFilter);
+    clearResourceFilters.disabled = requiredResources.length === 0;
+
+    function matches(el) {{
+      if (query && !el.dataset.name.includes(query)) return false;
+      if (requiredResources.length) {{
+        const present = new Set((el.dataset.resources || "").split(" ").filter(Boolean));
+        if (!requiredResources.every(key => present.has(key))) return false;
+      }}
+      return true;
+    }}
+
+    document.querySelectorAll("#directoryTable tbody tr").forEach(row => {{ row.hidden = !matches(row); }});
+    document.querySelectorAll("#cardsGrid .card").forEach(card => {{ card.hidden = !matches(card); }});
+  }}
+
+  tableFilter.addEventListener("input", applyFilters);
+  resourceCheckboxes.forEach(cb => cb.addEventListener("change", applyFilters));
+  clearResourceFilters.addEventListener("click", () => {{
+    resourceCheckboxes.forEach(cb => {{ cb.checked = false; }});
+    applyFilters();
   }});
 
   // --- List/Grid view toggle (remembers choice per viewer via localStorage) ---

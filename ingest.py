@@ -2067,7 +2067,7 @@ def _get_browser_config():
     global BROWSER_CONFIG
     if BROWSER_CONFIG is None:
         from crawl4ai import BrowserConfig
-        BROWSER_CONFIG = BrowserConfig(channel="chrome")
+        BROWSER_CONFIG = BrowserConfig(channel="chrome", chrome_channel="chrome")
     return BROWSER_CONFIG
 
 
