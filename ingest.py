@@ -2067,7 +2067,28 @@ def _get_browser_config():
     global BROWSER_CONFIG
     if BROWSER_CONFIG is None:
         from crawl4ai import BrowserConfig
-        BROWSER_CONFIG = BrowserConfig(channel="chrome", chrome_channel="chrome")
+        # crawl4ai's BrowserConfig has two separate, similarly-named params —
+        # `channel` and `chrome_channel` — both defaulting to "chromium". Only
+        # `chrome_channel` is actually read when launching the browser
+        # (browser_manager.py's launch code never looks at `.channel`), so
+        # both must be set here or this silently falls back to launching
+        # Playwright's bundled chromium_headless_shell again.
+        #
+        # use_managed_browser=True: confirmed live that real Chrome DOES
+        # launch fine standalone (`chrome --headless=new --dump-dom` against
+        # example.com worked cleanly), but Playwright's default local launch
+        # path still crashed the browser with SIGTRAP immediately, before
+        # its CDP handshake completed. That default path talks to the
+        # browser over a *pipe* (`--remote-debugging-pipe`), which has a
+        # known history of breaking against newer Chrome builds on Linux.
+        # use_managed_browser makes crawl4ai launch Chrome itself as a
+        # subprocess with a real `--remote-debugging-port` and attach over
+        # CDP via that TCP port instead (browser_manager.py's
+        # `connect_over_cdp` path) — sidestepping the broken pipe transport
+        # entirely.
+        BROWSER_CONFIG = BrowserConfig(
+            channel="chrome", chrome_channel="chrome", use_managed_browser=True
+        )
     return BROWSER_CONFIG
 
 
