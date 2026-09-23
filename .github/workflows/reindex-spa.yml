@@ -146,6 +146,26 @@ jobs:
       - name: Allow unprivileged user namespaces (Ubuntu 24.04 AppArmor default breaks downloaded Chromium)
         run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
+      # Diagnostic: with chrome_channel fixed, crawl4ai now genuinely
+      # launches /opt/google/chrome/chrome (confirmed via a live crash log),
+      # but that real Chrome binary is still exiting with SIGTRAP almost
+      # immediately after launch — before Playwright's CDP handshake over
+      # --remote-debugging-pipe completes. This is a different failure than
+      # the chromium_headless_shell one above. Most likely cause: a missing
+      # shared library that apt's dependency resolution for the Google
+      # Chrome .deb (via `playwright install --with-deps chrome`) didn't
+      # fully cover on ubuntu-latest. Check for that directly, and also try
+      # an actual headless launch outside of Playwright/crawl4ai entirely,
+      # so we get a real stderr message instead of just "SIGTRAP".
+      - name: Diagnose real Chrome launch failure
+        run: |
+          echo "--- chrome --version ---"
+          /opt/google/chrome/chrome --version || true
+          echo "--- ldd missing libs ---"
+          ldd /opt/google/chrome/chrome | grep "not found" || echo "(none missing)"
+          echo "--- direct headless launch attempt ---"
+          /opt/google/chrome/chrome --headless=new --disable-gpu --no-sandbox --disable-dev-shm-usage --dump-dom https://example.com || echo "exit code: $?"
+
       - name: Render this shard's likely_spa systems
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
