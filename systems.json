@@ -1,6 +1,6 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-23T22:14:43+00:00",
+  "generated_at": "2026-09-23T22:58:55+00:00",
   "data_as_of": "2026-09-13T22:41:54+00:00",
   "total_systems": 161,
   "systems": [
@@ -40,16 +40,24 @@
         "https://spectrum.adobe.com/"
       ],
       "detail_url": "/systems/adobe-spectrum",
-      "pages_indexed": 1,
-      "coverage_status": "partial",
+      "pages_indexed": 109,
+      "coverage_status": "full",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-19T11:14:38+00:00",
+      "last_checked": "2026-09-23T22:36:48+00:00",
       "last_modified": "Wed, 28 Feb 2024 21:04:55 GMT",
       "sitemap_last_modified": "2024-02-28T20:57:26.301Z",
       "resources": {
         "icons": [
           "https://spectrum.adobe.com/page/icons/"
+        ],
+        "github": [
+          "https://github.com/adobe-fonts/source-code-pro",
+          "https://github.com/adobe/spectrum-tokens",
+          "https://github.com/adobe-inclusive-design/id-workshop"
+        ],
+        "markdown_docs": [
+          "https://github.com/adobe/spectrum-tokens/blob/main/packages/tokens/README.md"
         ]
       },
       "unverified_resources": {},
@@ -59,12 +67,448 @@
           "Web Components"
         ]
       },
-      "github_meta": null,
+      "github_meta": {
+        "license": "OFL-1.1",
+        "stars": 20452,
+        "last_pushed": "2025-10-28T23:34:52Z"
+      },
       "npm_meta": null,
       "indexed_pages": [
         {
+          "url": "https://spectrum.adobe.com/page/action-bar",
+          "title": "Action bar - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/action-button",
+          "title": "Action button - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/action-group",
+          "title": "Action group - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/alert-banner",
+          "title": "Alert banner - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/alert-dialog",
+          "title": "Alert dialog - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/application-frame",
+          "title": "Application frame - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/area-chart",
+          "title": "Area chart - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/avatar",
+          "title": "Avatar - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/axis",
+          "title": "Axis - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/badge",
+          "title": "Badge - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/bar-chart",
+          "title": "Bar chart - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/bi-directionality",
+          "title": "Bi-directionality - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/big-number",
+          "title": "Big number - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/body",
+          "title": "Body - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/bottom-navigation-android",
+          "title": "Bottom navigation (Android) - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/breadcrumbs",
+          "title": "Breadcrumbs - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/button",
+          "title": "Button - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/button-group",
+          "title": "Button group - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/cards",
+          "title": "Cards - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/checkbox",
+          "title": "Checkbox - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/checkbox-group",
+          "title": "Checkbox group - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/close-button",
+          "title": "Close button - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/coach-mark",
+          "title": "Coach mark - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/code",
+          "title": "Code - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color",
+          "title": "Color (archive) - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-area",
+          "title": "Color area - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-for-data-visualization",
+          "title": "Color for data visualization - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-fundamentals",
+          "title": "Color fundamentals - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-loupe",
+          "title": "Color loupe - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-palette-archive",
+          "title": "Color palette (archive) - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-palette",
+          "title": "Color palette - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-slider",
+          "title": "Color slider - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-system",
+          "title": "Color system - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/color-wheel",
+          "title": "Color wheel - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/combo-box",
+          "title": "Combo box - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/contact-us",
+          "title": "Contact us - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/contextual-help",
+          "title": "Contextual help - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/data-visualization-fundamentals",
+          "title": "Data visualization fundamentals - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/design-tokens",
+          "title": "Design tokens - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/detail",
+          "title": "Detail - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/divider",
+          "title": "Divider - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/donut-chart",
+          "title": "Donut chart - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/field-label",
+          "title": "Field label - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/fonts",
+          "title": "Fonts - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/form-errors",
+          "title": "Form errors - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/grammar-and-mechanics",
+          "title": "Grammar and mechanics - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/headers",
+          "title": "Headers - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/heading",
+          "title": "Heading - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/help-text",
+          "title": "Help text - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/histogram",
+          "title": "Histogram - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/iconography",
+          "title": "Iconography - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/icons",
+          "title": "Icons - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/illustration",
+          "title": "Illustration - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/in-line-alert",
+          "title": "In-line alert - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/in-product-word-list",
+          "title": "In-product word list - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/inclusive-design",
+          "title": "Inclusive design - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/inclusive-ux-writing",
+          "title": "Inclusive UX writing - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/international-design",
+          "title": "International design - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/legend",
+          "title": "Legend - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/line-chart",
+          "title": "Line chart - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/link",
+          "title": "Link - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/menu",
+          "title": "Menu - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/meter",
+          "title": "Meter - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/motion",
+          "title": "Motion - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/object-styles",
+          "title": "Object styles - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/picker",
+          "title": "Picker - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/platform-scale",
+          "title": "Platform scale - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/popover",
+          "title": "Popover - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/principles",
+          "title": "Principles - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/progress-bar",
+          "title": "Progress bar - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/progress-circle",
+          "title": "Progress circle - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/radio-group",
+          "title": "Radio group - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/rating",
+          "title": "Rating - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/responsive-grid",
+          "title": "Responsive grid - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/scatter-plot",
+          "title": "Scatter plot - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/scroll-zoom-bar",
+          "title": "Scroll-zoom bar - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/search-field",
+          "title": "Search field - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/side-navigation",
+          "title": "Side navigation - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/slider",
+          "title": "Slider - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/spacing",
+          "title": "Spacing - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/spectrum-xd-plugin",
+          "title": "Spectrum for Adobe XD plugin - Spectrum"
+        },
+        {
           "url": "https://spectrum.adobe.com/",
-          "title": "Adobe — Spectrum"
+          "title": "Spectrum, Adobe’s design system"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/home",
+          "title": "Spectrum, Adobe’s design system - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/states",
+          "title": "States - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/status-light",
+          "title": "Status light - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/swatch",
+          "title": "Swatch - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/swatch-group",
+          "title": "Swatch group - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/switch",
+          "title": "Switch - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/tab-bar-ios",
+          "title": "Tab bar (iOS) - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/table",
+          "title": "Table - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/tabs",
+          "title": "Tabs - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/text-area",
+          "title": "Text area - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/text-field",
+          "title": "Text field - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/theming",
+          "title": "Theming - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/toast",
+          "title": "Toast - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/tool",
+          "title": "Tool (deprecated) - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/tooltip",
+          "title": "Tooltip - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/tray",
+          "title": "Tray - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/tree-view",
+          "title": "Tree view - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/typography",
+          "title": "Typography - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/ui-kits",
+          "title": "UI kits - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/using-color",
+          "title": "Using color - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/voice-and-tone",
+          "title": "Voice and tone - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/whats-new",
+          "title": "What's new - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/writing-about-people",
+          "title": "Writing about people - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/writing-for-errors",
+          "title": "Writing for errors - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/writing-for-onboarding",
+          "title": "Writing for onboarding - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/writing-for-readability",
+          "title": "Writing for readability - Spectrum"
+        },
+        {
+          "url": "https://spectrum.adobe.com/page/writing-with-visuals",
+          "title": "Writing with visuals - Spectrum"
         }
       ]
     },
@@ -115,26 +559,633 @@
         "https://docs.altinn.studio/"
       ],
       "detail_url": "/systems/altinn-altinn-design-system",
-      "pages_indexed": 1,
+      "pages_indexed": 140,
       "coverage_status": "partial",
-      "hit_max_pages": false,
+      "hit_max_pages": true,
       "likely_spa": false,
-      "last_checked": "2026-09-19T11:14:56+00:00",
-      "last_modified": "Fri, 18 Sep 2026 12:54:11 GMT",
-      "sitemap_last_modified": "2026-09-18T08:45:17+02:00",
-      "resources": {},
-      "unverified_resources": {},
+      "last_checked": "2026-09-23T22:38:43+00:00",
+      "last_modified": "Wed, 23 Sep 2026 12:53:30 GMT",
+      "sitemap_last_modified": "2026-09-23T14:49:18+02:00",
+      "resources": {
+        "github": [
+          "https://github.com/Altinn/app-localtest",
+          "https://github.com/Altinn/app-lib-dotnet",
+          "https://github.com/altinn/docs",
+          "https://github.com/altinn/altinn-studio-docs",
+          "https://github.com/Altinn/app-frontend-react",
+          "https://github.com/altinn/altinn-studio",
+          "https://github.com/altinn/hugo-theme-altinn"
+        ],
+        "figma": [
+          "https://figma.com/community/file/1344307804742953785/altinn-studio-komponenter"
+        ],
+        "markdown_docs": [
+          "https://github.com/Altinn/app-localtest/blob/master/README.md",
+          "https://github.com/Altinn/altinn-studio/blob/main/CONTRIBUTING.md"
+        ],
+        "npm": [
+          "https://npmjs.com/package/altinn-designsystem"
+        ]
+      },
+      "unverified_resources": {
+        "github": [
+          "https://github.com/bpmn-io/bpmn-js-nyan",
+          "https://github.com/prometheus/prometheus",
+          "https://github.com/golang/go",
+          "https://github.com/facebook/react",
+          "https://github.com/docker/docker-ce",
+          "https://github.com/helm/helm",
+          "https://github.com/nginx/nginx",
+          "https://github.com/containous/traefik",
+          "https://github.com/Microsoft/TypeScript",
+          "https://github.com/dotnet/aspnetcore",
+          "https://github.com/Microsoft/vscode",
+          "https://github.com/go-gitea/gitea",
+          "https://github.com/dotnet/runtime",
+          "https://github.com/nodejs/node",
+          "https://github.com/kubernetes/kubernetes",
+          "https://github.com/hashicorp/terraform",
+          "https://github.com/grafana/grafana",
+          "https://github.com/dotnet/csharplang",
+          "https://github.com/digdir/roadmap",
+          "https://github.com/facebook/jest"
+        ]
+      },
       "content_signals": {
         "frameworks": [
           "React"
         ]
       },
-      "github_meta": null,
-      "npm_meta": null,
+      "github_meta": {
+        "license": null,
+        "stars": 11,
+        "last_pushed": "2026-08-20T19:04:50Z"
+      },
+      "npm_meta": {
+        "latest_version": "4.2.0",
+        "last_published": "2022-10-25T12:59:02.085Z",
+        "weekly_downloads": 3413
+      },
       "indexed_pages": [
         {
+          "url": "https://docs.altinn.studio/nb/technology/tools/dotnet-core",
+          "title": ".NET – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/accessmanagement",
+          "title": "Access Management – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/alpine-linux",
+          "title": "Alpine Linux – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/altinn-2",
+          "title": "Altinn 2 – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api",
+          "title": "Altinn 3 API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api",
+          "title": "Altinn 3 API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/solutions/altinn-apps",
+          "title": "Altinn Apps – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/architecture/informationmodel",
+          "title": "Altinn Information model – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/solutions/altinn-platform",
+          "title": "Altinn Platform – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/studio",
+          "title": "Altinn Studio Repository API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8",
+          "title": "Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio",
+          "title": "Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/altinn-studio/v8",
+          "title": "Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps",
+          "title": "App API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps",
+          "title": "App API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/metadata",
+          "title": "App metadata – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/models/app-metadata",
+          "title": "App metadata – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps/metadata",
+          "title": "App metadata – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/app-template",
+          "title": "App Template – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/architecture/capabilities",
+          "title": "Architecture Capabilities – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/architecture/components",
+          "title": "Architecture Components – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/architecture/patterns",
+          "title": "Architecture Patterns – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/architecture/principles",
+          "title": "Architecture Principles – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/architecture/requirements",
+          "title": "Architecture Requirements – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/architecture",
+          "title": "Architecture – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/technology/architecture",
+          "title": "Architecture – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/scenarios/authentication",
+          "title": "Autentisering – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/authentication",
+          "title": "Authentication API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/authorization",
+          "title": "Authorization API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/community/contributing",
+          "title": "Bidra til utviklingen av Altinn – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/contributing",
+          "title": "Bidra – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/bpmn",
+          "title": "BPMN – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/data-elements/user-defined-metadata",
+          "title": "Brukerdefinerte metadata – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/usertest",
+          "title": "Brukertest – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/c-sharp",
+          "title": "C# – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/case",
+          "title": "Casebeskrivelse – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/community",
+          "title": "Community – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/community",
+          "title": "Community – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation/dashboard",
+          "title": "Dashboard i Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps/data-elements",
+          "title": "Data elements – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/storage/data",
+          "title": "Data – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/data-elements",
+          "title": "Data-elementer – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design",
+          "title": "Design and planning – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design",
+          "title": "Design og planlegging – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation/designer",
+          "title": "Designer – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/design-principles",
+          "title": "Designprinsipper – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/community/devops",
+          "title": "DevOps – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/dialogporten",
+          "title": "Dialogporten API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/docker",
+          "title": "Docker – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/broker",
+          "title": "Formidlingstjenesten – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/administration",
+          "title": "Forvaltning – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started",
+          "title": "Getting Started – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/git",
+          "title": "Git – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/gitea",
+          "title": "Gitea – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/go",
+          "title": "Go – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/grafana",
+          "title": "Grafana – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines",
+          "title": "Guidelines – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides",
+          "title": "Guider – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/guides",
+          "title": "Guider – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/helm",
+          "title": "Helm – Altinn"
+        },
+        {
           "url": "https://docs.altinn.studio/",
-          "title": "Altinn — Altinn Design System"
+          "title": "https://docs.altinn.studio/"
+        },
+        {
+          "url": "https://docs.altinn.studio/en",
+          "title": "https://docs.altinn.studio/en"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb",
+          "title": "https://docs.altinn.studio/nb"
+        },
+        {
+          "url": "https://docs.altinn.studio/swagger/altinn-app-v1.json",
+          "title": "https://docs.altinn.studio/swagger/altinn-app-v1.json"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/hugo",
+          "title": "Hugo – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/what-do-you-get",
+          "title": "Hva får du? – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/link-to-app",
+          "title": "Inngang til skjema – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/content",
+          "title": "Innhold i skjema – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/insight",
+          "title": "Innsiktsfase – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/storage/instance-events",
+          "title": "Instance events – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/models/instance",
+          "title": "Instance – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps/instances",
+          "title": "Instances – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/api/instance",
+          "title": "Instans – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/instances",
+          "title": "Instanser – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/storage/instances",
+          "title": "Instanser – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/integration",
+          "title": "Integrasjon – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started/app-dev-course",
+          "title": "Intro Course – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course",
+          "title": "Introkurs – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/jest",
+          "title": "Jest – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started",
+          "title": "Kom i gang – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/consistency",
+          "title": "Konsistens på tvers av tjenester – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/kubernetes",
+          "title": "Kubernetes – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/basic-form",
+          "title": "Lage et enkelt skjema – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/local-dev",
+          "title": "Lokal utvikling – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/solutions",
+          "title": "Løsningene – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/markdown",
+          "title": "Markdown – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/correspondence",
+          "title": "Meldingstjenesten – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/data-elements/metadata",
+          "title": "Metadata – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/models",
+          "title": "Modeller – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul1",
+          "title": "Modul 1: Opprette tjenesten – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul2",
+          "title": "Modul 2: Tilpasse datamodellen – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul3",
+          "title": "Modul 3: Utforme skjemaet – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul5",
+          "title": "Modul 5: Publisere tjenesten – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul6",
+          "title": "Modul 6: Legge til kodelister – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul7",
+          "title": "Modul 7: Legge til dynamikk – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started/navigation",
+          "title": "Navigate Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation",
+          "title": "Navigere Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/nginx",
+          "title": "Nginx – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/node-js",
+          "title": "Node.js – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/community/about",
+          "title": "Om Altinn 3 – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/about",
+          "title": "Om Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/spec",
+          "title": "OpenAPI (swagger) for Apps – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps/spec",
+          "title": "OpenAPI (swagger) for Apps – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/storage/spec",
+          "title": "OpenAPI (swagger) for Storage – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/create-user",
+          "title": "Opprette bruker i Altinn Studio – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/authentication/guides",
+          "title": "Page not found · GitHub Pages"
+        },
+        {
+          "url": "https://docs.altinn.studio/api/apps",
+          "title": "Page not found · GitHub Pages"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/community/presentations",
+          "title": "Presentasjoner og Altinn kaffe – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps/process",
+          "title": "Process – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/profile",
+          "title": "Profil API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/prometheus",
+          "title": "Prometheus – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/process",
+          "title": "Prosess – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/prototype",
+          "title": "Prototype – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/react",
+          "title": "React – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation/repos",
+          "title": "Repos – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/resourceregistry",
+          "title": "Resource Registry API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines",
+          "title": "Retningslinjer – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/community/roadmap",
+          "title": "Roadmap for Altinn – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/scenarios",
+          "title": "Scenarier – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/scenarios",
+          "title": "Scenarios – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/technology/solutions",
+          "title": "Solutions – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/tone-of-voice",
+          "title": "Språk – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps/stateless-data-elements",
+          "title": "Stateless data elements – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/storage",
+          "title": "Storage API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/storage",
+          "title": "Storage API – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/technology",
+          "title": "Technology – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology",
+          "title": "Teknologi – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/terraform",
+          "title": "Terraform – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/wcag",
+          "title": "Tilgjengelighet – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/stateless-data-elements",
+          "title": "Tilstandsløse data – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools",
+          "title": "Tools and frameworks – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/technology/tools",
+          "title": "Tools and frameworks – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/traefik",
+          "title": "Traefik – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/typescript",
+          "title": "TypeScript – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/components",
+          "title": "UI-komponenter – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides",
+          "title": "User guides – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development",
+          "title": "Utvikling – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/en/api/apps/validation",
+          "title": "Validation – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/api/apps/validation",
+          "title": "Validering – Altinn"
+        },
+        {
+          "url": "https://docs.altinn.studio/nb/technology/tools/vs-code",
+          "title": "Visual Studio Code – Altinn"
         }
       ]
     },

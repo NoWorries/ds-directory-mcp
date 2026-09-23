@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T22:14:43+00:00",
+  "generated_at": "2026-09-23T22:58:55+00:00",
   "id": "adobe-spectrum",
   "organization": "Adobe",
   "design_system": "Spectrum",
@@ -9,16 +9,24 @@
     "https://spectrum.adobe.com/"
   ],
   "detail_url": "/systems/adobe-spectrum",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 109,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T11:14:38+00:00",
+  "last_checked": "2026-09-23T22:36:48+00:00",
   "last_modified": "Wed, 28 Feb 2024 21:04:55 GMT",
   "sitemap_last_modified": "2024-02-28T20:57:26.301Z",
   "resources": {
     "icons": [
       "https://spectrum.adobe.com/page/icons/"
+    ],
+    "github": [
+      "https://github.com/adobe-fonts/source-code-pro",
+      "https://github.com/adobe/spectrum-tokens",
+      "https://github.com/adobe-inclusive-design/id-workshop"
+    ],
+    "markdown_docs": [
+      "https://github.com/adobe/spectrum-tokens/blob/main/packages/tokens/README.md"
     ]
   },
   "unverified_resources": {},
@@ -28,12 +36,448 @@
       "Web Components"
     ]
   },
-  "github_meta": null,
+  "github_meta": {
+    "license": "OFL-1.1",
+    "stars": 20452,
+    "last_pushed": "2025-10-28T23:34:52Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://spectrum.adobe.com/page/action-bar",
+      "title": "Action bar - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/action-button",
+      "title": "Action button - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/action-group",
+      "title": "Action group - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/alert-banner",
+      "title": "Alert banner - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/alert-dialog",
+      "title": "Alert dialog - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/application-frame",
+      "title": "Application frame - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/area-chart",
+      "title": "Area chart - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/avatar",
+      "title": "Avatar - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/axis",
+      "title": "Axis - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/badge",
+      "title": "Badge - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/bar-chart",
+      "title": "Bar chart - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/bi-directionality",
+      "title": "Bi-directionality - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/big-number",
+      "title": "Big number - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/body",
+      "title": "Body - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/bottom-navigation-android",
+      "title": "Bottom navigation (Android) - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/breadcrumbs",
+      "title": "Breadcrumbs - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/button",
+      "title": "Button - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/button-group",
+      "title": "Button group - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/cards",
+      "title": "Cards - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/checkbox",
+      "title": "Checkbox - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/checkbox-group",
+      "title": "Checkbox group - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/close-button",
+      "title": "Close button - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/coach-mark",
+      "title": "Coach mark - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/code",
+      "title": "Code - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color",
+      "title": "Color (archive) - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-area",
+      "title": "Color area - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-for-data-visualization",
+      "title": "Color for data visualization - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-fundamentals",
+      "title": "Color fundamentals - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-loupe",
+      "title": "Color loupe - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-palette-archive",
+      "title": "Color palette (archive) - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-palette",
+      "title": "Color palette - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-slider",
+      "title": "Color slider - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-system",
+      "title": "Color system - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/color-wheel",
+      "title": "Color wheel - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/combo-box",
+      "title": "Combo box - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/contact-us",
+      "title": "Contact us - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/contextual-help",
+      "title": "Contextual help - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/data-visualization-fundamentals",
+      "title": "Data visualization fundamentals - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/design-tokens",
+      "title": "Design tokens - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/detail",
+      "title": "Detail - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/divider",
+      "title": "Divider - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/donut-chart",
+      "title": "Donut chart - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/field-label",
+      "title": "Field label - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/fonts",
+      "title": "Fonts - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/form-errors",
+      "title": "Form errors - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/grammar-and-mechanics",
+      "title": "Grammar and mechanics - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/headers",
+      "title": "Headers - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/heading",
+      "title": "Heading - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/help-text",
+      "title": "Help text - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/histogram",
+      "title": "Histogram - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/iconography",
+      "title": "Iconography - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/icons",
+      "title": "Icons - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/illustration",
+      "title": "Illustration - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/in-line-alert",
+      "title": "In-line alert - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/in-product-word-list",
+      "title": "In-product word list - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/inclusive-design",
+      "title": "Inclusive design - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/inclusive-ux-writing",
+      "title": "Inclusive UX writing - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/international-design",
+      "title": "International design - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/legend",
+      "title": "Legend - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/line-chart",
+      "title": "Line chart - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/link",
+      "title": "Link - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/menu",
+      "title": "Menu - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/meter",
+      "title": "Meter - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/motion",
+      "title": "Motion - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/object-styles",
+      "title": "Object styles - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/picker",
+      "title": "Picker - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/platform-scale",
+      "title": "Platform scale - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/popover",
+      "title": "Popover - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/principles",
+      "title": "Principles - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/progress-bar",
+      "title": "Progress bar - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/progress-circle",
+      "title": "Progress circle - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/radio-group",
+      "title": "Radio group - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/rating",
+      "title": "Rating - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/responsive-grid",
+      "title": "Responsive grid - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/scatter-plot",
+      "title": "Scatter plot - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/scroll-zoom-bar",
+      "title": "Scroll-zoom bar - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/search-field",
+      "title": "Search field - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/side-navigation",
+      "title": "Side navigation - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/slider",
+      "title": "Slider - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/spacing",
+      "title": "Spacing - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/spectrum-xd-plugin",
+      "title": "Spectrum for Adobe XD plugin - Spectrum"
+    },
+    {
       "url": "https://spectrum.adobe.com/",
-      "title": "Adobe — Spectrum"
+      "title": "Spectrum, Adobe’s design system"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/home",
+      "title": "Spectrum, Adobe’s design system - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/states",
+      "title": "States - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/status-light",
+      "title": "Status light - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/swatch",
+      "title": "Swatch - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/swatch-group",
+      "title": "Swatch group - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/switch",
+      "title": "Switch - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/tab-bar-ios",
+      "title": "Tab bar (iOS) - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/table",
+      "title": "Table - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/tabs",
+      "title": "Tabs - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/text-area",
+      "title": "Text area - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/text-field",
+      "title": "Text field - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/theming",
+      "title": "Theming - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/toast",
+      "title": "Toast - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/tool",
+      "title": "Tool (deprecated) - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/tooltip",
+      "title": "Tooltip - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/tray",
+      "title": "Tray - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/tree-view",
+      "title": "Tree view - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/typography",
+      "title": "Typography - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/ui-kits",
+      "title": "UI kits - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/using-color",
+      "title": "Using color - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/voice-and-tone",
+      "title": "Voice and tone - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/whats-new",
+      "title": "What's new - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/writing-about-people",
+      "title": "Writing about people - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/writing-for-errors",
+      "title": "Writing for errors - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/writing-for-onboarding",
+      "title": "Writing for onboarding - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/writing-for-readability",
+      "title": "Writing for readability - Spectrum"
+    },
+    {
+      "url": "https://spectrum.adobe.com/page/writing-with-visuals",
+      "title": "Writing with visuals - Spectrum"
     }
   ]
 }

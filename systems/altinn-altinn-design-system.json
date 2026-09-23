@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T22:14:43+00:00",
+  "generated_at": "2026-09-23T22:58:55+00:00",
   "id": "altinn-altinn-design-system",
   "organization": "Altinn",
   "design_system": "Altinn Design System",
@@ -9,26 +9,633 @@
     "https://docs.altinn.studio/"
   ],
   "detail_url": "/systems/altinn-altinn-design-system",
-  "pages_indexed": 1,
+  "pages_indexed": 140,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-19T11:14:56+00:00",
-  "last_modified": "Fri, 18 Sep 2026 12:54:11 GMT",
-  "sitemap_last_modified": "2026-09-18T08:45:17+02:00",
-  "resources": {},
-  "unverified_resources": {},
+  "last_checked": "2026-09-23T22:38:43+00:00",
+  "last_modified": "Wed, 23 Sep 2026 12:53:30 GMT",
+  "sitemap_last_modified": "2026-09-23T14:49:18+02:00",
+  "resources": {
+    "github": [
+      "https://github.com/Altinn/app-localtest",
+      "https://github.com/Altinn/app-lib-dotnet",
+      "https://github.com/altinn/docs",
+      "https://github.com/altinn/altinn-studio-docs",
+      "https://github.com/Altinn/app-frontend-react",
+      "https://github.com/altinn/altinn-studio",
+      "https://github.com/altinn/hugo-theme-altinn"
+    ],
+    "figma": [
+      "https://figma.com/community/file/1344307804742953785/altinn-studio-komponenter"
+    ],
+    "markdown_docs": [
+      "https://github.com/Altinn/app-localtest/blob/master/README.md",
+      "https://github.com/Altinn/altinn-studio/blob/main/CONTRIBUTING.md"
+    ],
+    "npm": [
+      "https://npmjs.com/package/altinn-designsystem"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/bpmn-io/bpmn-js-nyan",
+      "https://github.com/prometheus/prometheus",
+      "https://github.com/golang/go",
+      "https://github.com/facebook/react",
+      "https://github.com/docker/docker-ce",
+      "https://github.com/helm/helm",
+      "https://github.com/nginx/nginx",
+      "https://github.com/containous/traefik",
+      "https://github.com/Microsoft/TypeScript",
+      "https://github.com/dotnet/aspnetcore",
+      "https://github.com/Microsoft/vscode",
+      "https://github.com/go-gitea/gitea",
+      "https://github.com/dotnet/runtime",
+      "https://github.com/nodejs/node",
+      "https://github.com/kubernetes/kubernetes",
+      "https://github.com/hashicorp/terraform",
+      "https://github.com/grafana/grafana",
+      "https://github.com/dotnet/csharplang",
+      "https://github.com/digdir/roadmap",
+      "https://github.com/facebook/jest"
+    ]
+  },
   "content_signals": {
     "frameworks": [
       "React"
     ]
   },
-  "github_meta": null,
-  "npm_meta": null,
+  "github_meta": {
+    "license": null,
+    "stars": 11,
+    "last_pushed": "2026-08-20T19:04:50Z"
+  },
+  "npm_meta": {
+    "latest_version": "4.2.0",
+    "last_published": "2022-10-25T12:59:02.085Z",
+    "weekly_downloads": 3413
+  },
   "indexed_pages": [
     {
+      "url": "https://docs.altinn.studio/nb/technology/tools/dotnet-core",
+      "title": ".NET – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/accessmanagement",
+      "title": "Access Management – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/alpine-linux",
+      "title": "Alpine Linux – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/altinn-2",
+      "title": "Altinn 2 – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api",
+      "title": "Altinn 3 API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api",
+      "title": "Altinn 3 API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/solutions/altinn-apps",
+      "title": "Altinn Apps – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/architecture/informationmodel",
+      "title": "Altinn Information model – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/solutions/altinn-platform",
+      "title": "Altinn Platform – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/studio",
+      "title": "Altinn Studio Repository API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8",
+      "title": "Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio",
+      "title": "Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/altinn-studio/v8",
+      "title": "Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps",
+      "title": "App API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps",
+      "title": "App API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/metadata",
+      "title": "App metadata – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/models/app-metadata",
+      "title": "App metadata – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps/metadata",
+      "title": "App metadata – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/app-template",
+      "title": "App Template – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/architecture/capabilities",
+      "title": "Architecture Capabilities – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/architecture/components",
+      "title": "Architecture Components – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/architecture/patterns",
+      "title": "Architecture Patterns – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/architecture/principles",
+      "title": "Architecture Principles – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/architecture/requirements",
+      "title": "Architecture Requirements – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/architecture",
+      "title": "Architecture – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/technology/architecture",
+      "title": "Architecture – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/scenarios/authentication",
+      "title": "Autentisering – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/authentication",
+      "title": "Authentication API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/authorization",
+      "title": "Authorization API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/community/contributing",
+      "title": "Bidra til utviklingen av Altinn – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/contributing",
+      "title": "Bidra – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/bpmn",
+      "title": "BPMN – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/data-elements/user-defined-metadata",
+      "title": "Brukerdefinerte metadata – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/usertest",
+      "title": "Brukertest – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/c-sharp",
+      "title": "C# – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/case",
+      "title": "Casebeskrivelse – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/community",
+      "title": "Community – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/community",
+      "title": "Community – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation/dashboard",
+      "title": "Dashboard i Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps/data-elements",
+      "title": "Data elements – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/storage/data",
+      "title": "Data – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/data-elements",
+      "title": "Data-elementer – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design",
+      "title": "Design and planning – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design",
+      "title": "Design og planlegging – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation/designer",
+      "title": "Designer – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/design-principles",
+      "title": "Designprinsipper – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/community/devops",
+      "title": "DevOps – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/dialogporten",
+      "title": "Dialogporten API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/docker",
+      "title": "Docker – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/broker",
+      "title": "Formidlingstjenesten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/administration",
+      "title": "Forvaltning – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started",
+      "title": "Getting Started – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/git",
+      "title": "Git – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/gitea",
+      "title": "Gitea – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/go",
+      "title": "Go – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/grafana",
+      "title": "Grafana – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines",
+      "title": "Guidelines – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides",
+      "title": "Guider – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/guides",
+      "title": "Guider – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/helm",
+      "title": "Helm – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/",
-      "title": "Altinn — Altinn Design System"
+      "title": "https://docs.altinn.studio/"
+    },
+    {
+      "url": "https://docs.altinn.studio/en",
+      "title": "https://docs.altinn.studio/en"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb",
+      "title": "https://docs.altinn.studio/nb"
+    },
+    {
+      "url": "https://docs.altinn.studio/swagger/altinn-app-v1.json",
+      "title": "https://docs.altinn.studio/swagger/altinn-app-v1.json"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/hugo",
+      "title": "Hugo – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/what-do-you-get",
+      "title": "Hva får du? – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/link-to-app",
+      "title": "Inngang til skjema – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/content",
+      "title": "Innhold i skjema – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/insight",
+      "title": "Innsiktsfase – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/storage/instance-events",
+      "title": "Instance events – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/models/instance",
+      "title": "Instance – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps/instances",
+      "title": "Instances – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/api/instance",
+      "title": "Instans – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/instances",
+      "title": "Instanser – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/storage/instances",
+      "title": "Instanser – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/integration",
+      "title": "Integrasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started/app-dev-course",
+      "title": "Intro Course – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course",
+      "title": "Introkurs – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/jest",
+      "title": "Jest – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started",
+      "title": "Kom i gang – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/consistency",
+      "title": "Konsistens på tvers av tjenester – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/kubernetes",
+      "title": "Kubernetes – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/basic-form",
+      "title": "Lage et enkelt skjema – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/local-dev",
+      "title": "Lokal utvikling – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/solutions",
+      "title": "Løsningene – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/markdown",
+      "title": "Markdown – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/correspondence",
+      "title": "Meldingstjenesten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/data-elements/metadata",
+      "title": "Metadata – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/models",
+      "title": "Modeller – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul1",
+      "title": "Modul 1: Opprette tjenesten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul2",
+      "title": "Modul 2: Tilpasse datamodellen – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul3",
+      "title": "Modul 3: Utforme skjemaet – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul5",
+      "title": "Modul 5: Publisere tjenesten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul6",
+      "title": "Modul 6: Legge til kodelister – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/modul7",
+      "title": "Modul 7: Legge til dynamikk – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started/navigation",
+      "title": "Navigate Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation",
+      "title": "Navigere Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/nginx",
+      "title": "Nginx – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/node-js",
+      "title": "Node.js – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/community/about",
+      "title": "Om Altinn 3 – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/about",
+      "title": "Om Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/spec",
+      "title": "OpenAPI (swagger) for Apps – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps/spec",
+      "title": "OpenAPI (swagger) for Apps – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/storage/spec",
+      "title": "OpenAPI (swagger) for Storage – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/create-user",
+      "title": "Opprette bruker i Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/authentication/guides",
+      "title": "Page not found · GitHub Pages"
+    },
+    {
+      "url": "https://docs.altinn.studio/api/apps",
+      "title": "Page not found · GitHub Pages"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/community/presentations",
+      "title": "Presentasjoner og Altinn kaffe – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps/process",
+      "title": "Process – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/profile",
+      "title": "Profil API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/prometheus",
+      "title": "Prometheus – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/process",
+      "title": "Prosess – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/prototype",
+      "title": "Prototype – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/react",
+      "title": "React – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/navigation/repos",
+      "title": "Repos – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/resourceregistry",
+      "title": "Resource Registry API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines",
+      "title": "Retningslinjer – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/community/roadmap",
+      "title": "Roadmap for Altinn – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/scenarios",
+      "title": "Scenarier – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/scenarios",
+      "title": "Scenarios – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/technology/solutions",
+      "title": "Solutions – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/tone-of-voice",
+      "title": "Språk – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps/stateless-data-elements",
+      "title": "Stateless data elements – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/storage",
+      "title": "Storage API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/storage",
+      "title": "Storage API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/technology",
+      "title": "Technology – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology",
+      "title": "Teknologi – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/terraform",
+      "title": "Terraform – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/wcag",
+      "title": "Tilgjengelighet – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/stateless-data-elements",
+      "title": "Tilstandsløse data – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools",
+      "title": "Tools and frameworks – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/technology/tools",
+      "title": "Tools and frameworks – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/traefik",
+      "title": "Traefik – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/typescript",
+      "title": "TypeScript – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/components",
+      "title": "UI-komponenter – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides",
+      "title": "User guides – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development",
+      "title": "Utvikling – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/apps/validation",
+      "title": "Validation – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/api/apps/validation",
+      "title": "Validering – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/technology/tools/vs-code",
+      "title": "Visual Studio Code – Altinn"
     }
   ]
 }

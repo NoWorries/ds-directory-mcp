@@ -68,10 +68,16 @@
   design_system: Spectrum
   start_urls:
   - https://spectrum.adobe.com/
-  pages_indexed: 1
+  pages_indexed: 109
   resources:
     icons:
     - https://spectrum.adobe.com/page/icons/
+    github:
+    - https://github.com/adobe-fonts/source-code-pro
+    - https://github.com/adobe/spectrum-tokens
+    - https://github.com/adobe-inclusive-design/id-workshop
+    markdown_docs:
+    - https://github.com/adobe/spectrum-tokens/blob/main/packages/tokens/README.md
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -85,7 +91,7 @@
   last_modified: Wed, 28 Feb 2024 21:04:55 GMT
   sitemap_url: https://spectrum.adobe.com/sitemap.xml
   sitemap_last_modified: '2024-02-28T20:57:26.301Z'
-  last_checked: '2026-09-19T11:14:38+00:00'
+  last_checked: '2026-09-23T22:36:48+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -93,6 +99,10 @@
       Web Components: https://spectrum.adobe.com/
   has_localized_docs: false
   render_mode: spa
+  github_meta:
+    license: OFL-1.1
+    stars: 20452
+    last_pushed: '2025-10-28T23:34:52Z'
 - organization: Alaska Airlines
   design_system: Auro
   start_urls:
@@ -120,26 +130,71 @@
   design_system: Altinn Design System
   start_urls:
   - https://docs.altinn.studio/
-  pages_indexed: 1
-  hit_max_pages: false
+  pages_indexed: 140
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/bpmn-io/bpmn-js-nyan
+    - https://github.com/prometheus/prometheus
+    - https://github.com/golang/go
+    - https://github.com/facebook/react
+    - https://github.com/docker/docker-ce
+    - https://github.com/helm/helm
+    - https://github.com/nginx/nginx
+    - https://github.com/containous/traefik
+    - https://github.com/Microsoft/TypeScript
+    - https://github.com/dotnet/aspnetcore
+    - https://github.com/Microsoft/vscode
+    - https://github.com/go-gitea/gitea
+    - https://github.com/dotnet/runtime
+    - https://github.com/nodejs/node
+    - https://github.com/kubernetes/kubernetes
+    - https://github.com/hashicorp/terraform
+    - https://github.com/grafana/grafana
+    - https://github.com/dotnet/csharplang
+    - https://github.com/digdir/roadmap
+    - https://github.com/facebook/jest
   content_signals:
     frameworks:
     - React
-  etag: '"6aad3473-f3"'
-  last_modified: Fri, 18 Sep 2026 12:54:11 GMT
+  etag: '"6ab3cbca-f3"'
+  last_modified: Wed, 23 Sep 2026 12:53:30 GMT
   sitemap_url: https://docs.altinn.studio/sitemap.xml
-  sitemap_last_modified: '2026-09-18T08:45:17+02:00'
-  last_checked: '2026-09-19T11:14:56+00:00'
+  sitemap_last_modified: '2026-09-23T14:49:18+02:00'
+  last_checked: '2026-09-23T22:38:43+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
       React: https://docs.altinn.studio/
   has_localized_docs: false
   render_mode: spa
+  resources:
+    github:
+    - https://github.com/Altinn/app-localtest
+    - https://github.com/Altinn/app-lib-dotnet
+    - https://github.com/altinn/docs
+    - https://github.com/altinn/altinn-studio-docs
+    - https://github.com/Altinn/app-frontend-react
+    - https://github.com/altinn/altinn-studio
+    - https://github.com/altinn/hugo-theme-altinn
+    figma:
+    - https://figma.com/community/file/1344307804742953785/altinn-studio-komponenter
+    markdown_docs:
+    - https://github.com/Altinn/app-localtest/blob/master/README.md
+    - https://github.com/Altinn/altinn-studio/blob/main/CONTRIBUTING.md
+    npm:
+    - https://npmjs.com/package/altinn-designsystem
+  github_meta:
+    license: null
+    stars: 11
+    last_pushed: '2026-08-20T19:04:50Z'
+  npm_meta:
+    latest_version: 4.2.0
+    last_published: '2022-10-25T12:59:02.085Z'
+    weekly_downloads: 3413
 - organization: Ant Financial
   design_system: Ant Design
   start_urls:
@@ -203,14 +258,14 @@
   - https://bloom.appearhere.co.uk/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: rendered fetch returned 0 pages
-  consecutive_crawl_failures: 1
+  crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"6036427a-46d"
   last_modified: Wed, 24 Feb 2021 12:11:38 GMT
-  last_checked: '2026-09-19T11:15:02+00:00'
+  last_checked: '2026-09-23T22:39:27+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
