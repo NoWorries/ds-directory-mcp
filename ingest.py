@@ -2072,23 +2072,35 @@ def _get_browser_config():
         # `chrome_channel` is actually read when launching the browser
         # (browser_manager.py's launch code never looks at `.channel`), so
         # both must be set here or this silently falls back to launching
-        # Playwright's bundled chromium_headless_shell again.
+        # Playwright's bundled chromium_headless_shell again. (Note: this
+        # only matters if CDP_URL below isn't set — see next paragraph.)
         #
-        # use_managed_browser=True: confirmed live that real Chrome DOES
-        # launch fine standalone (`chrome --headless=new --dump-dom` against
-        # example.com worked cleanly), but Playwright's default local launch
-        # path still crashed the browser with SIGTRAP immediately, before
-        # its CDP handshake completed. That default path talks to the
-        # browser over a *pipe* (`--remote-debugging-pipe`), which has a
-        # known history of breaking against newer Chrome builds on Linux.
-        # use_managed_browser makes crawl4ai launch Chrome itself as a
-        # subprocess with a real `--remote-debugging-port` and attach over
-        # CDP via that TCP port instead (browser_manager.py's
-        # `connect_over_cdp` path) — sidestepping the broken pipe transport
-        # entirely.
-        BROWSER_CONFIG = BrowserConfig(
-            channel="chrome", chrome_channel="chrome", use_managed_browser=True
-        )
+        # CDP_URL: confirmed live that real Chrome DOES launch and render
+        # fine completely standalone (`chrome --headless=new --dump-dom`
+        # against example.com worked cleanly). Two different crawl4ai launch
+        # paths still failed to actually use it, though:
+        #   - the default local-launch path (bare chrome_channel="chrome")
+        #     talks to the browser over a *pipe* (--remote-debugging-pipe),
+        #     which crashed the browser with SIGTRAP immediately, before the
+        #     CDP handshake completed — a known class of breakage on Linux
+        #     against newer Chrome builds.
+        #   - use_managed_browser=True's ManagedBrowser._get_browser_path()
+        #     ignores chrome_channel/channel entirely (it always resolves
+        #     Playwright's own bundled chromium via get_chromium_path()), so
+        #     it silently launched the exact same crashing binary again.
+        # The actual escape hatch: BrowserConfig(cdp_url=...). When cdp_url
+        # is set, ManagedBrowser.start() returns it directly without
+        # launching anything itself — crawl4ai just attaches over CDP via
+        # that URL. reindex-spa.yml now launches real Chrome itself, as its
+        # own long-lived background process with a real
+        # --remote-debugging-port, and passes that port here via the
+        # CDP_URL env var — sidestepping both broken launch paths.
+        import os
+        cdp_url = os.environ.get("CDP_URL")
+        if cdp_url:
+            BROWSER_CONFIG = BrowserConfig(cdp_url=cdp_url)
+        else:
+            BROWSER_CONFIG = BrowserConfig(channel="chrome", chrome_channel="chrome")
     return BROWSER_CONFIG
 
 

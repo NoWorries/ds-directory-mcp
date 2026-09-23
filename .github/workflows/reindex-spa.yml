@@ -166,13 +166,48 @@ jobs:
           echo "--- direct headless launch attempt ---"
           /opt/google/chrome/chrome --headless=new --disable-gpu --no-sandbox --disable-dev-shm-usage --dump-dom https://example.com || echo "exit code: $?"
 
+      # Confirmed live: real Chrome launches and renders fine completely
+      # standalone (the diagnostic step above). What's actually broken is
+      # crawl4ai's own launch paths — Playwright's default local launch
+      # talks to the browser over a *pipe* that crashes real Chrome with
+      # SIGTRAP before the CDP handshake completes, and crawl4ai's
+      # use_managed_browser mode ignores chrome_channel entirely and always
+      # launches Playwright's own bundled (crashing) chromium instead. So
+      # launch real Chrome ourselves here, as a long-lived background
+      # process with a real TCP CDP port, and hand crawl4ai that URL via
+      # CDP_URL — see ingest.py's _get_browser_config().
+      - name: Launch real Chrome as a background process for crawl4ai to attach to
+        run: |
+          mkdir -p /tmp/chrome-profile
+          /opt/google/chrome/chrome \
+            --headless=new --disable-gpu --disable-gpu-compositing --disable-software-rasterizer \
+            --no-sandbox --disable-dev-shm-usage --no-first-run --no-default-browser-check \
+            --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-profile \
+            > /tmp/chrome.log 2>&1 &
+          echo $! > /tmp/chrome.pid
+          for i in $(seq 1 20); do
+            if curl -fsS http://localhost:9222/json/version >/dev/null 2>&1; then
+              echo "Chrome CDP endpoint is up after ${i} attempt(s)"
+              exit 0
+            fi
+            sleep 0.5
+          done
+          echo "::error::Chrome's CDP endpoint never came up — see /tmp/chrome.log"
+          cat /tmp/chrome.log
+          exit 1
+
       - name: Render this shard's likely_spa systems
         env:
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          CDP_URL: http://localhost:9222
         run: |
           rm -f shard_touched.json
           python ingest.py --spa --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
+
+      - name: Stop the background Chrome process
+        if: always()
+        run: kill "$(cat /tmp/chrome.pid)" 2>/dev/null || true
 
       # shard_touched.json (see ingest.mark_shard_touched) tells
       # merge_shards.py which names to take from this shard specifically.
