@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T08:40:08+00:00",
+  "generated_at": "2026-09-24T12:24:21+00:00",
   "id": "arbetsf-rmedlingen-design-system",
   "organization": "Arbetsförmedlingen",
   "design_system": "Design system",
@@ -10,11 +10,11 @@
   ],
   "detail_url": "/systems/arbetsf-rmedlingen-design-system",
   "pages_indexed": 155,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T04:42:03+00:00",
-  "last_modified": "Wed, 09 Sep 2026 08:48:57 GMT",
+  "last_checked": "2026-09-24T11:58:57+00:00",
+  "last_modified": "Thu, 24 Sep 2026 09:56:58 GMT",
   "sitemap_last_modified": "2026-06-05",
   "resources": {
     "figma": [

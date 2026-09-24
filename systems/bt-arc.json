@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T08:40:08+00:00",
+  "generated_at": "2026-09-24T12:24:21+00:00",
   "id": "bt-arc",
   "organization": "BT",
   "design_system": "Arc",
@@ -10,10 +10,10 @@
   ],
   "detail_url": "/systems/bt-arc",
   "pages_indexed": 299,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T05:28:42+00:00",
+  "last_checked": "2026-09-24T12:00:06+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {

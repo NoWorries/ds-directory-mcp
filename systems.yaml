@@ -266,9 +266,9 @@
   start_urls:
   - https://developer.apple.com/design/human-interface-guidelines/
   pages_indexed: 173
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources:
     github:
@@ -279,7 +279,7 @@
     - SwiftUI
   etag: '"44ff-65c229b1bbf22"'
   last_modified: Wed, 23 Sep 2026 08:52:41 GMT
-  last_checked: '2026-09-24T04:44:07+00:00'
+  last_checked: '2026-09-24T11:58:29+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://developer.apple.com/design/human-interface-guidelines/designing-for-ios
@@ -301,9 +301,9 @@
   start_urls:
   - https://designsystem.arbetsformedlingen.se/
   pages_indexed: 155
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals:
@@ -311,11 +311,11 @@
     - React
     - Angular
     accessibility_conformance: WCAG 2.2 AA
-  etag: '"2a524b8751e867273ea9b2f172fa2981eaa72b532883542380875c5ab2ca5785"'
-  last_modified: Wed, 09 Sep 2026 08:48:57 GMT
+  etag: '"9250c6d266451eb4f990a6558b077c22d14f51133e11dc40ed01c3d078432580"'
+  last_modified: Thu, 24 Sep 2026 09:56:58 GMT
   sitemap_url: https://designsystem.arbetsformedlingen.se/sitemap.xml
   sitemap_last_modified: '2026-06-05'
-  last_checked: '2026-09-24T04:42:03+00:00'
+  last_checked: '2026-09-24T11:58:57+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -900,19 +900,19 @@
   start_urls:
   - https://design.brainly.com/
   pages_indexed: 299
-  hit_max_pages: true
-  crawl_error: ''
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
   likely_spa: false
   unverified_resources: {}
   content_signals:
     dark_mode: true
     frameworks:
     - Web Components
-  etag: W/"675eab7699c2742f7a69ce46c5464e71"
+  etag: W/"d3c22099eb3e1492b8a363127c33fe58"
   sitemap_url: https://design.brainly.com/sitemap.xml
-  last_checked: '2026-09-24T05:10:31+00:00'
+  last_checked: '2026-09-24T11:58:36+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 0
+  consecutive_crawl_failures: 1
   content_signal_sources:
     dark_mode: https://design.brainly.com/8adfd5f36/p/11dfa2-mockups--devices
     frameworks:
@@ -1047,9 +1047,9 @@
   start_urls:
   - https://arc.bt.com/
   pages_indexed: 299
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals:
@@ -1058,9 +1058,9 @@
     accessibility_conformance: WCAG 2.1 AA
     frameworks:
     - React
-  etag: W/"cd55cd2155a205e5e88dc819ce0f0bfa"
+  etag: W/"94e28bbd2f5fbb31a1b8cfa4bf6abc45"
   sitemap_url: https://arc.bt.com/sitemap.xml
-  last_checked: '2026-09-24T05:28:42+00:00'
+  last_checked: '2026-09-24T12:00:06+00:00'
   likely_unmaintained: false
   content_signal_sources:
     exemplars: https://arc.bt.com/880cad2bb/p/923a75-how-we-write-content
@@ -2768,9 +2768,9 @@
   start_urls:
   - https://hds.hel.fi/
   pages_indexed: 297
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources:
     npm:
@@ -2786,7 +2786,7 @@
     exemplars: true
   etag: W/"6a5a0b39-a3c78"
   last_modified: Fri, 17 Jul 2026 11:00:09 GMT
-  last_checked: '2026-09-24T06:21:41+00:00'
+  last_checked: '2026-09-24T12:00:08+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://hds.hel.fi/components/footer
@@ -2924,9 +2924,9 @@
   start_urls:
   - https://uniform.hudl.com/
   pages_indexed: 249
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources:
     github:
@@ -2944,7 +2944,7 @@
   etag: W/"6659ce48-5ae7a"
   last_modified: Fri, 31 May 2024 13:19:04 GMT
   sitemap_url: https://uniform.hudl.com/sitemap.xml
-  last_checked: '2026-09-24T06:39:22+00:00'
+  last_checked: '2026-09-24T12:07:44+00:00'
   likely_unmaintained: false
   content_signal_sources:
     validation_loop: https://uniform.hudl.com/components/link/code
@@ -5070,15 +5070,15 @@
   start_urls:
   - https://design-system.pluralsight.com/
   pages_indexed: 150
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: W/"6e65d715d28ff1e05ee4a88d471ef971"
+  etag: W/"09381b9337f28b62afc59492076dcbe6"
   sitemap_url: https://design-system.pluralsight.com/sitemap.xml
-  last_checked: '2026-09-24T07:33:16+00:00'
+  last_checked: '2026-09-24T12:09:12+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -5501,9 +5501,9 @@
   start_urls:
   - https://www.lightningdesignsystem.com/
   pages_indexed: 300
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources:
     github:
@@ -5512,9 +5512,9 @@
     dark_mode: true
     frameworks:
     - Web Components
-  etag: W/"b2a856151a41b3cee6f73fa299529145"
+  etag: W/"c6a1d1a989250b0462a460d358d73f73"
   sitemap_url: https://www.lightningdesignsystem.com/sitemap.xml
-  last_checked: '2026-09-24T08:05:17+00:00'
+  last_checked: '2026-09-24T12:11:47+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://lightningdesignsystem.com/
@@ -6865,9 +6865,9 @@
     - https://github.com/vmware-clarity/ng-clarity
     markdown_docs:
     - https://github.com/vmware-clarity/ng-clarity/blob/main/docs/CONTRIBUTING.md
-  hit_max_pages: true
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources:
     github:
@@ -6877,9 +6877,9 @@
     - Angular
     dark_mode: true
     tokens_format: DTCG
-  etag: '"e9ca14e36b1a81e41d30b1be853cf637-ssl-df"'
+  etag: '"d3f2f7029badb91ab6dea4afe1a9237a-ssl-df"'
   sitemap_url: https://clarity.design/sitemap.xml
-  last_checked: '2026-09-24T08:28:04+00:00'
+  last_checked: '2026-09-24T12:11:55+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:

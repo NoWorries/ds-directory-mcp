@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T08:40:08+00:00",
+  "generated_at": "2026-09-24T12:24:21+00:00",
   "id": "brainly-design",
   "organization": "Brainly",
   "design_system": "Design",
@@ -10,10 +10,10 @@
   ],
   "detail_url": "/systems/brainly-design",
   "pages_indexed": 299,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T05:10:31+00:00",
+  "last_checked": "2026-09-24T11:58:36+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {

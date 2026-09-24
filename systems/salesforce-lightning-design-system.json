@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T08:40:08+00:00",
+  "generated_at": "2026-09-24T12:24:21+00:00",
   "id": "salesforce-lightning-design-system",
   "organization": "Salesforce",
   "design_system": "Lightning Design System",
@@ -10,10 +10,10 @@
   ],
   "detail_url": "/systems/salesforce-lightning-design-system",
   "pages_indexed": 300,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T08:05:17+00:00",
+  "last_checked": "2026-09-24T12:11:47+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
