@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:49:03+00:00",
+  "generated_at": "2026-09-24T23:54:28+00:00",
   "id": "skyscanner-backpack",
   "organization": "Skyscanner",
   "design_system": "Backpack",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T07:50:08+00:00",
+  "last_checked": "2026-09-24T22:53:44+00:00",
   "last_modified": "Wed, 08 Feb 2023 14:19:36 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -32,7 +32,23 @@
       "title": "Welcome to Backpack"
     },
     {
-      "url": "https://backpack.github.io/latest/foundations/layout/layout-primitives/overview-tVO0yQeg",
+      "url": "https://backpack.github.io/latest/getting-started/about-backpack-pN209Wjo",
+      "title": "Welcome to Backpack"
+    },
+    {
+      "url": "https://backpack.github.io/latest/contributing/contributing/overview-opXFfOYG",
+      "title": "Welcome to Backpack"
+    },
+    {
+      "url": "https://backpack.github.io/latest/accessibility/overview-8grGx1o6",
+      "title": "Welcome to Backpack"
+    },
+    {
+      "url": "https://backpack.github.io/latest/foundations/icons/overview-GqEdq0zt",
+      "title": "Welcome to Backpack"
+    },
+    {
+      "url": "https://backpack.github.io/latest/localisation/localisation/overview-Fc0joAmx",
       "title": "Welcome to Backpack"
     },
     {
@@ -40,7 +56,7 @@
       "title": "Welcome to Backpack"
     },
     {
-      "url": "https://backpack.github.io/latest/getting-started/about-backpack-pN209Wjo",
+      "url": "https://backpack.github.io/latest/foundations/layout/layout-primitives/overview-tVO0yQeg",
       "title": "Welcome to Backpack"
     },
     {
@@ -48,7 +64,11 @@
       "title": "Welcome to Backpack"
     },
     {
-      "url": "https://backpack.github.io/latest/contributing/contributing/overview-opXFfOYG",
+      "url": "https://backpack.github.io/latest/brand/brand-world-L8TuGQnt",
+      "title": "Welcome to Backpack"
+    },
+    {
+      "url": "https://backpack.github.io/latest/foundations/animation/overview-DTJrpm76",
       "title": "Welcome to Backpack"
     },
     {
@@ -57,26 +77,6 @@
     },
     {
       "url": "https://backpack.github.io/latest/components/accordion/web-sEshz9Z5",
-      "title": "Welcome to Backpack"
-    },
-    {
-      "url": "https://backpack.github.io/latest/brand/brand-world-L8TuGQnt",
-      "title": "Welcome to Backpack"
-    },
-    {
-      "url": "https://backpack.github.io/latest/accessibility/overview-8grGx1o6",
-      "title": "Welcome to Backpack"
-    },
-    {
-      "url": "https://backpack.github.io/latest/foundations/animation/overview-DTJrpm76",
-      "title": "Welcome to Backpack"
-    },
-    {
-      "url": "https://backpack.github.io/latest/localisation/localisation/overview-Fc0joAmx",
-      "title": "Welcome to Backpack"
-    },
-    {
-      "url": "https://backpack.github.io/latest/foundations/icons/overview-GqEdq0zt",
       "title": "Welcome to Backpack"
     }
   ]

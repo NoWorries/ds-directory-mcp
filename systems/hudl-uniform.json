@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:49:03+00:00",
+  "generated_at": "2026-09-24T23:54:28+00:00",
   "id": "hudl-uniform",
   "organization": "Hudl",
   "design_system": "Uniform",
@@ -10,10 +10,10 @@
   ],
   "detail_url": "/systems/hudl-uniform",
   "pages_indexed": 249,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T12:07:44+00:00",
+  "last_checked": "2026-09-24T21:10:26+00:00",
   "last_modified": "Fri, 31 May 2024 13:19:04 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -78,9 +78,7 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/nickcolley/jest-axe",
-      "https://github.com/ReactTooltip/react-tooltip",
-      "https://github.com/YozhikM/stylelint-a11y"
+      "https://github.com/ReactTooltip/react-tooltip"
     ],
     "npm": [
       "https://npmjs.com/package/stylelint-a11y"
@@ -89,8 +87,7 @@
   "content_signals": {
     "validation_loop": true,
     "frameworks": [
-      "React",
-      "Web Components"
+      "React"
     ],
     "accessibility_conformance": "WCAG 2.1 AAA"
   },
@@ -114,19 +111,19 @@
       "title": "Accessibility | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/action-bar/code",
-      "title": "Action Bar | Hudl Uniform"
-    },
-    {
       "url": "https://uniform.hudl.com/components/action-bar/design",
       "title": "Action Bar | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/action-list/code",
-      "title": "Action List | Hudl Uniform"
+      "url": "https://uniform.hudl.com/components/action-bar/code",
+      "title": "Action Bar | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/components/action-list/design",
+      "title": "Action List | Hudl Uniform"
+    },
+    {
+      "url": "https://uniform.hudl.com/components/action-list/code",
       "title": "Action List | Hudl Uniform"
     },
     {
@@ -138,19 +135,23 @@
       "title": "Alert | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/words/content-elements/labels-non-label-text",
+      "url": "https://uniform.hudl.com/words/writing-guidelines/your-my-neutral",
+      "title": "All Hudl Homepage - Light Environment"
+    },
+    {
+      "url": "https://uniform.hudl.com/words/writing-guidelines/punctuation",
+      "title": "All Hudl Homepage - Light Environment"
+    },
+    {
+      "url": "https://uniform.hudl.com/words/writing-guidelines/headings-lists",
+      "title": "All Hudl Homepage - Light Environment"
+    },
+    {
+      "url": "https://uniform.hudl.com/words/writing-guidelines/voice-tone",
       "title": "All Hudl Homepage - Light Environment"
     },
     {
       "url": "https://uniform.hudl.com/words/content-elements/date-time",
-      "title": "All Hudl Homepage - Light Environment"
-    },
-    {
-      "url": "https://uniform.hudl.com/words/content-elements/action-words",
-      "title": "All Hudl Homepage - Light Environment"
-    },
-    {
-      "url": "https://uniform.hudl.com/words/content-elements/team-details",
       "title": "All Hudl Homepage - Light Environment"
     },
     {
@@ -162,19 +163,11 @@
       "title": "All Hudl Homepage - Light Environment"
     },
     {
-      "url": "https://uniform.hudl.com/words/writing-guidelines/punctuation",
+      "url": "https://uniform.hudl.com/words/content-elements/labels-non-label-text",
       "title": "All Hudl Homepage - Light Environment"
     },
     {
-      "url": "https://uniform.hudl.com/words/writing-guidelines/voice-tone",
-      "title": "All Hudl Homepage - Light Environment"
-    },
-    {
-      "url": "https://uniform.hudl.com/words/writing-guidelines/headings-lists",
-      "title": "All Hudl Homepage - Light Environment"
-    },
-    {
-      "url": "https://uniform.hudl.com/words/writing-guidelines/your-my-neutral",
+      "url": "https://uniform.hudl.com/words/content-elements/team-details",
       "title": "All Hudl Homepage - Light Environment"
     },
     {
@@ -194,19 +187,19 @@
       "title": "August 2023 | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/avatars/code",
-      "title": "Avatars Overview | Hudl Uniform"
-    },
-    {
       "url": "https://uniform.hudl.com/components/avatars/design",
       "title": "Avatars Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/modules/bar-list/code",
-      "title": "Bar List | Hudl Uniform"
+      "url": "https://uniform.hudl.com/components/avatars/code",
+      "title": "Avatars Overview | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/components/modules/bar-list/design",
+      "title": "Bar List | Hudl Uniform"
+    },
+    {
+      "url": "https://uniform.hudl.com/components/modules/bar-list/code",
       "title": "Bar List | Hudl Uniform"
     },
     {
@@ -242,11 +235,11 @@
       "title": "Card Group | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/card/code",
+      "url": "https://uniform.hudl.com/components/card/design",
       "title": "Card | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/card/design",
+      "url": "https://uniform.hudl.com/components/card/code",
       "title": "Card | Hudl Uniform"
     },
     {
@@ -294,11 +287,11 @@
       "title": "Colors | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/guidelines/colors/design",
+      "url": "https://uniform.hudl.com/resources/code-variables/colors",
       "title": "Colors | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/resources/code-variables/colors",
+      "url": "https://uniform.hudl.com/guidelines/colors/design",
       "title": "Colors | Hudl Uniform"
     },
     {
@@ -306,11 +299,11 @@
       "title": "Components | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/code",
+      "url": "https://uniform.hudl.com/components/design",
       "title": "Components | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/design",
+      "url": "https://uniform.hudl.com/components/code",
       "title": "Components | Hudl Uniform"
     },
     {
@@ -350,11 +343,11 @@
       "title": "Data Table | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/data-visualization/code",
+      "url": "https://uniform.hudl.com/components/data-visualization/design",
       "title": "Data Visualization Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/data-visualization/design",
+      "url": "https://uniform.hudl.com/components/data-visualization/code",
       "title": "Data Visualization Overview | Hudl Uniform"
     },
     {
@@ -362,11 +355,11 @@
       "title": "Design Assets | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/dialogs/code",
+      "url": "https://uniform.hudl.com/components/dialogs/design",
       "title": "Dialogs Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/dialogs/design",
+      "url": "https://uniform.hudl.com/components/dialogs/code",
       "title": "Dialogs Overview | Hudl Uniform"
     },
     {
@@ -386,11 +379,11 @@
       "title": "Division | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/effects/code",
+      "url": "https://uniform.hudl.com/components/icons/effects/design",
       "title": "Effects | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/effects/design",
+      "url": "https://uniform.hudl.com/components/icons/effects/code",
       "title": "Effects | Hudl Uniform"
     },
     {
@@ -458,11 +451,11 @@
       "title": "Form Modifier | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/forms/code",
+      "url": "https://uniform.hudl.com/components/forms/design",
       "title": "Forms Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/forms/design",
+      "url": "https://uniform.hudl.com/components/forms/code",
       "title": "Forms Overview | Hudl Uniform"
     },
     {
@@ -470,15 +463,15 @@
       "title": "Forms | Hudl Uniform"
     },
     {
+      "url": "https://uniform.hudl.com/get-started/design",
+      "title": "Get Started | Hudl Uniform"
+    },
+    {
       "url": "https://uniform.hudl.com/get-started",
       "title": "Get Started | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/get-started/code",
-      "title": "Get Started | Hudl Uniform"
-    },
-    {
-      "url": "https://uniform.hudl.com/get-started/design",
       "title": "Get Started | Hudl Uniform"
     },
     {
@@ -494,11 +487,11 @@
       "title": "Guidelines | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/guidelines/code",
+      "url": "https://uniform.hudl.com/guidelines/design",
       "title": "Guidelines | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/guidelines/design",
+      "url": "https://uniform.hudl.com/guidelines/code",
       "title": "Guidelines | Hudl Uniform"
     },
     {
@@ -518,6 +511,10 @@
       "title": "Histogram | Hudl Uniform"
     },
     {
+      "url": "https://uniform.hudl.com/words/content-elements/action-words",
+      "title": "Hudl Portal"
+    },
+    {
       "url": "https://uniform.hudl.com/",
       "title": "Hudl Uniform"
     },
@@ -526,15 +523,15 @@
       "title": "Hudl Uniform"
     },
     {
+      "url": "https://uniform.hudl.com/components/icons/features-and-navigation/design",
+      "title": "Hudl Uniform"
+    },
+    {
       "url": "https://uniform.hudl.com/components/icons/overview/code",
       "title": "Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/component/link/design",
-      "title": "Hudl Uniform"
-    },
-    {
-      "url": "https://uniform.hudl.com/components/icons/features-and-navigation/design",
       "title": "Hudl Uniform"
     },
     {
@@ -554,11 +551,11 @@
       "title": "Iconography | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/code",
+      "url": "https://uniform.hudl.com/components/icons/design",
       "title": "Icons Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/design",
+      "url": "https://uniform.hudl.com/components/icons/code",
       "title": "Icons Overview | Hudl Uniform"
     },
     {
@@ -570,11 +567,11 @@
       "title": "Identity | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/forms/input/code",
+      "url": "https://uniform.hudl.com/components/forms/input/design",
       "title": "Input | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/forms/input/design",
+      "url": "https://uniform.hudl.com/components/forms/input/code",
       "title": "Input | Hudl Uniform"
     },
     {
@@ -602,11 +599,11 @@
       "title": "June 2023 | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/keyboard-shortcut/code",
+      "url": "https://uniform.hudl.com/components/keyboard-shortcut/design",
       "title": "Keyboard Shortcut | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/keyboard-shortcut/design",
+      "url": "https://uniform.hudl.com/components/keyboard-shortcut/code",
       "title": "Keyboard Shortcut | Hudl Uniform"
     },
     {
@@ -642,11 +639,11 @@
       "title": "Level | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/link/code",
+      "url": "https://uniform.hudl.com/components/link/design",
       "title": "Link | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/link/design",
+      "url": "https://uniform.hudl.com/components/link/code",
       "title": "Link | Hudl Uniform"
     },
     {
@@ -666,11 +663,11 @@
       "title": "May 2023 | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/media-playback/code",
+      "url": "https://uniform.hudl.com/components/icons/media-playback/design",
       "title": "Media Playback | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/media-playback/design",
+      "url": "https://uniform.hudl.com/components/icons/media-playback/code",
       "title": "Media Playback | Hudl Uniform"
     },
     {
@@ -694,19 +691,19 @@
       "title": "Modal | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/modules/code",
-      "title": "Modules Overview | Hudl Uniform"
-    },
-    {
       "url": "https://uniform.hudl.com/components/modules/design",
       "title": "Modules Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/notifications/note/code",
-      "title": "Note | Hudl Uniform"
+      "url": "https://uniform.hudl.com/components/modules/code",
+      "title": "Modules Overview | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/components/notifications/note/design",
+      "title": "Note | Hudl Uniform"
+    },
+    {
+      "url": "https://uniform.hudl.com/components/notifications/note/code",
       "title": "Note | Hudl Uniform"
     },
     {
@@ -718,19 +715,19 @@
       "title": "Notice | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/notifications/code",
-      "title": "Notifications Overview | Hudl Uniform"
-    },
-    {
       "url": "https://uniform.hudl.com/components/notifications/design",
       "title": "Notifications Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/modules/number-list/code",
-      "title": "Number List | Hudl Uniform"
+      "url": "https://uniform.hudl.com/components/notifications/code",
+      "title": "Notifications Overview | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/components/modules/number-list/design",
+      "title": "Number List | Hudl Uniform"
+    },
+    {
+      "url": "https://uniform.hudl.com/components/modules/number-list/code",
       "title": "Number List | Hudl Uniform"
     },
     {
@@ -750,7 +747,7 @@
       "title": "Overlay | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/buttons/code",
+      "url": "https://uniform.hudl.com/words/writing-guidelines",
       "title": "Overview | Hudl Uniform"
     },
     {
@@ -758,7 +755,7 @@
       "title": "Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/words/writing-guidelines",
+      "url": "https://uniform.hudl.com/components/buttons/code",
       "title": "Overview | Hudl Uniform"
     },
     {
@@ -814,11 +811,11 @@
       "title": "Removed Variables | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/guidelines/accessibility/resources/code",
+      "url": "https://uniform.hudl.com/resources",
       "title": "Resources | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/resources",
+      "url": "https://uniform.hudl.com/guidelines/accessibility/resources/code",
       "title": "Resources | Hudl Uniform"
     },
     {
@@ -834,19 +831,19 @@
       "title": "Search Input | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/modules/segmented-bar/code",
-      "title": "Segmented Bar | Hudl Uniform"
-    },
-    {
       "url": "https://uniform.hudl.com/components/modules/segmented-bar/design",
       "title": "Segmented Bar | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/select-mark/code",
-      "title": "Select Mark | Hudl Uniform"
+      "url": "https://uniform.hudl.com/components/modules/segmented-bar/code",
+      "title": "Segmented Bar | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/components/select-mark/design",
+      "title": "Select Mark | Hudl Uniform"
+    },
+    {
+      "url": "https://uniform.hudl.com/components/select-mark/code",
       "title": "Select Mark | Hudl Uniform"
     },
     {
@@ -858,20 +855,16 @@
       "title": "Select | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/guidelines/layering/shadows/code",
+      "url": "https://uniform.hudl.com/resources/code-variables/shadows",
       "title": "Shadows | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/resources/code-variables/shadows",
+      "url": "https://uniform.hudl.com/guidelines/layering/shadows/code",
       "title": "Shadows | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/guidelines/layering/shadows/design",
       "title": "Shadows | Hudl Uniform"
-    },
-    {
-      "url": "https://uniform.hudl.com/guidelines/layout/space/code",
-      "title": "Space | Hudl Uniform"
     },
     {
       "url": "https://uniform.hudl.com/resources/code-variables/space",
@@ -882,15 +875,19 @@
       "title": "Space | Hudl Uniform"
     },
     {
+      "url": "https://uniform.hudl.com/guidelines/layout/space/code",
+      "title": "Space | Hudl Uniform"
+    },
+    {
       "url": "https://uniform.hudl.com/guidelines/layout/space/design",
       "title": "Space | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/spinner/code",
+      "url": "https://uniform.hudl.com/components/spinner/design",
       "title": "Spinner | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/spinner/design",
+      "url": "https://uniform.hudl.com/components/spinner/code",
       "title": "Spinner | Hudl Uniform"
     },
     {
@@ -930,11 +927,11 @@
       "title": "Team Avatar | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/technology/code",
+      "url": "https://uniform.hudl.com/components/icons/technology/design",
       "title": "Technology | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/icons/technology/design",
+      "url": "https://uniform.hudl.com/components/icons/technology/code",
       "title": "Technology | Hudl Uniform"
     },
     {
@@ -950,6 +947,10 @@
       "title": "Text | Hudl Uniform"
     },
     {
+      "url": "https://uniform.hudl.com/guidelines/accessibility/text/design",
+      "title": "Text | Hudl Uniform"
+    },
+    {
       "url": "https://uniform.hudl.com/guidelines/accessibility/text/code",
       "title": "Text | Hudl Uniform"
     },
@@ -958,15 +959,11 @@
       "title": "Text | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/guidelines/accessibility/text/design",
-      "title": "Text | Hudl Uniform"
-    },
-    {
-      "url": "https://uniform.hudl.com/components/themes/code",
+      "url": "https://uniform.hudl.com/components/themes/design",
       "title": "Themes Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/themes/design",
+      "url": "https://uniform.hudl.com/components/themes/code",
       "title": "Themes Overview | Hudl Uniform"
     },
     {
@@ -994,11 +991,11 @@
       "title": "Toggle | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/tooltip/code",
+      "url": "https://uniform.hudl.com/components/tooltip/design",
       "title": "Tooltip | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/tooltip/design",
+      "url": "https://uniform.hudl.com/components/tooltip/code",
       "title": "Tooltip | Hudl Uniform"
     },
     {
@@ -1006,11 +1003,11 @@
       "title": "Transactional Emails | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/type/code",
+      "url": "https://uniform.hudl.com/components/type/design",
       "title": "Type Overview | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/type/design",
+      "url": "https://uniform.hudl.com/components/type/code",
       "title": "Type Overview | Hudl Uniform"
     },
     {
@@ -1058,11 +1055,11 @@
       "title": "User | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/guidelines/colors/utility/code",
+      "url": "https://uniform.hudl.com/resources/code-helpers/utility",
       "title": "Utility | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/resources/code-helpers/utility",
+      "url": "https://uniform.hudl.com/guidelines/colors/utility/code",
       "title": "Utility | Hudl Uniform"
     },
     {
@@ -1078,11 +1075,11 @@
       "title": "Video Features | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/video-player/code",
+      "url": "https://uniform.hudl.com/components/video-player/design",
       "title": "Video Player | Hudl Uniform"
     },
     {
-      "url": "https://uniform.hudl.com/components/video-player/design",
+      "url": "https://uniform.hudl.com/components/video-player/code",
       "title": "Video Player | Hudl Uniform"
     },
     {

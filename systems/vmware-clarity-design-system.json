@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:49:03+00:00",
+  "generated_at": "2026-09-24T23:54:28+00:00",
   "id": "vmware-clarity-design-system",
   "organization": "VMware",
   "design_system": "Clarity Design System",
@@ -9,11 +9,11 @@
     "https://clarity.design/"
   ],
   "detail_url": "/systems/vmware-clarity-design-system",
-  "pages_indexed": 235,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 275,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T12:11:55+00:00",
+  "last_checked": "2026-09-24T23:27:45+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -40,7 +40,8 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/dw5/Metropolis"
+      "https://github.com/dw5/Metropolis",
+      "https://github.com/ngx-translate/core"
     ]
   },
   "content_signals": {
@@ -53,7 +54,7 @@
   "github_meta": {
     "license": "NOASSERTION",
     "stars": 430,
-    "last_pushed": "2026-09-24T08:22:40Z"
+    "last_pushed": "2026-09-24T12:23:49Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -90,15 +91,23 @@
       "title": "Advanced Datagrid - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/advanced-datagrid/code",
+      "title": "Advanced Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-datagrid/api",
+      "title": "Advanced Datagrid - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/stepper-addon",
       "title": "Advanced Stepper - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/stepper-addon/api",
+      "url": "https://clarity.design/documentation/stepper-addon/code",
       "title": "Advanced Stepper - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/stepper-addon/code",
+      "url": "https://clarity.design/documentation/stepper-addon/api",
       "title": "Advanced Stepper - Clarity Design System"
     },
     {
@@ -154,11 +163,27 @@
       "title": "Breadcrumbs - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/breadcrumbs/api",
+      "title": "Breadcrumbs - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/breadcrumbs/code",
       "title": "Breadcrumbs - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/breadcrumbs/api",
+      "url": "https://clarity.design/documentation/breadcrumbs/code/framework",
+      "title": "Breadcrumbs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/breadcrumbs/code/framework/angular",
+      "title": "Breadcrumbs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/breadcrumbs/code/framework/react",
+      "title": "Breadcrumbs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/breadcrumbs/code/framework/angular/clarity",
       "title": "Breadcrumbs - Clarity Design System"
     },
     {
@@ -190,11 +215,11 @@
       "title": "Card - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/card/api",
+      "url": "https://clarity.design/documentation/card/code",
       "title": "Card - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/card/code",
+      "url": "https://clarity.design/documentation/card/api",
       "title": "Card - Clarity Design System"
     },
     {
@@ -270,7 +295,123 @@
       "title": "Datagrid - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/datagrid/code",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/api",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/structure",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/custom-rendering",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/select-all-disabled",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/pagination",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/detail-pane",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/custom-sorting",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/custom-select-all",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/selection-single",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/compact",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/usage",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/expandable-rows",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/virtual-scroll",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/selection",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/fixed-height",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/pinnable-columns",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/custom-filtering",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/placeholder",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/built-in-filters",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/full",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/server-driven",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/single-action",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/hide-show",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/smart-iterator",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/batch-action",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/binding-properties",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/accessibility",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/datalist",
+      "title": "Datalist - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datalist/code",
       "title": "Datalist - Clarity Design System"
     },
     {
@@ -335,6 +476,14 @@
     },
     {
       "url": "https://clarity.design/documentation/file-picker",
+      "title": "File Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/file-picker/api",
+      "title": "File Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/file-picker/code",
       "title": "File Picker - Clarity Design System"
     },
     {
@@ -430,6 +579,10 @@
       "title": "Layout Utilities - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/layout-utilities/code",
+      "title": "Layout Utilities - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/app-layout",
       "title": "Layouts - Clarity Design System"
     },
@@ -446,11 +599,11 @@
       "title": "List - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/list/api",
+      "url": "https://clarity.design/documentation/list/code",
       "title": "List - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/list/code",
+      "url": "https://clarity.design/documentation/list/api",
       "title": "List - Clarity Design System"
     },
     {
@@ -466,15 +619,15 @@
       "title": "Menu - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/modal",
+      "title": "Modal - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/modal/api",
       "title": "Modal - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/modal/code",
-      "title": "Modal - Clarity Design System"
-    },
-    {
-      "url": "https://clarity.design/documentation/modal",
       "title": "Modal - Clarity Design System"
     },
     {
@@ -518,6 +671,10 @@
       "title": "Password - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/password/code",
+      "title": "Password - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/popover",
       "title": "Popover - Clarity Design System"
     },
@@ -546,11 +703,11 @@
       "title": "Property View - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/property-view/code",
+      "url": "https://clarity.design/documentation/property-view/api",
       "title": "Property View - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/property-view/api",
+      "url": "https://clarity.design/documentation/property-view/code",
       "title": "Property View - Clarity Design System"
     },
     {
@@ -750,11 +907,11 @@
       "title": "Tokens - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/tokens/code",
+      "url": "https://clarity.design/documentation/tokens/design",
       "title": "Tokens - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/tokens/design",
+      "url": "https://clarity.design/documentation/tokens/code",
       "title": "Tokens - Clarity Design System"
     },
     {
@@ -774,6 +931,10 @@
       "title": "Translate - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/translate/code",
+      "title": "Translate - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/tree-view",
       "title": "Tree View - Clarity Design System"
     },
@@ -790,11 +951,11 @@
       "title": "Typography - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/typography/code",
+      "url": "https://clarity.design/documentation/typography/usage",
       "title": "Typography - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/typography/usage",
+      "url": "https://clarity.design/documentation/typography/code",
       "title": "Typography - Clarity Design System"
     },
     {
@@ -818,11 +979,11 @@
       "title": "Vertical Nav - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/vertical-nav/code",
+      "url": "https://clarity.design/documentation/vertical-nav/api",
       "title": "Vertical Nav - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/vertical-nav/api",
+      "url": "https://clarity.design/documentation/vertical-nav/code",
       "title": "Vertical Nav - Clarity Design System"
     },
     {

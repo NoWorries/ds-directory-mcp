@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:49:03+00:00",
+  "generated_at": "2026-09-24T23:54:28+00:00",
   "id": "sipgate-pandaui",
   "organization": "Sipgate",
   "design_system": "pandaUI",
@@ -13,8 +13,8 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T07:45:41+00:00",
-  "last_modified": "Wed, 23 Sep 2026 12:25:08 GMT",
+  "last_checked": "2026-09-24T22:48:57+00:00",
+  "last_modified": "Thu, 24 Sep 2026 12:03:44 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "storybook": [

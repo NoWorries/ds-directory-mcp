@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:49:03+00:00",
+  "generated_at": "2026-09-24T23:54:28+00:00",
   "id": "oracle-redwood",
   "organization": "Oracle",
   "design_system": "Redwood",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T07:08:17+00:00",
+  "last_checked": "2026-09-24T21:50:59+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {},
@@ -24,7 +24,7 @@
   "indexed_pages": [
     {
       "url": "https://redwood.oracle.com/",
-      "title": "https://redwood.oracle.com/"
+      "title": "Getting started with Oracle Redwood | redwood.oraclecorp.com"
     }
   ]
 }

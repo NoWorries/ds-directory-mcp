@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:49:03+00:00",
+  "generated_at": "2026-09-24T23:54:28+00:00",
   "id": "marvel-marvel-styleguide",
   "organization": "Marvel",
   "design_system": "Marvel Styleguide",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T06:46:11+00:00",
+  "last_checked": "2026-09-24T21:30:05+00:00",
   "last_modified": "Wed, 17 Feb 2021 16:49:16 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -41,11 +41,23 @@
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/design/animation",
+      "url": "https://marvelapp.com/styleguide/utility/layout",
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/components/avatars",
+      "url": "https://marvelapp.com/styleguide/utility/aspect-ratio",
+      "title": "Styleguide — Marvel"
+    },
+    {
+      "url": "https://marvelapp.com/styleguide/components/lists",
+      "title": "Styleguide — Marvel"
+    },
+    {
+      "url": "https://marvelapp.com/styleguide/design/color-scheme",
+      "title": "Styleguide — Marvel"
+    },
+    {
+      "url": "https://marvelapp.com/styleguide/components/buttons",
       "title": "Styleguide — Marvel"
     },
     {
@@ -53,11 +65,15 @@
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/components/links",
+      "url": "https://marvelapp.com/styleguide/utility/hide-elements",
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/components/popovers",
+      "url": "https://marvelapp.com/styleguide/components/grid",
+      "title": "Styleguide — Marvel"
+    },
+    {
+      "url": "https://marvelapp.com/styleguide/overview/introduction",
       "title": "Styleguide — Marvel"
     },
     {
@@ -69,31 +85,7 @@
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/design/color-scheme",
-      "title": "Styleguide — Marvel"
-    },
-    {
-      "url": "https://marvelapp.com/styleguide/components/modals",
-      "title": "Styleguide — Marvel"
-    },
-    {
-      "url": "https://marvelapp.com/styleguide/utility/aspect-ratio",
-      "title": "Styleguide — Marvel"
-    },
-    {
-      "url": "https://marvelapp.com/styleguide/overview/code-guidelines",
-      "title": "Styleguide — Marvel"
-    },
-    {
-      "url": "https://marvelapp.com/styleguide/components/grid",
-      "title": "Styleguide — Marvel"
-    },
-    {
-      "url": "https://marvelapp.com/styleguide/components/lists",
-      "title": "Styleguide — Marvel"
-    },
-    {
-      "url": "https://marvelapp.com/styleguide/overview/introduction",
+      "url": "https://marvelapp.com/styleguide/design/typography",
       "title": "Styleguide — Marvel"
     },
     {
@@ -101,23 +93,31 @@
       "title": "Styleguide — Marvel"
     },
     {
+      "url": "https://marvelapp.com/styleguide/components/links",
+      "title": "Styleguide — Marvel"
+    },
+    {
       "url": "https://marvelapp.com/styleguide/design/layout",
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/components/buttons",
+      "url": "https://marvelapp.com/styleguide/components/modals",
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/design/typography",
+      "url": "https://marvelapp.com/styleguide/overview/code-guidelines",
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/utility/hide-elements",
+      "url": "https://marvelapp.com/styleguide/design/animation",
       "title": "Styleguide — Marvel"
     },
     {
-      "url": "https://marvelapp.com/styleguide/utility/layout",
+      "url": "https://marvelapp.com/styleguide/components/avatars",
+      "title": "Styleguide — Marvel"
+    },
+    {
+      "url": "https://marvelapp.com/styleguide/components/popovers",
       "title": "Styleguide — Marvel"
     }
   ]
