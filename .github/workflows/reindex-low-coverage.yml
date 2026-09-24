@@ -1,0 +1,292 @@
+name: Recheck low-coverage reindex (undetected SPA candidates)
+
+# For systems whose crawl finished normally (no max_pages cap hit) but came
+# back with suspiciously few pages (see generate_directory.py's
+# find_low_coverage() and its LOW_COVERAGE_THRESHOLD) — the classic
+# signature of a site that's actually client-side-rendered but was never
+# flagged likely_spa, so nothing else in this repo's automation would ever
+# think to try rendering it through a headless browser. Explicitly skips
+# anything already handled by a cheaper, more specific path: hit_max_pages
+# systems (that's reindex-followup.yml's job — real content exists but
+# wasn't reached, a budget problem, not a "found almost nothing" one) and
+# anything already flagged likely_spa/render_mode == "spa" (already
+# covered by reindex-spa.yml's regular schedule). See ingest.py's
+# --recheck-low-coverage docstring for the full reasoning.
+#
+# This does NOT fix a genuinely broken start_url, anti-bot blocking, or
+# overly-aggressive exclude_patterns — those still surface via
+# check_crawl_health.py's maintainer issue and need a human to fix
+# systems.yaml directly. What this catches is specifically the "renders
+# fine by eye, indexes almost nothing" case a headless re-render can
+# self-heal on its own.
+
+on:
+  schedule:
+    # 04:00 UTC on Thursdays — its own day, offset from every other heavy
+    # crawl workflow (reindex-new Monday, reindex-followup Wednesday,
+    # reindex-full/spa on the 1st/15th of the month) so these don't compete
+    # for runners or fight over the same push.
+    - cron: "0 4 * * 4"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+# Only one of these full-registry pipelines committing to master or
+# deploying to Netlify at once — see reindex-followup.yml's identical
+# comment for why.
+concurrency:
+  group: ds-directory-mcp-write-pipeline
+  cancel-in-progress: false
+
+jobs:
+  # One shard per currently-eligible low-coverage system (capped at 256,
+  # floored at 1) — same rationale as the other reindex workflows: a
+  # shard's local progress only survives if it reaches its own end-of-job
+  # artifact upload, and this list shrinks every time a system in it
+  # actually gets fixed by this same workflow.
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      shard_count: ${{ steps.gen.outputs.shard_count }}
+      shards: ${{ steps.gen.outputs.shards }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-site.txt
+      - run: pip install -r requirements-site.txt
+      - id: gen
+        run: |
+          python3 -c "
+          import json
+          import yaml
+
+          with open('systems.yaml') as f:
+              entries = yaml.safe_load(f) or []
+          # Mirrors ingest.py's eligible_for_low_coverage_recheck() exactly
+          # (kept in sync by hand — this job doesn't install ingest.py's
+          # heavier deps to import it directly). LOW_COVERAGE_THRESHOLD
+          # matches generate_directory.py's own constant.
+          LOW_COVERAGE_THRESHOLD = 5
+          def eligible(e):
+              if e.get('archived') or e.get('likely_unmaintained'):
+                  return False
+              if e.get('hit_max_pages'):
+                  return False
+              if e.get('likely_spa') or e.get('render_mode') == 'spa':
+                  return False
+              pages = e.get('pages_indexed')
+              return pages is not None and pages < LOW_COVERAGE_THRESHOLD and not e.get('crawl_error')
+          total = len([e for e in entries if eligible(e)])
+          n = max(min(total, 256), 1)
+          print(f'shard_count={n}')
+          print(f'shards={json.dumps(list(range(n)))}')
+          " >> "$GITHUB_OUTPUT"
+
+  # Same sharding rationale as reindex-followup.yml.
+  recheck-shard:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: ${{ fromJSON(needs.prepare.outputs.shards) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-spa.txt
+
+      # requirements-spa.txt, not requirements-ingest.txt — this mode's
+      # whole point is a one-shot ingest_spa() diagnostic render, exactly
+      # like reindex-spa.yml/reindex-followup.yml need.
+      - run: pip install -r requirements-spa.txt
+
+      # See reindex-spa.yml's identical steps for the full story on why
+      # real Chrome (not Playwright's bundled Chromium) via a
+      # self-launched, CDP-attached background process is what actually
+      # works here.
+      - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - run: playwright install --with-deps chrome
+
+      - name: Launch real Chrome as a background process for crawl4ai to attach to
+        run: |
+          mkdir -p /tmp/chrome-profile
+          /opt/google/chrome/chrome \
+            --headless=new --disable-gpu --disable-gpu-compositing --disable-software-rasterizer \
+            --no-sandbox --disable-dev-shm-usage --no-first-run --no-default-browser-check \
+            --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-profile \
+            > /tmp/chrome.log 2>&1 &
+          echo $! > /tmp/chrome.pid
+          for i in $(seq 1 20); do
+            if curl -fsS http://localhost:9222/json/version >/dev/null 2>&1; then
+              echo "Chrome CDP endpoint is up after ${i} attempt(s)"
+              exit 0
+            fi
+            sleep 0.5
+          done
+          echo "::error::Chrome's CDP endpoint never came up — see /tmp/chrome.log"
+          cat /tmp/chrome.log
+          exit 1
+
+      # Local embeddings (see embeddings.py) download their model weights
+      # from HuggingFace on first use — cached here so parallel shards, and
+      # every subsequent scheduled run, don't each re-download the same
+      # ~130MB.
+      - name: Cache local embedding model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: huggingface-${{ hashFiles('config.py') }}
+
+      - name: Diagnostic re-render of this shard's low-coverage systems
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+          CDP_URL: http://localhost:9222
+        run: |
+          rm -f shard_touched.json
+          python ingest.py --recheck-low-coverage --shard ${{ matrix.shard }}/${{ needs.prepare.outputs.shard_count }}
+
+      - name: Stop the background Chrome process
+        if: always()
+        run: kill "$(cat /tmp/chrome.pid)" 2>/dev/null || true
+
+      # if: always() — same reasoning as the other reindex workflows:
+      # ingest.py writes systems.yaml/pages_index.json incrementally per
+      # system, well before that system's embedding calls (where a rate-
+      # limit or other failure actually happens), so whatever this shard
+      # got through before any failure is already on disk and worth
+      # uploading. shard_touched.json (see ingest.mark_shard_touched) tells
+      # merge_shards.py which names to take from this shard specifically.
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard }}
+          path: |
+            systems.yaml
+            pages_index.json
+            shard_touched.json
+          retention-days: 1
+          if-no-files-found: ignore
+
+  merge-and-deploy:
+    needs: [prepare, recheck-shard]
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-ingest.txt
+
+      - run: pip install -r requirements-ingest.txt
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shards
+
+      - name: Merge, regenerate, commit, and push (re-syncing on conflict)
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          regenerate() {
+            python merge_shards.py ${{ needs.prepare.outputs.shard_count }}
+            python generate_home.py
+            python generate_search.py
+            python generate_forms.py
+            python generate_data_export.py
+            python generate_llms_txt.py
+            python generate_mcp_manifest.py
+            python generate_security_txt.py
+            python generate_robots_txt.py
+            python generate_directory.py
+            python generate_compare.py
+            python generate_components.py
+            python generate_systems.py
+            python generate_sitemap.py
+          }
+
+          stage_and_commit() {
+            git add systems.yaml favicon.svg favicon-fallback.svg home.html directory.html compare.html search.html suggest.html report.html llms.txt systems.json design-system.schema.json pages_index.json dead_links.json components patterns foundations systems .well-known robots.txt
+            if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+            if git diff --cached --quiet; then
+              return 1
+            fi
+            git commit -m "Recheck low-coverage systems for undetected SPA content [skip ci]"
+          }
+
+          regenerate
+
+          if stage_and_commit; then
+            pushed=false
+            for i in 1 2 3 4 5; do
+              if git push; then pushed=true; break; fi
+              echo "Push rejected (attempt $i/5) — another commit landed first. Resetting to the new tip and re-merging/regenerating fresh, rather than rebasing the tree..."
+              git fetch origin
+              git reset --hard "origin/${{ github.ref_name }}"
+              regenerate
+              if ! stage_and_commit; then
+                echo "Nothing left to push after re-merging onto the new tip."
+                pushed=true
+                break
+              fi
+            done
+            if [ "$pushed" != "true" ]; then
+              echo "::warning::Could not push after 5 attempts — this run's results were NOT committed. See the uploaded 'unmerged-crawl-results' artifact."
+              touch .push_failed
+            fi
+          else
+            echo "No changes to commit"
+          fi
+
+      - if: always() && hashFiles('.push_failed') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: unmerged-crawl-results
+          path: |
+            systems.yaml
+            pages_index.json
+          retention-days: 30
+
+      - name: Check crawl health (maintainer-facing only — not shown on the public page)
+        run: python check_crawl_health.py
+
+      - name: Open/update/close maintainer issue for low-coverage systems
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list --search "Crawl health: systems needing attention in:title" --state open --json number --jq '.[0].number')
+          if [ -f health_report.md ]; then
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file health_report.md
+            else
+              gh issue create --title "Crawl health: systems needing attention" --body-file health_report.md --label "crawl-health" || \
+              gh issue create --title "Crawl health: systems needing attention" --body-file health_report.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All systems now have healthy crawl coverage — closing."
+          fi
+
+      - name: Deploy directory page to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          bash scripts/build_site.sh

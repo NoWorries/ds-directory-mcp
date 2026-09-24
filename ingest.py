@@ -12,6 +12,7 @@ Usage:
     python ingest.py --spa --system "Adobe — Spectrum"          # re-render just one likely_spa entry
     python ingest.py --refresh --shallow [--shard 1/4]   # already-indexed systems only, shallow — see below
     python ingest.py --followup [--shard 1/4]     # only systems whose last crawl hit max_pages — see below
+    python ingest.py --recheck-low-coverage [--shard 1/4]   # only systems with suspiciously few pages, not capped/spa — see below
     python ingest.py --system "Shopify — Polaris" [--force]   # re-ingest one entry (org — design_system)
     python ingest.py --system "Shopify — Polaris" --force --shallow   # ...capped at SHALLOW_MAX_PAGES
     python ingest.py --system "Shopify — Polaris" --force --max-pages 40   # ...capped at an explicit count instead
@@ -60,6 +61,24 @@ ingest_spa(). Each render is expensive (multi-second delay per page, by
 design), so this is meant for an occasional deep pass, not every reindex.
 Requires `playwright install --with-deps chromium` to have been run once
 in the environment (see reindex-spa.yml).
+
+--recheck-low-coverage: targets systems generate_directory.py's own
+find_low_coverage() flags (fewer than LOW_COVERAGE_THRESHOLD pages
+indexed) that AREN'T already covered by a more specific, cheaper path —
+excludes hit_max_pages (that's --followup's job: real content exists but
+wasn't reached, a budget problem, not a "found almost nothing" one) and
+anything already flagged likely_spa/render_mode == "spa" (already
+covered by --spa's regular schedule). What's left is the genuinely
+unexplained case: a plain crawl finished normally, without hitting any
+cap, and still came back with almost nothing — the classic signature of
+an undetected SPA no one's confirmed yet. Retries each with ingest_spa()
+as a one-shot diagnostic; if that's actually what was wrong, it'll find
+real content and permanently set render_mode="spa" on its own (see
+ingest_spa()'s docstring), so future runs treat it correctly without
+this mode ever needing to touch it again. Does NOT fix a genuinely
+broken start_url, anti-bot blocking, or overly-aggressive
+exclude_patterns — those still need a human to look at the health report
+and fix systems.yaml directly.
 
 Example:
     python ingest.py "Atlassian Design System" https://atlassian.design/components
@@ -2705,6 +2724,19 @@ def ingest_entry(entry: dict, force: bool = False, max_pages_override: int | Non
 
     max_pages = max_pages_override if max_pages_override is not None else entry.get("max_pages", DEFAULT_MAX_PAGES)
     print(f"\n=== {name} ==={' (shallow)' if max_pages_override is not None else ''}")
+
+    # --followup's caller (safe_run(..., ingest_entry, entry, ...)) selects
+    # ANY entry with hit_max_pages, with no check at all for whether it
+    # needs headless rendering — confirmed live: every one of Adobe
+    # Spectrum, Altinn, and Momentum Design (all likely_spa/render_mode ==
+    # "spa", all hit_max_pages per today's runs) would silently get
+    # "followed up" via a plain HTTP crawl that can't see a single word of
+    # their real, JS-rendered content. Route those to ingest_spa() instead
+    # — same eligibility condition --spa itself uses (eligible_for_spa()).
+    if entry.get("likely_spa") or entry.get("render_mode") == "spa":
+        ingest_spa(design_system_name=name, start_urls=start_urls, max_pages=max_pages)
+        return
+
     # ingest() stamps last_checked/the freshness signal itself now, in the
     # same call that writes pages_indexed — no separate trailing call here
     # (see update_registry_stats()'s docstring for why that used to leave a
@@ -2800,6 +2832,36 @@ def eligible_for_spa(entry: dict) -> bool:
         and not entry.get("likely_unmaintained")
         and (entry.get("likely_spa") or entry.get("render_mode") == "spa")
     )
+
+
+def eligible_for_low_coverage_recheck(entry: dict) -> bool:
+    """--recheck-low-coverage's filter: reuses generate_directory.py's own
+    find_low_coverage() criteria directly (not a re-derived copy of its
+    threshold/logic — see the eligible_for_all() mirror-drift bug fixed
+    earlier this session for exactly why duplicating a check like this
+    is worth avoiding) rather than re-deriving its threshold/logic here.
+
+    Deliberately excludes two categories already handled by their own
+    dedicated, cheaper paths: hit_max_pages (that's find_capped()'s job —
+    --followup already retries those, and a low page count alongside a
+    real max_pages cap is a different problem than this mode targets) and
+    anything already flagged likely_spa/render_mode == "spa" (already
+    covered by --spa's own regular schedule). What's left after both
+    exclusions is the genuinely unexplained case this mode exists for: a
+    plain crawl finished normally, without hitting any cap, and still
+    came back with almost nothing — the classic signature of an
+    undetected SPA no one's confirmed yet, worth one diagnostic
+    ingest_spa() attempt rather than repeating the same plain crawl that
+    already didn't work."""
+    from generate_directory import find_low_coverage
+
+    if entry.get("archived") or entry.get("likely_unmaintained"):
+        return False
+    if entry.get("hit_max_pages"):
+        return False
+    if entry.get("likely_spa") or entry.get("render_mode") == "spa":
+        return False
+    return entry in find_low_coverage([entry])
 
 
 def parse_shard(args: list[str]) -> tuple[int, int] | None:
@@ -2927,6 +2989,21 @@ if __name__ == "__main__":
         for entry in spa_entries:
             name = full_name(entry)
             print(f"\n=== {name} === (rendered)")
+            safe_run(
+                name, ingest_spa, name, entry["start_urls"],
+                max_pages=shallow_max_pages if shallow_max_pages is not None else DEFAULT_MAX_PAGES,
+            )
+
+    elif args[0] == "--recheck-low-coverage":
+        recheck_entries = [e for e in load_registry() if eligible_for_low_coverage_recheck(e)]
+        if shard:
+            recheck_entries = [e for i, e in enumerate(recheck_entries) if i % shard_total == shard_index]
+            print(f"Shard {shard_index}/{shard_total}: {len(recheck_entries)} low-coverage systems in this shard")
+        if not recheck_entries:
+            print("No low-coverage systems (that aren't already capped or flagged likely_spa) found in this shard.")
+        for entry in recheck_entries:
+            name = full_name(entry)
+            print(f"\n=== {name} === (diagnostic re-render — {entry.get('pages_indexed', 0)} page(s) currently indexed)")
             safe_run(
                 name, ingest_spa, name, entry["start_urls"],
                 max_pages=shallow_max_pages if shallow_max_pages is not None else DEFAULT_MAX_PAGES,
