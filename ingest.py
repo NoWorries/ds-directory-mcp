@@ -2362,6 +2362,45 @@ def crawl_spa(
     return asyncio.run(_crawl())
 
 
+def _storybook_iframe_urls(start_url: str) -> list[str]:
+    """Storybook's root URL only ever renders manager-UI chrome (toolbar,
+    sidebar) via client-side JS — see STORYBOOK_CHROME_MARKERS above. The
+    real documentation content for each component lives in a separate,
+    same-origin <iframe> at /iframe.html?id=<story-id>, which crawl_spa()
+    can never discover by following <a href> links: the sidebar is built
+    entirely from click-handler JS, not real anchor tags. Confirmed live on
+    Decentraland UI: every single render came back "Storybook toolbar
+    chrome, not real page content" and the crawl always ended at 0 pages,
+    regardless of the chrome/CDP fixes above. Storybook itself publishes a
+    stable /index.json manifest listing every real story instead of relying
+    on scraping the rendered sidebar — read that directly. One iframe URL
+    per unique component title (not per story variant) — the intent is one
+    real example of each component's docs, not 8 arg-variations of the same
+    Button. viewMode=docs (not "story") because modern Storybook (v7+)
+    auto-generates a real docs page with prose/args tables for every
+    component by default — far better embedding material than a raw
+    isolated component render."""
+    parsed = urlparse(start_url)
+    origin = f"{parsed.scheme}://{parsed.netloc}"
+    try:
+        resp = requests.get(f"{origin}/index.json", timeout=10)
+        resp.raise_for_status()
+        entries = resp.json().get("entries") or {}
+    except Exception:
+        return []
+    if not isinstance(entries, dict) or not entries:
+        return []
+    seen_titles: set[str] = set()
+    urls = []
+    for story_id, meta in entries.items():
+        title = meta.get("title") if isinstance(meta, dict) else None
+        if not title or title in seen_titles:
+            continue
+        seen_titles.add(title)
+        urls.append(f"{origin}/iframe.html?id={story_id}&viewMode=docs")
+    return urls
+
+
 def ingest_spa(design_system_name: str, start_urls: list[str], max_pages: int = DEFAULT_MAX_PAGES) -> None:
     """Rendered ingest for a system already flagged likely_spa/render_mode ==
     "spa" — a real BFS crawl (crawl_spa()) rendering every page through a
@@ -2397,6 +2436,18 @@ def ingest_spa(design_system_name: str, start_urls: list[str], max_pages: int = 
     only happens once, after the whole crawl completes normally."""
     client = get_qdrant_client()
     ensure_collection(client)
+
+    # Detect a Storybook-rooted start_url ahead of time and seed real story
+    # pages directly, bypassing crawl_spa()'s normal BFS discovery (and
+    # DEFAULT_EXCLUDE_PATTERNS' general /iframe\.html exclusion, which
+    # exists to stop OTHER systems' ordinary crawls from wandering into raw
+    # iframe embeds) since these come from Storybook's own trusted
+    # /index.json API, not scraped <a> tags — see
+    # _storybook_iframe_urls()'s docstring.
+    storybook_urls = _storybook_iframe_urls(start_urls[0])
+    if storybook_urls:
+        print(f"  detected Storybook — seeding {len(storybook_urls)} real story pages via its index.json manifest")
+        start_urls = storybook_urls
 
     start_url = start_urls[0]
     previous_entry = get_registry_entry(design_system_name) or {}
