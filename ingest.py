@@ -2178,8 +2178,18 @@ async def _render_one(crawler, url: str, config) -> tuple[str | None, set[str], 
     # MIN_CONTENT_LENGTH on their own; this is the same call for the ones
     # that don't).
     if any(marker in text for marker in STORYBOOK_CHROME_MARKERS):
-        print("  rendered fetch is Storybook toolbar chrome, not real page content — treating as no content")
-        return None, set(), None
+        # Not just the system's start_url — a docs site can link OUT to a
+        # Storybook instance mounted at some sub-path just as easily as
+        # having Storybook be the start_url itself. Either way, seed its
+        # real story pages via _storybook_iframe_urls() right here, so the
+        # caller's normal link-processing picks them up as newly discovered
+        # links instead of this page's content just being dropped.
+        storybook_urls = _storybook_iframe_urls(url)
+        if storybook_urls:
+            print(f"  rendered fetch is Storybook toolbar chrome — seeding {len(storybook_urls)} real story pages via its index.json manifest instead")
+        else:
+            print("  rendered fetch is Storybook toolbar chrome, not real page content — treating as no content")
+        return None, set(storybook_urls), None
 
     links_seen: set[str] = set()
     links = getattr(result, "links", {}) or {}
@@ -2298,6 +2308,19 @@ def crawl_spa(
                 if text is None:
                     if url == start_urls[0]:
                         start_url_error = "rendered fetch returned no content"
+                    # The only case _render_one() ever returns non-empty
+                    # links alongside text=None: a Storybook chrome page's
+                    # real story pages, seeded from its own trusted
+                    # index.json manifest (see _storybook_iframe_urls()).
+                    # Add them straight to the queue, bypassing the normal
+                    # scope/exclude/include checks below — those exist for
+                    # arbitrary scraped <a href>s, not URLs we deliberately
+                    # constructed ourselves. Still dedupe against
+                    # visited/to_visit_set like any other link.
+                    for link in raw_links:
+                        if link not in visited and link not in to_visit_set:
+                            to_visit.append(link)
+                            to_visit_set.add(link)
                     continue
 
                 abs_links = {normalize_url(urljoin(url, href)) for href in raw_links}
@@ -2362,28 +2385,42 @@ def crawl_spa(
     return asyncio.run(_crawl())
 
 
-def _storybook_iframe_urls(start_url: str) -> list[str]:
-    """Storybook's root URL only ever renders manager-UI chrome (toolbar,
+def _storybook_iframe_urls(storybook_url: str) -> list[str]:
+    """Storybook's manager-UI page only ever renders chrome (toolbar,
     sidebar) via client-side JS — see STORYBOOK_CHROME_MARKERS above. The
     real documentation content for each component lives in a separate,
-    same-origin <iframe> at /iframe.html?id=<story-id>, which crawl_spa()
-    can never discover by following <a href> links: the sidebar is built
-    entirely from click-handler JS, not real anchor tags. Confirmed live on
-    Decentraland UI: every single render came back "Storybook toolbar
-    chrome, not real page content" and the crawl always ended at 0 pages,
-    regardless of the chrome/CDP fixes above. Storybook itself publishes a
-    stable /index.json manifest listing every real story instead of relying
-    on scraping the rendered sidebar — read that directly. One iframe URL
-    per unique component title (not per story variant) — the intent is one
-    real example of each component's docs, not 8 arg-variations of the same
-    Button. viewMode=docs (not "story") because modern Storybook (v7+)
-    auto-generates a real docs page with prose/args tables for every
-    component by default — far better embedding material than a raw
-    isolated component render."""
-    parsed = urlparse(start_url)
-    origin = f"{parsed.scheme}://{parsed.netloc}"
+    same-origin <iframe> at <storybook-root>/iframe.html?id=<story-id>,
+    which crawl_spa() can never discover by following <a href> links: the
+    sidebar is built entirely from click-handler JS, not real anchor tags.
+    Confirmed live on Decentraland UI: every single render came back
+    "Storybook toolbar chrome, not real page content" and the crawl always
+    ended at 0 pages, regardless of the chrome/CDP fixes above. Storybook
+    itself publishes a stable index.json manifest listing every real story
+    instead of relying on scraping the rendered sidebar — read that
+    directly.
+
+    Takes the actual page URL Storybook chrome was detected at, not
+    necessarily the system's start_url — a design system's docs site can
+    just as easily link OUT to a Storybook instance mounted at some
+    sub-path (e.g. https://docs.example.com/storybook/) as have Storybook
+    be the start_url itself. Either way, index.json/iframe.html live at
+    that same path prefix, not necessarily the site's origin root, so the
+    manifest URL is built from storybook_url's own directory rather than
+    assuming it's always at the domain root.
+
+    One iframe URL per unique component title (not per story variant) —
+    the intent is one real example of each component's docs, not 8
+    arg-variations of the same Button. viewMode=docs (not "story") because
+    modern Storybook (v7+) auto-generates a real docs page with prose/args
+    tables for every component by default — far better embedding material
+    than a raw isolated component render."""
+    parsed = urlparse(storybook_url)
+    path = parsed.path or "/"
+    if not path.endswith("/"):
+        path = path.rsplit("/", 1)[0] + "/"
+    base = f"{parsed.scheme}://{parsed.netloc}{path}"
     try:
-        resp = requests.get(f"{origin}/index.json", timeout=10)
+        resp = requests.get(f"{base}index.json", timeout=10)
         resp.raise_for_status()
         entries = resp.json().get("entries") or {}
     except Exception:
@@ -2397,7 +2434,7 @@ def _storybook_iframe_urls(start_url: str) -> list[str]:
         if not title or title in seen_titles:
             continue
         seen_titles.add(title)
-        urls.append(f"{origin}/iframe.html?id={story_id}&viewMode=docs")
+        urls.append(f"{base}iframe.html?id={story_id}&viewMode=docs")
     return urls
 
 
@@ -2517,7 +2554,30 @@ def ingest_spa(design_system_name: str, start_urls: list[str], max_pages: int = 
         )
         return
 
-    raw_resources = merge_resources(classify_links(all_links_seen, design_system_name), probe_well_known(start_url))
+    # classify_links() only does substring matching against link text
+    # ("storybook" or "chromatic.com" appearing literally in the URL) — a
+    # generic docs domain like ui.decentraland.org, or our own synthetic
+    # iframe.html?id=...&viewMode=docs URLs, never contain that substring,
+    # so it can never catch a Storybook-rooted system no matter which links
+    # it's given. We've already done a real, confirmed detection though
+    # (fetching and parsing an actual index.json), so record that directly
+    # instead of relying on text-matching: any URL among the pages actually
+    # crawled containing our own "/iframe.html?id=" marker proves this run
+    # found real Storybook content, and stripping everything from
+    # "iframe.html" onward recovers the Storybook root itself — the actual
+    # browsable manager UI page, not the bare iframe.html endpoint (which
+    # is blank/unusable without its own ?id= query param). One link only,
+    # not one per story — a design system has at most one Storybook
+    # instance to point at, however many stories it contains.
+    storybook_resource = {}
+    for crawled_url in pages:
+        if "/iframe.html?id=" in crawled_url:
+            storybook_resource = {"storybook": [crawled_url.split("iframe.html?")[0]]}
+            break
+
+    raw_resources = merge_resources(
+        classify_links(all_links_seen, design_system_name), probe_well_known(start_url), storybook_resource
+    )
     unverified_resources = flag_unverified_resources(raw_resources, design_system_name)
     resources = filter_unverified_resources(raw_resources, unverified_resources)
     enrichment = enrich_resources(resources)
