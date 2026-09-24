@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "line-line-design-system",
   "organization": "LINE",
   "design_system": "LINE Design System",
@@ -9,11 +9,11 @@
     "https://designsystem.line.me/"
   ],
   "detail_url": "/systems/line-line-design-system",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 48,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T20:27:55+00:00",
+  "last_checked": "2026-09-24T01:57:11+00:00",
   "last_modified": "Wed, 26 Feb 2025 09:02:07 GMT",
   "sitemap_last_modified": null,
   "resources": {},
@@ -23,8 +23,196 @@
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://designsystem.line.me/LDSG/components/inputs/stepper-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/inputs/slider-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/navigations/tab-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/overlays/snackbar-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/contents/avatar-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/foundation",
+      "title": "Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/foundation/typography-en",
+      "title": "Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/foundation/iconography-ex-en",
+      "title": "Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/foundation/color-en",
+      "title": "Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/foundation/object-styles-en",
+      "title": "Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/foundation/layout-en",
+      "title": "Foundation"
+    },
+    {
       "url": "https://designsystem.line.me/",
-      "title": "LINE — LINE Design System"
+      "title": "LINE Design System"
+    },
+    {
+      "url": "https://designsystem.line.me/about/design-principle-en",
+      "title": "LINE Design System"
+    },
+    {
+      "url": "https://designsystem.line.me/about/contact-ex-en",
+      "title": "LINE Design System"
+    },
+    {
+      "url": "https://designsystem.line.me/about/line-voice-en",
+      "title": "LINE Design System"
+    },
+    {
+      "url": "https://designsystem.line.me/about/faq-en",
+      "title": "LINE Design System"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG",
+      "title": "LINE Design System for Global Family Service"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM",
+      "title": "LINE Design System for Messenger"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/case-studies",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/case-studies/new-design-ex-en",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/case-studies/home-ex-en",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/case-studies/chats-ex-en",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/case-studies/timeline-ex-en",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/case-studies/keep-ex-en",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/search-bar-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/banner-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/list-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/tabs-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/list_header-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/profile-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/top_navigation-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/card-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/bottom_navigation-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/empty-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/pagination-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/image_grid-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/popup-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/checkbox-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/typography-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/graphic-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/iconography/iconography-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/color/line-color-guide-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/layout-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/ux",
+      "title": "LINE Design System for Messenger - Guidelines"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/ux/confirmation-ex-en",
+      "title": "LINE Design System for Messenger - Guidelines"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/ux/modal-ex-en",
+      "title": "LINE Design System for Messenger - Guidelines"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/ux/selection-ex-en",
+      "title": "LINE Design System for Messenger - Guidelines"
     }
   ]
 }

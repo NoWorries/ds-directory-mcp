@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "arbetsf-rmedlingen-design-system",
   "organization": "Arbetsförmedlingen",
   "design_system": "Design system",
@@ -9,27 +9,540 @@
     "https://designsystem.arbetsformedlingen.se/"
   ],
   "detail_url": "/systems/arbetsf-rmedlingen-design-system",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 128,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T11:15:50+00:00",
+  "last_checked": "2026-09-24T00:00:25+00:00",
   "last_modified": "Wed, 09 Sep 2026 08:48:57 GMT",
   "sitemap_last_modified": "2026-06-05",
-  "resources": {},
+  "resources": {
+    "figma": [
+      "https://figma.com/proto/7MqaS4tRZZrA2rk8f0W3me/UI-kit-guider"
+    ]
+  },
   "unverified_resources": {},
   "content_signals": {
     "frameworks": [
       "React",
       "Angular"
-    ]
+    ],
+    "accessibility_conformance": "WCAG 2.2 AA"
   },
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/agentiva-tjanster",
+      "title": "Agentiva tjänster och artificiell intelligens - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tools-feedback-rating/oversikt",
+      "title": "Betygskomponenten - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-layout-block/oversikt",
+      "title": "Block - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designtokens/breakpoints",
+      "title": "Breakpoints - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-navigation-breadcrumbs/oversikt",
+      "title": "Brödsmulor - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-quote/oversikt",
+      "title": "Citat - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-layout-container/oversikt",
+      "title": "Container - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography-time/oversikt",
+      "title": "Datum - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-calendar-datepicker/oversikt",
+      "title": "Datumväljare - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/introduktion-till-designmonster",
+      "title": "Designmönster - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designprinciper",
+      "title": "Designprinciper för ett Sverige i arbete - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/enkater-och-feedback",
+      "title": "Enkäter och feedbackfunktioner - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-label/oversikt",
+      "title": "Etikett - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-link-external/oversikt",
+      "title": "Extern länk - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-expandable-faq/oversikt",
+      "title": "FAQ - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-expandable-faq-item/oversikt",
+      "title": "FAQ - Enskild fråga - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tools-feedback/oversikt",
+      "title": "Feedback - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tools-feedback-banner/oversikt",
+      "title": "Feedback-banner - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tools-feedback-banner/www.arbetsformedlingen.se",
+      "title": "Feedback-banner - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-error-list/oversikt",
+      "title": "Felmeddelandelista - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/felmeddelandesidor",
+      "title": "Felmeddelandesidor - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-notification-error-page/oversikt",
+      "title": "Felsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-file-upload/oversikt",
+      "title": "Filuppladdare - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tablist/oversikt",
+      "title": "Flikfält - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/formular",
+      "title": "Formulär - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-fieldset/oversikt",
+      "title": "Fältgruppering - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/farger",
+      "title": "Färger - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designtokens/fargtokens",
+      "title": "Färgtokens - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-progress-circle/oversikt",
+      "title": "Förloppscirkeln - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-progress-list/oversikt",
+      "title": "Förloppslista - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-progress-list-item/oversikt",
+      "title": "Förloppslista - enskilt steg - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-progress-indicator/oversikt",
+      "title": "Förloppsstegaren - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/grid-och-brytpunkter",
+      "title": "Grid och brytpunkter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/hantera-skyddade-personuppgifter",
+      "title": "Hantera skyddade personuppgifter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/illustrationer",
+      "title": "Illustrationer - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/indikatorer",
+      "title": "Indikatorer - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/infografik",
+      "title": "Infografik - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-info-card/oversikt",
+      "title": "Infokort - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-info-card/Frivillig länk",
+      "title": "Infokort - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-info-card-multi-container/oversikt",
+      "title": "Infokortsbehållare - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-notification-alert/oversikt",
+      "title": "Informationsmeddelande - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography-preamble/oversikt",
+      "title": "Ingress - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-input/oversikt",
+      "title": "Inmatningsfält - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-link-internal/oversikt",
+      "title": "Intern länk - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/om-designsystemet/introduktion-till-designsystemet",
+      "title": "Introduktion till designsystemet - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designtokens/introduktion-till-designtokens",
+      "title": "Introduktion till designtokens - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography-heading-jumbo/oversikt",
+      "title": "Jumborubrik - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-calendar/oversikt",
+      "title": "Kalender - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-category-filter/oversikt",
+      "title": "Kategorifilter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-button/oversikt",
+      "title": "Knapp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/knappar",
+      "title": "Knappar - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-code/oversikt",
+      "title": "Kod - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/om-designsystemet/kodbibliotek",
+      "title": "Kodbibliotek - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-code-block/oversikt",
+      "title": "Kodblock - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/tillganglighet-och-design/kognitiv-genomgang",
+      "title": "Kognitiv genomgång - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-layout-columns/oversikt",
+      "title": "Kolumner - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kontakt",
+      "title": "Kontakta oss gällande Arbetsförmedlingens designsystem - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-checkbox/oversikt",
+      "title": "Kryssruta - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-receipt/oversikt",
+      "title": "Kvittens - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/laddningsindikatorer",
+      "title": "Laddningsindikatorer - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/tillganglighet-och-design/lagkrav-och-riktlinjer",
+      "title": "Lagkrav och riktlinjer om digital tillgänglighet - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-chart-line/oversikt",
+      "title": "Linjediagram - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-list/oversikt",
+      "title": "Listor - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-logo/oversikt",
+      "title": "Logotyp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/logotyp",
+      "title": "Logotyp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-link/oversikt",
+      "title": "Länk - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/lankar",
+      "title": "Länkar - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-link-button/oversikt",
+      "title": "Länkknapp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tag-media/oversikt",
+      "title": "Mediatagg - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-media-image/oversikt",
+      "title": "Mediebild - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-media-figure/oversikt",
+      "title": "Mediefigur - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography-meta/oversikt",
+      "title": "Metatext - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-dialog/oversikt",
+      "title": "Modal - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-filter/oversikt",
+      "title": "Multifilter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-info-card-multi/oversikt",
+      "title": "Multikort - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-badge-notification/oversikt",
+      "title": "Notifikationsindikator - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/tillganglighet-och-design/om-digital-tillganglighet",
+      "title": "Om digital tillgänglighet - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/om-komponenter",
+      "title": "Om vårt komponentbibliotek - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-navigation-pagination/oversikt",
+      "title": "Paginering - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-loader-skeleton/oversikt",
+      "title": "Platshållare - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/tillganglighet-och-design/tillganglighetsredogorelse",
+      "title": "Process för tillgänglighetsredogörelse - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-radiogroup/oversikt",
+      "title": "Radiogrupp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-radiobutton/oversikt",
+      "title": "Radioknapp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/release-notes",
+      "title": "Release notes - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-context-menu/oversikt",
+      "title": "Rullgardinsmeny - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-footer/oversikt",
+      "title": "Sidfot - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-header/oversikt",
+      "title": "Sidhuvud - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/sidhuvud-och-sidfot",
+      "title": "Sidhuvud och sidfot - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-header-avatar/oversikt",
+      "title": "Sidhuvud-avatar - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-header-navigation/oversikt",
+      "title": "Sidhuvud-meny - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-header-navigation-item/oversikt",
+      "title": "Sidhuvud-menyval - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-header-notification/oversikt",
+      "title": "Sidhuvud-notifikationsindikator - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-navigation-sidebar/oversikt",
+      "title": "Sidofält - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-navigation-sidebar-button/oversikt",
+      "title": "Sidofältsknapp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/spacing",
+      "title": "Spacing - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-loader-spinner/oversikt",
+      "title": "Spinner - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-bar-chart/oversikt",
+      "title": "Stapeldiagram - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/",
-      "title": "Arbetsförmedlingen — Design system"
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/www.arbetsformedlingen.se",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/Frivillig länk",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/introduktion",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/komponenter/digi-tools-feedback/oversikt",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/insatser-och-program",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/arbetsloshet-och-arbetssokande",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/leverantorstjanster",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/namnforum@arbetsformedlingen.se",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/designsystem@arbetsformedlingen.se",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-badge-status/oversikt",
+      "title": "Statusindikator - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/sok-och-sokfilter",
+      "title": "Sök och sökfilter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-input-search/oversikt",
+      "title": "Sökfält - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-table/oversikt",
+      "title": "Tabell - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tag/oversikt",
+      "title": "Tagg - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tools-theme-provider/oversikt",
+      "title": "Temaväljare - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-textarea/oversikt",
+      "title": "Textarea - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/tillganglighet-och-design/om-tillganglighetsmatrisen",
+      "title": "Tillgänglighetsmatrisen - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-title-logo/oversikt",
+      "title": "Titellogotyp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography/oversikt",
+      "title": "Typografi - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/om-designsystemet/ui-kit",
+      "title": "UI-kit - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-expandable-accordion/oversikt",
+      "title": "Utfällbar rubrik - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/validering-i-formular",
+      "title": "Validering i formulär - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-validation-message/oversikt",
+      "title": "Valideringsmeddelande - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-calendar-week-view/oversikt",
+      "title": "Veckovy - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-navigation-vertical-menu/oversikt",
+      "title": "Vertikal meny - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-navigation-vertical-menu-item/oversikt",
+      "title": "Vertikalt menyval - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/visuella-metoder",
+      "title": "Visuella metoder - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-select/oversikt",
+      "title": "Väljare - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-select-filter/oversikt",
+      "title": "Väljare med sök - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/webbfarger",
+      "title": "Webbfärger - Arbetsförmedlingen Designsystem"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "webex-momentum-design-system",
   "organization": "Webex",
   "design_system": "Momentum Design System",
@@ -9,12 +9,12 @@
     "https://momentum.design/"
   ],
   "detail_url": "/systems/webex-momentum-design-system",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T21:44:25+00:00",
-  "last_modified": "Fri, 18 Sep 2026 11:54:45 GMT",
+  "last_checked": "2026-09-24T03:08:11+00:00",
+  "last_modified": "Mon, 21 Sep 2026 08:13:25 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "skills": [
@@ -28,7 +28,11 @@
   "indexed_pages": [
     {
       "url": "https://momentum.design/",
-      "title": "Webex — Momentum Design System"
+      "title": "👋 Welcome to Momentum Design Docs! 🚀 Momentum"
+    },
+    {
+      "url": "https://momentum.design/en",
+      "title": "👋 Welcome to Momentum Design Docs! 🚀 Momentum"
     }
   ]
 }

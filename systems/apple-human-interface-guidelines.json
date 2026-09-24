@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "apple-human-interface-guidelines",
   "organization": "Apple",
   "design_system": "Human Interface Guidelines",
@@ -9,22 +9,642 @@
     "https://developer.apple.com/design/human-interface-guidelines/"
   ],
   "detail_url": "/systems/apple-human-interface-guidelines",
-  "pages_indexed": 1,
+  "pages_indexed": 151,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-21T02:22:13+00:00",
-  "last_modified": "Fri, 18 Sep 2026 20:04:18 GMT",
+  "last_checked": "2026-09-24T00:02:26+00:00",
+  "last_modified": "Wed, 23 Sep 2026 08:52:41 GMT",
   "sitemap_last_modified": null,
-  "resources": {},
-  "unverified_resources": {},
-  "content_signals": {},
-  "github_meta": null,
+  "resources": {
+    "github": [
+      "https://github.com/Apple/UnityPlugins"
+    ],
+    "icons": [
+      "https://developer.apple.com/design/human-interface-guidelines/icons"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/ResearchKit/ResearchKit"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "SwiftUI"
+    ]
+  },
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 988,
+    "last_pushed": "2026-09-23T22:24:37Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+      "title": "Accessibility | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/action-button",
+      "title": "Action button | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/action-sheets",
+      "title": "Action sheets | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/activity-rings",
+      "title": "Activity rings | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/activity-views",
+      "title": "Activity views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/airplay",
+      "title": "AirPlay | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/alerts",
+      "title": "Alerts | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/always-on",
+      "title": "Always On | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/app-clips",
+      "title": "App Clips | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/app-icons",
+      "title": "App icons | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/app-shortcuts",
+      "title": "App Shortcuts | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/apple-in-app-purchase",
+      "title": "Apple In-App Purchase | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/apple-pay",
+      "title": "Apple Pay | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/apple-pencil-and-scribble",
+      "title": "Apple Pencil and Scribble | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/",
       "title": "Apple — Human Interface Guidelines"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/augmented-reality",
+      "title": "Augmented reality | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/boxes",
+      "title": "Boxes | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/branding",
+      "title": "Branding | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/buttons",
+      "title": "Buttons | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/camera-control",
+      "title": "Camera Control | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/carekit",
+      "title": "CareKit | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/carplay",
+      "title": "CarPlay | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/charting-data",
+      "title": "Charting data | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/charts",
+      "title": "Charts | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/collaboration-and-sharing",
+      "title": "Collaboration and sharing | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/collections",
+      "title": "Collections | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/color",
+      "title": "Color | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/column-views",
+      "title": "Column views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/complications",
+      "title": "Complications | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/components",
+      "title": "Components | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/content",
+      "title": "Content | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/controls",
+      "title": "Controls | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/dark-mode",
+      "title": "Dark Mode | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/design-principles",
+      "title": "Design principles | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-games",
+      "title": "Designing for games | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
+      "title": "Designing for iOS | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ipados",
+      "title": "Designing for iPadOS | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo",
+      "title": "Designing for iPhone Duo | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-macos",
+      "title": "Designing for macOS | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos",
+      "title": "Designing for tvOS | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos",
+      "title": "Designing for visionOS | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-watchos",
+      "title": "Designing for watchOS | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/digital-crown",
+      "title": "Digital Crown | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/drag-and-drop",
+      "title": "Drag and drop | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/entering-data",
+      "title": "Entering data | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/eyes",
+      "title": "Eyes | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/feedback",
+      "title": "Feedback | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/file-management",
+      "title": "File management | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/focus-and-selection",
+      "title": "Focus and selection | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/foundations",
+      "title": "Foundations | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/game-center",
+      "title": "Game Center | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/game-controls",
+      "title": "Game controls | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/generative-ai",
+      "title": "Generative AI | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/gestures",
+      "title": "Gestures | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/getting-started",
+      "title": "Getting started | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/going-full-screen",
+      "title": "Going full screen | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/gyro-and-accelerometer",
+      "title": "Gyroscope and accelerometer | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/healthkit",
+      "title": "HealthKit | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/home-screen-quick-actions",
+      "title": "Home Screen quick actions | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/homekit",
+      "title": "HomeKit | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines",
+      "title": "Human Interface Guidelines | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/icloud",
+      "title": "iCloud | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/icons",
+      "title": "Icons | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/id-verifier",
+      "title": "ID Verifier | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/images",
+      "title": "Images | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/imessage-apps-and-stickers",
+      "title": "iMessage apps and stickers | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/immersive-experiences",
+      "title": "Immersive experiences | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/inclusion",
+      "title": "Inclusion | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/inputs",
+      "title": "Inputs | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/keyboards",
+      "title": "Keyboards | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/labels",
+      "title": "Labels | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/launching",
+      "title": "Launching | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/layout-and-organization",
+      "title": "Layout and organization | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "title": "Layout | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/lists-and-tables",
+      "title": "Lists and tables | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/live-activities",
+      "title": "Live Activities | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/live-photos",
+      "title": "Live Photos | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/live-viewing-apps",
+      "title": "Live-viewing apps | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/loading",
+      "title": "Loading | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/lockups",
+      "title": "Lockups | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/mac-catalyst",
+      "title": "Mac Catalyst | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/machine-learning",
+      "title": "Machine learning | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/managing-accounts",
+      "title": "Managing accounts | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/managing-notifications",
+      "title": "Managing notifications | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/maps",
+      "title": "Maps | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/materials",
+      "title": "Materials | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/menus-and-actions",
+      "title": "Menus and actions | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/menus",
+      "title": "Menus | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/modality",
+      "title": "Modality | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
+      "title": "Motion | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/multitasking",
+      "title": "Multitasking | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/navigation-and-search",
+      "title": "Navigation and search | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/nearby-interactions",
+      "title": "Nearby interactions | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-interactions",
+      "title": "Nearby interactions | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/nfc",
+      "title": "NFC | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/notifications",
+      "title": "Notifications | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/offering-help",
+      "title": "Offering help | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding",
+      "title": "Onboarding | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/ornaments",
+      "title": "Ornaments | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/outline-views",
+      "title": "Outline views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/page-controls",
+      "title": "Page controls | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/patterns",
+      "title": "Patterns | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/photo-editing",
+      "title": "Photo editing | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/playing-audio",
+      "title": "Playing audio | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/playing-haptics",
+      "title": "Playing haptics | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/playing-video",
+      "title": "Playing video | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/pointing-devices",
+      "title": "Pointing devices | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/pop-up-buttons",
+      "title": "Pop-up buttons | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/presentation",
+      "title": "Presentation | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/printing",
+      "title": "Printing | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/progress-indicators",
+      "title": "Progress indicators | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons",
+      "title": "Pull-down buttons | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/ratings-and-reviews",
+      "title": "Ratings and reviews | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/remotes",
+      "title": "Remotes | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/researchkit",
+      "title": "ResearchKit | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/right-to-left",
+      "title": "Right to left | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/scroll-views",
+      "title": "Scroll views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/search-fields",
+      "title": "Search fields | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/searching",
+      "title": "Searching | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/segmented-controls",
+      "title": "Segmented controls | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/selection-and-input",
+      "title": "Selection and input | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/settings",
+      "title": "Settings | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sf-symbols",
+      "title": "SF Symbols | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/shareplay",
+      "title": "SharePlay | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/shazamkit",
+      "title": "ShazamKit | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+      "title": "Sheets | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+      "title": "Sidebars | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/siri",
+      "title": "Siri | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sliders",
+      "title": "Sliders | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/snippets",
+      "title": "Snippets | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-layout",
+      "title": "Spatial layout | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/split-views",
+      "title": "Split views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/status",
+      "title": "Status | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/system-experiences",
+      "title": "System experiences | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+      "title": "Tab bars | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tab-views",
+      "title": "Tab views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tap-to-pay-on-iphone",
+      "title": "Tap to Pay on iPhone | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/technologies",
+      "title": "Technologies | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/text-fields",
+      "title": "Text fields | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/the-menu-bar",
+      "title": "The menu bar | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/toggles",
+      "title": "Toggles | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+      "title": "Toolbars | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+      "title": "Typography | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/undo-and-redo",
+      "title": "Undo and redo | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/virtual-keyboards",
+      "title": "Virtual keyboards | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/voiceover",
+      "title": "VoiceOver | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/wallet",
+      "title": "Wallet | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/widgets",
+      "title": "Widgets | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/windows",
+      "title": "Windows | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/workouts",
+      "title": "Workouts | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/writing",
+      "title": "Writing | Apple Developer Documentation"
     }
   ]
 }

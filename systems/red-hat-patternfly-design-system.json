@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "red-hat-patternfly-design-system",
   "organization": "Red Hat",
   "design_system": "Patternfly Design System",
@@ -9,27 +9,562 @@
     "https://www.patternfly.org/"
   ],
   "detail_url": "/systems/red-hat-patternfly-design-system",
-  "pages_indexed": 1,
+  "pages_indexed": 114,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-19T21:40:34+00:00",
+  "last_checked": "2026-09-24T02:49:18+00:00",
   "last_modified": "Thu, 17 Sep 2026 00:28:59 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "icons": [
-      "https://www.patternfly.org/components/icon"
+      "https://www.patternfly.org/components/icon",
+      "https://patternfly.org/components/icon/react/heading-sizes",
+      "https://patternfly.org/components/icon/react/body-sizes",
+      "https://patternfly.org/components/icon/html",
+      "https://patternfly.org/components/icon/react/inline",
+      "https://patternfly.org/components/icon/react/custom-in-progress-icon",
+      "https://patternfly.org/components/icon/react/basic",
+      "https://npmjs.com/package/@patternfly/icons/v/1.0.4",
+      "https://redhat.com/en/about/brand/standards/icons",
+      "https://patternfly.org/components/icon/css-variables",
+      "https://patternfly.org/components/icon/react/in-progress",
+      "https://patternfly.org/components/icon/react/standalone-icon-sizes",
+      "https://patternfly.org/components/icon/react/sizing-an-icon-within-the-icon-container",
+      "https://patternfly.org/components/icon/react/status-colors"
+    ],
+    "github": [
+      "https://github.com/patternfly/patternfly-mcp",
+      "https://github.com/patternfly/pf-codemods",
+      "https://github.com/patternfly/patternfly-react",
+      "https://github.com/patternfly/react-component-groups",
+      "https://github.com/patternfly/patternfly-quickstarts",
+      "https://github.com/RedHatOfficial/RedHatFont",
+      "https://github.com/patternfly/ai-helpers",
+      "https://github.com/patternfly/patternfly-cli",
+      "https://github.com/patternfly/chatbot",
+      "https://github.com/RedHatInsights/frontend-components",
+      "https://github.com/patternfly/patternfly-react-seed",
+      "https://github.com/patternfly/patternfly-a11y"
+    ],
+    "figma": [
+      "https://figma.com/design/VMEX8Xg2nzhBX8rfBx53jp/PatternFly-6--Styles---Components"
+    ],
+    "markdown_docs": [
+      "https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/get-started/design.md",
+      "https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md",
+      "https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/foundations-and-styles/design-tokens/design.md"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@patternfly/react-styles",
+      "https://npmjs.com/package/@patternfly/react-templates",
+      "https://npmjs.com/package/@patternfly/react-virtualized-extension",
+      "https://npmjs.com/package/@patternfly/react-core",
+      "https://npmjs.com/package/@patternfly/react-console",
+      "https://npmjs.com/package/@patternfly/react-component-groups",
+      "https://npmjs.com/package/@patternfly/react-charts",
+      "https://npmjs.com/package/@patternfly/chatbot",
+      "https://npmjs.com/package/@patternfly/react-tokens",
+      "https://npmjs.com/package/@patternfly/react-drag-drop",
+      "https://npmjs.com/package/@patternfly/react-data-view",
+      "https://npmjs.com/package/@patternfly/react-topology",
+      "https://npmjs.com/package/@patternfly/react-user-feedback",
+      "https://npmjs.com/package/@patternfly/patternfly",
+      "https://npmjs.com/package/@patternfly/quickstarts",
+      "https://npmjs.com/package/@patternfly/react-icons",
+      "https://npmjs.com/package/@patternfly/react-catalog-view-extension",
+      "https://npmjs.com/package/@patternfly/react-table",
+      "https://npmjs.com/package/@patternfly/react-code-editor",
+      "https://npmjs.com/package/@patternfly/icons",
+      "https://npmjs.com/package/@patternfly/react-log-viewer",
+      "https://npmjs.com/package/@patternfly/react-docs",
+      "https://npmjs.com/package/@patternfly/virtual-assistant"
     ]
   },
-  "unverified_resources": {},
-  "content_signals": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/remarkjs/react-markdown",
+      "https://github.com/project-felt/ai-guidelines",
+      "https://help.github.com/articles/fork-a-repo"
+    ],
+    "npm": [
+      "https://npmjs.com/package/rehype-unwrap-images",
+      "https://npmjs.com/package/rehype-external-links",
+      "https://npmjs.com/package/file-saver"
+    ]
+  },
+  "content_signals": {
+    "accessibility_conformance": "WCAG 2.2 AA",
+    "dark_mode": true,
+    "codemods": true,
+    "validation_loop": true,
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": {
     "license": "MIT",
     "stars": 5,
-    "last_pushed": "2026-09-15T21:12:01Z"
+    "last_pushed": "2026-09-23T09:54:01Z"
   },
-  "npm_meta": null,
+  "npm_meta": {
+    "latest_version": "6.6.1",
+    "last_published": "2026-08-03T14:17:32.742Z",
+    "weekly_downloads": 98997
+  },
   "indexed_pages": [
+    {
+      "url": "https://patternfly.org/ai/generative-uis/compass",
+      "title": "404 Not Found"
+    },
+    {
+      "url": "https://patternfly.org/ai/ai-assisted-code-migration",
+      "title": "404 Not Found"
+    },
+    {
+      "url": "https://patternfly.org/ai/conversation-design",
+      "title": "404 Not Found"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/design-tokens/about-tokens",
+      "title": "404 Not Found"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/uir",
+      "title": "404 Not Found"
+    },
+    {
+      "url": "https://patternfly.org/",
+      "title": "PatternFly"
+    },
+    {
+      "url": "https://patternfly.org/accessibility/overview",
+      "title": "PatternFly • Accessibility overview"
+    },
+    {
+      "url": "https://patternfly.org/components/accordion",
+      "title": "PatternFly • Accordion"
+    },
+    {
+      "url": "https://patternfly.org/ai/overview",
+      "title": "PatternFly • AI overview"
+    },
+    {
+      "url": "https://patternfly.org/components/alert",
+      "title": "PatternFly • Alert"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/design-tokens/all-design-tokens",
+      "title": "PatternFly • All design tokens"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/analytics",
+      "title": "PatternFly • Analytics"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/messages/demo/attach-via-menu-of-options-in-message-bar",
+      "title": "PatternFly • Attach via menu of options in message bar"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/messages/demo/attach-via-upload-button-in-message-bar",
+      "title": "PatternFly • Attach via upload button in message bar"
+    },
+    {
+      "url": "https://patternfly.org/components/avatar",
+      "title": "PatternFly • Avatar"
+    },
+    {
+      "url": "https://patternfly.org/components/button",
+      "title": "PatternFly • Button"
+    },
+    {
+      "url": "https://patternfly.org/components/card",
+      "title": "PatternFly • Card"
+    },
+    {
+      "url": "https://patternfly.org/extensions/catalog-view/catalog-tile",
+      "title": "PatternFly • Catalog tile"
+    },
+    {
+      "url": "https://patternfly.org/components/chip",
+      "title": "PatternFly • Chip"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/colors",
+      "title": "PatternFly • Colors"
+    },
+    {
+      "url": "https://patternfly.org/content-design/writing-guides/cli-handbook",
+      "title": "PatternFly • Command-line interface handbook"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/overview",
+      "title": "PatternFly • Component groups overview"
+    },
+    {
+      "url": "https://patternfly.org/components/overview",
+      "title": "PatternFly • Components overview"
+    },
+    {
+      "url": "https://patternfly.org/components/content",
+      "title": "PatternFly • Content"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/context-selector/design-guidelines",
+      "title": "PatternFly • Context selector"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/customizing-messages",
+      "title": "PatternFly • Customizing messages"
+    },
+    {
+      "url": "https://patternfly.org/components/data-list",
+      "title": "PatternFly • Data list"
+    },
+    {
+      "url": "https://patternfly.org/extensions/data-view/table",
+      "title": "PatternFly • Data view table"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/design-tokens/design",
+      "title": "PatternFly • Design"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/design-tokens/overview",
+      "title": "PatternFly • Design tokens overview"
+    },
+    {
+      "url": "https://patternfly.org/get-started/design",
+      "title": "PatternFly • Design with PatternFly"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/design-tokens/develop",
+      "title": "PatternFly • Develop"
+    },
+    {
+      "url": "https://patternfly.org/get-started/develop",
+      "title": "PatternFly • Develop with PatternFly"
+    },
+    {
+      "url": "https://patternfly.org/components/dual-list-selector",
+      "title": "PatternFly • Dual list selector"
+    },
+    {
+      "url": "https://patternfly.org/components/empty-state",
+      "title": "PatternFly • Empty state"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/error-state",
+      "title": "PatternFly • Error state"
+    },
+    {
+      "url": "https://patternfly.org/components/expandable-section",
+      "title": "PatternFly • Expandable section"
+    },
+    {
+      "url": "https://patternfly.org/components/expandable-section/accessibility",
+      "title": "PatternFly • Expandable section"
+    },
+    {
+      "url": "https://patternfly.org/components/expandable-section/react-demos",
+      "title": "PatternFly • Expandable section"
+    },
+    {
+      "url": "https://patternfly.org/components/expandable-section/css-variables",
+      "title": "PatternFly • Expandable section"
+    },
+    {
+      "url": "https://patternfly.org/extensions/overview",
+      "title": "PatternFly • Extensions overview"
+    },
+    {
+      "url": "https://patternfly.org/components/forms/form",
+      "title": "PatternFly • Form"
+    },
+    {
+      "url": "https://patternfly.org/components/forms/form-select",
+      "title": "PatternFly • Form select"
+    },
+    {
+      "url": "https://patternfly.org/components/helper-text/react-demos",
+      "title": "PatternFly • Helper text"
+    },
+    {
+      "url": "https://patternfly.org/components/hero",
+      "title": "PatternFly • Hero"
+    },
+    {
+      "url": "https://patternfly.org/components/icon",
+      "title": "PatternFly • Icon"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/iconography",
+      "title": "PatternFly • Iconography"
+    },
+    {
+      "url": "https://patternfly.org/components/jump-links/accessibility",
+      "title": "PatternFly • Jump links"
+    },
+    {
+      "url": "https://patternfly.org/components/jump-links/react-demos",
+      "title": "PatternFly • Jump links"
+    },
+    {
+      "url": "https://patternfly.org/components/jump-links/html-demos",
+      "title": "PatternFly • Jump links"
+    },
+    {
+      "url": "https://patternfly.org/components/jump-links/html",
+      "title": "PatternFly • Jump links"
+    },
+    {
+      "url": "https://patternfly.org/components/jump-links",
+      "title": "PatternFly • Jump links"
+    },
+    {
+      "url": "https://patternfly.org/components/jump-links/design-guidelines",
+      "title": "PatternFly • Jump links"
+    },
+    {
+      "url": "https://patternfly.org/components/jump-links/css-variables",
+      "title": "PatternFly • Jump links"
+    },
+    {
+      "url": "https://patternfly.org/components/label",
+      "title": "PatternFly • Label"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/line-chart",
+      "title": "PatternFly • Line chart"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/menu-toggle",
+      "title": "PatternFly • Menu toggle"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/messages/demo/message-auto-scrolling",
+      "title": "PatternFly • Message auto-scrolling"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/messages/demo",
+      "title": "PatternFly • Messages"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/messages",
+      "title": "PatternFly • Messages"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/motion/development-guide",
+      "title": "PatternFly • Motion"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/motion/demo",
+      "title": "PatternFly • Motion"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/motion",
+      "title": "PatternFly • Motion"
+    },
+    {
+      "url": "https://patternfly.org/components/navigation",
+      "title": "PatternFly • Navigation"
+    },
+    {
+      "url": "https://patternfly.org/components/navigation/react-demos",
+      "title": "PatternFly • Navigation"
+    },
+    {
+      "url": "https://patternfly.org/components/notification-badge",
+      "title": "PatternFly • Notification badge"
+    },
+    {
+      "url": "https://patternfly.org/content-design/grammar/numerics",
+      "title": "PatternFly • Numerics"
+    },
+    {
+      "url": "https://patternfly.org/developer-guides/open-ui-automation",
+      "title": "PatternFly • Open UI Automation"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/overview",
+      "title": "PatternFly • Overview"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/overview/demo",
+      "title": "PatternFly • Overview"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/overview/design-guidelines",
+      "title": "PatternFly • Overview"
+    },
+    {
+      "url": "https://patternfly.org/components/page",
+      "title": "PatternFly • Page"
+    },
+    {
+      "url": "https://patternfly.org/accessibility/product-scorecard",
+      "title": "PatternFly • Product scorecard"
+    },
+    {
+      "url": "https://patternfly.org/components/progress",
+      "title": "PatternFly • Progress"
+    },
+    {
+      "url": "https://patternfly.org/extensions/quick-starts/Basic-quick-starts",
+      "title": "PatternFly • Quick starts"
+    },
+    {
+      "url": "https://patternfly.org/extensions/quick-starts",
+      "title": "PatternFly • Quick starts"
+    },
+    {
+      "url": "https://patternfly.org/releases/release-highlights",
+      "title": "PatternFly • Release highlights"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/sankey-chart",
+      "title": "PatternFly • Sankey chart"
+    },
+    {
+      "url": "https://patternfly.org/components/search-input",
+      "title": "PatternFly • Search input"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/select",
+      "title": "PatternFly • Select"
+    },
+    {
+      "url": "https://patternfly.org/components/skeleton/accessibility",
+      "title": "PatternFly • Skeleton"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/spacers",
+      "title": "PatternFly • Spacers"
+    },
+    {
+      "url": "https://patternfly.org/patterns/status-and-severity",
+      "title": "PatternFly • Status and severity"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs/react/subtabs",
+      "title": "PatternFly • Subtabs"
+    },
+    {
+      "url": "https://patternfly.org/components/table/design-guidelines",
+      "title": "PatternFly • Table"
+    },
+    {
+      "url": "https://patternfly.org/components/table",
+      "title": "PatternFly • Table"
+    },
+    {
+      "url": "https://patternfly.org/components/table/react-demos",
+      "title": "PatternFly • Table"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs",
+      "title": "PatternFly • Tabs"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs/design-guidelines",
+      "title": "PatternFly • Tabs"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs/accessibility",
+      "title": "PatternFly • Tabs"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs/html-demos",
+      "title": "PatternFly • Tabs"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs/react-demos",
+      "title": "PatternFly • Tabs"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs/css-variables",
+      "title": "PatternFly • Tabs"
+    },
+    {
+      "url": "https://patternfly.org/components/tabs/html",
+      "title": "PatternFly • Tabs"
+    },
+    {
+      "url": "https://patternfly.org/accessibility/test-your-product",
+      "title": "PatternFly • Test your product"
+    },
+    {
+      "url": "https://patternfly.org/components/forms/text-area",
+      "title": "PatternFly • Text area"
+    },
+    {
+      "url": "https://patternfly.org/components/forms/text-area/css-variables",
+      "title": "PatternFly • Text area"
+    },
+    {
+      "url": "https://patternfly.org/components/forms/text-input",
+      "title": "PatternFly • Text input"
+    },
+    {
+      "url": "https://patternfly.org/components/text-input-group",
+      "title": "PatternFly • Text input group"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/theming",
+      "title": "PatternFly • Theming"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/theming/dark-theme-handbook",
+      "title": "PatternFly • Theming"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/theming/high-contrast-handbook",
+      "title": "PatternFly • Theming"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/theming/glass-mode-handbook",
+      "title": "PatternFly • Theming"
+    },
+    {
+      "url": "https://patternfly.org/components/tile",
+      "title": "PatternFly • Tile"
+    },
+    {
+      "url": "https://patternfly.org/components/title",
+      "title": "PatternFly • Title"
+    },
+    {
+      "url": "https://patternfly.org/components/tree-view",
+      "title": "PatternFly • Tree view"
+    },
+    {
+      "url": "https://patternfly.org/components/expandable-section/react/truncate-expansion",
+      "title": "PatternFly • Truncate expansion"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/typography",
+      "title": "PatternFly • Typography"
+    },
+    {
+      "url": "https://patternfly.org/extensions/chatbot/ui",
+      "title": "PatternFly • UI"
+    },
+    {
+      "url": "https://patternfly.org/releases/upgrade-guide",
+      "title": "PatternFly • Upgrade to PatternFly 6"
+    },
+    {
+      "url": "https://patternfly.org/releases/upgrade-guide/release-notes",
+      "title": "PatternFly • Upgrade to PatternFly 6"
+    },
+    {
+      "url": "https://patternfly.org/components/expandable-section/react/with-custom-toggle-content",
+      "title": "PatternFly • With custom toggle content"
+    },
+    {
+      "url": "https://patternfly.org/components/expandable-section/react/with-heading-semantics",
+      "title": "PatternFly • With heading semantics"
+    },
     {
       "url": "https://www.patternfly.org/",
       "title": "Red Hat — Patternfly Design System"

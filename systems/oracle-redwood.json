@@ -1,0 +1,30 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-24T03:39:30+00:00",
+  "id": "oracle-redwood",
+  "organization": "Oracle",
+  "design_system": "Redwood",
+  "full_name": "Oracle — Redwood",
+  "start_urls": [
+    "https://redwood.oracle.com/"
+  ],
+  "detail_url": "/systems/oracle-redwood",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-24T02:17:30+00:00",
+  "last_modified": null,
+  "sitemap_last_modified": null,
+  "resources": {},
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://redwood.oracle.com/",
+      "title": "https://redwood.oracle.com/"
+    }
+  ]
+}

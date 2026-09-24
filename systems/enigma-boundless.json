@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "enigma-boundless",
   "organization": "Enigma",
   "design_system": "Boundless",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T11:47:32+00:00",
+  "last_checked": "2026-09-24T00:51:53+00:00",
   "last_modified": "Sun, 27 Aug 2017 00:35:56 GMT",
   "sitemap_last_modified": "2017-06-06T04:45:52.951Z",
   "resources": {},
@@ -24,7 +24,7 @@
   "indexed_pages": [
     {
       "url": "https://boundless.js.org/",
-      "title": "Enigma — Boundless"
+      "title": "boundless / Welcome!"
     }
   ]
 }

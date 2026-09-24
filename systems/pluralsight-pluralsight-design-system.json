@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "pluralsight-pluralsight-design-system",
   "organization": "Pluralsight",
   "design_system": "Pluralsight Design System",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T21:57:30+00:00",
+  "last_checked": "2026-09-24T02:22:12+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -31,7 +31,7 @@
   "indexed_pages": [
     {
       "url": "https://design-system.pluralsight.com/",
-      "title": "Pluralsight — Pluralsight Design System"
+      "title": "Pando Design System"
     }
   ]
 }

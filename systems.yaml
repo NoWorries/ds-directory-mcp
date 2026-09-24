@@ -91,7 +91,7 @@
   last_modified: Wed, 28 Feb 2024 21:04:55 GMT
   sitemap_url: https://spectrum.adobe.com/sitemap.xml
   sitemap_last_modified: '2024-02-28T20:57:26.301Z'
-  last_checked: '2026-09-23T22:36:48+00:00'
+  last_checked: '2026-09-23T23:37:27+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -130,45 +130,28 @@
   design_system: Altinn Design System
   start_urls:
   - https://docs.altinn.studio/
-  pages_indexed: 140
+  pages_indexed: 266
   hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources:
     github:
-    - https://github.com/bpmn-io/bpmn-js-nyan
-    - https://github.com/prometheus/prometheus
-    - https://github.com/golang/go
-    - https://github.com/facebook/react
-    - https://github.com/docker/docker-ce
-    - https://github.com/helm/helm
-    - https://github.com/nginx/nginx
-    - https://github.com/containous/traefik
-    - https://github.com/Microsoft/TypeScript
-    - https://github.com/dotnet/aspnetcore
-    - https://github.com/Microsoft/vscode
-    - https://github.com/go-gitea/gitea
-    - https://github.com/dotnet/runtime
-    - https://github.com/nodejs/node
-    - https://github.com/kubernetes/kubernetes
-    - https://github.com/hashicorp/terraform
-    - https://github.com/grafana/grafana
-    - https://github.com/dotnet/csharplang
-    - https://github.com/digdir/roadmap
-    - https://github.com/facebook/jest
+    - https://github.com/felleslosninger/efm-mocks
   content_signals:
     frameworks:
     - React
+    exemplars: true
   etag: '"6ab3cbca-f3"'
   last_modified: Wed, 23 Sep 2026 12:53:30 GMT
   sitemap_url: https://docs.altinn.studio/sitemap.xml
   sitemap_last_modified: '2026-09-23T14:49:18+02:00'
-  last_checked: '2026-09-23T22:38:43+00:00'
+  last_checked: '2026-09-23T23:39:35+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
       React: https://docs.altinn.studio/
+    exemplars: https://docs.altinn.studio/nb/altinn-studio/v8/reference/logic/expressions
   has_localized_docs: false
   render_mode: spa
   resources:
@@ -185,12 +168,13 @@
     markdown_docs:
     - https://github.com/Altinn/app-localtest/blob/master/README.md
     - https://github.com/Altinn/altinn-studio/blob/main/CONTRIBUTING.md
+    - https://github.com/Altinn/app-localtest/blob/main/README.md
     npm:
     - https://npmjs.com/package/altinn-designsystem
   github_meta:
-    license: null
-    stars: 11
-    last_pushed: '2026-08-20T19:04:50Z'
+    license: BSD-3-Clause
+    stars: 21
+    last_pushed: '2026-09-15T14:18:42Z'
   npm_meta:
     latest_version: 4.2.0
     last_published: '2022-10-25T12:59:02.085Z'
@@ -265,7 +249,7 @@
   content_signals: {}
   etag: W/"6036427a-46d"
   last_modified: Wed, 24 Feb 2021 12:11:38 GMT
-  last_checked: '2026-09-23T22:39:27+00:00'
+  last_checked: '2026-09-23T23:40:06+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -273,25 +257,42 @@
   design_system: Human Interface Guidelines
   start_urls:
   - https://developer.apple.com/design/human-interface-guidelines/
-  pages_indexed: 1
-  hit_max_pages: false
-  crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 1
+  pages_indexed: 151
+  hit_max_pages: true
+  crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
-  content_signals: {}
-  etag: '"4511-65bc767d03082"'
-  last_modified: Fri, 18 Sep 2026 20:04:18 GMT
-  last_checked: '2026-09-21T02:22:13+00:00'
+  unverified_resources:
+    github:
+    - https://github.com/ResearchKit/ResearchKit
+  content_signals:
+    dark_mode: true
+    frameworks:
+    - SwiftUI
+  etag: '"44ff-65c229b1bbf22"'
+  last_modified: Wed, 23 Sep 2026 08:52:41 GMT
+  last_checked: '2026-09-24T00:02:26+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    dark_mode: https://developer.apple.com/design/human-interface-guidelines/app-icons
+    frameworks:
+      SwiftUI: https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo
   has_localized_docs: false
   render_mode: spa
+  resources:
+    github:
+    - https://github.com/Apple/UnityPlugins
+    icons:
+    - https://developer.apple.com/design/human-interface-guidelines/icons
+  github_meta:
+    license: Apache-2.0
+    stars: 988
+    last_pushed: '2026-09-23T22:24:37Z'
 - organization: Arbetsförmedlingen
   design_system: Design system
   start_urls:
   - https://designsystem.arbetsformedlingen.se/
-  pages_indexed: 1
+  pages_indexed: 128
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -301,18 +302,23 @@
     frameworks:
     - React
     - Angular
+    accessibility_conformance: WCAG 2.2 AA
   etag: '"2a524b8751e867273ea9b2f172fa2981eaa72b532883542380875c5ab2ca5785"'
   last_modified: Wed, 09 Sep 2026 08:48:57 GMT
   sitemap_url: https://designsystem.arbetsformedlingen.se/sitemap.xml
   sitemap_last_modified: '2026-06-05'
-  last_checked: '2026-09-19T11:15:50+00:00'
+  last_checked: '2026-09-24T00:00:25+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
       React: https://designsystem.arbetsformedlingen.se/
       Angular: https://designsystem.arbetsformedlingen.se/
+    accessibility_conformance: https://designsystem.arbetsformedlingen.se/designmonster/webbfarger
   has_localized_docs: false
   render_mode: spa
+  resources:
+    figma:
+    - https://figma.com/proto/7MqaS4tRZZrA2rk8f0W3me/UI-kit-guider
 - organization: ArcGIS
   design_system: Calcite
   start_urls:
@@ -361,15 +367,15 @@
   - https://palette.artsy.net/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
+  crawl_error: rendered fetch returned no content
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"a196026065080c977b13ecae3d867784"
   last_modified: Tue, 15 Sep 2026 13:35:45 GMT
-  last_checked: '2026-09-19T11:18:11+00:00'
+  last_checked: '2026-09-24T00:02:45+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 0
+  consecutive_crawl_failures: 1
   content_signal_sources: {}
   has_localized_docs: false
 - organization: Atlassian
@@ -550,14 +556,14 @@
   - https://overdrive.autoguru.io/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"6aa234ee-108c"
   last_modified: Thu, 10 Sep 2026 04:41:18 GMT
-  last_checked: '2026-09-19T11:18:20+00:00'
+  last_checked: '2026-09-24T00:04:36+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -663,17 +669,17 @@
   design_system: Design system
   start_urls:
   - https://designsystem.backbase.com/v2/web-components/
-  pages_indexed: 1
+  pages_indexed: 2
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: W/"477c66487e134d5eb30e825a2c7c86d9"
-  last_modified: Thu, 17 Sep 2026 21:06:58 GMT
+  etag: W/"9da8e7fa3831d22f7d4b1ce1252b4131"
+  last_modified: Wed, 23 Sep 2026 13:59:45 GMT
   sitemap_url: https://designsystem.backbase.com/sitemap.xml
-  last_checked: '2026-09-19T11:19:24+00:00'
+  last_checked: '2026-09-24T00:05:14+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -830,7 +836,7 @@
     stars: 36
     last_pushed: '2026-08-04T10:25:55Z'
   last_modified: Tue, 04 Aug 2026 10:26:24 GMT
-  last_checked: '2026-09-19T11:19:43+00:00'
+  last_checked: '2026-09-24T00:06:56+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -841,12 +847,12 @@
   - https://design.blip.ai/uai-design-system/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-19T11:31:50+00:00'
+  last_checked: '2026-09-24T00:07:33+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -870,20 +876,37 @@
   design_system: Design
   start_urls:
   - https://design.brainly.com/
-  pages_indexed: 1
-  hit_max_pages: false
+  pages_indexed: 150
+  hit_max_pages: true
   crawl_error: ''
   likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  etag: W/"930cc06270fa76ed24cf1638a6953146"
+  content_signals:
+    dark_mode: true
+  etag: W/"de75251462011ac668980e2a17223dcc"
   sitemap_url: https://design.brainly.com/sitemap.xml
-  last_checked: '2026-09-19T21:55:12+00:00'
+  last_checked: '2026-09-24T00:31:54+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
-  content_signal_sources: {}
+  content_signal_sources:
+    dark_mode: https://design.brainly.com/8adfd5f36/v/0/p/86f82d-product-
   has_localized_docs: false
   render_mode: spa
+  resources:
+    figma:
+    - https://figma.com/file/YiR7xNtsr51icADIARWIcR/Pencil-Web-Components
+    - https://figma.com/file/0CD7q6fUw53yvGrtfDWU1b/%5BDS%5D-Dialog
+    - https://figma.com/file/3CyVXIZP3ux3muMHDGFLe8/%5BDS%5D-Subject-Icons
+    - https://figma.com/file/i3UxZa9iEOm1n0TpDmJV31/Pencil-Utilities
+    - https://figma.com/file/obVUMkfuvyrCKYDuWpKmBQ/%5BDS%5D-Card
+    - https://figma.com/file/9oLHNgZbQb6NY3HR37Keyj/%5BDS%5D-Icons
+    - https://figma.com/file/rDjVgIdpNMMaGvc9SE8bFz/Pencil-Marketing
+    - https://figma.com/file/Bv6y1xUSN3K89lOyppeYnX/%5BDS%5D-Counter
+    - https://figma.com/file/H2dCnWIzlsOem86HbbweqR/%5BDS%5D-Label
+    - https://figma.com/file/IVLWV9rfmjhACATToiFH9n/%5BDS%5D-Popup
+    - https://figma.com/file/VFczUG92lQ0mLGL5NIfMed/MO-UXMG-Handoff-UI-Kit
+    - https://figma.com/file/bNeNNhaDh44w30bA6lxhP0
+    - https://figma.com/file/VRNGY1WOrIAFMU03pvqn1O/%5BDS%5D-Button
 - organization: Bridge
   design_system: Bold design system
   start_urls:
@@ -899,7 +922,7 @@
   etag: W/"6a877905-3a97"
   last_modified: Thu, 20 Aug 2026 22:00:37 GMT
   sitemap_url: https://bold.bridge.ufsc.br/sitemap.xml
-  last_checked: '2026-09-19T11:32:50+00:00'
+  last_checked: '2026-09-24T00:10:00+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://bold.bridge.ufsc.br/
@@ -969,20 +992,37 @@
   design_system: Arc
   start_urls:
   - https://arc.bt.com/
-  pages_indexed: 1
-  hit_max_pages: false
+  pages_indexed: 150
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
-  content_signals: {}
-  etag: W/"0eb5136a08ede8a9dac3b4a4ac25227c"
+  content_signals:
+    exemplars: true
+    multi_brand: true
+  etag: W/"1668941d00c5b5950c2c77ca47db1154"
   sitemap_url: https://arc.bt.com/sitemap.xml
-  last_checked: '2026-09-19T21:55:46+00:00'
+  last_checked: '2026-09-24T00:40:50+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    exemplars: https://arc.bt.com/880cad2bb/p/923a75-how-we-write-content
+    multi_brand: https://arc.bt.com/880cad2bb/p/795a33-arc-roadmap/b/12d767
   has_localized_docs: false
   render_mode: spa
+  resources:
+    storybook:
+    - https://ui.digital-ent-int.bt.com/v11.22.0/storybook
+    - https://ui.digital-ent-int.bt.com/branch/arc-421-avatar/storybook
+    - https://ui.digital-ent-int.bt.com/branch/v12/storybook
+    - https://ui.digital-ent-int.bt.com/latest/storybook
+    - https://ui.digital-ent-int.bt.com/branch/update-tokens/storybook
+    - https://ui.digital-ent-int.bt.com/branch/arc-727-update-storybook-copy/storybook
+    - https://ui.digital-ent-int.bt.com/v11.6.0/storybook
+    figma:
+    - https://figma.com/file/DuPm4GaIJgopgRx6FIBQfE/Arc-UI-System-Library
+    - https://figma.com/design/DuPm4GaIJgopgRx6FIBQfE/Arc-UI-System-Library
+    - https://figma.com/file/vy34Hy9QohmbyuZa6zD9a9/Arc-Foundations
 - organization: Buildit
   design_system: Gravity
   start_urls:
@@ -1096,8 +1136,8 @@
     github:
     - https://github.com/catho/quantum
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
@@ -1107,7 +1147,7 @@
     last_pushed: '2026-05-28T14:54:05Z'
   etag: W/"6a185732-1af9"
   last_modified: Thu, 28 May 2026 14:54:42 GMT
-  last_checked: '2026-09-19T11:33:53+00:00'
+  last_checked: '2026-09-24T00:34:04+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -1278,15 +1318,15 @@
   - https://cultureamp.design/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
+  crawl_error: rendered fetch returned no content
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"878f2396eab4816b6ee77c72c15114c3"
-  last_modified: Fri, 18 Sep 2026 05:05:20 GMT
-  last_checked: '2026-09-19T11:34:05+00:00'
+  last_modified: Mon, 21 Sep 2026 23:43:06 GMT
+  last_checked: '2026-09-24T00:36:39+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 0
+  consecutive_crawl_failures: 1
   content_signal_sources: {}
   has_localized_docs: false
 - organization: Datadog
@@ -1342,8 +1382,8 @@
   - https://ui.decentraland.org/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: rendered fetch returned 0 pages
-  consecutive_crawl_failures: 1
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 2
   likely_spa: true
   unverified_resources: {}
   content_signals:
@@ -1351,7 +1391,7 @@
     - React
   etag: W/"6a8c4f17-d1a"
   last_modified: Mon, 24 Aug 2026 14:03:03 GMT
-  last_checked: '2026-09-19T20:25:03+00:00'
+  last_checked: '2026-09-24T00:43:21+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -1369,7 +1409,7 @@
   unverified_resources: {}
   content_signals: {}
   etag: W/"7bb-XeVDM9kqYDnzprlC1ZyCA6aFy0Q"
-  last_checked: '2026-09-19T11:35:23+00:00'
+  last_checked: '2026-09-24T00:44:59+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -1440,8 +1480,8 @@
   - https://barista.dynatrace.com/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: rendered fetch returned 0 pages
-  consecutive_crawl_failures: 1
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 2
   likely_spa: true
   unverified_resources:
     github:
@@ -1463,8 +1503,8 @@
       Web Components: https://barista.dynatrace.com/
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-19T20:24:56+00:00'
-  etag: W/"748d71d925357e4d7a8018e7bd42c199"
+  last_checked: '2026-09-24T00:47:05+00:00'
+  etag: W/"e8dfb69ac9323e585c1695be27f32e5c"
   sitemap_url: https://barista.dynatrace.com/sitemap.xml
   resources:
     github:
@@ -1500,7 +1540,7 @@
   design_system: Skin
   start_urls:
   - https://ebay.github.io/skin/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     github:
     - https://github.com/eBay/evo-web
@@ -1520,12 +1560,12 @@
   etag: W/"680fc46c-10c"
   last_modified: Mon, 28 Apr 2025 18:09:48 GMT
   sitemap_url: https://ebay.github.io/sitemap.xml
-  last_checked: '2026-09-19T11:36:22+00:00'
+  last_checked: '2026-09-24T00:48:51+00:00'
   likely_unmaintained: false
   content_signal_sources:
-    accessibility_conformance: https://ebay.github.io/skin/
+    accessibility_conformance: https://ebay.github.io/skin
     frameworks:
-      React: https://ebay.github.io/skin/
+      React: https://ebay.github.io/skin
   has_localized_docs: false
   render_mode: spa
 - organization: Elastic UI
@@ -1559,7 +1599,7 @@
   design_system: Nova
   start_urls:
   - https://nova.eliagroup.io/
-  pages_indexed: 1
+  pages_indexed: 105
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -1573,7 +1613,7 @@
     - Web Components
   etag: W/"1785944241673"
   sitemap_url: https://nova.eliagroup.io/sitemap.xml
-  last_checked: '2026-09-19T11:47:13+00:00'
+  last_checked: '2026-09-24T01:06:37+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -1589,8 +1629,16 @@
     - https://nova-storybook.eliagroup.io/native
     - https://nova-storybook.eliagroup.io/react
     - https://nova-storybook.eliagroup.io/angular
+    - https://nova-storybook.eliagroup.io/
+    - https://nova-storybook.eliagroup.io/vuejs
+    - https://nova-storybook.eliagroup.io/native/iframe.html
     figma:
     - https://www.figma.com/design/3aG9ZI9nN7ecaplOPyOO55/%F0%9F%91%BE-Web---Nova-Tycho?m=auto&node-id=6975-4&t=o1tKlSJ9j3yNGs66-1
+    - https://figma.com/design/pdFuxeVDb741Lg14N9KSc2/%F0%9F%91%BB--WPF---Nova-Tycho
+    - https://figma.com/community/file/1488820114712517403/nova-tycho-for-web
+    - https://figma.com/design/rlDKiHGA4r1NwumIbjtGPA/%F0%9F%91%BE-Icons---Nova-Tycho
+    - https://figma.com/file/3aG9ZI9nN7ecaplOPyOO55
+    - https://figma.com/design/kieKhoIy4LaRVws0LF1rXz/%F0%9F%92%A0-Hitu-Illustration-Components
   render_mode: spa
 - organization: ENGIE
   design_system: Fluid
@@ -1621,7 +1669,7 @@
   last_modified: Sun, 27 Aug 2017 00:35:56 GMT
   sitemap_url: https://boundless.js.org/sitemap.xml
   sitemap_last_modified: '2017-06-06T04:45:52.951Z'
-  last_checked: '2026-09-19T11:47:32+00:00'
+  last_checked: '2026-09-24T00:51:53+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   content_signal_sources: {}
@@ -1787,17 +1835,17 @@
   design_system: Photon Design System
   start_urls:
   - https://design.firefox.com/photon/
-  pages_indexed: 1
+  pages_indexed: 2
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: W/"477c66487e134d5eb30e825a2c7c86d9"
-  last_modified: Thu, 17 Sep 2026 21:06:58 GMT
+  etag: W/"9da8e7fa3831d22f7d4b1ce1252b4131"
+  last_modified: Wed, 23 Sep 2026 13:59:45 GMT
   sitemap_url: https://design.firefox.com/sitemap.xml
-  last_checked: '2026-09-19T11:48:15+00:00'
+  last_checked: '2026-09-24T00:54:28+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -1960,15 +2008,15 @@
   design_system: Foyer Design System
   start_urls:
   - https://design.foyer.lu/
-  pages_indexed: 1
+  pages_indexed: 4
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: W/"9e665ddeee7111c2b75412ddfe7fdef3"
+  etag: W/"59786c77ce4088eef5f18c9b485a9be5"
   sitemap_url: https://design.foyer.lu/sitemap.xml
-  last_checked: '2026-09-19T21:56:20+00:00'
+  last_checked: '2026-09-24T00:56:55+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   content_signal_sources: {}
@@ -1984,14 +2032,14 @@
     - https://storybook.futurelearn.com/?path=%2Fstory%2Fwelcome--page
     - https://storybook.futurelearn.com/iframe.html?args=&id=welcome--page
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: W/"6aad63ca-900"
-  last_modified: Fri, 18 Sep 2026 16:16:10 GMT
-  last_checked: '2026-09-19T11:49:04+00:00'
+  etag: W/"6ab3c56d-900"
+  last_modified: Wed, 23 Sep 2026 12:26:21 GMT
+  last_checked: '2026-09-24T00:59:42+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -2261,7 +2309,7 @@
   design_system: Material 2
   start_urls:
   - https://material.io/guidelines/#introduction-goals/
-  pages_indexed: 1
+  pages_indexed: 2
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -2272,35 +2320,58 @@
   etag: W/"9fe3994f3822d53a0ff79f19dcb81afa"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://material.io/sitemap.xml
-  last_checked: '2026-09-19T11:49:35+00:00'
+  last_checked: '2026-09-24T01:01:58+00:00'
   likely_unmaintained: false
   content_signal_sources:
-    dark_mode: https://material.io/guidelines/#introduction-goals/
+    dark_mode: https://material.io/guidelines
   has_localized_docs: false
   render_mode: spa
 - organization: Google
   design_system: Material Design
   start_urls:
   - https://material.io/
-  pages_indexed: 1
-  hit_max_pages: false
+  pages_indexed: 150
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/AdobeXD/design-system-package-dsp
   content_signals:
     frameworks:
     - React
+    - Jetpack Compose
+    - Web Components
+    - Angular
   etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://material.io/sitemap.xml
-  last_checked: '2026-09-19T20:26:07+00:00'
+  last_checked: '2026-09-24T01:26:43+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
       React: https://material.io/
+      Jetpack Compose: https://material.io/styles/shape/overview-principles
+      Web Components: https://material.io/get-started
+      Angular: https://material.io/develop/web
   has_localized_docs: false
   render_mode: spa
+  resources:
+    github:
+    - https://github.com/material-foundation/material-color-utilities
+    - https://github.com/material-foundation/material-tokens
+    figma:
+    - https://figma.com/community/file/1035203688168086460/material-3-design-kit
+    - https://figma.com/community/file/1035203688168086460
+    icons:
+    - https://material.io/m3/pages/icons/designing-icons
+    - https://material.io/styles/icons/overview
+    - https://fonts.google.com/icons
+  github_meta:
+    license: Apache-2.0
+    stars: 2272
+    last_pushed: '2026-08-21T20:13:31Z'
 - organization: GOV.UK
   design_system: GOV.UK Design System
   start_urls:
@@ -2554,20 +2625,58 @@
   design_system: Helsinki Design System
   start_urls:
   - https://hds.hel.fi/
-  pages_indexed: 1
-  hit_max_pages: false
+  pages_indexed: 150
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
-  content_signals: {}
+  unverified_resources:
+    npm:
+    - https://npmjs.com/package/hds-js
+    - https://npmjs.com/package/hds-core
+    - https://npmjs.com/package/hds-react
+  content_signals:
+    dark_mode: true
+    frameworks:
+    - React
   etag: W/"6a5a0b3b-a3c78"
   last_modified: Fri, 17 Jul 2026 11:00:11 GMT
-  last_checked: '2026-09-19T20:26:25+00:00'
+  last_checked: '2026-09-24T01:30:01+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    dark_mode: https://hds.hel.fi/components/footer
+    frameworks:
+      React: https://hds.hel.fi/components
   has_localized_docs: false
   render_mode: spa
+  resources:
+    github:
+    - https://github.com/City-of-Helsinki/helsinki-design-system
+    storybook:
+    - https://hds.hel.fi/storybook/react
+    - https://hds.hel.fi/release-4.10.0/storybook/react
+    - https://city-of-helsinki.github.io/helsinki-design-system/storybook/core
+    - https://hds.hel.fi/storybook/react/static-cookie-consent/standalonePage.html
+    - https://hds.hel.fi/storybook/react/iframe.html
+    - https://hds.hel.fi/storybook/react/static-cookie-consent/standaloneBanner.html
+    - https://hds.hel.fi/release-5.2.2/storybook/react
+    - https://hds.hel.fi/storybook/core
+    figma:
+    - https://figma.com/design/Kxwg3R0zNRHj55nQqFu6VS/HDS-Design-Kit-v4
+    - https://figma.com/design/Kxwg3R0zNRHj55nQqFu6VS/HDS-Design-Kit-v3
+    markdown_docs:
+    - https://github.com/City-of-Helsinki/helsinki-design-system/blob/master/CONTRIBUTING.md
+    - https://github.com/City-of-Helsinki/helsinki-design-system/blob/master/packages/react/README.md
+    icons:
+    - https://hds.hel.fi/release-4.10.0/components/icon
+    - https://hds.hel.fi/foundation/visual-assets/icons
+    - https://hds.hel.fi/components/icon
+    - https://hds.hel.fi/release-5.2.2/components/icon
+    - https://hds.hel.fi/release-5.2.2/foundation/visual-assets/icons
+  github_meta:
+    license: MIT
+    stars: 197
+    last_pushed: '2026-09-21T08:34:20Z'
 - organization: Heroku
   design_system: Heroki Design
   start_urls:
@@ -2654,21 +2763,53 @@
   design_system: Uniform
   start_urls:
   - https://uniform.hudl.com/
-  pages_indexed: 1
+  pages_indexed: 139
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
-  content_signals: {}
+  content_signals:
+    validation_loop: true
+    frameworks:
+    - React
+    - Web Components
   etag: W/"6659ce48-5ae7a"
   last_modified: Fri, 31 May 2024 13:19:04 GMT
   sitemap_url: https://uniform.hudl.com/sitemap.xml
-  last_checked: '2026-09-19T20:26:42+00:00'
+  last_checked: '2026-09-24T01:47:00+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    validation_loop: https://uniform.hudl.com/components/action-list/design
+    frameworks:
+      React: https://uniform.hudl.com/components/card/design
+      Web Components: https://uniform.hudl.com/guidelines/accessibility/audit/design
   has_localized_docs: false
   render_mode: spa
+  resources:
+    storybook:
+    - https://storybook.js.org/blog/accessibility-testing-with-storybook
+    - https://uniform-web.storybook.hudltools.com/
+    figma:
+    - https://figma.com/file/kBPRlhqT74PfaKbzZIhIfG/Uniform-Annotations
+    icons:
+    - https://uniform.hudl.com/components/icons/features-and-navigation/design
+    - https://uniform.hudl.com/components/icons/user/design
+    - https://uniform.hudl.com/components/icons/permissions/design
+    - https://uniform.hudl.com/components/icons/features-navigation/design
+    - https://uniform.hudl.com/components/icons/feedback/design
+    - https://uniform.hudl.com/components/icons/logos/design
+    - https://uniform.hudl.com/components/icon/design
+    - https://uniform.hudl.com/components/icons/media-playback/design
+    - https://uniform.hudl.com/components/icons/technology/design
+    - https://uniform.hudl.com/components/icons/design
+    - https://uniform.hudl.com/components/icons/effects/design
+    - https://uniform.hudl.com/components/icons/interactions/design
+    - https://uniform.hudl.com/components/icons/reactions/design
+    - https://uniform.hudl.com/components/icons/ui-controls/design
+    - https://uniform.hudl.com/components/icons/filetypes/design
+    - https://uniform.hudl.com/components/icons/sports/design
+    - https://uniform.hudl.com/components/icons/video-features/design
 - organization: IBM
   design_system: Carbon Design System
   start_urls:
@@ -2779,20 +2920,33 @@
   design_system: Rivet
   start_urls:
   - https://rivet.iu.edu/
-  pages_indexed: 1
+  pages_indexed: 83
   hit_max_pages: false
-  crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 2
+  crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: '"6aac315b-13cf"'
-  last_modified: Thu, 17 Sep 2026 18:28:43 GMT
-  last_checked: '2026-09-21T02:35:13+00:00'
+  etag: '"a609-656091e6ad7f7-gzip"'
+  last_modified: Tue, 07 Jul 2026 17:57:05 GMT
+  last_checked: '2026-09-24T01:42:31+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
   render_mode: spa
+  sitemap_url: https://rivet.iu.edu/sitemap.xml
+  sitemap_last_modified: '2026-07-07T17:56:51.237Z'
+  resources:
+    github:
+    - https://github.com/indiana-university/rivet-icons
+    markdown_docs:
+    - https://github.com/indiana-university/rivet-stickers/blob/main/README.md
+    icons:
+    - https://rivet.iu.edu/icons-stickers/icons
+  github_meta:
+    license: BSD-3-Clause
+    stars: 7
+    last_pushed: '2025-02-28T20:00:56Z'
 - organization: Infor
   design_system: Infor Design System
   start_urls:
@@ -2986,8 +3140,8 @@
     github:
     - https://github.com/JetBrains/ring-ui
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
@@ -2995,9 +3149,9 @@
     license: Apache-2.0
     stars: 3790
     last_pushed: '2026-09-14T11:34:41Z'
-  etag: '"6aa7dc4c-ac"'
-  last_modified: Mon, 14 Sep 2026 11:36:44 GMT
-  last_checked: '2026-09-19T20:27:15+00:00'
+  etag: '"6ab12247-ac"'
+  last_modified: Mon, 21 Sep 2026 12:25:43 GMT
+  last_checked: '2026-09-24T01:44:44+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -3015,8 +3169,8 @@
     frameworks:
     - React
     - Web Components
-  etag: '"d7682c5e79bc5013a992bb90aad1e60a-ssl-df"'
-  last_checked: '2026-09-19T20:27:36+00:00'
+  etag: '"63f479a9f435d0e90f7eaacba89f1d99-ssl-df"'
+  last_checked: '2026-09-24T01:47:23+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -3313,16 +3467,16 @@
   design_system: LINE Design System
   start_urls:
   - https://designsystem.line.me/
-  pages_indexed: 1
+  pages_indexed: 48
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: '"9f0c69a8ffd437b5d071d45a25eb247a"'
+  etag: W/"9f0c69a8ffd437b5d071d45a25eb247a"
   last_modified: Wed, 26 Feb 2025 09:02:07 GMT
-  last_checked: '2026-09-19T20:27:55+00:00'
+  last_checked: '2026-09-24T01:57:11+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -3626,7 +3780,7 @@
   design_system: Marvel Styleguide
   start_urls:
   - https://marvelapp.com/styleguide/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     icons:
     - https://marvelapp.com/styleguide/design/icons
@@ -3639,7 +3793,7 @@
   etag: W/"602d490c-aea"
   last_modified: Wed, 17 Feb 2021 16:49:16 GMT
   sitemap_url: https://marvelapp.com/sitemap.xml
-  last_checked: '2026-09-19T20:28:25+00:00'
+  last_checked: '2026-09-24T01:50:21+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -3648,21 +3802,51 @@
   design_system: Material 3
   start_urls:
   - https://m3.material.io/
-  pages_indexed: 0
-  hit_max_pages: false
+  pages_indexed: 150
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
-  likely_spa: true
-  unverified_resources: {}
-  content_signals: {}
+  likely_spa: false
+  unverified_resources:
+    github:
+    - https://github.com/AdobeXD/design-system-package-dsp
+  content_signals:
+    dark_mode: true
+    frameworks:
+    - React
+    - Jetpack Compose
+    - Web Components
+    - Angular
   etag: W/"82e2ada8b8b07a7cc56e050503c569e6"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://m3.material.io/sitemap.xml
   sitemap_last_modified: '2026-09-16'
-  last_checked: '2026-09-19T20:28:39+00:00'
-  likely_unmaintained: false
-  content_signal_sources: {}
+  last_checked: '2026-09-24T02:15:21+00:00'
+  likely_unmaintained: true
+  content_signal_sources:
+    dark_mode: https://m3.material.io/styles/color/system/overview
+    frameworks:
+      React: https://m3.material.io/
+      Jetpack Compose: https://m3.material.io/components/button-groups/overview
+      Web Components: https://m3.material.io/get-started
+      Angular: https://m3.material.io/develop/web
   has_localized_docs: false
+  resources:
+    github:
+    - https://github.com/material-foundation/material-tokens
+    - https://github.com/material-foundation/material-color-utilities
+    figma:
+    - https://figma.com/community/file/1035203688168086460/material-3-design-kit
+    - https://figma.com/community/file/1035203688168086460
+    - https://figma.com/community/file/1248805263844976008/Build-a-Material-color-scheme
+    icons:
+    - https://m3.material.io/styles/icons/overview
+    - https://fonts.google.com/icons
+  github_meta:
+    license: Apache-2.0
+    stars: 282
+    last_pushed: '2023-08-15T03:44:52Z'
+  render_mode: spa
 - organization: Materialize
   design_system: Materialize CSS
   start_urls:
@@ -3752,24 +3936,24 @@
   design_system: Fluent UI
   start_urls:
   - https://developer.microsoft.com/en-us/fluentui#/
-  pages_indexed: 1
+  pages_indexed: 2
   hit_max_pages: false
-  crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 1
+  crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals:
     frameworks:
     - React
     - Web Components
-  last_modified: Mon, 21 Sep 2026 01:44:23 GMT
+  last_modified: Thu, 24 Sep 2026 01:58:59 GMT
   sitemap_url: https://developer.microsoft.com/_devcom/sitemap.xml
-  last_checked: '2026-09-21T02:18:14+00:00'
+  last_checked: '2026-09-24T01:59:20+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
-      React: https://developer.microsoft.com/en-us/fluentui#/
-      Web Components: https://developer.microsoft.com/en-us/fluentui#/
+      React: https://developer.microsoft.com/en-us/fluentui
+      Web Components: https://developer.microsoft.com/en-us/fluentui
   has_localized_docs: false
   render_mode: spa
 - organization: Mixpanel
@@ -3778,12 +3962,12 @@
   - https://brand.mixpanel.com/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-19T20:29:09+00:00'
+  last_checked: '2026-09-24T02:01:36+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   thin_page_ratio: 1.0
@@ -3852,9 +4036,9 @@
     - https://figma.com/file/2Mq7o81U9J6JuWVxe3mLmI/MDS-Patterns
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   last_modified: Mon, 22 Jun 2026 13:11:25 GMT
-  last_checked: '2026-09-23T09:19:33+00:00'
+  last_checked: '2026-09-24T02:04:56+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -4472,42 +4656,66 @@
   design_system: Redwood
   start_urls:
   - https://redwood.oracle.com/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
   etag: 8244fcb9cfb00a08aac8e41cc6a41b3af4ea9fc9
-  last_checked: '2026-09-19T20:30:52+00:00'
+  last_checked: '2026-09-24T02:17:30+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
+  render_mode: spa
 - organization: Palantir
   design_system: Blueprint
   start_urls:
   - https://blueprintjs.com/
-  pages_indexed: 0
+  pages_indexed: 3
   resources:
     github:
     - https://github.com/palantir/blueprint
+    npm:
+    - https://npmjs.com/package/@blueprintjs/labs
+    - https://npmjs.com/package/@blueprintjs/popover2
+    - https://npmjs.com/package/@blueprintjs/core
+    - https://npmjs.com/package/@blueprintjs/table
+    - https://npmjs.com/package/@blueprintjs/icons
+    - https://npmjs.com/package/@blueprintjs/datetime2
+    - https://npmjs.com/package/@blueprintjs/timezone
+    - https://npmjs.com/package/@blueprintjs/select
+    - https://npmjs.com/package/@blueprintjs/datetime
+    icons:
+    - https://npmjs.com/package/@blueprintjs/icons
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
-  content_signals: {}
+  content_signals:
+    dark_mode: true
+    frameworks:
+    - React
   github_meta:
     license: Apache-2.0
-    stars: 22074
-    last_pushed: '2026-09-18T19:07:14Z'
-  etag: W/"6aac7f6a-d5d"
-  last_modified: Fri, 18 Sep 2026 00:01:46 GMT
-  last_checked: '2026-09-19T20:31:01+00:00'
+    stars: 22090
+    last_pushed: '2026-09-23T23:04:14Z'
+  etag: W/"6ab29545-d5d"
+  last_modified: Tue, 22 Sep 2026 14:48:37 GMT
+  last_checked: '2026-09-24T02:20:24+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    dark_mode: https://blueprintjs.com/docs
+    frameworks:
+      React: https://blueprintjs.com/docs
   has_localized_docs: false
+  npm_meta:
+    latest_version: 6.4.6
+    last_published: '2026-09-17T16:39:21.870Z'
+    weekly_downloads: 590
+  render_mode: spa
 - organization: PAQT
   design_system: Graphite Design System
   start_urls:
@@ -4616,7 +4824,7 @@
   design_system: Gestalt
   start_urls:
   - https://pinterest.github.io/gestalt/#/
-  pages_indexed: 1
+  pages_indexed: 2
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -4625,7 +4833,7 @@
   content_signals: {}
   etag: W/"5ed7cd79-1f6"
   last_modified: Wed, 03 Jun 2020 16:19:05 GMT
-  last_checked: '2026-09-19T20:31:22+00:00'
+  last_checked: '2026-09-24T02:19:50+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -4651,9 +4859,9 @@
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: W/"8a38b06677a8e28e71babebc912eba48"
+  etag: W/"abf207ded4ff36317abd189cfcb74247"
   sitemap_url: https://design-system.pluralsight.com/sitemap.xml
-  last_checked: '2026-09-19T21:57:30+00:00'
+  last_checked: '2026-09-24T02:22:12+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -4757,7 +4965,7 @@
   design_system: Rambler
   start_urls:
   - https://rambler-digital-solutions.github.io/rambler-ui/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     github:
     - https://github.com/rambler-digital-solutions/rambler-ui
@@ -4773,7 +4981,7 @@
     last_pushed: '2025-01-15T11:41:06Z'
   etag: W/"67879f81-437"
   last_modified: Wed, 15 Jan 2025 11:44:01 GMT
-  last_checked: '2026-09-19T20:32:14+00:00'
+  last_checked: '2026-09-24T02:22:39+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -4782,7 +4990,7 @@
   design_system: Ratio
   start_urls:
   - https://ui-kit.rambler.ru/#/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     github:
     - https://github.com/rambler-digital-solutions/rambler-ui
@@ -4798,7 +5006,7 @@
     last_pushed: '2025-01-15T11:41:06Z'
   etag: W/"67879f81-437"
   last_modified: Wed, 15 Jan 2025 11:44:01 GMT
-  last_checked: '2026-09-19T20:32:32+00:00'
+  last_checked: '2026-09-24T02:24:57+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -4812,8 +5020,8 @@
     github:
     - https://github.com/React95/React95
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
@@ -4823,7 +5031,7 @@
     last_pushed: '2026-09-02T20:02:28Z'
   etag: W/"6a9880eb-13d2"
   last_modified: Wed, 02 Sep 2026 20:02:51 GMT
-  last_checked: '2026-09-19T21:40:12+00:00'
+  last_checked: '2026-09-24T02:24:48+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -4831,29 +5039,109 @@
   design_system: Patternfly Design System
   start_urls:
   - https://www.patternfly.org/
-  pages_indexed: 1
+  pages_indexed: 114
   resources:
     icons:
     - https://www.patternfly.org/components/icon
-  hit_max_pages: false
+    - https://patternfly.org/components/icon/react/heading-sizes
+    - https://patternfly.org/components/icon/react/body-sizes
+    - https://patternfly.org/components/icon/html
+    - https://patternfly.org/components/icon/react/inline
+    - https://patternfly.org/components/icon/react/custom-in-progress-icon
+    - https://patternfly.org/components/icon/react/basic
+    - https://npmjs.com/package/@patternfly/icons/v/1.0.4
+    - https://redhat.com/en/about/brand/standards/icons
+    - https://patternfly.org/components/icon/css-variables
+    - https://patternfly.org/components/icon/react/in-progress
+    - https://patternfly.org/components/icon/react/standalone-icon-sizes
+    - https://patternfly.org/components/icon/react/sizing-an-icon-within-the-icon-container
+    - https://patternfly.org/components/icon/react/status-colors
+    github:
+    - https://github.com/patternfly/patternfly-mcp
+    - https://github.com/patternfly/pf-codemods
+    - https://github.com/patternfly/patternfly-react
+    - https://github.com/patternfly/react-component-groups
+    - https://github.com/patternfly/patternfly-quickstarts
+    - https://github.com/RedHatOfficial/RedHatFont
+    - https://github.com/patternfly/ai-helpers
+    - https://github.com/patternfly/patternfly-cli
+    - https://github.com/patternfly/chatbot
+    - https://github.com/RedHatInsights/frontend-components
+    - https://github.com/patternfly/patternfly-react-seed
+    - https://github.com/patternfly/patternfly-a11y
+    figma:
+    - https://figma.com/design/VMEX8Xg2nzhBX8rfBx53jp/PatternFly-6--Styles---Components
+    markdown_docs:
+    - https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/get-started/design.md
+    - https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md
+    - https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/foundations-and-styles/design-tokens/design.md
+    npm:
+    - https://npmjs.com/package/@patternfly/react-styles
+    - https://npmjs.com/package/@patternfly/react-templates
+    - https://npmjs.com/package/@patternfly/react-virtualized-extension
+    - https://npmjs.com/package/@patternfly/react-core
+    - https://npmjs.com/package/@patternfly/react-console
+    - https://npmjs.com/package/@patternfly/react-component-groups
+    - https://npmjs.com/package/@patternfly/react-charts
+    - https://npmjs.com/package/@patternfly/chatbot
+    - https://npmjs.com/package/@patternfly/react-tokens
+    - https://npmjs.com/package/@patternfly/react-drag-drop
+    - https://npmjs.com/package/@patternfly/react-data-view
+    - https://npmjs.com/package/@patternfly/react-topology
+    - https://npmjs.com/package/@patternfly/react-user-feedback
+    - https://npmjs.com/package/@patternfly/patternfly
+    - https://npmjs.com/package/@patternfly/quickstarts
+    - https://npmjs.com/package/@patternfly/react-icons
+    - https://npmjs.com/package/@patternfly/react-catalog-view-extension
+    - https://npmjs.com/package/@patternfly/react-table
+    - https://npmjs.com/package/@patternfly/react-code-editor
+    - https://npmjs.com/package/@patternfly/icons
+    - https://npmjs.com/package/@patternfly/react-log-viewer
+    - https://npmjs.com/package/@patternfly/react-docs
+    - https://npmjs.com/package/@patternfly/virtual-assistant
+  hit_max_pages: true
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: MIT
     stars: 5
-    last_pushed: '2026-09-15T21:12:01Z'
+    last_pushed: '2026-09-23T09:54:01Z'
   etag: W/"184f2981b5f44957ced2e2a129e59417"
   last_modified: Thu, 17 Sep 2026 00:28:59 GMT
-  last_checked: '2026-09-19T21:40:34+00:00'
+  last_checked: '2026-09-24T02:49:18+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
-  unverified_resources: {}
-  content_signals: {}
-  content_signal_sources: {}
+  unverified_resources:
+    github:
+    - https://github.com/remarkjs/react-markdown
+    - https://github.com/project-felt/ai-guidelines
+    - https://help.github.com/articles/fork-a-repo
+    npm:
+    - https://npmjs.com/package/rehype-unwrap-images
+    - https://npmjs.com/package/rehype-external-links
+    - https://npmjs.com/package/file-saver
+  content_signals:
+    accessibility_conformance: WCAG 2.2 AA
+    dark_mode: true
+    codemods: true
+    validation_loop: true
+    frameworks:
+    - React
+  content_signal_sources:
+    accessibility_conformance: https://patternfly.org/releases/release-highlights
+    dark_mode: https://patternfly.org/releases/release-highlights
+    codemods: https://patternfly.org/releases/release-highlights
+    validation_loop: https://patternfly.org/releases/release-highlights
+    frameworks:
+      React: https://patternfly.org/releases/release-highlights
   thin_page_ratio: 0.95
   has_localized_docs: false
   sitemap_url: https://www.patternfly.org/sitemap.xml
   render_mode: spa
+  npm_meta:
+    latest_version: 6.6.1
+    last_published: '2026-08-03T14:17:32.742Z'
+    weekly_downloads: 98997
 - organization: REI
   design_system: Cedar
   start_urls:
@@ -4894,14 +5182,14 @@
   - https://balena-io-modules.github.io/rendition/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"5fbbe617-48c"
   last_modified: Mon, 23 Nov 2020 16:40:55 GMT
-  last_checked: '2026-09-19T21:41:02+00:00'
+  last_checked: '2026-09-24T02:30:58+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -4972,22 +5260,59 @@
   design_system: Lightning Design System
   start_urls:
   - https://www.lightningdesignsystem.com/
-  pages_indexed: 1
-  hit_max_pages: false
+  pages_indexed: 151
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/forcedotcom/sf-skills
   content_signals:
     dark_mode: true
-  etag: W/"04a72ce671d71f00d368e3d77a4311c6"
+    frameworks:
+    - Web Components
+  etag: W/"136a9c08314f04e175310937841a9fa5"
   sitemap_url: https://www.lightningdesignsystem.com/sitemap.xml
-  last_checked: '2026-09-19T21:53:50+00:00'
+  last_checked: '2026-09-24T02:58:35+00:00'
   likely_unmaintained: false
   content_signal_sources:
-    dark_mode: https://www.lightningdesignsystem.com/
+    dark_mode: https://lightningdesignsystem.com/
+    frameworks:
+      Web Components: https://lightningdesignsystem.com/2e1ef8501/p/547b38
   has_localized_docs: false
   render_mode: spa
+  resources:
+    github:
+    - https://github.com/salesforce-ux/design-system
+    - https://github.com/salesforce-ux/design-system-2-starter-kit
+    figma:
+    - https://figma.com/community/file/1415890669347272207
+    - https://figma.com/community/file/854599280117867164
+    - https://figma.com/community/file/1478970084463860424/slds-2-pattern-agentic-experiences
+    - https://figma.com/community/file/854596438801119898
+    - https://figma.com/community/file/1276949149344012079
+    - https://figma.com/community/file/1276948198508782378
+    - https://figma.com/community/file/854594537376275097
+    - https://figma.com/community/file/1415017035637927819
+    - https://figma.com/community/file/1478970084463860424
+    - https://figma.com/community/file/881232048471166510
+    - https://figma.com/community/file/1399892502513202095
+    - https://figma.com/community/file/854593583696357016
+    - https://figma.com/community/file/854597149359643291
+    npm:
+    - https://npmjs.com/package/@salesforce-ux/slds-linter
+    - https://npmjs.com/package/@salesforce-ux/design-system-2
+    icons:
+    - https://lightningdesignsystem.com/icons
+  github_meta:
+    license: NOASSERTION
+    stars: 3702
+    last_pushed: '2026-06-02T19:25:48Z'
+  npm_meta:
+    latest_version: 1.2.1
+    last_published: '2026-03-05T16:58:28.239Z'
+    weekly_downloads: 3254
 - organization: Samsung
   design_system: Tizen CircularUI
   start_urls:
@@ -5624,16 +5949,16 @@
   - https://panda.sipgatedesign.com/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
+  crawl_error: rendered fetch returned no content
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: '"a1c772b9bc103ffc3dd92ed9a2179ba05d1432e6fb57483c861a65d90257899a-br"'
-  last_modified: Fri, 18 Sep 2026 09:15:32 GMT
+  last_modified: Wed, 23 Sep 2026 12:25:08 GMT
   sitemap_url: https://panda.sipgatedesign.com/sitemap.xml
-  last_checked: '2026-09-19T21:41:43+00:00'
+  last_checked: '2026-09-24T02:51:31+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 0
+  consecutive_crawl_failures: 1
   content_signal_sources: {}
   has_localized_docs: false
 - organization: SIS Gov UK
@@ -5689,7 +6014,7 @@
   content_signal_sources: {}
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-19T21:42:06+00:00'
+  last_checked: '2026-09-24T02:53:41+00:00'
   etag: W/"63e3af78-306"
   last_modified: Wed, 08 Feb 2023 14:19:36 GMT
   resources:
@@ -5827,15 +6152,15 @@
   - https://circuit.sumup.com/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
+  crawl_error: rendered fetch returned no content
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"e24b6bec0ed3a0ea6d41b2cc56633fdc"
-  last_modified: Fri, 18 Sep 2026 15:02:18 GMT
-  last_checked: '2026-09-19T21:42:15+00:00'
+  last_modified: Tue, 22 Sep 2026 08:23:00 GMT
+  last_checked: '2026-09-24T02:56:06+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 0
+  consecutive_crawl_failures: 1
   content_signal_sources: {}
   has_localized_docs: false
 - organization: ''
@@ -5861,18 +6186,19 @@
   design_system: Mística
   start_urls:
   - https://brandfactory.telefonica.com/mistica/
-  pages_indexed: 0
+  pages_indexed: 1
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
-  likely_spa: true
+  likely_spa: false
   unverified_resources: {}
   content_signals: {}
   sitemap_url: https://brandfactory.telefonica.com/sitemap.xml
-  last_checked: '2026-09-19T21:42:34+00:00'
+  last_checked: '2026-09-24T02:58:27+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
+  render_mode: spa
 - organization: Thumbtack
   design_system: Thumbprint
   start_urls:
@@ -5983,16 +6309,16 @@
   likely_unmaintained: false
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   content_signal_sources: {}
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-19T21:42:55+00:00'
-  etag: W/"2bb5e36c1fbb0303a66b192d25734f9f"
+  last_checked: '2026-09-24T03:00:25+00:00'
+  etag: W/"39443fd0d2ad9008b4c1939ef769e7eb"
   sitemap_url: https://paste.twilio.design/sitemap.xml
   resources:
     storybook:
@@ -6249,14 +6575,14 @@
   - https://vimeo.github.io/iris/
   pages_indexed: 0
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  etag: W/"67194c2e-252"
-  last_modified: Wed, 23 Oct 2024 19:19:10 GMT
-  last_checked: '2026-09-19T21:43:22+00:00'
+  etag: W/"67194c30-252"
+  last_modified: Wed, 23 Oct 2024 19:19:12 GMT
+  last_checked: '2026-09-24T03:02:23+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -6264,29 +6590,52 @@
   design_system: Clarity Design System
   start_urls:
   - https://clarity.design/
-  pages_indexed: 1
+  pages_indexed: 150
   resources:
     storybook:
     - https://storybook.clarity.design
+    - https://storybook.core.clarity.design/
+    - https://v15.storybook.clarity.design/
     icons:
     - /documentation/icons
-  hit_max_pages: false
+    - https://clarity.design/documentation/icons/api
+    - https://clarity.design/documentation/icons/shapes
+    - https://clarity.design/documentation/icons
+    - https://core.clarity.design/foundation/icons/shapes
+    - https://clarity.design/documentation/icons/accessibility
+    - https://clarity.design/documentation/icons/code
+    github:
+    - https://github.com/vmware-clarity/ng-clarity
+    markdown_docs:
+    - https://github.com/vmware-clarity/ng-clarity/blob/main/docs/CONTRIBUTING.md
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/ngx-translate/core
+    - https://github.com/dw5/Metropolis
   content_signals:
     frameworks:
     - Angular
-  etag: '"ed80fbb53cc50cd44d09862e268fa7cc-ssl-df"'
+    dark_mode: true
+    tokens_format: DTCG
+  etag: '"9436da3734e88d897ab2237283781e93-ssl-df"'
   sitemap_url: https://clarity.design/sitemap.xml
-  last_checked: '2026-09-19T21:43:47+00:00'
+  last_checked: '2026-09-24T03:24:23+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
       Angular: https://clarity.design/
+    dark_mode: https://clarity.design/pages/developing
+    tokens_format: https://clarity.design/pages/update-to-v16
   has_localized_docs: false
   render_mode: spa
+  github_meta:
+    license: NOASSERTION
+    stars: 430
+    last_pushed: '2026-09-23T11:39:49Z'
 - organization: Volvo Cars Web Design System
   design_system: Volvo
   start_urls:
@@ -6318,7 +6667,7 @@
     - React
   etag: W/"694587fe-1a6"
   last_modified: Fri, 19 Dec 2025 17:14:38 GMT
-  last_checked: '2026-09-19T21:44:06+00:00'
+  last_checked: '2026-09-24T03:04:49+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -6402,7 +6751,7 @@
   design_system: Momentum Design System
   start_urls:
   - https://momentum.design/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     skills:
     - https://momentum.design/en/skills/momentum-concierge
@@ -6412,9 +6761,9 @@
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: '"6aad2685-46"'
-  last_modified: Fri, 18 Sep 2026 11:54:45 GMT
-  last_checked: '2026-09-19T21:44:25+00:00'
+  etag: '"6ab0e725-46"'
+  last_modified: Mon, 21 Sep 2026 08:13:25 GMT
+  last_checked: '2026-09-24T03:08:11+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -6517,13 +6866,13 @@
   design_system: Design system
   start_urls:
   - https://wise.design/
-  pages_indexed: 3
+  pages_indexed: 2
   hit_max_pages: false
   crawl_error: ''
-  likely_spa: true
+  likely_spa: false
   etag: W/"a36780676b4be867f33a96235d0b10ac"
   last_modified: Wed, 15 Jul 2026 14:36:51 GMT
-  last_checked: '2026-09-21T02:21:55+00:00'
+  last_checked: '2026-09-24T03:13:44+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -6863,7 +7212,7 @@
   content_signal_sources: {}
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-19T21:45:02+00:00'
+  last_checked: '2026-09-24T03:15:48+00:00'
   etag: '"1177a2be87f95f011a654cbe51731173"'
   sitemap_url: https://tremor.so/sitemap.xml
   sitemap_last_modified: '2025-12-12T13:54:09.689Z'

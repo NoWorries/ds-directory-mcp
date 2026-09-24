@@ -1,0 +1,69 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-24T03:39:30+00:00",
+  "id": "palantir-blueprint",
+  "organization": "Palantir",
+  "design_system": "Blueprint",
+  "full_name": "Palantir — Blueprint",
+  "start_urls": [
+    "https://blueprintjs.com/"
+  ],
+  "detail_url": "/systems/palantir-blueprint",
+  "pages_indexed": 3,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-24T02:20:24+00:00",
+  "last_modified": "Tue, 22 Sep 2026 14:48:37 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/palantir/blueprint"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@blueprintjs/labs",
+      "https://npmjs.com/package/@blueprintjs/popover2",
+      "https://npmjs.com/package/@blueprintjs/core",
+      "https://npmjs.com/package/@blueprintjs/table",
+      "https://npmjs.com/package/@blueprintjs/icons",
+      "https://npmjs.com/package/@blueprintjs/datetime2",
+      "https://npmjs.com/package/@blueprintjs/timezone",
+      "https://npmjs.com/package/@blueprintjs/select",
+      "https://npmjs.com/package/@blueprintjs/datetime"
+    ],
+    "icons": [
+      "https://npmjs.com/package/@blueprintjs/icons"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "React"
+    ]
+  },
+  "github_meta": {
+    "license": "Apache-2.0",
+    "stars": 22090,
+    "last_pushed": "2026-09-23T23:04:14Z"
+  },
+  "npm_meta": {
+    "latest_version": "6.4.6",
+    "last_published": "2026-09-17T16:39:21.870Z",
+    "weekly_downloads": 590
+  },
+  "indexed_pages": [
+    {
+      "url": "https://blueprintjs.com/docs",
+      "title": "Blueprint – Documentation"
+    },
+    {
+      "url": "https://blueprintjs.com/docs/versions/5",
+      "title": "Blueprint – Documentation"
+    },
+    {
+      "url": "https://blueprintjs.com/docs/versions/4",
+      "title": "Blueprint – Documentation"
+    }
+  ]
+}

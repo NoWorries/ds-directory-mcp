@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "pinterest-gestalt",
   "organization": "Pinterest",
   "design_system": "Gestalt",
@@ -9,11 +9,11 @@
     "https://pinterest.github.io/gestalt/#/"
   ],
   "detail_url": "/systems/pinterest-gestalt",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T20:31:22+00:00",
+  "last_checked": "2026-09-24T02:19:50+00:00",
   "last_modified": "Wed, 03 Jun 2020 16:19:05 GMT",
   "sitemap_last_modified": null,
   "resources": {},
@@ -25,6 +25,10 @@
     {
       "url": "https://pinterest.github.io/gestalt/#/",
       "title": "Pinterest — Gestalt"
+    },
+    {
+      "url": "https://pinterest.github.io/gestalt",
+      "title": "Welcome to Gestalt - Pinterest's Design System"
     }
   ]
 }

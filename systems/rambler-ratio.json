@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "rambler-ratio",
   "organization": "Rambler",
   "design_system": "Ratio",
@@ -9,11 +9,11 @@
     "https://ui-kit.rambler.ru/#/"
   ],
   "detail_url": "/systems/rambler-ratio",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T20:32:32+00:00",
+  "last_checked": "2026-09-24T02:24:57+00:00",
   "last_modified": "Wed, 15 Jan 2025 11:44:01 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -33,6 +33,10 @@
     {
       "url": "https://ui-kit.rambler.ru/#/",
       "title": "Rambler — Ratio"
+    },
+    {
+      "url": "https://ui-kit.rambler.ru/",
+      "title": "Ratio — дизайн-система нового Рамблера"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "biings-biings-design-system",
   "organization": "Biings",
   "design_system": "Biings Design System",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T11:19:43+00:00",
+  "last_checked": "2026-09-24T00:06:56+00:00",
   "last_modified": "Tue, 04 Aug 2026 10:26:24 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -32,7 +32,7 @@
   "indexed_pages": [
     {
       "url": "https://biings.design/",
-      "title": "Biings — Biings Design System"
+      "title": "Biings Design System"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "elia-group-nova",
   "organization": "Elia Group",
   "design_system": "Nova",
@@ -9,11 +9,11 @@
     "https://nova.eliagroup.io/"
   ],
   "detail_url": "/systems/elia-group-nova",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 105,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T11:47:13+00:00",
+  "last_checked": "2026-09-24T01:06:37+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -22,10 +22,18 @@
       "https://nova-storybook.eliagroup.io/blazor",
       "https://nova-storybook.eliagroup.io/native",
       "https://nova-storybook.eliagroup.io/react",
-      "https://nova-storybook.eliagroup.io/angular"
+      "https://nova-storybook.eliagroup.io/angular",
+      "https://nova-storybook.eliagroup.io/",
+      "https://nova-storybook.eliagroup.io/vuejs",
+      "https://nova-storybook.eliagroup.io/native/iframe.html"
     ],
     "figma": [
-      "https://www.figma.com/design/3aG9ZI9nN7ecaplOPyOO55/%F0%9F%91%BE-Web---Nova-Tycho?m=auto&node-id=6975-4&t=o1tKlSJ9j3yNGs66-1"
+      "https://www.figma.com/design/3aG9ZI9nN7ecaplOPyOO55/%F0%9F%91%BE-Web---Nova-Tycho?m=auto&node-id=6975-4&t=o1tKlSJ9j3yNGs66-1",
+      "https://figma.com/design/pdFuxeVDb741Lg14N9KSc2/%F0%9F%91%BB--WPF---Nova-Tycho",
+      "https://figma.com/community/file/1488820114712517403/nova-tycho-for-web",
+      "https://figma.com/design/rlDKiHGA4r1NwumIbjtGPA/%F0%9F%91%BE-Icons---Nova-Tycho",
+      "https://figma.com/file/3aG9ZI9nN7ecaplOPyOO55",
+      "https://figma.com/design/kieKhoIy4LaRVws0LF1rXz/%F0%9F%92%A0-Hitu-Illustration-Components"
     ]
   },
   "unverified_resources": {},
@@ -41,8 +49,424 @@
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://nova.eliagroup.io/latest/components/accordion-uGfb3JAP",
+      "title": "Nova Design System | Accordion| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/alert-Cc9SQxHq",
+      "title": "Nova Design System | Alert| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/ask-nova-bWmfNB4O",
+      "title": "Nova Design System | Ask Nova| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/autocomplete-p64MMSLx",
+      "title": "Nova Design System | Autocomplete| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/avatar-Jjwo02oy",
+      "title": "Nova Design System | Avatar| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/badge-BRGRAW5Y",
+      "title": "Nova Design System | Badge| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/bar-chart-RkCmvrfr",
+      "title": "Nova Design System | Bar Chart| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/base-component-Ava4Irz8",
+      "title": "Nova Design System | BaseComponent| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/designing/tutorials/basics-IAN4WYhy",
+      "title": "Nova Design System | Basics| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/block-laepZJX0",
+      "title": "Nova Design System | Block| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/brand-identity-sCBBTqYv",
+      "title": "Nova Design System | Brand Identity| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/breadcrumbs-NLMJUc5V",
+      "title": "Nova Design System | Breadcrumbs| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/buttongroup-einPqF5t",
+      "title": "Nova Design System | Buttongroup| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/button-zZia9mOe",
+      "title": "Nova Design System | Button| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/calendar-YYBX6xPy",
+      "title": "Nova Design System | Calendar| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/capitalisation-aiLE1KA1",
+      "title": "Nova Design System | Capitalisation| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/catalogue-lCwkpOTJ",
+      "title": "Nova Design System | Catalogue| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/overview/chart-quality-jDrhoazo",
+      "title": "Nova Design System | Chart Quality  | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/overview/chart-selection-EpeAoc8N",
+      "title": "Nova Design System | Chart Selection | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/overview/chart-types-CUbJCwPn",
+      "title": "Nova Design System | Chart Types | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/checkbox-Ph72jlEL",
+      "title": "Nova Design System | Checkbox| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/navigation-horizontal/code-Xfudj9WC",
+      "title": "Nova Design System | Code | [Navigation Horizontal]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/navigation-vertical/code-4d0t1OtD",
+      "title": "Nova Design System | Code | [Navigation Vertical]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/tabs/code-13TFDL9w",
+      "title": "Nova Design System | Code | [Tabs]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/overview/code-ohCcpMOT",
+      "title": "Nova Design System | Code | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/colours-rwD2n98I",
+      "title": "Nova Design System | Colours| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/component-status-9NmqsGPR",
+      "title": "Nova Design System | Component Status| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/contact-Ixm5KeNz",
+      "title": "Nova Design System | Contact| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/container-RQrKeLA8",
+      "title": "Nova Design System | Container| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/context-agnostic-tokens-3rROLgTG",
+      "title": "Nova Design System | Context-Agnostic Tokens| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/designing/tutorials/custom-components-and-intentional-tokens-e0bMKexw",
+      "title": "Nova Design System | Custom Components and Intentional Tokens| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/datagrid-4fgGCNcz",
+      "title": "Nova Design System | Datagrid| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/datatable-NingtS7p",
+      "title": "Nova Design System | Datatable| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/daterange-PaWdhRP3",
+      "title": "Nova Design System | Daterange| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/date-AHwulJ29",
+      "title": "Nova Design System | Date| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/overview/design-IbVG3vXv",
+      "title": "Nova Design System | Design | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/developing-kmvzuZuA",
+      "title": "Nova Design System | Developing| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/dialog-GASEWwFa",
+      "title": "Nova Design System | Dialog| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/drawer-iuMjiTPf",
+      "title": "Nova Design System | Drawer| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/dropdown-YqFHLjKc",
+      "title": "Nova Design System | Dropdown| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/eu-english-X55uMYit",
+      "title": "Nova Design System | EU English| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/explaining-comples-concepts-TMVVuoy7",
+      "title": "Nova Design System | Explaining Comples Concepts| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/designing/get-started-9AdPZm0H",
+      "title": "Nova Design System | Get started| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/references/glossary-P6UXp2VO",
+      "title": "Nova Design System | Glossary| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/heading-heGEVS1a",
+      "title": "Nova Design System | Heading| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/heat-map-b0sOBgwg",
+      "title": "Nova Design System | Heat Map| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/how-tokens-work-hjCTsJEV",
+      "title": "Nova Design System | How Tokens Work| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/icon-button-rrpG4Eu4",
+      "title": "Nova Design System | Icon Button| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/icons-and-illustrations-541rCMiO",
+      "title": "Nova Design System | Icons and illustrations| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/icons-9KHajwio",
+      "title": "Nova Design System | Icons| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/implementation-1e70oE5Q",
+      "title": "Nova Design System | Implementation| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/introduction-dtRgb1ra",
+      "title": "Nova Design System | Introduction| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/layout-DOPJzbe1",
+      "title": "Nova Design System | Layout| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/lines-chart-Q0WnswpW",
+      "title": "Nova Design System | Lines Chart| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/link-figma-only-lPBt4106",
+      "title": "Nova Design System | Link (Figma only)| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/loader-wevvjBhw",
+      "title": "Nova Design System | Loader| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/menu-PBUGzZpm",
+      "title": "Nova Design System | Menu| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/multi-select-E485M194",
+      "title": "Nova Design System | Multi select| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/naming-convention-f2ogyHdk",
+      "title": "Nova Design System | Naming Convention| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/notification-LevhgMa1",
+      "title": "Nova Design System | Notification| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/",
-      "title": "Elia Group — Nova"
+      "title": "Nova Design System | Nova Design System | Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/nova-design-system-oSVQWXGi",
+      "title": "Nova Design System | Nova Design System | Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/documentation/utilities/base-component",
+      "title": "Nova Design System | Nova Design System | Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/numbers-dates-and-time-XKGZnepa",
+      "title": "Nova Design System | Numbers, Dates & Time| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/number-ITF1jIR1",
+      "title": "Nova Design System | Number| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/overview-noMgl4uE",
+      "title": "Nova Design System | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/overview-fDVRYNOj",
+      "title": "Nova Design System | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/overview-XKOxH6fl",
+      "title": "Nova Design System | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/patterns/overview-dSii9R9r",
+      "title": "Nova Design System | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/panel-6gPMqbnr",
+      "title": "Nova Design System | Panel| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/designing/tutorials/partials-MWYzLvwz",
+      "title": "Nova Design System | Partials| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/password-8oH5fm59",
+      "title": "Nova Design System | Password| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/pill-3BaQZS8B",
+      "title": "Nova Design System | Pill| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/popover-CDa8R5fG",
+      "title": "Nova Design System | Popover| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/punctuation-g1uqwtKv",
+      "title": "Nova Design System | Punctuation| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/references/quick-reference-EEYULhQD",
+      "title": "Nova Design System | Quick reference| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/radio-2TtBGIkR",
+      "title": "Nova Design System | Radio| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/select-X6ta7kd3",
+      "title": "Nova Design System | Select| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/sidebar-49VfveW3",
+      "title": "Nova Design System | Sidebar| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/slider-QiYcOGbC",
+      "title": "Nova Design System | Slider| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/designing/tutorials/slots-LlIIwoT3",
+      "title": "Nova Design System | Slots| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/splitter-IbIeZc8x",
+      "title": "Nova Design System | Splitter| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/stack-discontinued-J6731Crc",
+      "title": "Nova Design System | Stack [discontinued]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/status-indicator-238ka5Lf",
+      "title": "Nova Design System | Status indicator| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/summary-7C3AY0eO",
+      "title": "Nova Design System | Summary| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/designing/tutorials/templates-tz8uMezW",
+      "title": "Nova Design System | Templates| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/text-area-PXqBB8tM",
+      "title": "Nova Design System | Text area| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/text-gem0OLzC",
+      "title": "Nova Design System | Text| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/text-jrD88ixS",
+      "title": "Nova Design System | Text| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/time-MyFsvvru",
+      "title": "Nova Design System | Time| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/togglegroup-OhqAP37w",
+      "title": "Nova Design System | Togglegroup| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/toggle-ByIJaz9k",
+      "title": "Nova Design System | Toggle| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/tokens-in-nova-JokYlcdA",
+      "title": "Nova Design System | Tokens in Nova| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/tokens-to-tailwind-conversion-73t18F4Y",
+      "title": "Nova Design System | Tokens to Tailwind Conversion| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/tokens-q6SryqHQ",
+      "title": "Nova Design System | Tokens| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/tooltip-XJPncqTL",
+      "title": "Nova Design System | Tooltip| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/typography-cd9VVUIm",
+      "title": "Nova Design System | Typography| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/navigation-horizontal/usage-NR2EefBN",
+      "title": "Nova Design System | Usage | [Navigation Horizontal]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/navigation-vertical/usage-ZbLMViUg",
+      "title": "Nova Design System | Usage | [Navigation Vertical]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/pagination/usage-oIrHS64R",
+      "title": "Nova Design System | Usage | [Pagination]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/tabs/usage-I9hRGD48",
+      "title": "Nova Design System | Usage | [Tabs]| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/templates/overview/usage-pqYBcNS4",
+      "title": "Nova Design System | Usage | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/voice-and-tone-PBAI4bVf",
+      "title": "Nova Design System | Voice and Tone| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/writing-for-accessibility-cZDgRQT6",
+      "title": "Nova Design System | Writing for Accessibility| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/foundations/writing/writing-principles-yxbC6J7u",
+      "title": "Nova Design System | Writing principles| Made by and for Elia Group"
     }
   ]
 }

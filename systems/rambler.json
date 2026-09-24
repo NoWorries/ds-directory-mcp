@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "rambler",
   "organization": null,
   "design_system": "Rambler",
@@ -9,11 +9,11 @@
     "https://rambler-digital-solutions.github.io/rambler-ui/"
   ],
   "detail_url": "/systems/rambler",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T20:32:14+00:00",
+  "last_checked": "2026-09-24T02:22:39+00:00",
   "last_modified": "Wed, 15 Jan 2025 11:44:01 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -33,6 +33,10 @@
     {
       "url": "https://rambler-digital-solutions.github.io/rambler-ui/",
       "title": "Rambler"
+    },
+    {
+      "url": "https://rambler-digital-solutions.github.io/rambler-ui",
+      "title": "Ratio — дизайн-система нового Рамблера"
     }
   ]
 }

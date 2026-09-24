@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "ebay-skin",
   "organization": "eBay",
   "design_system": "Skin",
@@ -9,11 +9,11 @@
     "https://ebay.github.io/skin/"
   ],
   "detail_url": "/systems/ebay-skin",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-19T11:36:22+00:00",
+  "last_checked": "2026-09-24T00:48:51+00:00",
   "last_modified": "Mon, 28 Apr 2025 18:09:48 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -38,6 +38,10 @@
     {
       "url": "https://ebay.github.io/skin/",
       "title": "eBay — Skin"
+    },
+    {
+      "url": "https://ebay.github.io/skin",
+      "title": "Evo Web"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "vmware-clarity-design-system",
   "organization": "VMware",
   "design_system": "Clarity Design System",
@@ -9,33 +9,654 @@
     "https://clarity.design/"
   ],
   "detail_url": "/systems/vmware-clarity-design-system",
-  "pages_indexed": 1,
+  "pages_indexed": 150,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-19T21:43:47+00:00",
+  "last_checked": "2026-09-24T03:24:23+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "storybook": [
-      "https://storybook.clarity.design"
+      "https://storybook.clarity.design",
+      "https://storybook.core.clarity.design/",
+      "https://v15.storybook.clarity.design/"
     ],
     "icons": [
-      "/documentation/icons"
+      "/documentation/icons",
+      "https://clarity.design/documentation/icons/api",
+      "https://clarity.design/documentation/icons/shapes",
+      "https://clarity.design/documentation/icons",
+      "https://core.clarity.design/foundation/icons/shapes",
+      "https://clarity.design/documentation/icons/accessibility",
+      "https://clarity.design/documentation/icons/code"
+    ],
+    "github": [
+      "https://github.com/vmware-clarity/ng-clarity"
+    ],
+    "markdown_docs": [
+      "https://github.com/vmware-clarity/ng-clarity/blob/main/docs/CONTRIBUTING.md"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/ngx-translate/core",
+      "https://github.com/dw5/Metropolis"
+    ]
+  },
   "content_signals": {
     "frameworks": [
       "Angular"
-    ]
+    ],
+    "dark_mode": true,
+    "tokens_format": "DTCG"
   },
-  "github_meta": null,
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 430,
+    "last_pushed": "2026-09-23T11:39:49Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://clarity.design/documentation/a11y",
+      "title": "Accessibility - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/accessibility",
+      "title": "Accessibility - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/accessibility",
+      "title": "Accessibility - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/a11y/code",
+      "title": "Accessibility - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/accordion",
+      "title": "Accordion - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/accordion/api",
+      "title": "Accordion - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/accordion/code",
+      "title": "Accordion - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-datagrid",
+      "title": "Advanced Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper-addon",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper-addon/api",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper-addon/code",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tabs-addon",
+      "title": "Advanced Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard-addon",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard-addon/api",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard-addon/code",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/alert",
+      "title": "Alert - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/badge",
+      "title": "Badge - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/badge/code",
+      "title": "Badge - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/badge/api",
+      "title": "Badge - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/breadcrumbs",
+      "title": "Breadcrumbs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/breadcrumbs/code",
+      "title": "Breadcrumbs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/breadcrumbs/api",
+      "title": "Breadcrumbs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/button",
+      "title": "Button - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/button-group",
+      "title": "Button Group - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/button-group/api",
+      "title": "Button Group - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/button-group/code",
+      "title": "Button Group - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/card",
+      "title": "Card - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/card-container",
+      "title": "Card Container - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/certificate-viewer",
+      "title": "Certificate Viewer - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/charts",
+      "title": "Charts - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/charts/colors",
+      "title": "Charts - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/charts/accessibility",
+      "title": "Charts - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/checkbox",
+      "title": "Checkbox - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/checkbox/code",
+      "title": "Checkbox - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/checkbox/api",
+      "title": "Checkbox - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/",
-      "title": "VMware — Clarity Design System"
+      "title": "Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/color",
+      "title": "Color - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/combobox",
+      "title": "Combobox - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/combobox/api",
+      "title": "Combobox - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/combobox/code",
+      "title": "Combobox - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datalist",
+      "title": "Datalist - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datepicker",
+      "title": "Date Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/date-range-picker",
+      "title": "Date Range Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/density",
+      "title": "Density - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/density/code",
+      "title": "Density - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/designing",
+      "title": "Designing - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/developing",
+      "title": "Developing - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/drag-and-drop",
+      "title": "Drag and Drop - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/drag-and-drop/code",
+      "title": "Drag and Drop - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dropdown",
+      "title": "Dropdown - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dropdown/api",
+      "title": "Dropdown - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dropdown/code",
+      "title": "Dropdown - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/file-picker",
+      "title": "File Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/forms",
+      "title": "Forms - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/forms/api",
+      "title": "Forms - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/forms/code",
+      "title": "Forms - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/grid",
+      "title": "Grid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/grid/code",
+      "title": "Grid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/grid/api",
+      "title": "Grid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/header",
+      "title": "Header - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/icons",
+      "title": "Icons - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/icons/shapes",
+      "title": "Icons - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/icons/api",
+      "title": "Icons - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/icons/accessibility",
+      "title": "Icons - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/icons/code",
+      "title": "Icons - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/input",
+      "title": "Input - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/internationalization",
+      "title": "Internationalization - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/introduction",
+      "title": "Introduction - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/label",
+      "title": "Label - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/label/api",
+      "title": "Label - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/label/code",
+      "title": "Label - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/layout-utilities",
+      "title": "Layout Utilities - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/app-layout",
+      "title": "Layouts - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/app-layout/api",
+      "title": "Layouts - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/app-layout/code",
+      "title": "Layouts - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/list",
+      "title": "List - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/list/code",
+      "title": "List - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/menu",
+      "title": "Menu - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/modal",
+      "title": "Modal - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dialog",
+      "title": "Multi-Page Dialog - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dialog/code",
+      "title": "Multi-Page Dialog - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dialog/api",
+      "title": "Multi-Page Dialog - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/multi-step-workflow",
+      "title": "Multi-Step Workflow - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/navigation",
+      "title": "Navigation - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/notifications",
+      "title": "Notifications - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/onboarding",
+      "title": "Onboarding Pattern - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tree-view%23checkbox-tree",
+      "title": "Page Not Found - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/password",
+      "title": "Password - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/popover",
+      "title": "Popover - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/popover/code",
+      "title": "Popover - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/popover/api",
+      "title": "Popover - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/progress",
+      "title": "Progress Bar - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/progress/api",
+      "title": "Progress Bar - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/progress/code",
+      "title": "Progress Bar - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/property-view",
+      "title": "Property View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/property-view/code",
+      "title": "Property View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/property-view/api",
+      "title": "Property View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/radio",
+      "title": "Radio Button - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/radio/api",
+      "title": "Radio Button - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/radio/code",
+      "title": "Radio Button - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/range",
+      "title": "Range Input - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/range/code",
+      "title": "Range Input - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/range/api",
+      "title": "Range Input - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/select",
+      "title": "Select - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/select/code",
+      "title": "Select - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/select/api",
+      "title": "Select - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/side-panel",
+      "title": "Side Panel - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/signpost",
+      "title": "Signpost - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/spacing",
+      "title": "Spacing - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/spinner",
+      "title": "Spinner - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/spinner/code",
+      "title": "Spinner - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/spinner/api",
+      "title": "Spinner - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stack-view",
+      "title": "Stack View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper",
+      "title": "Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/support-policies",
+      "title": "Support Policies - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/table",
+      "title": "Table - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/table/code",
+      "title": "Table - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/table/api",
+      "title": "Table - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tabs",
+      "title": "Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tabs/code",
+      "title": "Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tabs/api",
+      "title": "Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/textarea",
+      "title": "Textarea - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/textarea/api",
+      "title": "Textarea - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/textarea/code",
+      "title": "Textarea - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/theme-builder",
+      "title": "Theme Builder - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/theme-builder",
+      "title": "Theme Builder — Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/themes",
+      "title": "Themes - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/themes/themes",
+      "title": "Themes - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/themes/code",
+      "title": "Themes - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/timeline",
+      "title": "Timeline - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/toggle-switch",
+      "title": "Toggle Switch - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tokens",
+      "title": "Tokens - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tokens/code",
+      "title": "Tokens - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tokens/design",
+      "title": "Tokens - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tooltip",
+      "title": "Tooltip - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tooltip/api",
+      "title": "Tooltip - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tooltip/code",
+      "title": "Tooltip - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/translate",
+      "title": "Translate - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tree-view",
+      "title": "Tree View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/typography",
+      "title": "Typography - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/typography/code",
+      "title": "Typography - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/typography/usage",
+      "title": "Typography - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/update-to-v15",
+      "title": "Update v13 to v15 - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/update-to-v16",
+      "title": "Update v15 to v16 - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/update-to-v17",
+      "title": "Update v16 to v17 - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/update-to-v18",
+      "title": "Update v17 to v18 - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard",
+      "title": "Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard/code",
+      "title": "Wizard - Clarity Design System"
     }
   ]
 }

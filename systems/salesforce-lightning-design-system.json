@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "salesforce-lightning-design-system",
   "organization": "Salesforce",
   "design_system": "Lightning Design System",
@@ -9,24 +9,666 @@
     "https://www.lightningdesignsystem.com/"
   ],
   "detail_url": "/systems/salesforce-lightning-design-system",
-  "pages_indexed": 1,
+  "pages_indexed": 151,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-19T21:53:50+00:00",
+  "last_checked": "2026-09-24T02:58:35+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
-  "resources": {},
-  "unverified_resources": {},
-  "content_signals": {
-    "dark_mode": true
+  "resources": {
+    "github": [
+      "https://github.com/salesforce-ux/design-system",
+      "https://github.com/salesforce-ux/design-system-2-starter-kit"
+    ],
+    "figma": [
+      "https://figma.com/community/file/1415890669347272207",
+      "https://figma.com/community/file/854599280117867164",
+      "https://figma.com/community/file/1478970084463860424/slds-2-pattern-agentic-experiences",
+      "https://figma.com/community/file/854596438801119898",
+      "https://figma.com/community/file/1276949149344012079",
+      "https://figma.com/community/file/1276948198508782378",
+      "https://figma.com/community/file/854594537376275097",
+      "https://figma.com/community/file/1415017035637927819",
+      "https://figma.com/community/file/1478970084463860424",
+      "https://figma.com/community/file/881232048471166510",
+      "https://figma.com/community/file/1399892502513202095",
+      "https://figma.com/community/file/854593583696357016",
+      "https://figma.com/community/file/854597149359643291"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@salesforce-ux/slds-linter",
+      "https://npmjs.com/package/@salesforce-ux/design-system-2"
+    ],
+    "icons": [
+      "https://lightningdesignsystem.com/icons"
+    ]
   },
-  "github_meta": null,
-  "npm_meta": null,
+  "unverified_resources": {
+    "github": [
+      "https://github.com/forcedotcom/sf-skills"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "frameworks": [
+      "Web Components"
+    ]
+  },
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 3702,
+    "last_pushed": "2026-06-02T19:25:48Z"
+  },
+  "npm_meta": {
+    "latest_version": "1.2.1",
+    "last_published": "2026-03-05T16:58:28.239Z",
+    "weekly_downloads": 3254
+  },
   "indexed_pages": [
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/641741",
+      "title": "Accessibility · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/8488c4",
+      "title": "Accordion · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/771012",
+      "title": "Admins · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/771012-admins",
+      "title": "Admins · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/03c548",
+      "title": "Agentic Patterns · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/52a7c7",
+      "title": "AI and SLDS 2 · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/8225d4",
+      "title": "AI Development Skills · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/94085e",
+      "title": "Avatar · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/78871c",
+      "title": "Badge · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/7770b4",
+      "title": "Borders and Radius · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/7770b4-borders-and-radius/b/514f2c",
+      "title": "Borders and Radius · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/7770b4-borders-and-radius/b/68b3fd",
+      "title": "Borders and Radius · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/7770b4-borders-and-radius/b/436102",
+      "title": "Borders and Radius · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/7770b4-borders-and-radius/b/458c08",
+      "title": "Borders and Radius · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/13cc12",
+      "title": "Breadcrumbs · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/30363d",
+      "title": "Button Groups · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/769b52",
+      "title": "Button Icons · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/7733f8",
+      "title": "Button · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/33cd77-cards",
+      "title": "Cards  · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/33cd77",
+      "title": "Cards  · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/33cd77-cards/b/74d5d4",
+      "title": "Cards  · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/33cd77-cards/b/39205c",
+      "title": "Cards  · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/99642e",
+      "title": "Carousel · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/70ca9d",
+      "title": "Checkbox Button · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/00c862",
+      "title": "Checkbox Toggle · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/980561",
+      "title": "Checkbox · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/67c0e9",
+      "title": "Color Picker · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/655b28",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/655b28-color/b/25b51f",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/655b28-color",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/655b28-color/b/129096",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/655b28-color/b/76ba78",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/655b28-color/b/04fb5f",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/655b28-color/b/76ba78",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/655b28-color/b/25b51f",
+      "title": "Color · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/31c42a",
+      "title": "Combobox · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/0213f9-component-level-styling-hooks",
+      "title": "Component-Level Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/0213f9",
+      "title": "Component-Level Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/755aff",
+      "title": "Components · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/755aff-components",
+      "title": "Components · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/755aff-components/b/2474ee",
+      "title": "Components · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/755aff-components/b/898ce6",
+      "title": "Components · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/755aff-components/b/1930c8",
+      "title": "Components · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/755aff-components/b/459d9d",
+      "title": "Components · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/755aff-components/b/31438b",
+      "title": "Components · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/86f13a",
+      "title": "Data Table · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/531362",
+      "title": "Datepicker · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/653453",
+      "title": "Datetime Picker · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/874349",
+      "title": "Design · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/547b38",
+      "title": "Develop · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/547b38-develop/t/439bed482f",
+      "title": "Develop · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/547b38-develop",
+      "title": "Develop · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/805bbe",
+      "title": "Display Density · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/805bbe-display-density/b/897aad",
+      "title": "Display Density · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/805bbe-display-density/b/532c00",
+      "title": "Display Density · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/805bbe-display-density/b/93586c",
+      "title": "Display Density · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/763763",
+      "title": "Dual Listbox · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/09f001",
+      "title": "Empty State · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/2963ba",
+      "title": "Figma Kits · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/77d584-file-selector",
+      "title": "File Selector · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/77d584",
+      "title": "File Selector · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/96252b-form-element/t/8bccc5eb64",
+      "title": "Form Element · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/96252b-form-element/t/c02eea1705",
+      "title": "Form Element · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/96252b",
+      "title": "Form Element · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/96252b-form-element/b/1964e0",
+      "title": "Form Element · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/96252b-form-element/b/94306d",
+      "title": "Form Element · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/96252b-form-element/b/76ea32",
+      "title": "Form Element · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/96252b-form-element/b/450cfc",
+      "title": "Form Element · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/76969d",
+      "title": "Get Started · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/777f5a",
+      "title": "Global Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/777f5a-global-styling-hooks/t/88adbc7e79",
+      "title": "Global Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/777f5a-global-styling-hooks/t/7918a43c1d",
+      "title": "Global Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/777f5a-global-styling-hooks/t/4bdac8b8f6",
+      "title": "Global Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/777f5a-global-styling-hooks/t/9b2d35b55e",
+      "title": "Global Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/777f5a-global-styling-hooks/t/65aa06051d",
+      "title": "Global Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/777f5a-global-styling-hooks/t/7dab77d73d",
+      "title": "Global Styling Hooks · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/19e451",
+      "title": "Icons · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/759a28",
+      "title": "Illustrations · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/759a28-illustrations/b/34526a",
+      "title": "Illustrations · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/759a28-illustrations/b/74b610",
+      "title": "Illustrations · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/759a28-illustrations/b/76a7c3",
+      "title": "Illustrations · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/8268ee",
+      "title": "Input · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/",
+      "title": "Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/95c37a",
+      "title": "Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/591960-global-styling-hooks",
+      "title": "Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/591960-global-styling-hooks/t/cff2089263",
+      "title": "Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/591960-global-styling-hooks/t/d5f0e5fb26",
+      "title": "Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/591960-global-styling-hooks/t/46a5c48134",
+      "title": "Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/591960-global-styling-hooks/t/bd9e8e4385",
+      "title": "Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/40f658",
+      "title": "Menu · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/01c12a",
+      "title": "Modals · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/108a86",
+      "title": "Pills · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/70ad36",
+      "title": "Progress Bar · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/64d280",
+      "title": "Progress Indicator · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/050982",
+      "title": "Progress Ring · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/925906",
+      "title": "Prompt · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/2052d7",
+      "title": "Radio Button Group · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/19c76a",
+      "title": "Radio Group · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/63cfc2",
+      "title": "Resources · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/35614c",
+      "title": "Rich Text Editor · Lightning Design System 2"
+    },
     {
       "url": "https://www.lightningdesignsystem.com/",
       "title": "Salesforce — Lightning Design System"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/318c20",
+      "title": "Scoped Tabs · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/60fa86",
+      "title": "Select · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/64b580",
+      "title": "Shadows · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/64b580-shadows/b/181008",
+      "title": "Shadows · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/64b580-shadows/b/1948b3",
+      "title": "Shadows · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/64b580-shadows/b/404e68",
+      "title": "Shadows · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/057d3b",
+      "title": "SLDS 2 AI Starter Kit · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/057d3b-slds-2-ai-starter-kit",
+      "title": "SLDS 2 AI Starter Kit · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/012d73",
+      "title": "SLDS Linter · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/014cb2",
+      "title": "SLDS Scope Customizer · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/952cae",
+      "title": "SLDS Validator · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/0176bc",
+      "title": "Slider · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/03d6b0-spacing-and-sizing/b/25a2cc",
+      "title": "Spacing and Sizing · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/03d6b0-spacing-and-sizing/b/8315b7",
+      "title": "Spacing and Sizing · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/03d6b0",
+      "title": "Spacing and Sizing · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/03d6b0-spacing-and-sizing/b/95cf0b",
+      "title": "Spacing and Sizing · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/959d6d",
+      "title": "Spinners · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/7708aa",
+      "title": "Styling API · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/98b493",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/65d2f71fc8",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/470434d642",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/93bc4ad2ea",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/ac2d726bdb",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/38295c1968",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/a9adcf9266",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/2b010864bb",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/98b493-styling-hook-index/t/4636f45b5a",
+      "title": "Styling Hook Index · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/1152cf-tabs",
+      "title": "Tabs · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/1152cf",
+      "title": "Tabs · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/11f590",
+      "title": "Textarea · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/87b648",
+      "title": "Tiles · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/82218a",
+      "title": "Timepicker · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/216f79",
+      "title": "Toast · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/05b46d",
+      "title": "Tools · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/532fc5",
+      "title": "Tooltip · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/8184ad",
+      "title": "Transition to SLDS 2 · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/8184ad-transition-to-slds-2",
+      "title": "Transition to SLDS 2 · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/1234e1",
+      "title": "Tree Grid · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/950b57",
+      "title": "Tree · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/93288f",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/93288f-typography",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/93288f-typography/b/94d751",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/93288f-typography/b/995dcd",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/93288f-typography/b/18cacd",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/93288f-typography/b/18cacd",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/93288f-typography/b/94d751",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/v/0/p/93288f-typography/b/995dcd",
+      "title": "Typography · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/60977d",
+      "title": "Vertical Navigation · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/67a7b2",
+      "title": "Visual Language · Lightning Design System 2"
+    },
+    {
+      "url": "https://lightningdesignsystem.com/2e1ef8501/p/67a7b2-foundations/t/eafef4fe24",
+      "title": "Visual Language · Lightning Design System 2"
     }
   ]
 }

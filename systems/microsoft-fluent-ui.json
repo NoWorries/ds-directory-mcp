@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "microsoft-fluent-ui",
   "organization": "Microsoft",
   "design_system": "Fluent UI",
@@ -9,12 +9,12 @@
     "https://developer.microsoft.com/en-us/fluentui#/"
   ],
   "detail_url": "/systems/microsoft-fluent-ui",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-21T02:18:14+00:00",
-  "last_modified": "Mon, 21 Sep 2026 01:44:23 GMT",
+  "last_checked": "2026-09-24T01:59:20+00:00",
+  "last_modified": "Thu, 24 Sep 2026 01:58:59 GMT",
   "sitemap_last_modified": null,
   "resources": {},
   "unverified_resources": {},
@@ -27,6 +27,10 @@
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://developer.microsoft.com/en-us/fluentui",
+      "title": "Fluent UI - Get started - Fluent UI"
+    },
     {
       "url": "https://developer.microsoft.com/en-us/fluentui#/",
       "title": "Microsoft — Fluent UI"

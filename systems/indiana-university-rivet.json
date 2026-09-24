@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-23T23:14:57+00:00",
+  "generated_at": "2026-09-24T03:39:30+00:00",
   "id": "indiana-university-rivet",
   "organization": "Indiana University",
   "design_system": "Rivet",
@@ -9,22 +9,364 @@
     "https://rivet.iu.edu/"
   ],
   "detail_url": "/systems/indiana-university-rivet",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 83,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-21T02:35:13+00:00",
-  "last_modified": "Thu, 17 Sep 2026 18:28:43 GMT",
-  "sitemap_last_modified": null,
-  "resources": {},
+  "last_checked": "2026-09-24T01:42:31+00:00",
+  "last_modified": "Tue, 07 Jul 2026 17:57:05 GMT",
+  "sitemap_last_modified": "2026-07-07T17:56:51.237Z",
+  "resources": {
+    "github": [
+      "https://github.com/indiana-university/rivet-icons"
+    ],
+    "markdown_docs": [
+      "https://github.com/indiana-university/rivet-stickers/blob/main/README.md"
+    ],
+    "icons": [
+      "https://rivet.iu.edu/icons-stickers/icons"
+    ]
+  },
   "unverified_resources": {},
   "content_signals": {},
-  "github_meta": null,
+  "github_meta": {
+    "license": "BSD-3-Clause",
+    "stars": 7,
+    "last_pushed": "2025-02-28T20:00:56Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://rivet.iu.edu/about",
+      "title": "About Rivet 2 - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/accordion",
+      "title": "Accordion - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/alert",
+      "title": "Alert - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/app-create-or-edit-resource-page",
+      "title": "App create or edit resource page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/app-index-page",
+      "title": "App index page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/app-view-resource-page",
+      "title": "App view resource page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/avatar",
+      "title": "Avatar - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/badge",
+      "title": "Badge - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/billboard",
+      "title": "Billboard - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/blank-page",
+      "title": "Blank page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/border",
+      "title": "Border - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/breadcrumbs",
+      "title": "Breadcrumbs - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/button",
+      "title": "Button - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/calendar-tile",
+      "title": "Calendar tile - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/call-to-action",
+      "title": "Call to action - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/card",
+      "title": "Card - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/card-list-page",
+      "title": "Card list page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/checkbox",
+      "title": "Checkbox - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/color",
+      "title": "Color - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components",
+      "title": "Components - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/confirmation-page",
+      "title": "Confirmation page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/tutorials/create-a-rivet-component-using-utilities",
+      "title": "Create a Rivet component using utilities - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/tutorials/create-your-first-rivet-page",
+      "title": "Create your first Rivet page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/design-tokens",
+      "title": "Design tokens - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/details-page",
+      "title": "Details page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/dialog",
+      "title": "Dialog - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/disclosure",
+      "title": "Disclosure - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/display",
+      "title": "Display - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/dropdown",
+      "title": "Dropdown - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/empty-state",
+      "title": "Empty state - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/error-page",
+      "title": "Error page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/explore",
+      "title": "Explore Rivet - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/getting-started/extending-rivet",
+      "title": "Extending Rivet - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/file-input",
+      "title": "File input - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/flex",
+      "title": "Flex - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/footer",
+      "title": "Footer - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/gap",
+      "title": "Gap - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/getting-started",
+      "title": "Getting started - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/grid",
+      "title": "Grid - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/header",
+      "title": "Header - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/help",
+      "title": "Help and support - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/hero",
+      "title": "Hero - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/icons-stickers/icon-library",
+      "title": "Icon library - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/icons-stickers/icons",
+      "title": "Icons - Rivet Design System - Indiana University"
+    },
+    {
       "url": "https://rivet.uits.iu.edu/",
       "title": "Indiana University — Rivet"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/input-group",
+      "title": "Input group - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/landing-page",
+      "title": "Landing page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts",
+      "title": "Layouts - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/link-hub",
+      "title": "Link hub - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/list",
+      "title": "List - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/loading-indicator",
+      "title": "Loading indicator - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/pagination",
+      "title": "Pagination - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/people-list-page",
+      "title": "People list page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/profile-page",
+      "title": "Profile page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/quote",
+      "title": "Quote - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/radio-input",
+      "title": "Radio input - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/getting-started/rivet-design-kit",
+      "title": "Rivet design kit - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/",
+      "title": "Rivet Design System  - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/select-input",
+      "title": "Select input - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/series-nav",
+      "title": "Series nav - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/shadow",
+      "title": "Shadow - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/sidenav",
+      "title": "Sidenav - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/spacing",
+      "title": "Spacing - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/stat",
+      "title": "Stat - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/step-indicator",
+      "title": "Step indicator - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/icons-stickers/sticker-library",
+      "title": "Sticker library - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/icons-stickers/stickers",
+      "title": "Stickers - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/subnav",
+      "title": "Subnav - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/switch",
+      "title": "Switch - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/table",
+      "title": "Table - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/tabs",
+      "title": "Tabs - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/layouts/task-list-page",
+      "title": "Task list page - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/text-input",
+      "title": "Text input - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/textarea",
+      "title": "Textarea - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/components/timeline",
+      "title": "Timeline - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/tutorials",
+      "title": "Tutorials - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/typography",
+      "title": "Typography - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/tutorials/use-rivet-component-browser-events",
+      "title": "Use Rivet component browser events - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/getting-started/using-rivet-javascript",
+      "title": "Using Rivet JavaScript - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities",
+      "title": "Utilities - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/visibility",
+      "title": "Visibility - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/width",
+      "title": "Width - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/utilities/z-index",
+      "title": "Z Index - Rivet Design System - Indiana University"
     }
   ]
 }
