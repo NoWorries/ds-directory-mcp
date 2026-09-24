@@ -2191,14 +2191,35 @@ async def _render_one(crawler, url: str, config) -> tuple[str | None, set[str], 
             print("  rendered fetch is Storybook toolbar chrome, not real page content — treating as no content")
         return None, set(storybook_urls), None
 
+    # NOT result.links — crawl4ai's own scraping pipeline removes every
+    # excluded_tags element (STRIP_TAGS, including nav/footer/aside) from
+    # the DOM tree BEFORE it ever computes result.links, in the same single
+    # internal pass (content_scraping_strategy.py: excluded-tag removal at
+    # line ~651, _process_element() populating the links dict from that
+    # same now-mutated tree at line ~720). Confirmed live: Webex's Momentum
+    # Design System has all of its real navigation inside a <nav> — normal,
+    # semantic HTML — and crawl_spa() discovered a grand total of 0 further
+    # links from its rendered homepage, ending the whole crawl at 2 pages
+    # (the homepage and its /en redirect target) despite the real site
+    # having a large, fully populated nav visible to any human opening it.
+    # This is the exact same class of bug the plain crawl() path already
+    # had to fix for GitLab's Pajamas Design System (its own <nav> links
+    # went the same way through extract_text()'s in-place tag-stripping) —
+    # fixed there by extracting links from the untouched soup BEFORE
+    # stripping tags for the markdown text. Mirror that fix here: result.
+    # html is the full rendered page HTML straight from the browser, never
+    # touched by excluded_tags at all, so parse THAT ourselves for links
+    # instead, while still using result.markdown (crawl4ai's own
+    # excluded_tags-cleaned text) for the actual page content — this keeps
+    # the Apple HIG fix excluded_tags exists for (see fetch_rendered_page()'s
+    # docstring) while no longer silently deleting real navigation first.
     links_seen: set[str] = set()
-    links = getattr(result, "links", {}) or {}
-    if isinstance(links, dict):
-        for group in ("internal", "external"):
-            for item in links.get(group, []) or []:
-                href = item.get("href") if isinstance(item, dict) else item
-                if href:
-                    links_seen.add(href)
+    raw_html = getattr(result, "html", "") or ""
+    if raw_html:
+        try:
+            links_seen = extract_all_links(_parse_html(raw_html), url)
+        except Exception:
+            links_seen = set()
 
     title = None
     metadata = getattr(result, "metadata", None) or {}
