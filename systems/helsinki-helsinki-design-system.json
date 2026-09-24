@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "helsinki-helsinki-design-system",
   "organization": "Helsinki",
   "design_system": "Helsinki Design System",
@@ -9,16 +9,17 @@
     "https://hds.hel.fi/"
   ],
   "detail_url": "/systems/helsinki-helsinki-design-system",
-  "pages_indexed": 150,
+  "pages_indexed": 297,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T01:30:01+00:00",
-  "last_modified": "Fri, 17 Jul 2026 11:00:11 GMT",
+  "last_checked": "2026-09-24T06:21:41+00:00",
+  "last_modified": "Fri, 17 Jul 2026 11:00:09 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/City-of-Helsinki/helsinki-design-system"
+      "https://github.com/City-of-Helsinki/helsinki-design-system",
+      "https://github.com/City-of-Helsinki/hds-cra"
     ],
     "storybook": [
       "https://hds.hel.fi/storybook/react",
@@ -28,11 +29,17 @@
       "https://hds.hel.fi/storybook/react/iframe.html",
       "https://hds.hel.fi/storybook/react/static-cookie-consent/standaloneBanner.html",
       "https://hds.hel.fi/release-5.2.2/storybook/react",
-      "https://hds.hel.fi/storybook/core"
+      "https://hds.hel.fi/storybook/core",
+      "https://hds.hel.fi/release-5.2.2/storybook/react/iframe.html",
+      "https://hds.hel.fi/release-4.10.0/storybook/react/iframe.html",
+      "https://storybook.js.org/"
     ],
     "figma": [
       "https://figma.com/design/Kxwg3R0zNRHj55nQqFu6VS/HDS-Design-Kit-v4",
-      "https://figma.com/design/Kxwg3R0zNRHj55nQqFu6VS/HDS-Design-Kit-v3"
+      "https://figma.com/design/Kxwg3R0zNRHj55nQqFu6VS/HDS-Design-Kit-v3",
+      "https://figma.com/community/file/1441694909662533693/helsinki-design-system-4-0-0",
+      "https://figma.com/file/Kxwg3R0zNRHj55nQqFu6VS/HDS-UI-Kit-v3",
+      "https://figma.com/community/file/1441694909662533693"
     ],
     "markdown_docs": [
       "https://github.com/City-of-Helsinki/helsinki-design-system/blob/master/CONTRIBUTING.md",
@@ -43,7 +50,12 @@
       "https://hds.hel.fi/foundation/visual-assets/icons",
       "https://hds.hel.fi/components/icon",
       "https://hds.hel.fi/release-5.2.2/components/icon",
-      "https://hds.hel.fi/release-5.2.2/foundation/visual-assets/icons"
+      "https://hds.hel.fi/release-5.2.2/foundation/visual-assets/icons",
+      "https://hds.hel.fi/release-4.10.0/foundation/visual-assets/icons",
+      "https://hds.hel.fi/release-5.2.2/getting-started/contributing/icons",
+      "https://hds.hel.fi/images/foundation/visual-assets/icons/icon-sizes.png",
+      "https://hds.hel.fi/getting-started/contributing/icons",
+      "https://hds.hel.fi/release-4.10.0/getting-started/contributing/icons"
     ]
   },
   "unverified_resources": {
@@ -56,8 +68,11 @@
   "content_signals": {
     "dark_mode": true,
     "frameworks": [
-      "React"
-    ]
+      "React",
+      "Web Components"
+    ],
+    "tokens_format": "Figma Variables",
+    "exemplars": true
   },
   "github_meta": {
     "license": "MIT",
@@ -66,6 +81,18 @@
   },
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://hds.hel.fi/about/accessibility/statement",
+      "title": "Helsinki Design System | Accessibility statement"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/about/accessibility/statement",
+      "title": "Helsinki Design System | Accessibility statement"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/about/accessibility/statement",
+      "title": "Helsinki Design System | Accessibility statement"
+    },
     {
       "url": "https://hds.hel.fi/components/accordion",
       "title": "Helsinki Design System | Accordion"
@@ -81,6 +108,14 @@
     {
       "url": "https://hds.hel.fi/components/accordion/code",
       "title": "Helsinki Design System | Accordion - Code"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/cookies/basics",
+      "title": "Helsinki Design System | Basics"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/cookies/basics",
+      "title": "Helsinki Design System | Basics"
     },
     {
       "url": "https://hds.hel.fi/patterns/cookies/basics",
@@ -99,12 +134,48 @@
       "title": "Helsinki Design System | Breadcrumb"
     },
     {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/design-tokens/breakpoints",
+      "title": "Helsinki Design System | Breakpoint tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/design-tokens/breakpoints",
+      "title": "Helsinki Design System | Breakpoint tokens - Usage"
+    },
+    {
       "url": "https://hds.hel.fi/foundation/design-tokens/breakpoints",
       "title": "Helsinki Design System | Breakpoint tokens - Usage"
     },
     {
+      "url": "https://hds.hel.fi/foundation/design-tokens/breakpoints/tokens",
+      "title": "Helsinki Design System | Breakpoints tokens - Tokens"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/design-tokens/breakpoints/tokens",
+      "title": "Helsinki Design System | Breakpoints tokens - Tokens"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/design-tokens/breakpoints/tokens",
+      "title": "Helsinki Design System | Breakpoints tokens - Tokens"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/forms/form-building",
+      "title": "Helsinki Design System | Building forms"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/forms/form-building",
+      "title": "Helsinki Design System | Building forms"
+    },
+    {
       "url": "https://hds.hel.fi/patterns/forms/form-building",
       "title": "Helsinki Design System | Building forms"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/navigation/building-navigation",
+      "title": "Helsinki Design System | Building navigation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/navigation/building-navigation",
+      "title": "Helsinki Design System | Building navigation"
     },
     {
       "url": "https://hds.hel.fi/patterns/navigation/building-navigation",
@@ -147,6 +218,14 @@
       "title": "Helsinki Design System | Checkbox"
     },
     {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/guidelines/checkbox-radiobutton-toggle",
+      "title": "Helsinki Design System | Checkboxes, radio buttons, or toggles?"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/guidelines/checkbox-radiobutton-toggle",
+      "title": "Helsinki Design System | Checkboxes, radio buttons, or toggles?"
+    },
+    {
       "url": "https://hds.hel.fi/foundation/guidelines/checkbox-radiobutton-toggle",
       "title": "Helsinki Design System | Checkboxes, radio buttons, or toggles?"
     },
@@ -155,8 +234,24 @@
       "title": "Helsinki Design System | Colour tokens - Accessibility"
     },
     {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/design-tokens/colour",
+      "title": "Helsinki Design System | Colour tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/design-tokens/colour",
+      "title": "Helsinki Design System | Colour tokens - Usage"
+    },
+    {
       "url": "https://hds.hel.fi/foundation/design-tokens/colour",
       "title": "Helsinki Design System | Colour tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/cookies/common-helsinki-cookies",
+      "title": "Helsinki Design System | Commonly known Helsinki cookies"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/cookies/common-helsinki-cookies",
+      "title": "Helsinki Design System | Commonly known Helsinki cookies"
     },
     {
       "url": "https://hds.hel.fi/components",
@@ -183,6 +278,14 @@
       "title": "Helsinki Design System | CookieConsent"
     },
     {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/guidelines/data-formats",
+      "title": "Helsinki Design System | Data formats"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/guidelines/data-formats",
+      "title": "Helsinki Design System | Data formats"
+    },
+    {
       "url": "https://hds.hel.fi/foundation/guidelines/data-formats",
       "title": "Helsinki Design System | Data formats"
     },
@@ -197,6 +300,30 @@
     {
       "url": "https://hds.hel.fi/release-4.10.0/components/date-input",
       "title": "Helsinki Design System | DateInput"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/contributing/design",
+      "title": "Helsinki Design System | Design"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/contributing/design",
+      "title": "Helsinki Design System | Design"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/contributing/design",
+      "title": "Helsinki Design System | Design"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/designer",
+      "title": "Helsinki Design System | Designer"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/designer",
+      "title": "Helsinki Design System | Designer"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/designer",
+      "title": "Helsinki Design System | Designer"
     },
     {
       "url": "https://hds.hel.fi/getting-started/developer",
@@ -223,6 +350,46 @@
       "title": "Helsinki Design System | Dialog"
     },
     {
+      "url": "https://hds.hel.fi/getting-started/contributing/documentation",
+      "title": "Helsinki Design System | Documentation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/contributing/documentation",
+      "title": "Helsinki Design System | Documentation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/contributing/documentation",
+      "title": "Helsinki Design System | Documentation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/components/error-summary",
+      "title": "Helsinki Design System | ErrorSummary"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/error-summary",
+      "title": "Helsinki Design System | ErrorSummary"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/navigation/examples",
+      "title": "Helsinki Design System | Examples"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/navigation/examples",
+      "title": "Helsinki Design System | Examples"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/visual-assets/favicon",
+      "title": "Helsinki Design System | Favicon"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/visual-assets/favicon",
+      "title": "Helsinki Design System | Favicon"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/visual-assets/favicon",
+      "title": "Helsinki Design System | Favicon"
+    },
+    {
       "url": "https://hds.hel.fi/components/fieldset",
       "title": "Helsinki Design System | Fieldset"
     },
@@ -233,6 +400,26 @@
     {
       "url": "https://hds.hel.fi/release-5.2.2/components/fieldset",
       "title": "Helsinki Design System | Fieldset"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/tutorials/figma-tutorial",
+      "title": "Helsinki Design System | Figma basics"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/tutorials/figma-tutorial",
+      "title": "Helsinki Design System | Figma basics"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/tutorials/figma-tutorial",
+      "title": "Helsinki Design System | Figma basics"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/components/file-input",
+      "title": "Helsinki Design System | FileInput"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/file-input",
+      "title": "Helsinki Design System | FileInput"
     },
     {
       "url": "https://hds.hel.fi/components/file-input",
@@ -251,6 +438,14 @@
       "title": "Helsinki Design System | Footer"
     },
     {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/forms/form-validation",
+      "title": "Helsinki Design System | Form validation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/forms/form-validation",
+      "title": "Helsinki Design System | Form validation"
+    },
+    {
       "url": "https://hds.hel.fi/patterns/forms/form-validation",
       "title": "Helsinki Design System | Form validation"
     },
@@ -267,6 +462,54 @@
       "title": "Helsinki Design System | Foundations overview"
     },
     {
+      "url": "https://hds.hel.fi/getting-started/faq",
+      "title": "Helsinki Design System | Frequently asked questions"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/faq",
+      "title": "Helsinki Design System | Frequently asked questions"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/faq",
+      "title": "Helsinki Design System | Frequently asked questions"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started",
+      "title": "Helsinki Design System | Getting started"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started",
+      "title": "Helsinki Design System | Getting started"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started",
+      "title": "Helsinki Design System | Getting started"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/guidelines/grid",
+      "title": "Helsinki Design System | Grid"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/guidelines/grid",
+      "title": "Helsinki Design System | Grid"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/guidelines/grid",
+      "title": "Helsinki Design System | Grid"
+    },
+    {
+      "url": "https://hds.hel.fi/about/accessibility/hds-accessibility",
+      "title": "Helsinki Design System | HDS Accessibility"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/about/accessibility/hds-accessibility",
+      "title": "Helsinki Design System | HDS Accessibility"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/about/accessibility/hds-accessibility",
+      "title": "Helsinki Design System | HDS Accessibility"
+    },
+    {
       "url": "https://hds.hel.fi/components/header",
       "title": "Helsinki Design System | Header"
     },
@@ -281,6 +524,10 @@
     {
       "url": "https://hds.hel.fi/components/header/accessibility",
       "title": "Helsinki Design System | Header - Accessibility"
+    },
+    {
+      "url": "https://hds.hel.fi/components/header/code",
+      "title": "Helsinki Design System | Header - Code"
     },
     {
       "url": "https://hds.hel.fi/components/header/customisation",
@@ -323,8 +570,20 @@
       "title": "Helsinki Design System | Home page"
     },
     {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/contributing/how-to-contribute",
+      "title": "Helsinki Design System | How to contribute"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/contributing/how-to-contribute",
+      "title": "Helsinki Design System | How to contribute"
+    },
+    {
       "url": "https://hds.hel.fi/getting-started/contributing/how-to-contribute",
       "title": "Helsinki Design System | How to contribute"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/icon",
+      "title": "Helsinki Design System | Icon"
     },
     {
       "url": "https://hds.hel.fi/components/icon",
@@ -333,6 +592,54 @@
     {
       "url": "https://hds.hel.fi/release-5.2.2/components/icon",
       "title": "Helsinki Design System | Icon"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/contributing/icons",
+      "title": "Helsinki Design System | Icons"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/contributing/icons",
+      "title": "Helsinki Design System | Icons"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/contributing/icons",
+      "title": "Helsinki Design System | Icons"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/visual-assets/icons",
+      "title": "Helsinki Design System | Icons"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/visual-assets/icons",
+      "title": "Helsinki Design System | Icons"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/visual-assets/icons",
+      "title": "Helsinki Design System | Icons"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/contributing/implementation",
+      "title": "Helsinki Design System | Implementation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/contributing/implementation",
+      "title": "Helsinki Design System | Implementation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/contributing/implementation",
+      "title": "Helsinki Design System | Implementation"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/guidelines/inclusivity",
+      "title": "Helsinki Design System | Inclusivity"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/guidelines/inclusivity",
+      "title": "Helsinki Design System | Inclusivity"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/guidelines/inclusivity",
+      "title": "Helsinki Design System | Inclusivity"
     },
     {
       "url": "https://hds.hel.fi/components/koros",
@@ -383,6 +690,26 @@
       "title": "Helsinki Design System | LoadingSpinner"
     },
     {
+      "url": "https://hds.hel.fi/foundation/guidelines/localisation",
+      "title": "Helsinki Design System | Localisation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/guidelines/localisation",
+      "title": "Helsinki Design System | Localisation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/guidelines/localisation",
+      "title": "Helsinki Design System | Localisation"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/visual-assets/logo",
+      "title": "Helsinki Design System | Logo"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/visual-assets/logo",
+      "title": "Helsinki Design System | Logo"
+    },
+    {
       "url": "https://hds.hel.fi/components/logo",
       "title": "Helsinki Design System | Logo"
     },
@@ -397,6 +724,114 @@
     {
       "url": "https://hds.hel.fi/release-5.2.2/components/logo",
       "title": "Helsinki Design System | Logo"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/tutorials/migrate-to-3.0.0",
+      "title": "Helsinki Design System | Migrate to 3.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/tutorials/migrate-to-3.0.0",
+      "title": "Helsinki Design System | Migrate to 3.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/tutorials/migrate-to-3.0.0",
+      "title": "Helsinki Design System | Migrate to 3.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/tutorials/migrate-to-4.0.0",
+      "title": "Helsinki Design System | Migrate to 4.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/tutorials/migrate-to-4.0.0",
+      "title": "Helsinki Design System | Migrate to 4.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/tutorials/migrate-to-4.0.0",
+      "title": "Helsinki Design System | Migrate to 4.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/tutorials/migrate-to-5.0.0",
+      "title": "Helsinki Design System | Migrate to 5.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/tutorials/migrate-to-5.0.0",
+      "title": "Helsinki Design System | Migrate to 5.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/tutorials/migrate-to-6.0.0",
+      "title": "Helsinki Design System | Migrate to 6.0.0"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/forms/form-multi-page",
+      "title": "Helsinki Design System | Multi-page forms"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/forms/form-multi-page",
+      "title": "Helsinki Design System | Multi-page forms"
+    },
+    {
+      "url": "https://hds.hel.fi/patterns/forms/form-multi-page",
+      "title": "Helsinki Design System | Multi-page forms"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/tutorials/migrate-to-6.0.0",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/tutorials/migrate-to-6.0.0",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/tutorials/migrate-to-5.0.0",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/components/statuslabel",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/tutorials/abstract-tutorial",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/about/roadmap",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/404",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/404",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/404",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/components/Link",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/search/code",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/components/select/helsinki-design-system/packages/react/src/components/select/texts.ts",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/components/select/helsinki-design-system/packages/react/src/components/select/texts.ts",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/helsinki-design-system/packages/react/src/components",
+      "title": "Helsinki Design System | Not Found"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/select/helsinki-design-system/packages/react/src/components/select/texts.ts",
+      "title": "Helsinki Design System | Not Found"
     },
     {
       "url": "https://hds.hel.fi/components/error-summary",
@@ -487,6 +922,30 @@
       "title": "Helsinki Design System | PhoneInput"
     },
     {
+      "url": "https://hds.hel.fi/foundation/guidelines/photography",
+      "title": "Helsinki Design System | Photography"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/guidelines/photography",
+      "title": "Helsinki Design System | Photography"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/guidelines/photography",
+      "title": "Helsinki Design System | Photography"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/visual-assets/placeholders",
+      "title": "Helsinki Design System | Placeholders"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/visual-assets/placeholders",
+      "title": "Helsinki Design System | Placeholders"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/visual-assets/placeholders",
+      "title": "Helsinki Design System | Placeholders"
+    },
+    {
       "url": "https://hds.hel.fi/components/radio-button",
       "title": "Helsinki Design System | RadioButton"
     },
@@ -499,12 +958,44 @@
       "title": "Helsinki Design System | RadioButton"
     },
     {
+      "url": "https://hds.hel.fi/about/releases",
+      "title": "Helsinki Design System | Releases"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/about/releases",
+      "title": "Helsinki Design System | Releases"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/about/releases",
+      "title": "Helsinki Design System | Releases"
+    },
+    {
+      "url": "https://hds.hel.fi/about/resources",
+      "title": "Helsinki Design System | Resources"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/about/resources",
+      "title": "Helsinki Design System | Resources"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/about/resources",
+      "title": "Helsinki Design System | Resources"
+    },
+    {
       "url": "https://hds.hel.fi/components/search",
       "title": "Helsinki Design System | Search"
     },
     {
       "url": "https://hds.hel.fi/release-5.2.2/components/search",
       "title": "Helsinki Design System | Search"
+    },
+    {
+      "url": "https://hds.hel.fi/components/search/code",
+      "title": "Helsinki Design System | Search - Code"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/components/search/code",
+      "title": "Helsinki Design System | Search - Code"
     },
     {
       "url": "https://hds.hel.fi/components/search-input",
@@ -531,6 +1022,18 @@
       "title": "Helsinki Design System | Select"
     },
     {
+      "url": "https://hds.hel.fi/components/select/code",
+      "title": "Helsinki Design System | Select - Code"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/components/select/code",
+      "title": "Helsinki Design System | Select - Code"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/select/code",
+      "title": "Helsinki Design System | Select - Code"
+    },
+    {
       "url": "https://hds.hel.fi/components/selection-group",
       "title": "Helsinki Design System | SelectionGroup"
     },
@@ -543,8 +1046,28 @@
       "title": "Helsinki Design System | SelectionGroup"
     },
     {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/guidelines/server-side-rendering",
+      "title": "Helsinki Design System | Server-side rendering"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/guidelines/server-side-rendering",
+      "title": "Helsinki Design System | Server-side rendering"
+    },
+    {
       "url": "https://hds.hel.fi/foundation/guidelines/server-side-rendering",
       "title": "Helsinki Design System | Server-side rendering"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/design-tokens/shadow",
+      "title": "Helsinki Design System | Shadow - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/design-tokens/shadow",
+      "title": "Helsinki Design System | Shadow - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/design-tokens/shadow",
+      "title": "Helsinki Design System | Shadow - Usage"
     },
     {
       "url": "https://hds.hel.fi/components/side-navigation",
@@ -557,6 +1080,18 @@
     {
       "url": "https://hds.hel.fi/release-5.2.2/components/side-navigation",
       "title": "Helsinki Design System | SideNavigation"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/design-tokens/spacing",
+      "title": "Helsinki Design System | Spacing tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/design-tokens/spacing",
+      "title": "Helsinki Design System | Spacing tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/design-tokens/spacing",
+      "title": "Helsinki Design System | Spacing tokens - Usage"
     },
     {
       "url": "https://hds.hel.fi/components/status-label",
@@ -583,8 +1118,28 @@
       "title": "Helsinki Design System | StepByStep"
     },
     {
+      "url": "https://hds.hel.fi/release-5.2.2/components/stepper",
+      "title": "Helsinki Design System | Stepper"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/stepper",
+      "title": "Helsinki Design System | Stepper"
+    },
+    {
       "url": "https://hds.hel.fi/components/stepper",
       "title": "Helsinki Design System | Stepper"
+    },
+    {
+      "url": "https://hds.hel.fi/about",
+      "title": "Helsinki Design System | Support"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/about",
+      "title": "Helsinki Design System | Support"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/about",
+      "title": "Helsinki Design System | Support"
     },
     {
       "url": "https://hds.hel.fi/components/table",
@@ -621,6 +1176,14 @@
     {
       "url": "https://hds.hel.fi/release-5.2.2/components/text-area",
       "title": "Helsinki Design System | TextArea"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/components/text-input",
+      "title": "Helsinki Design System | TextInput"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/components/text-input",
+      "title": "Helsinki Design System | TextInput"
     },
     {
       "url": "https://hds.hel.fi/components/text-input",
@@ -661,6 +1224,46 @@
     {
       "url": "https://hds.hel.fi/release-5.2.2/components/tooltip",
       "title": "Helsinki Design System | Tooltip"
+    },
+    {
+      "url": "https://hds.hel.fi/foundation/design-tokens/typography",
+      "title": "Helsinki Design System | Typography tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/design-tokens/typography",
+      "title": "Helsinki Design System | Typography tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/design-tokens/typography",
+      "title": "Helsinki Design System | Typography tokens - Usage"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/patterns/cookies/using-the-cookieconsent",
+      "title": "Helsinki Design System | Using the CookieConsent"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/patterns/cookies/using-the-cookieconsent",
+      "title": "Helsinki Design System | Using the CookieConsent"
+    },
+    {
+      "url": "https://hds.hel.fi/getting-started/versioning",
+      "title": "Helsinki Design System | Versioning"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/getting-started/versioning",
+      "title": "Helsinki Design System | Versioning"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/getting-started/versioning",
+      "title": "Helsinki Design System | Versioning"
+    },
+    {
+      "url": "https://hds.hel.fi/release-4.10.0/foundation/visual-assets/wave-motifs",
+      "title": "Helsinki Design System | Wave motifs"
+    },
+    {
+      "url": "https://hds.hel.fi/release-5.2.2/foundation/visual-assets/wave-motifs",
+      "title": "Helsinki Design System | Wave motifs"
     },
     {
       "url": "https://hds.hel.fi/foundation/visual-assets/wave-motifs",

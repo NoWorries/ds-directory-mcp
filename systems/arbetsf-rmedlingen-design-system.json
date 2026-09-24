@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "arbetsf-rmedlingen-design-system",
   "organization": "Arbetsförmedlingen",
   "design_system": "Design system",
@@ -9,16 +9,17 @@
     "https://designsystem.arbetsformedlingen.se/"
   ],
   "detail_url": "/systems/arbetsf-rmedlingen-design-system",
-  "pages_indexed": 128,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 155,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T00:00:25+00:00",
+  "last_checked": "2026-09-24T04:42:03+00:00",
   "last_modified": "Wed, 09 Sep 2026 08:48:57 GMT",
   "sitemap_last_modified": "2026-06-05",
   "resources": {
     "figma": [
-      "https://figma.com/proto/7MqaS4tRZZrA2rk8f0W3me/UI-kit-guider"
+      "https://figma.com/proto/7MqaS4tRZZrA2rk8f0W3me/UI-kit-guider",
+      "https://figma.com/community/file/1415694540311931262/af-icons"
     ]
   },
   "unverified_resources": {},
@@ -37,12 +38,24 @@
       "title": "Agentiva tjänster och artificiell intelligens - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/tjanstekomponenter/yrkesvaljare",
+      "title": "Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-tools-feedback-rating/oversikt",
       "title": "Betygskomponenten - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/bilder",
+      "title": "Bilder - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-layout-block/oversikt",
       "title": "Block - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-util-breakpoint-observer/oversikt",
+      "title": "Breakpoint Observer - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/designtokens/breakpoints",
@@ -69,12 +82,24 @@
       "title": "Datumväljare - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/design-pa-arbetsformedlingen",
+      "title": "Design på Arbetsförmedlingen - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/introduktion-till-designmonster",
       "title": "Designmönster - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/designprinciper",
       "title": "Designprinciper för ett Sverige i arbete - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-util-detect-click-outside/oversikt",
+      "title": "Detect Click Outside - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-util-detect-focus-outside/oversikt",
+      "title": "Detect Focus Outside - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/enkater-och-feedback",
@@ -121,6 +146,10 @@
       "title": "Felsida - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/film-och-ljud",
+      "title": "Film och ljud - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-file-upload/oversikt",
       "title": "Filuppladdare - Arbetsförmedlingen Designsystem"
     },
@@ -131,6 +160,10 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/formular",
       "title": "Formulär - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/om-designsystemet/forskning-och-samarbeten",
+      "title": "Forskning och samarbeten - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-fieldset/oversikt",
@@ -161,12 +194,20 @@
       "title": "Förloppsstegaren - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/grafik-och-animation",
+      "title": "Grafik och animation - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/grid-och-brytpunkter",
       "title": "Grid och brytpunkter - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/hantera-skyddade-personuppgifter",
       "title": "Hantera skyddade personuppgifter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/ikoner",
+      "title": "Ikonbibliotek - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/illustrationer",
@@ -209,12 +250,28 @@
       "title": "Intern länk - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-util-intersection-observer/oversikt",
+      "title": "Intersection Observer - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/om-designsystemet/introduktion-till-designsystemet",
       "title": "Introduktion till designsystemet - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/designtokens/introduktion-till-designtokens",
       "title": "Introduktion till designtokens - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kom-i-gang/introduktion-till-kodbiblioteket",
+      "title": "Introduktion till kodbiblioteket - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/tjanstekomponenter/om-tjanstekomponenter",
+      "title": "Introduktion till tjänstekomponenter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kom-i-gang/introduktion-till-ui-kit",
+      "title": "Introduktion till UI-kittet - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography-heading-jumbo/oversikt",
@@ -227,6 +284,14 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-category-filter/oversikt",
       "title": "Kategorifilter - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-util-keydown-handler/oversikt",
+      "title": "Keydown Handler - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-util-keyup-handler/oversikt",
+      "title": "Keyup Handler - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-button/oversikt",
@@ -255,6 +320,18 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-layout-columns/oversikt",
       "title": "Kolumner - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kom-i-gang/angular",
+      "title": "Kom igång med Angular - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kom-i-gang/html-js-css",
+      "title": "Kom igång med HTML/JS/CSS - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kom-i-gang/react",
+      "title": "Kom igång med React - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/kontakt",
@@ -333,6 +410,10 @@
       "title": "Multikort - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-util-mutation-observer/oversikt",
+      "title": "Mutation Observer - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-badge-notification/oversikt",
       "title": "Notifikationsindikator - Arbetsförmedlingen Designsystem"
     },
@@ -371,6 +452,10 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-context-menu/oversikt",
       "title": "Rullgardinsmeny - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/samarbeten",
+      "title": "Samarbeten - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-footer/oversikt",
@@ -425,15 +510,7 @@
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
-      "url": "https://designsystem.arbetsformedlingen.se/komponenter/www.arbetsformedlingen.se",
-      "title": "Startsida - Arbetsförmedlingen Designsystem"
-    },
-    {
-      "url": "https://designsystem.arbetsformedlingen.se/komponenter/Frivillig länk",
-      "title": "Startsida - Arbetsförmedlingen Designsystem"
-    },
-    {
-      "url": "https://designsystem.arbetsformedlingen.se/designmonster/introduktion",
+      "url": "https://designsystem.arbetsformedlingen.se/contact-us",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
@@ -441,11 +518,23 @@
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
-      "url": "https://designsystem.arbetsformedlingen.se/insatser-och-program",
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/www.arbetsformedlingen.se",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/introduktion",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/arbetsloshet-och-arbetssokande",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/insatser-och-program",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/Frivillig länk",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
@@ -493,8 +582,16 @@
       "title": "Tillgänglighetsmatrisen - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/tillganglighetsredogorelse",
+      "title": "Tillgänglighetsredogörelse - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-title-logo/oversikt",
       "title": "Titellogotyp - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/typografi",
+      "title": "Typografi - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography/oversikt",
@@ -515,6 +612,10 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-form-validation-message/oversikt",
       "title": "Valideringsmeddelande - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/varumarket-arbetsformedlingen",
+      "title": "Varumärket Arbetsförmedlingen - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-calendar-week-view/oversikt",
@@ -541,8 +642,16 @@
       "title": "Väljare med sök - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/var-visuella-identitet",
+      "title": "Vår visuella identitet - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/webbfarger",
       "title": "Webbfärger - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designtokens/ovriga",
+      "title": "Övriga designtokens - Arbetsförmedlingen Designsystem"
     }
   ]
 }

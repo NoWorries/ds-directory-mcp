@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "altinn-altinn-design-system",
   "organization": "Altinn",
   "design_system": "Altinn Design System",
@@ -9,11 +9,11 @@
     "https://docs.altinn.studio/"
   ],
   "detail_url": "/systems/altinn-altinn-design-system",
-  "pages_indexed": 266,
+  "pages_indexed": 415,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-23T23:39:35+00:00",
+  "last_checked": "2026-09-24T04:18:28+00:00",
   "last_modified": "Wed, 23 Sep 2026 12:53:30 GMT",
   "sitemap_last_modified": "2026-09-23T14:49:18+02:00",
   "resources": {
@@ -24,7 +24,11 @@
       "https://github.com/altinn/altinn-studio-docs",
       "https://github.com/Altinn/app-frontend-react",
       "https://github.com/altinn/altinn-studio",
-      "https://github.com/altinn/hugo-theme-altinn"
+      "https://github.com/altinn/hugo-theme-altinn",
+      "https://github.com/Altinn/altinn-correspondence",
+      "https://github.com/Altinn/altinn-apiclient-maskinporten",
+      "https://github.com/Altinn/altinn-notifications",
+      "https://github.com/Altinn/altinn-broker"
     ],
     "figma": [
       "https://figma.com/community/file/1344307804742953785/altinn-studio-komponenter"
@@ -32,7 +36,10 @@
     "markdown_docs": [
       "https://github.com/Altinn/app-localtest/blob/master/README.md",
       "https://github.com/Altinn/altinn-studio/blob/main/CONTRIBUTING.md",
-      "https://github.com/Altinn/app-localtest/blob/main/README.md"
+      "https://github.com/Altinn/app-localtest/blob/main/README.md",
+      "https://github.com/digdir/dialogporten/blob/main/README.md",
+      "https://github.com/Altinn/altinn-broker/blob/main/README.md",
+      "https://github.com/Altinn/altinn-correspondence/blob/main/README.md"
     ],
     "npm": [
       "https://npmjs.com/package/altinn-designsystem"
@@ -40,7 +47,8 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/felleslosninger/efm-mocks"
+      "https://github.com/tus/tus-java-client",
+      "https://github.com/tus/tus-js-client"
     ]
   },
   "content_signals": {
@@ -50,9 +58,9 @@
     "exemplars": true
   },
   "github_meta": {
-    "license": "BSD-3-Clause",
-    "stars": 21,
-    "last_pushed": "2026-09-15T14:18:42Z"
+    "license": null,
+    "stars": 6,
+    "last_pushed": "2026-09-23T11:37:25Z"
   },
   "npm_meta": {
     "latest_version": "4.2.0",
@@ -73,12 +81,28 @@
       "title": "Access Management – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/business/adminstreretilganger",
+      "title": "Administrere tilganger – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/activity",
+      "title": "Aktivitet – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/activity-log",
+      "title": "Aktivitetslogg – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/partytype",
       "title": "Aktørtyper – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools/alpine-linux",
       "title": "Alpine Linux – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/transition/portal",
+      "title": "Altinn 2 Portalvisning – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/altinn-2",
@@ -93,8 +117,36 @@
       "title": "Altinn 3 API – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker",
+      "title": "Altinn 3 Broker – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/correspondence",
+      "title": "Altinn 3 Correspondence – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/getting-started/developer-guides/service-owner",
+      "title": "Altinn 3 Formidling - Utviklerveiledning for Tjenesteeier – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/broker-transition",
+      "title": "Altinn 3 Formidling overgangsløsning – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker",
+      "title": "Altinn 3 Formidling – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence",
+      "title": "Altinn 3 Melding – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/solutions/altinn-apps",
       "title": "Altinn Apps – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/authorization/altinn-authorization",
+      "title": "Altinn Autorisasjon – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/architecture/informationmodel",
@@ -161,6 +213,14 @@
       "title": "API – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/end-user/api-scheme/api-user",
+      "title": "API-bruker – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/api-client",
+      "title": "API-klient for .NET – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/apps",
       "title": "App API – Altinn"
     },
@@ -191,6 +251,10 @@
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/reference/ux",
       "title": "App User Interface – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture",
+      "title": "Applikasjonsarkitektur – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/access-management/apps",
@@ -225,6 +289,26 @@
       "title": "Architecture – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture/audit-log/patterns",
+      "title": "Arkitekturmønstre i Audit Log – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture/authorization/patterns",
+      "title": "Arkitekturmønstre i Authorization og PDP – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture/register/patterns",
+      "title": "Arkitekturmønstre i Register – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/authenticating",
+      "title": "Autentisering – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/authentication",
+      "title": "Autentisering – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/scenarios/authentication",
       "title": "Autentisering – Altinn"
     },
@@ -237,12 +321,60 @@
       "title": "Authorization API – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture/authorization",
+      "title": "Authorization og PDP – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/autosavebehavior",
       "title": "Automatisk lagring – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization",
+      "title": "Autorisasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/authorization",
+      "title": "Autorisasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/authorization",
+      "title": "Autorisasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/authorization/attributes",
+      "title": "Autorisasjonsattributter – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/authorization/attributes",
+      "title": "Autorisasjonsattributter – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/authorization/authorization-contexts",
+      "title": "Autorisasjonskontekster – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/authorization/authorization-contexts",
+      "title": "Autorisasjonskontekster – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/authorization/parties",
+      "title": "Autoriserte parter – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/components/checkbox",
       "title": "Avkrysningsboks – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/reference/terminology",
+      "title": "Begreper – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/reference/terminology",
+      "title": "Begreper – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/development-architecture/xacml-decision-model",
+      "title": "Beslutningsmodellen i XACML – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/community/contributing",
@@ -265,12 +397,32 @@
       "title": "Brannmur og IP konfigurasjon – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/using-authorization-contexts",
+      "title": "Bruke autorisasjonskontekster – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/apps/data-elements/user-defined-metadata",
       "title": "Brukerdefinerte metadata – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides",
+      "title": "Brukerhåndbøker – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/usertest",
       "title": "Brukertest – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/broker-transition/usage/rest",
+      "title": "Bruksanvisning REST – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/broker-transition/usage/soap",
+      "title": "Bruksanvisning SOAP – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/broker-transition/usage",
+      "title": "Bruksanvisning – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/footer",
@@ -393,8 +545,32 @@
       "title": "DevOps – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/dialog",
+      "title": "Dialog – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/dialogs",
+      "title": "Dialoger – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/dialogporten",
       "title": "Dialogporten API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten",
+      "title": "Dialogporten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/dialogporten",
+      "title": "Dialogporten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/authorization/dialog-tokens",
+      "title": "Dialogtoken – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/authorization/dialog-tokens",
+      "title": "Dialogtoken – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools/docker",
@@ -433,12 +609,20 @@
       "title": "Entering the form – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities",
+      "title": "Entiteter – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines/components/error-message",
       "title": "Error messages – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/components/error-message",
       "title": "Feilmeldinger – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/getting-started/common-steps",
+      "title": "Felles steg for å komme i gang med Altinn Formidling – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/fields",
@@ -457,6 +641,10 @@
       "title": "Filtrering – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/authorized-parties",
+      "title": "Finne autoriserte parter – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/process/flowcontrol",
       "title": "Flytkontroll – Altinn"
     },
@@ -473,8 +661,40 @@
       "title": "Formidlingstjenesten – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/transmission",
+      "title": "Forsendelse – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/getting-started/developer-guides/dialogporten-arbeidsflate",
+      "title": "Forsendelser i Dialogporten og Arbeidsflate – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/transition/differences",
+      "title": "Forskjeller mellom Altinn 2 og Altinn 3 – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/administration",
       "title": "Forvaltning – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/front-end/front-channel-embeds",
+      "title": "Front channel embeds – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/front-channel-embeds",
+      "title": "Front channel embeds – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/front-end",
+      "title": "Front end – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/reference/capabilities",
+      "title": "Funksjonalitet og egenskaper – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/reference/capabilities",
+      "title": "Funksjonalitet og egenskaper – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/logic/generic",
@@ -485,6 +705,10 @@
       "title": "Getting Started – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/end-user/api-scheme",
+      "title": "Gi fullmakt til API-ressurser – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/git",
       "title": "Git – Altinn"
     },
@@ -493,12 +717,32 @@
       "title": "Gitea – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/broker/reference/tus",
+      "title": "Gjenopptakbar opplasting (TUS) – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/go",
       "title": "Go – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools/grafana",
       "title": "Grafana – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/graphql",
+      "title": "GraphQL – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/front-end/subscriptions",
+      "title": "GraphQL-abonnementer – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/explanation/basic-concepts",
+      "title": "Grunnleggende konsepter og begreper – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation/basic-concepts",
+      "title": "Grunnleggende konsepter – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines",
@@ -513,12 +757,24 @@
       "title": "Guider – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/action",
+      "title": "Handling – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/reference/rate-limits",
+      "title": "Hastighetsbegrensning – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/helm",
       "title": "Helm – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines/components/helptext",
       "title": "Help texts – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/getting-dialog-details",
+      "title": "Hente dialogdetaljer – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/shadowfields",
@@ -553,12 +809,40 @@
       "title": "Hugo – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/broker/what-do-you-get",
+      "title": "Hva får du? – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/what-do-you-get",
+      "title": "Hva får du? – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/what-do-you-get",
+      "title": "Hva får du? – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/what-do-you-get",
       "title": "Hva får du? – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/broker/getting-started",
+      "title": "Hvordan komme i gang – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/getting-started/developer-guides/idempotency",
+      "title": "Idempotens i Altinn 3 Melding – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines/components/picture-component",
       "title": "Image – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/impersonating-users",
+      "title": "Impersonering av brukere – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/reference/security",
+      "title": "Informasjonssikkerhet – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/link-to-app",
@@ -567,6 +851,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/content",
       "title": "Innhold i skjema – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/content-types",
+      "title": "Innholdstyper – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/insight",
@@ -613,8 +901,20 @@
       "title": "Instrumentering – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/front-end/altinn-apps",
+      "title": "Integrasjon med Altinn Apps – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/integration",
       "title": "Integrasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/business/integrasjoner",
+      "title": "Integrasjoner – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/integrating-altinn-apps",
+      "title": "Integrere Altinn Apps – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started/app-dev-course",
@@ -641,8 +941,36 @@
       "title": "Kodelister fra repeterede strukturer – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/getting-started",
+      "title": "Kom i gang med Altinn Autorisasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/getting-started/service-owner",
+      "title": "Kom i gang med Altinn Formidling som tjenesteeier – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/getting-started/developer-guides/systemprovider",
+      "title": "Kom i gang systemleverandør – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/getting-started/developer-guides/serviceowner",
+      "title": "Kom i gang tjenesteeier – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/getting-started",
+      "title": "Kom i gang – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started",
       "title": "Kom i gang – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/broker-transition/getting-started",
+      "title": "Komme i gang med Formidling Overgangsløsning – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started",
+      "title": "Komme i gang – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components",
@@ -669,6 +997,18 @@
       "title": "Konfigurere et underskjema i en app – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/correspondence/transition/consequences",
+      "title": "Konsekvenser – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/explanation",
+      "title": "Konsepter – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation",
+      "title": "Konsepter – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/consistency",
       "title": "Konsistens på tvers av tjenester – Altinn"
     },
@@ -677,12 +1017,24 @@
       "title": "Kubernetes – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/citizens/kulturidrettfrivillighet",
+      "title": "Kultur, idrett og frivillighet – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/basic-form",
       "title": "Lage et enkelt skjema – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/data/persistence",
       "title": "Lagring – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation/status-lifecycle/post-published",
+      "title": "Livssyklus Etter Publisering – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation/status-lifecycle/pre-published",
+      "title": "Livssyklus Før Publisering – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/reference/logic",
@@ -705,8 +1057,24 @@
       "title": "Løsningene – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/broker/reference/solution-architecture",
+      "title": "Løsningsarkitektur – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/reference/solution-architecture",
+      "title": "Løsningsarkitektur – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/markdown",
       "title": "Markdown – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/getting-started/developer-guides/maskinporten",
+      "title": "Maskinporten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation/status-lifecycle",
+      "title": "Meldings Livssyklus – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/messagebox",
@@ -719,6 +1087,22 @@
     {
       "url": "https://docs.altinn.studio/nb/api/apps/data-elements/metadata",
       "title": "Metadata – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/transition/delegation-migration",
+      "title": "Migrering av delegeringer – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/transition/data-migration",
+      "title": "Migrering av meldingsdata – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/transition/service-migration",
+      "title": "Migrering av tjenestekonfigurasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/migrating-from-altinn2",
+      "title": "Migrering fra Altinn 2 – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/api/models",
@@ -785,12 +1169,28 @@
       "title": "Node.js – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/broker/broker-transition/about",
+      "title": "Om Altinn 3 Formidling overgangsløsningen – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/community/about",
       "title": "Om Altinn 3 – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/broker/about",
+      "title": "Om Altinn Formidling – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/about",
+      "title": "Om Altinn Melding – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/about",
       "title": "Om Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/about-dialogporten",
+      "title": "Om Dialogporten – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/api/apps/spec",
@@ -805,12 +1205,52 @@
       "title": "OpenAPI (swagger) for Storage – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/openapi",
+      "title": "OpenAPI – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/detecting-changes",
+      "title": "Oppdage endringer – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/administration/maintainance/dependencies",
       "title": "Oppdatere avhengigheter i app – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/updating-dialogs",
+      "title": "Oppdatere dialoger – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/create-user",
       "title": "Opprette bruker i Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/creating-dialogs",
+      "title": "Opprette dialoger – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/resource-owner/consent/create-resource",
+      "title": "Opprette og publisere samtykkeressurs – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/creating-resources",
+      "title": "Opprette ressurser – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/system-vendor/system-user/systemuserrequest",
+      "title": "Opprette Systembruker – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/looking-up-dialogs",
+      "title": "Oppslag ved referanse – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/transition",
+      "title": "Overgangs- og migreringsløsning – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/status-migration",
+      "title": "Page not found · GitHub Pages"
     },
     {
       "url": "https://docs.altinn.studio/authentication/guides",
@@ -821,8 +1261,24 @@
       "title": "Page not found · GitHub Pages"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/authorization/parties",
+      "title": "Parter – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/citizens/patentersertifikaterattester",
+      "title": "Patenter, sertifikater og attester – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/pdf",
       "title": "PDF – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture/register/persistence",
+      "title": "Persistensarkitektur for Register – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/business/postogarkiv",
+      "title": "Post og arkiv – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/insight",
@@ -869,6 +1325,10 @@
       "title": "Prosess – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/process-identifiers",
+      "title": "Prosessidentifikatorer – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/prototype",
       "title": "Prototype – Altinn"
     },
@@ -901,8 +1361,24 @@
       "title": "React – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference",
+      "title": "Referanse – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference",
       "title": "Referanse – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/reference",
+      "title": "Referansedokumentasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/reference",
+      "title": "Referansedokumentasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/dialog-lookup",
+      "title": "Referanseoppslag – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/reference",
@@ -921,6 +1397,10 @@
       "title": "Resource Registry API – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/resourceadministration",
+      "title": "Ressursadministrasjon – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/monitoring/references",
       "title": "Ressurser – Altinn"
     },
@@ -931,6 +1411,14 @@
     {
       "url": "https://docs.altinn.studio/nb/community/roadmap",
       "title": "Roadmap for Altinn – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/resource-owner/consent",
+      "title": "Samtykke for tjenesteeier – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/consent",
+      "title": "Samtykke – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/api/scenarios",
@@ -945,12 +1433,32 @@
       "title": "Secrets – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/seen",
+      "title": "Sett – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/seen-log",
+      "title": "Sett-logg – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/end-user/system-user/setup-client-relationship",
+      "title": "Sette opp klientforhold – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/settings",
       "title": "Settings og miljøvariabler – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/pages",
       "title": "Sider – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/front-end/write-actions",
+      "title": "Skrivehandlinger – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/write-actions",
+      "title": "Skrivehandlinger – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/technology/solutions",
@@ -969,12 +1477,20 @@
       "title": "Stateless data elements – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/status-migration",
+      "title": "Status migrering – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/storage",
       "title": "Storage API – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/api/storage",
       "title": "Storage API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/explanation/very-large-files",
+      "title": "Store filer – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/styling",
@@ -985,8 +1501,40 @@
       "title": "Styling – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/architecture",
+      "title": "Systemarkitektur – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/system-vendor/system-user",
+      "title": "Systembruker veiledning – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/systemlabel",
+      "title": "Systemetikett – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/reference/system-interfaces",
+      "title": "Systemgrensesnitt – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/reference/system-interfaces",
+      "title": "Systemgrensesnitt – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/searching-for-dialogs",
+      "title": "Søke etter dialoger – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation/taushetsbelagt-post",
+      "title": "Taushetsbelagt post – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/technology",
       "title": "Technology – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/broker-transition/technical-overview",
+      "title": "Teknisk oversikt – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology",
@@ -1025,6 +1573,10 @@
       "title": "Text field – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation/access-management",
+      "title": "Tilgangsstyring – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/access-management",
       "title": "Tilgangsstyring – Altinn"
     },
@@ -1033,12 +1585,28 @@
       "title": "Tilgjengelighet – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture/access-management-ui/persistence",
+      "title": "Tilstands- og persistensarkitektur for Access Management UI – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/apps/stateless-data-elements",
       "title": "Tilstandsløse data – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners",
+      "title": "Tjenesteeiere – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/serviceownerlabel",
+      "title": "Tjenesteeieretiketter – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/logic/services",
       "title": "Tjenester – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/getting-started/authorization/service-resource",
+      "title": "Tjenesteressurs – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools",
@@ -1085,12 +1653,20 @@
       "title": "User testing – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/correspondence/explanation/attachment-expiry",
+      "title": "Utløpsdato for vedlegg – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development",
       "title": "Utvikling – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/api/apps/validation",
       "title": "Validation – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/guides/resource-owner/consent/validate-concent",
+      "title": "Validere samtykketoken – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/logic/validation/expression-validation",
@@ -1105,12 +1681,40 @@
       "title": "Validering – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/correspondence/getting-started/developer-guides/notifications",
+      "title": "Varsling i Altinn 3 Melding – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/api/temp",
       "title": "Varsling – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/nb/notifications",
+      "title": "Varslinger – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/attachment",
+      "title": "Vedlegg – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/data/attachments",
       "title": "Vedlegg – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/getting-started/developer-guides/send-files",
+      "title": "Veiledning for avsender – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/getting-started/developer-guides/receive-files",
+      "title": "Veiledning for mottakere – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/getting-started/developer-guides",
+      "title": "Veiledning for utviklere – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/authorization/getting-started/choose-authentication",
+      "title": "Velg riktig integrasjonsmåte – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/filescan",

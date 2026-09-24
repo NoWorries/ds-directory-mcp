@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "bridge-bold-design-system",
   "organization": "Bridge",
   "design_system": "Bold design system",
@@ -9,17 +9,27 @@
     "https://bold.bridge.ufsc.br/"
   ],
   "detail_url": "/systems/bridge-bold-design-system",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 8,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T00:10:00+00:00",
+  "last_checked": "2026-09-24T04:53:22+00:00",
   "last_modified": "Thu, 20 Aug 2026 22:00:37 GMT",
   "sitemap_last_modified": null,
-  "resources": {},
+  "resources": {
+    "storybook": [
+      "https://bold.bridge.ufsc.tech/storybook"
+    ],
+    "figma": [
+      "https://figma.com/file/TE9FUDtlgVQ4FWlAPtTagxQU/Bold-Design-System"
+    ]
+  },
   "unverified_resources": {},
   "content_signals": {
-    "dark_mode": true
+    "dark_mode": true,
+    "frameworks": [
+      "React"
+    ]
   },
   "github_meta": null,
   "npm_meta": null,
@@ -27,6 +37,34 @@
     {
       "url": "https://bold.bridge.ufsc.br/",
       "title": "Bold Design System"
+    },
+    {
+      "url": "https://bold.bridge.ufsc.br/en/resources",
+      "title": "Bold Design System"
+    },
+    {
+      "url": "https://bold.bridge.ufsc.br/en/about",
+      "title": "Bold Design System"
+    },
+    {
+      "url": "https://bold.bridge.ufsc.br/en",
+      "title": "Bold Design System"
+    },
+    {
+      "url": "https://bold.bridge.ufsc.br/en/getting-started",
+      "title": "Bold Design System"
+    },
+    {
+      "url": "https://bold.bridge.ufsc.br/en/components",
+      "title": "Page not found · GitHub Pages"
+    },
+    {
+      "url": "https://bold.bridge.ufsc.br/en/usage",
+      "title": "Page not found · GitHub Pages"
+    },
+    {
+      "url": "https://bold.bridge.ufsc.br/en/design-guidelines",
+      "title": "Page not found · GitHub Pages"
     }
   ]
 }

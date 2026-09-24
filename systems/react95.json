@@ -1,0 +1,44 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-24T08:40:08+00:00",
+  "id": "react95",
+  "organization": null,
+  "design_system": "React95",
+  "full_name": "React95",
+  "start_urls": [
+    "https://react95.github.io/React95/"
+  ],
+  "detail_url": "/systems/react95",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-24T07:19:06+00:00",
+  "last_modified": "Wed, 02 Sep 2026 20:02:51 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "github": [
+      "https://github.com/React95/React95"
+    ],
+    "storybook": [
+      "https://storybook.js.org/docs/builders/vite",
+      "https://storybook.js.org/docs/writing-stories/decorators",
+      "https://storybook.js.org/docs/builders/webpack",
+      "https://storybook.js.org/docs/configure/environment-variables"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": {
+    "license": "NOASSERTION",
+    "stars": 3824,
+    "last_pushed": "2026-09-02T20:02:28Z"
+  },
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://react95.github.io/React95/iframe.html",
+      "title": "Storybook"
+    }
+  ]
+}

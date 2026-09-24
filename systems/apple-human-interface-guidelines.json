@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "apple-human-interface-guidelines",
   "organization": "Apple",
   "design_system": "Human Interface Guidelines",
@@ -9,11 +9,11 @@
     "https://developer.apple.com/design/human-interface-guidelines/"
   ],
   "detail_url": "/systems/apple-human-interface-guidelines",
-  "pages_indexed": 151,
+  "pages_indexed": 173,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T00:02:26+00:00",
+  "last_checked": "2026-09-24T04:44:07+00:00",
   "last_modified": "Wed, 23 Sep 2026 08:52:41 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -147,12 +147,20 @@
       "title": "Collections | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/color-wells",
+      "title": "Color wells | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/color",
       "title": "Color | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/column-views",
       "title": "Column views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/combo-boxes",
+      "title": "Combo boxes | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/complications",
@@ -165,6 +173,10 @@
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/content",
       "title": "Content | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/context-menus",
+      "title": "Context menus | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/controls",
@@ -211,12 +223,28 @@
       "title": "Designing for watchOS | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/digit-entry-views",
+      "title": "Digit entry views | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/digital-crown",
       "title": "Digital Crown | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/disclosure-controls",
+      "title": "Disclosure controls | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/dock-menus",
+      "title": "Dock menus | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/drag-and-drop",
       "title": "Drag and drop | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/edit-menus",
+      "title": "Edit menus | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/entering-data",
@@ -249,6 +277,10 @@
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/game-controls",
       "title": "Game controls | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/gauges",
+      "title": "Gauges | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/generative-ai",
@@ -297,6 +329,14 @@
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/id-verifier",
       "title": "ID Verifier | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/image-views",
+      "title": "Image views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/image-wells",
+      "title": "Image wells | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/images",
@@ -447,12 +487,24 @@
       "title": "Page controls | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/panels",
+      "title": "Panels | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/path-controls",
+      "title": "Path controls | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/patterns",
       "title": "Patterns | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/photo-editing",
       "title": "Photo editing | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/pickers",
+      "title": "Pickers | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/playing-audio",
@@ -475,6 +527,10 @@
       "title": "Pop-up buttons | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/popovers",
+      "title": "Popovers | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/presentation",
       "title": "Presentation | Apple Developer Documentation"
     },
@@ -489,6 +545,10 @@
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons",
       "title": "Pull-down buttons | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/rating-indicators",
+      "title": "Rating indicators | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/ratings-and-reviews",
@@ -571,8 +631,16 @@
       "title": "Split views | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/status-bars",
+      "title": "Status bars | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/status",
       "title": "Status | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/steppers",
+      "title": "Steppers | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/system-experiences",
@@ -599,6 +667,10 @@
       "title": "Text fields | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/text-views",
+      "title": "Text views | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/the-menu-bar",
       "title": "The menu bar | Apple Developer Documentation"
     },
@@ -607,8 +679,16 @@
       "title": "Toggles | Apple Developer Documentation"
     },
     {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/token-fields",
+      "title": "Token fields | Apple Developer Documentation"
+    },
+    {
       "url": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
       "title": "Toolbars | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/top-shelf",
+      "title": "Top Shelf | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
@@ -629,6 +709,14 @@
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/wallet",
       "title": "Wallet | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/watch-faces",
+      "title": "Watch faces | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/web-views",
+      "title": "Web views | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/widgets",

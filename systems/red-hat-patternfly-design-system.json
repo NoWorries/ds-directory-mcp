@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "red-hat-patternfly-design-system",
   "organization": "Red Hat",
   "design_system": "Patternfly Design System",
@@ -9,11 +9,11 @@
     "https://www.patternfly.org/"
   ],
   "detail_url": "/systems/red-hat-patternfly-design-system",
-  "pages_indexed": 114,
+  "pages_indexed": 263,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T02:49:18+00:00",
+  "last_checked": "2026-09-24T07:43:26+00:00",
   "last_modified": "Thu, 17 Sep 2026 00:28:59 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -45,15 +45,29 @@
       "https://github.com/patternfly/chatbot",
       "https://github.com/RedHatInsights/frontend-components",
       "https://github.com/patternfly/patternfly-react-seed",
-      "https://github.com/patternfly/patternfly-a11y"
+      "https://github.com/patternfly/patternfly-a11y",
+      "https://github.com/patternfly/patternfly-org",
+      "https://github.com/patternfly/react-log-viewer",
+      "https://github.com/patternfly/react-catalog-view",
+      "https://github.com/patternfly/react-data-view",
+      "https://github.com/patternfly/react-user-feedback",
+      "https://github.com/patternfly/patternfly",
+      "https://github.com/patternfly/react-console",
+      "https://github.com/patternfly/react-topology"
     ],
     "figma": [
-      "https://figma.com/design/VMEX8Xg2nzhBX8rfBx53jp/PatternFly-6--Styles---Components"
+      "https://figma.com/design/VMEX8Xg2nzhBX8rfBx53jp/PatternFly-6--Styles---Components",
+      "https://figma.com/community/file/1357060119827689328/patternfly-6-components",
+      "https://figma.com/community/file/1357056715773763430/patternfly-6-onboarding-resources",
+      "https://figma.com/community/file/1357062621908564852/patternfly-6-patterns-extensions"
     ],
     "markdown_docs": [
       "https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/get-started/design.md",
       "https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md",
-      "https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/foundations-and-styles/design-tokens/design.md"
+      "https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/foundations-and-styles/design-tokens/design.md",
+      "https://github.com/patternfly/patternfly-react/blob/main/CONTRIBUTING.md",
+      "https://github.com/patternfly/patternfly-org/blob/main/packages/documentation-site/patternfly-docs/content/accessibility/design.md",
+      "https://github.com/patternfly/patternfly-react/blob/main/packages/react-charts/README.md"
     ],
     "npm": [
       "https://npmjs.com/package/@patternfly/react-styles",
@@ -83,9 +97,7 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/remarkjs/react-markdown",
-      "https://github.com/project-felt/ai-guidelines",
-      "https://help.github.com/articles/fork-a-repo"
+      "https://github.com/dropbox/zxcvbn"
     ],
     "npm": [
       "https://npmjs.com/package/rehype-unwrap-images",
@@ -99,18 +111,19 @@
     "codemods": true,
     "validation_loop": true,
     "frameworks": [
-      "React"
+      "React",
+      "Angular"
     ]
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 5,
-    "last_pushed": "2026-09-23T09:54:01Z"
+    "stars": 74,
+    "last_pushed": "2026-09-22T17:32:33Z"
   },
   "npm_meta": {
-    "latest_version": "6.6.1",
-    "last_published": "2026-08-03T14:17:32.742Z",
-    "weekly_downloads": 98997
+    "latest_version": "6.5.0",
+    "last_published": "2026-07-01T19:47:06.100Z",
+    "weekly_downloads": 13294
   },
   "indexed_pages": [
     {
@@ -138,6 +151,10 @@
       "title": "PatternFly"
     },
     {
+      "url": "https://patternfly.org/components/about-modal",
+      "title": "PatternFly • About modal"
+    },
+    {
       "url": "https://patternfly.org/accessibility/overview",
       "title": "PatternFly • Accessibility overview"
     },
@@ -146,12 +163,32 @@
       "title": "PatternFly • Accordion"
     },
     {
+      "url": "https://patternfly.org/components/action-list",
+      "title": "PatternFly • Action list"
+    },
+    {
+      "url": "https://patternfly.org/patterns/actions",
+      "title": "PatternFly • Actions"
+    },
+    {
+      "url": "https://patternfly.org/ai/guidelines/ai-design-principles",
+      "title": "PatternFly • AI design principles"
+    },
+    {
       "url": "https://patternfly.org/ai/overview",
       "title": "PatternFly • AI overview"
     },
     {
+      "url": "https://patternfly.org/ai/ai-assisted-development/ai-assisted-code-migration",
+      "title": "PatternFly • AI-assisted code migration"
+    },
+    {
       "url": "https://patternfly.org/components/alert",
       "title": "PatternFly • Alert"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/utility-classes/alignment",
+      "title": "PatternFly • Alignment"
     },
     {
       "url": "https://patternfly.org/foundations-and-styles/design-tokens/all-design-tokens",
@@ -160,6 +197,18 @@
     {
       "url": "https://patternfly.org/extensions/chatbot/analytics",
       "title": "PatternFly • Analytics"
+    },
+    {
+      "url": "https://patternfly.org/extensions/topology/anchors",
+      "title": "PatternFly • Anchors"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/ansible",
+      "title": "PatternFly • Ansible"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/application-launcher",
+      "title": "PatternFly • Application launcher"
     },
     {
       "url": "https://patternfly.org/extensions/chatbot/messages/demo/attach-via-menu-of-options-in-message-bar",
@@ -174,24 +223,132 @@
       "title": "PatternFly • Avatar"
     },
     {
+      "url": "https://patternfly.org/components/back-to-top",
+      "title": "PatternFly • Back to top"
+    },
+    {
+      "url": "https://patternfly.org/components/backdrop",
+      "title": "PatternFly • Backdrop"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/utility-classes/background-color",
+      "title": "PatternFly • Background color"
+    },
+    {
+      "url": "https://patternfly.org/components/badge",
+      "title": "PatternFly • Badge"
+    },
+    {
+      "url": "https://patternfly.org/components/banner",
+      "title": "PatternFly • Banner"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/bar-chart",
+      "title": "PatternFly • Bar chart"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/box-plot-chart",
+      "title": "PatternFly • Box plot chart"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/utility-classes/box-shadow",
+      "title": "PatternFly • Box shadow"
+    },
+    {
+      "url": "https://patternfly.org/content-design/brand-voice-and-tone",
+      "title": "PatternFly • Brand voice and tone"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/bulk-select",
+      "title": "PatternFly • Bulk select"
+    },
+    {
+      "url": "https://patternfly.org/patterns/bulk-selection",
+      "title": "PatternFly • Bulk selection"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/bullet-chart",
+      "title": "PatternFly • Bullet chart"
+    },
+    {
       "url": "https://patternfly.org/components/button",
       "title": "PatternFly • Button"
+    },
+    {
+      "url": "https://patternfly.org/components/date-and-time/calendar-month",
+      "title": "PatternFly • Calendar month"
+    },
+    {
+      "url": "https://patternfly.org/content-design/grammar/capitalization",
+      "title": "PatternFly • Capitalization"
     },
     {
       "url": "https://patternfly.org/components/card",
       "title": "PatternFly • Card"
     },
     {
+      "url": "https://patternfly.org/patterns/card-view",
+      "title": "PatternFly • Card view"
+    },
+    {
+      "url": "https://patternfly.org/extensions/catalog-view/catalog-item-header",
+      "title": "PatternFly • Catalog item header"
+    },
+    {
       "url": "https://patternfly.org/extensions/catalog-view/catalog-tile",
       "title": "PatternFly • Catalog tile"
+    },
+    {
+      "url": "https://patternfly.org/extensions/catalog-view/overview",
+      "title": "PatternFly • Catalog view overview"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/overview",
+      "title": "PatternFly • Charts overview"
+    },
+    {
+      "url": "https://patternfly.org/ai/guidelines/chatbot-avatars",
+      "title": "PatternFly • Chatbot avatars"
+    },
+    {
+      "url": "https://patternfly.org/components/forms/checkbox",
+      "title": "PatternFly • Checkbox"
     },
     {
       "url": "https://patternfly.org/components/chip",
       "title": "PatternFly • Chip"
     },
     {
+      "url": "https://patternfly.org/components/clipboard-copy",
+      "title": "PatternFly • Clipboard copy"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/close-button",
+      "title": "PatternFly • Close button"
+    },
+    {
+      "url": "https://patternfly.org/components/code-block",
+      "title": "PatternFly • Code block"
+    },
+    {
+      "url": "https://patternfly.org/components/code-editor",
+      "title": "PatternFly • Code editor"
+    },
+    {
+      "url": "https://patternfly.org/ai/guidelines/color",
+      "title": "PatternFly • Color"
+    },
+    {
       "url": "https://patternfly.org/foundations-and-styles/colors",
       "title": "PatternFly • Colors"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/colors-for-charts",
+      "title": "PatternFly • Colors for charts"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/column-management-modal",
+      "title": "PatternFly • Column management modal"
     },
     {
       "url": "https://patternfly.org/content-design/writing-guides/cli-handbook",
@@ -202,32 +359,100 @@
       "title": "PatternFly • Component groups overview"
     },
     {
+      "url": "https://patternfly.org/patterns/component-usage-and-behavior",
+      "title": "PatternFly • Component usage and behavior"
+    },
+    {
       "url": "https://patternfly.org/components/overview",
       "title": "PatternFly • Components overview"
+    },
+    {
+      "url": "https://patternfly.org/get-help/contact-us",
+      "title": "PatternFly • Contact us"
     },
     {
       "url": "https://patternfly.org/components/content",
       "title": "PatternFly • Content"
     },
     {
+      "url": "https://patternfly.org/content-design/overview",
+      "title": "PatternFly • Content design overview"
+    },
+    {
+      "url": "https://patternfly.org/extensions/topology/context-menu",
+      "title": "PatternFly • Context menu"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/context-selector",
+      "title": "PatternFly • Context selector"
+    },
+    {
       "url": "https://patternfly.org/components/menus/context-selector/design-guidelines",
       "title": "PatternFly • Context selector"
+    },
+    {
+      "url": "https://patternfly.org/get-involved/contribute/contribute-code",
+      "title": "PatternFly • Contribute code"
+    },
+    {
+      "url": "https://patternfly.org/get-involved/contribute/contribute-designs",
+      "title": "PatternFly • Contribute designs"
+    },
+    {
+      "url": "https://patternfly.org/get-involved/contribute/contribute-documentation",
+      "title": "PatternFly • Contribute documentation"
+    },
+    {
+      "url": "https://patternfly.org/extensions/topology/control-bar",
+      "title": "PatternFly • Control bar"
+    },
+    {
+      "url": "https://patternfly.org/ai/guidelines/conversation-design",
+      "title": "PatternFly • Conversation design"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/custom-menus",
+      "title": "PatternFly • Custom menus"
+    },
+    {
+      "url": "https://patternfly.org/extensions/topology/custom-nodes",
+      "title": "PatternFly • Custom nodes"
     },
     {
       "url": "https://patternfly.org/extensions/chatbot/customizing-messages",
       "title": "PatternFly • Customizing messages"
     },
     {
+      "url": "https://patternfly.org/patterns/dashboard",
+      "title": "PatternFly • Dashboard"
+    },
+    {
       "url": "https://patternfly.org/components/data-list",
       "title": "PatternFly • Data list"
+    },
+    {
+      "url": "https://patternfly.org/extensions/data-view/overview",
+      "title": "PatternFly • Data view overview"
     },
     {
       "url": "https://patternfly.org/extensions/data-view/table",
       "title": "PatternFly • Data view table"
     },
     {
+      "url": "https://patternfly.org/components/date-and-time/date-and-time-picker",
+      "title": "PatternFly • Date and time picker"
+    },
+    {
+      "url": "https://patternfly.org/components/description-list",
+      "title": "PatternFly • Description list"
+    },
+    {
       "url": "https://patternfly.org/foundations-and-styles/design-tokens/design",
       "title": "PatternFly • Design"
+    },
+    {
+      "url": "https://patternfly.org/accessibility/design",
+      "title": "PatternFly • Design for accessibility"
     },
     {
       "url": "https://patternfly.org/foundations-and-styles/design-tokens/overview",
@@ -242,8 +467,40 @@
       "title": "PatternFly • Develop"
     },
     {
+      "url": "https://patternfly.org/accessibility/develop",
+      "title": "PatternFly • Develop for accessibility"
+    },
+    {
       "url": "https://patternfly.org/get-started/develop",
       "title": "PatternFly • Develop with PatternFly"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/utility-classes/display",
+      "title": "PatternFly • Display"
+    },
+    {
+      "url": "https://patternfly.org/components/divider",
+      "title": "PatternFly • Divider"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/donut-utilization-chart",
+      "title": "PatternFly • Donut utilization chart"
+    },
+    {
+      "url": "https://patternfly.org/components/drag-and-drop",
+      "title": "PatternFly • Drag and drop"
+    },
+    {
+      "url": "https://patternfly.org/extensions/topology/drag-and-drop",
+      "title": "PatternFly • Drag and drop"
+    },
+    {
+      "url": "https://patternfly.org/components/drawer",
+      "title": "PatternFly • Drawer"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/dropdown",
+      "title": "PatternFly • Dropdown"
     },
     {
       "url": "https://patternfly.org/components/dual-list-selector",
@@ -252,6 +509,14 @@
     {
       "url": "https://patternfly.org/components/empty-state",
       "title": "PatternFly • Empty state"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/error-boundary",
+      "title": "PatternFly • Error boundary"
+    },
+    {
+      "url": "https://patternfly.org/content-design/writing-guides/error-messages",
+      "title": "PatternFly • Error messages"
     },
     {
       "url": "https://patternfly.org/extensions/component-groups/error-state",
@@ -278,12 +543,56 @@
       "title": "PatternFly • Extensions overview"
     },
     {
+      "url": "https://patternfly.org/get-help/faqs",
+      "title": "PatternFly • FAQs"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/field-builder",
+      "title": "PatternFly • Field Builder"
+    },
+    {
+      "url": "https://patternfly.org/extensions/catalog-view/filter-side-panel",
+      "title": "PatternFly • Filter side panel"
+    },
+    {
+      "url": "https://patternfly.org/patterns/filters",
+      "title": "PatternFly • Filters"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/utility-classes/flex",
+      "title": "PatternFly • Flex"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/layouts/flex",
+      "title": "PatternFly • Flex"
+    },
+    {
       "url": "https://patternfly.org/components/forms/form",
       "title": "PatternFly • Form"
     },
     {
+      "url": "https://patternfly.org/components/forms/form-control",
+      "title": "PatternFly • Form control"
+    },
+    {
       "url": "https://patternfly.org/components/forms/form-select",
       "title": "PatternFly • Form select"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/overview",
+      "title": "PatternFly • Foundations and styles overview"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/layouts/gallery",
+      "title": "PatternFly • Gallery"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/layouts/grid",
+      "title": "PatternFly • Grid"
+    },
+    {
+      "url": "https://patternfly.org/components/helper-text",
+      "title": "PatternFly • Helper text"
     },
     {
       "url": "https://patternfly.org/components/helper-text/react-demos",
@@ -294,12 +603,28 @@
       "title": "PatternFly • Hero"
     },
     {
+      "url": "https://patternfly.org/get-started/training/html",
+      "title": "PatternFly • HTML"
+    },
+    {
       "url": "https://patternfly.org/components/icon",
       "title": "PatternFly • Icon"
     },
     {
+      "url": "https://patternfly.org/ai/guidelines/iconography",
+      "title": "PatternFly • Iconography"
+    },
+    {
       "url": "https://patternfly.org/foundations-and-styles/iconography",
       "title": "PatternFly • Iconography"
+    },
+    {
+      "url": "https://patternfly.org/components/inline-edit",
+      "title": "PatternFly • Inline edit"
+    },
+    {
+      "url": "https://patternfly.org/components/input-group",
+      "title": "PatternFly • Input group"
     },
     {
       "url": "https://patternfly.org/components/jump-links/accessibility",
@@ -338,6 +663,26 @@
       "title": "PatternFly • Line chart"
     },
     {
+      "url": "https://patternfly.org/components/list",
+      "title": "PatternFly • List"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/list-manager",
+      "title": "PatternFly • List manager"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/log-snippet",
+      "title": "PatternFly • Log snippet"
+    },
+    {
+      "url": "https://patternfly.org/extensions/log-viewer",
+      "title": "PatternFly • Log viewer"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/menu",
+      "title": "PatternFly • Menu"
+    },
+    {
       "url": "https://patternfly.org/components/menus/menu-toggle",
       "title": "PatternFly • Menu toggle"
     },
@@ -354,6 +699,10 @@
       "title": "PatternFly • Messages"
     },
     {
+      "url": "https://patternfly.org/components/modal",
+      "title": "PatternFly • Modal"
+    },
+    {
       "url": "https://patternfly.org/foundations-and-styles/motion/development-guide",
       "title": "PatternFly • Motion"
     },
@@ -364,6 +713,14 @@
     {
       "url": "https://patternfly.org/foundations-and-styles/motion",
       "title": "PatternFly • Motion"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/multi-content-card",
+      "title": "PatternFly • Multi-content card"
+    },
+    {
+      "url": "https://patternfly.org/components/file-upload/multiple-file-upload",
+      "title": "PatternFly • Multiple file upload"
     },
     {
       "url": "https://patternfly.org/components/navigation",
@@ -378,12 +735,28 @@
       "title": "PatternFly • Notification badge"
     },
     {
+      "url": "https://patternfly.org/components/notification-drawer",
+      "title": "PatternFly • Notification drawer"
+    },
+    {
+      "url": "https://patternfly.org/components/number-input",
+      "title": "PatternFly • Number input"
+    },
+    {
       "url": "https://patternfly.org/content-design/grammar/numerics",
       "title": "PatternFly • Numerics"
     },
     {
       "url": "https://patternfly.org/developer-guides/open-ui-automation",
       "title": "PatternFly • Open UI Automation"
+    },
+    {
+      "url": "https://patternfly.org/components/menus/options-menu",
+      "title": "PatternFly • Options menu"
+    },
+    {
+      "url": "https://patternfly.org/components/overflow-menu",
+      "title": "PatternFly • Overflow menu"
     },
     {
       "url": "https://patternfly.org/extensions/chatbot/overview",
@@ -402,12 +775,80 @@
       "title": "PatternFly • Page"
     },
     {
+      "url": "https://patternfly.org/extensions/component-groups/page-header",
+      "title": "PatternFly • Page header"
+    },
+    {
+      "url": "https://patternfly.org/components/panel",
+      "title": "PatternFly • Panel"
+    },
+    {
+      "url": "https://patternfly.org/patterns/password-generator",
+      "title": "PatternFly • Password generator"
+    },
+    {
+      "url": "https://patternfly.org/components/password-generator",
+      "title": "PatternFly • Password generator"
+    },
+    {
+      "url": "https://patternfly.org/components/password-strength",
+      "title": "PatternFly • Password strength"
+    },
+    {
+      "url": "https://patternfly.org/patterns/password-strength",
+      "title": "PatternFly • Password strength"
+    },
+    {
+      "url": "https://patternfly.org/content-design/writing-guides/patternfly-design-guidelines",
+      "title": "PatternFly • PatternFly design guidelines"
+    },
+    {
+      "url": "https://patternfly.org/ai/ai-assisted-development/patternfly-mcp",
+      "title": "PatternFly • PatternFly MCP"
+    },
+    {
+      "url": "https://patternfly.org/developer-guides/right-to-left-handbook",
+      "title": "PatternFly • PatternFly right-to-left handbook"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/patterns",
+      "title": "PatternFly • Patterns"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/pie-chart",
+      "title": "PatternFly • Pie chart"
+    },
+    {
+      "url": "https://patternfly.org/extensions/topology/pipelines",
+      "title": "PatternFly • Pipelines"
+    },
+    {
+      "url": "https://patternfly.org/components/popover",
+      "title": "PatternFly • Popover"
+    },
+    {
+      "url": "https://patternfly.org/patterns/primary-detail",
+      "title": "PatternFly • Primary-detail"
+    },
+    {
       "url": "https://patternfly.org/accessibility/product-scorecard",
       "title": "PatternFly • Product scorecard"
     },
     {
+      "url": "https://patternfly.org/content-design/writing-guides/product-tours",
+      "title": "PatternFly • Product tours"
+    },
+    {
       "url": "https://patternfly.org/components/progress",
       "title": "PatternFly • Progress"
+    },
+    {
+      "url": "https://patternfly.org/components/progress-stepper",
+      "title": "PatternFly • Progress stepper"
+    },
+    {
+      "url": "https://patternfly.org/extensions/catalog-view/properties-side-panel",
+      "title": "PatternFly • Properties side panel"
     },
     {
       "url": "https://patternfly.org/extensions/quick-starts/Basic-quick-starts",
@@ -418,12 +859,52 @@
       "title": "PatternFly • Quick starts"
     },
     {
+      "url": "https://patternfly.org/components/forms/radio",
+      "title": "PatternFly • Radio"
+    },
+    {
+      "url": "https://patternfly.org/ai/ai-assisted-development/rapid-prototyping",
+      "title": "PatternFly • Rapid prototyping"
+    },
+    {
+      "url": "https://patternfly.org/get-started/training/react",
+      "title": "PatternFly • React"
+    },
+    {
+      "url": "https://patternfly.org/extensions/react-console",
+      "title": "PatternFly • React console"
+    },
+    {
+      "url": "https://patternfly.org/developer-guides/react-flow",
+      "title": "PatternFly • React Flow with PatternFly"
+    },
+    {
       "url": "https://patternfly.org/releases/release-highlights",
       "title": "PatternFly • Release highlights"
     },
     {
+      "url": "https://patternfly.org/releases/overview",
+      "title": "PatternFly • Releases overview"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/resize-observer",
+      "title": "PatternFly • Resize observer"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/responsive-actions",
+      "title": "PatternFly • Responsive actions"
+    },
+    {
+      "url": "https://patternfly.org/patterns/right-to-left",
+      "title": "PatternFly • Right-to-left"
+    },
+    {
       "url": "https://patternfly.org/components/charts/sankey-chart",
       "title": "PatternFly • Sankey chart"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/scatter-chart",
+      "title": "PatternFly • Scatter chart"
     },
     {
       "url": "https://patternfly.org/components/search-input",
@@ -434,12 +915,84 @@
       "title": "PatternFly • Select"
     },
     {
+      "url": "https://patternfly.org/extensions/topology/selection",
+      "title": "PatternFly • Selection"
+    },
+    {
+      "url": "https://patternfly.org/content-design/grammar/sentence-structure",
+      "title": "PatternFly • Sentence structure"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/shortcut-grid",
+      "title": "PatternFly • Shortcut grid"
+    },
+    {
+      "url": "https://patternfly.org/components/sidebar",
+      "title": "PatternFly • Sidebar"
+    },
+    {
+      "url": "https://patternfly.org/extensions/topology/sidebar",
+      "title": "PatternFly • Sidebar"
+    },
+    {
+      "url": "https://patternfly.org/components/file-upload/simple-file-upload",
+      "title": "PatternFly • Simple file upload"
+    },
+    {
+      "url": "https://patternfly.org/components/simple-list",
+      "title": "PatternFly • Simple list"
+    },
+    {
       "url": "https://patternfly.org/components/skeleton/accessibility",
       "title": "PatternFly • Skeleton"
     },
     {
+      "url": "https://patternfly.org/extensions/component-groups/skeleton-table",
+      "title": "PatternFly • Skeleton table"
+    },
+    {
+      "url": "https://patternfly.org/components/skip-to-content",
+      "title": "PatternFly • Skip to content"
+    },
+    {
+      "url": "https://patternfly.org/components/slider",
+      "title": "PatternFly • Slider"
+    },
+    {
       "url": "https://patternfly.org/foundations-and-styles/spacers",
       "title": "PatternFly • Spacers"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/utility-classes/spacing",
+      "title": "PatternFly • Spacing"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/sparkline-chart",
+      "title": "PatternFly • Sparkline chart"
+    },
+    {
+      "url": "https://patternfly.org/components/spinner",
+      "title": "PatternFly • Spinner"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/layouts/split",
+      "title": "PatternFly • Split"
+    },
+    {
+      "url": "https://patternfly.org/foundations-and-styles/layouts/stack",
+      "title": "PatternFly • Stack"
+    },
+    {
+      "url": "https://patternfly.org/components/charts/stack-chart",
+      "title": "PatternFly • Stack chart"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/stale-data-warning",
+      "title": "PatternFly • Stale data warning"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/status",
+      "title": "PatternFly • Status"
     },
     {
       "url": "https://patternfly.org/patterns/status-and-severity",
@@ -526,12 +1079,40 @@
       "title": "PatternFly • Theming"
     },
     {
+      "url": "https://patternfly.org/components/charts/threshold-chart",
+      "title": "PatternFly • Threshold chart"
+    },
+    {
       "url": "https://patternfly.org/components/tile",
       "title": "PatternFly • Tile"
     },
     {
+      "url": "https://patternfly.org/components/date-and-time/time-picker",
+      "title": "PatternFly • Time picker"
+    },
+    {
       "url": "https://patternfly.org/components/title",
       "title": "PatternFly • Title"
+    },
+    {
+      "url": "https://patternfly.org/components/toggle-group",
+      "title": "PatternFly • Toggle group"
+    },
+    {
+      "url": "https://patternfly.org/components/toolbar",
+      "title": "PatternFly • Toolbar"
+    },
+    {
+      "url": "https://patternfly.org/components/tooltip",
+      "title": "PatternFly • Tooltip"
+    },
+    {
+      "url": "https://patternfly.org/content-design/writing-guides/tooltips",
+      "title": "PatternFly • Tooltips"
+    },
+    {
+      "url": "https://patternfly.org/ai/guidelines/transparency-notices",
+      "title": "PatternFly • Transparency notices"
     },
     {
       "url": "https://patternfly.org/components/tree-view",
@@ -542,12 +1123,24 @@
       "title": "PatternFly • Truncate expansion"
     },
     {
+      "url": "https://patternfly.org/content-design/grammar/truncation",
+      "title": "PatternFly • Truncation"
+    },
+    {
       "url": "https://patternfly.org/foundations-and-styles/typography",
       "title": "PatternFly • Typography"
     },
     {
       "url": "https://patternfly.org/extensions/chatbot/ui",
       "title": "PatternFly • UI"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/unavailable-content",
+      "title": "PatternFly • Unavailable content"
+    },
+    {
+      "url": "https://patternfly.org/content-design/grammar/units-and-symbols",
+      "title": "PatternFly • Units and symbols"
     },
     {
       "url": "https://patternfly.org/releases/upgrade-guide",
@@ -558,12 +1151,28 @@
       "title": "PatternFly • Upgrade to PatternFly 6"
     },
     {
+      "url": "https://patternfly.org/extensions/user-feedback",
+      "title": "PatternFly • User feedback"
+    },
+    {
+      "url": "https://patternfly.org/extensions/catalog-view/vertical-tabs",
+      "title": "PatternFly • Vertical tabs"
+    },
+    {
+      "url": "https://patternfly.org/extensions/component-groups/warning-modal",
+      "title": "PatternFly • Warning modal"
+    },
+    {
       "url": "https://patternfly.org/components/expandable-section/react/with-custom-toggle-content",
       "title": "PatternFly • With custom toggle content"
     },
     {
       "url": "https://patternfly.org/components/expandable-section/react/with-heading-semantics",
       "title": "PatternFly • With heading semantics"
+    },
+    {
+      "url": "https://patternfly.org/components/wizard",
+      "title": "PatternFly • Wizard"
     },
     {
       "url": "https://www.patternfly.org/",

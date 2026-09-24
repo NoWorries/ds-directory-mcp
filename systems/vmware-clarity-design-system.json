@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "vmware-clarity-design-system",
   "organization": "VMware",
   "design_system": "Clarity Design System",
@@ -9,11 +9,11 @@
     "https://clarity.design/"
   ],
   "detail_url": "/systems/vmware-clarity-design-system",
-  "pages_indexed": 150,
+  "pages_indexed": 235,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T03:24:23+00:00",
+  "last_checked": "2026-09-24T08:28:04+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -40,7 +40,6 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/ngx-translate/core",
       "https://github.com/dw5/Metropolis"
     ]
   },
@@ -54,7 +53,7 @@
   "github_meta": {
     "license": "NOASSERTION",
     "stars": 430,
-    "last_pushed": "2026-09-23T11:39:49Z"
+    "last_pushed": "2026-09-24T08:22:40Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -107,6 +106,14 @@
       "title": "Advanced Tabs - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/tabs-addon/code",
+      "title": "Advanced Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tabs-addon/api",
+      "title": "Advanced Tabs - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/wizard-addon",
       "title": "Advanced Wizard - Clarity Design System"
     },
@@ -120,6 +127,14 @@
     },
     {
       "url": "https://clarity.design/documentation/alert",
+      "title": "Alert - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/alert/code",
+      "title": "Alert - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/alert/api",
       "title": "Alert - Clarity Design System"
     },
     {
@@ -151,6 +166,14 @@
       "title": "Button - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/button/api",
+      "title": "Button - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/button/code",
+      "title": "Button - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/button-group",
       "title": "Button Group - Clarity Design System"
     },
@@ -167,11 +190,35 @@
       "title": "Card - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/card/api",
+      "title": "Card - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/card/code",
+      "title": "Card - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/card-container",
       "title": "Card Container - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/card-container/api",
+      "title": "Card Container - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/card-container/code",
+      "title": "Card Container - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/certificate-viewer",
+      "title": "Certificate Viewer - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/certificate-viewer/api",
+      "title": "Certificate Viewer - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/certificate-viewer/code",
       "title": "Certificate Viewer - Clarity Design System"
     },
     {
@@ -231,7 +278,23 @@
       "title": "Date Picker - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/datepicker/api",
+      "title": "Date Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datepicker/code",
+      "title": "Date Picker - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/date-range-picker",
+      "title": "Date Range Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/date-range-picker/api",
+      "title": "Date Range Picker - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/date-range-picker/code",
       "title": "Date Range Picker - Clarity Design System"
     },
     {
@@ -303,6 +366,14 @@
       "title": "Header - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/header/code",
+      "title": "Header - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/header/api",
+      "title": "Header - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/icons",
       "title": "Icons - Clarity Design System"
     },
@@ -324,6 +395,14 @@
     },
     {
       "url": "https://clarity.design/documentation/input",
+      "title": "Input - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/input/code",
+      "title": "Input - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/input/api",
       "title": "Input - Clarity Design System"
     },
     {
@@ -367,12 +446,32 @@
       "title": "List - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/list/api",
+      "title": "List - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/list/code",
       "title": "List - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/menu",
       "title": "Menu - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/menu/code",
+      "title": "Menu - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/menu/api",
+      "title": "Menu - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/modal/api",
+      "title": "Modal - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/modal/code",
+      "title": "Modal - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/modal",
@@ -396,6 +495,10 @@
     },
     {
       "url": "https://clarity.design/documentation/navigation",
+      "title": "Navigation - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/navigation/code",
       "title": "Navigation - Clarity Design System"
     },
     {
@@ -491,7 +594,23 @@
       "title": "Side Panel - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/side-panel/code",
+      "title": "Side Panel - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/side-panel/api",
+      "title": "Side Panel - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/signpost",
+      "title": "Signpost - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/signpost/code",
+      "title": "Signpost - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/signpost/api",
       "title": "Signpost - Clarity Design System"
     },
     {
@@ -515,7 +634,23 @@
       "title": "Stack View - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/stack-view/api",
+      "title": "Stack View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stack-view/code",
+      "title": "Stack View - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/stepper",
+      "title": "Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper/code",
+      "title": "Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper/api",
       "title": "Stepper - Clarity Design System"
     },
     {
@@ -563,6 +698,14 @@
       "title": "Theme Builder - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/theme-builder/api",
+      "title": "Theme Builder - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/theme-builder/code",
+      "title": "Theme Builder - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/theme-builder",
       "title": "Theme Builder — Clarity Design System"
     },
@@ -583,7 +726,23 @@
       "title": "Timeline - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/timeline/code",
+      "title": "Timeline - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/timeline/api",
+      "title": "Timeline - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/toggle-switch",
+      "title": "Toggle Switch - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/toggle-switch/api",
+      "title": "Toggle Switch - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/toggle-switch/code",
       "title": "Toggle Switch - Clarity Design System"
     },
     {
@@ -619,6 +778,14 @@
       "title": "Tree View - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/tree-view/code",
+      "title": "Tree View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tree-view/api",
+      "title": "Tree View - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/typography",
       "title": "Typography - Clarity Design System"
     },
@@ -651,7 +818,179 @@
       "title": "Vertical Nav - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/vertical-nav/code",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/api",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/charizard",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/project-pokemon",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/icon-links",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/credit",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/responsive-behavior",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/jigglypuff",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/collapsible-nav",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/pikachu",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/charmander",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/raichu",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/snorlax",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/basic-structure/pidgey",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/icon-links/normal",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/icon-links/electric",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/icon-links/poison",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/icon-links/grass",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/icon-links/fighting",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/icon-links/credit",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups/fire/charmander",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups/fire/charizard",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups/credit",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups/normal/snorlax",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups/electric/raichu",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups/normal/pidgey",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/nav-groups/electric/pikachu",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/collapsible-nav/credit",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/collapsible-nav/fighting",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/collapsible-nav/grass",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/collapsible-nav/poison",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/collapsible-nav/normal",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/collapsible-nav/electric",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links/credit",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links/normal/snorlax",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links/normal",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links/fire",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links/normal/pidgey",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links/electric",
+      "title": "Vertical Nav - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/wizard",
+      "title": "Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard/api",
       "title": "Wizard - Clarity Design System"
     },
     {

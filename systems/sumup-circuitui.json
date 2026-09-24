@@ -1,0 +1,37 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-09-24T08:40:08+00:00",
+  "id": "sumup-circuitui",
+  "organization": "Sumup",
+  "design_system": "CircuitUI",
+  "full_name": "Sumup — CircuitUI",
+  "start_urls": [
+    "https://circuit.sumup.com/"
+  ],
+  "detail_url": "/systems/sumup-circuitui",
+  "pages_indexed": 1,
+  "coverage_status": "partial",
+  "hit_max_pages": false,
+  "likely_spa": false,
+  "last_checked": "2026-09-24T07:52:29+00:00",
+  "last_modified": "Mon, 21 Sep 2026 16:20:23 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "storybook": [
+      "https://storybook.js.org/docs/builders/webpack",
+      "https://storybook.js.org/docs/configure/environment-variables",
+      "https://storybook.js.org/docs/writing-stories/decorators",
+      "https://storybook.js.org/docs/builders/vite"
+    ]
+  },
+  "unverified_resources": {},
+  "content_signals": {},
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://circuit.sumup.com/iframe.html",
+      "title": "Storybook"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "elia-group-nova",
   "organization": "Elia Group",
   "design_system": "Nova",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T01:06:37+00:00",
+  "last_checked": "2026-09-24T05:48:23+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -43,7 +43,9 @@
       "Vue",
       "Angular",
       "Web Components"
-    ]
+    ],
+    "dark_mode": true,
+    "tokens_format": "Figma Variables"
   },
   "github_meta": null,
   "npm_meta": null,
@@ -313,15 +315,15 @@
       "title": "Nova Design System | Overview| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/patterns/overview-dSii9R9r",
+      "title": "Nova Design System | Overview| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/foundations/overview-fDVRYNOj",
       "title": "Nova Design System | Overview| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/overview-XKOxH6fl",
-      "title": "Nova Design System | Overview| Made by and for Elia Group"
-    },
-    {
-      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/patterns/overview-dSii9R9r",
       "title": "Nova Design System | Overview| Made by and for Elia Group"
     },
     {
@@ -397,11 +399,11 @@
       "title": "Nova Design System | Text area| Made by and for Elia Group"
     },
     {
-      "url": "https://nova.eliagroup.io/latest/components/forms/text-gem0OLzC",
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/text-jrD88ixS",
       "title": "Nova Design System | Text| Made by and for Elia Group"
     },
     {
-      "url": "https://nova.eliagroup.io/latest/components/discontinued/text-jrD88ixS",
+      "url": "https://nova.eliagroup.io/latest/components/forms/text-gem0OLzC",
       "title": "Nova Design System | Text| Made by and for Elia Group"
     },
     {

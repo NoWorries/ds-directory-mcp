@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "indiana-university-rivet",
   "organization": "Indiana University",
   "design_system": "Rivet",
@@ -9,11 +9,11 @@
     "https://rivet.iu.edu/"
   ],
   "detail_url": "/systems/indiana-university-rivet",
-  "pages_indexed": 83,
+  "pages_indexed": 90,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T01:42:31+00:00",
+  "last_checked": "2026-09-24T06:36:22+00:00",
   "last_modified": "Tue, 07 Jul 2026 17:57:05 GMT",
   "sitemap_last_modified": "2026-07-07T17:56:51.237Z",
   "resources": {
@@ -25,6 +25,9 @@
     ],
     "icons": [
       "https://rivet.iu.edu/icons-stickers/icons"
+    ],
+    "npm": [
+      "https://npmjs.com/package/rivet-core"
     ]
   },
   "unverified_resources": {},
@@ -34,7 +37,11 @@
     "stars": 7,
     "last_pushed": "2025-02-28T20:00:56Z"
   },
-  "npm_meta": null,
+  "npm_meta": {
+    "latest_version": "2.9.1",
+    "last_published": "2025-06-04T17:43:27.219Z",
+    "weekly_downloads": 903
+  },
   "indexed_pages": [
     {
       "url": "https://rivet.iu.edu/about",
@@ -83,6 +90,10 @@
     {
       "url": "https://rivet.iu.edu/components/breadcrumbs",
       "title": "Breadcrumbs - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/getting-started/browser-support",
+      "title": "Browser support - Rivet Design System - Indiana University"
     },
     {
       "url": "https://rivet.iu.edu/components/button",
@@ -205,12 +216,20 @@
       "title": "Hero - Rivet Design System - Indiana University"
     },
     {
+      "url": "https://rivet.iu.edu/icons-stickers/icon-guidelines",
+      "title": "Icon guidelines - Rivet Design System - Indiana University"
+    },
+    {
       "url": "https://rivet.iu.edu/icons-stickers/icon-library",
       "title": "Icon library - Rivet Design System - Indiana University"
     },
     {
       "url": "https://rivet.iu.edu/icons-stickers/icons",
       "title": "Icons - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/icons-stickers",
+      "title": "Icons and stickers - Rivet Design System - Indiana University"
     },
     {
       "url": "https://rivet.uits.iu.edu/",
@@ -261,6 +280,10 @@
       "title": "Radio input - Rivet Design System - Indiana University"
     },
     {
+      "url": "https://rivet.iu.edu/getting-started/rivet-1-end-of-life",
+      "title": "Rivet 1 end of life - Rivet Design System - Indiana University"
+    },
+    {
       "url": "https://rivet.iu.edu/getting-started/rivet-design-kit",
       "title": "Rivet design kit - Rivet Design System - Indiana University"
     },
@@ -295,6 +318,10 @@
     {
       "url": "https://rivet.iu.edu/components/step-indicator",
       "title": "Step indicator - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/icons-stickers/sticker-guidelines",
+      "title": "Sticker guidelines - Rivet Design System - Indiana University"
     },
     {
       "url": "https://rivet.iu.edu/icons-stickers/sticker-library",
@@ -349,8 +376,16 @@
       "title": "Use Rivet component browser events - Rivet Design System - Indiana University"
     },
     {
+      "url": "https://rivet.iu.edu/layouts/using-layouts",
+      "title": "Using layouts - Rivet Design System - Indiana University"
+    },
+    {
       "url": "https://rivet.iu.edu/getting-started/using-rivet-javascript",
       "title": "Using Rivet JavaScript - Rivet Design System - Indiana University"
+    },
+    {
+      "url": "https://rivet.iu.edu/getting-started/using-rivet-sass",
+      "title": "Using Rivet Sass - Rivet Design System - Indiana University"
     },
     {
       "url": "https://rivet.iu.edu/utilities",

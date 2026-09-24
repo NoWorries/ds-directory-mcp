@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "pluralsight-pluralsight-design-system",
   "organization": "Pluralsight",
   "design_system": "Pluralsight Design System",
@@ -9,11 +9,11 @@
     "https://design-system.pluralsight.com/"
   ],
   "detail_url": "/systems/pluralsight-pluralsight-design-system",
-  "pages_indexed": 1,
+  "pages_indexed": 150,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T02:22:12+00:00",
+  "last_checked": "2026-09-24T07:33:16+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -21,7 +21,11 @@
       "https://pando-storybook.pluralsight.com/storybook"
     ],
     "figma": [
-      "https://www.figma.com/design/ZmH4XsZS5WnKeo28ylM5x1/Pando-UI-kit--Web-?node-id=1214-50531&p=f&t=WTcgkIPIDXvTeFcc-0"
+      "https://www.figma.com/design/ZmH4XsZS5WnKeo28ylM5x1/Pando-UI-kit--Web-?node-id=1214-50531&p=f&t=WTcgkIPIDXvTeFcc-0",
+      "https://figma.com/design/ZmH4XsZS5WnKeo28ylM5x1/Pando-UI-kit-(Web)"
+    ],
+    "github": [
+      "https://github.com/pluralsight/pando"
     ]
   },
   "unverified_resources": {},
@@ -31,6 +35,602 @@
   "indexed_pages": [
     {
       "url": "https://design-system.pluralsight.com/",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/99912e-skeleton/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/278a7b-star-rating/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/60b338-pagination",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/3158e1-card/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/7101ac-button",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/533d80-design",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/688d66-checkbox/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/6450f6-step-2---include-fonts-theme-and-mode",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/74974b-label--legend/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/70504f-variables-vs-styles",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/331140-breadcrumbs/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/69227b-grids-and-spacing",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/95f40d-list",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/99644f-confirm-dialog/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/941ad0-segmented-control/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/5304b1-circularprogress/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/44f048-accordion/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/00cfda-flex-item/b/18fc2b",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/062189-icon-button/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/86545c-input/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/4748db-banner/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/474d69-grid-cell/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/22a8fc-toast/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/59a339-switch-input/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/11206f-component-status",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/65bfa9-tabs/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/574068-text-resizing",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/739d68-flex-container/b/48df7f",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0234d5-data-grid",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/95f40d-list/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/45be27-table/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/84ef45-tooltip/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/062189-icon-button/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/5146ec-avatar/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/95f40d-list/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/21a14a-line-length",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/45be27-table",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/59a339-switch-input/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/2145b4-field-message/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/99912e-skeleton/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/560853-elevation/b/09b703",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/65bfa9-tabs/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/26e0f9-disabled-controls",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0404cb-note/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/07bc6f-ux-good-practices",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0404cb-note/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/77f6f4-chip/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/15a4d9-badge",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/63ea71-empty-state/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/2145b4-field-message/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/86545c-input",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/941ad0-segmented-control/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/60c343-accessibility/b/53816b",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/567386-logos/b/1264c3",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/3158e1-card/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/7068a5-icons/b/8195bd",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/75ad26-textarea",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/09bb70-inline-code/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/531ea7-step-1---install-pando",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/77f6f4-chip/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/05fbe8-content-strategy",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/99304a-ribbon/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/07e943-success",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/66dc90-loading-spinner",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/60c343-accessibility/b/40ef88",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/58cb0c-progress-bar/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/23c89b-menu-navigation",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/165f15-menu-action/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/569041-development",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/827eac-popover/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/7068a5-icons/b/944338",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/99304a-ribbon/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/46f64a-radio/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/6580d8-text-link/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/86545c-input/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/165f15-menu-action/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/15a4d9-badge/b/9406a0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/95f40d-list/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/2145b4-field-message",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/77c61d-file-upload/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/74974b-label--legend",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/63ea71-empty-state/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/44f048-accordion/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/8924ec-select/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/024148-from-pando-v071-041-and-earlier",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/983ad0-modal/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0404cb-note",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/7101ac-button/b/15670e",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/00cfda-flex-item",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/45be27-table/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/920f6e-voice-tone-and-microcopy",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/69227b-grids-and-spacing/b/863f78",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0234d5-data-grid/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/5304b1-circularprogress/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/471648-grid-container/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/426e5d-prompt-dialog/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/165f15-menu-action/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/8321d6-forms",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/165f15-menu-action",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/6580d8-text-link",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/60c343-accessibility",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/6580d8-text-link/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/8924ec-select/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/15a4d9-badge/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0234d5-data-grid/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/983ad0-modal/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/331140-breadcrumbs/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/09bb70-inline-code",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/09222f-did-you-know",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/250400-psds-classic",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/15a4d9-badge/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/45be27-table/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0404cb-note/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/7068a5-icons",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/23c89b-menu-navigation/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/939017-components",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/1368bf-color",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/7068a5-icons/b/6988b4",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/5304b1-circularprogress/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/46f64a-radio",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/60b338-pagination/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/567386-logos/b/57911a",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/90abce-faqs",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/65bfa9-tabs/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/74974b-label--legend/b/575f61",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/44f048-accordion/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/4748db-banner/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/983ad0-modal/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/331140-breadcrumbs",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/45be27-table/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/77c61d-file-upload/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/75ad26-textarea/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/77f6f4-chip/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/426e5d-prompt-dialog/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/22a8fc-toast/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/236779-design-tokens",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/99304a-ribbon/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/80f154-danger",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/38aa59-psds-classic-docs-map",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/99b46b-helpful-scripts",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/77f6f4-chip",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/44f048-accordion",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/560853-elevation/b/0830cc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/3158e1-card",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/062189-icon-button/b/667b63",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/0404cb-note/b/4086d0",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/65bfa9-tabs/b/7873fc",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/84ef45-tooltip/b/845072",
+      "title": "Pando Design System"
+    },
+    {
+      "url": "https://design-system.pluralsight.com/92687036d/p/471648-grid-container/b/7873fc",
       "title": "Pando Design System"
     }
   ]

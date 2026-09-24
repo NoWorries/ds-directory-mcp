@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T03:39:30+00:00",
+  "generated_at": "2026-09-24T08:40:08+00:00",
   "id": "foyer-foyer-design-system",
   "organization": "Foyer",
   "design_system": "Foyer Design System",
@@ -9,25 +9,276 @@
     "https://design.foyer.lu/"
   ],
   "detail_url": "/systems/foyer-foyer-design-system",
-  "pages_indexed": 4,
-  "coverage_status": "partial",
+  "pages_indexed": 130,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T00:56:55+00:00",
+  "last_checked": "2026-09-24T05:58:44+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {},
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "governance_model": true,
+    "exemplars": true,
+    "frameworks": [
+      "Angular",
+      "Vue"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://design.foyer.lu/4280666a7/n/80d2f7",
+      "title": "Accessibilité · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99cdc1-accessibilite/b/813c44",
+      "title": "Accessibilité · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99cdc1-accessibilite/b/072b26",
+      "title": "Accessibilité · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99cdc1-accessibilite",
+      "title": "Accessibilité · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99cdc1-accessibilite/b/4280666a7",
+      "title": "Accessibilité · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/9505a9-animations",
+      "title": "Animations · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/188426-badge",
+      "title": "Badge · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/188426-badge/b/601ddd",
+      "title": "Badge · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/188426-badge/b/55c061",
+      "title": "Badge · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/188426-badge/b/4280666a7",
+      "title": "Badge · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/19357d-buttons/b/64c639",
+      "title": "Buttons · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/19357d-buttons/b/49be78",
+      "title": "Buttons · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/19357d-buttons",
+      "title": "Buttons · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/19357d-buttons/b/52aef8",
+      "title": "Buttons · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/19357d-buttons/b/4280666a7",
+      "title": "Buttons · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/40ff53-buttonsplit",
+      "title": "ButtonSplit · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/40ff53-buttonsplit/b/06fa52",
+      "title": "ButtonSplit · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/40ff53-buttonsplit/b/42b12a",
+      "title": "ButtonSplit · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/40ff53-buttonsplit/b/4280666a7",
+      "title": "ButtonSplit · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/063ae4-charts",
+      "title": "Charts · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/063ae4-charts/b/443bef",
+      "title": "Charts · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/063ae4-charts/b/05e83c",
+      "title": "Charts · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/063ae4-charts/b/4280666a7",
+      "title": "Charts · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/06ce37-checkbox",
+      "title": "Checkbox · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/06ce37-checkbox/b/970ac2",
+      "title": "Checkbox · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/06ce37-checkbox/b/03561e",
+      "title": "Checkbox · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/06ce37-checkbox/b/345857",
+      "title": "Checkbox · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/06ce37-checkbox/b/2551ec",
+      "title": "Checkbox · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/06ce37-checkbox/b/91db5a",
+      "title": "Checkbox · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/06ce37-checkbox/b/4280666a7",
+      "title": "Checkbox · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/61ae57-choicecard",
+      "title": "ChoiceCard · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/61ae57-choicecard/b/2443cf",
+      "title": "ChoiceCard · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/61ae57-choicecard/b/04c7a8",
+      "title": "ChoiceCard · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/61ae57",
+      "title": "ChoiceCard · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/61ae57-choicecard/b/4280666a7",
+      "title": "ChoiceCard · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/885550-compatibilite",
+      "title": "Compatibilité · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/748407-corner-radius",
+      "title": "Corner Radius · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/748407-corner-radius/b/645524",
+      "title": "Corner Radius · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/748407-corner-radius/b/4280666a7",
+      "title": "Corner Radius · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs/b/333069",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs/b/3467cd",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs/b/145698",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs/b/6159c2",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs/b/58e7f4",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs/b/9625a2",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/00d34b-couleurs/b/4280666a7",
+      "title": "Couleurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/5491b5-datatile",
+      "title": "DataTile · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/5491b5-datatile/b/003043",
+      "title": "DataTile · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/5491b5-datatile/b/177753",
+      "title": "DataTile · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/5491b5-datatile/b/4280666a7",
+      "title": "DataTile · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/05f2c0-disabled-vs-readonly--disabled-vs-hide",
+      "title": "Disabled VS ReadOnly & Disabled VS Hide · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/36850f-formatage-des-donnees",
+      "title": "Formatage des données · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/41b2cd-formfield",
+      "title": "FormField · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/41b2cd-formfield/b/62b109",
+      "title": "FormField · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/41b2cd-formfield/b/82cbf9",
+      "title": "FormField · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/41b2cd-formfield/b/4280666a7",
+      "title": "FormField · Foyer Design System"
+    },
     {
       "url": "https://design.foyer.lu/",
       "title": "Foyer Design System"
     },
     {
+      "url": "https://design.foyer.lu/4280666a7",
+      "title": "Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/n/4280666a7",
+      "title": "Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/4280666a7",
+      "title": "Foyer Design System"
+    },
+    {
       "url": "https://design.foyer.lu/4280666a7/p/40ee75-foyer-design-system/b/64c92a",
+      "title": "Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/40ee75-foyer-design-system/b/4280666a7",
       "title": "Foyer Design System"
     },
     {
@@ -37,6 +288,266 @@
     {
       "url": "https://design.foyer.lu/4280666a7/p/40ee75-foyer-design-system/b/646f5f",
       "title": "Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/21d042-gestion-des-chargements",
+      "title": "Gestion des chargements · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/15c573-gestion-des-erreurs",
+      "title": "Gestion des erreurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/15c573",
+      "title": "Gestion des erreurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/15c573-gestion-des-erreurs/b/24b5bb",
+      "title": "Gestion des erreurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/15c573-gestion-des-erreurs/b/36c3fc",
+      "title": "Gestion des erreurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/15c573-gestion-des-erreurs/b/38a7ea",
+      "title": "Gestion des erreurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/15c573-gestion-des-erreurs/b/4280666a7",
+      "title": "Gestion des erreurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/n/9498b0",
+      "title": "Get started 💡 · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/30a2f8-get-started-",
+      "title": "Get started 💡 · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/732a69-input",
+      "title": "Input · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/732a69-input/b/75a235",
+      "title": "Input · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/732a69-input/b/0559bc",
+      "title": "Input · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/732a69-input/b/4280666a7",
+      "title": "Input · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99bc8c-list",
+      "title": "List · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99bc8c-list/b/5034b7",
+      "title": "List · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99bc8c-list/b/46a9d2",
+      "title": "List · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/99bc8c-list/b/4280666a7",
+      "title": "List · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/70a4ca-loader",
+      "title": "Loader · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/70a4ca-loader/b/38113d",
+      "title": "Loader · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/70a4ca-loader/b/2894b3",
+      "title": "Loader · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/70a4ca-loader/b/4280666a7",
+      "title": "Loader · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2479f5-placeholder",
+      "title": "Placeholder · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2479f5-placeholder/b/503019",
+      "title": "Placeholder · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2479f5-placeholder/b/764dac",
+      "title": "Placeholder · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2479f5-placeholder/b/4280666a7",
+      "title": "Placeholder · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/638c92-pour-les-developpeurs",
+      "title": "Pour les développeurs · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2506d2-radio",
+      "title": "Radio · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2506d2-radio/b/5672b2",
+      "title": "Radio · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2506d2-radio/b/944b70",
+      "title": "Radio · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/2506d2-radio/b/4280666a7",
+      "title": "Radio · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/308dda-select",
+      "title": "Select · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/308dda-select/b/2859d4",
+      "title": "Select · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/308dda-select/b/525944",
+      "title": "Select · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/308dda-select/b/4280666a7",
+      "title": "Select · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/533e2b-selectadvanced",
+      "title": "SelectAdvanced · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/533e2b-selectadvanced/b/76d13c",
+      "title": "SelectAdvanced · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/533e2b-selectadvanced/b/49284a",
+      "title": "SelectAdvanced · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/533e2b-selectadvanced/b/4280666a7",
+      "title": "SelectAdvanced · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/87d3ac-slider",
+      "title": "Slider · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/87d3ac-slider/b/5625cb",
+      "title": "Slider · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/87d3ac-slider/b/964e05",
+      "title": "Slider · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/87d3ac-slider/b/4280666a7",
+      "title": "Slider · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/707b09-snackbar",
+      "title": "Snackbar · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/707b09-snackbar/b/0354ef",
+      "title": "Snackbar · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/707b09-snackbar/b/995866",
+      "title": "Snackbar · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/707b09-snackbar/b/4280666a7",
+      "title": "Snackbar · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/54e9f7-stepindicator",
+      "title": "StepIndicator · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/54e9f7-stepindicator/b/89eeb8",
+      "title": "StepIndicator · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/54e9f7-stepindicator/b/03c189",
+      "title": "StepIndicator · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/54e9f7-stepindicator/b/4280666a7",
+      "title": "StepIndicator · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/003bab-table",
+      "title": "Table · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/003bab-table/b/42728f",
+      "title": "Table · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/003bab-table/b/828875",
+      "title": "Table · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/003bab-table/b/4280666a7",
+      "title": "Table · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/15efda-testing",
+      "title": "Testing · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/28f39e-textarea",
+      "title": "Textarea · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/28f39e-textarea/b/675398",
+      "title": "Textarea · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/28f39e-textarea/b/60a9ab",
+      "title": "Textarea · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/28f39e-textarea/b/4280666a7",
+      "title": "Textarea · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/135f08-tooltip",
+      "title": "Tooltip · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/135f08-tooltip/b/122aea",
+      "title": "Tooltip · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/135f08-tooltip/b/04afd1",
+      "title": "Tooltip · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/135f08-tooltip/b/4280666a7",
+      "title": "Tooltip · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/n/311987",
+      "title": "Typography · Foyer Design System"
+    },
+    {
+      "url": "https://design.foyer.lu/4280666a7/p/051756-typography",
+      "title": "Typography · Foyer Design System"
     }
   ]
 }
