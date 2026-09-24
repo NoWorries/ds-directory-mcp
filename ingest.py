@@ -811,6 +811,24 @@ def is_language_variant(url: str) -> bool:
     return any(re.search(pattern, url, re.IGNORECASE) for pattern in LANGUAGE_EXCLUDE_PATTERNS)
 
 
+# Confirmed live on Arbetsförmedlingen's design system: a component doc page
+# had a demo/example <a href="namnforum@arbetsformedlingen.se"> (a bare email
+# address, missing its mailto: prefix) and another with the literal example
+# text <a href="Frivillig länk"> ("optional link" in Swedish) as its href.
+# urljoin() correctly-but-uselessly resolves either as a same-domain relative
+# path (https://.../designmonster/namnforum@arbetsformedlingen.se), which
+# passes every other scope/exclude/include check, gets rendered as if it were
+# a real page, and gets indexed — burning a page-budget slot and adding
+# genuine junk to search results. Neither pattern is a real URI a real site
+# would ever intentionally link to.
+_PLACEHOLDER_HREF_RE = re.compile(r"[@ ]")
+
+
+def looks_like_placeholder_href(url: str) -> bool:
+    last_segment = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1]
+    return bool(_PLACEHOLDER_HREF_RE.search(last_segment))
+
+
 def matches_include(url: str, include_patterns: list[str]) -> bool:
     if not include_patterns:
         return True
@@ -1215,6 +1233,8 @@ def crawl(
                 if is_excluded(link, all_exclude_patterns):
                     continue
                 if not matches_include(link, include_patterns):
+                    continue
+                if looks_like_placeholder_href(link):
                     continue
                 to_visit.append(link)
                 to_visit_set.add(link)
@@ -2313,6 +2333,14 @@ def crawl_spa(
                     # which "hit max_pages with N more page(s) still queued"
                     # then pushed out of real, in-scope documentation pages.
                     if _looks_like_non_html(urlparse(link).path or "/"):
+                        continue
+                    # Confirmed live on Arbetsförmedlingen's design system —
+                    # see looks_like_placeholder_href()'s docstring: a demo
+                    # component page's example markup used a bare email
+                    # address and literal placeholder text as href values,
+                    # both of which urljoin() resolves into real-looking
+                    # same-domain URLs that aren't real pages at all.
+                    if looks_like_placeholder_href(link):
                         continue
                     to_visit.append(link)
                     to_visit_set.add(link)
