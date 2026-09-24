@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:24:21+00:00",
+  "generated_at": "2026-09-24T12:49:03+00:00",
   "id": "nasa-horizon-design-system-hds",
   "organization": "NASA",
   "design_system": "Horizon Design System (HDS)",
@@ -9,11 +9,11 @@
     "https://github.com/nasa/hds-core/"
   ],
   "detail_url": "/systems/nasa-horizon-design-system-hds",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 5,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-20T02:10:37+00:00",
+  "last_checked": "2026-09-24T12:32:45+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -40,32 +40,38 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/security/advanced-security",
-      "https://github.com/open-source/sponsors",
-      "https://github.com/features/code-quality",
-      "https://github.com/resources/events",
+      "https://github.com/topics/uswds",
       "https://github.com/solutions/executive-insights",
+      "https://github.com/solutions/industry",
       "https://github.com/enterprise/premium-support",
-      "https://github.com/topics/design-system",
-      "https://github.com/uswds/uswds",
-      "https://github.com/features/copilot",
-      "https://github.com/resources/whitepapers",
-      "https://github.com/features/codespaces",
-      "https://github.com/features/actions",
-      "https://github.com/contact/report-content",
+      "https://github.com/features/code-review",
       "https://github.com/resources/articles",
       "https://github.com/features/issues",
+      "https://github.com/apps/dependabot",
+      "https://github.com/features/code-quality",
+      "https://github.com/apps/github-actions",
+      "https://github.com/features/copilot",
+      "https://github.com/open-source/sponsors",
+      "https://github.com/uswds/uswds",
       "https://github.com/solutions/use-case",
+      "https://github.com/security/advanced-security",
+      "https://github.com/search/advanced",
+      "https://github.com/resources/whitepapers",
+      "https://github.com/topics/design-system",
+      "https://github.com/features/actions",
+      "https://github.com/features/codespaces",
       "https://github.com/enterprise/startups",
-      "https://github.com/topics/uswds",
-      "https://github.com/features/code-review",
-      "https://github.com/solutions/industry"
+      "https://github.com/resources/events",
+      "https://github.com/contact/report-content"
     ]
   },
   "content_signals": {
     "frameworks": [
       "React"
-    ]
+    ],
+    "accessibility_conformance": "Section 508",
+    "tokens_format": "Style Dictionary",
+    "validation_loop": true
   },
   "github_meta": {
     "license": "NOASSERTION",
@@ -75,12 +81,28 @@
   "npm_meta": {
     "latest_version": "0.10.0",
     "last_published": "2026-08-19T21:02:19.508Z",
-    "weekly_downloads": 23
+    "weekly_downloads": 17
   },
   "indexed_pages": [
     {
+      "url": "https://github.com/nasa/hds-core/activity",
+      "title": "Activity · nasa/hds-core · GitHub"
+    },
+    {
       "url": "https://github.com/nasa/hds-core",
       "title": "GitHub - nasa/hds-core: Documentation for NASA's Horizon Design System (HDS), with a Sass/CSS theme layer for the U.S. Web Design System (USWDS). · GitHub"
+    },
+    {
+      "url": "https://github.com/nasa/hds-core/search",
+      "title": "Issue search results · GitHub"
+    },
+    {
+      "url": "https://github.com/nasa/hds-core/milestones",
+      "title": "Milestones · nasa/hds-core · GitHub"
+    },
+    {
+      "url": "https://github.com/nasa/hds-core/projects",
+      "title": "Projects · nasa/hds-core · GitHub"
     }
   ]
 }

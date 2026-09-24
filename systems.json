@@ -1,8 +1,8 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-09-24T12:24:21+00:00",
+  "generated_at": "2026-09-24T12:49:03+00:00",
   "data_as_of": "2026-09-13T22:41:54+00:00",
-  "total_systems": 170,
+  "total_systems": 169,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -11372,11 +11372,11 @@
         "https://decathlon.design/"
       ],
       "detail_url": "/systems/decathlon-design-system-vitamin",
-      "pages_indexed": 1,
+      "pages_indexed": 2,
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-20T11:36:15+00:00",
+      "last_checked": "2026-09-24T12:28:04+00:00",
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {
@@ -11395,6 +11395,10 @@
       "github_meta": null,
       "npm_meta": null,
       "indexed_pages": [
+        {
+          "url": "https://decathlon.design/",
+          "title": "Vitamin Play | Welcome to Vitamin Play"
+        },
         {
           "url": "https://decathlon.design/login",
           "title": "Vitamin Play | Welcome to Vitamin Play"
@@ -15304,11 +15308,11 @@
         "https://gympass.github.io/yoga/"
       ],
       "detail_url": "/systems/gympass-yoga",
-      "pages_indexed": 4,
-      "coverage_status": "partial",
+      "pages_indexed": 6,
+      "coverage_status": "full",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T07:48:30+00:00",
+      "last_checked": "2026-09-24T12:29:40+00:00",
       "last_modified": "Mon, 14 Sep 2026 13:44:37 GMT",
       "sitemap_last_modified": null,
       "resources": {
@@ -15330,11 +15334,19 @@
       "npm_meta": null,
       "indexed_pages": [
         {
+          "url": "https://gympass.github.io/yoga/guidelines",
+          "title": "Yoga - Borders"
+        },
+        {
           "url": "https://gympass.github.io/yoga/guidelines/tokens/borders",
           "title": "Yoga - Borders"
         },
         {
           "url": "https://gympass.github.io/yoga/components/getting-started",
+          "title": "Yoga - Getting started"
+        },
+        {
+          "url": "https://gympass.github.io/yoga/components",
           "title": "Yoga - Getting started"
         },
         {
@@ -19130,7 +19142,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T08:01:09+00:00",
+      "last_checked": "2026-09-24T12:29:04+00:00",
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {
@@ -24150,8 +24162,8 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-20T12:07:29+00:00",
-      "last_modified": "Thu, 17 Sep 2026 16:57:31 GMT",
+      "last_checked": "2026-09-24T12:30:36+00:00",
+      "last_modified": "Thu, 06 Aug 2026 05:09:19 GMT",
       "sitemap_last_modified": null,
       "resources": {},
       "unverified_resources": {},
@@ -25495,7 +25507,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T09:29:26+00:00",
+      "last_checked": "2026-09-24T12:31:27+00:00",
       "last_modified": null,
       "sitemap_last_modified": "2026-07-27",
       "resources": {},
@@ -26138,11 +26150,11 @@
         "https://github.com/nasa/hds-core/"
       ],
       "detail_url": "/systems/nasa-horizon-design-system-hds",
-      "pages_indexed": 1,
-      "coverage_status": "partial",
+      "pages_indexed": 5,
+      "coverage_status": "full",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-20T02:10:37+00:00",
+      "last_checked": "2026-09-24T12:32:45+00:00",
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {
@@ -26169,32 +26181,38 @@
       },
       "unverified_resources": {
         "github": [
-          "https://github.com/security/advanced-security",
-          "https://github.com/open-source/sponsors",
-          "https://github.com/features/code-quality",
-          "https://github.com/resources/events",
+          "https://github.com/topics/uswds",
           "https://github.com/solutions/executive-insights",
+          "https://github.com/solutions/industry",
           "https://github.com/enterprise/premium-support",
-          "https://github.com/topics/design-system",
-          "https://github.com/uswds/uswds",
-          "https://github.com/features/copilot",
-          "https://github.com/resources/whitepapers",
-          "https://github.com/features/codespaces",
-          "https://github.com/features/actions",
-          "https://github.com/contact/report-content",
+          "https://github.com/features/code-review",
           "https://github.com/resources/articles",
           "https://github.com/features/issues",
+          "https://github.com/apps/dependabot",
+          "https://github.com/features/code-quality",
+          "https://github.com/apps/github-actions",
+          "https://github.com/features/copilot",
+          "https://github.com/open-source/sponsors",
+          "https://github.com/uswds/uswds",
           "https://github.com/solutions/use-case",
+          "https://github.com/security/advanced-security",
+          "https://github.com/search/advanced",
+          "https://github.com/resources/whitepapers",
+          "https://github.com/topics/design-system",
+          "https://github.com/features/actions",
+          "https://github.com/features/codespaces",
           "https://github.com/enterprise/startups",
-          "https://github.com/topics/uswds",
-          "https://github.com/features/code-review",
-          "https://github.com/solutions/industry"
+          "https://github.com/resources/events",
+          "https://github.com/contact/report-content"
         ]
       },
       "content_signals": {
         "frameworks": [
           "React"
-        ]
+        ],
+        "accessibility_conformance": "Section 508",
+        "tokens_format": "Style Dictionary",
+        "validation_loop": true
       },
       "github_meta": {
         "license": "NOASSERTION",
@@ -26204,12 +26222,28 @@
       "npm_meta": {
         "latest_version": "0.10.0",
         "last_published": "2026-08-19T21:02:19.508Z",
-        "weekly_downloads": 23
+        "weekly_downloads": 17
       },
       "indexed_pages": [
         {
+          "url": "https://github.com/nasa/hds-core/activity",
+          "title": "Activity · nasa/hds-core · GitHub"
+        },
+        {
           "url": "https://github.com/nasa/hds-core",
           "title": "GitHub - nasa/hds-core: Documentation for NASA's Horizon Design System (HDS), with a Sass/CSS theme layer for the U.S. Web Design System (USWDS). · GitHub"
+        },
+        {
+          "url": "https://github.com/nasa/hds-core/search",
+          "title": "Issue search results · GitHub"
+        },
+        {
+          "url": "https://github.com/nasa/hds-core/milestones",
+          "title": "Milestones · nasa/hds-core · GitHub"
+        },
+        {
+          "url": "https://github.com/nasa/hds-core/projects",
+          "title": "Projects · nasa/hds-core · GitHub"
         }
       ]
     },
@@ -29628,11 +29662,11 @@
         "https://boltdesignsystem.com/"
       ],
       "detail_url": "/systems/pega-digital-bolt-design-system",
-      "pages_indexed": 1,
+      "pages_indexed": 2,
       "coverage_status": "partial",
-      "hit_max_pages": false,
+      "hit_max_pages": true,
       "likely_spa": false,
-      "last_checked": "2026-09-18T10:53:10+00:00",
+      "last_checked": "2026-09-24T12:47:15+00:00",
       "last_modified": "Fri, 18 Sep 2026 09:02:06 GMT",
       "sitemap_last_modified": null,
       "resources": {
@@ -29658,6 +29692,10 @@
         {
           "url": "https://boltdesignsystem.com/",
           "title": "Bolt Design System"
+        },
+        {
+          "url": "https://boltdesignsystem.com/pattern-lab",
+          "title": "Pattern Lab - components-overview"
         }
       ]
     },
@@ -33627,18 +33665,27 @@
         "https://sap.github.io/fundamental/"
       ],
       "detail_url": "/systems/sap-fiori-fundamentals",
-      "pages_indexed": 1,
+      "pages_indexed": 2,
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T12:02:53+00:00",
+      "last_checked": "2026-09-24T12:33:15+00:00",
       "last_modified": "Sat, 23 May 2026 11:20:05 GMT",
       "sitemap_last_modified": null,
       "resources": {
         "github": [
           "https://github.com/SAP/fundamental-ngx",
           "https://github.com/SAP/fundamental",
-          "https://github.com/SAP/fundamental-styles"
+          "https://github.com/SAP/fundamental-styles",
+          "https://api.reuse.software/info/github.com/SAP/fundamental-ngx"
+        ],
+        "markdown_docs": [
+          "https://github.com/SAP/.github/blob/main/CONTRIBUTING.md",
+          "https://github.com/SAP/fundamental-ngx/blob/main/CONTRIBUTING.md",
+          "https://github.com/angular/angular/blob/main/CONTRIBUTING.md"
+        ],
+        "mcp": [
+          "https://sap.github.io/libs/mcp-server"
         ]
       },
       "unverified_resources": {},
@@ -33650,14 +33697,18 @@
       },
       "github_meta": {
         "license": "Apache-2.0",
-        "stars": 294,
-        "last_pushed": "2026-09-18T11:33:13Z"
+        "stars": 295,
+        "last_pushed": "2026-09-24T08:53:23Z"
       },
       "npm_meta": null,
       "indexed_pages": [
         {
           "url": "https://sap.github.io/fundamental",
           "title": "Fundamental Library"
+        },
+        {
+          "url": "https://sap.github.io/fundamental-ngx",
+          "title": "Fundamental Library for Angular"
         }
       ]
     },
@@ -33670,16 +33721,17 @@
         "https://openui5.org/documentation"
       ],
       "detail_url": "/systems/sap-openui",
-      "pages_indexed": 1,
+      "pages_indexed": 2,
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T12:03:11+00:00",
-      "last_modified": "Fri, 18 Sep 2026 07:21:55 GMT",
+      "last_checked": "2026-09-24T12:33:46+00:00",
+      "last_modified": "Wed, 23 Sep 2026 15:29:02 GMT",
       "sitemap_last_modified": null,
       "resources": {
         "github": [
-          "https://github.com/SAP/openui5-sample-app"
+          "https://github.com/SAP/openui5-sample-app",
+          "https://github.com/UI5/openui5"
         ]
       },
       "unverified_resources": {},
@@ -33687,12 +33739,16 @@
       "github_meta": {
         "license": "Apache-2.0",
         "stars": 304,
-        "last_pushed": "2026-09-01T09:57:14Z"
+        "last_pushed": "2026-09-23T10:26:09Z"
       },
       "npm_meta": null,
       "indexed_pages": [
         {
           "url": "https://openui5.org/documentation",
+          "title": "OpenUI5 - Documentation"
+        },
+        {
+          "url": "https://openui5.org/documentation.html",
           "title": "OpenUI5 - Documentation"
         }
       ]
@@ -41271,26 +41327,39 @@
         "https://vercel.com/design/introduction/"
       ],
       "detail_url": "/systems/vercel-geist",
-      "pages_indexed": 1,
+      "pages_indexed": 3,
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T14:26:36+00:00",
+      "last_checked": "2026-09-24T12:36:30+00:00",
       "last_modified": null,
-      "sitemap_last_modified": "2026-09-18T14:11:30.044Z",
+      "sitemap_last_modified": "2026-09-24T12:17:38.898Z",
       "resources": {
         "agent_instructions": [
           "https://vercel.com/llms.txt"
         ]
       },
       "unverified_resources": {},
-      "content_signals": {},
+      "content_signals": {
+        "cli_scaffolding": true,
+        "frameworks": [
+          "React"
+        ]
+      },
       "github_meta": null,
       "npm_meta": {
         "latest_version": "1.7.2",
         "weekly_downloads": 1735517
       },
       "indexed_pages": [
+        {
+          "url": "https://vercel.com/design/brands",
+          "title": "Brands"
+        },
+        {
+          "url": "https://vercel.com/design/introduction",
+          "title": "Geist"
+        },
         {
           "url": "https://vercel.com/llms.txt",
           "title": "Vercel — Geist — llms.txt"
@@ -42466,50 +42535,6 @@
         {
           "url": "https://wise.design/direction",
           "title": "Wise Design | Building a System for a Borderless World"
-        }
-      ]
-    },
-    {
-      "id": "wonderflow-wanda-design-system",
-      "organization": "Wonderflow",
-      "design_system": "Wanda Design System",
-      "full_name": "Wonderflow — Wanda Design System",
-      "start_urls": [
-        "https://design.wonderflow.ai/"
-      ],
-      "detail_url": "/systems/wonderflow-wanda-design-system",
-      "pages_indexed": 4,
-      "coverage_status": "partial",
-      "hit_max_pages": false,
-      "likely_spa": false,
-      "last_checked": "2026-09-16T14:56:26+00:00",
-      "last_modified": null,
-      "sitemap_last_modified": null,
-      "resources": {},
-      "unverified_resources": {},
-      "content_signals": {
-        "frameworks": [
-          "React"
-        ]
-      },
-      "github_meta": null,
-      "npm_meta": null,
-      "indexed_pages": [
-        {
-          "url": "https://design.wonderflow.ai/get-started/documentation/get-started/accessibility",
-          "title": "Accessibility"
-        },
-        {
-          "url": "https://design.wonderflow.ai/get-started/components/actions/button",
-          "title": "Button"
-        },
-        {
-          "url": "https://design.wonderflow.ai/get-started/documentation/get-started/introduction",
-          "title": "Introduction"
-        },
-        {
-          "url": "https://design.wonderflow.ai/",
-          "title": "Wanda Design System"
         }
       ]
     },
@@ -44683,7 +44708,7 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T15:49:39+00:00",
+      "last_checked": "2026-09-24T12:42:28+00:00",
       "last_modified": "Sun, 21 Jun 2026 19:34:11 GMT",
       "sitemap_last_modified": null,
       "resources": {},
@@ -44872,11 +44897,11 @@
         "https://csskitsune.com"
       ],
       "detail_url": "/systems/shizen-design-system",
-      "pages_indexed": 2,
+      "pages_indexed": 3,
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T15:51:56+00:00",
+      "last_checked": "2026-09-24T12:42:35+00:00",
       "last_modified": null,
       "sitemap_last_modified": null,
       "resources": {
@@ -44890,6 +44915,10 @@
       "github_meta": null,
       "npm_meta": null,
       "indexed_pages": [
+        {
+          "url": "https://csskitsune.com/",
+          "title": "Shizen Design System | e2japan"
+        },
         {
           "url": "https://csskitsune.com/llms.txt",
           "title": "Shizen Design System — llms.txt"
@@ -44913,9 +44942,9 @@
       "coverage_status": "partial",
       "hit_max_pages": false,
       "likely_spa": false,
-      "last_checked": "2026-09-18T15:52:14+00:00",
+      "last_checked": "2026-09-24T12:43:12+00:00",
       "last_modified": null,
-      "sitemap_last_modified": "2026-09-18",
+      "sitemap_last_modified": "2026-09-23",
       "resources": {
         "agent_instructions": [
           "https://horizonx.so/llms.txt",
@@ -44927,8 +44956,7 @@
         "frameworks": [
           "React",
           "Vue",
-          "Svelte",
-          "Angular"
+          "Svelte"
         ]
       },
       "github_meta": null,
@@ -44936,7 +44964,7 @@
       "indexed_pages": [
         {
           "url": "https://horizonx.so/docs",
-          "title": "Docs | What HorizonX Is & How to Use the Library"
+          "title": "Docs | How HorizonX Works: Library, Editors and Exports"
         },
         {
           "url": "https://horizonx.so/llms.txt",

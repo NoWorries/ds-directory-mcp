@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:24:21+00:00",
+  "generated_at": "2026-09-24T12:49:03+00:00",
   "id": "sap-openui",
   "organization": null,
   "design_system": "SAP OpenUI",
@@ -9,16 +9,17 @@
     "https://openui5.org/documentation"
   ],
   "detail_url": "/systems/sap-openui",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T12:03:11+00:00",
-  "last_modified": "Fri, 18 Sep 2026 07:21:55 GMT",
+  "last_checked": "2026-09-24T12:33:46+00:00",
+  "last_modified": "Wed, 23 Sep 2026 15:29:02 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/SAP/openui5-sample-app"
+      "https://github.com/SAP/openui5-sample-app",
+      "https://github.com/UI5/openui5"
     ]
   },
   "unverified_resources": {},
@@ -26,12 +27,16 @@
   "github_meta": {
     "license": "Apache-2.0",
     "stars": 304,
-    "last_pushed": "2026-09-01T09:57:14Z"
+    "last_pushed": "2026-09-23T10:26:09Z"
   },
   "npm_meta": null,
   "indexed_pages": [
     {
       "url": "https://openui5.org/documentation",
+      "title": "OpenUI5 - Documentation"
+    },
+    {
+      "url": "https://openui5.org/documentation.html",
       "title": "OpenUI5 - Documentation"
     }
   ]

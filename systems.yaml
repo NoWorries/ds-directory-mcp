@@ -1452,7 +1452,7 @@
   design_system: Design System - Vitamin
   start_urls:
   - https://decathlon.design/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     agent_instructions:
     - https://decathlon.design/llms.txt
@@ -1464,7 +1464,7 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-09-20T11:36:15+00:00'
+  last_checked: '2026-09-24T12:28:04+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -1473,6 +1473,7 @@
   content_signal_sources: {}
   has_localized_docs: false
   thin_page_ratio: 0.0
+  render_mode: spa
 - organization: ''
   design_system: Decentraland UI
   start_urls:
@@ -2608,13 +2609,13 @@
   design_system: Yoga
   start_urls:
   - https://gympass.github.io/yoga/
-  pages_indexed: 4
+  pages_indexed: 6
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"6aa7fa45-3a05"
   last_modified: Mon, 14 Sep 2026 13:44:37 GMT
-  last_checked: '2026-09-18T07:48:30+00:00'
+  last_checked: '2026-09-24T12:29:40+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -2633,6 +2634,7 @@
     license: MIT
     stars: 247
     last_pushed: '2026-09-14T13:43:57Z'
+  render_mode: spa
 - organization: Halstack
   design_system: Halstack Design System
   start_urls:
@@ -3164,7 +3166,7 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-09-18T08:01:09+00:00'
+  last_checked: '2026-09-24T12:29:04+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -3177,6 +3179,7 @@
       Web Components: https://design.infor.com/
   thin_page_ratio: 0.78
   has_localized_docs: false
+  render_mode: spa
 - organization: ING
   design_system: Lion
   start_urls:
@@ -4110,8 +4113,8 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_modified: Thu, 17 Sep 2026 16:57:31 GMT
-  last_checked: '2026-09-20T12:07:29+00:00'
+  last_modified: Thu, 06 Aug 2026 05:09:19 GMT
+  last_checked: '2026-09-24T12:30:36+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -4119,6 +4122,7 @@
   content_signal_sources: {}
   has_localized_docs: false
   thin_page_ratio: 0.0
+  render_mode: spa
 - organization: Mesosphere
   design_system: CNVS
   start_urls:
@@ -4232,8 +4236,8 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: '"8m3qy5mrf75uso"'
-  last_checked: '2026-09-18T09:29:26+00:00'
+  etag: '"hrkocjr7q56qpk"'
+  last_checked: '2026-09-24T12:31:27+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -4243,6 +4247,7 @@
   content_signal_sources: {}
   thin_page_ratio: 0.0
   has_localized_docs: false
+  render_mode: spa
 - organization: Morningstar
   design_system: Morningstar Design System
   start_urls:
@@ -4370,43 +4375,52 @@
   - github\.com/llms
   - /custom-properties
   likely_unmaintained: false
-  pages_indexed: 1
+  pages_indexed: 5
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources:
     github:
-    - https://github.com/security/advanced-security
-    - https://github.com/open-source/sponsors
-    - https://github.com/features/code-quality
-    - https://github.com/resources/events
+    - https://github.com/topics/uswds
     - https://github.com/solutions/executive-insights
+    - https://github.com/solutions/industry
     - https://github.com/enterprise/premium-support
-    - https://github.com/topics/design-system
-    - https://github.com/uswds/uswds
-    - https://github.com/features/copilot
-    - https://github.com/resources/whitepapers
-    - https://github.com/features/codespaces
-    - https://github.com/features/actions
-    - https://github.com/contact/report-content
+    - https://github.com/features/code-review
     - https://github.com/resources/articles
     - https://github.com/features/issues
+    - https://github.com/apps/dependabot
+    - https://github.com/features/code-quality
+    - https://github.com/apps/github-actions
+    - https://github.com/features/copilot
+    - https://github.com/open-source/sponsors
+    - https://github.com/uswds/uswds
     - https://github.com/solutions/use-case
+    - https://github.com/security/advanced-security
+    - https://github.com/search/advanced
+    - https://github.com/resources/whitepapers
+    - https://github.com/topics/design-system
+    - https://github.com/features/actions
+    - https://github.com/features/codespaces
     - https://github.com/enterprise/startups
-    - https://github.com/topics/uswds
-    - https://github.com/features/code-review
-    - https://github.com/solutions/industry
+    - https://github.com/resources/events
+    - https://github.com/contact/report-content
   content_signals:
     frameworks:
     - React
+    accessibility_conformance: Section 508
+    tokens_format: Style Dictionary
+    validation_loop: true
   content_signal_sources:
     frameworks:
       React: https://github.com/nasa/hds-core
+    accessibility_conformance: https://github.com/nasa/hds-core
+    tokens_format: https://github.com/nasa/hds-core
+    validation_loop: https://github.com/nasa/hds-core
   thin_page_ratio: 0.67
   has_localized_docs: false
-  last_checked: '2026-09-20T02:10:37+00:00'
-  etag: W/"b4f2771974d314e50245dad3dffddff0"
+  last_checked: '2026-09-24T12:32:45+00:00'
+  etag: W/"1e533d4fc7b3ad34287da5d8e809a613"
   resources:
     github:
     - https://github.com/topics/nasa
@@ -4430,7 +4444,8 @@
   npm_meta:
     latest_version: 0.10.0
     last_published: '2026-08-19T21:02:19.508Z'
-    weekly_downloads: 23
+    weekly_downloads: 17
+  render_mode: spa
 - organization: National Instruments
   design_system: Fuse
   start_urls:
@@ -5005,7 +5020,7 @@
   design_system: Bolt Design System
   start_urls:
   - https://boltdesignsystem.com/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     agent_instructions:
     - https://boltdesignsystem.com/llms.txt
@@ -5014,12 +5029,12 @@
     - https://boltdesignsystem.com/CLAUDE.md
     mcp:
     - https://boltdesignsystem.com/.well-known/mcp.json
-  hit_max_pages: false
+  hit_max_pages: true
   crawl_error: ''
   likely_spa: false
   etag: '"a35cd8661d0f2728c9c44c61e9b484aee072903ed9bb8d571918806046e62629"'
   last_modified: Fri, 18 Sep 2026 09:02:06 GMT
-  last_checked: '2026-09-18T10:53:10+00:00'
+  last_checked: '2026-09-24T12:47:15+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -5032,6 +5047,7 @@
       React: https://boltdesignsystem.com/
   thin_page_ratio: 0.5
   has_localized_docs: false
+  render_mode: spa
 - organization: Pegasystems
   design_system: Pega Cosmos
   start_urls:
@@ -5594,22 +5610,29 @@
   design_system: Fiori Fundamentals
   start_urls:
   - https://sap.github.io/fundamental/
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     github:
     - https://github.com/SAP/fundamental-ngx
     - https://github.com/SAP/fundamental
     - https://github.com/SAP/fundamental-styles
+    - https://api.reuse.software/info/github.com/SAP/fundamental-ngx
+    markdown_docs:
+    - https://github.com/SAP/.github/blob/main/CONTRIBUTING.md
+    - https://github.com/SAP/fundamental-ngx/blob/main/CONTRIBUTING.md
+    - https://github.com/angular/angular/blob/main/CONTRIBUTING.md
+    mcp:
+    - https://sap.github.io/libs/mcp-server
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: Apache-2.0
-    stars: 294
-    last_pushed: '2026-09-18T11:33:13Z'
+    stars: 295
+    last_pushed: '2026-09-24T08:53:23Z'
   etag: W/"6a118d65-75ad"
   last_modified: Sat, 23 May 2026 11:20:05 GMT
-  last_checked: '2026-09-18T12:02:53+00:00'
+  last_checked: '2026-09-24T12:33:15+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -5623,14 +5646,16 @@
       Web Components: https://sap.github.io/fundamental
   thin_page_ratio: 0.67
   has_localized_docs: false
+  render_mode: spa
 - organization: ''
   design_system: SAP OpenUI
   start_urls:
   - https://openui5.org/documentation
-  pages_indexed: 1
+  pages_indexed: 2
   resources:
     github:
     - https://github.com/SAP/openui5-sample-app
+    - https://github.com/UI5/openui5
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -5640,14 +5665,15 @@
   github_meta:
     license: Apache-2.0
     stars: 304
-    last_pushed: '2026-09-01T09:57:14Z'
-  etag: W/"6aace693-32bd"
-  last_modified: Fri, 18 Sep 2026 07:21:55 GMT
-  last_checked: '2026-09-18T12:03:11+00:00'
+    last_pushed: '2026-09-23T10:26:09Z'
+  etag: W/"6ab3f03e-32bd"
+  last_modified: Wed, 23 Sep 2026 15:29:02 GMT
+  last_checked: '2026-09-24T12:33:46+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   thin_page_ratio: 0.0
   has_localized_docs: false
+  render_mode: spa
 - organization: Scania
   design_system: Tegel
   start_urls:
@@ -6805,7 +6831,7 @@
   design_system: Geist
   start_urls:
   - https://vercel.com/design/introduction/
-  pages_indexed: 1
+  pages_indexed: 3
   resources:
     agent_instructions:
     - https://vercel.com/llms.txt
@@ -6815,17 +6841,24 @@
   npm_meta:
     latest_version: 1.7.2
     weekly_downloads: 1735517
-  etag: '"a7abfdb8f0d116e1ef38a8b9e1f543a8"'
-  last_checked: '2026-09-18T14:26:36+00:00'
+  etag: '"342cc01fbb38a6296b997e8f7f8fedb2"'
+  last_checked: '2026-09-24T12:36:30+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources: {}
-  content_signals: {}
-  content_signal_sources: {}
+  content_signals:
+    cli_scaffolding: true
+    frameworks:
+    - React
+  content_signal_sources:
+    cli_scaffolding: https://vercel.com/design/introduction
+    frameworks:
+      React: https://vercel.com/design/introduction
   thin_page_ratio: 0.0
   has_localized_docs: false
   sitemap_url: https://vercel.com/sitemap.xml
-  sitemap_last_modified: '2026-09-18T14:11:30.044Z'
+  sitemap_last_modified: '2026-09-24T12:17:38.898Z'
+  render_mode: spa
 - organization: Vimeo
   design_system: Vimeo Design System
   start_urls:
@@ -7165,18 +7198,46 @@
   design_system: Wanda Design System
   start_urls:
   - https://design.wonderflow.ai/
-  pages_indexed: 4
+  pages_indexed: 15
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"329a07597519bbdb62886b11292be5b4"'
-  last_checked: '2026-09-16T14:56:26+00:00'
+  last_checked: '2026-09-24T12:40:13+00:00'
   consecutive_crawl_failures: 0
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/postcss/postcss-mixins
+    npm:
+    - https://npmjs.com/package/@typescript-eslint/eslint-plugin
   content_signals:
     frameworks:
     - React
-  likely_unmaintained: false
+    dark_mode: true
+    validation_loop: true
+  likely_unmaintained: true
+  content_signal_sources:
+    dark_mode: https://design.wonderflow.ai/get-started/documentation/design/foundation/colors
+    validation_loop: https://design.wonderflow.ai/get-started/documentation/develop/installation
+    frameworks:
+      React: https://design.wonderflow.ai/get-started/documentation/develop/using-themes
+  has_localized_docs: false
+  resources:
+    github:
+    - https://github.com/wonderflow-bv/nextjs-wanda-playground
+    - https://github.com/wonderflow-bv/eslint-config-wonderflow
+    - https://github.com/wonderflow-bv/react-components
+    - https://github.com/wonderflow-bv/stylelint-config-wonderflow
+    - https://github.com/wonderflow-bv/wanda
+    - https://github.com/wonderflow-bv/reactjs-wanda-playground
+    - https://github.com/wonderflow-bv/config
+    figma:
+    - https://figma.com/file/kcYVgrOqcGIiD2jBjpP3MV/01-%E2%80%94-Themes
+  github_meta:
+    license: MIT
+    stars: 3
+    last_pushed: '2023-05-29T13:55:05Z'
+  render_mode: spa
 - organization: Workday
   design_system: Workday Canvas
   start_urls:
@@ -7686,9 +7747,10 @@
   content_signal_sources: {}
   thin_page_ratio: 0.0
   has_localized_docs: false
-  last_checked: '2026-09-18T15:49:39+00:00'
+  last_checked: '2026-09-24T12:42:28+00:00'
   etag: '"7327e46f81916f82a2cb24b0755c24875e15fe45f21385f10ac9ee05320314c0"'
   last_modified: Sun, 21 Jun 2026 19:34:11 GMT
+  render_mode: spa
 - organization: KDE
   design_system: Human Interface Guidelines
   start_urls:
@@ -7760,7 +7822,7 @@
   start_urls:
   - https://csskitsune.com
   likely_unmaintained: false
-  pages_indexed: 2
+  pages_indexed: 3
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -7770,12 +7832,13 @@
   content_signal_sources: {}
   thin_page_ratio: -1.0
   has_localized_docs: false
-  last_checked: '2026-09-18T15:51:56+00:00'
+  last_checked: '2026-09-24T12:42:35+00:00'
   sitemap_url: https://csskitsune.com/sitemap.xml
   resources:
     agent_instructions:
     - https://csskitsune.com/llms.txt
     - https://csskitsune.com/llms-full.txt
+  render_mode: spa
 - organization: ''
   design_system: HorizonX
   start_urls:
@@ -7792,22 +7855,21 @@
     - React
     - Vue
     - Svelte
-    - Angular
   content_signal_sources:
     frameworks:
       React: https://horizonx.so/docs
       Vue: https://horizonx.so/docs
       Svelte: https://horizonx.so/docs
-      Angular: https://horizonx.so/llms-full.txt
   thin_page_ratio: -2.0
   has_localized_docs: false
-  last_checked: '2026-09-18T15:52:14+00:00'
+  last_checked: '2026-09-24T12:43:12+00:00'
   sitemap_url: https://horizonx.so/sitemap.xml
-  sitemap_last_modified: '2026-09-18'
+  sitemap_last_modified: '2026-09-23'
   resources:
     agent_instructions:
     - https://horizonx.so/llms.txt
     - https://horizonx.so/llms-full.txt
+  render_mode: spa
 - organization: ''
   design_system: RadianUI
   start_urls:

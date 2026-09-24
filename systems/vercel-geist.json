@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:24:21+00:00",
+  "generated_at": "2026-09-24T12:49:03+00:00",
   "id": "vercel-geist",
   "organization": "Vercel",
   "design_system": "Geist",
@@ -9,26 +9,39 @@
     "https://vercel.com/design/introduction/"
   ],
   "detail_url": "/systems/vercel-geist",
-  "pages_indexed": 1,
+  "pages_indexed": 3,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T14:26:36+00:00",
+  "last_checked": "2026-09-24T12:36:30+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-18T14:11:30.044Z",
+  "sitemap_last_modified": "2026-09-24T12:17:38.898Z",
   "resources": {
     "agent_instructions": [
       "https://vercel.com/llms.txt"
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "cli_scaffolding": true,
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": null,
   "npm_meta": {
     "latest_version": "1.7.2",
     "weekly_downloads": 1735517
   },
   "indexed_pages": [
+    {
+      "url": "https://vercel.com/design/brands",
+      "title": "Brands"
+    },
+    {
+      "url": "https://vercel.com/design/introduction",
+      "title": "Geist"
+    },
     {
       "url": "https://vercel.com/llms.txt",
       "title": "Vercel — Geist — llms.txt"

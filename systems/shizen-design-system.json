@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:24:21+00:00",
+  "generated_at": "2026-09-24T12:49:03+00:00",
   "id": "shizen-design-system",
   "organization": null,
   "design_system": "Shizen Design System",
@@ -9,11 +9,11 @@
     "https://csskitsune.com"
   ],
   "detail_url": "/systems/shizen-design-system",
-  "pages_indexed": 2,
+  "pages_indexed": 3,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T15:51:56+00:00",
+  "last_checked": "2026-09-24T12:42:35+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -27,6 +27,10 @@
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://csskitsune.com/",
+      "title": "Shizen Design System | e2japan"
+    },
     {
       "url": "https://csskitsune.com/llms.txt",
       "title": "Shizen Design System — llms.txt"

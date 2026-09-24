@@ -9198,9 +9198,11 @@
   "SAP OpenUI": [
     {
       "url": "https://openui5.org/documentation",
-      "title": "OpenUI5 - Documentation",
-      "etag": "W/\"6aace693-32bd\"",
-      "last_modified": "Fri, 18 Sep 2026 07:21:55 GMT"
+      "title": "OpenUI5 - Documentation"
+    },
+    {
+      "url": "https://openui5.org/documentation.html",
+      "title": "OpenUI5 - Documentation"
     }
   ],
   "eBay — Skin": [
@@ -20697,6 +20699,10 @@
   ],
   "Decathlon — Design System - Vitamin": [
     {
+      "url": "https://decathlon.design/",
+      "title": "Vitamin Play | Welcome to Vitamin Play"
+    },
+    {
       "url": "https://decathlon.design/login",
       "title": "Vitamin Play | Welcome to Vitamin Play"
     }
@@ -21947,28 +21953,28 @@
   "Gusto — Workbench": [],
   "Gympass — Yoga": [
     {
+      "url": "https://gympass.github.io/yoga/guidelines",
+      "title": "Yoga - Borders"
+    },
+    {
       "url": "https://gympass.github.io/yoga/guidelines/tokens/borders",
-      "title": "Yoga - Borders",
-      "etag": "W/\"6aa7fa45-6456\"",
-      "last_modified": "Mon, 14 Sep 2026 13:44:37 GMT"
+      "title": "Yoga - Borders"
     },
     {
       "url": "https://gympass.github.io/yoga/components/getting-started",
-      "title": "Yoga - Getting started",
-      "etag": "W/\"6aa7fa45-8e57\"",
-      "last_modified": "Mon, 14 Sep 2026 13:44:37 GMT"
+      "title": "Yoga - Getting started"
+    },
+    {
+      "url": "https://gympass.github.io/yoga/components",
+      "title": "Yoga - Getting started"
     },
     {
       "url": "https://gympass.github.io/yoga/system/getting-started",
-      "title": "Yoga - System - Getting Started",
-      "etag": "W/\"6aa7fa45-8868\"",
-      "last_modified": "Mon, 14 Sep 2026 13:44:37 GMT"
+      "title": "Yoga - System - Getting Started"
     },
     {
       "url": "https://gympass.github.io/yoga",
-      "title": "Yoga • Design System",
-      "etag": "W/\"6aa7fa45-3a05\"",
-      "last_modified": "Mon, 14 Sep 2026 13:44:37 GMT"
+      "title": "Yoga • Design System"
     }
   ],
   "Help Scout — Help Scout Style Guide": [
@@ -27786,18 +27792,15 @@
   "Merck — Liquid": [
     {
       "url": "https://emd.design/liquid-images",
-      "title": "Liquid Images by UX Strategy & Design",
-      "last_modified": "Sun, 20 Sep 2026 12:07:10 GMT"
+      "title": "Liquid Images by UX Strategy & Design"
     },
     {
       "url": "https://emd.design/imprint",
-      "title": "UX Strategy & Design - Imprint",
-      "last_modified": "Sun, 20 Sep 2026 12:07:08 GMT"
+      "title": "UX Strategy & Design - Imprint"
     },
     {
       "url": "https://emd.design/",
-      "title": "UX Strategy & Design | Disruptive Digital Experience",
-      "last_modified": "Thu, 17 Sep 2026 16:57:31 GMT"
+      "title": "UX Strategy & Design | Disruptive Digital Experience"
     }
   ],
   "Microsoft — Fluent": [
@@ -28950,8 +28953,7 @@
   "Monzo — Monzo Tone of Voice": [
     {
       "url": "https://monzo.com/tone-of-voice",
-      "title": "Monzo tone of voice",
-      "etag": "\"8m3qy5mrf75uso\""
+      "title": "Monzo tone of voice"
     }
   ],
   "Morningstar — Morningstar Design System": [
@@ -30352,9 +30354,11 @@
   "Pega Digital — Bolt Design System": [
     {
       "url": "https://boltdesignsystem.com/",
-      "title": "Bolt Design System",
-      "etag": "\"a35cd8661d0f2728c9c44c61e9b484aee072903ed9bb8d571918806046e62629\"",
-      "last_modified": "Fri, 18 Sep 2026 09:02:06 GMT"
+      "title": "Bolt Design System"
+    },
+    {
+      "url": "https://boltdesignsystem.com/pattern-lab",
+      "title": "Pattern Lab - components-overview"
     }
   ],
   "Pusher — Chameleon": [
@@ -30368,9 +30372,11 @@
   "SAP — Fiori Fundamentals": [
     {
       "url": "https://sap.github.io/fundamental",
-      "title": "Fundamental Library",
-      "etag": "W/\"6a118d65-75ad\"",
-      "last_modified": "Sat, 23 May 2026 11:20:05 GMT"
+      "title": "Fundamental Library"
+    },
+    {
+      "url": "https://sap.github.io/fundamental-ngx",
+      "title": "Fundamental Library for Angular"
     }
   ],
   "Seek — Seek Style Guide": [
@@ -34394,14 +34400,58 @@
       "etag": "W/\"c618893d2f6711d0ae7db98c61f6f5fc\""
     },
     {
+      "url": "https://design.wonderflow.ai/get-started/documentation/design/brand",
+      "title": "Brand"
+    },
+    {
       "url": "https://design.wonderflow.ai/get-started/components/actions/button",
       "title": "Button",
       "etag": "W/\"ae3fe6ef8fb79cf40ea1789ae415e5a7\""
     },
     {
+      "url": "https://design.wonderflow.ai/get-started/documentation/design/foundation/colors",
+      "title": "Colors"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/documentation/develop/design-tokens",
+      "title": "Design tokens"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/documentation/develop/installation",
+      "title": "Installation"
+    },
+    {
       "url": "https://design.wonderflow.ai/get-started/documentation/get-started/introduction",
       "title": "Introduction",
       "etag": "W/\"ad26b050d8c12408e48f654cfe7c2126\""
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/documentation/design/motion/principles",
+      "title": "Principles"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/resources",
+      "title": "Resources"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/documentation/develop/ssr",
+      "title": "Server Side Rendering"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/symbols",
+      "title": "Symbols"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/documentation/design/themes",
+      "title": "Themes"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/documentation/develop/using-themes",
+      "title": "Using themes"
+    },
+    {
+      "url": "https://design.wonderflow.ai/get-started/documentation/develop/styling/utilities",
+      "title": "Utilities"
     },
     {
       "url": "https://design.wonderflow.ai/",
@@ -43871,6 +43921,14 @@
   "Twilio — Paste": [],
   "Vercel — Geist": [
     {
+      "url": "https://vercel.com/design/brands",
+      "title": "Brands"
+    },
+    {
+      "url": "https://vercel.com/design/introduction",
+      "title": "Geist"
+    },
+    {
       "url": "https://vercel.com/llms.txt",
       "title": "Vercel — Geist — llms.txt"
     }
@@ -45412,9 +45470,7 @@
   "GNOME — Human Interface Guidelines": [
     {
       "url": "https://developer.gnome.org/hig",
-      "title": "GNOME Human Interface Guidelines",
-      "etag": "\"7327e46f81916f82a2cb24b0755c24875e15fe45f21385f10ac9ee05320314c0\"",
-      "last_modified": "Sun, 21 Jun 2026 19:34:11 GMT"
+      "title": "GNOME Human Interface Guidelines"
     }
   ],
   "KDE — Human Interface Guidelines": [
@@ -45536,6 +45592,10 @@
   ],
   "Shizen Design System": [
     {
+      "url": "https://csskitsune.com/",
+      "title": "Shizen Design System | e2japan"
+    },
+    {
       "url": "https://csskitsune.com/llms.txt",
       "title": "Shizen Design System — llms.txt"
     },
@@ -45547,7 +45607,7 @@
   "HorizonX": [
     {
       "url": "https://horizonx.so/docs",
-      "title": "Docs | What HorizonX Is & How to Use the Library"
+      "title": "Docs | How HorizonX Works: Library, Editors and Exports"
     },
     {
       "url": "https://horizonx.so/llms.txt",
@@ -50024,9 +50084,24 @@
   ],
   "NASA — Horizon Design System (HDS)": [
     {
+      "url": "https://github.com/nasa/hds-core/activity",
+      "title": "Activity · nasa/hds-core · GitHub"
+    },
+    {
       "url": "https://github.com/nasa/hds-core",
-      "title": "GitHub - nasa/hds-core: Documentation for NASA's Horizon Design System (HDS), with a Sass/CSS theme layer for the U.S. Web Design System (USWDS). · GitHub",
-      "etag": "W/\"971d6a169c2b7ab9b9b682d89f975020\""
+      "title": "GitHub - nasa/hds-core: Documentation for NASA's Horizon Design System (HDS), with a Sass/CSS theme layer for the U.S. Web Design System (USWDS). · GitHub"
+    },
+    {
+      "url": "https://github.com/nasa/hds-core/search",
+      "title": "Issue search results · GitHub"
+    },
+    {
+      "url": "https://github.com/nasa/hds-core/milestones",
+      "title": "Milestones · nasa/hds-core · GitHub"
+    },
+    {
+      "url": "https://github.com/nasa/hds-core/projects",
+      "title": "Projects · nasa/hds-core · GitHub"
     }
   ],
   "LocalTapiola — Duet": [],

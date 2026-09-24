@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:24:21+00:00",
+  "generated_at": "2026-09-24T12:49:03+00:00",
   "id": "horizonx",
   "organization": null,
   "design_system": "HorizonX",
@@ -13,9 +13,9 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T15:52:14+00:00",
+  "last_checked": "2026-09-24T12:43:12+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-18",
+  "sitemap_last_modified": "2026-09-23",
   "resources": {
     "agent_instructions": [
       "https://horizonx.so/llms.txt",
@@ -27,8 +27,7 @@
     "frameworks": [
       "React",
       "Vue",
-      "Svelte",
-      "Angular"
+      "Svelte"
     ]
   },
   "github_meta": null,
@@ -36,7 +35,7 @@
   "indexed_pages": [
     {
       "url": "https://horizonx.so/docs",
-      "title": "Docs | What HorizonX Is & How to Use the Library"
+      "title": "Docs | How HorizonX Works: Library, Editors and Exports"
     },
     {
       "url": "https://horizonx.so/llms.txt",

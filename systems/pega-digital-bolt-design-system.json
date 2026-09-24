@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-24T12:24:21+00:00",
+  "generated_at": "2026-09-24T12:49:03+00:00",
   "id": "pega-digital-bolt-design-system",
   "organization": "Pega Digital",
   "design_system": "Bolt Design System",
@@ -9,11 +9,11 @@
     "https://boltdesignsystem.com/"
   ],
   "detail_url": "/systems/pega-digital-bolt-design-system",
-  "pages_indexed": 1,
+  "pages_indexed": 2,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-18T10:53:10+00:00",
+  "last_checked": "2026-09-24T12:47:15+00:00",
   "last_modified": "Fri, 18 Sep 2026 09:02:06 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -39,6 +39,10 @@
     {
       "url": "https://boltdesignsystem.com/",
       "title": "Bolt Design System"
+    },
+    {
+      "url": "https://boltdesignsystem.com/pattern-lab",
+      "title": "Pattern Lab - components-overview"
     }
   ]
 }
