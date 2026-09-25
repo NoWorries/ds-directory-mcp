@@ -17,6 +17,9 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import quote, urlparse
 
+from component_taxonomy import NEGATIVE_TITLE_PATTERNS
+from generate_components import ROUTES as TAXONOMY_ROUTES
+from generate_components import classify_title
 from generate_directory import (
     COLUMNS,
     COVERAGE_GLYPH,
@@ -489,6 +492,17 @@ def render_content_signals(entry: dict) -> str:
     )
 
 
+# route key -> section label, plus a catch-all for whatever classify_title()
+# doesn't recognize — same three taxonomies generate_components.py routes
+# components/patterns/foundations through, reused here rather than
+# re-derived, so a page groups the same way whether you're looking at it
+# from this system's own detail page or from /components, /patterns,
+# /foundations directly.
+_PAGE_GROUP_LABELS = {route["key"]: route["title"] for route in TAXONOMY_ROUTES}
+_OTHER_GROUP_KEY = "other"
+_OTHER_GROUP_LABEL = "Other pages"
+
+
 def render_page_list(name: str, pages_index: dict, org: str = "", ds_name: str = "") -> str:
     pages = pages_index.get(name) or []
     if not pages:
@@ -518,11 +532,45 @@ def render_page_list(name: str, pages_index: dict, org: str = "", ds_name: str =
         seen_titles.add(cleaned)
         return cleaned
 
-    items = "".join(
-        f'<li><a href="{html.escape(p["url"])}" target="_blank" rel="noopener">{html.escape(page_title(p, p["url"]))}</a></li>'
-        for p in sorted(pages, key=lambda p: clean_title(p["title"], org, ds_name, name, site_titles=site_titles).lower())
-    )
-    return f'<ul class="page-list">{items}</ul>'
+    def group_key(p: dict) -> str:
+        head = clean_title(p["title"], org, ds_name, name, site_titles=site_titles).lower()
+        match = classify_title(head)
+        if not match:
+            return _OTHER_GROUP_KEY
+        canonical, route_key = match
+        negative_patterns = NEGATIVE_TITLE_PATTERNS.get(canonical)
+        if negative_patterns and any(re.search(pat, p["title"], re.IGNORECASE) for pat in negative_patterns):
+            return _OTHER_GROUP_KEY
+        return route_key
+
+    sorted_pages = sorted(pages, key=lambda p: clean_title(p["title"], org, ds_name, name, site_titles=site_titles).lower())
+    groups: dict[str, list[dict]] = {}
+    for p in sorted_pages:
+        groups.setdefault(group_key(p), []).append(p)
+
+    def group_html(key: str, group_pages: list[dict]) -> str:
+        label = _PAGE_GROUP_LABELS.get(key, _OTHER_GROUP_LABEL)
+        items = "".join(
+            f'<li><a href="{html.escape(p["url"])}" target="_blank" rel="noopener">{html.escape(page_title(p, p["url"]))}</a></li>'
+            for p in group_pages
+        )
+        return (
+            f'<details class="resource-group" open>'
+            f'<summary><span class="resource-group-label">{html.escape(label)}</span>'
+            f'<span class="resource-group-count">{len(group_pages)}</span></summary>'
+            f'<ul class="page-list">{items}</ul>'
+            f"</details>"
+        )
+
+    # Taxonomy order first (Components, Patterns, Foundations — matching
+    # /components//patterns//foundations' own order), "Other" always last
+    # regardless of how many pages land there, since it's a catch-all rather
+    # than a real category a visitor is browsing for.
+    ordered_keys = [route["key"] for route in TAXONOMY_ROUTES if route["key"] in groups]
+    if _OTHER_GROUP_KEY in groups:
+        ordered_keys.append(_OTHER_GROUP_KEY)
+
+    return "".join(group_html(key, groups[key]) for key in ordered_keys)
 
 
 def render_system_page(entry: dict, pages_index: dict) -> str:
