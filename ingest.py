@@ -585,6 +585,28 @@ def normalize_url(url: str) -> str:
         if not path:
             path = "/"
 
+    # Storybook's iframe.html?id=<story-id>&viewMode=docs is the one
+    # query-string case this codebase actually needs to preserve —
+    # confirmed live: every one of _storybook_iframe_urls()'s generated
+    # seed URLs (one per component, distinguished ONLY by their ?id=
+    # value) collapsed to the exact same bare iframe.html the instant
+    # crawl_spa()'s `[normalize_url(u) for u in start_urls]` ran, so all 94
+    # of AutoGuru — Overdrive's seeded stories deduped down to a single
+    # visited URL and only one ever rendered. `id` is the content-identity
+    # signal; `viewMode` actually changes WHICH content renders at a given
+    # id (docs page with prose/args vs. the raw isolated component), so it
+    # has to survive too or every seed would silently render Storybook's
+    # default view instead of the docs page _storybook_iframe_urls()
+    # deliberately asked for. Every other query param Storybook's
+    # iframe.html accepts (args, globals, ...) is genuine toolbar/display
+    # state, not content identity — those still follow the general
+    # drop-everything-unless-allowlisted rule below.
+    if path.endswith("/iframe.html") and parsed.query:
+        query_params = dict(parse_qsl(parsed.query, keep_blank_values=True))
+        if query_params.get("id"):
+            kept = {k: v for k, v in query_params.items() if k in ("id", "viewMode")}
+            return urlunparse((scheme, netloc, path, "", urlencode(kept), ""))
+
     if parsed.query and URL_QUERY_ALLOWLIST:
         kept = [
             (k, v) for k, v in parse_qsl(parsed.query, keep_blank_values=True)
