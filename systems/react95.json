@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "react95",
   "organization": null,
   "design_system": "React95",
@@ -9,11 +9,11 @@
     "https://react95.github.io/React95/"
   ],
   "detail_url": "/systems/react95",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 27,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T22:19:31+00:00",
+  "last_checked": "2026-09-25T05:25:03+00:00",
   "last_modified": "Wed, 02 Sep 2026 20:02:51 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -24,21 +24,131 @@
       "https://storybook.js.org/docs/builders/vite",
       "https://storybook.js.org/docs/writing-stories/decorators",
       "https://storybook.js.org/docs/builders/webpack",
-      "https://storybook.js.org/docs/configure/environment-variables"
+      "https://storybook.js.org/docs/configure/environment-variables",
+      "https://storybook.js.org/docs/essentials/controls",
+      "https://react95.github.io/React95/"
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": {
     "license": "NOASSERTION",
-    "stars": 3824,
+    "stars": 3826,
     "last_pushed": "2026-09-02T20:02:28Z"
   },
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://react95.github.io/React95/iframe.html?id=alert--docs&viewMode=docs",
+      "title": "alert--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=all--all&viewMode=docs",
+      "title": "all--all"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=avatar--docs&viewMode=docs",
+      "title": "avatar--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=button--docs&viewMode=docs",
+      "title": "button--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=checkbox--docs&viewMode=docs",
+      "title": "checkbox--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=contract--theme&viewMode=docs",
+      "title": "contract--theme"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=cursor--simple&viewMode=docs",
+      "title": "cursor--simple"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=dropdown--docs&viewMode=docs",
+      "title": "dropdown--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=fieldset--docs&viewMode=docs",
+      "title": "fieldset--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=frame--docs&viewMode=docs",
+      "title": "frame--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=globalstyle--docs&viewMode=docs",
+      "title": "globalstyle--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=hooks-usemodal--docs&viewMode=docs",
+      "title": "hooks-usemodal--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=icon--all&viewMode=docs",
+      "title": "icon--all"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=input--docs&viewMode=docs",
+      "title": "input--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=list--docs&viewMode=docs",
+      "title": "list--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=modal--docs&viewMode=docs",
+      "title": "modal--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=progressbar--docs&viewMode=docs",
+      "title": "progressbar--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=radiobutton--docs&viewMode=docs",
+      "title": "radiobutton--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=range--docs&viewMode=docs",
+      "title": "range--docs"
+    },
+    {
       "url": "https://react95.github.io/React95/iframe.html",
       "title": "Storybook"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=tabs-tab--docs&viewMode=docs",
+      "title": "tabs-tab--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=taskbar--docs&viewMode=docs",
+      "title": "taskbar--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=textarea--docs&viewMode=docs",
+      "title": "textarea--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=titlebar--docs&viewMode=docs",
+      "title": "titlebar--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=tooltip--docs&viewMode=docs",
+      "title": "tooltip--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=tree--docs&viewMode=docs",
+      "title": "tree--docs"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=video--docs&viewMode=docs",
+      "title": "video--docs"
     }
   ]
 }

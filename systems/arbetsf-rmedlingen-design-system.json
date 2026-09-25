@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "arbetsf-rmedlingen-design-system",
   "organization": "Arbetsförmedlingen",
   "design_system": "Design system",
@@ -10,10 +10,10 @@
   ],
   "detail_url": "/systems/arbetsf-rmedlingen-design-system",
   "pages_indexed": 155,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T11:58:57+00:00",
+  "last_checked": "2026-09-25T02:26:13+00:00",
   "last_modified": "Thu, 24 Sep 2026 09:56:58 GMT",
   "sitemap_last_modified": "2026-06-05",
   "resources": {
@@ -362,11 +362,11 @@
       "title": "Listor - Arbetsförmedlingen Designsystem"
     },
     {
-      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-logo/oversikt",
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/logotyp",
       "title": "Logotyp - Arbetsförmedlingen Designsystem"
     },
     {
-      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/logotyp",
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-logo/oversikt",
       "title": "Logotyp - Arbetsförmedlingen Designsystem"
     },
     {
@@ -514,10 +514,6 @@
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
-      "url": "https://designsystem.arbetsformedlingen.se/designmonster/komponenter/digi-tools-feedback/oversikt",
-      "title": "Startsida - Arbetsförmedlingen Designsystem"
-    },
-    {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/www.arbetsformedlingen.se",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
@@ -530,15 +526,19 @@
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/leverantorstjanster",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/komponenter/digi-tools-feedback/oversikt",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/insatser-och-program",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/Frivillig länk",
-      "title": "Startsida - Arbetsförmedlingen Designsystem"
-    },
-    {
-      "url": "https://designsystem.arbetsformedlingen.se/leverantorstjanster",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {

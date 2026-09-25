@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "nasa-horizon-design-system-hds",
   "organization": "NASA",
   "design_system": "Horizon Design System (HDS)",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T21:44:56+00:00",
+  "last_checked": "2026-09-25T04:45:46+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -40,29 +40,29 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/solutions/executive-insights",
-      "https://github.com/features/code-quality",
-      "https://github.com/features/codespaces",
-      "https://github.com/resources/whitepapers",
-      "https://github.com/topics/design-system",
-      "https://github.com/features/issues",
       "https://github.com/solutions/use-case",
-      "https://github.com/resources/articles",
       "https://github.com/search/advanced",
-      "https://github.com/features/copilot",
-      "https://github.com/features/code-review",
-      "https://github.com/enterprise/startups",
-      "https://github.com/apps/dependabot",
-      "https://github.com/apps/github-actions",
-      "https://github.com/security/advanced-security",
-      "https://github.com/open-source/sponsors",
-      "https://github.com/resources/events",
       "https://github.com/enterprise/premium-support",
-      "https://github.com/features/actions",
-      "https://github.com/contact/report-content",
+      "https://github.com/features/code-quality",
+      "https://github.com/resources/events",
+      "https://github.com/open-source/sponsors",
+      "https://github.com/resources/articles",
+      "https://github.com/topics/design-system",
+      "https://github.com/enterprise/startups",
       "https://github.com/topics/uswds",
+      "https://github.com/solutions/executive-insights",
+      "https://github.com/apps/github-actions",
+      "https://github.com/contact/report-content",
+      "https://github.com/uswds/uswds",
       "https://github.com/solutions/industry",
-      "https://github.com/uswds/uswds"
+      "https://github.com/features/issues",
+      "https://github.com/resources/whitepapers",
+      "https://github.com/features/codespaces",
+      "https://github.com/features/actions",
+      "https://github.com/security/advanced-security",
+      "https://github.com/apps/dependabot",
+      "https://github.com/features/code-review",
+      "https://github.com/features/copilot"
     ]
   },
   "content_signals": {
@@ -76,7 +76,7 @@
   "github_meta": {
     "license": "NOASSERTION",
     "stars": 16,
-    "last_pushed": "2026-09-19T14:44:40Z"
+    "last_pushed": "2026-09-20T13:57:57Z"
   },
   "npm_meta": {
     "latest_version": "0.10.0",

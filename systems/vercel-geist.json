@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "vercel-geist",
   "organization": "Vercel",
   "design_system": "Geist",
@@ -13,9 +13,9 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T23:00:42+00:00",
+  "last_checked": "2026-09-25T06:05:18+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-24T22:10:56.625Z",
+  "sitemap_last_modified": "2026-09-25T05:11:42.457Z",
   "resources": {
     "agent_instructions": [
       "https://vercel.com/llms.txt"

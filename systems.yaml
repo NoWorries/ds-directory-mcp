@@ -91,7 +91,7 @@
   last_modified: Wed, 28 Feb 2024 21:04:55 GMT
   sitemap_url: https://spectrum.adobe.com/sitemap.xml
   sitemap_last_modified: '2024-02-28T20:57:26.301Z'
-  last_checked: '2026-09-24T04:15:21+00:00'
+  last_checked: '2026-09-25T01:59:46+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -100,9 +100,9 @@
   has_localized_docs: false
   render_mode: spa
   github_meta:
-    license: OFL-1.1
-    stars: 20452
-    last_pushed: '2025-10-28T23:34:52Z'
+    license: Apache-2.0
+    stars: 0
+    last_pushed: '2026-03-01T19:52:13Z'
 - organization: Alaska Airlines
   design_system: Auro
   start_urls:
@@ -130,15 +130,15 @@
   design_system: Altinn Design System
   start_urls:
   - https://docs.altinn.studio/
-  pages_indexed: 415
+  pages_indexed: 562
   hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources:
     github:
-    - https://github.com/tus/tus-java-client
-    - https://github.com/tus/tus-js-client
+    - https://github.com/felleslosninger/efm-mocks
+    - https://github.com/ks-no/fiks-arkiv-specification
   content_signals:
     frameworks:
     - React
@@ -147,7 +147,7 @@
   last_modified: Wed, 23 Sep 2026 12:53:30 GMT
   sitemap_url: https://docs.altinn.studio/sitemap.xml
   sitemap_last_modified: '2026-09-23T14:49:18+02:00'
-  last_checked: '2026-09-24T04:18:28+00:00'
+  last_checked: '2026-09-25T02:03:02+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -168,8 +168,11 @@
     - https://github.com/Altinn/altinn-apiclient-maskinporten
     - https://github.com/Altinn/altinn-notifications
     - https://github.com/Altinn/altinn-broker
+    - https://github.com/Altinn/codelists-lib-dotnet
+    - https://github.com/Altinn/altinn2-convert
     figma:
     - https://figma.com/community/file/1344307804742953785/altinn-studio-komponenter
+    - https://figma.com/proto/wnBveAG2ikUspFsQwM3GNE/ADS---Prototyping-for-eksterne
     markdown_docs:
     - https://github.com/Altinn/app-localtest/blob/master/README.md
     - https://github.com/Altinn/altinn-studio/blob/main/CONTRIBUTING.md
@@ -180,9 +183,9 @@
     npm:
     - https://npmjs.com/package/altinn-designsystem
   github_meta:
-    license: null
-    stars: 6
-    last_pushed: '2026-09-23T11:37:25Z'
+    license: BSD-3-Clause
+    stars: 21
+    last_pushed: '2026-09-24T11:28:34Z'
   npm_meta:
     latest_version: 4.2.0
     last_published: '2022-10-25T12:59:02.085Z'
@@ -257,7 +260,7 @@
   content_signals: {}
   etag: W/"6036427a-46d"
   last_modified: Wed, 24 Feb 2021 12:11:38 GMT
-  last_checked: '2026-09-24T04:17:47+00:00'
+  last_checked: '2026-09-25T02:01:59+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -265,10 +268,10 @@
   design_system: Human Interface Guidelines
   start_urls:
   - https://developer.apple.com/design/human-interface-guidelines/
-  pages_indexed: 173
-  hit_max_pages: false
-  crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 1
+  pages_indexed: 176
+  hit_max_pages: true
+  crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources:
     github:
@@ -277,19 +280,20 @@
     dark_mode: true
     frameworks:
     - SwiftUI
-  etag: '"44ff-65c229b1bbf22"'
-  last_modified: Wed, 23 Sep 2026 08:52:41 GMT
-  last_checked: '2026-09-24T11:58:29+00:00'
+  etag: '"44ff-65c36cd91fbb5"'
+  last_modified: Thu, 24 Sep 2026 08:58:27 GMT
+  last_checked: '2026-09-25T02:28:16+00:00'
   likely_unmaintained: false
   content_signal_sources:
-    dark_mode: https://developer.apple.com/design/human-interface-guidelines/designing-for-ios
+    dark_mode: https://developer.apple.com/design/human-interface-guidelines/foundations
     frameworks:
-      SwiftUI: https://developer.apple.com/design/human-interface-guidelines/typography
+      SwiftUI: https://developer.apple.com/design/human-interface-guidelines/color
   has_localized_docs: false
   render_mode: spa
   resources:
     github:
     - https://github.com/Apple/UnityPlugins
+    - https://github.com/apple/unityplugins
     icons:
     - https://developer.apple.com/design/human-interface-guidelines/icons
   github_meta:
@@ -301,9 +305,9 @@
   start_urls:
   - https://designsystem.arbetsformedlingen.se/
   pages_indexed: 155
-  hit_max_pages: false
-  crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 1
+  hit_max_pages: true
+  crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals:
@@ -315,7 +319,7 @@
   last_modified: Thu, 24 Sep 2026 09:56:58 GMT
   sitemap_url: https://designsystem.arbetsformedlingen.se/sitemap.xml
   sitemap_last_modified: '2026-06-05'
-  last_checked: '2026-09-24T11:58:57+00:00'
+  last_checked: '2026-09-25T02:26:13+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -570,18 +574,34 @@
   design_system: Overdrive
   start_urls:
   - https://overdrive.autoguru.io/
-  pages_indexed: 1
+  pages_indexed: 97
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
-  content_signals: {}
-  etag: W/"6ab4a14f-4781"
-  last_modified: Thu, 24 Sep 2026 04:04:31 GMT
-  last_checked: '2026-09-24T04:46:06+00:00'
+  unverified_resources:
+    github:
+    - https://github.com/Microsoft/typescript
+    - https://github.com/storybookjs/mcp
+    - https://github.com/vanilla-extract-css/vanilla-extract
+    - https://github.com/grrowl/react-keyed-flatten-children
+    - https://github.com/storybooks/storybook
+    - https://github.com/seek-oss/treat
+    - https://github.com/facebook/react
+  content_signals:
+    frameworks:
+    - React
+    - Vue
+    - Angular
+  etag: W/"6ab4b3fd-4781"
+  last_modified: Thu, 24 Sep 2026 05:24:13 GMT
+  last_checked: '2026-09-25T02:44:53+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    frameworks:
+      React: https://overdrive.autoguru.io/iframe.html?id=overdrive--docs&viewMode=docs
+      Vue: https://overdrive.autoguru.io/iframe.html?id=foundation-icon-set--icon-set&viewMode=docs
+      Angular: https://overdrive.autoguru.io/iframe.html?id=foundation-icon-set--icon-set&viewMode=docs
   has_localized_docs: false
   resources:
     storybook:
@@ -589,7 +609,18 @@
     - https://storybook.js.org/docs/configure/environment-variables
     - https://storybook.js.org/docs/builders/vite
     - https://storybook.js.org/docs/writing-stories/decorators
+    - https://chromatic-ui.notion.site/Storybook-test-syntax-in-CSF-2566e816203480cb95ddc674ddfbf5d3
+    - https://github.com/storybookjs/mcp
+    - https://github.com/storybooks/storybook
+    - https://chromatic.com/
+    - https://overdrive.autoguru.io/
+    npm:
+    - https://npmjs.com/package/@autoguru/overdrive
   render_mode: spa
+  npm_meta:
+    latest_version: 6.0.1
+    last_published: '2026-09-24T05:30:19.797Z'
+    weekly_downloads: 918
 - organization: Automattic
   design_system: Wordpress.com design handbook
   start_urls:
@@ -702,7 +733,7 @@
   etag: W/"9da8e7fa3831d22f7d4b1ce1252b4131"
   last_modified: Wed, 23 Sep 2026 13:59:45 GMT
   sitemap_url: https://designsystem.backbase.com/sitemap.xml
-  last_checked: '2026-09-24T04:47:30+00:00'
+  last_checked: '2026-09-25T02:34:22+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -859,7 +890,7 @@
     stars: 36
     last_pushed: '2026-08-04T10:25:55Z'
   last_modified: Tue, 04 Aug 2026 10:26:24 GMT
-  last_checked: '2026-09-24T04:48:27+00:00'
+  last_checked: '2026-09-25T02:36:53+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -871,11 +902,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 2
+  consecutive_crawl_failures: 3
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-24T04:49:54+00:00'
+  last_checked: '2026-09-25T02:40:03+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -899,22 +930,22 @@
   design_system: Design
   start_urls:
   - https://design.brainly.com/
-  pages_indexed: 299
-  hit_max_pages: false
-  crawl_error: crawl returned 0 pages
+  pages_indexed: 321
+  hit_max_pages: true
+  crawl_error: ''
   likely_spa: false
   unverified_resources: {}
   content_signals:
     dark_mode: true
     frameworks:
     - Web Components
-  etag: W/"d3c22099eb3e1492b8a363127c33fe58"
+  etag: W/"cac36fb055ee32a875bbc7c339c0efbd"
   sitemap_url: https://design.brainly.com/sitemap.xml
-  last_checked: '2026-09-24T11:58:36+00:00'
+  last_checked: '2026-09-25T03:04:41+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 1
+  consecutive_crawl_failures: 0
   content_signal_sources:
-    dark_mode: https://design.brainly.com/8adfd5f36/p/11dfa2-mockups--devices
+    dark_mode: https://design.brainly.com/8adfd5f36/v/0/p/86f82d-product-
     frameworks:
       Web Components: https://design.brainly.com/8adfd5f36/p/123f8a-links
   has_localized_docs: false
@@ -969,7 +1000,7 @@
   etag: W/"6a877905-3a97"
   last_modified: Thu, 20 Aug 2026 22:00:37 GMT
   sitemap_url: https://bold.bridge.ufsc.br/sitemap.xml
-  last_checked: '2026-09-24T04:53:22+00:00'
+  last_checked: '2026-09-25T02:48:34+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://bold.bridge.ufsc.br/
@@ -1046,28 +1077,28 @@
   design_system: Arc
   start_urls:
   - https://arc.bt.com/
-  pages_indexed: 299
-  hit_max_pages: false
-  crawl_error: crawl returned 0 pages
-  consecutive_crawl_failures: 1
+  pages_indexed: 447
+  hit_max_pages: true
+  crawl_error: ''
+  consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals:
     exemplars: true
     multi_brand: true
-    accessibility_conformance: WCAG 2.1 AA
+    accessibility_conformance: WCAG 2.2 AA
     frameworks:
     - React
-  etag: W/"94e28bbd2f5fbb31a1b8cfa4bf6abc45"
+  etag: W/"43f8f98da8f34524740ec3f30009ebe4"
   sitemap_url: https://arc.bt.com/sitemap.xml
-  last_checked: '2026-09-24T12:00:06+00:00'
+  last_checked: '2026-09-25T03:18:14+00:00'
   likely_unmaintained: false
   content_signal_sources:
-    exemplars: https://arc.bt.com/880cad2bb/p/923a75-how-we-write-content
+    exemplars: https://arc.bt.com/880cad2bb/v/56368/p/4499df-screen-reader-interaction
     multi_brand: https://arc.bt.com/880cad2bb/p/795a33-arc-roadmap/b/12d767
-    accessibility_conformance: https://arc.bt.com/880cad2bb/p/012343-previous-releases/b/71ef31
+    accessibility_conformance: https://arc.bt.com/880cad2bb/v/56368/p/19f86d-content-resizing
     frameworks:
-      React: https://arc.bt.com/880cad2bb/p/012343-previous-releases/b/71ef31
+      React: https://arc.bt.com/880cad2bb/v/56368/p/99de7f-data-attributes
   has_localized_docs: false
   render_mode: spa
   resources:
@@ -1108,10 +1139,27 @@
     - https://arc.bt.com/880cad2bb/v/59102/p/19cf49-storybook
     - https://arc.bt.com/880cad2bb/v/48174/p/19cf49-storybook
     - https://arc.bt.com/880cad2bb/v/48790/p/19cf49-storybook
+    - https://ui.digital-ent-int.bt.com/v11.17.0/storybook
+    - https://arc.bt.com/880cad2bb/v/62306/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/0/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/62313/p/19cf49-storybook
+    - https://ui.digital-ent-int.bt.com/v11.23.0/storybook
+    - https://arc.bt.com/880cad2bb/v/62307/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/62309/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/62305/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/43707/p/880cad2bb/v/43707/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/62308/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/63202/p/19cf49-storybook
+    - https://arc.bt.com/880cad2bb/v/62312/p/19cf49-storybook
     figma:
     - https://figma.com/file/DuPm4GaIJgopgRx6FIBQfE/Arc-UI-System-Library
     - https://figma.com/design/DuPm4GaIJgopgRx6FIBQfE/Arc-UI-System-Library
     - https://figma.com/file/vy34Hy9QohmbyuZa6zD9a9/Arc-Foundations
+    - https://figma.com/proto/f0lV2IlKdIw0cbZZYEPK3m/BT-Enterprise-Digital-Design-Language-2021%2B
+    - https://figma.com/file/f0lV2IlKdIw0cbZZYEPK3m/BT-Enterprise-Digital-Design-Language-2021
+    - https://figma.com/file/DUlvmBiGqQLWrTpy3qOynj/--Card-Impact
+    - https://figma.com/design/Gqrb1teqcpxNsKoYKJYW2O/--Card-Information
+    - https://figma.com/file/HQdiWipzwJl5mfaEyRJlU7/Action%2FScrollToTop
 - organization: Buildit
   design_system: Gravity
   start_urls:
@@ -1464,7 +1512,7 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-09-24T12:28:04+00:00'
+  last_checked: '2026-09-25T03:26:13+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -1478,7 +1526,7 @@
   design_system: Decentraland UI
   start_urls:
   - https://ui.decentraland.org/
-  pages_indexed: 1
+  pages_indexed: 80
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -1489,13 +1537,16 @@
     - React
   etag: W/"6a8c4f17-2f88"
   last_modified: Mon, 24 Aug 2026 14:03:03 GMT
-  last_checked: '2026-09-24T05:20:56+00:00'
+  last_checked: '2026-09-25T03:35:26+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
       React: https://ui.decentraland.org/
   has_localized_docs: false
   render_mode: spa
+  resources:
+    storybook:
+    - https://ui.decentraland.org/
 - organization: Design Language
   design_system: E-Trade
   start_urls:
@@ -1508,7 +1559,7 @@
   unverified_resources: {}
   content_signals: {}
   etag: W/"7bb-XeVDM9kqYDnzprlC1ZyCA6aFy0Q"
-  last_checked: '2026-09-24T05:23:30+00:00'
+  last_checked: '2026-09-25T03:28:33+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -1580,7 +1631,7 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: true
   unverified_resources:
     github:
@@ -1602,8 +1653,8 @@
       Web Components: https://barista.dynatrace.com/
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-24T05:28:19+00:00'
-  etag: W/"82a521db809ba14b5510ce0bf3f91abc"
+  last_checked: '2026-09-25T03:33:41+00:00'
+  etag: W/"ca71031113e98e8020adb7b7ff0b35eb"
   sitemap_url: https://barista.dynatrace.com/sitemap.xml
   resources:
     github:
@@ -1657,11 +1708,11 @@
   github_meta:
     license: NOASSERTION
     stars: 51
-    last_pushed: '2026-09-24T02:57:58Z'
+    last_pushed: '2026-09-25T01:16:15Z'
   etag: W/"680fc46d-10c"
   last_modified: Mon, 28 Apr 2025 18:09:49 GMT
   sitemap_url: https://ebay.github.io/sitemap.xml
-  last_checked: '2026-09-24T05:31:07+00:00'
+  last_checked: '2026-09-25T03:35:49+00:00'
   likely_unmaintained: false
   content_signal_sources:
     accessibility_conformance: https://ebay.github.io/skin
@@ -1716,7 +1767,7 @@
     tokens_format: Figma Variables
   etag: W/"1785944241673"
   sitemap_url: https://nova.eliagroup.io/sitemap.xml
-  last_checked: '2026-09-24T20:40:20+00:00'
+  last_checked: '2026-09-25T03:54:15+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -1964,7 +2015,7 @@
   etag: W/"9da8e7fa3831d22f7d4b1ce1252b4131"
   last_modified: Wed, 23 Sep 2026 13:59:45 GMT
   sitemap_url: https://design.firefox.com/sitemap.xml
-  last_checked: '2026-09-24T20:26:43+00:00'
+  last_checked: '2026-09-25T03:40:14+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -2136,19 +2187,19 @@
     governance_model: true
     exemplars: true
     frameworks:
-    - Vue
     - Angular
-  etag: W/"b128751e172f8f75836b844cad19af54"
+    - Vue
+  etag: W/"583c3039a7db2fd151c8f4400fa81bcc"
   sitemap_url: https://design.foyer.lu/sitemap.xml
-  last_checked: '2026-09-24T20:47:20+00:00'
+  last_checked: '2026-09-25T04:00:13+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   content_signal_sources:
-    governance_model: https://design.foyer.lu/4280666a7/n/80d2f7
+    governance_model: https://design.foyer.lu/4280666a7/n/9498b0
     exemplars: https://design.foyer.lu/4280666a7/p/36850f-formatage-des-donnees
     frameworks:
-      Vue: https://design.foyer.lu/4280666a7/n/80d2f7
       Angular: https://design.foyer.lu/4280666a7/p/638c92-pour-les-developpeurs
+      Vue: https://design.foyer.lu/4280666a7/n/80d2f7
   has_localized_docs: false
   render_mode: spa
 - organization: FutureLearn
@@ -2162,13 +2213,13 @@
     - https://storybook.futurelearn.com/iframe.html?args=&id=welcome--page
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   etag: W/"6ab520d9-900"
   last_modified: Thu, 24 Sep 2026 13:08:41 GMT
-  last_checked: '2026-09-24T20:42:42+00:00'
+  last_checked: '2026-09-25T03:56:23+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -2449,7 +2500,7 @@
   etag: W/"9fe3994f3822d53a0ff79f19dcb81afa"
   last_modified: Tue, 01 Jan 1980 00:00:01 GMT
   sitemap_url: https://material.io/sitemap.xml
-  last_checked: '2026-09-24T20:45:23+00:00'
+  last_checked: '2026-09-25T03:58:57+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://material.io/guidelines
@@ -2615,7 +2666,7 @@
   likely_spa: false
   etag: W/"6aa7fa45-3a05"
   last_modified: Mon, 14 Sep 2026 13:44:37 GMT
-  last_checked: '2026-09-24T20:48:14+00:00'
+  last_checked: '2026-09-25T04:01:38+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -2923,7 +2974,7 @@
   design_system: Uniform
   start_urls:
   - https://uniform.hudl.com/
-  pages_indexed: 249
+  pages_indexed: 250
   hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
@@ -2931,6 +2982,8 @@
   unverified_resources:
     github:
     - https://github.com/ReactTooltip/react-tooltip
+    - https://github.com/YozhikM/stylelint-a11y
+    - https://github.com/nickcolley/jest-axe
     npm:
     - https://npmjs.com/package/stylelint-a11y
   content_signals:
@@ -2941,12 +2994,12 @@
   etag: W/"6659ce48-5ae7a"
   last_modified: Fri, 31 May 2024 13:19:04 GMT
   sitemap_url: https://uniform.hudl.com/sitemap.xml
-  last_checked: '2026-09-24T21:10:26+00:00'
+  last_checked: '2026-09-25T04:22:18+00:00'
   likely_unmaintained: false
   content_signal_sources:
     validation_loop: https://uniform.hudl.com/components/action-list/design
     frameworks:
-      React: https://uniform.hudl.com/get-started/code
+      React: https://uniform.hudl.com/release-notes
     accessibility_conformance: https://uniform.hudl.com/guidelines/accessibility/checklists/code
   has_localized_docs: false
   render_mode: spa
@@ -2996,6 +3049,7 @@
     - https://uniform.hudl.com/components/icons/features-navigation/code
     - https://uniform.hudl.com/components/icons/video-features/code
     - https://uniform.hudl.com/components/icons/permissions/code
+    - https://uniform.hudl.com/components/icon/code
     github:
     - https://github.com/hudl/rn-uniform
     markdown_docs:
@@ -3120,12 +3174,14 @@
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
-  content_signals: {}
+  content_signals:
+    dark_mode: true
   etag: '"a609-656091e6ad7f7-gzip"'
   last_modified: Tue, 07 Jul 2026 17:57:05 GMT
-  last_checked: '2026-09-24T21:24:56+00:00'
+  last_checked: '2026-09-25T04:15:35+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    dark_mode: https://rivet.iu.edu/components/dropdown
   has_localized_docs: false
   render_mode: spa
   sitemap_url: https://rivet.iu.edu/sitemap.xml
@@ -3160,7 +3216,7 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-09-24T21:13:14+00:00'
+  last_checked: '2026-09-25T04:18:53+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -3342,7 +3398,7 @@
     - https://github.com/JetBrains/ring-ui
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
@@ -3352,7 +3408,7 @@
     last_pushed: '2026-09-14T11:34:41Z'
   etag: '"6ab12246-ac"'
   last_modified: Mon, 21 Sep 2026 12:25:42 GMT
-  last_checked: '2026-09-24T21:15:01+00:00'
+  last_checked: '2026-09-25T04:21:23+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -3371,7 +3427,7 @@
     - React
     - Web Components
   etag: '"d1f333773eeba747a4a4e34b2b676810-ssl-df"'
-  last_checked: '2026-09-24T21:17:37+00:00'
+  last_checked: '2026-09-25T04:23:40+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -3680,7 +3736,7 @@
     - Web Components
   etag: W/"9f0c69a8ffd437b5d071d45a25eb247a"
   last_modified: Wed, 26 Feb 2025 09:02:07 GMT
-  last_checked: '2026-09-24T21:37:12+00:00'
+  last_checked: '2026-09-25T04:42:51+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://designsystem.line.me/LDSM/foundation/color/text-legibility-ex-en
@@ -4006,7 +4062,7 @@
   etag: W/"602d490c-aea"
   last_modified: Wed, 17 Feb 2021 16:49:16 GMT
   sitemap_url: https://marvelapp.com/sitemap.xml
-  last_checked: '2026-09-24T21:30:05+00:00'
+  last_checked: '2026-09-25T04:29:32+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://marvelapp.com/styleguide/design/color-scheme
@@ -4107,8 +4163,8 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_modified: Wed, 05 Aug 2026 04:05:19 GMT
-  last_checked: '2026-09-24T21:33:07+00:00'
+  last_modified: Wed, 05 Aug 2026 03:37:54 GMT
+  last_checked: '2026-09-25T04:32:06+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -4161,9 +4217,9 @@
     frameworks:
     - React
     - Web Components
-  last_modified: Thu, 24 Sep 2026 19:52:01 GMT
+  last_modified: Fri, 25 Sep 2026 03:51:02 GMT
   sitemap_url: https://developer.microsoft.com/_devcom/sitemap.xml
-  last_checked: '2026-09-24T21:35:52+00:00'
+  last_checked: '2026-09-25T04:34:27+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -4178,11 +4234,11 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
-  last_checked: '2026-09-24T21:38:13+00:00'
+  last_checked: '2026-09-25T04:36:33+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   thin_page_ratio: 1.0
@@ -4230,8 +4286,8 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: '"ydh6swac4l6qpk"'
-  last_checked: '2026-09-24T21:39:16+00:00'
+  etag: '"ggzb9m6uuu6qpk"'
+  last_checked: '2026-09-25T04:38:47+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -4254,7 +4310,7 @@
   crawl_error: ''
   likely_spa: false
   last_modified: Mon, 22 Jun 2026 13:11:25 GMT
-  last_checked: '2026-09-24T21:41:45+00:00'
+  last_checked: '2026-09-25T04:42:13+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -4376,29 +4432,29 @@
   likely_spa: false
   unverified_resources:
     github:
-    - https://github.com/solutions/executive-insights
-    - https://github.com/features/code-quality
-    - https://github.com/features/codespaces
-    - https://github.com/resources/whitepapers
-    - https://github.com/topics/design-system
-    - https://github.com/features/issues
     - https://github.com/solutions/use-case
-    - https://github.com/resources/articles
     - https://github.com/search/advanced
-    - https://github.com/features/copilot
-    - https://github.com/features/code-review
-    - https://github.com/enterprise/startups
-    - https://github.com/apps/dependabot
-    - https://github.com/apps/github-actions
-    - https://github.com/security/advanced-security
-    - https://github.com/open-source/sponsors
-    - https://github.com/resources/events
     - https://github.com/enterprise/premium-support
-    - https://github.com/features/actions
-    - https://github.com/contact/report-content
+    - https://github.com/features/code-quality
+    - https://github.com/resources/events
+    - https://github.com/open-source/sponsors
+    - https://github.com/resources/articles
+    - https://github.com/topics/design-system
+    - https://github.com/enterprise/startups
     - https://github.com/topics/uswds
-    - https://github.com/solutions/industry
+    - https://github.com/solutions/executive-insights
+    - https://github.com/apps/github-actions
+    - https://github.com/contact/report-content
     - https://github.com/uswds/uswds
+    - https://github.com/solutions/industry
+    - https://github.com/features/issues
+    - https://github.com/resources/whitepapers
+    - https://github.com/features/codespaces
+    - https://github.com/features/actions
+    - https://github.com/security/advanced-security
+    - https://github.com/apps/dependabot
+    - https://github.com/features/code-review
+    - https://github.com/features/copilot
   content_signals:
     frameworks:
     - React
@@ -4413,8 +4469,8 @@
     validation_loop: https://github.com/nasa/hds-core
   thin_page_ratio: 0.67
   has_localized_docs: false
-  last_checked: '2026-09-24T21:44:56+00:00'
-  etag: W/"54f9a9e640f7011d7f496e131784f57d"
+  last_checked: '2026-09-25T04:45:46+00:00'
+  etag: W/"c3423b637fb614b338bb706d25e1c447"
   resources:
     github:
     - https://github.com/topics/nasa
@@ -4434,7 +4490,7 @@
   github_meta:
     license: NOASSERTION
     stars: 16
-    last_pushed: '2026-09-19T14:44:40Z'
+    last_pushed: '2026-09-20T13:57:57Z'
   npm_meta:
     latest_version: 0.10.0
     last_published: '2026-08-19T21:02:19.508Z'
@@ -4788,22 +4844,35 @@
   design_system: Tractie
   start_urls:
   - https://tractie.ns.nl/
-  pages_indexed: 1
-  hit_max_pages: false
+  pages_indexed: 150
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
   content_signals:
     dark_mode: true
-  etag: W/"c8ef37198a763f457e5e37264e730b23"
+    tokens_format: DTCG
+    frameworks:
+    - Web Components
+    - React
+    - Jetpack Compose
+  etag: W/"d7e95101bb3560ac469c99c75f8dd85e"
   sitemap_url: https://tractie.ns.nl/sitemap.xml
-  last_checked: '2026-09-19T21:56:54+00:00'
+  last_checked: '2026-09-25T05:10:35+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://tractie.ns.nl/
+    tokens_format: https://tractie.ns.nl/2e23992f3/p/109166
+    frameworks:
+      Web Components: https://tractie.ns.nl/2e23992f3/p/133cca-roadmap
+      React: https://tractie.ns.nl/2e23992f3/p/448477-for-web-developers/b/310a97
+      Jetpack Compose: https://tractie.ns.nl/2e23992f3/p/557fea-for-android-developers
   has_localized_docs: false
   render_mode: spa
+  resources:
+    storybook:
+    - https://tractie-storybook.ns.nl/
 - organization: Nulogy
   design_system: Nulogy Design System
   start_urls:
@@ -4890,7 +4959,7 @@
   unverified_resources: {}
   content_signals: {}
   etag: 8244fcb9cfb00a08aac8e41cc6a41b3af4ea9fc9
-  last_checked: '2026-09-24T21:50:59+00:00'
+  last_checked: '2026-09-25T04:52:02+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -4926,11 +4995,11 @@
     - React
   github_meta:
     license: Apache-2.0
-    stars: 22091
+    stars: 22092
     last_pushed: '2026-09-24T16:08:59Z'
-  etag: W/"6ab29546-d5d"
-  last_modified: Tue, 22 Sep 2026 14:48:38 GMT
-  last_checked: '2026-09-24T21:54:02+00:00'
+  etag: W/"6ab29545-d5d"
+  last_modified: Tue, 22 Sep 2026 14:48:37 GMT
+  last_checked: '2026-09-25T04:55:01+00:00'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://blueprintjs.com/docs
@@ -5028,7 +5097,7 @@
   likely_spa: false
   etag: '"a35cd8661d0f2728c9c44c61e9b484aee072903ed9bb8d571918806046e62629"'
   last_modified: Fri, 18 Sep 2026 09:02:06 GMT
-  last_checked: '2026-09-24T22:12:30+00:00'
+  last_checked: '2026-09-25T05:14:35+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -5060,7 +5129,7 @@
   content_signals: {}
   etag: W/"5ed7cd79-1f6"
   last_modified: Wed, 03 Jun 2020 16:19:05 GMT
-  last_checked: '2026-09-24T22:03:08+00:00'
+  last_checked: '2026-09-25T05:13:20+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -5086,9 +5155,9 @@
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
-  etag: W/"b1c7057d5d71d4e9f5988d8066ca105a"
+  etag: W/"2ef986ba0ac33a1ae889f21011367478"
   sitemap_url: https://design-system.pluralsight.com/sitemap.xml
-  last_checked: '2026-09-24T22:26:05+00:00'
+  last_checked: '2026-09-25T05:37:23+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -5209,9 +5278,9 @@
     license: MIT
     stars: 189
     last_pushed: '2025-01-15T11:41:06Z'
-  etag: W/"67879f81-437"
-  last_modified: Wed, 15 Jan 2025 11:44:01 GMT
-  last_checked: '2026-09-24T22:14:49+00:00'
+  etag: W/"67879f82-437"
+  last_modified: Wed, 15 Jan 2025 11:44:02 GMT
+  last_checked: '2026-09-25T05:17:09+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -5236,7 +5305,7 @@
     last_pushed: '2025-01-15T11:41:06Z'
   etag: W/"67879f81-437"
   last_modified: Wed, 15 Jan 2025 11:44:01 GMT
-  last_checked: '2026-09-24T22:17:18+00:00'
+  last_checked: '2026-09-25T05:19:28+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -5245,7 +5314,7 @@
   design_system: React95
   start_urls:
   - https://react95.github.io/React95/
-  pages_indexed: 1
+  pages_indexed: 27
   resources:
     github:
     - https://github.com/React95/React95
@@ -5254,28 +5323,34 @@
     - https://storybook.js.org/docs/writing-stories/decorators
     - https://storybook.js.org/docs/builders/webpack
     - https://storybook.js.org/docs/configure/environment-variables
+    - https://storybook.js.org/docs/essentials/controls
+    - https://react95.github.io/React95/
   hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
   unverified_resources: {}
-  content_signals: {}
+  content_signals:
+    frameworks:
+    - React
   github_meta:
     license: NOASSERTION
-    stars: 3824
+    stars: 3826
     last_pushed: '2026-09-02T20:02:28Z'
   etag: W/"6a9880eb-526c"
   last_modified: Wed, 02 Sep 2026 20:02:51 GMT
-  last_checked: '2026-09-24T22:19:31+00:00'
+  last_checked: '2026-09-25T05:25:03+00:00'
   likely_unmaintained: false
-  content_signal_sources: {}
+  content_signal_sources:
+    frameworks:
+      React: https://react95.github.io/React95/iframe.html?id=modal--docs&viewMode=docs
   has_localized_docs: false
   render_mode: spa
 - organization: Red Hat
   design_system: Patternfly Design System
   start_urls:
   - https://www.patternfly.org/
-  pages_indexed: 346
+  pages_indexed: 383
   resources:
     icons:
     - https://www.patternfly.org/components/icon
@@ -5365,17 +5440,14 @@
     last_pushed: '2026-07-01T18:35:53Z'
   etag: W/"184f2981b5f44957ced2e2a129e59417"
   last_modified: Thu, 17 Sep 2026 00:28:59 GMT
-  last_checked: '2026-09-24T22:41:29+00:00'
+  last_checked: '2026-09-25T05:42:39+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources:
     github:
-    - https://github.com/rh-uxd/ai-helpers
-    - https://github.com/nodejs/Release
+    - https://github.com/d3/d3-force
     - https://github.com/dagrejs/dagre
     - https://github.com/tgdwyer/WebCola
-    - https://github.com/d3/d3-force
-    - https://github.com/nvm-sh/nvm
     npm:
     - https://npmjs.com/package/rehype-unwrap-images
     - https://npmjs.com/package/rehype-external-links
@@ -5387,23 +5459,21 @@
     validation_loop: true
     frameworks:
     - React
-    - Web Components
   content_signal_sources:
     accessibility_conformance: https://patternfly.org/releases/release-highlights
-    dark_mode: https://patternfly.org/components/brand
+    dark_mode: https://patternfly.org/foundations-and-styles/design-tokens/develop
     codemods: https://patternfly.org/ai/ai-assisted-development/patternfly-cli
     validation_loop: https://patternfly.org/releases/release-highlights
     frameworks:
-      React: https://patternfly.org/components/charts/area-chart
-      Web Components: https://patternfly.org/get-involved/community
+      React: https://patternfly.org/foundations-and-styles/layouts/gallery
   thin_page_ratio: 0.95
   has_localized_docs: false
   sitemap_url: https://www.patternfly.org/sitemap.xml
   render_mode: spa
   npm_meta:
-    latest_version: 6.6.0
-    last_published: '2026-07-01T18:35:56.485Z'
-    weekly_downloads: 21340
+    latest_version: 8.6.1
+    last_published: '2026-08-03T14:17:39.100Z'
+    weekly_downloads: 34988
 - organization: REI
   design_system: Cedar
   start_urls:
@@ -5445,13 +5515,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"5fbbe617-48c"
   last_modified: Mon, 23 Nov 2020 16:40:55 GMT
-  last_checked: '2026-09-24T22:31:05+00:00'
+  last_checked: '2026-09-25T05:42:14+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -5636,11 +5706,11 @@
   likely_spa: false
   github_meta:
     license: Apache-2.0
-    stars: 235
-    last_pushed: '2026-09-17T12:18:13Z'
+    stars: 295
+    last_pushed: '2026-09-24T20:05:54Z'
   etag: W/"6a118d65-75ad"
   last_modified: Sat, 23 May 2026 11:20:05 GMT
-  last_checked: '2026-09-24T22:43:37+00:00'
+  last_checked: '2026-09-25T05:45:14+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -5676,7 +5746,7 @@
     last_pushed: '2026-09-23T10:26:09Z'
   etag: W/"6ab3f03e-32bd"
   last_modified: Wed, 23 Sep 2026 15:29:02 GMT
-  last_checked: '2026-09-24T22:46:25+00:00'
+  last_checked: '2026-09-25T05:47:40+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   thin_page_ratio: 0.0
@@ -6297,7 +6367,7 @@
   content_signal_sources: {}
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-24T22:53:44+00:00'
+  last_checked: '2026-09-25T05:55:11+00:00'
   etag: W/"63e3af78-306"
   last_modified: Wed, 08 Feb 2023 14:19:36 GMT
   resources:
@@ -6479,13 +6549,13 @@
   - https://brandfactory.telefonica.com/mistica/
   pages_indexed: 1
   hit_max_pages: false
-  crawl_error: ''
-  consecutive_crawl_failures: 0
+  crawl_error: rendered fetch returned no content
+  consecutive_crawl_failures: 1
   likely_spa: false
   unverified_resources: {}
   content_signals: {}
   sitemap_url: https://brandfactory.telefonica.com/sitemap.xml
-  last_checked: '2026-09-24T22:58:30+00:00'
+  last_checked: '2026-09-25T06:00:41+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -6601,15 +6671,15 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   content_signal_sources: {}
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-24T22:58:43+00:00'
-  etag: W/"cae15e403e8552a4485e00fab42ec1ef"
+  last_checked: '2026-09-25T06:02:47+00:00'
+  etag: W/"f38b7e21652fe8ace0bc86fe30017b35"
   sitemap_url: https://paste.twilio.design/sitemap.xml
   resources:
     storybook:
@@ -6849,8 +6919,8 @@
   npm_meta:
     latest_version: 1.7.2
     weekly_downloads: 1735517
-  etag: '"d59ae33de3639aeaa26f33175f6e12b7"'
-  last_checked: '2026-09-24T23:00:42+00:00'
+  etag: '"7f5ac8fa8536144ada1d1da2a8122850"'
+  last_checked: '2026-09-25T06:05:18+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources: {}
@@ -6865,7 +6935,7 @@
   thin_page_ratio: 0.0
   has_localized_docs: false
   sitemap_url: https://vercel.com/sitemap.xml
-  sitemap_last_modified: '2026-09-24T22:10:56.625Z'
+  sitemap_last_modified: '2026-09-25T05:11:42.457Z'
   render_mode: spa
 - organization: Vimeo
   design_system: Vimeo Design System
@@ -6874,13 +6944,13 @@
   pages_indexed: 0
   hit_max_pages: false
   crawl_error: rendered fetch returned no content
-  consecutive_crawl_failures: 3
+  consecutive_crawl_failures: 4
   likely_spa: true
   unverified_resources: {}
   content_signals: {}
   etag: W/"67194c30-252"
   last_modified: Wed, 23 Oct 2024 19:19:12 GMT
-  last_checked: '2026-09-24T23:02:26+00:00'
+  last_checked: '2026-09-25T06:07:23+00:00'
   likely_unmaintained: false
   content_signal_sources: {}
   has_localized_docs: false
@@ -6919,15 +6989,17 @@
     - Angular
     dark_mode: true
     tokens_format: DTCG
+    deprecation_policy: true
   etag: '"4d864f2c5234b46658df85e5701c25cf-ssl-df"'
   sitemap_url: https://clarity.design/sitemap.xml
-  last_checked: '2026-09-24T23:27:45+00:00'
+  last_checked: '2026-09-25T06:30:42+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
       Angular: https://clarity.design/
-    dark_mode: https://clarity.design/pages/update-to-v17
+    dark_mode: https://clarity.design/documentation/theme-builder
     tokens_format: https://clarity.design/pages/update-to-v16
+    deprecation_policy: https://clarity.design/pages/support-policies
   has_localized_docs: false
   render_mode: spa
   github_meta:
@@ -6965,7 +7037,7 @@
     - React
   etag: W/"694587fe-1a6"
   last_modified: Fri, 19 Dec 2025 17:14:38 GMT
-  last_checked: '2026-09-24T23:06:51+00:00'
+  last_checked: '2026-09-25T06:09:39+00:00'
   likely_unmaintained: false
   content_signal_sources:
     frameworks:
@@ -7170,7 +7242,7 @@
   likely_spa: false
   etag: W/"a36780676b4be867f33a96235d0b10ac"
   last_modified: Wed, 15 Jul 2026 14:36:51 GMT
-  last_checked: '2026-09-24T23:26:43+00:00'
+  last_checked: '2026-09-25T06:32:14+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -7538,7 +7610,7 @@
   content_signal_sources: {}
   thin_page_ratio: 1.0
   has_localized_docs: false
-  last_checked: '2026-09-24T23:28:48+00:00'
+  last_checked: '2026-09-25T06:32:56+00:00'
   etag: '"1177a2be87f95f011a654cbe51731173"'
   sitemap_url: https://tremor.so/sitemap.xml
   sitemap_last_modified: '2025-12-12T13:54:09.689Z'
@@ -7756,7 +7828,7 @@
   content_signal_sources: {}
   thin_page_ratio: 0.0
   has_localized_docs: false
-  last_checked: '2026-09-24T23:30:39+00:00'
+  last_checked: '2026-09-25T06:35:19+00:00'
   etag: '"7327e46f81916f82a2cb24b0755c24875e15fe45f21385f10ac9ee05320314c0"'
   last_modified: Sun, 21 Jun 2026 19:34:11 GMT
   render_mode: spa
@@ -7841,7 +7913,7 @@
   content_signal_sources: {}
   thin_page_ratio: -1.0
   has_localized_docs: false
-  last_checked: '2026-09-24T23:33:08+00:00'
+  last_checked: '2026-09-25T06:37:36+00:00'
   sitemap_url: https://csskitsune.com/sitemap.xml
   resources:
     agent_instructions:
@@ -7871,9 +7943,9 @@
       Svelte: https://horizonx.so/docs
   thin_page_ratio: -2.0
   has_localized_docs: false
-  last_checked: '2026-09-24T23:35:34+00:00'
+  last_checked: '2026-09-25T06:40:21+00:00'
   sitemap_url: https://horizonx.so/sitemap.xml
-  sitemap_last_modified: '2026-09-24'
+  sitemap_last_modified: '2026-09-25'
   resources:
     agent_instructions:
     - https://horizonx.so/llms.txt

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "decentraland-ui",
   "organization": null,
   "design_system": "Decentraland UI",
@@ -9,14 +9,18 @@
     "https://ui.decentraland.org/"
   ],
   "detail_url": "/systems/decentraland-ui",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 80,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T05:20:56+00:00",
+  "last_checked": "2026-09-25T03:35:26+00:00",
   "last_modified": "Mon, 24 Aug 2026 14:03:03 GMT",
   "sitemap_last_modified": null,
-  "resources": {},
+  "resources": {
+    "storybook": [
+      "https://ui.decentraland.org/"
+    ]
+  },
   "unverified_resources": {},
   "content_signals": {
     "frameworks": [
@@ -26,6 +30,322 @@
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=addressfield--basic&viewMode=docs",
+      "title": "addressfield--basic"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=arrayfilter--multiple-selectable-values&viewMode=docs",
+      "title": "arrayfilter--multiple-selectable-values"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=assetstatusfilter--status-options&viewMode=docs",
+      "title": "assetstatusfilter--status-options"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=atlas--uncontrolled&viewMode=docs",
+      "title": "atlas--uncontrolled"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=authorizationmodal--basic-with-error&viewMode=docs",
+      "title": "authorizationmodal--basic-with-error"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=avatarface--single&viewMode=docs",
+      "title": "avatarface--single"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=back--example&viewMode=docs",
+      "title": "back--example"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=backtotopbutton--primary&viewMode=docs",
+      "title": "backtotopbutton--primary"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=barchart--loading-data&viewMode=docs",
+      "title": "barchart--loading-data"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=blockie--single&viewMode=docs",
+      "title": "blockie--single"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=box--without-header&viewMode=docs",
+      "title": "box--without-header"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=button--primary&viewMode=docs",
+      "title": "button--primary"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=buymanawithfiatmodal--buy-mana-with-fiat-options-with-default-values&viewMode=docs",
+      "title": "buymanawithfiatmodal--buy-mana-with-fiat-options-with-default-values"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=card--polls&viewMode=docs",
+      "title": "card--polls"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=catalogcard--wearable&viewMode=docs",
+      "title": "catalogcard--wearable"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=categoryfilter--primary&viewMode=docs",
+      "title": "categoryfilter--primary"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=center--on-parent&viewMode=docs",
+      "title": "center--on-parent"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=chainselector--basic&viewMode=docs",
+      "title": "chainselector--basic"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=checkbox--checked&viewMode=docs",
+      "title": "checkbox--checked"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=communitybubble--base&viewMode=docs",
+      "title": "communitybubble--base"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=dropdown--filters&viewMode=docs",
+      "title": "dropdown--filters"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=emoteicon--icon&viewMode=docs",
+      "title": "emoteicon--icon"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=empty--example&viewMode=docs",
+      "title": "empty--example"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=field--placeholder&viewMode=docs",
+      "title": "field--placeholder"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=filter--one-active&viewMode=docs",
+      "title": "filter--one-active"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=footer--uncontrolled&viewMode=docs",
+      "title": "footer--uncontrolled"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=header--subheader-header&viewMode=docs",
+      "title": "header--subheader-header"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=headermenu--with-button&viewMode=docs",
+      "title": "headermenu--with-button"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=hero--text-only&viewMode=docs",
+      "title": "hero--text-only"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=iconbadge--with-icon&viewMode=docs",
+      "title": "iconbadge--with-icon"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=infotooltip--tooltip&viewMode=docs",
+      "title": "infotooltip--tooltip"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=languagedropdown--uncontrolled-left-downward&viewMode=docs",
+      "title": "languagedropdown--uncontrolled-left-downward"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=languageicon--single&viewMode=docs",
+      "title": "languageicon--single"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=loader--main-loader&viewMode=docs",
+      "title": "loader--main-loader"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=loadingtext--h-1-small&viewMode=docs",
+      "title": "loadingtext--h-1-small"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=loginmodal--login-options&viewMode=docs",
+      "title": "loginmodal--login-options"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=logo--decentraland&viewMode=docs",
+      "title": "logo--decentraland"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=mana--symbol&viewMode=docs",
+      "title": "mana--symbol"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=message--error-message&viewMode=docs",
+      "title": "message--error-message"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=modal--simple&viewMode=docs",
+      "title": "modal--simple"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=navbar--marketplace&viewMode=docs",
+      "title": "navbar--marketplace"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=networkalert--partially-supported-network&viewMode=docs",
+      "title": "networkalert--partially-supported-network"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=nftcard--wearable&viewMode=docs",
+      "title": "nftcard--wearable"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=notifications-toggle--without-new-notifications&viewMode=docs",
+      "title": "notifications-toggle--without-new-notifications"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=page--regular-page&viewMode=docs",
+      "title": "page--regular-page"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=pagination--pages-5&viewMode=docs",
+      "title": "pagination--pages-5"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=parallax--depth&viewMode=docs",
+      "title": "parallax--depth"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=popup--on-hover&viewMode=docs",
+      "title": "popup--on-hover"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=profile--no-avatar&viewMode=docs",
+      "title": "profile--no-avatar"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=radio--checked&viewMode=docs",
+      "title": "radio--checked"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=radiooptions--select-options&viewMode=docs",
+      "title": "radiooptions--select-options"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=rangefield--simple&viewMode=docs",
+      "title": "rangefield--simple"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=raritybadge--small-size-badges&viewMode=docs",
+      "title": "raritybadge--small-size-badges"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=rarityfilter--select-rarities&viewMode=docs",
+      "title": "rarityfilter--select-rarities"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=section--example&viewMode=docs",
+      "title": "section--example"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=segment--single-segment&viewMode=docs",
+      "title": "segment--single-segment"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=selectfield--basic&viewMode=docs",
+      "title": "selectfield--basic"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=sidemenu--primary&viewMode=docs",
+      "title": "sidemenu--primary"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=signin--connect&viewMode=docs",
+      "title": "signin--connect"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=sliderfield--slider-simple&viewMode=docs",
+      "title": "sliderfield--slider-simple"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=smarticon--smart-icon-story&viewMode=docs",
+      "title": "smarticon--smart-icon-story"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=smartwearablefilter--select-sw&viewMode=docs",
+      "title": "smartwearablefilter--select-sw"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=starwalleticon--icon&viewMode=docs",
+      "title": "starwalleticon--icon"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=stats--single-result&viewMode=docs",
+      "title": "stats--single-result"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=table--polls&viewMode=docs",
+      "title": "table--polls"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=tabs--basic&viewMode=docs",
+      "title": "tabs--basic"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=tagfield--basic&viewMode=docs",
+      "title": "tagfield--basic"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=textarea--placeholder&viewMode=docs",
+      "title": "textarea--placeholder"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=textfilter--basic-filter&viewMode=docs",
+      "title": "textfilter--basic-filter"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=toast--simple-toast-example&viewMode=docs",
+      "title": "toast--simple-toast-example"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=toasts--lists-toasts&viewMode=docs",
+      "title": "toasts--lists-toasts"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=togglebox--simple&viewMode=docs",
+      "title": "togglebox--simple"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=usermenu--signed-out&viewMode=docs",
+      "title": "usermenu--signed-out"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=usermenusignedin--guest&viewMode=docs",
+      "title": "usermenusignedin--guest"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=v2-table--basic&viewMode=docs",
+      "title": "v2-table--basic"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=walleticon--icon&viewMode=docs",
+      "title": "walleticon--icon"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=wearableicon--icon&viewMode=docs",
+      "title": "wearableicon--icon"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=wearablepreview--preview-an-item&viewMode=docs",
+      "title": "wearablepreview--preview-an-item"
+    },
+    {
+      "url": "https://ui.decentraland.org/iframe.html?id=web2transactionmodal--basic&viewMode=docs",
+      "title": "web2transactionmodal--basic"
+    },
     {
       "url": "https://ui.decentraland.org/iframe.html",
       "title": "Webpack App"

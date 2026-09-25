@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "adobe-spectrum",
   "organization": "Adobe",
   "design_system": "Spectrum",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T04:15:21+00:00",
+  "last_checked": "2026-09-25T01:59:46+00:00",
   "last_modified": "Wed, 28 Feb 2024 21:04:55 GMT",
   "sitemap_last_modified": "2024-02-28T20:57:26.301Z",
   "resources": {
@@ -37,9 +37,9 @@
     ]
   },
   "github_meta": {
-    "license": "OFL-1.1",
-    "stars": 20452,
-    "last_pushed": "2025-10-28T23:34:52Z"
+    "license": "Apache-2.0",
+    "stars": 0,
+    "last_pushed": "2026-03-01T19:52:13Z"
   },
   "npm_meta": null,
   "indexed_pages": [

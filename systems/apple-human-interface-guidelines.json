@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "apple-human-interface-guidelines",
   "organization": "Apple",
   "design_system": "Human Interface Guidelines",
@@ -9,16 +9,17 @@
     "https://developer.apple.com/design/human-interface-guidelines/"
   ],
   "detail_url": "/systems/apple-human-interface-guidelines",
-  "pages_indexed": 173,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 176,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-24T11:58:29+00:00",
-  "last_modified": "Wed, 23 Sep 2026 08:52:41 GMT",
+  "last_checked": "2026-09-25T02:28:16+00:00",
+  "last_modified": "Thu, 24 Sep 2026 08:58:27 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/Apple/UnityPlugins"
+      "https://github.com/Apple/UnityPlugins",
+      "https://github.com/apple/unityplugins"
     ],
     "icons": [
       "https://developer.apple.com/design/human-interface-guidelines/icons"
@@ -164,6 +165,10 @@
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/complications",
+      "title": "Complications | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/components/system-experiences/complications",
       "title": "Complications | Apple Developer Documentation"
     },
     {
@@ -451,11 +456,11 @@
       "title": "Navigation and search | Apple Developer Documentation"
     },
     {
-      "url": "https://developer.apple.com/design/human-interface-guidelines/nearby-interactions",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-interactions",
       "title": "Nearby interactions | Apple Developer Documentation"
     },
     {
-      "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-interactions",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/nearby-interactions",
       "title": "Nearby interactions | Apple Developer Documentation"
     },
     {
@@ -481,6 +486,10 @@
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/outline-views",
       "title": "Outline views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/components/presentation/page-controls",
+      "title": "Page controls | Apple Developer Documentation"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/page-controls",
@@ -652,6 +661,10 @@
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/tab-views",
+      "title": "Tab views | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/components/layout-and-organization/tab-views",
       "title": "Tab views | Apple Developer Documentation"
     },
     {

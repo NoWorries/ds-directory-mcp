@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-25T01:37:00+00:00",
+  "generated_at": "2026-09-25T07:02:53+00:00",
   "id": "autoguru-overdrive",
   "organization": "AutoGuru",
   "design_system": "Overdrive",
@@ -9,29 +9,441 @@
     "https://overdrive.autoguru.io/"
   ],
   "detail_url": "/systems/autoguru-overdrive",
-  "pages_indexed": 1,
-  "coverage_status": "partial",
+  "pages_indexed": 97,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-24T04:46:06+00:00",
-  "last_modified": "Thu, 24 Sep 2026 04:04:31 GMT",
+  "last_checked": "2026-09-25T02:44:53+00:00",
+  "last_modified": "Thu, 24 Sep 2026 05:24:13 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "storybook": [
       "https://storybook.js.org/docs/builders/webpack",
       "https://storybook.js.org/docs/configure/environment-variables",
       "https://storybook.js.org/docs/builders/vite",
-      "https://storybook.js.org/docs/writing-stories/decorators"
+      "https://storybook.js.org/docs/writing-stories/decorators",
+      "https://chromatic-ui.notion.site/Storybook-test-syntax-in-CSF-2566e816203480cb95ddc674ddfbf5d3",
+      "https://github.com/storybookjs/mcp",
+      "https://github.com/storybooks/storybook",
+      "https://chromatic.com/",
+      "https://overdrive.autoguru.io/"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@autoguru/overdrive"
     ]
   },
-  "unverified_resources": {},
-  "content_signals": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/Microsoft/typescript",
+      "https://github.com/storybookjs/mcp",
+      "https://github.com/vanilla-extract-css/vanilla-extract",
+      "https://github.com/grrowl/react-keyed-flatten-children",
+      "https://github.com/storybooks/storybook",
+      "https://github.com/seek-oss/treat",
+      "https://github.com/facebook/react"
+    ]
+  },
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Vue",
+      "Angular"
+    ]
+  },
   "github_meta": null,
-  "npm_meta": null,
+  "npm_meta": {
+    "latest_version": "6.0.1",
+    "last_published": "2026-09-24T05:30:19.797Z",
+    "weekly_downloads": 918
+  },
   "indexed_pages": [
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=changelog--docs&viewMode=docs",
+      "title": "changelog--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-alert--docs&viewMode=docs",
+      "title": "components-alert--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-calendar--docs&viewMode=docs",
+      "title": "components-calendar--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-datatable--docs&viewMode=docs",
+      "title": "components-datatable--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-date-picker--docs&viewMode=docs",
+      "title": "components-date-picker--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-drop-down--docs&viewMode=docs",
+      "title": "components-drop-down--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-filterchip--docs&viewMode=docs",
+      "title": "components-filterchip--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-flyout--docs&viewMode=docs",
+      "title": "components-flyout--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-horizontal-auto-scroller--docs&viewMode=docs",
+      "title": "components-horizontal-auto-scroller--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-modal--docs&viewMode=docs",
+      "title": "components-modal--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-modal-minimal--docs&viewMode=docs",
+      "title": "components-modal-minimal--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-modal-standard-with-title--docs&viewMode=docs",
+      "title": "components-modal-standard-with-title--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-pagination--docs&viewMode=docs",
+      "title": "components-pagination--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-progress-bar-group--docs&viewMode=docs",
+      "title": "components-progress-bar-group--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-simple-pagination--docs&viewMode=docs",
+      "title": "components-simple-pagination--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-split-button--docs&viewMode=docs",
+      "title": "components-split-button--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-table--docs&viewMode=docs",
+      "title": "components-table--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-table-tablerow--docs&viewMode=docs",
+      "title": "components-table-tablerow--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-tabs--docs&viewMode=docs",
+      "title": "components-tabs--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-toast-usetoast--docs&viewMode=docs",
+      "title": "components-toast-usetoast--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=components-tooltip--docs&viewMode=docs",
+      "title": "components-tooltip--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-anchor--docs&viewMode=docs",
+      "title": "content-anchor--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-badge--docs&viewMode=docs",
+      "title": "content-badge--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-bullet-list--docs&viewMode=docs",
+      "title": "content-bullet-list--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-bullet-text--docs&viewMode=docs",
+      "title": "content-bullet-text--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-heading--docs&viewMode=docs",
+      "title": "content-heading--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-intent-stripe--docs&viewMode=docs",
+      "title": "content-intent-stripe--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-markdown-renderer--docs&viewMode=docs",
+      "title": "content-markdown-renderer--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-meta--docs&viewMode=docs",
+      "title": "content-meta--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-number-bubble--docs&viewMode=docs",
+      "title": "content-number-bubble--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-ordered-list--docs&viewMode=docs",
+      "title": "content-ordered-list--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-star-rating--docs&viewMode=docs",
+      "title": "content-star-rating--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-text-bubble--docs&viewMode=docs",
+      "title": "content-text-bubble--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-text-container--docs&viewMode=docs",
+      "title": "content-text-container--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=content-text-link--docs&viewMode=docs",
+      "title": "content-text-link--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-auto-suggest--docs&viewMode=docs",
+      "title": "forms-input-fields-auto-suggest--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-checkbox--docs&viewMode=docs",
+      "title": "forms-input-fields-checkbox--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-colour-input--docs&viewMode=docs",
+      "title": "forms-input-fields-colour-input--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-date-input--docs&viewMode=docs",
+      "title": "forms-input-fields-date-input--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-date-time-field--docs&viewMode=docs",
+      "title": "forms-input-fields-date-time-field--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-editable-text--docs&viewMode=docs",
+      "title": "forms-input-fields-editable-text--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-number-input--docs&viewMode=docs",
+      "title": "forms-input-fields-number-input--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-option-grid--docs&viewMode=docs",
+      "title": "forms-input-fields-option-grid--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-option-list--docs&viewMode=docs",
+      "title": "forms-input-fields-option-list--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-radio--docs&viewMode=docs",
+      "title": "forms-input-fields-radio--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-search-bar--docs&viewMode=docs",
+      "title": "forms-input-fields-search-bar--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-select--docs&viewMode=docs",
+      "title": "forms-input-fields-select--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-slider--docs&viewMode=docs",
+      "title": "forms-input-fields-slider--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-stepper--docs&viewMode=docs",
+      "title": "forms-input-fields-stepper--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-switch--docs&viewMode=docs",
+      "title": "forms-input-fields-switch--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-text-area-input--docs&viewMode=docs",
+      "title": "forms-input-fields-text-area-input--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=forms-input-fields-text-input--docs&viewMode=docs",
+      "title": "forms-input-fields-text-input--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=foundation-borders--borders&viewMode=docs",
+      "title": "foundation-borders--borders"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=foundation-branding--docs&viewMode=docs",
+      "title": "foundation-branding--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=foundation-colour-palette--colour-palette&viewMode=docs",
+      "title": "foundation-colour-palette--colour-palette"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=foundation-icon-set--icon-set&viewMode=docs",
+      "title": "foundation-icon-set--icon-set"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=foundation-space--space&viewMode=docs",
+      "title": "foundation-space--space"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=foundation-theme-colours--theme-colours&viewMode=docs",
+      "title": "foundation-theme-colours--theme-colours"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=foundation-typography--typography&viewMode=docs",
+      "title": "foundation-typography--typography"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-actions--docs&viewMode=docs",
+      "title": "layout-actions--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-attached-boxes-hook--docs&viewMode=docs",
+      "title": "layout-attached-boxes-hook--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-columns--docs&viewMode=docs",
+      "title": "layout-columns--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-fill-height-box--docs&viewMode=docs",
+      "title": "layout-fill-height-box--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-flex-flex-inline--docs&viewMode=docs",
+      "title": "layout-flex-flex-inline--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-flex-flex-stack--docs&viewMode=docs",
+      "title": "layout-flex-flex-stack--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-inline--docs&viewMode=docs",
+      "title": "layout-inline--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-popover--docs&viewMode=docs",
+      "title": "layout-popover--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-positioner--docs&viewMode=docs",
+      "title": "layout-positioner--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-scroll-pane--docs&viewMode=docs",
+      "title": "layout-scroll-pane--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-section--docs&viewMode=docs",
+      "title": "layout-section--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-stack--docs&viewMode=docs",
+      "title": "layout-stack--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-stickybox--docs&viewMode=docs",
+      "title": "layout-stickybox--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=layout-visually-hidden--docs&viewMode=docs",
+      "title": "layout-visually-hidden--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=overdrive--docs&viewMode=docs",
+      "title": "overdrive--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/contributing",
+      "title": "Page not found · GitHub Pages"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/about",
+      "title": "Page not found · GitHub Pages"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-box--docs&viewMode=docs",
+      "title": "primitives-box--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-buttons--docs&viewMode=docs",
+      "title": "primitives-buttons--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-divider-line--docs&viewMode=docs",
+      "title": "primitives-divider-line--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-icon--docs&viewMode=docs",
+      "title": "primitives-icon--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-image--docs&viewMode=docs",
+      "title": "primitives-image--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-indicators-linear-progress--docs&viewMode=docs",
+      "title": "primitives-indicators-linear-progress--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-indicators-loading-box--docs&viewMode=docs",
+      "title": "primitives-indicators-loading-box--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-indicators-progress-bar--docs&viewMode=docs",
+      "title": "primitives-indicators-progress-bar--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-indicators-progress-spinner--docs&viewMode=docs",
+      "title": "primitives-indicators-progress-spinner--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-indicators-slider-progress--docs&viewMode=docs",
+      "title": "primitives-indicators-slider-progress--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-indicators-step-progress--docs&viewMode=docs",
+      "title": "primitives-indicators-step-progress--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-text--docs&viewMode=docs",
+      "title": "primitives-text--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=primitives-toggle-buttons--docs&viewMode=docs",
+      "title": "primitives-toggle-buttons--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=roadmap--docs&viewMode=docs",
+      "title": "roadmap--docs"
+    },
     {
       "url": "https://overdrive.autoguru.io/iframe.html",
       "title": "Storybook"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=styling--docs&viewMode=docs",
+      "title": "styling--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=utility-hooks-usemedia--docs&viewMode=docs",
+      "title": "utility-hooks-usemedia--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=utility-hooks-useresponsivevalue--docs&viewMode=docs",
+      "title": "utility-hooks-useresponsivevalue--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=utility-outsideclick--docs&viewMode=docs",
+      "title": "utility-outsideclick--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=utility-overdriveprovider--docs&viewMode=docs",
+      "title": "utility-overdriveprovider--docs"
+    },
+    {
+      "url": "https://overdrive.autoguru.io/iframe.html?id=utility-portal--docs&viewMode=docs",
+      "title": "utility-portal--docs"
     }
   ]
 }
