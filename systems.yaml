@@ -7626,6 +7626,113 @@
   start_urls:
   - https://daisyui.com/
   likely_unmaintained: false
+  pages_indexed: 300
+  hit_max_pages: true
+  crawl_error: ''
+  consecutive_crawl_failures: 0
+  likely_spa: false
+  unverified_resources:
+    github:
+    - https://github.com/wind-press/windpress
+    - https://github.com/getzola/zola
+    - https://github.com/lit/lit
+    - https://github.com/angular/angular
+    - https://github.com/oven-sh/bun
+    - https://github.com/withastro/astro
+    - https://github.com/facebook/react
+    - https://github.com/electron/electron
+    - https://github.com/DioxusLabs/dioxus
+    - https://github.com/saadeghi/theme-change
+    - https://github.com/vitejs/vite
+    - https://github.com/tailwindlabs/tailwindcss
+    - https://github.com/django/django
+    - https://github.com/emberjs/ember.js
+    - https://github.com/unocss/unocss
+    - https://github.com/denoland/fresh
+    - https://github.com/yewstack/yew
+    - https://github.com/elysiajs/elysia
+    - https://github.com/vercel/next.js
+    - https://github.com/bigskysoftware/htmx
+    - https://github.com/web-infra-dev/rsbuild
+    - https://github.com/solidjs/solid
+    - https://github.com/vuejs/core
+    - https://github.com/nuxt/nuxt
+    - https://github.com/11ty/eleventy
+    - https://github.com/rails/rails
+    - https://github.com/sveltejs/kit
+    - https://github.com/tailwindlabs/tailwindcss-forms
+    - https://github.com/wakujs/waku
+    - https://github.com/solidjs/solid-start
+    - https://github.com/laravel/laravel
+    - https://github.com/postcss/postcss
+    - https://github.com/remix-run/react-router
+    - https://github.com/BuilderIO/qwik
+    - https://github.com/phoenixframework/phoenix
+    - https://github.com/rails/tailwindcss-rails
+    - https://github.com/WordPress/WordPress
+    - https://github.com/preactjs/preact
+    - https://github.com/vikejs/vike
+    - https://github.com/tailwindlabs/tailwindcss-typography
+  content_signals:
+    dark_mode: true
+    cli_scaffolding: true
+    frameworks:
+    - Vue
+    - React
+    - Web Components
+    - Angular
+    - Svelte
+  content_signal_sources:
+    dark_mode: https://daisyui.com/
+    cli_scaffolding: https://daisyui.com/docs/install/astro
+    frameworks:
+      Vue: https://daisyui.com/
+      React: https://daisyui.com/django-ui-library
+      Web Components: https://daisyui.com/docs/config
+      Angular: https://daisyui.com/docs/install
+      Svelte: https://daisyui.com/docs/install/astro
+  thin_page_ratio: -0.01
+  has_localized_docs: false
+  last_checked: '2026-09-28T10:43:31+00:00'
+  last_modified: Fri, 25 Sep 2026 21:49:52 GMT
+  sitemap_url: https://daisyui.com/sitemap.xml
+  resources:
+    github:
+    - https://github.com/ameinhardt/unocss-preset-daisy
+    - https://github.com/saadeghi/daisyui
+    - https://github.com/daisyui/v4-themes-for-v5
+    figma:
+    - https://figma.com/community/file/1417577350704829934
+    markdown_docs:
+    - https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md
+    mcp:
+    - https://docs.x.ai/build/features/mcp-servers
+    skills:
+    - https://daisyui.com/docs/skill/codex
+    - https://daisyui.com/docs/skill/grok
+    - https://daisyui.com/skills/daisyui-charts
+    - https://daisyui.com/docs/skill/claude-code
+    - https://daisyui.com/docs/skill/antigravity
+    - https://daisyui.com/docs/skill/copilot
+    - https://daisyui.com/SKILL.md
+    - https://daisyui.com/docs/skill/cursor
+    - https://daisyui.com/skills/daisyui
+    - https://daisyui.com/skills/daisyui-dashboard
+    - https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/src/routes/(routes)/docs/skill/+page.md
+    - https://daisyui.com/docs/skill/opencode
+    agent_instructions:
+    - https://daisyui.com/llms.txt
+    npm:
+    - https://npmjs.com/package/daisyui
+  github_meta:
+    license: MIT
+    stars: 43
+    last_pushed: '2025-06-01T09:04:31Z'
+  npm_meta:
+    latest_version: 5.7.46
+    last_published: '2026-09-24T19:49:25.154Z'
+    weekly_downloads: 1140178
+  render_mode: ''
 - organization: ''
   design_system: HeroUI
   start_urls:
