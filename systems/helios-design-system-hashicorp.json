@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "helios-design-system-hashicorp",
   "organization": "Helios Design System",
   "design_system": "Hashicorp",
@@ -13,30 +13,37 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T07:51:54+00:00",
-  "last_modified": "Fri, 18 Sep 2026 00:20:47 GMT",
-  "sitemap_last_modified": "2026-09-17",
+  "last_checked": "2026-10-01T10:34:06+00:00",
+  "last_modified": "Wed, 30 Sep 2026 17:18:14 GMT",
+  "sitemap_last_modified": "2026-09-30",
   "resources": {
     "github": [
       "https://github.com/hashicorp/design-system",
       "https://github.com/hashicorp/react-components"
     ],
     "figma": [
-      "https://www.figma.com/design/MYiw4kiVpunIMMw0sBkE1t/%E2%9C%8F%EF%B8%8F-HDS-Icons-%5BDevelopment%5D",
-      "https://www.figma.com/design/w0ukydeAsbv6sJirLxZMBo/HDS-Wireframes",
-      "https://www.figma.com/design/EEfM1jjqLfUv59eYLopn5x/HDS-A11Y-Helper-UI-Kit",
-      "https://www.figma.com/design/k34tT4poC2p1RBQxVwZhW5/-Alpha--Carbon-Charts-Library-Kit-%E2%80%93-Carbon-Design-System--Copy-",
-      "https://www.figma.com/design/5Pv32j4QiOOD8lkFTD1dxC/HDS-Patterns-v2.0",
-      "https://www.figma.com/design/iweq3r2Pi8xiJfD9e6lOhF/HDS-Components-v2.0",
-      "https://www.figma.com/design/vqhh0wWZ8PwnRkvh1jk7jB/Utilities-UI-Kit",
-      "https://www.figma.com/design/uX4OEaJQdWfzULADchjAeN/HDS-Foundations-v2.0",
-      "https://www.figma.com/design/TLnoT5AYQfy3tZ0H68BgOr/HDS-Icons"
+      "https://figma.com/design/EEfM1jjqLfUv59eYLopn5x/HDS-A11Y-Helper-UI-Kit",
+      "https://figma.com/design/vqhh0wWZ8PwnRkvh1jk7jB/Utilities-UI-Kit",
+      "https://figma.com/design/k34tT4poC2p1RBQxVwZhW5/-Alpha--Carbon-Charts-Library-Kit-%E2%80%93-Carbon-Design-System--Copy-",
+      "https://figma.com/design/iweq3r2Pi8xiJfD9e6lOhF/HDS-Components-v2.0",
+      "https://figma.com/design/uX4OEaJQdWfzULADchjAeN/HDS-Foundations-v2.0",
+      "https://figma.com/design/w0ukydeAsbv6sJirLxZMBo/HDS-Wireframes",
+      "https://figma.com/design/MYiw4kiVpunIMMw0sBkE1t/%E2%9C%8F%EF%B8%8F-HDS-Icons-%5BDevelopment%5D",
+      "https://figma.com/design/TLnoT5AYQfy3tZ0H68BgOr/HDS-Icons",
+      "https://figma.com/design/5Pv32j4QiOOD8lkFTD1dxC/HDS-Patterns-v2.0"
     ],
     "markdown_docs": [
-      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/README.md",
+      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/CONTRIBUTING.md",
       "https://github.com/hashicorp/design-system/blob/main/packages/components/README.md",
       "https://github.com/hashicorp/design-system/blob/main/packages/components/CONTRIBUTING.md",
-      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/CONTRIBUTING.md"
+      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/README.md"
+    ],
+    "mcp": [
+      "https://modelcontextprotocol.io/",
+      "https://helios.hashicorp.design/tooling/mcp-server"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@hashicorp/design-system-mcp"
     ],
     "icons": [
       "https://helios.hashicorp.design/components/icon",
@@ -45,16 +52,16 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/cibernox/ember-power-select",
-      "https://github.com/ember-template-lint/ember-template-lint",
-      "https://github.com/simplabs/ember-test-selectors",
+      "https://github.com/patterns/form-patterns",
       "https://github.com/NullVoxPopuli/ember-composable-helpers",
+      "https://github.com/ember-template-lint/ember-template-lint",
       "https://github.com/ember-cli/ember-page-title",
+      "https://github.com/simplabs/ember-test-selectors",
+      "https://github.com/ember-a11y/ember-a11y-testing",
+      "https://github.com/cibernox/ember-power-select",
+      "https://github.com/ember-a11y/a11y-announcer",
       "https://github.com/josemarluedke/ember-focus-trap",
       "https://github.com/ember-a11y/ember-a11y-refocus",
-      "https://github.com/ember-a11y/ember-a11y-testing",
-      "https://github.com/patterns/form-patterns",
-      "https://github.com/ember-a11y/a11y-announcer",
       "https://github.com/ember-intl/ember-intl"
     ]
   },
@@ -74,7 +81,11 @@
     "stars": 513,
     "last_pushed": "2026-09-17T19:29:06Z"
   },
-  "npm_meta": null,
+  "npm_meta": {
+    "latest_version": "0.2.1",
+    "last_published": "2026-09-30T17:11:11.557Z",
+    "weekly_downloads": 449
+  },
   "indexed_pages": [
     {
       "url": "https://helios.hashicorp.design/about",
@@ -325,6 +336,10 @@
       "title": "Masked Input | Helios Design System"
     },
     {
+      "url": "https://helios.hashicorp.design/tooling/mcp-server",
+      "title": "MCP Server | Helios Design System"
+    },
+    {
       "url": "https://helios.hashicorp.design/components/modal",
       "title": "Modal | Helios Design System"
     },
@@ -459,10 +474,6 @@
     {
       "url": "https://helios.hashicorp.design/components/tabs",
       "title": "Tabs | Helios Design System"
-    },
-    {
-      "url": "https://helios.hashicorp.design/components/tag",
-      "title": "Tag | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/components/form/text-input",

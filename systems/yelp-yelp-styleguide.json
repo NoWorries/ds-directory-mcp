@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "yelp-yelp-styleguide",
   "organization": "Yelp",
   "design_system": "Yelp Styleguide",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T14:34:46+00:00",
+  "last_checked": "2026-10-01T11:51:24+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {},
@@ -23,19 +23,19 @@
   "npm_meta": null,
   "indexed_pages": [
     {
-      "url": "https://www.yelp.com/styleguide",
+      "url": "https://yelp.com/styleguide",
       "title": "Yelp Design — Cookbook"
     },
     {
-      "url": "https://www.yelp.com/styleguide/ingredients",
+      "url": "https://yelp.com/styleguide/ingredients",
       "title": "Yelp Design — Ingredients"
     },
     {
-      "url": "https://www.yelp.com/styleguide/principles",
+      "url": "https://yelp.com/styleguide/principles",
       "title": "Yelp Design — Principles"
     },
     {
-      "url": "https://www.yelp.com/styleguide/recipes",
+      "url": "https://yelp.com/styleguide/recipes",
       "title": "Yelp Design — Recipes & Entrees"
     }
   ]

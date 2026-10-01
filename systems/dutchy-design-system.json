@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "dutchy-design-system",
   "organization": null,
   "design_system": "Dutchy Design System",
@@ -9,11 +9,11 @@
     "https://dutchy.demothat.app/"
   ],
   "detail_url": "/systems/dutchy-design-system",
-  "pages_indexed": 35,
+  "pages_indexed": 34,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T15:57:10+00:00",
+  "last_checked": "2026-10-01T12:08:48+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -50,10 +50,6 @@
     {
       "url": "https://dutchy.demothat.app/components/badges",
       "title": "Badges & Tags - Components - Dutchy Design System"
-    },
-    {
-      "url": "https://dutchy.demothat.app/showcase/blog",
-      "title": "Blog | Dutchy Design System"
     },
     {
       "url": "https://dutchy.demothat.app/components/cards",

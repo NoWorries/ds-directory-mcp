@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "royal-canin-royal-canin-s-design-language",
   "organization": "Royal Canin",
   "design_system": "Royal Canin's Design Language",
@@ -9,11 +9,11 @@
     "https://developer.royalcanin.com/"
   ],
   "detail_url": "/systems/royal-canin-royal-canin-s-design-language",
-  "pages_indexed": 8,
+  "pages_indexed": 61,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-20T12:24:05+00:00",
+  "last_checked": "2026-10-01T11:16:37+00:00",
   "last_modified": "Tue, 26 Sep 2023 16:34:30 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -23,7 +23,14 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/roadhump/SublimeLinter-eslint"
+      "https://github.com/dixonandmoe/rellax",
+      "https://github.com/atomiks/tippyjs",
+      "https://github.com/roadhump/SublimeLinter-eslint",
+      "https://github.com/ganlanyuan/tiny-slider",
+      "https://github.com/leongersen/noUiSlider",
+      "https://github.com/Pikaday/Pikaday",
+      "https://github.com/jshjohnson/Choices",
+      "https://github.com/dbushell/Pikaday"
     ]
   },
   "content_signals": {
@@ -41,6 +48,54 @@
       "title": "About Design Language | Royal Canin Design Language"
     },
     {
+      "url": "https://developer.royalcanin.com/ui-framework/components/accordion.html",
+      "title": "Accordion | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/alerts.html",
+      "title": "Alerts | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/visual_styles/animations.html",
+      "title": "Animations | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/badges.html",
+      "title": "Badges | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/visual_styles/block_styles.html",
+      "title": "Block styles | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/usage/boilerplate.html",
+      "title": "Boilerplate | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/breadcrumbs.html",
+      "title": "Breadcrumbs | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/layouts/breakpoint_utilities.html",
+      "title": "Breakpoint utilities | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/buttons.html",
+      "title": "Buttons | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/card.html",
+      "title": "Cards | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/carousels.html",
+      "title": "Carousels | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/checklist.html",
+      "title": "Checklist | Royal Canin Design Language"
+    },
+    {
       "url": "https://developer.royalcanin.com/ui-framework/brand_identity/colour.html",
       "title": "Colour | Royal Canin Design Language"
     },
@@ -49,24 +104,188 @@
       "title": "Contribution | Royal Canin Design Language"
     },
     {
+      "url": "https://developer.royalcanin.com/ui-framework/components/language_picker.html",
+      "title": "Country and language picker | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/data_visualisation.html",
+      "title": "Data visualisation | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/filters.html",
+      "title": "Filters | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/footer.html",
+      "title": "Footer | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/forms.html",
+      "title": "Forms | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/layouts/grid_container.html",
+      "title": "Grid container | Royal Canin Design Language"
+    },
+    {
       "url": "https://developer.royalcanin.com/",
       "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui_assets/components/footer.html",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/prototypes/hub_product_listing.html",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/assets/html-boilerplate.html",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui_assets/layouts/visual-styles/spacers.html",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/broken-link",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui_assets/brand_identity/typography.html",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/hyperlinks.html",
+      "title": "Hyperlinks | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/brand_identity/icons.html",
+      "title": "Icons | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/images.html",
+      "title": "Images | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/interactive_image.html",
+      "title": "Interactive image | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/layouts/layout_container.html",
+      "title": "Layout container | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/lists.html",
+      "title": "Lists | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/brand_identity/logo.html",
+      "title": "Logos | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/maps.html",
+      "title": "Maps | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/media.html",
+      "title": "Media | Royal Canin Design Language"
     },
     {
       "url": "https://developer.royalcanin.com/getting-started/usage/assets_migration.html",
       "title": "Migration | Royal Canin Design Language"
     },
     {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/modal.html",
+      "title": "Modals | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/navigation.html",
+      "title": "Navigation | Royal Canin Design Language"
+    },
+    {
       "url": "https://developer.royalcanin.com/getting-started/usage/overview.html",
       "title": "Overview | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/pagination.html",
+      "title": "Pagination & pager | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/templates/product_description.html",
+      "title": "Product description | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/progress.html",
+      "title": "Progress | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/quicktips.html",
+      "title": "Quicktips | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/overview/releases.html",
+      "title": "Releases | Royal Canin Design Language"
     },
     {
       "url": "https://developer.royalcanin.com/getting-started/usage/resources.html",
       "title": "Resources | Royal Canin Design Language"
     },
     {
+      "url": "https://developer.royalcanin.com/ui-framework/components/section_navigation.html",
+      "title": "Section Navigation | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/slider.html",
+      "title": "Slider | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/layouts/spacers.html",
+      "title": "Spacers | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/templates/boilerplate.html",
+      "title": "Starter Page / Boilerplate | Royal Canin Design Language"
+    },
+    {
       "url": "https://developer.royalcanin.com/ui-framework/templates/starter.html",
       "title": "Starter page/Boilerplate | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/support/submit_an_issue.html",
+      "title": "Submit an issue | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/tables.html",
+      "title": "Tables | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/components/tabs.html",
+      "title": "Tabs | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/tooltips.html",
+      "title": "Tooltips | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/brand_identity/typography.html",
+      "title": "Typography | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/overview/using_design_language.html",
+      "title": "Using Design Language | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/documentation/utility_classes.html",
+      "title": "Utility Classes | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/getting-started/usage/versioning.html",
+      "title": "Versioning | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/elements/videos.html",
+      "title": "Videos | Royal Canin Design Language"
     }
   ]
 }

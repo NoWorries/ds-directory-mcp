@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "mutual-of-omaha-digital-design-guide",
   "organization": "Mutual of Omaha",
   "design_system": "Digital Design Guide",
@@ -9,22 +9,43 @@
     "https://design.mutualofomaha.com/digital/"
   ],
   "detail_url": "/systems/mutual-of-omaha-digital-design-guide",
-  "pages_indexed": 1,
+  "pages_indexed": 4,
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-20T12:16:35+00:00",
+  "last_checked": "2026-10-01T10:55:43+00:00",
   "last_modified": "Fri, 27 Jun 2025 17:41:19 GMT",
   "sitemap_last_modified": null,
-  "resources": {},
+  "resources": {
+    "icons": [
+      "https://cdn.mutualofomaha.com/design-guide/3.1/libraries/icons/library"
+    ]
+  },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "frameworks": [
+      "React",
+      "Vue"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
     {
-      "url": "https://design.mutualofomaha.com/digital/",
+      "url": "https://design.mutualofomaha.com/digital/assets",
+      "title": "Assets | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital",
       "title": "Digital | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/templates/footer",
+      "title": "Footer Template | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/templates/multi-column",
+      "title": "Multi-column Template | Mutual of Omaha Design Guide"
     }
   ]
 }

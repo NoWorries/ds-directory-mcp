@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "consumer-financial-protection-bureau-cfpb-design-manual",
   "organization": "Consumer Financial Protection Bureau",
   "design_system": "CFPB Design Manual",
@@ -9,12 +9,12 @@
     "https://cfpb.github.io/design-system/"
   ],
   "detail_url": "/systems/consumer-financial-protection-bureau-cfpb-design-manual",
-  "pages_indexed": 85,
+  "pages_indexed": 84,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T06:22:51+00:00",
-  "last_modified": "Thu, 17 Sep 2026 14:40:43 GMT",
+  "last_checked": "2026-10-01T10:09:23+00:00",
+  "last_modified": "Wed, 30 Sep 2026 20:29:37 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -22,6 +22,9 @@
     ],
     "storybook": [
       "https://cfpb.github.io/design-system/development/web-component-storybook"
+    ],
+    "figma": [
+      "https://figma.com/community/file/1487539003249310850"
     ],
     "markdown_docs": [
       "https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md"
@@ -33,7 +36,7 @@
     ]
   },
   "content_signals": {
-    "accessibility_conformance": "Section 508",
+    "accessibility_conformance": "WCAG 2.0 AA",
     "frameworks": [
       "React",
       "Web Components"
@@ -42,7 +45,7 @@
   "github_meta": {
     "license": "CC0-1.0",
     "stars": 60,
-    "last_pushed": "2026-09-17T14:40:02Z"
+    "last_pushed": "2026-09-30T21:04:11Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -337,10 +340,6 @@
     {
       "url": "https://cfpb.github.io/design-system/components/taglines",
       "title": "Taglines - CFPB Design System"
-    },
-    {
-      "url": "https://cfpb.github.io/design-system/components/tags",
-      "title": "Tags - CFPB Design System"
     },
     {
       "url": "https://cfpb.github.io/design-system/components/text-inputs",

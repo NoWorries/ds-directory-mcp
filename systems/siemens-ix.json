@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "siemens-ix",
   "organization": null,
   "design_system": "Siemens iX",
@@ -9,69 +9,43 @@
     "https://ix.siemens.io/"
   ],
   "detail_url": "/systems/siemens-ix",
-  "pages_indexed": 270,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 278,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-20T00:34:22+00:00",
-  "last_modified": "Wed, 09 Sep 2026 07:20:45 GMT",
+  "last_checked": "2026-10-01T11:30:08+00:00",
+  "last_modified": "Wed, 30 Sep 2026 07:28:46 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/yagizhanNY/siemens-ix-blazor",
-      "https://github.com/siemens/ix",
-      "https://github.com/siemens/ix-icons"
+      "https://github.com/siemens/ix"
     ],
     "figma": [
-      "https://www.figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology",
-      "https://www.figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines"
-    ],
-    "markdown_docs": [
-      "https://github.com/siemens/ix/blob/main/CONTRIBUTING.md"
-    ],
-    "mcp": [
-      "https://ix.siemens.io/docs/home/mcp-server",
-      "https://ix.siemens.io/docs/home/mcp-server.md"
+      "https://figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology",
+      "https://figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines"
     ],
     "icons": [
-      "https://ix.siemens.io/docs/icons/icon-library.md",
-      "https://ix.siemens.io/docs/icons/design-new-icons",
-      "https://ix.siemens.io/docs/icons/icon-library",
-      "https://ix.siemens.io/docs/icons/design-new-icons.md",
-      "https://ix.siemens.io/docs/icons/developing-with-icons.md",
-      "https://ix.siemens.io/docs/icons/developing-with-icons",
-      "https://ix.siemens.io/docs/icons/icon-usage.md",
-      "https://ix.siemens.io/docs/icons/icon-usage",
-      "https://brandville.siemens.com/en/design-elements/icons/ui-icons"
+      "https://ix.siemens.io/docs/icons/icon-library"
     ],
     "agent_instructions": [
       "https://ix.siemens.io/llms.txt",
       "https://ix.siemens.io/llms-full.txt"
     ]
   },
-  "unverified_resources": {
-    "github": [
-      "https://github.com/Rich-Harris/degit"
-    ],
-    "npm": [
-      "https://www.npmjs.com/package/@axe-core/playwright"
-    ]
-  },
+  "unverified_resources": {},
   "content_signals": {
-    "exemplars": true,
-    "prohibition": true,
     "dark_mode": true,
     "frameworks": [
-      "Web Components",
+      "Angular",
       "React",
       "Vue",
-      "Angular"
+      "Web Components"
     ]
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 35,
-    "last_pushed": "2026-09-14T17:54:52Z"
+    "stars": 379,
+    "last_pushed": "2026-10-01T11:19:16Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -500,8 +474,24 @@
       "title": "FAQ | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/feedback-and-validation",
+      "title": "Feedback and validation | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/components/flip/code",
       "title": "Flip - Code | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/form-field-labels",
+      "title": "Form field labels | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/form-headings",
+      "title": "Form headings | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/forms-behavior",
+      "title": "Forms behavior | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/forms-field/code",
@@ -570,6 +560,10 @@
     {
       "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/handling-errors",
       "title": "Handling errors | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/helper-info-text",
+      "title": "Helper / info text | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/guidelines/cli/helpful",
@@ -764,6 +758,14 @@
       "title": "Overview Conversational design | Siemens Industrial Experience"
     },
     {
+      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/overview",
+      "title": "Overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/components/charts-overview/overview",
+      "title": "Overview | Siemens Industrial Experience"
+    },
+    {
       "url": "https://ix.siemens.io/docs/guidelines/accessibility/overview",
       "title": "overview | Siemens Industrial Experience"
     },
@@ -773,10 +775,6 @@
     },
     {
       "url": "https://ix.siemens.io/docs/guidelines/language/messaging/messages-overview",
-      "title": "Overview | Siemens Industrial Experience"
-    },
-    {
-      "url": "https://ix.siemens.io/docs/components/charts-overview/overview",
       "title": "Overview | Siemens Industrial Experience"
     },
     {
@@ -802,6 +800,10 @@
     {
       "url": "https://ix.siemens.io/docs/components/pill/guide",
       "title": "Pill - Usage | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/placeholders",
+      "title": "Placeholders | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/popover/code",
@@ -966,6 +968,10 @@
     {
       "url": "https://ix.siemens.io/docs/guidelines/language/messaging/time-related-messages",
       "title": "Time-related messages | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/todo",
+      "title": "To do for documentation redesign | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/toast/code",

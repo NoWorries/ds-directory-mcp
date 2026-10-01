@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "italian-public-administration-it-designers-italy",
   "organization": "Italian Public Administration",
   "design_system": ".it Designers Italy",
@@ -9,29 +9,31 @@
     "https://designers.italia.it/"
   ],
   "detail_url": "/systems/italian-public-administration-it-designers-italy",
-  "pages_indexed": 148,
+  "pages_indexed": 167,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-18T08:07:22+00:00",
-  "last_modified": "Tue, 15 Sep 2026 10:27:37 GMT",
+  "last_checked": "2026-10-01T10:41:42+00:00",
+  "last_modified": "Tue, 22 Sep 2026 15:16:43 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/italia/design-tokens-italia",
-      "https://github.com/italia/feedback.designers.italia.it",
       "https://github.com/italia/design-react-kit",
-      "https://github.com/italia/design-ui-kit",
-      "https://github.com/italia/design-angular-kit",
-      "https://github.com/italia/designers.italia.it",
-      "https://github.com/italia/design-ui-kit-template",
       "https://github.com/italia/bootstrap-italia",
-      "https://github.com/italia/dev-kit-italia"
+      "https://github.com/italia/design-ui-kit",
+      "https://github.com/italia/feedback.designers.italia.it",
+      "https://github.com/italia/designers.italia.it",
+      "https://github.com/italia/design-angular-kit",
+      "https://github.com/italia/dev-kit-italia",
+      "https://github.com/italia/design-tokens-italia",
+      "https://github.com/italia/design-ui-kit-template"
     ],
     "figma": [
-      "https://www.figma.com/proto/FHlE0r9lhfvDR0SgkDRmVi/Comuni---Modello-sito-e-servizi",
-      "https://www.figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito",
-      "https://www.figma.com/proto/1hQobutdZFwlo2Y4mVt9Rl/Musei-civici---Modello-sito"
+      "https://figma.com/community/file/1105848677422572920/ui-kit-italia",
+      "https://figma.com/proto/FHlE0r9lhfvDR0SgkDRmVi/Comuni---Modello-sito-e-servizi",
+      "https://figma.com/proto/1hQobutdZFwlo2Y4mVt9Rl/Musei-civici---Modello-sito",
+      "https://figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito",
+      "https://figma.com/community/file/1105848677422572920"
     ],
     "markdown_docs": [
       "https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md"
@@ -39,9 +41,9 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/sketch-hq/fig2sketch",
-      "https://github.com/sketch-hq/sketch-document",
       "https://github.com/gjtorikian/html-proofer",
+      "https://github.com/sketch-hq/sketch-document",
+      "https://github.com/sketch-hq/fig2sketch",
       "https://github.com/chialab/titillium_pro"
     ]
   },
@@ -54,8 +56,8 @@
   },
   "github_meta": {
     "license": "BSD-3-Clause",
-    "stars": 24,
-    "last_pushed": "2026-07-20T21:01:33Z"
+    "stars": 179,
+    "last_pushed": "2026-09-10T16:53:53Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -84,6 +86,10 @@
       "title": "Alert - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/analisi-del-contesto",
+      "title": "Analisi del contesto - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/risorse-per-progettare/progettare/architettura-dell-informazione",
       "title": "Architettura dell'informazione - Designers Italia"
     },
@@ -106,6 +112,18 @@
     {
       "url": "https://designers.italia.it/modelli/aziende-sanitarie-locali",
       "title": "Aziende sanitarie locali (ASL) - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-1/azione-1",
+      "title": "Azione 1 - Requisito 4.1 - Linee guida di design - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-5/azione-1",
+      "title": "Azione 1 - Requisito 4.5 - Interfaccia utente - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-5/azione-2",
+      "title": "Azione 2 - Requisito 4.5 - Interfaccia utente - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/design-system/componenti/back",
@@ -184,6 +202,10 @@
       "title": "Comprendere - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/formazione/imparare/comprendere-il-contesto-d-uso-e-lo-stato-dell-arte-per-la-progettazione-di-servizi-digitali",
+      "title": "Comprendere il contesto d'uso e lo stato dell'arte per la progettazione di servizi digitali - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/progetto/contatti",
       "title": "Contatti - Designers Italia"
     },
@@ -202,6 +224,10 @@
     {
       "url": "https://designers.italia.it/modelli/contribuisci-ai-modelli",
       "title": "Contribuisci ai modelli"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia",
+      "title": "Costruzione interfaccia - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/argomenti/cultura-progettuale",
@@ -268,11 +294,11 @@
       "title": "Form - Designers Italia"
     },
     {
-      "url": "https://designers.italia.it/formazione",
+      "url": "https://designers.italia.it/argomenti/formazione",
       "title": "Formazione - Designers Italia"
     },
     {
-      "url": "https://designers.italia.it/argomenti/formazione",
+      "url": "https://designers.italia.it/formazione",
       "title": "Formazione - Designers Italia"
     },
     {
@@ -290,6 +316,10 @@
     {
       "url": "https://designers.italia.it/design-system/componenti/hero",
       "title": "Hero - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/human-centred-design",
+      "title": "Human centred design - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/design-system/fondamenti/icone",
@@ -320,6 +350,10 @@
       "title": "Interfaccia utente - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/formazione/imparare/l-importanza-dei-dati-per-la-pa",
+      "title": "L'importanza dei dati per la PA - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/argomenti/linee-guida",
       "title": "Linee guida - Designers Italia"
     },
@@ -340,6 +374,10 @@
       "title": "List - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/argomenti/manuale-operativo",
+      "title": "Manuale operativo - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/normativa/manuale-operativo-di-design",
       "title": "Manuale operativo di design - Designers Italia"
     },
@@ -354,6 +392,10 @@
     {
       "url": "https://designers.italia.it/design-system/fondamenti/microtesti",
       "title": "Microtesti"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/migrazione-sito",
+      "title": "Migrazione sito - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/design-system/componenti/modal",
@@ -389,6 +431,10 @@
     },
     {
       "url": "https://designers.italia.it/normativa",
+      "title": "Normativa - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/normativa",
       "title": "Normativa - Designers Italia"
     },
     {
@@ -476,6 +522,10 @@
       "title": "Per sviluppatori"
     },
     {
+      "url": "https://designers.italia.it/argomenti/pianificazione",
+      "title": "Pianificazione - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/progetto/piano-attivita",
       "title": "Piano attività - Designers Italia"
     },
@@ -496,6 +546,10 @@
       "title": "Progettare - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/argomenti/progettazione-contenuti",
+      "title": "Progettazione contenuti - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/argomenti/progettazione-interfaccia",
       "title": "Progettazione interfaccia - Designers Italia"
     },
@@ -510,6 +564,10 @@
     {
       "url": "https://designers.italia.it/design-system/componenti/progress-indicators",
       "title": "Progress indicators - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/design-system/fondamenti/proporzioni-media",
+      "title": "Proporzioni media"
     },
     {
       "url": "https://designers.italia.it/risorse-per-progettare/progettare/prototipazione",
@@ -552,6 +610,10 @@
       "title": "SEO - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/formazione/insegnare/service-design-per-il-settore-pubblico",
+      "title": "Service design per il settore pubblico - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/design-system/componenti/sidebar",
       "title": "Sidebar - Designers Italia"
     },
@@ -562,6 +624,10 @@
     {
       "url": "https://designers.italia.it/design-system/fondamenti/spaziature",
       "title": "Spaziature"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/stato-dell-arte",
+      "title": "Stato dell'arte - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/design-system/componenti/steppers",
@@ -578,6 +644,14 @@
     {
       "url": "https://designers.italia.it/argomenti/sviluppo-interfaccia",
       "title": "Sviluppo interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/sviluppo-interfaccia",
+      "title": "Sviluppo interfaccia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/comprendere/stato-dell-arte/svolgi-l-analisi-benchmark",
+      "title": "Svolgi l'analisi benchmark - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/design-system/componenti/tables",
@@ -626,6 +700,10 @@
     {
       "url": "https://designers.italia.it/design-system/componenti/transfer",
       "title": "Transfer - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/ui-kit",
+      "title": "UI Kit - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/design-system/componenti/upload",

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "heroui",
   "organization": null,
   "design_system": "HeroUI",
@@ -9,41 +9,694 @@
     "https://www.heroui.com/"
   ],
   "detail_url": "/systems/heroui",
-  "pages_indexed": 1,
+  "pages_indexed": 153,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-18T15:43:31+00:00",
+  "last_checked": "2026-10-01T12:30:05+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-18T06:29:05.587Z",
+  "sitemap_last_modified": "2026-09-30T16:29:10.765Z",
   "resources": {
     "github": [
-      "https://github.com/heroui-inc/heroui"
+      "https://github.com/heroui-inc/heroui-mcp",
+      "https://github.com/heroui-inc/heroui",
+      "https://github.com/heroui-inc/heroui-native"
+    ],
+    "storybook": [
+      "https://storybook-v3.heroui.com/"
+    ],
+    "figma": [
+      "https://figma.com/community/file/1546526812159103429",
+      "https://figma.com/community/file/1546526812159103429/heroui-figma-kit-v3"
+    ],
+    "markdown_docs": [
+      "https://github.com/heroui-inc/heroui-native/blob/main/CONTRIBUTING.md",
+      "https://github.com/heroui-inc/heroui-mcp/blob/main/CONTRIBUTING.md",
+      "https://github.com/heroui-inc/heroui/blob/main/CONTRIBUTING.md"
+    ],
+    "mcp": [
+      "https://heroui.com/en/docs/react/getting-started/mcp-server",
+      "https://heroui.com/en/docs/native/getting-started/mcp-server",
+      "https://open-code.ai/docs/en/mcp-servers",
+      "https://heroui.com/en/docs/react/migration/mcp-server",
+      "https://code.visualstudio.com/docs/copilot/customization/mcp-servers",
+      "https://heroui.com/en/docs/ui-for-agents/mcp-server",
+      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports"
     ],
     "agent_instructions": [
-      "https://www.heroui.com/llms.txt",
-      "https://www.heroui.com/llms-full.txt"
+      "https://heroui.com/llms-full.txt",
+      "https://heroui.com/llms.txt",
+      "https://heroui.com/native/llms-full.txt",
+      "https://heroui.com/native/llms.txt"
+    ],
+    "npm": [
+      "https://npmjs.com/package/create-heroui-native-app",
+      "https://npmjs.com/package/@heroui/native-mcp"
+    ],
+    "icons": [
+      "https://github.com/gravity-ui/icons"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/saltyaom/m3-ripple",
+      "https://github.com/gravity-ui/icons",
+      "https://github.com/guilhermerodz/input-otp"
+    ]
+  },
   "content_signals": {
+    "cli_scaffolding": true,
     "dark_mode": true,
+    "validation_loop": true,
     "exemplars": true,
     "frameworks": [
       "React",
-      "Web Components"
+      "Vue",
+      "Svelte"
     ]
   },
   "github_meta": {
-    "license": "Apache-2.0",
-    "stars": 30740,
-    "last_pushed": "2026-09-18T10:15:39Z"
+    "license": "MIT",
+    "stars": 60,
+    "last_pushed": "2026-09-26T16:10:11Z"
   },
-  "npm_meta": null,
+  "npm_meta": {
+    "latest_version": "1.0.7",
+    "last_published": "2026-09-21T15:38:24.174Z",
+    "weekly_downloads": 141
+  },
   "indexed_pages": [
+    {
+      "url": "https://heroui.com/about",
+      "title": "About HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/accordion",
+      "title": "Accordion | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/agent-skills",
+      "title": "Agent Skills | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/agents-md",
+      "title": "AGENTS.md | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/alert",
+      "title": "Alert | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/alert",
+      "title": "Alert | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components",
+      "title": "All Components (Native) | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases",
+      "title": "All Releases | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases",
+      "title": "All Releases | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/animation",
+      "title": "Animation | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/avatar",
+      "title": "Avatar | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/badge",
+      "title": "Badge | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/beta-10",
+      "title": "Beta 10 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/beta-11",
+      "title": "Beta 11 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/beta-12",
+      "title": "Beta 12 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/beta-13",
+      "title": "Beta 13 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/bottom-sheet",
+      "title": "BottomSheet | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/button",
+      "title": "Button | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/button-group",
+      "title": "ButtonGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/calendar",
+      "title": "Calendar | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/card",
+      "title": "Card | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/checkbox",
+      "title": "Checkbox | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/checkbox",
+      "title": "Checkbox | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/checkbox-group",
+      "title": "CheckboxGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/chip",
+      "title": "Chip | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/chip",
+      "title": "Chip | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/cli-v1-0-0",
+      "title": "CLI v1.0.0 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/close-button",
+      "title": "CloseButton | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/close-button",
+      "title": "CloseButton | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/color-area",
+      "title": "ColorArea | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/color-field",
+      "title": "ColorField | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/color-picker",
+      "title": "ColorPicker | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/colors",
+      "title": "Colors | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/color-slider",
+      "title": "ColorSlider | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/color-swatch",
+      "title": "ColorSwatch | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/color-swatch-picker",
+      "title": "ColorSwatchPicker | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/composition",
+      "title": "Composition | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/contact",
+      "title": "Contact HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/control-field",
+      "title": "ControlField | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/date-field",
+      "title": "DateField | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/date-picker",
+      "title": "DatePicker | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/date-range-picker",
+      "title": "DateRangePicker | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/description",
+      "title": "Description | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/description",
+      "title": "Description | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/design-principles",
+      "title": "Design Principles | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/dialog",
+      "title": "Dialog | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/dropdown",
+      "title": "Dropdown | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/error-message",
+      "title": "ErrorMessage | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/field-error",
+      "title": "FieldError | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/field-error",
+      "title": "FieldError | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/fieldset",
+      "title": "Fieldset | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/form",
+      "title": "Form | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/button",
+      "title": "HeroUI Button – Accessible React Button Component"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components",
+      "title": "HeroUI React Components – Accessible UI Library"
+    },
+    {
+      "url": "https://heroui.com/",
+      "title": "HeroUI v3 (Previously NextUI) - Beautiful by default, customizable by design."
+    },
+    {
+      "url": "https://heroui.com/llms.txt",
+      "title": "HeroUI — llms.txt"
+    },
+    {
+      "url": "https://heroui.com/native/llms-full.txt",
+      "title": "HeroUI — llms.txt"
+    },
+    {
+      "url": "https://heroui.com/native/llms.txt",
+      "title": "HeroUI — llms.txt"
+    },
     {
       "url": "https://www.heroui.com/llms.txt",
       "title": "HeroUI — llms.txt"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/migration/hooks",
+      "title": "Hooks | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/input",
+      "title": "Input | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/input-group",
+      "title": "InputGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/input-group",
+      "title": "InputGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/input-otp",
+      "title": "InputOTP | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/input-otp",
+      "title": "InputOTP | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0",
+      "title": "Introducing HeroUI v3 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/getting-started",
+      "title": "Introduction to HeroUI v3 – React UI Library"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started",
+      "title": "Introduction | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/label",
+      "title": "Label | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/link-button",
+      "title": "LinkButton | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/list-box",
+      "title": "ListBox | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/list-group",
+      "title": "ListGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/llms-txt",
+      "title": "LLMs.txt | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/mcp-server",
+      "title": "MCP Server | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/menu",
+      "title": "Menu | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/meter",
+      "title": "Meter | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/migration/agent-index",
+      "title": "Migration (for AI assistants) | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/migration",
+      "title": "Migration | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/popover",
+      "title": "Popover | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/portal",
+      "title": "Portal | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/pressable-feedback",
+      "title": "PressableFeedback | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/progress-bar",
+      "title": "ProgressBar | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/progress-circle",
+      "title": "ProgressCircle | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/provider",
+      "title": "Provider | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/quick-start",
+      "title": "Quick Start | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/radio-group",
+      "title": "RadioGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/range-calendar",
+      "title": "RangeCalendar | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/rc-1",
+      "title": "RC 1 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/rc-2",
+      "title": "RC 2 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/rc-3",
+      "title": "RC 3 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/rc-4",
+      "title": "RC 4 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/scroll-shadow",
+      "title": "ScrollShadow | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/search-field",
+      "title": "SearchField | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/select",
+      "title": "Select | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/separator",
+      "title": "Separator | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/showcase",
+      "title": "Showcase | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/skeleton",
+      "title": "Skeleton | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/skeleton",
+      "title": "Skeleton | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/skeleton-group",
+      "title": "SkeletonGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/slider",
+      "title": "Slider | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/slider",
+      "title": "Slider | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/spinner",
+      "title": "Spinner | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/spinner",
+      "title": "Spinner | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/migration/styling",
+      "title": "Styling & Theming | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/styling",
+      "title": "Styling | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/surface",
+      "title": "Surface | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/switch",
+      "title": "Switch | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/switch",
+      "title": "Switch | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/table",
+      "title": "Table | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/tabs",
+      "title": "Tabs | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/text-area",
+      "title": "TextArea | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/text-field",
+      "title": "TextField | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/getting-started/theming",
+      "title": "Theming | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/time-field",
+      "title": "TimeField | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/toast",
+      "title": "Toast | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/toggle-button",
+      "title": "ToggleButton | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/components/toggle-button-group",
+      "title": "ToggleButtonGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/components/text",
+      "title": "Typography | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-0",
+      "title": "v1.0.0 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-1",
+      "title": "v1.0.1 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-10",
+      "title": "v1.0.10 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-2",
+      "title": "v1.0.2 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-3",
+      "title": "v1.0.3 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-4",
+      "title": "v1.0.4 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-5",
+      "title": "v1.0.5 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-6",
+      "title": "v1.0.6 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-7",
+      "title": "v1.0.7 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-8",
+      "title": "v1.0.8 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/native/releases/v1-0-9",
+      "title": "v1.0.9 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-alpha-32",
+      "title": "v3.0.0-alpha.32 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-alpha-33",
+      "title": "v3.0.0-alpha.33 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-alpha-34",
+      "title": "v3.0.0-alpha.34 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-alpha-35",
+      "title": "v3.0.0-alpha.35 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-beta-1",
+      "title": "v3.0.0-beta.1 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-beta-2",
+      "title": "v3.0.0-beta.2 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-beta-3",
+      "title": "v3.0.0-beta.3 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-beta-4",
+      "title": "v3.0.0-beta.4 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-beta-6",
+      "title": "v3.0.0-beta.6 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-beta-7",
+      "title": "v3.0.0-beta.7 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-beta-8",
+      "title": "v3.0.0-beta.8 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-0-rc-1",
+      "title": "v3.0.0-rc.1 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-2",
+      "title": "v3.0.2 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-3",
+      "title": "v3.0.3 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-4",
+      "title": "v3.0.4 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-0-5",
+      "title": "v3.0.5 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-1-0",
+      "title": "v3.1.0 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-2-0",
+      "title": "v3.2.0 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-2-1",
+      "title": "v3.2.1 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-2-2",
+      "title": "v3.2.2 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-2-3",
+      "title": "v3.2.3 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-2-4",
+      "title": "v3.2.4 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-2-5",
+      "title": "v3.2.5 | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/releases/v3-2-6",
+      "title": "v3.2.6 | HeroUI"
     }
   ]
 }

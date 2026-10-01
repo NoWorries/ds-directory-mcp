@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "singapore-government-design-system",
   "organization": null,
   "design_system": "Singapore Government Design System",
@@ -9,21 +9,21 @@
     "https://www.designsystem.tech.gov.sg/"
   ],
   "detail_url": "/systems/singapore-government-design-system",
-  "pages_indexed": 231,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 376,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-20T03:05:25+00:00",
-  "last_modified": "Tue, 15 Sep 2026 04:41:46 GMT",
+  "last_checked": "2026-10-01T11:29:16+00:00",
+  "last_modified": "Tue, 29 Sep 2026 07:43:34 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "mcp": [
-      "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation",
-      "https://www.designsystem.tech.gov.sg/ai/mcp-server-setup",
-      "https://www.designsystem.tech.gov.sg/ai/mcp-server"
+      "https://designsystem.tech.gov.sg/ai/mcp-server",
+      "https://designsystem.tech.gov.sg/ai/mcp-server-setup",
+      "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation"
     ],
     "icons": [
-      "https://www.designsystem.tech.gov.sg/components/icon"
+      "https://designsystem.tech.gov.sg/components/icon"
     ]
   },
   "unverified_resources": {
@@ -32,8 +32,9 @@
     ]
   },
   "content_signals": {
-    "token_enforcement": true,
     "figma_code_connect": true,
+    "dark_mode": true,
+    "prohibition": true,
     "frameworks": [
       "React",
       "Vue",
@@ -65,16 +66,36 @@
       "title": "5 statistics preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/get-started/about-sgds",
+      "title": "About us – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/get-started/about-sgds",
       "title": "About us – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/stories/accessibility-from-an-engineering-perspective",
+      "title": "Accessibility from an engineering perspective – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/stories/accessibility-from-an-engineering-perspective",
       "title": "Accessibility from an engineering perspective – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/accessibility",
+      "title": "Accessibility – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/accessibility",
       "title": "Accessibility – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/accordion",
+      "title": "Accordion – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/data-display/accordion",
+      "title": "Accordion – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/accordion",
@@ -85,12 +106,24 @@
       "title": "Accordion – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/skills",
+      "title": "Agent skills – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/skills",
       "title": "Agent skills – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/stories/ai-can-scale-delivery-and-inconsistency",
+      "title": "AI can scale delivery. It can also scale inconsistency. – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/stories/ai-can-scale-delivery-and-inconsistency",
       "title": "AI can scale delivery. It can also scale inconsistency. – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/alert",
+      "title": "Alert – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/alert",
@@ -105,8 +138,24 @@
       "title": "All Types preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/page-templates/application-management",
+      "title": "Application management – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/page-templates/application-management",
       "title": "Application management – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/templates/page-templates/application-shell-operational",
+      "title": "Application shell (operational) – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/appnav",
+      "title": "Appnav – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/badge",
+      "title": "Badge – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/badge",
@@ -141,6 +190,10 @@
       "title": "Basic Right preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/blocks",
+      "title": "Blocks – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/blocks",
       "title": "Blocks – Singapore Government Design System"
     },
@@ -149,24 +202,52 @@
       "title": "Blog – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/border/radius",
+      "title": "Border radius – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/border/radius",
       "title": "Border radius – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/border/width",
+      "title": "Border width – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/border/width",
       "title": "Border width – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/colour/brand-colour",
+      "title": "Brand colour – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/colour/brand-colour",
       "title": "Brand colour – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/breadcrumb",
+      "title": "Breadcrumb – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/breadcrumb",
       "title": "Breadcrumb – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/layout/breakpoint",
+      "title": "Breakpoint – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/layout/breakpoint",
       "title": "Breakpoint – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/action/button",
+      "title": "Button – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/button",
+      "title": "Button – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/action/button",
@@ -185,12 +266,24 @@
       "title": "Call to action preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/cta",
+      "title": "Call to action – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/cta",
       "title": "Call to action – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/caption",
+      "title": "Caption – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/caption",
       "title": "Caption – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/card",
+      "title": "Card – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/card",
@@ -209,20 +302,40 @@
       "title": "Cards preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/cards",
+      "title": "Cards – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/cards",
       "title": "Cards – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/templates/page-templates/catalogue",
+      "title": "Catalogue – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/templates/page-templates/catalogue",
       "title": "Catalogue – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/checkbox",
+      "title": "Checkbox – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/checkbox",
       "title": "Checkbox – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/close-button",
+      "title": "Close button – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/close-button",
       "title": "Close button – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/combo-box",
+      "title": "Combo box – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/combo-box",
@@ -257,60 +370,124 @@
       "title": "Content guidance – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/get-started/content",
+      "title": "Content – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/get-started/content",
       "title": "Content – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/data-table",
+      "title": "Data table – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/datepicker",
+      "title": "Datepicker – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/datepicker",
       "title": "Datepicker – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/data-display/card/default",
+      "title": "Default – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/data-display/card/default",
       "title": "Default – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/description-list",
+      "title": "Description list – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/description-list",
       "title": "Description list – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/stories/design-and-code-finally-speaking-the-same-language",
+      "title": "Design and code, finally speaking the same language – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/stories/design-and-code-finally-speaking-the-same-language",
       "title": "Design and code, finally speaking the same language – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/get-started/design",
+      "title": "Design – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/get-started/design",
       "title": "Design – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/designers",
+      "title": "Designers – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/designers",
       "title": "Designers – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/get-started/develop",
+      "title": "Develop – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/get-started/develop",
       "title": "Develop – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/developers",
+      "title": "Developers – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/developers",
       "title": "Developers – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/ai/development-workflows",
+      "title": "Development workflows – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/ai/development-workflows",
       "title": "Development workflows – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/display",
+      "title": "Display – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/display",
       "title": "Display – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/divider",
+      "title": "Divider – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/divider",
       "title": "Divider – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/drawer",
+      "title": "Drawer – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/drawer",
       "title": "Drawer – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/dropdown",
+      "title": "Dropdown – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/dropdown",
       "title": "Dropdown – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/elevation/edge-elevation",
+      "title": "Edge elevation – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/elevation/edge-elevation",
@@ -325,12 +502,28 @@
       "title": "Feature preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/feature",
+      "title": "Feature – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/feature",
       "title": "Feature – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/figma-to-code",
+      "title": "Figma to code – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/figma-to-code",
       "title": "Figma to code – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/ai/figma-and-code-workflows",
+      "title": "Figma workflows – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/ai/mcp-server",
+      "title": "Figma workflows – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/ai/figma-and-code-workflows",
@@ -339,6 +532,10 @@
     {
       "url": "https://www.designsystem.tech.gov.sg/ai/mcp-server",
       "title": "Figma workflows – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/file-upload",
+      "title": "File upload – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/file-upload",
@@ -357,20 +554,40 @@
       "title": "Filter preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/filter",
+      "title": "Filter – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/filter",
       "title": "Filter – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/font-family",
+      "title": "Font family – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/font-family",
       "title": "Font family – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/typography-tokens",
+      "title": "Font size – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/typography-tokens",
       "title": "Font size – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/font-weight-tokens",
+      "title": "Font weight – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/font-weight-tokens",
       "title": "Font weight – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/footer",
+      "title": "Footer – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/footer",
@@ -433,6 +650,10 @@
       "title": "Form Multi-step preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/page-templates/form-page",
+      "title": "Form page – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/page-templates/form-page",
       "title": "Form page – Singapore Government Design System"
     },
@@ -441,8 +662,16 @@
       "title": "Form preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/form",
+      "title": "Form – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/form",
       "title": "Form – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations",
+      "title": "Foundations – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations",
@@ -473,8 +702,16 @@
       "title": "Full-width only preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/spacing/gap",
+      "title": "Gap – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/spacing/gap",
       "title": "Gap – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/get-started",
+      "title": "Get started – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/get-started",
@@ -483,6 +720,10 @@
     {
       "url": "https://www.designsystem.tech.gov.sg/guidelines",
       "title": "Guidelines – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/heading",
+      "title": "Heading – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/heading",
@@ -517,36 +758,72 @@
       "title": "Hero preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/hero",
+      "title": "Hero – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/hero",
       "title": "Hero – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/",
+      "title": "Home – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/",
       "title": "Home – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/icon-button",
+      "title": "Icon button – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/icon-button",
       "title": "Icon button – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/icon-card",
+      "title": "Icon card – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/icon-card",
       "title": "Icon card – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/iconography/icon-library",
+      "title": "Icon library – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/iconography/icon-library",
       "title": "Icon library – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/icon-list",
+      "title": "Icon list – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/icon-list",
       "title": "Icon list – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/iconography/icon-size",
+      "title": "Icon size – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/iconography/icon-size",
       "title": "Icon size – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/icon",
+      "title": "Icon – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/icon",
       "title": "Icon – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/image-card",
+      "title": "Image card – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/image-card",
@@ -577,32 +854,68 @@
       "title": "Image right 8:4 preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/input",
+      "title": "Input – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/input",
       "title": "Input – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/stories/introducing-sgds-agent-skills",
+      "title": "Introducing SGDS agent skills – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/stories/introducing-sgds-agent-skills",
       "title": "Introducing SGDS agent skills – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/introduction",
+      "title": "Introduction – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/introduction",
       "title": "Introduction – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/label",
+      "title": "Label – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/label",
       "title": "Label – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/page-templates/landing",
+      "title": "Landing page – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/page-templates/landing",
       "title": "Landing page – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/letter-spacing-tokens",
+      "title": "Letter spacing – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/letter-spacing-tokens",
       "title": "Letter spacing – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/line-height-tokens",
+      "title": "Line height – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/line-height-tokens",
       "title": "Line height – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/link",
+      "title": "Link – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/link",
+      "title": "Link – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/link",
@@ -613,28 +926,56 @@
       "title": "Link – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/list",
+      "title": "List – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/list",
       "title": "List – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/ai/llm-txt",
+      "title": "LLMs.txt – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/ai/llm-txt",
       "title": "LLMs.txt – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/mainnav",
+      "title": "Mainnav – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/mainnav",
       "title": "Mainnav – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/spacing/margin",
+      "title": "Margin – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/spacing/margin",
       "title": "Margin – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/masthead",
+      "title": "Masthead – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/masthead",
       "title": "Masthead – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/mcp-server-setup",
+      "title": "MCP server setup – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/mcp-server-setup",
       "title": "MCP server setup – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/modal",
+      "title": "Modal – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/modal",
@@ -653,16 +994,76 @@
       "title": "No image left preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/others",
+      "title": "Others – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/others",
       "title": "Others – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/overflow-menu",
+      "title": "Overflow menu – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/overflow-menu",
       "title": "Overflow menu – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/overline",
+      "title": "Overline – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/overline",
       "title": "Overline – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/ai/overview",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/data-display/card/overview",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/border",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/colour",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/design-tokens",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/elevation",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/iconography",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/layer",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/layout",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/motion",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/spacing",
+      "title": "Overview – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography",
+      "title": "Overview – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/motion",
@@ -717,6 +1118,10 @@
       "title": "Overview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/spacing/padding",
+      "title": "Padding – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/spacing/padding",
       "title": "Padding – Singapore Government Design System"
     },
@@ -737,8 +1142,16 @@
       "title": "Page header with breadcrumb preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/header",
+      "title": "Page header – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/header",
       "title": "Page header – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/pagination",
+      "title": "Pagination – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/pagination",
@@ -753,28 +1166,56 @@
       "title": "Paired Only preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/paragraph-body",
+      "title": "Paragraph body – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/paragraph-body",
       "title": "Paragraph body – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/paragraph-spacing",
+      "title": "Paragraph spacing – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/paragraph-spacing",
       "title": "Paragraph spacing – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/colour/primitive-colour",
+      "title": "Primitive colour – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/colour/primitive-colour",
       "title": "Primitive colour – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/progress-bar",
+      "title": "Progress bar – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/progress-bar",
       "title": "Progress bar – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/prompt-tips",
+      "title": "Prompt tips – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/prompt-tips",
       "title": "Prompt tips – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/quantity-toggle",
+      "title": "Quantity toggle – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/quantity-toggle",
       "title": "Quantity toggle – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/radio",
+      "title": "Radio – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/radio",
@@ -787,6 +1228,10 @@
     {
       "url": "https://www.designsystem.tech.gov.sg/resources/overview",
       "title": "Resources – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/layout/responsive-grid",
+      "title": "Responsive grid – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/layout/responsive-grid",
@@ -817,32 +1262,64 @@
       "title": "Sections Two preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/select",
+      "title": "Select – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/select",
       "title": "Select – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/colour/semantic-colour",
+      "title": "Semantic colour – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/colour/semantic-colour",
       "title": "Semantic colour – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/setup-instructions",
+      "title": "Setup instructions – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/setup-instructions",
       "title": "Setup instructions – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/sidebar",
+      "title": "Sidebar – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/sidebar",
       "title": "Sidebar – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/sidenav",
+      "title": "Sidenav – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/sidenav",
       "title": "Sidenav – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/skeleton",
+      "title": "Skeleton – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/skeleton",
       "title": "Skeleton – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/spacing/spacer-scale",
+      "title": "Spacer scale – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/spacing/spacer-scale",
       "title": "Spacer scale – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/spinner",
+      "title": "Spinner – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/spinner",
@@ -865,104 +1342,208 @@
       "title": "Stats preview – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates/block-templates/stats",
+      "title": "Stats – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates/block-templates/stats",
       "title": "Stats – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/stepper",
+      "title": "Stepper – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/stepper",
       "title": "Stepper – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/stories",
+      "title": "Stories – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/stories",
       "title": "Stories – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/stories/strengthening-the-system-from-within",
+      "title": "Strengthening the system from within – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/stories/strengthening-the-system-from-within",
       "title": "Strengthening the system from within – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/subnav",
+      "title": "Subnav – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/subnav",
       "title": "Subnav – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/subtitle",
+      "title": "Subtitle – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/subtitle",
       "title": "Subtitle – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/elevation/surface-elevation",
+      "title": "Surface elevation – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/elevation/surface-elevation",
       "title": "Surface elevation – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/switch",
+      "title": "Switch – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/switch",
       "title": "Switch – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/system-banner",
+      "title": "System banner – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/system-banner",
       "title": "System banner – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/tab",
+      "title": "Tab – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/tab",
       "title": "Tab – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/table-of-contents",
+      "title": "Table of contents – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/table-of-contents",
       "title": "Table of contents – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/table",
+      "title": "Table – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/table",
       "title": "Table – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/templates",
+      "title": "Templates – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/templates",
       "title": "Templates – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/text-decoration",
+      "title": "Text decoration – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/text-decoration",
       "title": "Text decoration – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/typography/text-transform",
+      "title": "Text transform – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/typography/text-transform",
       "title": "Text transform – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/textarea",
+      "title": "Textarea – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/textarea",
       "title": "Textarea – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/stories/the-learning-curve-before-ai",
+      "title": "The learning curve before AI – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/stories/the-learning-curve-before-ai",
       "title": "The learning curve before AI – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/stories/role-of-a-design-system-in-the-agentic-ai-era",
+      "title": "The role of a design system in the agentic AI era – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/stories/role-of-a-design-system-in-the-agentic-ai-era",
       "title": "The role of a design system in the agentic AI era – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/components/thumbnail-card",
+      "title": "Thumbnail card – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/components/thumbnail-card",
       "title": "Thumbnail card – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/toast",
+      "title": "Toast – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/toast",
       "title": "Toast – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/foundations/token-architecture",
+      "title": "Token architecture – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/foundations/token-architecture",
       "title": "Token architecture – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/components/tooltip",
+      "title": "Tooltip – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/components/tooltip",
       "title": "Tooltip – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/ai/what-ai-can-do",
+      "title": "What AI can do – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/ai/what-ai-can-do",
       "title": "What AI can do – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/ai/what-is-mcp",
+      "title": "What is MCP? – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/ai/what-is-mcp",
       "title": "What is MCP? – Singapore Government Design System"
     },
     {
+      "url": "https://designsystem.tech.gov.sg/stories/what-sgds-is-often-mistaken-for",
+      "title": "What SGDS is often mistaken for – Singapore Government Design System"
+    },
+    {
       "url": "https://www.designsystem.tech.gov.sg/stories/what-sgds-is-often-mistaken-for",
       "title": "What SGDS is often mistaken for – Singapore Government Design System"
+    },
+    {
+      "url": "https://designsystem.tech.gov.sg/foundations/layer/layer-tokens",
+      "title": "Z-index – Singapore Government Design System"
     },
     {
       "url": "https://www.designsystem.tech.gov.sg/foundations/layer/layer-tokens",

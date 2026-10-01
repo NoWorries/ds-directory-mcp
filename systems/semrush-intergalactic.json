@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "semrush-intergalactic",
   "organization": "Semrush",
   "design_system": "Intergalactic",
@@ -10,63 +10,25 @@
   ],
   "detail_url": "/systems/semrush-intergalactic",
   "pages_indexed": 429,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-20T06:17:01+00:00",
+  "last_checked": "2026-10-01T11:21:53+00:00",
   "last_modified": "Thu, 10 Sep 2026 13:48:17 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
       "https://github.com/semrush/intergalactic"
     ],
-    "figma": [
-      "https://www.figma.com/design/uBxKSTlXSEDiKvFp6txzrr/%F0%9F%93%AE-Product-Email-Library",
-      "https://www.figma.com/design/EWdX1ly5KsoNu8sywYJdKk/%F0%9F%92%A0-UX-Patterns",
-      "https://www.figma.com/design/iwWLdt4VZkZBx1XQltLsBL/Libraries-onboarding---playground-%F0%9F%8E%93",
-      "https://www.figma.com/design/DjWsMXmFfCMxtiyNtoYjRO/%F0%9F%90%8B-Flags",
-      "https://www.figma.com/design/lVX2dKnVFtcSTQV7eSS5j1/%F0%9F%90%8B-Icons",
-      "https://www.figma.com/file/eqedT6ztHYWNoikkTOmiUV/Notes-%E2%80%A2-List%2C-widget%2C-library",
-      "https://www.figma.com/design/hwYZpLVEg6TU1AFwpBvYXA/%F0%9F%90%8B-Table-Components",
-      "https://www.figma.com/file/EWdX1ly5KsoNu8sywYJdKk",
-      "https://www.figma.com/design/t7T1SLzIkERV1IrsjsKugE/%F0%9F%90%8B-UX-Patterns",
-      "https://www.figma.com/file/ZDRC056k8PbUFi3qoFAWj9/Design-File-Template-Library",
-      "https://www.figma.com/design/3oPFz95uakNgr0diY7k5dW/%F0%9F%90%8B-Design-Tokens",
-      "https://www.figma.com/design/RLic9ruqNNm6qgARKFk5Ae/%F0%9F%90%8B-Core-Components",
-      "https://www.figma.com/design/EBG44NotS7lmjZnUOkhyrp/%F0%9F%90%8B-Charts-Components",
-      "https://www.figma.com/file/EWdX1ly5KsoNu8sywYJdKk/%F0%9F%92%A0-UX-Patterns",
-      "https://www.figma.com/file/eqmm39DfX895qOSM0KnQGb/Web-performance-schemes",
-      "https://www.figma.com/design/1zWWz7R5Lt9tt9BM6Bzf6W/%F0%9F%90%8B-Filter-Patterns"
-    ],
-    "markdown_docs": [
-      "https://github.com/semrush/intergalactic/tree/HEAD/tools/process-css-unplugin/README.md",
-      "https://github.com/semrush/intergalactic/blob/HEAD/tools/babel-plugin-react-semcore/README.md"
-    ],
     "icons": [
       "https://developer.semrush.com/intergalactic/style/icon/icon-api",
-      "https://developer.semrush.com/intergalactic/style/icon/icon-code",
-      "https://developer.semrush.com/intergalactic/style/icon/icon",
-      "https://developer.semrush.com/intergalactic/style/icon/icon-changelog",
-      "https://developer.semrush.com/intergalactic/style/icon/icon-a11y"
+      "https://developer.semrush.com/intergalactic/style/icon/icon"
     ],
     "agent_instructions": [
       "https://developer.semrush.com/llms.txt"
     ]
   },
-  "unverified_resources": {
-    "github": [
-      "https://github.com/d3/d3-shape",
-      "https://github.com/unjs/unplugin",
-      "https://github.com/bvaughn/react-virtualized",
-      "https://github.com/d3/d3-scale"
-    ],
-    "npm": [
-      "https://www.npmjs.com/package/update-by-scope",
-      "https://www.npmjs.com/package/webpack-bundle-analyzer",
-      "https://www.npmjs.com/package/webpack-node-externals",
-      "https://www.npmjs.com/package/@semcore/stylelint-plugin"
-    ]
-  },
+  "unverified_resources": {},
   "content_signals": {
     "exemplars": true,
     "frameworks": [
@@ -75,8 +37,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 183,
-    "last_pushed": "2026-09-18T21:42:27Z"
+    "stars": 185,
+    "last_pushed": "2026-10-01T11:18:32Z"
   },
   "npm_meta": {
     "latest_version": "1.1.0",

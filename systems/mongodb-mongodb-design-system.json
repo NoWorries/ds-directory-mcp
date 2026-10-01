@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "mongodb-mongodb-design-system",
   "organization": "MongoDB",
   "design_system": "MongoDB Design System",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-20T12:11:12+00:00",
+  "last_checked": "2026-10-01T10:50:55+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -24,8 +24,8 @@
       "https://figma.com/design/L41rvEwQmJJ8VzO4hCPc7Y/LeafyGreen-Chat-Library"
     ],
     "icons": [
-      "https://mongodb.design/component/icon/guidelines",
-      "https://mongodb.design/component/icon/live-example"
+      "https://mongodb.design/component/icon/live-example",
+      "https://mongodb.design/component/icon/guidelines"
     ]
   },
   "unverified_resources": {},
@@ -59,11 +59,11 @@
       "title": "Date & Time"
     },
     {
-      "url": "https://mongodb.design/component/inline-definition/design-docs",
+      "url": "https://mongodb.design/component/modal/design-docs",
       "title": "Design docs"
     },
     {
-      "url": "https://mongodb.design/component/date-picker/design-docs",
+      "url": "https://mongodb.design/component/inline-definition/design-docs",
       "title": "Design docs"
     },
     {
@@ -71,15 +71,15 @@
       "title": "Design docs"
     },
     {
-      "url": "https://mongodb.design/component/modal/design-docs",
-      "title": "Design docs"
-    },
-    {
-      "url": "https://mongodb.design/component/drawer/design-docs",
+      "url": "https://mongodb.design/component/date-picker/design-docs",
       "title": "Design docs"
     },
     {
       "url": "https://mongodb.design/component/card/design-docs",
+      "title": "Design docs"
+    },
+    {
+      "url": "https://mongodb.design/component/drawer/design-docs",
       "title": "Design docs"
     },
     {

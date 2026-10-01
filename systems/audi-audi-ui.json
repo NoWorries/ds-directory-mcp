@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "audi-audi-ui",
   "organization": "Audi",
   "design_system": "Audi UI",
@@ -13,9 +13,9 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T04:09:31+00:00",
+  "last_checked": "2026-10-01T09:49:17+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-18T05:35:14+02:00",
+  "sitemap_last_modified": "2026-10-01T11:35:14+02:00",
   "resources": {
     "agent_instructions": [
       "https://www.audi.com/llms.txt"

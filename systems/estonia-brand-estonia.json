@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "estonia-brand-estonia",
   "organization": "Estonia",
   "design_system": "Brand Estonia",
@@ -9,20 +9,20 @@
     "https://brand.estonia.ee/"
   ],
   "detail_url": "/systems/estonia-brand-estonia",
-  "pages_indexed": 30,
+  "pages_indexed": 28,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T06:50:49+00:00",
+  "last_checked": "2026-10-01T10:17:17+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "figma": [
-      "https://www.figma.com/design/A1xWacpiD78gQSVpaXwjLV/%F0%9F%94%B7-Brand---Logos",
-      "https://www.figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media",
-      "https://www.figma.com/design/NZMXNJpfAvyw7GkdxaAexw/%F0%9F%94%B7-Brand---Shapes",
-      "https://www.figma.com/design/G4alDnApAMevLkdNKPG4fgRu/%F0%9F%94%B7-Brand---Icons",
-      "https://www.figma.com/design/27fMG3SrUcYhLhyNTmsuV3/%F0%9F%92%8E-DDS-2.0---WIP"
+      "https://figma.com/design/G4alDnApAMevLkdNKPG4fgRu/%F0%9F%94%B7-Brand---Icons",
+      "https://figma.com/design/27fMG3SrUcYhLhyNTmsuV3/%F0%9F%92%8E-DDS-2.0---WIP",
+      "https://figma.com/design/NZMXNJpfAvyw7GkdxaAexw/%F0%9F%94%B7-Brand---Shapes",
+      "https://figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media",
+      "https://figma.com/design/A1xWacpiD78gQSVpaXwjLV/%F0%9F%94%B7-Brand---Logos"
     ]
   },
   "unverified_resources": {},
@@ -71,10 +71,6 @@
       "title": "Estonia's official website estonia.ee"
     },
     {
-      "url": "https://brand.estonia.ee/numbers/annual-report/2025/events",
-      "title": "Events that shaped 2025"
-    },
-    {
       "url": "https://brand.estonia.ee/numbers/annual-report/2025/foreword",
       "title": "Foreword"
     },
@@ -113,10 +109,6 @@
     {
       "url": "https://brand.estonia.ee/numbers/annual-report/2025/new-assets",
       "title": "New brand assets"
-    },
-    {
-      "url": "https://brand.estonia.ee/news",
-      "title": "News | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/inspiration-examples/rooted-in-estonia",

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "nulogy-nulogy-design-system",
   "organization": "Nulogy",
   "design_system": "Nulogy Design System",
@@ -13,39 +13,39 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T10:49:29+00:00",
+  "last_checked": "2026-10-01T11:04:51+00:00",
   "last_modified": "Fri, 04 Nov 2022 15:26:29 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/nulogy/nds-test-releases",
-      "https://github.com/nulogy/design-system"
+      "https://github.com/nulogy/design-system",
+      "https://github.com/nulogy/nds-test-releases"
     ],
     "storybook": [
       "https://master--5f60c6c285eaad0022dce67f.chromatic.com/"
     ],
     "figma": [
-      "https://www.figma.com/file/IH4gk9P2E4xEYiNKoD22Jd/NDS-v1",
-      "https://www.figma.com/file/jRQxfwCL27gfqfrdCxOIQG/NDS"
+      "https://figma.com/file/IH4gk9P2E4xEYiNKoD22Jd/NDS-v1",
+      "https://figma.com/file/jRQxfwCL27gfqfrdCxOIQG/NDS"
     ],
     "markdown_docs": [
       "https://github.com/nulogy/design-system/blob/master/components/README.md"
     ],
     "icons": [
-      "https://fonts.google.com/icons",
-      "https://nulogy.design/components/icon"
+      "https://nulogy.design/components/icon",
+      "https://fonts.google.com/icons"
     ]
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/semantic-release/release-notes-generator",
-      "https://github.com/semantic-release/npm",
-      "https://github.com/semantic-release/changelog",
-      "https://github.com/semantic-release/github",
       "https://github.com/semantic-release/commit-analyzer",
+      "https://github.com/semantic-release/changelog",
+      "https://github.com/semantic-release/release-notes-generator",
+      "https://github.com/semantic-release/git",
+      "https://github.com/semantic-release/npm",
+      "https://github.com/semantic-release/github",
       "https://github.com/semantic-release/semantic-release",
-      "https://github.com/features/actions",
-      "https://github.com/semantic-release/git"
+      "https://github.com/features/actions"
     ]
   },
   "content_signals": {
@@ -53,7 +53,11 @@
       "React"
     ]
   },
-  "github_meta": null,
+  "github_meta": {
+    "license": "MIT",
+    "stars": 65,
+    "last_pushed": "2026-09-28T15:48:32Z"
+  },
   "npm_meta": null,
   "indexed_pages": [
     {

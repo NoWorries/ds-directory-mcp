@@ -1,0 +1,446 @@
+{
+  "$schema": "../design-system.schema.json#/$defs/system",
+  "generated_at": "2026-10-01T12:32:26+00:00",
+  "id": "sis-gov-uk-intelligence-community-design-system",
+  "organization": "SIS Gov UK",
+  "design_system": "Intelligence Community Design System",
+  "full_name": "SIS Gov UK — Intelligence Community Design System",
+  "start_urls": [
+    "https://design.sis.gov.uk/"
+  ],
+  "detail_url": "/systems/sis-gov-uk-intelligence-community-design-system",
+  "pages_indexed": 97,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
+  "likely_spa": false,
+  "last_checked": "2026-10-01T11:34:00+00:00",
+  "last_modified": "Mon, 24 Aug 2026 14:51:52 GMT",
+  "sitemap_last_modified": null,
+  "resources": {
+    "figma": [
+      "https://figma.com/community/file/1498958950039853080",
+      "https://figma.com/community/file/1498962049358219292"
+    ],
+    "markdown_docs": [
+      "https://github.com/mi6/ic-design-system/tree/main/CONTRIBUTING.md",
+      "https://github.com/mi6/ic-ui-kit/blob/main/CONTRIBUTING.md",
+      "https://github.com/mi6/ic-ui-kit/blob/main/packages/codemod/README.md"
+    ],
+    "icons": [
+      "https://design.sis.gov.uk/styles/icons"
+    ]
+  },
+  "unverified_resources": {
+    "github": [
+      "https://github.com/avanslaars/cypress-axe",
+      "https://github.com/pa11y/pa11y-ci",
+      "https://github.com/dequelabs/axe-core",
+      "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y",
+      "https://github.com/dequelabs/axe-selenium-java",
+      "https://github.com/KonnorRogers/shadow-dom-testing-library"
+    ]
+  },
+  "content_signals": {
+    "dark_mode": true,
+    "codemods": true,
+    "frameworks": [
+      "React",
+      "Web Components",
+      "Angular",
+      "Vue",
+      "Svelte"
+    ]
+  },
+  "github_meta": null,
+  "npm_meta": null,
+  "indexed_pages": [
+    {
+      "url": "https://design.sis.gov.uk/accessibility/documenting/conformance-report",
+      "title": "Accessibility Conformance Report - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/needs",
+      "title": "Accessibility needs - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/icds/accessibility-statement",
+      "title": "Accessibility Statement - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/documenting/accessibility-statements-guidance",
+      "title": "Accessibility Statement guidance - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/feedback-progress/action-chip/accessibility",
+      "title": "Action chip - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/feedback-progress/action-chip",
+      "title": "Action chip - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/patterns/ai",
+      "title": "AI (Artificial Intelligence) - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/feedback-progress/alert",
+      "title": "Alert - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/angular",
+      "title": "Angular - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/needs/auditory",
+      "title": "Auditory needs - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/testing/automated-testing",
+      "title": "Automated accessibility testing - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/feedback-progress/badge",
+      "title": "Badge - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/card-horizontal",
+      "title": "Card (horizontal) - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/card-horizontal/accessibility",
+      "title": "Card (horizontal) - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/feedback-progress/chip",
+      "title": "Chip - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/coding",
+      "title": "Coding for accessibility - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/community",
+      "title": "Community - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/icds/cookies-and-storage-policy",
+      "title": "Cookies and Storage Policy - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/patterns/dark-mode",
+      "title": "Dark mode - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/data-display",
+      "title": "Data display - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/data-display/data-table",
+      "title": "Data table - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/data-display/data-table/accessibility",
+      "title": "Data table - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/date-input",
+      "title": "Date input - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/date-picker",
+      "title": "Date picker - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/date-picker/accessibility",
+      "title": "Date picker - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/introduction/definition",
+      "title": "Defining accessibility - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/design",
+      "title": "Design - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/design/design-principles",
+      "title": "Design principles - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/needs/general",
+      "title": "Designing for accessibility needs - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development",
+      "title": "Development - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/requirement",
+      "title": "Digital Accessibility Policy - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/divider",
+      "title": "Divider - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/divider/accessibility",
+      "title": "Divider - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/documenting",
+      "title": "Documenting accessibility - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/drawer/accessibility",
+      "title": "Drawer - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/drawer",
+      "title": "Drawer - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/feedback-progress",
+      "title": "Feedback and progress - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/design/figma",
+      "title": "Figma UI Kit - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/gatsby",
+      "title": "Gatsby - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started",
+      "title": "Get started - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/community/contribute",
+      "title": "How to contribute - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/styles/content-style/inclusive-language",
+      "title": "Inclusive language - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs",
+      "title": "Inputs - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components",
+      "title": "Install the components - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/introduction",
+      "title": "Introduction to accessibility - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/needs/invisible",
+      "title": "Invisible illness - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout",
+      "title": "Layout - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/styles/layout-spacing",
+      "title": "Layout and spacing - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/layout-grid/accessibility",
+      "title": "Layout grid - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/layout-grid",
+      "title": "Layout grid - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/link",
+      "title": "Link - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/link/accessibility",
+      "title": "Link - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/styles/content-style/links",
+      "title": "Links - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/requirement/meeting-the-policy",
+      "title": "Meeting the Policy - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/migrating-to-v3",
+      "title": "Migrating to V3 - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/needs/motor",
+      "title": "Motor needs - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation",
+      "title": "Navigation - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/needs/neurodiversity",
+      "title": "Neurodiversity - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/nextJS",
+      "title": "Next.js - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/page-header",
+      "title": "Page header - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/pagination/accessibility",
+      "title": "Pagination - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/pagination",
+      "title": "Pagination - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/pagination-bar/accessibility",
+      "title": "Pagination bar - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/pagination-bar",
+      "title": "Pagination bar - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/radio/accessibility",
+      "title": "Radio button - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/radio",
+      "title": "Radio button - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/react",
+      "title": "React - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/releases-versions",
+      "title": "Releases and versions - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/community/roadmap",
+      "title": "Roadmap - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/layout/section-container",
+      "title": "Section container - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/select",
+      "title": "Select - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/skip-link",
+      "title": "Skip link - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/requirement/subtitles-transcripts-captions",
+      "title": "Subtitling, transcripts and audio description - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/svelte",
+      "title": "Svelte - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/switch/accessibility",
+      "title": "Switch - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/switch",
+      "title": "Switch - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/table-of-contents/accessibility",
+      "title": "Table of contents - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/table-of-contents",
+      "title": "Table of contents - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/table-themes",
+      "title": "Table themes - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/test-components",
+      "title": "Testing components - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/test-components/testing-with-cypress",
+      "title": "Testing with Cypress - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/test-components/testing-with-jest-and-rtl",
+      "title": "Testing with Jest and React Testing Library - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/theme-customisation/theme",
+      "title": "Theme - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/theme-customisation",
+      "title": "Theme and customisation - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/time-input/accessibility",
+      "title": "Time input - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/time-input",
+      "title": "Time input - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/feedback-progress/toast",
+      "title": "Toast - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/inputs/toggle-button",
+      "title": "Toggle button - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/tree-view/accessibility",
+      "title": "Tree view - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/navigation/tree-view",
+      "title": "Tree view - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/typescript",
+      "title": "Typescript - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/styles/typography",
+      "title": "Typography - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/components/utility",
+      "title": "Utility - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/accessibility/needs/visual",
+      "title": "Visual needs - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/vue",
+      "title": "Vue - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/development/install-components/web-components",
+      "title": "Web components - Intelligence Community Design System"
+    },
+    {
+      "url": "https://design.sis.gov.uk/get-started/a-design-system",
+      "title": "Why we built a Design System - Intelligence Community Design System"
+    }
+  ]
+}

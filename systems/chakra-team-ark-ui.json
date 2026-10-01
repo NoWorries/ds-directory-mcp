@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "chakra-team-ark-ui",
   "organization": "Chakra team",
   "design_system": "Ark UI",
@@ -10,36 +10,32 @@
   ],
   "detail_url": "/systems/chakra-team-ark-ui",
   "pages_indexed": 107,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-20T01:15:17+00:00",
+  "last_checked": "2026-10-01T12:00:28+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "github": [
       "https://github.com/chakra-ui/ark"
     ],
-    "storybook": [
-      "https://ark-ui.com/blog/using-ark-ui-with-storybook"
-    ],
     "mcp": [
-      "https://ark-ui.com/docs/ai/mcp-server",
-      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
-      "https://ark-ui.com/blog/announcing-ark-ui-mcp-server",
-      "https://modelcontextprotocol.io/introduction",
+      "https://ark-ui.com/react/docs/ai/mcp-server",
       "https://ark-ui.com/docs/ai/mcp-server.mdx",
-      "https://ark-ui.com/react/docs/ai/mcp-server"
+      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
+      "https://modelcontextprotocol.io/introduction",
+      "https://ark-ui.com/docs/ai/mcp-server"
     ],
     "agent_instructions": [
-      "https://ark-ui.com/llms.txt",
       "https://ark-ui.com/docs/ai/llms.txt",
+      "https://ark-ui.com/llms.txt",
       "https://ark-ui.com/llms-full.txt"
     ]
   },
   "unverified_resources": {
     "npm": [
-      "https://www.npmjs.com/package/check-password-strength"
+      "https://npmjs.com/package/check-password-strength"
     ]
   },
   "content_signals": {
@@ -51,8 +47,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 5397,
-    "last_pushed": "2026-09-19T21:41:52Z"
+    "stars": 5403,
+    "last_pushed": "2026-10-01T07:55:57Z"
   },
   "npm_meta": null,
   "indexed_pages": [

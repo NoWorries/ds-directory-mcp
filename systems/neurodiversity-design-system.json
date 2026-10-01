@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "neurodiversity-design-system",
   "organization": "Neurodiversity",
   "design_system": "Design system",
@@ -9,17 +9,64 @@
     "https://neurodiversity.design/"
   ],
   "detail_url": "/systems/neurodiversity-design-system",
-  "pages_indexed": 8,
+  "pages_indexed": 11,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-15T22:04:29+00:00",
+  "last_checked": "2026-10-01T10:55:06+00:00",
   "last_modified": "Wed, 03 Dec 2025 08:16:31 GMT",
   "sitemap_last_modified": null,
   "resources": {},
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "dark_mode": true
+  },
   "github_meta": null,
   "npm_meta": null,
-  "indexed_pages": []
+  "indexed_pages": [
+    {
+      "url": "https://neurodiversity.design/animations",
+      "title": "Animations | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/buttons-links-inputs",
+      "title": "Buttons, Links and Inputs | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/",
+      "title": "Colophon | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/colour",
+      "title": "Colour | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/communications",
+      "title": "Communications | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/about",
+      "title": "Contact | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/personas",
+      "title": "Dev Road Map | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/font",
+      "title": "Font | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/interface",
+      "title": "Interface | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/typography",
+      "title": "Typography | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/definitions",
+      "title": "UX Definitions | NDS"
+    }
+  ]
 }

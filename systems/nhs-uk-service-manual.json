@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "nhs-uk-service-manual",
   "organization": "NHS.UK",
   "design_system": "Service Manual",
@@ -9,29 +9,32 @@
     "https://service-manual.nhs.uk/"
   ],
   "detail_url": "/systems/nhs-uk-service-manual",
-  "pages_indexed": 221,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 222,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-20T02:26:45+00:00",
+  "last_checked": "2026-10-01T11:08:49+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/NHSDigital/nhsuk-react-components",
+      "https://github.com/nhsuk/nhsuk-service-manual-backlog",
       "https://github.com/NHSDigital/nhsuk-frontend-jinja",
-      "https://github.com/nhsuk/nhsuk-frontend",
-      "https://github.com/nhsuk/nhsuk-service-manual-backlog"
+      "https://github.com/NHSDigital/nhsuk-react-components",
+      "https://github.com/nhsuk/nhsuk-frontend"
+    ],
+    "figma": [
+      "https://figma.com/community/file/1217465175363344449/nhs-figma-design-system"
     ],
     "icons": [
-      "https://service-manual.nhs.uk/design-system/styles/icons",
-      "https://service-manual.nhs.uk/design-example/styles/icons/search",
-      "https://service-manual.nhs.uk/design-example/styles/icons/sizes",
+      "https://service-manual.nhs.uk/design-example/styles/icons/arrows",
       "https://service-manual.nhs.uk/design-example/styles/icons/user",
       "https://service-manual.nhs.uk/design-example/styles/icons/arrow-right-circle",
+      "https://service-manual.nhs.uk/design-system/styles/icons",
+      "https://service-manual.nhs.uk/design-example/styles/icons/search",
+      "https://service-manual.nhs.uk/design-example/styles/icons/tick-and-cross",
       "https://service-manual.nhs.uk/design-example/styles/icons/chevron-right-circle",
-      "https://service-manual.nhs.uk/design-example/styles/icons/arrows",
-      "https://service-manual.nhs.uk/design-example/styles/icons/tick-and-cross"
+      "https://service-manual.nhs.uk/design-example/styles/icons/sizes"
     ]
   },
   "unverified_resources": {},
@@ -40,9 +43,9 @@
     "governance_model": true
   },
   "github_meta": {
-    "license": "MIT",
-    "stars": 80,
-    "last_pushed": "2026-09-14T06:44:51Z"
+    "license": null,
+    "stars": 68,
+    "last_pushed": "2024-10-24T14:59:56Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -905,6 +908,10 @@
     {
       "url": "https://service-manual.nhs.uk/design-system/components/warning-callout",
       "title": "Warning callout – NHS digital service manual"
+    },
+    {
+      "url": "https://service-manual.nhs.uk/accessibility/what-all-NHS-services-need-to-do",
+      "title": "What all NHS services need to do about accessibility – NHS digital service manual"
     },
     {
       "url": "https://service-manual.nhs.uk/accessibility/what-all-nhs-services-need-to-do",

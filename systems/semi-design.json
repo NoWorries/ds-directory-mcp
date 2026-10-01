@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "semi-design",
   "organization": null,
   "design_system": "Semi Design",
@@ -9,11 +9,11 @@
     "https://semi.design/en-US/"
   ],
   "detail_url": "/systems/semi-design",
-  "pages_indexed": 100,
+  "pages_indexed": 99,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T12:41:34+00:00",
+  "last_checked": "2026-10-01T11:27:20+00:00",
   "last_modified": null,
   "sitemap_last_modified": "2026-09-01T09:19:17.652Z",
   "resources": {
@@ -21,15 +21,16 @@
       "https://github.com/YannLynn/semi-ai-chat-demo"
     ],
     "figma": [
-      "https://www.figma.com/design/81rCf36kFTcxedsGgAibzd/Semi-Design--Base-",
-      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo",
-      "https://www.figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo%EF%BC%88Figma-Community%EF%BC%89"
+      "https://figma.com/design/81rCf36kFTcxedsGgAibzd/Semi-Design--Base-",
+      "https://figma.com/community/file/1509783980598707066/semi-design-library",
+      "https://figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo%EF%BC%88Figma-Community%EF%BC%89",
+      "https://figma.com/file/TlLeWouyImYUexTmhdLiIn/D2C-Getting-Start-Demo"
     ],
     "mcp": [
       "https://modelcontextprotocol.io/"
     ],
     "npm": [
-      "https://www.npmjs.com/package/@douyinfe/semi-next"
+      "https://npmjs.com/package/@douyinfe/semi-next"
     ],
     "icons": [
       "https://semi.design/en-US/basic/icon"
@@ -37,17 +38,17 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/clauderic/react-sortable-hoc",
-      "https://github.com/yiminghe/async-validator",
-      "https://github.com/clauderic/dnd-kit",
+      "https://github.com/microsoft/vscode",
       "https://github.com/CassetteRocks/react-infinite-scroller",
       "https://github.com/bvaughn/react-virtualized",
-      "https://github.com/microsoft/vscode",
+      "https://github.com/clauderic/react-sortable-hoc",
       "https://github.com/airbnb/lottie-web",
-      "https://github.com/stipsan/scroll-into-view-if-needed"
+      "https://github.com/stipsan/scroll-into-view-if-needed",
+      "https://github.com/clauderic/dnd-kit",
+      "https://github.com/yiminghe/async-validator"
     ],
     "npm": [
-      "https://www.npmjs.com/package/reset-css"
+      "https://npmjs.com/package/reset-css"
     ]
   },
   "content_signals": {
@@ -65,7 +66,7 @@
   "npm_meta": {
     "latest_version": "2.103.0",
     "last_published": "2026-09-01T08:46:21.693Z",
-    "weekly_downloads": 790
+    "weekly_downloads": 495
   },
   "indexed_pages": [
     {
@@ -403,10 +404,6 @@
     {
       "url": "https://semi.design/en-US/navigation/tabs",
       "title": "Tabs - Semi Design"
-    },
-    {
-      "url": "https://semi.design/en-US/show/tag",
-      "title": "Tag - Semi Design"
     },
     {
       "url": "https://semi.design/en-US/input/taginput",

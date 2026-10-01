@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "tailwind-labs-headless-ui",
   "organization": "Tailwind Labs",
   "design_system": "Headless UI",
@@ -13,8 +13,8 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-18T15:44:44+00:00",
-  "last_modified": "Wed, 02 Sep 2026 00:54:41 GMT",
+  "last_checked": "2026-10-01T12:03:04+00:00",
+  "last_modified": "Wed, 30 Sep 2026 11:46:07 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -30,7 +30,7 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 28744,
+    "stars": 28769,
     "last_pushed": "2026-04-13T16:12:31Z"
   },
   "npm_meta": null,

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "servicetitan-anvil",
   "organization": "ServiceTitan",
   "design_system": "Anvil",
@@ -9,39 +9,34 @@
     "https://anvil.servicetitan.com/"
   ],
   "detail_url": "/systems/servicetitan-anvil",
-  "pages_indexed": 442,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 450,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-20T02:11:32+00:00",
+  "last_checked": "2026-10-01T11:33:45+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-18T22:12:37.214Z",
+  "sitemap_last_modified": "2026-09-30T21:20:12.188Z",
   "resources": {
     "github": [
       "https://github.com/servicetitan/hammer"
     ],
     "storybook": [
       "https://storybook.js.org/docs/writing-tests/accessibility-testing",
-      "https://main--64627e95c8a540f70fd17e9e.chromatic.com/",
-      "https://www.chromatic.com/",
+      "https://chromatic.com/",
       "https://storybook.js.org/"
     ],
     "figma": [
-      "https://www.figma.com/proto/xDpwL1pomsuEb4vd8X42PT/Anvil-Color-Accessibility-Guide",
-      "https://www.figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library",
-      "https://www.figma.com/design/QEIsArLktLeJAaFvcpw3PO/Carto-Web-Components",
-      "https://www.figma.com/design/jgymIi7ydk9JE2Q5RM6uLz/%F0%9F%8C%88-Spike--Expanded-Color-Ramps-in-Anvil",
-      "https://www.figma.com/design/KfMPM2hzHLX6Sr1YGWNXHc/Anvil2",
-      "https://www.figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates",
-      "https://www.figma.com/design/6WeJz8JMm1in6Wb4g0wLP5/Carto-Design-Tokens"
+      "https://figma.com/design/QEIsArLktLeJAaFvcpw3PO/Carto-Web-Components",
+      "https://figma.com/design/KfMPM2hzHLX6Sr1YGWNXHc/Anvil2",
+      "https://figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates",
+      "https://figma.com/design/6WeJz8JMm1in6Wb4g0wLP5/Carto-Design-Tokens",
+      "https://figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library"
     ],
     "markdown_docs": [
-      "https://github.com/servicetitan/hammer/blob/main/packages/anvil2/README.md",
-      "https://github.com/servicetitan/hammer/blob/main/README.md",
       "https://github.com/servicetitan/hammer/tree/master/packages/anvil2/README.md",
+      "https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md",
       "https://github.com/servicetitan/anvil2/blob/master/README.md",
-      "https://github.com/servicetitan/hammer/blob/main/CONTRIBUTING.md",
-      "https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md"
+      "https://github.com/servicetitan/hammer/blob/main/CONTRIBUTING.md"
     ],
     "agent_instructions": [
       "https://anvil.servicetitan.com/llms.txt",
@@ -49,14 +44,11 @@
       "https://anvil.servicetitan.com/AGENTS.md"
     ],
     "npm": [
-      "https://www.npmjs.com/package/@servicetitan/startup",
-      "https://www.npmjs.com/package/@servicetitan/anvil2"
+      "https://npmjs.com/package/@servicetitan/anvil2",
+      "https://npmjs.com/package/@servicetitan/startup"
     ],
     "icons": [
-      "https://anvil.servicetitan.com/docs/web/components/icon/code",
-      "https://anvil.servicetitan.com/docs/web/components/icon/tokens",
-      "https://anvil.servicetitan.com/docs/web/icons",
-      "https://anvil.servicetitan.com/docs/web/components/icon/design"
+      "https://anvil.servicetitan.com/docs/web/icons"
     ],
     "mcp": [
       "https://anvil.servicetitan.com/.well-known/mcp.json"
@@ -64,27 +56,23 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/dequelabs/axe-core",
-      "https://github.com/kentcdodds/match-sorter"
+      "https://github.com/dequelabs/axe-core"
     ]
   },
   "content_signals": {
-    "prohibition": true,
     "dark_mode": true,
-    "exemplars": true,
-    "tokens_format": "DTCG",
     "accessibility_conformance": "WCAG 2.2 AA",
-    "governance_model": true,
+    "tokens_format": "Figma Variables",
+    "prohibition": true,
     "frameworks": [
-      "React",
-      "Web Components"
+      "React"
     ]
   },
   "github_meta": null,
   "npm_meta": {
-    "latest_version": "39.3.0",
-    "last_published": "2026-09-10T17:38:18.644Z",
-    "weekly_downloads": 14472
+    "latest_version": "3.15.0",
+    "last_published": "2026-09-28T23:19:31.847Z",
+    "weekly_downloads": 26238
   },
   "indexed_pages": [
     {
@@ -210,6 +198,14 @@
     {
       "url": "https://anvil.servicetitan.com/docs/resources/migration-guides/2.0-to-3.0",
       "title": "Anvil2 2.0 to 3.0 - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/anvil2-icons",
+      "title": "Anvil2 Icons"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/anvil2-icons/usage",
+      "title": "Anvil2 Icons – Usage"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/app-header/code",
@@ -544,11 +540,11 @@
       "title": "Citation – Design – AI Kit"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/web/foundations/colors",
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/colors",
       "title": "Colors - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/colors",
+      "url": "https://anvil.servicetitan.com/docs/web/foundations/colors",
       "title": "Colors - Anvil2"
     },
     {
@@ -828,11 +824,11 @@
       "title": "Embedded AI - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/web/patterns/empty-states",
+      "url": "https://anvil.servicetitan.com/docs/blocks/empty-state",
       "title": "Empty States - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/blocks/empty-state",
+      "url": "https://anvil.servicetitan.com/docs/web/patterns/empty-states",
       "title": "Empty States - Anvil2"
     },
     {
@@ -908,15 +904,15 @@
       "title": "Foundations - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/kits/charts/getting-started",
-      "title": "Getting Started - Anvil2"
-    },
-    {
       "url": "https://anvil.servicetitan.com/docs/getting-started",
       "title": "Getting Started - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/getting-started",
+      "title": "Getting Started - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/charts/getting-started",
       "title": "Getting Started - Anvil2"
     },
     {
@@ -956,11 +952,15 @@
       "title": "Hermes GPT - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/kits/common/hooks",
-      "title": "Hooks - Anvil2"
+      "url": "https://anvil.servicetitan.com/docs/blocks/home-screens",
+      "title": "Home Screens - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/utilities/hooks",
+      "title": "Hooks - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/common/hooks",
       "title": "Hooks - Anvil2"
     },
     {
@@ -980,11 +980,11 @@
       "title": "Icon – Tokens"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/web/foundations/iconography",
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/iconography",
       "title": "Iconography - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/iconography",
+      "url": "https://anvil.servicetitan.com/docs/web/foundations/iconography",
       "title": "Iconography - Anvil2"
     },
     {
@@ -996,11 +996,11 @@
       "title": "Illustrations"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/web/illustrations",
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/illustrations",
       "title": "Illustrations - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/illustrations",
+      "url": "https://anvil.servicetitan.com/docs/web/illustrations",
       "title": "Illustrations - Anvil2"
     },
     {
@@ -1148,6 +1148,10 @@
       "title": "Markdown – Design – AI Kit"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/react-native/components/markdown-table/code",
+      "title": "MarkdownTable – Code – React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/accessibility/media-and-animation",
       "title": "Media and Animation - Anvil2"
     },
@@ -1252,15 +1256,15 @@
       "title": "Overflow – Tokens"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/resources/playbook/overview",
-      "title": "Overview - Anvil2"
-    },
-    {
       "url": "https://anvil.servicetitan.com/docs/accessibility",
       "title": "Overview - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/ai-and-anvil2",
+      "title": "Overview - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/resources/playbook/overview",
       "title": "Overview - Anvil2"
     },
     {
@@ -1296,12 +1300,20 @@
       "title": "Palettes – Charts - React Native"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/web/patterns/peek",
-      "title": "Peek - Anvil2"
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/voice-patterns",
+      "title": "Patterns - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/blocks/peek",
       "title": "Peek - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/web/patterns/peek",
+      "title": "Peek - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/persona-and-voice-guidelines",
+      "title": "Persona and Voice Guidelines - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/popover/code",
@@ -1314,6 +1326,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/popover/tokens",
       "title": "Popover – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/voice-principles",
+      "title": "Principles - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/resources/playbook/principles",
@@ -1752,15 +1768,15 @@
       "title": "Typeahead Text Field – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/typography",
+      "title": "Typography - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/data-visualization/typography",
       "title": "Typography - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/foundations/typography",
-      "title": "Typography - Anvil2"
-    },
-    {
-      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/typography",
       "title": "Typography - Anvil2"
     },
     {
@@ -1834,6 +1850,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/resources/playbook/versioning-releases",
       "title": "Versioning and Releases - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/overview",
+      "title": "Voice Experience - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/react-native/components/voice-mode-fab/code",

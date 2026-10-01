@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "aws-cloudscape-design-system",
   "organization": "AWS",
   "design_system": "Cloudscape Design System",
@@ -10,59 +10,37 @@
   ],
   "detail_url": "/systems/aws-cloudscape-design-system",
   "pages_indexed": 157,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-23T09:21:25+00:00",
-  "last_modified": "Tue, 22 Sep 2026 18:13:22 GMT",
+  "last_checked": "2026-10-01T09:56:22+00:00",
+  "last_modified": "Wed, 30 Sep 2026 19:26:05 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/cloudscape-design/components",
-      "https://github.com/cloudscape-design/jest-preset"
-    ],
-    "figma": [
-      "https://figma.com/design/fwbGAQCAvHX0rcmxxTTmV8/%5BCDS%5D-Foundations"
+      "https://github.com/cloudscape-design/components"
     ],
     "markdown_docs": [
-      "https://github.com/cloudscape-design/jest-preset/blob/main/README.md",
       "https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md"
-    ],
-    "agent_instructions": [
-      "https://cloudscape.design/llms.txt"
-    ],
-    "npm": [
-      "https://npmjs.com/package/@cloudscape-design/global-styles",
-      "https://npmjs.com/package/@cloudscape-design/collection-hooks"
     ],
     "icons": [
       "https://cloudscape.design/components/icon"
-    ]
-  },
-  "unverified_resources": {
-    "github": [
-      "https://github.com/NMFR/optimize-css-assets-webpack-plugin",
-      "https://github.com/modosc/global-jsdom",
-      "https://github.com/testing-library/react-testing-library",
-      "https://github.com/csstools/stylelint-use-logical",
-      "https://github.com/webpack-contrib/mini-css-extract-plugin"
     ],
-    "npm": [
-      "https://npmjs.com/package/normalize.css"
+    "agent_instructions": [
+      "https://cloudscape.design/llms.txt"
     ]
   },
+  "unverified_resources": {},
   "content_signals": {
     "dark_mode": true,
-    "tokens_format": "DTCG",
-    "cli_scaffolding": true,
     "frameworks": [
       "React"
     ]
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 2647,
-    "last_pushed": "2026-09-23T08:07:31Z"
+    "stars": 2654,
+    "last_pushed": "2026-10-01T09:32:47Z"
   },
   "npm_meta": {
     "latest_version": "1.0.70",

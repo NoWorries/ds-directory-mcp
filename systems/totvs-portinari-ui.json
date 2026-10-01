@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-09-30T10:46:06+00:00",
+  "generated_at": "2026-10-01T12:32:26+00:00",
   "id": "totvs-portinari-ui",
   "organization": "TOTVS",
   "design_system": "Portinari UI",
@@ -11,10 +11,10 @@
   "detail_url": "/systems/totvs-portinari-ui",
   "pages_indexed": 1,
   "coverage_status": "partial",
-  "hit_max_pages": false,
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-20T12:44:40+00:00",
-  "last_modified": "Tue, 15 Sep 2026 20:42:18 GMT",
+  "last_checked": "2026-10-01T11:42:03+00:00",
+  "last_modified": "Tue, 29 Sep 2026 17:45:26 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "agent_instructions": [
