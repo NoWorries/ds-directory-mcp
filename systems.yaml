@@ -2238,9 +2238,9 @@
   - https://www.predix-ui.com/
   pages_indexed: 2
   hit_max_pages: false
-  crawl_error: '403 Client Error: Forbidden for url: https://predix-ui.com/'
+  crawl_error: rendered fetch returned no content
   likely_spa: false
-  last_checked: '2026-10-01T10:19:52+00:00'
+  last_checked: '2026-10-01T12:36:50+00:00'
   consecutive_crawl_failures: 1
   unverified_resources: {}
   content_signals: {}
