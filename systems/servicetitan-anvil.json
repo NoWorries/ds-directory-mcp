@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-05T11:18:21+00:00",
+  "generated_at": "2026-10-07T12:47:51+00:00",
   "id": "servicetitan-anvil",
   "organization": "ServiceTitan",
   "design_system": "Anvil",
@@ -9,34 +9,39 @@
     "https://anvil.servicetitan.com/"
   ],
   "detail_url": "/systems/servicetitan-anvil",
-  "pages_indexed": 450,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 454,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T11:33:45+00:00",
+  "last_checked": "2026-10-07T11:51:06+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-30T21:20:12.188Z",
+  "sitemap_last_modified": "2026-10-06T20:41:27.098Z",
   "resources": {
     "github": [
       "https://github.com/servicetitan/hammer"
     ],
     "storybook": [
-      "https://storybook.js.org/docs/writing-tests/accessibility-testing",
       "https://chromatic.com/",
-      "https://storybook.js.org/"
+      "https://main--64627e95c8a540f70fd17e9e.chromatic.com/",
+      "https://storybook.js.org/",
+      "https://storybook.js.org/docs/writing-tests/accessibility-testing"
     ],
     "figma": [
+      "https://figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library",
       "https://figma.com/design/QEIsArLktLeJAaFvcpw3PO/Carto-Web-Components",
+      "https://figma.com/design/jgymIi7ydk9JE2Q5RM6uLz/%F0%9F%8C%88-Spike--Expanded-Color-Ramps-in-Anvil",
       "https://figma.com/design/KfMPM2hzHLX6Sr1YGWNXHc/Anvil2",
-      "https://figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates",
+      "https://figma.com/proto/xDpwL1pomsuEb4vd8X42PT/Anvil-Color-Accessibility-Guide",
       "https://figma.com/design/6WeJz8JMm1in6Wb4g0wLP5/Carto-Design-Tokens",
-      "https://figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library"
+      "https://figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates"
     ],
     "markdown_docs": [
-      "https://github.com/servicetitan/hammer/tree/master/packages/anvil2/README.md",
-      "https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md",
+      "https://github.com/servicetitan/hammer/blob/main/README.md",
       "https://github.com/servicetitan/anvil2/blob/master/README.md",
-      "https://github.com/servicetitan/hammer/blob/main/CONTRIBUTING.md"
+      "https://github.com/servicetitan/hammer/blob/main/packages/anvil2/README.md",
+      "https://github.com/servicetitan/hammer/blob/main/CONTRIBUTING.md",
+      "https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md",
+      "https://github.com/servicetitan/hammer/tree/master/packages/anvil2/README.md"
     ],
     "agent_instructions": [
       "https://anvil.servicetitan.com/llms.txt",
@@ -48,7 +53,10 @@
       "https://npmjs.com/package/@servicetitan/startup"
     ],
     "icons": [
-      "https://anvil.servicetitan.com/docs/web/icons"
+      "https://anvil.servicetitan.com/docs/web/components/icon/tokens",
+      "https://anvil.servicetitan.com/docs/web/components/icon/design",
+      "https://anvil.servicetitan.com/docs/web/icons",
+      "https://anvil.servicetitan.com/docs/web/components/icon/code"
     ],
     "mcp": [
       "https://anvil.servicetitan.com/.well-known/mcp.json"
@@ -56,7 +64,8 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/dequelabs/axe-core"
+      "https://github.com/dequelabs/axe-core",
+      "https://github.com/kentcdodds/match-sorter"
     ]
   },
   "content_signals": {
@@ -70,9 +79,9 @@
   },
   "github_meta": null,
   "npm_meta": {
-    "latest_version": "3.15.0",
-    "last_published": "2026-09-28T23:19:31.847Z",
-    "weekly_downloads": 26238
+    "latest_version": "3.15.2",
+    "last_published": "2026-10-02T21:18:51.057Z",
+    "weekly_downloads": 26886
   },
   "indexed_pages": [
     {
@@ -616,6 +625,10 @@
       "title": "Continued Learning and Tools - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/core-principles",
+      "title": "Core Principles - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/accessibility/custom-components",
       "title": "Creating Custom Components - Anvil2"
     },
@@ -1024,6 +1037,10 @@
       "title": "Interactive Card – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/kits/common/form-fields/interval-frequency",
+      "title": "Interval frequency - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/utilities/intl-provider",
       "title": "Intl Provider – AI Kit"
     },
@@ -1384,6 +1401,10 @@
       "title": "Rich Text Editor – Code"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/resources/roadmap",
+      "title": "Roadmap - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/saved-filters-button/code",
       "title": "Saved Filters Button – Code"
     },
@@ -1528,11 +1549,11 @@
       "title": "Spacing - Anvil2"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/web/components/spinner/code",
+      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/spinner/code",
       "title": "Spinner – Code"
     },
     {
-      "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/spinner/code",
+      "url": "https://anvil.servicetitan.com/docs/web/components/spinner/code",
       "title": "Spinner – Code"
     },
     {
@@ -1850,6 +1871,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/resources/playbook/versioning-releases",
       "title": "Versioning and Releases - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/visit-anvil1",
+      "title": "Visit Anvil1 - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/overview",

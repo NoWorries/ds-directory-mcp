@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-05T11:18:21+00:00",
+  "generated_at": "2026-10-07T12:47:51+00:00",
   "id": "siemens-ix",
   "organization": null,
   "design_system": "Siemens iX",
@@ -9,30 +9,58 @@
     "https://ix.siemens.io/"
   ],
   "detail_url": "/systems/siemens-ix",
-  "pages_indexed": 278,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 272,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T11:30:08+00:00",
-  "last_modified": "Wed, 30 Sep 2026 07:28:46 GMT",
+  "last_checked": "2026-10-07T11:45:36+00:00",
+  "last_modified": "Mon, 05 Oct 2026 11:48:16 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
+      "https://github.com/yagizhanNY/siemens-ix-blazor",
       "https://github.com/siemens/ix"
     ],
     "figma": [
       "https://figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology",
       "https://figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines"
     ],
+    "markdown_docs": [
+      "https://github.com/siemens/ix/blob/main/CONTRIBUTING.md"
+    ],
+    "mcp": [
+      "https://ix.siemens.io/docs/home/mcp-server",
+      "https://ix.siemens.io//docs/home/mcp-server",
+      "https://ix.siemens.io/docs/home/mcp-server.md"
+    ],
     "icons": [
-      "https://ix.siemens.io/docs/icons/icon-library"
+      "https://ix.siemens.io/docs/icons/developing-with-icons",
+      "https://ix.siemens.io//docs/icons/icon-library",
+      "https://ix.siemens.io/docs/icons/design-new-icons",
+      "https://brandville.siemens.com/en/design-elements/icons/ui-icons",
+      "https://ix.siemens.io//docs/icons/developing-with-icons",
+      "https://ix.siemens.io//docs/icons/design-new-icons",
+      "https://ix.siemens.io/docs/icons/icon-usage",
+      "https://ix.siemens.io/docs/icons/icon-library",
+      "https://ix.siemens.io/docs/icons/design-new-icons.md",
+      "https://ix.siemens.io/docs/icons/developing-with-icons.md",
+      "https://ix.siemens.io/docs/icons/icon-library.md",
+      "https://ix.siemens.io/docs/icons/icon-usage.md",
+      "https://ix.siemens.io//docs/icons/icon-usage"
     ],
     "agent_instructions": [
       "https://ix.siemens.io/llms.txt",
       "https://ix.siemens.io/llms-full.txt"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/Rich-Harris/degit"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@axe-core/playwright"
+    ]
+  },
   "content_signals": {
     "dark_mode": true,
     "frameworks": [
@@ -44,8 +72,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 379,
-    "last_pushed": "2026-10-01T11:19:16Z"
+    "stars": 35,
+    "last_pushed": "2026-09-28T17:55:04Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -254,11 +282,11 @@
       "title": "Chip - Usage | Siemens Industrial Experience"
     },
     {
-      "url": "https://ix.siemens.io/docs/guidelines/accessibility/code",
+      "url": "https://ix.siemens.io/docs/components/message-modal/code",
       "title": "code | Siemens Industrial Experience"
     },
     {
-      "url": "https://ix.siemens.io/docs/components/message-modal/code",
+      "url": "https://ix.siemens.io/docs/guidelines/accessibility/code",
       "title": "code | Siemens Industrial Experience"
     },
     {
@@ -376,10 +404,6 @@
     {
       "url": "https://ix.siemens.io/docs/components/group/code",
       "title": "Development | Siemens Industrial Experience"
-    },
-    {
-      "url": "https://ix.siemens.io/docs/guidelines/language/dialogs-and-buttons",
-      "title": "Dialogs and buttons | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/dropdown/code",
@@ -516,10 +540,6 @@
     {
       "url": "https://ix.siemens.io/docs/components/forms-validation/guide",
       "title": "Forms validation - Usage | Siemens Industrial Experience"
-    },
-    {
-      "url": "https://ix.siemens.io/docs/guidelines/language/frequent-app-functions",
-      "title": "Frequent app functions | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/funneling-input",
@@ -758,10 +778,6 @@
       "title": "Overview Conversational design | Siemens Industrial Experience"
     },
     {
-      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/overview",
-      "title": "Overview | Siemens Industrial Experience"
-    },
-    {
       "url": "https://ix.siemens.io/docs/components/charts-overview/overview",
       "title": "Overview | Siemens Industrial Experience"
     },
@@ -771,6 +787,10 @@
     },
     {
       "url": "https://ix.siemens.io/docs/guidelines/conversational-design/designing-conversations/overview",
+      "title": "Overview | Siemens Industrial Experience"
+    },
+    {
+      "url": "https://ix.siemens.io/docs/guidelines/language/forms-and-form-fields/overview",
       "title": "Overview | Siemens Industrial Experience"
     },
     {
@@ -1040,22 +1060,6 @@
     {
       "url": "https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/ui-terminology",
       "title": "UI terminology | Siemens Industrial Experience"
-    },
-    {
-      "url": "https://ix.siemens.io/docs/home/migration/2_0_0",
-      "title": "Upgrade to V2 | Siemens Industrial Experience"
-    },
-    {
-      "url": "https://ix.siemens.io/docs/home/migration/3_0_0",
-      "title": "Upgrade to V3 | Siemens Industrial Experience"
-    },
-    {
-      "url": "https://ix.siemens.io/docs/home/migration/4_0_0",
-      "title": "Upgrade to V4 | Siemens Industrial Experience"
-    },
-    {
-      "url": "https://ix.siemens.io/docs/home/migration/5_0_0",
-      "title": "Upgrade to V5 | Siemens Industrial Experience"
     },
     {
       "url": "https://ix.siemens.io/docs/components/upload/code",

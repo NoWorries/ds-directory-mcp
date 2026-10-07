@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-05T11:18:21+00:00",
+  "generated_at": "2026-10-07T12:47:51+00:00",
   "id": "chakra-team-ark-ui",
   "organization": "Chakra team",
   "design_system": "Ark UI",
@@ -9,11 +9,11 @@
     "https://ark-ui.com/"
   ],
   "detail_url": "/systems/chakra-team-ark-ui",
-  "pages_indexed": 107,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "pages_indexed": 105,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T12:00:28+00:00",
+  "last_checked": "2026-10-07T11:54:35+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -23,13 +23,13 @@
     "mcp": [
       "https://ark-ui.com/react/docs/ai/mcp-server",
       "https://ark-ui.com/docs/ai/mcp-server.mdx",
-      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
       "https://modelcontextprotocol.io/introduction",
-      "https://ark-ui.com/docs/ai/mcp-server"
+      "https://ark-ui.com/docs/ai/mcp-server",
+      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports"
     ],
     "agent_instructions": [
-      "https://ark-ui.com/docs/ai/llms.txt",
       "https://ark-ui.com/llms.txt",
+      "https://ark-ui.com/docs/ai/llms.txt",
       "https://ark-ui.com/llms-full.txt"
     ]
   },
@@ -47,8 +47,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 5403,
-    "last_pushed": "2026-10-01T07:55:57Z"
+    "stars": 5408,
+    "last_pushed": "2026-10-07T06:38:05Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -87,10 +87,6 @@
     {
       "url": "https://ark-ui.com/docs/components/avatar",
       "title": "Avatar | Ark UI"
-    },
-    {
-      "url": "https://ark-ui.com/blog",
-      "title": "Blog | Ark UI"
     },
     {
       "url": "https://ark-ui.com/docs/components/carousel",
@@ -435,10 +431,6 @@
     {
       "url": "https://ark-ui.com/docs/components/tabs",
       "title": "Tabs | Ark UI"
-    },
-    {
-      "url": "https://ark-ui.com/docs/components/tags-input",
-      "title": "Tags Input | Ark UI"
     },
     {
       "url": "https://ark-ui.com/docs/components/timer",

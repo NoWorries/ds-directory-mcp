@@ -408,53 +408,95 @@
   - /patterns/
   - /foundations/
   - /content/
-  pages_indexed: 62
+  pages_indexed: 309
   resources:
+    github:
+    - https://github.com/atlassian-labs/react-resource-router
     storybook:
     - https://atlassian.design/components/storybook-addon-design-system
     icons:
+    - https://atlaskit.atlassian.com/packages/design-system/icon
+    - https://atlassian.design/components/icon/icon-tile/code
+    - https://bitbucket.org/atlassian/atlassian-frontend-mirror/src/master/design-system/icon
+    - https://atlassian.design/components/icon/icon-explorer
+    - https://unpkg.com/@atlaskit/icon/dist
+    - https://atlassian.design/components/icon/icon-tile
+    - https://atlassian.design/components/banner/code/packages/design-system/icon
     - https://atlassian.design/components/icon/changelog
     - https://atlassian.design/components/icon/code
-    - https://atlassian.design/components/icon/icon-tile
+    - https://atlassian.design/components/icon
+    - https://atlassian.design/components/icon/icon-tile/examples
+    - https://npmjs.com/package/@atlaskit/icon
+    - https://atlassian.design/components/icon/usage
     - https://atlassian.design/components/icon/examples
     - https://atlassian.design/components/icon/icon-tile/usage
-    - https://unpkg.com/@atlaskit/icon/dist
-    - https://npmjs.com/package/@atlaskit/icon
-    - https://atlassian.design/components/icon
-    - https://atlassian.design/components/icon/icon-explorer
-    - https://bitbucket.org/atlassian/atlassian-frontend-mirror/src/master/design-system/icon
-    - https://atlassian.design/components/icon/usage
     agent_instructions:
     - https://atlassian.design/llms.txt
     - https://atlassian.design/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: '"d1cf9d05f75c2ef518b6fc3ca283d3e5"'
-  last_modified: Thu, 01 Oct 2026 04:29:42 GMT
-  last_checked: '2026-10-01T09:53:53+00:00'
+  etag: '"e95d46001dc1a86aa02a8aa177f5dbed"'
+  last_modified: Wed, 07 Oct 2026 03:10:34 GMT
+  last_checked: '2026-10-07T11:12:25+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources:
+    github:
+    - https://github.com/alexreardon/bind-event-listener
     npm:
+    - https://npmjs.com/package/@atlaskit/visually-hidden
+    - https://npmjs.com/package/@atlaskit/app-provider
+    - https://npmjs.com/package/@atlaskit/stylelint-design-system
+    - https://npmjs.com/package/@atlaskit/radio
+    - https://npmjs.com/package/@atlaskit/link
+    - https://npmjs.com/package/@atlaskit/textarea
+    - https://npmjs.com/package/@atlaskit/modal-dialog
+    - https://npmjs.com/package/@atlaskit/onboarding
     - https://npmjs.com/package/@atlaskit/eslint-plugin-design-system
+    - https://npmjs.com/package/@atlaskit/logo
+    - https://npmjs.com/package/@atlaskit/tile
+    - https://npmjs.com/package/@atlaskit/tooltip
     - https://npmjs.com/package/@atlaskit/code
+    - https://npmjs.com/package/@atlaskit/section-message
+    - https://npmjs.com/package/@atlaskit/spotlight
+    - https://npmjs.com/package/@atlaskit/popup
+    - https://npmjs.com/package/@atlaskit/menu
+    - https://npmjs.com/package/@atlaskit/select
+    - https://npmjs.com/package/@atlaskit/button
+    - https://npmjs.com/package/@atlaskit/tokens
+    - https://npmjs.com/package/@atlaskit/banner
+    - https://npmjs.com/package/@atlaskit/checkbox
     - https://npmjs.com/package/@atlaskit/codemod-cli
+    - https://npmjs.com/package/@atlaskit/object
+    - https://npmjs.com/package/@atlaskit/range
+    - https://npmjs.com/package/@atlaskit/image
+    - https://npmjs.com/package/@atlaskit/avatar
+    - https://npmjs.com/package/@atlaskit/toggle
+    - https://npmjs.com/package/@atlaskit/inline-message
     - https://npmjs.com/package/@atlaskit/icon
+    - https://npmjs.com/package/@atlaskit/datetime-picker
+    - https://npmjs.com/package/@atlaskit/empty-state
+    - https://npmjs.com/package/@atlaskit/textfield
     - https://npmjs.com/package/@atlaskit/primitives
+    - https://npmjs.com/package/@atlaskit/flag
+    - https://npmjs.com/package/@atlaskit/heading
+    - https://npmjs.com/package/@atlaskit/form
   content_signals:
     dark_mode: true
-    codemods: true
     frameworks:
     - React
   content_signal_sources:
-    dark_mode: https://atlassian.design/foundations/illustrations
-    codemods: https://atlassian.design/components/icon/code
+    dark_mode: https://atlassian.design/foundations/elevation
     frameworks:
       React: https://atlassian.design/foundations/iconography
-  thin_page_ratio: 0.59
+  thin_page_ratio: 0.38
   has_localized_docs: false
   render_mode: ''
+  github_meta:
+    license: Apache-2.0
+    stars: 209
+    last_pushed: '2025-12-20T08:21:19Z'
 - organization: Audi
   design_system: Audi UI
   start_urls:
@@ -655,41 +697,60 @@
   resources:
     github:
     - https://github.com/cloudscape-design/components
+    - https://github.com/cloudscape-design/jest-preset
+    figma:
+    - https://figma.com/design/fwbGAQCAvHX0rcmxxTTmV8/%5BCDS%5D-Foundations
     markdown_docs:
+    - https://github.com/cloudscape-design/jest-preset/blob/main/README.md
     - https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md
-    icons:
-    - https://cloudscape.design/components/icon
     agent_instructions:
     - https://cloudscape.design/llms.txt
-  hit_max_pages: true
+    npm:
+    - https://npmjs.com/package/@cloudscape-design/collection-hooks
+    - https://npmjs.com/package/@cloudscape-design/global-styles
+    icons:
+    - https://cloudscape.design/components/icon
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: Apache-2.0
-    stars: 2654
-    last_pushed: '2026-10-01T09:32:47Z'
-  etag: W/"3c18cd4ed8217fed8926deebc0d91d7a"
-  last_modified: Wed, 30 Sep 2026 19:26:05 GMT
-  last_checked: '2026-10-01T09:56:22+00:00'
+    stars: 2659
+    last_pushed: '2026-10-07T10:47:55Z'
+  etag: W/"30a169019f30a1ab57391fdbbdccbb5a"
+  last_modified: Fri, 02 Oct 2026 10:55:16 GMT
+  last_checked: '2026-10-07T11:06:49+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/NMFR/optimize-css-assets-webpack-plugin
+    - https://github.com/csstools/stylelint-use-logical
+    - https://github.com/testing-library/react-testing-library
+    - https://github.com/modosc/global-jsdom
+    - https://github.com/webpack-contrib/mini-css-extract-plugin
+    npm:
+    - https://npmjs.com/package/normalize.css
   content_signals:
     dark_mode: true
+    tokens_format: DTCG
+    cli_scaffolding: true
     frameworks:
     - React
   content_signal_sources:
     dark_mode: https://cloudscape.design/
+    tokens_format: https://cloudscape.design/foundation/visual-foundation/design-tokens
+    cli_scaffolding: https://cloudscape.design/gen-ai/ai-tools/llms-txt-files
     frameworks:
       React: https://cloudscape.design/
-  thin_page_ratio: 0.99
+  thin_page_ratio: 0.6
   has_localized_docs: false
   sitemap_url: https://cloudscape.design/sitemap.xml
   render_mode: ''
   npm_meta:
-    latest_version: 1.0.70
-    last_published: '2026-09-13T00:36:06.660Z'
-    weekly_downloads: 72911
+    latest_version: 1.0.110
+    last_published: '2026-09-21T12:59:21.630Z'
+    weekly_downloads: 201816
 - organization: AWS Amplify
   design_system: Amplify UI
   start_urls:
@@ -801,37 +862,37 @@
   design_system: Skyline
   start_urls:
   - https://skyline.benevity.org/
-  pages_indexed: 156
+  pages_indexed: 154
   resources:
     figma:
-    - https://figma.com/file/kwQnx660zNTXdRKrcnmGqS/Figma-API-Embed---Layout-%26-Spacing
-    - https://figma.com/file/LyqZZbxD6h0O7fOTKDG3TmON/Skyline-UI-Kit
-    - https://figma.com/file/36qGJNr3QY1dFI1cvwyj7s/PX-Tool-Kit
-    - https://figma.com/file/36qGJNr3QY1dFI1cvwyj7s/Presentation-Kit
     - https://figma.com/proto/PkGqofp1FSqPa72hlkgk3dDL/Developer-Tutorial-on-Figma
+    - https://figma.com/file/kwQnx660zNTXdRKrcnmGqS/Figma-API-Embed---Layout-%26-Spacing
+    - https://figma.com/file/36qGJNr3QY1dFI1cvwyj7s/PX-Tool-Kit
     - https://figma.com/proto/KO7hp8rwUXq1s7DvAU25Wr/Skyline-A-Z-Product-Glossary
+    - https://figma.com/file/36qGJNr3QY1dFI1cvwyj7s/Presentation-Kit
+    - https://figma.com/file/LyqZZbxD6h0O7fOTKDG3TmON/Skyline-UI-Kit
     icons:
-    - https://stash.benevity.org/projects/WEB/repos/skyline/browse/packages/icons/CHANGELOG.md
     - https://skyline.benevity.org/components/images-and-icons/icons
     - https://skyline.benevity.org/components/icons
-  hit_max_pages: true
+    - https://stash.benevity.org/projects/WEB/repos/skyline/browse/packages/icons/CHANGELOG.md
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: W/"eb8ebd41b794052573485970d582d24f"
   last_modified: Thu, 26 Oct 2023 22:55:47 GMT
-  last_checked: '2026-10-01T10:00:36+00:00'
+  last_checked: '2026-10-07T11:00:58+00:00'
   consecutive_crawl_failures: 0
   unverified_resources:
     github:
-    - https://github.com/randyrants/sharpkeys
-    - https://github.com/atlassian/changesets
-    - https://github.com/vuejs/composition-api
-    - https://github.com/csstools/postcss-preset-env
     - https://github.com/sass-mq/sass-mq
+    - https://github.com/vuejs/composition-api
+    - https://github.com/atlassian/changesets
+    - https://github.com/randyrants/sharpkeys
+    - https://github.com/csstools/postcss-preset-env
     npm:
     - https://npmjs.com/package/style-resources-loader
-    - https://npmjs.com/package/vue-svg-loader
     - https://npmjs.com/package/css-vars-ponyfill
+    - https://npmjs.com/package/vue-svg-loader
   content_signals:
     tokens_format: Style Dictionary
     frameworks:
@@ -3442,7 +3503,7 @@
   design_system: PIE
   start_urls:
   - https://pie.design/
-  pages_indexed: 267
+  pages_indexed: 264
   resources:
     github:
     - https://github.com/justeat/pie-project
@@ -3452,82 +3513,83 @@
     storybook:
     - https://storybook.js.org/addons/@storybook/addon-a11y
     figma:
-    - https://figma.com/design/Rqz8KHogVsGCS4j0nDueNo/-Core--Patterns--PIE-3-
-    - https://figma.com/design/DoilInMsO5L6Rrui7IWgl3
-    - https://figma.com/design/CSxFGnwnBBBNPF6FYeB8qs/-BA--Partner--PIE-3-
-    - https://figma.com/file/Rqz8KHogVsGCS4j0nDueNo/[Core]-Patterns-%E2%9A%AA%EF%B8%8F-[PIE-2.0]
-    - https://figma.com/design/0olH9rKFUmtbp3R6KmFqm1/Customer---JET---OA-OW-
-    - https://figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3-
-    - https://figma.com/design/2JSAh62IcfXyVffR5yT6Sg/-BA--Fintech--PIE-3-
-    - https://figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices
-    - https://figma.com/design/XK2nYzvIZ0QCATVuccBJUJ/-BA--Partner-Patterns--PIE-3-
-    - https://figma.com/design/KAsRXLmSLSQ8a2JLXg6OsS/-BA--Customer-%E2%80%93-Skip--PIE-3-
-    - https://figma.com/design/7Auqy3S8J787NywZ0gtgZm/-BA--Customer-%E2%80%93-JE---TA--PIE-3-
-    - https://figma.com/design/pPSC73rPin4csb8DiK1CRr
-    - https://figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-
-    - https://figma.com/design/tGv7rwthRgAOQP0Xx86Bm0/-AI--Foundations--PIE-3-
-    - https://figma.com/design/x5tFJvtA7GNxSjHIrybQJl/-BA--Documentation--Customer-%E2%80%93-JE---TA--PIE-2.0-
-    - https://figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8--Core--Web-Components--PIE-3-
-    - https://figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3.0-
-    - https://figma.com/design/2c3RYLNtwjPhUdrmKlPg8D/-BA--Logistics-Delco---Patterns
-    - https://figma.com/design/mJiLMfnMfnEYWJh2Njutdq/-Core--Motion--PIE-3-
-    - https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op
-    - https://figma.com/design/DVKOT2HOucOpWglwIUsVr8/-Core--JET-Brand-Documentation
-    - https://figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process
-    - https://figma.com/design/eUOZTTYaTYbmy73i0wpkL9/-Core--Brand-assets--PIE-3-
-    - https://figma.com/design/64d6BFbEaP9tjrDmOCJpQh/%E2%9C%A8--Core--Foundations--PIE-3-
     - https://figma.com/design/hvXst0EMuOpwgMcWp6mbib/-BA--Scoober-Logistics-%E2%80%93-Components--PIE-3-
     - https://figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8-%5BCore%5D-Web-Components-%5BPIE-3%5D
-    - https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op/-Core--Icons--PIE-3-
-    - https://figma.com/design/K11XNe5NKsreTkubGEC6z4/-BA--PLO---Skip--%E2%9C%A8-PIE-3.0-
-    - https://figma.com/design/OOgnT2oNMdGFytj5AanYvt/-Core--Web-Component-Documentation--PIE-3-
-    - https://figma.com/design/26iAOwvB5lRVsoHJscqRqs/-Core--Accessibility--PIE-3-
-    - https://figma.com/design/3nSkAn3xL6jEOXKt1MePPd/-BA--Logistics-Delco---Components
-    - https://figma.com/design/qVVNVoZgeqkQhlMxsrUhd7/Core-AI-Components
     - https://figma.com/design/WxPDYsTycTVhPac6nCbbgN/-Core--Apps-Component-Documentation--PIE-3-
-    - https://figma.com/design/XoCqFBgXafCrQR6hkuFaRj/-BA--Scoober-Logistics-%E2%80%93-Patterns--PIE-3-
+    - https://figma.com/design/KAsRXLmSLSQ8a2JLXg6OsS/-BA--Customer-%E2%80%93-Skip--PIE-3-
+    - https://figma.com/design/eUOZTTYaTYbmy73i0wpkL9/-Core--Brand-assets--PIE-3-
     - https://figma.com/design/W4DEzDRBQOBohZ7yZr3LXf/-BA--Partner-Portal-%E2%80%93-Skip--PIE-3-
+    - https://figma.com/design/2c3RYLNtwjPhUdrmKlPg8D/-BA--Logistics-Delco---Patterns
+    - https://figma.com/design/DoilInMsO5L6Rrui7IWgl3
+    - https://figma.com/design/2JSAh62IcfXyVffR5yT6Sg/-BA--Fintech--PIE-3-
+    - https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op/-Core--Icons--PIE-3-
+    - https://figma.com/design/CSxFGnwnBBBNPF6FYeB8qs/-BA--Partner--PIE-3-
+    - https://figma.com/design/qVVNVoZgeqkQhlMxsrUhd7/Core-AI-Components
+    - https://figma.com/design/DVKOT2HOucOpWglwIUsVr8/-Core--JET-Brand-Documentation
+    - https://figma.com/design/XK2nYzvIZ0QCATVuccBJUJ/-BA--Partner-Patterns--PIE-3-
+    - https://figma.com/design/x5tFJvtA7GNxSjHIrybQJl/-BA--Documentation--Customer-%E2%80%93-JE---TA--PIE-2.0-
+    - https://figma.com/file/Rqz8KHogVsGCS4j0nDueNo/[Core]-Patterns-%E2%9A%AA%EF%B8%8F-[PIE-2.0]
+    - https://figma.com/design/OOgnT2oNMdGFytj5AanYvt/-Core--Web-Component-Documentation--PIE-3-
+    - https://figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3.0-
+    - https://figma.com/design/26iAOwvB5lRVsoHJscqRqs/-Core--Accessibility--PIE-3-
+    - https://figma.com/design/64d6BFbEaP9tjrDmOCJpQh/%E2%9C%A8--Core--Foundations--PIE-3-
+    - https://figma.com/design/tGv7rwthRgAOQP0Xx86Bm0/-AI--Foundations--PIE-3-
     - https://figma.com/design/r0e4dnGSg9qS8MmdTehw0n/-BA--Internal-Tools-%E2%9A%AA%EF%B8%8F--PIE-3-
+    - https://figma.com/design/K11XNe5NKsreTkubGEC6z4/-BA--PLO---Skip--%E2%9C%A8-PIE-3.0-
+    - https://figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8--Core--Web-Components--PIE-3-
+    - https://figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices
+    - https://figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3-
+    - https://figma.com/design/XoCqFBgXafCrQR6hkuFaRj/-BA--Scoober-Logistics-%E2%80%93-Patterns--PIE-3-
+    - https://figma.com/design/0olH9rKFUmtbp3R6KmFqm1/Customer---JET---OA-OW-
+    - https://figma.com/design/Rqz8KHogVsGCS4j0nDueNo/-Core--Patterns--PIE-3-
+    - https://figma.com/design/3nSkAn3xL6jEOXKt1MePPd/-BA--Logistics-Delco---Components
+    - https://figma.com/design/7Auqy3S8J787NywZ0gtgZm/-BA--Customer-%E2%80%93-JE---TA--PIE-3-
+    - https://figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process
+    - https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op
+    - https://figma.com/design/mJiLMfnMfnEYWJh2Njutdq/-Core--Motion--PIE-3-
+    - https://figma.com/design/pPSC73rPin4csb8DiK1CRr
+    - https://figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-
     npm:
     - https://npmjs.com/package/@justeattakeaway/pie-webc
-  hit_max_pages: true
+    - https://npmjs.com/package/@justeattakeaway/pie-css
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: Apache-2.0
     stars: 41
     last_pushed: '2026-09-17T13:44:35Z'
-  etag: W/"ed85def65631a74a4daa3d45939110e3"
-  last_modified: Thu, 01 Oct 2026 09:20:45 GMT
-  last_checked: '2026-10-01T10:40:48+00:00'
+  etag: W/"d0c2a3fbf35d06661bf9cf6886b28283"
+  last_modified: Mon, 05 Oct 2026 14:54:21 GMT
+  last_checked: '2026-10-07T11:20:33+00:00'
   consecutive_crawl_failures: 0
   unverified_resources:
     github:
-    - https://github.com/google/Accessibility-Test-Framework-for-Android
     - https://github.com/google/GTXiLib
+    - https://github.com/google/Accessibility-Test-Framework-for-Android
   content_signals:
-    tokens_format: Figma Variables
     dark_mode: true
+    tokens_format: Figma Variables
     frameworks:
     - React
     - Vue
     - Web Components
     - SwiftUI
   npm_meta:
-    latest_version: 0.11.21
-    last_published: '2026-09-30T08:48:15.057Z'
-    weekly_downloads: 2210
+    latest_version: 0.12.0
+    last_published: '2026-10-02T14:29:07.390Z'
+    weekly_downloads: 3328
   sitemap_url: https://pie.design/sitemap.xml
   likely_unmaintained: false
   content_signal_sources:
+    dark_mode: https://pie.design/patterns/jet-ai
     tokens_format: https://pie.design/designers/getting-started
-    dark_mode: https://pie.design/designers/getting-started
     frameworks:
-      React: https://pie.design/components/chip
-      Vue: https://pie.design/components/chip
-      Web Components: https://pie.design/components/chip
-      SwiftUI: https://pie.design/components/chip
-  thin_page_ratio: 0.05
+      React: https://pie.design/components/fab
+      Vue: https://pie.design/components/fab
+      Web Components: https://pie.design/components/fab
+      SwiftUI: https://pie.design/components/fab
+  thin_page_ratio: 0.08
   has_localized_docs: false
   render_mode: ''
 - organization: Kajabi
@@ -3609,13 +3671,13 @@
   design_system: KoliBri - Public UI
   start_urls:
   - https://public-ui.github.io/
-  pages_indexed: 331
-  hit_max_pages: true
+  pages_indexed: 322
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: W/"6abe2142-61c4"
-  last_modified: Thu, 01 Oct 2026 09:00:50 GMT
-  last_checked: '2026-10-01T10:44:27+00:00'
+  etag: W/"6ac61bce-61c4"
+  last_modified: Wed, 07 Oct 2026 10:15:42 GMT
+  last_checked: '2026-10-07T11:24:49+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals:
@@ -3638,12 +3700,16 @@
     npm:
     - https://npmjs.com/package/@public-ui/kolibri-cli
     icons:
+    - https://public-ui.github.io/v3/docs/tags/icon
+    - https://public-ui.github.io/v2/docs/tags/icon
     - https://public-ui.github.io/en/docs/components/icon
+    - https://public-ui.github.io/v2/docs/components/icon
     - https://public-ui.github.io/docs/components/icon
+    - https://public-ui.github.io/v3/docs/components/icon
   npm_meta:
     latest_version: 4.4.0
     last_published: '2026-09-09T07:11:47.469Z'
-    weekly_downloads: 851
+    weekly_downloads: 214
   render_mode: ''
 - organization: ''
   design_system: Kontur
@@ -4321,45 +4387,45 @@
   design_system: Protocol
   start_urls:
   - https://protocol.mozilla.org/
-  pages_indexed: 147
+  pages_indexed: 154
   resources:
     github:
-    - https://github.com/mozilla/protocol
     - https://github.com/mozilla/protocol-tokens
+    - https://github.com/mozilla/protocol
     npm:
-    - https://npmjs.com/package/@mozilla-protocol/core
     - https://npmjs.com/package/@mozilla-protocol/tokens
-  hit_max_pages: true
+    - https://npmjs.com/package/@mozilla-protocol/core
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: MPL-2.0
-    stars: 299
-    last_pushed: '2026-10-01T09:03:52Z'
+    stars: 30
+    last_pushed: '2026-04-02T06:45:49Z'
   npm_meta:
-    latest_version: 22.0.0
-    last_published: '2025-10-03T20:39:48.714Z'
-    weekly_downloads: 1688
+    latest_version: 7.0.0
+    last_published: '2025-08-26T22:32:12.156Z'
+    weekly_downloads: 609
   etag: '"9d658a227cfc2b391817fafbdb4f3aa6-ssl-df"'
-  last_checked: '2026-10-01T10:54:41+00:00'
+  last_checked: '2026-10-07T11:21:22+00:00'
   consecutive_crawl_failures: 0
   unverified_resources:
     github:
-    - https://help.github.com/articles/set-up-git
-    - https://help.github.com/articles/editing-files-in-another-users-repository
-    - https://help.github.com/articles/creating-a-pull-request-from-a-fork
-    - https://help.github.com/articles/fork-a-repo
     - https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
-    - https://help.github.com/articles/pushing-to-a-remote
+    - https://help.github.com/articles/creating-a-pull-request-from-a-fork
+    - https://help.github.com/articles/editing-files-in-another-users-repository
+    - https://help.github.com/articles/fork-a-repo
     - https://help.github.com/articles/cloning-a-repository
+    - https://help.github.com/articles/set-up-git
+    - https://help.github.com/articles/pushing-to-a-remote
   content_signals:
     dark_mode: true
     validation_loop: true
   likely_unmaintained: false
   content_signal_sources:
-    dark_mode: https://protocol.mozilla.org/components/detail/sticky-promo--default
+    dark_mode: https://protocol.mozilla.org/components/detail/callout--dark-theme
     validation_loop: https://protocol.mozilla.org/docs/contributing/css-guide
-  thin_page_ratio: 0.03
+  thin_page_ratio: 0.04
   has_localized_docs: false
   render_mode: ''
 - organization: Mozilla firefox
@@ -4736,32 +4802,32 @@
   design_system: Service Manual
   start_urls:
   - https://service-manual.nhs.uk/
-  pages_indexed: 222
+  pages_indexed: 219
   resources:
     github:
     - https://github.com/nhsuk/nhsuk-service-manual-backlog
+    - https://github.com/nhsuk/nhsuk-frontend
     - https://github.com/NHSDigital/nhsuk-frontend-jinja
     - https://github.com/NHSDigital/nhsuk-react-components
-    - https://github.com/nhsuk/nhsuk-frontend
     figma:
     - https://figma.com/community/file/1217465175363344449/nhs-figma-design-system
     icons:
-    - https://service-manual.nhs.uk/design-example/styles/icons/arrows
-    - https://service-manual.nhs.uk/design-example/styles/icons/user
-    - https://service-manual.nhs.uk/design-example/styles/icons/arrow-right-circle
-    - https://service-manual.nhs.uk/design-system/styles/icons
-    - https://service-manual.nhs.uk/design-example/styles/icons/search
-    - https://service-manual.nhs.uk/design-example/styles/icons/tick-and-cross
-    - https://service-manual.nhs.uk/design-example/styles/icons/chevron-right-circle
     - https://service-manual.nhs.uk/design-example/styles/icons/sizes
-  hit_max_pages: true
+    - https://service-manual.nhs.uk/design-example/styles/icons/user
+    - https://service-manual.nhs.uk/design-example/styles/icons/chevron-right-circle
+    - https://service-manual.nhs.uk/design-example/styles/icons/arrow-right-circle
+    - https://service-manual.nhs.uk/design-example/styles/icons/arrows
+    - https://service-manual.nhs.uk/design-system/styles/icons
+    - https://service-manual.nhs.uk/design-example/styles/icons/tick-and-cross
+    - https://service-manual.nhs.uk/design-example/styles/icons/search
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: null
     stars: 68
     last_pushed: '2024-10-24T14:59:56Z'
-  last_checked: '2026-10-01T11:08:49+00:00'
+  last_checked: '2026-10-07T11:32:58+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources: {}
@@ -4771,7 +4837,7 @@
   content_signal_sources:
     accessibility_conformance: https://service-manual.nhs.uk/standards-and-technology/service-standard-points/5-make-sure-everyone-can-use-the-service
     governance_model: https://service-manual.nhs.uk/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy
-  thin_page_ratio: 0.02
+  thin_page_ratio: 0.46
   has_localized_docs: false
   sitemap_url: https://service-manual.nhs.uk/sitemap.xml
   render_mode: ''
@@ -6047,27 +6113,60 @@
   resources:
     github:
     - https://github.com/semrush/intergalactic
+    figma:
+    - https://figma.com/file/EWdX1ly5KsoNu8sywYJdKk/%F0%9F%92%A0-UX-Patterns
+    - https://figma.com/design/DjWsMXmFfCMxtiyNtoYjRO/%F0%9F%90%8B-Flags
+    - https://figma.com/design/3oPFz95uakNgr0diY7k5dW/%F0%9F%90%8B-Design-Tokens
+    - https://figma.com/design/1zWWz7R5Lt9tt9BM6Bzf6W/%F0%9F%90%8B-Filter-Patterns
+    - https://figma.com/file/EWdX1ly5KsoNu8sywYJdKk
+    - https://figma.com/design/lVX2dKnVFtcSTQV7eSS5j1/%F0%9F%90%8B-Icons
+    - https://figma.com/design/hwYZpLVEg6TU1AFwpBvYXA/%F0%9F%90%8B-Table-Components
+    - https://figma.com/design/EBG44NotS7lmjZnUOkhyrp/%F0%9F%90%8B-Charts-Components
+    - https://figma.com/file/eqedT6ztHYWNoikkTOmiUV/Notes-%E2%80%A2-List%2C-widget%2C-library
+    - https://figma.com/file/ZDRC056k8PbUFi3qoFAWj9/Design-File-Template-Library
+    - https://figma.com/design/iwWLdt4VZkZBx1XQltLsBL/Libraries-onboarding---playground-%F0%9F%8E%93
+    - https://figma.com/design/RLic9ruqNNm6qgARKFk5Ae/%F0%9F%90%8B-Core-Components
+    - https://figma.com/design/uBxKSTlXSEDiKvFp6txzrr/%F0%9F%93%AE-Product-Email-Library
+    - https://figma.com/design/t7T1SLzIkERV1IrsjsKugE/%F0%9F%90%8B-UX-Patterns
+    - https://figma.com/design/EWdX1ly5KsoNu8sywYJdKk/%F0%9F%92%A0-UX-Patterns
+    - https://figma.com/file/eqmm39DfX895qOSM0KnQGb/Web-performance-schemes
+    markdown_docs:
+    - https://github.com/semrush/intergalactic/tree/HEAD/tools/process-css-unplugin/README.md
+    - https://github.com/semrush/intergalactic/blob/HEAD/tools/babel-plugin-react-semcore/README.md
     icons:
+    - https://developer.semrush.com/intergalactic/style/icon/icon-changelog
+    - https://developer.semrush.com/intergalactic/style/icon/icon-a11y
+    - https://developer.semrush.com/intergalactic/style/icon/icon-code
     - https://developer.semrush.com/intergalactic/style/icon/icon-api
     - https://developer.semrush.com/intergalactic/style/icon/icon
     agent_instructions:
     - https://developer.semrush.com/llms.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   github_meta:
     license: MIT
     stars: 185
-    last_pushed: '2026-10-01T11:18:32Z'
+    last_pushed: '2026-10-07T11:22:19Z'
   npm_meta:
     latest_version: 1.1.0
     weekly_downloads: 43
   etag: W/"6aa2b521-11379"
   last_modified: Thu, 10 Sep 2026 13:48:17 GMT
-  last_checked: '2026-10-01T11:21:53+00:00'
+  last_checked: '2026-10-07T11:35:44+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/bvaughn/react-virtualized
+    - https://github.com/d3/d3-shape
+    - https://github.com/unjs/unplugin
+    - https://github.com/d3/d3-scale
+    npm:
+    - https://npmjs.com/package/webpack-node-externals
+    - https://npmjs.com/package/update-by-scope
+    - https://npmjs.com/package/@semcore/stylelint-plugin
+    - https://npmjs.com/package/webpack-bundle-analyzer
   content_signals:
     exemplars: true
     frameworks:
@@ -6076,7 +6175,7 @@
     exemplars: https://developer.semrush.com/intergalactic/components/button/button
     frameworks:
       React: https://developer.semrush.com/intergalactic
-  thin_page_ratio: 0.04
+  thin_page_ratio: 0.01
   has_localized_docs: false
   sitemap_url: https://developer.semrush.com/sitemap.xml
   render_mode: ''
@@ -6101,25 +6200,30 @@
   design_system: Anvil
   start_urls:
   - https://anvil.servicetitan.com/
-  pages_indexed: 450
+  pages_indexed: 454
   resources:
     github:
     - https://github.com/servicetitan/hammer
     storybook:
-    - https://storybook.js.org/docs/writing-tests/accessibility-testing
     - https://chromatic.com/
+    - https://main--64627e95c8a540f70fd17e9e.chromatic.com/
     - https://storybook.js.org/
+    - https://storybook.js.org/docs/writing-tests/accessibility-testing
     figma:
-    - https://figma.com/design/QEIsArLktLeJAaFvcpw3PO/Carto-Web-Components
-    - https://figma.com/design/KfMPM2hzHLX6Sr1YGWNXHc/Anvil2
-    - https://figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates
-    - https://figma.com/design/6WeJz8JMm1in6Wb4g0wLP5/Carto-Design-Tokens
     - https://figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library
+    - https://figma.com/design/QEIsArLktLeJAaFvcpw3PO/Carto-Web-Components
+    - https://figma.com/design/jgymIi7ydk9JE2Q5RM6uLz/%F0%9F%8C%88-Spike--Expanded-Color-Ramps-in-Anvil
+    - https://figma.com/design/KfMPM2hzHLX6Sr1YGWNXHc/Anvil2
+    - https://figma.com/proto/xDpwL1pomsuEb4vd8X42PT/Anvil-Color-Accessibility-Guide
+    - https://figma.com/design/6WeJz8JMm1in6Wb4g0wLP5/Carto-Design-Tokens
+    - https://figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates
     markdown_docs:
-    - https://github.com/servicetitan/hammer/tree/master/packages/anvil2/README.md
-    - https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md
+    - https://github.com/servicetitan/hammer/blob/main/README.md
     - https://github.com/servicetitan/anvil2/blob/master/README.md
+    - https://github.com/servicetitan/hammer/blob/main/packages/anvil2/README.md
     - https://github.com/servicetitan/hammer/blob/main/CONTRIBUTING.md
+    - https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md
+    - https://github.com/servicetitan/hammer/tree/master/packages/anvil2/README.md
     agent_instructions:
     - https://anvil.servicetitan.com/llms.txt
     - https://anvil.servicetitan.com/llms-full.txt
@@ -6128,17 +6232,21 @@
     - https://npmjs.com/package/@servicetitan/anvil2
     - https://npmjs.com/package/@servicetitan/startup
     icons:
+    - https://anvil.servicetitan.com/docs/web/components/icon/tokens
+    - https://anvil.servicetitan.com/docs/web/components/icon/design
     - https://anvil.servicetitan.com/docs/web/icons
+    - https://anvil.servicetitan.com/docs/web/components/icon/code
     mcp:
     - https://anvil.servicetitan.com/.well-known/mcp.json
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-10-01T11:33:45+00:00'
+  last_checked: '2026-10-07T11:51:06+00:00'
   consecutive_crawl_failures: 0
   unverified_resources:
     github:
     - https://github.com/dequelabs/axe-core
+    - https://github.com/kentcdodds/match-sorter
   content_signals:
     dark_mode: true
     accessibility_conformance: WCAG 2.2 AA
@@ -6147,7 +6255,7 @@
     frameworks:
     - React
   sitemap_url: https://anvil.servicetitan.com/sitemap.xml
-  sitemap_last_modified: '2026-09-30T21:20:12.188Z'
+  sitemap_last_modified: '2026-10-06T20:41:27.098Z'
   likely_unmaintained: false
   content_signal_sources:
     dark_mode: https://anvil.servicetitan.com/docs/kits/illustrations
@@ -6156,13 +6264,13 @@
     prohibition: https://anvil.servicetitan.com/docs/ai-tooling-and-anvil2
     frameworks:
       React: https://anvil.servicetitan.com/docs
-  thin_page_ratio: 0.19
+  thin_page_ratio: 0.09
   has_localized_docs: false
   npm_meta:
-    latest_version: 3.15.0
-    last_published: '2026-09-28T23:19:31.847Z'
-    weekly_downloads: 26238
-  etag: W/"q4cvirf14ba316"
+    latest_version: 3.15.2
+    last_published: '2026-10-02T21:18:51.057Z'
+    weekly_downloads: 26886
+  etag: W/"cs38o5pr05a17o"
   render_mode: ''
 - organization: Shopify
   design_system: Polaris
@@ -6195,26 +6303,49 @@
   design_system: Siemens iX
   start_urls:
   - https://ix.siemens.io/
-  pages_indexed: 278
+  pages_indexed: 272
   resources:
     github:
+    - https://github.com/yagizhanNY/siemens-ix-blazor
     - https://github.com/siemens/ix
     figma:
     - https://figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology
     - https://figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines
+    markdown_docs:
+    - https://github.com/siemens/ix/blob/main/CONTRIBUTING.md
+    mcp:
+    - https://ix.siemens.io/docs/home/mcp-server
+    - https://ix.siemens.io//docs/home/mcp-server
+    - https://ix.siemens.io/docs/home/mcp-server.md
     icons:
+    - https://ix.siemens.io/docs/icons/developing-with-icons
+    - https://ix.siemens.io//docs/icons/icon-library
+    - https://ix.siemens.io/docs/icons/design-new-icons
+    - https://brandville.siemens.com/en/design-elements/icons/ui-icons
+    - https://ix.siemens.io//docs/icons/developing-with-icons
+    - https://ix.siemens.io//docs/icons/design-new-icons
+    - https://ix.siemens.io/docs/icons/icon-usage
     - https://ix.siemens.io/docs/icons/icon-library
+    - https://ix.siemens.io/docs/icons/design-new-icons.md
+    - https://ix.siemens.io/docs/icons/developing-with-icons.md
+    - https://ix.siemens.io/docs/icons/icon-library.md
+    - https://ix.siemens.io/docs/icons/icon-usage.md
+    - https://ix.siemens.io//docs/icons/icon-usage
     agent_instructions:
     - https://ix.siemens.io/llms.txt
     - https://ix.siemens.io/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: W/"6abcba2e-1304"
-  last_modified: Wed, 30 Sep 2026 07:28:46 GMT
-  last_checked: '2026-10-01T11:30:08+00:00'
+  etag: W/"6ac38e80-1304"
+  last_modified: Mon, 05 Oct 2026 11:48:16 GMT
+  last_checked: '2026-10-07T11:45:36+00:00'
   consecutive_crawl_failures: 0
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/Rich-Harris/degit
+    npm:
+    - https://npmjs.com/package/@axe-core/playwright
   content_signals:
     dark_mode: true
     frameworks:
@@ -6229,33 +6360,33 @@
     frameworks:
       Angular: https://ix.siemens.io/docs/components/charts-overview/overview
       React: https://ix.siemens.io/docs/components/chip/guide
-      Vue: https://ix.siemens.io/llms.txt
-      Web Components: https://ix.siemens.io/llms.txt
-  thin_page_ratio: 0.58
+      Vue: https://ix.siemens.io/docs/components/forms-validation/code
+      Web Components: https://ix.siemens.io/docs/components/html-grid/guide
+  thin_page_ratio: 0.46
   has_localized_docs: false
   github_meta:
     license: MIT
-    stars: 379
-    last_pushed: '2026-10-01T11:19:16Z'
+    stars: 35
+    last_pushed: '2026-09-28T17:55:04Z'
   render_mode: ''
 - organization: ''
   design_system: Singapore Government Design System
   start_urls:
   - https://www.designsystem.tech.gov.sg/
-  pages_indexed: 376
+  pages_indexed: 146
   resources:
     mcp:
-    - https://designsystem.tech.gov.sg/ai/mcp-server
-    - https://designsystem.tech.gov.sg/ai/mcp-server-setup
     - https://developers.figma.com/docs/figma-mcp-server/remote-server-installation
+    - https://designsystem.tech.gov.sg/ai/mcp-server-setup
+    - https://designsystem.tech.gov.sg/ai/mcp-server
     icons:
     - https://designsystem.tech.gov.sg/components/icon
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: W/"ebaad9680d19ec3b40f0e37e92796f64"
-  last_modified: Tue, 29 Sep 2026 07:43:34 GMT
-  last_checked: '2026-10-01T11:29:16+00:00'
+  etag: W/"3720ffc088bc331c774d7bc12019a941"
+  last_modified: Mon, 05 Oct 2026 09:22:01 GMT
+  last_checked: '2026-10-07T11:39:26+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources:
@@ -6279,7 +6410,7 @@
       Vue: https://designsystem.tech.gov.sg/ai/development-workflows
       Angular: https://designsystem.tech.gov.sg/ai/development-workflows
       Web Components: https://designsystem.tech.gov.sg/ai/development-workflows
-  thin_page_ratio: 0.03
+  thin_page_ratio: 0.06
   has_localized_docs: false
   sitemap_url: https://www.designsystem.tech.gov.sg/sitemap.xml
   render_mode: ''
@@ -6313,14 +6444,14 @@
   start_urls:
   - https://design.sis.gov.uk/
   pages_indexed: 97
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: page exceeded 3000000 bytes, skipped
   likely_spa: false
   etag: W/"6a8c5a88-2e3e01"
   last_modified: Mon, 24 Aug 2026 14:51:52 GMT
-  last_checked: '2026-10-01T11:34:00+00:00'
+  last_checked: '2026-10-07T11:43:28+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 2
+  consecutive_crawl_failures: 3
   unverified_resources:
     github:
     - https://github.com/avanslaars/cypress-axe
@@ -6618,13 +6749,13 @@
     agent_instructions:
     - https://po-ui.io/llms.txt
     - https://po-ui.io/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: crawl returned 0 pages
   likely_spa: false
-  etag: '"0bf504f3a50dd1:0"'
-  last_modified: Tue, 29 Sep 2026 17:45:26 GMT
-  last_checked: '2026-10-01T11:42:03+00:00'
-  consecutive_crawl_failures: 3
+  etag: '"088c3c9ed54dd1:0"'
+  last_modified: Mon, 05 Oct 2026 17:20:16 GMT
+  last_checked: '2026-10-07T11:50:03+00:00'
+  consecutive_crawl_failures: 4
   unverified_resources: {}
   content_signals:
     frameworks:
@@ -7576,8 +7707,8 @@
   - /angular/
   - /preact/
   likely_unmaintained: false
-  pages_indexed: 107
-  hit_max_pages: true
+  pages_indexed: 105
+  hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
@@ -7594,10 +7725,10 @@
       React: https://ark-ui.com/
       Vue: https://ark-ui.com/
       Svelte: https://ark-ui.com/
-  thin_page_ratio: 0.45
+  thin_page_ratio: 0.61
   has_localized_docs: false
-  last_checked: '2026-10-01T12:00:28+00:00'
-  etag: '"4561983829ad45fc5a68d2062750a87a"'
+  last_checked: '2026-10-07T11:54:35+00:00'
+  etag: '"c5595fc8311472220f7f678227c306f9"'
   sitemap_url: https://ark-ui.com/sitemap.xml
   resources:
     github:
@@ -7605,17 +7736,17 @@
     mcp:
     - https://ark-ui.com/react/docs/ai/mcp-server
     - https://ark-ui.com/docs/ai/mcp-server.mdx
-    - https://modelcontextprotocol.io/specification/2025-06-18/basic/transports
     - https://modelcontextprotocol.io/introduction
     - https://ark-ui.com/docs/ai/mcp-server
+    - https://modelcontextprotocol.io/specification/2025-06-18/basic/transports
     agent_instructions:
-    - https://ark-ui.com/docs/ai/llms.txt
     - https://ark-ui.com/llms.txt
+    - https://ark-ui.com/docs/ai/llms.txt
     - https://ark-ui.com/llms-full.txt
   github_meta:
     license: MIT
-    stars: 5403
-    last_pushed: '2026-10-01T07:55:57Z'
+    stars: 5408
+    last_pushed: '2026-10-07T06:38:05Z'
   render_mode: ''
 - organization: MUI
   design_system: Base UI
@@ -7765,8 +7896,8 @@
   start_urls:
   - https://www.heroui.com/
   likely_unmaintained: false
-  pages_indexed: 153
-  hit_max_pages: true
+  pages_indexed: 257
+  hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
@@ -7775,70 +7906,71 @@
     - https://github.com/saltyaom/m3-ripple
     - https://github.com/gravity-ui/icons
     - https://github.com/guilhermerodz/input-otp
+    - https://github.com/pacocoursey/next-themes
   content_signals:
-    cli_scaffolding: true
     dark_mode: true
-    validation_loop: true
-    exemplars: true
     frameworks:
     - React
     - Vue
     - Svelte
   content_signal_sources:
-    cli_scaffolding: https://heroui.com/en/docs/native/releases/cli-v1-0-0
-    dark_mode: https://heroui.com/en/docs/native/releases/v1-0-1
-    validation_loop: https://heroui.com/en/docs/native/releases/v1-0-8
-    exemplars: https://heroui.com/en/docs/react/migration
+    dark_mode: https://heroui.com/en/docs/react/getting-started/colors
     frameworks:
       React: https://heroui.com/
-      Vue: https://heroui.com/en/docs/native/releases/rc-3
-      Svelte: https://heroui.com/en/docs/native/releases/rc-3
-  thin_page_ratio: -0.02
+      Vue: https://heroui.com/en/docs/react/getting-started/composition
+      Svelte: https://heroui.com/en/docs/react/getting-started/composition
+  thin_page_ratio: 0.31
   has_localized_docs: true
-  last_checked: '2026-10-01T12:30:05+00:00'
-  etag: '"65aa359a5aadf21c01a963029f8becfb"'
+  last_checked: '2026-10-07T12:46:17+00:00'
+  etag: '"931f3e19dfe6d2a62375c8ae93e3cb96"'
   sitemap_url: https://heroui.com/sitemap.xml
-  sitemap_last_modified: '2026-09-30T16:29:10.765Z'
+  sitemap_last_modified: '2026-10-02T12:23:51.119Z'
   resources:
     github:
-    - https://github.com/heroui-inc/heroui-mcp
     - https://github.com/heroui-inc/heroui
     - https://github.com/heroui-inc/heroui-native
+    - https://github.com/heroui-inc/heroui-mcp
     storybook:
     - https://storybook-v3.heroui.com/
     figma:
     - https://figma.com/community/file/1546526812159103429
     - https://figma.com/community/file/1546526812159103429/heroui-figma-kit-v3
     markdown_docs:
+    - https://github.com/heroui-inc/heroui/blob/main/CONTRIBUTING.md
     - https://github.com/heroui-inc/heroui-native/blob/main/CONTRIBUTING.md
     - https://github.com/heroui-inc/heroui-mcp/blob/main/CONTRIBUTING.md
-    - https://github.com/heroui-inc/heroui/blob/main/CONTRIBUTING.md
     mcp:
-    - https://heroui.com/en/docs/react/getting-started/mcp-server
-    - https://heroui.com/en/docs/native/getting-started/mcp-server
-    - https://open-code.ai/docs/en/mcp-servers
-    - https://heroui.com/en/docs/react/migration/mcp-server
     - https://code.visualstudio.com/docs/copilot/customization/mcp-servers
+    - https://heroui.com/docs/native/getting-started/mcp-server
+    - https://heroui.com/en/docs/react/migration/mcp-server
     - https://heroui.com/en/docs/ui-for-agents/mcp-server
+    - https://heroui.com/docs/react/getting-started/mcp-server
+    - https://heroui.com/en/docs/native/getting-started/mcp-server
+    - https://heroui.com/en/docs/react/getting-started/mcp-server
+    - https://modelcontextprotocol.io/
+    - https://open-code.ai/docs/en/mcp-servers
     - https://modelcontextprotocol.io/specification/2025-06-18/basic/transports
     agent_instructions:
-    - https://heroui.com/llms-full.txt
     - https://heroui.com/llms.txt
+    - https://heroui.com/llms-full.txt
     - https://heroui.com/native/llms-full.txt
     - https://heroui.com/native/llms.txt
+    - https://heroui.com/react/llms-full.txt
+    - https://heroui.com/react/llms.txt
     npm:
-    - https://npmjs.com/package/create-heroui-native-app
     - https://npmjs.com/package/@heroui/native-mcp
+    - https://npmjs.com/package/@heroui/react-mcp
+    - https://npmjs.com/package/create-heroui-native-app
     icons:
     - https://github.com/gravity-ui/icons
   github_meta:
-    license: MIT
-    stars: 60
-    last_pushed: '2026-09-26T16:10:11Z'
+    license: Apache-2.0
+    stars: 30879
+    last_pushed: '2026-10-07T10:04:32Z'
   npm_meta:
-    latest_version: 1.0.7
-    last_published: '2026-09-21T15:38:24.174Z'
-    weekly_downloads: 141
+    latest_version: 1.1.2
+    last_published: '2026-09-04T20:56:16.911Z'
+    weekly_downloads: 1358
   render_mode: ''
 - organization: Tailwind Labs
   design_system: Headless UI
@@ -8133,21 +8265,34 @@
   start_urls:
   - https://radianui.com/
   likely_unmaintained: false
-  pages_indexed: 220
-  hit_max_pages: true
+  pages_indexed: 329
+  hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
+  unverified_resources:
+    npm:
+    - https://npmjs.com/package/react-resizable-panels
+    - https://npmjs.com/package/react-currency-input-field
+    - https://npmjs.com/package/react-international-phone
+    - https://npmjs.com/package/cmdk
   content_signals:
+    dark_mode: true
     frameworks:
     - React
+    - Vue
+    - Angular
+    - Svelte
   content_signal_sources:
+    dark_mode: https://radianui.com/docs/components/button
     frameworks:
       React: https://radianui.com/
+      Vue: https://radianui.com/docs/components/checkbox
+      Angular: https://radianui.com/docs/components/checkbox
+      Svelte: https://radianui.com/docs/components/checkbox
   thin_page_ratio: 0.0
   has_localized_docs: false
-  last_checked: '2026-10-01T12:11:12+00:00'
+  last_checked: '2026-10-07T12:04:46+00:00'
   sitemap_url: https://radianui.com/sitemap.xml
   resources:
     github:
@@ -8155,18 +8300,20 @@
     figma:
     - https://figma.com/design/ZB8gTZwafZOYY7rdJjSRz6/%E2%9D%96-Preview-%E2%9D%96-Radian-Design-System-%E2%9D%96-Version-0.3
     - https://figma.com/community/file/1601125934366184350/radian-design-system-version-0-1-2
-    npm:
-    - https://npmjs.com/package/@radianui/flags
+    - https://figma.com/community/file/1601125934366184350
+    - https://figma.com/design/qYQGVpM2Ax7a1Tfj8Gxyga/Documentation
     agent_instructions:
     - https://radianui.com/llms.txt
+    npm:
+    - https://npmjs.com/package/@radianui/flags
   github_meta:
     license: MIT
-    stars: 59
-    last_pushed: '2026-10-01T08:03:29Z'
+    stars: 62
+    last_pushed: '2026-10-07T10:10:55Z'
   npm_meta:
     latest_version: 1.0.0
     last_published: '2026-09-29T10:58:23.525Z'
-    weekly_downloads: 228
+    weekly_downloads: 243
   render_mode: ''
 - organization: ''
   design_system: Dutchy Design System

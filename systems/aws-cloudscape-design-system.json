@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-05T11:18:21+00:00",
+  "generated_at": "2026-10-07T12:47:51+00:00",
   "id": "aws-cloudscape-design-system",
   "organization": "AWS",
   "design_system": "Cloudscape Design System",
@@ -10,42 +10,64 @@
   ],
   "detail_url": "/systems/aws-cloudscape-design-system",
   "pages_indexed": 157,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T09:56:22+00:00",
-  "last_modified": "Wed, 30 Sep 2026 19:26:05 GMT",
+  "last_checked": "2026-10-07T11:06:49+00:00",
+  "last_modified": "Fri, 02 Oct 2026 10:55:16 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/cloudscape-design/components"
+      "https://github.com/cloudscape-design/components",
+      "https://github.com/cloudscape-design/jest-preset"
+    ],
+    "figma": [
+      "https://figma.com/design/fwbGAQCAvHX0rcmxxTTmV8/%5BCDS%5D-Foundations"
     ],
     "markdown_docs": [
+      "https://github.com/cloudscape-design/jest-preset/blob/main/README.md",
       "https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md"
-    ],
-    "icons": [
-      "https://cloudscape.design/components/icon"
     ],
     "agent_instructions": [
       "https://cloudscape.design/llms.txt"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@cloudscape-design/collection-hooks",
+      "https://npmjs.com/package/@cloudscape-design/global-styles"
+    ],
+    "icons": [
+      "https://cloudscape.design/components/icon"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/NMFR/optimize-css-assets-webpack-plugin",
+      "https://github.com/csstools/stylelint-use-logical",
+      "https://github.com/testing-library/react-testing-library",
+      "https://github.com/modosc/global-jsdom",
+      "https://github.com/webpack-contrib/mini-css-extract-plugin"
+    ],
+    "npm": [
+      "https://npmjs.com/package/normalize.css"
+    ]
+  },
   "content_signals": {
     "dark_mode": true,
+    "tokens_format": "DTCG",
+    "cli_scaffolding": true,
     "frameworks": [
       "React"
     ]
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 2654,
-    "last_pushed": "2026-10-01T09:32:47Z"
+    "stars": 2659,
+    "last_pushed": "2026-10-07T10:47:55Z"
   },
   "npm_meta": {
-    "latest_version": "1.0.70",
-    "last_published": "2026-09-13T00:36:06.660Z",
-    "weekly_downloads": 72911
+    "latest_version": "1.0.110",
+    "last_published": "2026-09-21T12:59:21.630Z",
+    "weekly_downloads": 201816
   },
   "indexed_pages": [
     {
