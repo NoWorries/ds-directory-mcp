@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-07T12:47:51+00:00",
+  "generated_at": "2026-10-08T11:24:33+00:00",
   "id": "mutual-of-omaha-digital-design-guide",
   "organization": "Mutual of Omaha",
   "design_system": "Digital Design Guide",
@@ -9,11 +9,11 @@
     "https://design.mutualofomaha.com/digital/"
   ],
   "detail_url": "/systems/mutual-of-omaha-digital-design-guide",
-  "pages_indexed": 4,
-  "coverage_status": "partial",
+  "pages_indexed": 17,
+  "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:55:43+00:00",
+  "last_checked": "2026-10-08T11:23:11+00:00",
   "last_modified": "Fri, 27 Jun 2025 17:41:19 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -21,7 +21,14 @@
       "https://cdn.mutualofomaha.com/design-guide/3.1/libraries/icons/library"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/postcss/postcss",
+      "https://github.com/postcss/postcss-loader",
+      "https://github.com/suitcss/suit",
+      "https://github.com/babel/babel-loader"
+    ]
+  },
   "content_signals": {
     "frameworks": [
       "React",
@@ -32,20 +39,72 @@
   "npm_meta": null,
   "indexed_pages": [
     {
+      "url": "https://design.mutualofomaha.com/digital/guidelines/accessibility",
+      "title": "Accessibility | Mutual of Omaha Design Guide"
+    },
+    {
       "url": "https://design.mutualofomaha.com/digital/assets",
       "title": "Assets | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/core-styles",
+      "title": "Core Styles | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/guidelines/depth-shadow",
+      "title": "Depth & Shadow | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/guidelines/design-principles",
+      "title": "Design Principles | Mutual of Omaha Design Guide"
     },
     {
       "url": "https://design.mutualofomaha.com/digital",
       "title": "Digital | Mutual of Omaha Design Guide"
     },
     {
+      "url": "https://design.mutualofomaha.com/digital/elements-components",
+      "title": "Elements & Components | Mutual of Omaha Design Guide"
+    },
+    {
       "url": "https://design.mutualofomaha.com/digital/templates/footer",
       "title": "Footer Template | Mutual of Omaha Design Guide"
     },
     {
+      "url": "https://design.mutualofomaha.com/digital/guidelines/getting-started",
+      "title": "Getting Started | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/getting-started",
+      "title": "Getting Started | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/templates/header",
+      "title": "Header Template | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/patterns/mega-menu-navigation",
+      "title": "Mega Menu Navigation | Mutual of Omaha Design Guide"
+    },
+    {
       "url": "https://design.mutualofomaha.com/digital/templates/multi-column",
       "title": "Multi-column Template | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/patterns/navigation-overview",
+      "title": "Navigation Patterns Overview | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/guidelines/photography-illustration",
+      "title": "Photography & Illustration | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/patterns/standard-navigation",
+      "title": "Standard Navigation Pattern | Mutual of Omaha Design Guide"
+    },
+    {
+      "url": "https://design.mutualofomaha.com/digital/templates/standard-nav",
+      "title": "Standard Navigation | Mutual of Omaha Design Guide"
     }
   ]
 }

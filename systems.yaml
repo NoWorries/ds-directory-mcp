@@ -3944,7 +3944,7 @@
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-10-01T10:45:27+00:00'
+  last_checked: '2026-10-08T11:14:38+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -3953,7 +3953,7 @@
   content_signal_sources: {}
   has_localized_docs: false
   thin_page_ratio: 0.0
-  render_mode: ''
+  render_mode: spa
 - organization: MailChimp
   design_system: Mailchimp Content Styleguide
   start_urls:
@@ -4450,15 +4450,20 @@
   design_system: Digital Design Guide
   start_urls:
   - https://design.mutualofomaha.com/digital/
-  pages_indexed: 4
+  pages_indexed: 17
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
   etag: '"25a60-638912f862dc0-gzip"'
   last_modified: Fri, 27 Jun 2025 17:41:19 GMT
-  last_checked: '2026-10-01T10:55:43+00:00'
+  last_checked: '2026-10-08T11:23:11+00:00'
   consecutive_crawl_failures: 0
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/postcss/postcss
+    - https://github.com/postcss/postcss-loader
+    - https://github.com/suitcss/suit
+    - https://github.com/babel/babel-loader
   content_signals:
     frameworks:
     - React
@@ -4473,7 +4478,7 @@
   resources:
     icons:
     - https://cdn.mutualofomaha.com/design-guide/3.1/libraries/icons/library
-  render_mode: ''
+  render_mode: spa
 - organization: MYOB
   design_system: Feelix
   start_urls:
