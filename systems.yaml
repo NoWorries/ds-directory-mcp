@@ -8069,20 +8069,14 @@
   start_urls:
   - https://ionicframework.com/
   likely_unmaintained: false
-  pages_indexed: 148
-  hit_max_pages: true
+  pages_indexed: 1
+  hit_max_pages: false
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources:
-    github:
-    - https://github.com/storesafe/cordova-sqlite-storage
-    - https://github.com/marnusw/date-fns-tz
-    - https://github.com/capacitor-community/sqlite
+  unverified_resources: {}
   content_signals:
     dark_mode: true
-    governance_model: true
-    codemods: true
     frameworks:
     - React
     - Vue
@@ -8090,42 +8084,25 @@
     - Web Components
   content_signal_sources:
     dark_mode: https://ionicframework.com/
-    governance_model: https://ionicframework.com/docs
-    codemods: https://ionicframework.com/docs/v8/angular/build-options
     frameworks:
       React: https://ionicframework.com/
       Vue: https://ionicframework.com/
       Angular: https://ionicframework.com/
       Web Components: https://ionicframework.com/
-  thin_page_ratio: 0.01
-  has_localized_docs: true
-  last_checked: '2026-09-18T15:49:14+00:00'
-  etag: W/"7fa60ce095c90106348ff0f7002319d5"
-  last_modified: Thu, 10 Sep 2026 01:51:05 GMT
+  thin_page_ratio: 0.94
+  has_localized_docs: false
+  last_checked: '2026-10-14T09:38:46+00:00'
+  etag: W/"8c1a1abad49831be673d3c6d63daebdd"
+  last_modified: Mon, 12 Oct 2026 13:48:08 GMT
   sitemap_url: https://ionicframework.com/sitemap.xml
   resources:
-    github:
-    - https://github.com/ionic-team/photo-gallery-capacitor-ng
-    - https://github.com/ionic-team/slides-migration-samples
-    - https://github.com/ionic-team/native-run
-    - https://github.com/ionic-team/ionic-framework
-    - https://github.com/ionic-team/ionic-angular-standalone-codemods
-    - https://github.com/ionic-team/cordova-res
-    - https://github.com/ionic-team/pwa-elements
-    - https://github.com/ionic-team/tutorial-photo-gallery-angular
-    - https://github.com/ionic-team/ionic-cli
-    - https://github.com/ionic-team/ionic
-    - https://github.com/ionic-team/ionic-docs
     storybook:
     - https://twitter.com/storybookjs
-    icons:
-    - https://ionicframework.com/docs/api/icon
-    - https://ionicframework.com/docs/ja/v8/api/icon
-    - https://ionicframework.com/docs/v8/api/icon
   github_meta:
     license: MIT
     stars: 145
     last_pushed: '2026-09-14T14:35:51Z'
+  render_mode: ''
 - organization: GNOME
   design_system: Human Interface Guidelines
   start_urls:
