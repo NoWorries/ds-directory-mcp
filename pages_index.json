@@ -52576,10 +52576,600 @@
   ],
   "Ionic Framework": [
     {
+      "url": "https://ionicframework.com/docs/native/action-sheet",
+      "title": "Action Sheet Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/add-to-existing",
+      "title": "Add Ionic Angular to Existing Project: Integration Guide"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/add-to-existing",
+      "title": "Add Ionic React to Existing Project: Integration Guide"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/add-to-existing",
+      "title": "Add Ionic Vue to Existing Project: Integration Guide"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/advanced",
+      "title": "Advanced Theming: Quickly Customize App Colors using CSS | Ionic"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/android",
+      "title": "Android App Development Guide: Build Ionic Apps in Android Studio"
+    },
+    {
+      "url": "https://ionicframework.com/docs/deployment/play-store",
+      "title": "Android Play Store Deployment: Publish Your Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/storage",
+      "title": "Angular App Data Storage Options - Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/injection-tokens",
+      "title": "Angular Injection Tokens | Access Ionic Elements via Dependency Injection"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/navigation",
+      "title": "Angular Navigation: How Routing & Redirects Work in Angular Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/overlays",
+      "title": "Angular Overlay Components: Modals, Popovers with Custom Injectors"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/lifecycle",
+      "title": "Angular Page Component Life Cycle - App Events Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/performance",
+      "title": "Angular Performance: Manage App Component Change with ngFor"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/testing",
+      "title": "Angular Unit and End-to-End Testing for Ionic App Components"
+    },
+    {
+      "url": "https://ionicframework.com/docs/utilities/animations",
+      "title": "Animations: Web Animations API to Build and Run on Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/reference/glossary",
+      "title": "API Glossary: Terminology and Definitions | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/app",
+      "title": "App Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/core-concepts/fundamentals",
+      "title": "App Development Core Concepts and Tools - Ionic Framework API"
+    },
+    {
+      "url": "https://ionicframework.com/advisory",
+      "title": "App Development Expert Help Services | Ionic Advisory"
+    },
+    {
+      "url": "https://ionicframework.com/docs/reference/support",
+      "title": "App Development Support Policy - Ionic Framework API"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/tips",
+      "title": "App Development Tips: How to Resolve Permission Errors and Issues"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/app-launcher",
+      "title": "App Launcher Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/scaffolding",
+      "title": "App Scaffolding | Create Scaffolding for Ionic Web Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/browser",
+      "title": "Browser Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/troubleshooting/build",
+      "title": "Build Errors: Learn to Solve Common Mistakes | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/build-options",
+      "title": "Build Options | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/camera",
+      "title": "Camera Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/setup",
+      "title": "Capacitor Plugins | Capacitor Core Plugins for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/core-concepts/webview",
+      "title": "Capacitor Web View for iOS and Android Apps - Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/clipboard",
+      "title": "Clipboard Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/contributing/coc",
+      "title": "Code of Conduct | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/color-generator",
+      "title": "Color Generator: Create Custom Palettes and Themes for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/config",
+      "title": "Config | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/contributing/how-to-contribute",
+      "title": "Contributing to Ionic | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/troubleshooting/cors",
+      "title": "CORS Errors: Cross-Origin Resource Sharing - Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/pwa",
+      "title": "Create Progressive Web Apps (PWA) in React - Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/core-concepts/cross-platform",
+      "title": "Cross Platform | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/css-shadow-parts",
+      "title": "CSS Shadow Parts - Style CSS Properties Inside of A Shadow Tree"
+    },
+    {
+      "url": "https://ionicframework.com/docs/layout/css-utilities",
+      "title": "CSS Utilities: Classes for Text/Element Alignment or Modification"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/css-variables",
+      "title": "CSS Variables | CSS Custom Properties for Variables & Components"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/dark-mode",
+      "title": "Dark Mode to Change Color Schemes and CSS Properties"
+    },
+    {
+      "url": "https://ionicframework.com/docs/troubleshooting/debugging",
+      "title": "Debugging Guide for Apps in iOS Safari and Android Chrome"
+    },
+    {
+      "url": "https://ionicframework.com/docs/deployment/progressive-web-app",
+      "title": "Deploying A Progressive Web Application (PWA) | PWA Deployment"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/device",
+      "title": "Device Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/dialog",
+      "title": "Dialog Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/layout/dynamic-font-scaling",
+      "title": "Dynamic Font Scaling | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/intro/environment",
+      "title": "Environment Setup | Node & NPM Environment for Ionic App Setup"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/filesystem",
+      "title": "Filesystem Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/faq",
+      "title": "Frequently Asked Question | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/geolocation",
+      "title": "Geolocation Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/utilities/gestures",
+      "title": "Gestures | Ionic App Utility for Custom Gestures and Interactions"
+    },
+    {
+      "url": "https://ionicframework.com/docs/layout/global-stylesheets",
+      "title": "Global Stylesheet: Styled CSS Component Options for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/haptics",
+      "title": "Haptics Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/hardware-back-button",
+      "title": "Hardware Back Button for Capacitor & Cordova on Android Devices"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/high-contrast-mode",
+      "title": "High Contrast Mode to Increase Color Contrast"
+    },
+    {
+      "url": "https://ionicframework.com/docs/intro/cli",
+      "title": "How to Install The Ionic Framework CLI to Build Mobile Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/api/grid",
+      "title": "ion-grid: Display Grids for Mobile-First Custom App Layout"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/overview",
+      "title": "Ionic Angular Overview | Angular Version Support and Tooling"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/angular/overview",
+      "title": "Ionic Angular Overview | Angular Version Support and Tooling"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/quickstart",
+      "title": "Ionic Angular Quickstart Using Ionic CLI: Angular Basics"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/themes",
+      "title": "Ionic App Themes | Change Default App Background Themes & Colors"
+    },
+    {
+      "url": "https://ionicframework.com/docs/cli",
+      "title": "Ionic CLI Framework: Command-Line Interface to Develop Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/colors",
+      "title": "Ionic CSS Color Component: Style or Change Default App Colors"
+    },
+    {
+      "url": "https://ionicframework.com/community",
+      "title": "Ionic Developer Community"
+    },
+    {
       "url": "https://ionicframework.com/",
-      "title": "Ionic Framework - The Cross-Platform App Development Leader",
-      "etag": "W/\"8c1a1abad49831be673d3c6d63daebdd\"",
-      "last_modified": "Mon, 12 Oct 2026 13:48:08 GMT"
+      "title": "Ionic Framework - The Cross-Platform App Development Leader"
+    },
+    {
+      "url": "https://ionicframework.com/translate",
+      "title": "Ionic Framework - Translate"
+    },
+    {
+      "url": "https://ionicframework.com/docs/intro/cdn",
+      "title": "Ionic Framework Packages: CDN, Angular, Vue, React, and JavaScript"
+    },
+    {
+      "url": "https://ionicframework.com/docs/javascript/overview",
+      "title": "Ionic JavaScript Overview | JavaScript Version Support and Tooling"
+    },
+    {
+      "url": "https://ionicframework.com/docs/javascript/quickstart",
+      "title": "Ionic JavaScript Quickstart: JavaScript Basics"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v3",
+      "title": "Ionic Platform Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/platform-styles",
+      "title": "Ionic Platform Styles | Platform-Specific Styles for Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/overview",
+      "title": "Ionic React Overview | React Version Support and Tooling"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/react/overview",
+      "title": "Ionic React Overview | React Version Support and Tooling"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/quickstart",
+      "title": "Ionic React Quickstart Using Ionic CLI: React Basics"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/utility-functions",
+      "title": "Ionic React Utility Functions"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/troubleshooting",
+      "title": "Ionic Troubleshooting Guide: Common Vue App Development Issues"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/overview",
+      "title": "Ionic Vue Overview | Vue.js Framework Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/quickstart",
+      "title": "Ionic Vue Quickstart Using Ionic CLI: Vue Basics"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/utility-functions",
+      "title": "Ionic Vue Utility Functions"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/ios",
+      "title": "iOS App Development Guide: Xcode Setup to Build and Run iOS Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/keyboard",
+      "title": "Keyboard Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/keyboard",
+      "title": "Keyboard Guide: Tools to Manage an On-Screen Mobile App Keyboard"
+    },
+    {
+      "url": "https://ionicframework.com/docs/cli/livereload",
+      "title": "Live Reload | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/local-notifications",
+      "title": "Local Notifications Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/pwa",
+      "title": "Make Progressive Web Apps (PWA) in Angular - Ionic Tutorial"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/managing-focus",
+      "title": "Managing Focus"
+    },
+    {
+      "url": "https://ionicframework.com/docs/reference/browser-support",
+      "title": "Mobile Browser Support to Run Ionic Apps Anywhere"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/motion",
+      "title": "Motion Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native",
+      "title": "Native APIs: Open-Source Native Device Plugins and Integrations"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/native",
+      "title": "Native APIs: Open-Source Native Device Plugins and Integrations"
+    },
+    {
+      "url": "https://ionicframework.com/docs/troubleshooting/native",
+      "title": "Native App Errors: How to Resolve Native Errors on Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/network",
+      "title": "Network Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/intro/next",
+      "title": "Next Steps for Starting an App: Choose Your JavaScript Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v6",
+      "title": "Open-Source UI Toolkit to Create Your Own Mobile Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs",
+      "title": "Open-Source UI Toolkit to Create Your Own Mobile Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v7",
+      "title": "Open-Source UI Toolkit to Create Your Own Mobile Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/platform",
+      "title": "Platform | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/platform",
+      "title": "Platform | Ionic Platform to Customize Apps to Fit Any Device"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/preferences",
+      "title": "Preferences Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/previewing",
+      "title": "Previewing: To Run Ionic Apps Locally in A Web Browser"
+    },
+    {
+      "url": "https://ionicframework.com/docs/core-concepts/what-are-progressive-web-apps",
+      "title": "Progressive Web Applications: What is a PWA - Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/deployment/app-store",
+      "title": "Publish to iOS App Store: Apple App Store Deployment for Ionic"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/push-notifications",
+      "title": "Push Notifications Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/storage",
+      "title": "React App Data Storage Options - Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/lifecycle",
+      "title": "React Lifecycle: A Guide to Ionic React App Component Lifecycles"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/navigation",
+      "title": "React Navigation: Router Link Redirect to Navigate to Another Page"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/performance",
+      "title": "React Performance Testing - Using Loops with Ionic App Components"
+    },
+    {
+      "url": "https://ionicframework.com/docs/reference/release-notes",
+      "title": "Release Notes | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v8/reference/release-notes",
+      "title": "Release Notes | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/screen-reader",
+      "title": "Screen Reader Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/techniques/security",
+      "title": "Security for Angular, React, and Vue Apps - Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/slides",
+      "title": "Set Up Swiper.js for Angular Slides [Example] | Ionic"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/slides",
+      "title": "Set Up Swiper.js for React Slides [Example] | Ionic"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/share",
+      "title": "Share Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/troubleshooting/runtime",
+      "title": "Solve App Runtime Issues: Blank App, Plugins Not Working, etc."
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/splash-screen",
+      "title": "Splash Screen Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/developing/starting",
+      "title": "Starting an App: How to Guide | Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/status-bar",
+      "title": "Status Bar Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/layout/structure",
+      "title": "Structure Layout | Structures for Content Layout on Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/support",
+      "title": "Support"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v6/react/testing",
+      "title": "Testing Ionic React | Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/text-zoom",
+      "title": "Text Zoom Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/theming/basics",
+      "title": "Theming | Ionic Apps: Color and Theming Basics Definition"
+    },
+    {
+      "url": "https://ionicframework.com/docs/native/toast",
+      "title": "Toast Capacitor Plugin API | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v4/components",
+      "title": "UI Components - Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/components",
+      "title": "UI Components | User Interface Application Building Components"
+    },
+    {
+      "url": "https://ionicframework.com/docs/updating/4-0",
+      "title": "Updating to v4 | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/updating/5-0",
+      "title": "Updating to v5 | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/updating/6-0",
+      "title": "Updating to v6 | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/updating/7-0",
+      "title": "Updating to v7 | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/updating/8-0",
+      "title": "Updating to v8 | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/updating/9-0",
+      "title": "Updating to v9 | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/overlays",
+      "title": "Using Overlay Components in React | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/reference/versioning",
+      "title": "Versioning | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/react/virtual-scroll",
+      "title": "Virtual Scroll | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/virtual-scroll",
+      "title": "Virtual Scroll | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/virtual-scroll",
+      "title": "Virtual Scroll | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/intro/vscode-extension",
+      "title": "VS Code Extension"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/storage",
+      "title": "Vue App Data Storage Options - Ionic Documentation"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/build-options",
+      "title": "Vue Build Options: Component Registration and Build Configuration"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/lifecycle",
+      "title": "Vue Lifecycle | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/navigation",
+      "title": "Vue Navigation: Use Ionic + Vue Router to Create Multi-Page Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/performance",
+      "title": "Vue Performance | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/platform",
+      "title": "Vue Platform | Ionic Framework"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/pwa",
+      "title": "Vue PWA | Add Progressive Web Apps to Vue.js Projects | Ionic"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/slides",
+      "title": "Vue Slides Guide: How to Get Swiper for Vue on Ionic Apps"
+    },
+    {
+      "url": "https://ionicframework.com/docs/v6/vue/your-first-app",
+      "title": "Vue Step-by-Step Tutorial: Run Your First Ionic App with Vue"
+    },
+    {
+      "url": "https://ionicframework.com/docs/vue/testing",
+      "title": "Vue Unit and End-to-End Testing for Ionic App Components"
+    },
+    {
+      "url": "https://ionicframework.com/docs/angular/zoneless",
+      "title": "Zoneless Change Detection with Ionic and Angular"
     }
   ],
   "GNOME — Human Interface Guidelines": [

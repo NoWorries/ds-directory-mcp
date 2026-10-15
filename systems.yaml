@@ -8070,13 +8070,27 @@
   design_system: Ionic Framework
   start_urls:
   - https://ionicframework.com/
-  likely_unmaintained: false
-  pages_indexed: 1
-  hit_max_pages: false
+  likely_unmaintained: true
+  pages_indexed: 149
+  hit_max_pages: true
   crawl_error: ''
   consecutive_crawl_failures: 0
   likely_spa: false
-  unverified_resources: {}
+  unverified_resources:
+    github:
+    - https://github.com/nvm-sh/nvm
+    - https://github.com/Rob--W/cors-anywhere
+    - https://github.com/capacitor-community/sqlite
+    - https://help.github.com/articles/creating-a-pull-request-from-a-fork
+    - https://github.com/WICG/close-watcher
+    - https://github.com/postcss/autoprefixer
+    - https://github.com/capacitor-community/text-to-speech
+    - https://github.com/expressjs/cors
+    - https://github.com/remix-run/react-router
+    - https://github.com/storesafe/cordova-sqlite-storage
+    npm:
+    - https://npmjs.com/package/sanitize-html
+    - https://npmjs.com/package/cordova-plugin-nativestorage
   content_signals:
     dark_mode: true
     frameworks:
@@ -8084,6 +8098,7 @@
     - Vue
     - Angular
     - Web Components
+    governance_model: true
   content_signal_sources:
     dark_mode: https://ionicframework.com/
     frameworks:
@@ -8091,20 +8106,68 @@
       Vue: https://ionicframework.com/
       Angular: https://ionicframework.com/
       Web Components: https://ionicframework.com/
+    governance_model: https://ionicframework.com/docs/v6
   thin_page_ratio: 0.94
   has_localized_docs: false
-  last_checked: '2026-10-14T09:38:46+00:00'
+  last_checked: '2026-10-15T13:21:14+00:00'
   etag: W/"8c1a1abad49831be673d3c6d63daebdd"
   last_modified: Mon, 12 Oct 2026 13:48:08 GMT
   sitemap_url: https://ionicframework.com/sitemap.xml
   resources:
     storybook:
     - https://twitter.com/storybookjs
+    github:
+    - https://github.com/ionic-team/v4-migration-tslint
+    - https://github.com/ionic-team/ionic-framework
+    - https://github.com/ionic-team/datetime-migration-samples
+    - https://github.com/ionic-team/ionic-angular-standalone-codemods
+    - https://github.com/ionic-team/cordova-plugin-ionic-webview
+    - https://github.com/ionic-team/cordova-plugin-ionic-keyboard
+    - https://github.com/ionic-team/ionic
+    - https://github.com/ionic-team/ion-ios-geolocation
+    - https://github.com/ionic-team/slides-migration-samples
+    - https://github.com/ionic-team/capacitor-plugins
+    - https://github.com/ionic-jp/ionic-docs
+    - https://github.com/ionic-team/ionic-docs
+    - https://github.com/ionic-team/photo-gallery-capacitor-vue
+    - https://github.com/ionic-team/ionic-storage
+    - https://github.com/ionic-team/pwa-elements
+    - https://github.com/ionic-team/ionic-cli
+    - https://github.com/ionic-team/docs-demo
+    markdown_docs:
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/status-bar/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/browser/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/local-notifications/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/splash-screen/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/camera/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/share/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/motion/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/action-sheet/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/dialog/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/toast/README.md
+    - https://github.com/angular/angular/blob/master/CONTRIBUTING.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/app/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/preferences/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/app-launcher/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/keyboard/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/device/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/text-zoom/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/clipboard/README.md
+    - https://github.com/Akryum/vue-virtual-scroller/blob/next/packages/vue-virtual-scroller/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/filesystem/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/screen-reader/README.md
+    - https://github.com/ionic-team/ionic-docs/blob/master/CONTRIBUTING.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/network/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/push-notifications/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/geolocation/README.md
+    - https://github.com/ionic-team/capacitor-plugins/edit/main/haptics/README.md
+    icons:
+    - https://ionicframework.com/docs/api/icon
   github_meta:
     license: MIT
-    stars: 145
-    last_pushed: '2026-09-14T14:35:51Z'
-  render_mode: ''
+    stars: 100
+    last_pushed: '2023-01-06T21:57:00Z'
+  render_mode: spa
 - organization: GNOME
   design_system: Human Interface Guidelines
   start_urls:

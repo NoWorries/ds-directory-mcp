@@ -1,8 +1,8 @@
 {
   "$schema": "./design-system.schema.json",
-  "generated_at": "2026-10-15T12:53:20+00:00",
+  "generated_at": "2026-10-15T13:23:51+00:00",
   "data_as_of": "2026-09-13T22:41:54+00:00",
-  "total_systems": 170,
+  "total_systems": 169,
   "systems": [
     {
       "id": "adeo-mozaic-design-system",
@@ -52599,50 +52599,6 @@
         {
           "url": "https://flowbite.com/",
           "title": "Flowbite"
-        }
-      ]
-    },
-    {
-      "id": "ionic-framework",
-      "organization": null,
-      "design_system": "Ionic Framework",
-      "full_name": "Ionic Framework",
-      "start_urls": [
-        "https://ionicframework.com/"
-      ],
-      "detail_url": "/systems/ionic-framework",
-      "pages_indexed": 1,
-      "coverage_status": "partial",
-      "hit_max_pages": false,
-      "likely_spa": false,
-      "last_checked": "2026-10-14T09:38:46+00:00",
-      "last_modified": "Mon, 12 Oct 2026 13:48:08 GMT",
-      "sitemap_last_modified": null,
-      "resources": {
-        "storybook": [
-          "https://twitter.com/storybookjs"
-        ]
-      },
-      "unverified_resources": {},
-      "content_signals": {
-        "dark_mode": true,
-        "frameworks": [
-          "React",
-          "Vue",
-          "Angular",
-          "Web Components"
-        ]
-      },
-      "github_meta": {
-        "license": "MIT",
-        "stars": 145,
-        "last_pushed": "2026-09-14T14:35:51Z"
-      },
-      "npm_meta": null,
-      "indexed_pages": [
-        {
-          "url": "https://ionicframework.com/",
-          "title": "Ionic Framework - The Cross-Platform App Development Leader"
         }
       ]
     },
