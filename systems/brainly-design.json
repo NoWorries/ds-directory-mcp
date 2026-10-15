@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "brainly-design",
   "organization": "Brainly",
   "design_system": "Design",
@@ -9,11 +9,11 @@
     "https://design.brainly.com/"
   ],
   "detail_url": "/systems/brainly-design",
-  "pages_indexed": 321,
+  "pages_indexed": 330,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-25T03:04:41+00:00",
+  "last_checked": "2026-10-15T09:02:51+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -68,7 +68,27 @@
       "title": "About Us · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/810fcf",
+      "title": "Animation · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/8adfd5f36",
+      "title": "Animation · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation",
+      "title": "Animation · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/14e617",
+      "title": "Animation · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/85e832-animation/b/5236a9",
+      "title": "Animation · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/85e832-animation/b/8adfd5f36",
       "title": "Animation · PENCIL · zeroheight"
     },
     {
@@ -76,15 +96,11 @@
       "title": "Animation · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/634184",
-      "title": "Animation · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/810fcf",
-      "title": "Animation · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/506447",
+      "title": "Animation · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/634184",
       "title": "Animation · PENCIL · zeroheight"
     },
     {
@@ -97,10 +113,6 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/85e832-animation/b/8087a7",
-      "title": "Animation · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/85e832-animation/b/14e617",
       "title": "Animation · PENCIL · zeroheight"
     },
     {
@@ -132,15 +144,23 @@
       "title": "Animation · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/015c14-app-store--google-play-images/b/927841",
+      "title": "App Store & Google Play Images · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/015c14-app-store--google-play-images/b/8adfd5f36",
+      "title": "App Store & Google Play Images · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/015c14-app-store--google-play-images/b/752f1e",
+      "title": "App Store & Google Play Images · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/015c14-app-store--google-play-images",
       "title": "App Store & Google Play Images · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/015c14-app-store--google-play-images",
-      "title": "App Store & Google Play Images · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/015c14-app-store--google-play-images/b/752f1e",
       "title": "App Store & Google Play Images · PENCIL · zeroheight"
     },
     {
@@ -153,10 +173,6 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/015c14-app-store--google-play-images/b/09f2ab",
-      "title": "App Store & Google Play Images · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/015c14-app-store--google-play-images/b/927841",
       "title": "App Store & Google Play Images · PENCIL · zeroheight"
     },
     {
@@ -184,6 +200,14 @@
       "title": "Backdrops · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/36c7b9-border-radius/b/57ed34",
+      "title": "Border Radius · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/36c7b9-border-radius/b/267612",
+      "title": "Border Radius · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/36c7b9-border-radius",
       "title": "Border Radius · PENCIL · zeroheight"
     },
@@ -193,14 +217,6 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/36c7b9-border-radius/b/96450c",
-      "title": "Border Radius · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/36c7b9-border-radius/b/267612",
-      "title": "Border Radius · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/36c7b9-border-radius/b/57ed34",
       "title": "Border Radius · PENCIL · zeroheight"
     },
     {
@@ -244,11 +260,11 @@
       "title": "Brand · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/10c2a5-button",
+      "url": "https://design.brainly.com/8adfd5f36/p/10c2a5-button",
       "title": "Button · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/10c2a5-button",
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/10c2a5-button",
       "title": "Button · PENCIL · zeroheight"
     },
     {
@@ -284,19 +300,7 @@
       "title": "Button · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/5518c9",
-      "title": "Card · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/8adfd5f36",
-      "title": "Card · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/43a6b1",
-      "title": "Card · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/81b31d",
+      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card",
       "title": "Card · PENCIL · zeroheight"
     },
     {
@@ -304,11 +308,23 @@
       "title": "Card · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card",
+      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/43a6b1",
+      "title": "Card · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/5518c9",
       "title": "Card · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/189c46",
+      "title": "Card · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/81b31d",
+      "title": "Card · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/4842f2-card/b/8adfd5f36",
       "title": "Card · PENCIL · zeroheight"
     },
     {
@@ -336,6 +352,10 @@
       "title": "Chip · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/59471e-chip/b/37e323",
+      "title": "Chip · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/59471e-chip/b/8adfd5f36",
       "title": "Chip · PENCIL · zeroheight"
     },
@@ -344,19 +364,15 @@
       "title": "Chip · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/59471e-chip/b/37e323",
-      "title": "Chip · PENCIL · zeroheight"
+      "url": "https://design.brainly.com/8adfd5f36/p/28096a-colors",
+      "title": "Colors · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/28096a-colors",
+      "title": "Colors · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/28096a-colors/b/46064f",
-      "title": "Colors · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/28096a-colors/b/8adfd5f36",
-      "title": "Colors · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/28096a-colors",
       "title": "Colors · PENCIL · zeroheight"
     },
     {
@@ -364,7 +380,7 @@
       "title": "Colors · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/28096a-colors",
+      "url": "https://design.brainly.com/8adfd5f36/p/28096a-colors/b/8adfd5f36",
       "title": "Colors · PENCIL · zeroheight"
     },
     {
@@ -400,15 +416,15 @@
       "title": "Counter · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/805c69-dark-mode",
+      "title": "Dark Mode · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/805c69-dark-mode/b/162c15",
       "title": "Dark Mode · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/805c69-dark-mode/b/92fafc",
-      "title": "Dark Mode · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/805c69-dark-mode",
       "title": "Dark Mode · PENCIL · zeroheight"
     },
     {
@@ -432,15 +448,15 @@
       "title": "Design Principles · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/23a1e2-dialog",
+      "url": "https://design.brainly.com/8adfd5f36/p/23a1e2-dialog/b/67f151",
+      "title": "Dialog · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/23a1e2-dialog/b/343a70",
       "title": "Dialog · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/23a1e2-dialog/b/363307",
-      "title": "Dialog · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/23a1e2-dialog/b/8adfd5f36",
       "title": "Dialog · PENCIL · zeroheight"
     },
     {
@@ -452,11 +468,11 @@
       "title": "Dialog · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/23a1e2-dialog/b/67f151",
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/23a1e2-dialog",
       "title": "Dialog · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/23a1e2-dialog/b/343a70",
+      "url": "https://design.brainly.com/8adfd5f36/p/23a1e2-dialog/b/8adfd5f36",
       "title": "Dialog · PENCIL · zeroheight"
     },
     {
@@ -500,6 +516,14 @@
       "title": "Email Signature · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/30a077-emails",
+      "title": "Emails · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/30a077-emails/b/07f0df",
+      "title": "Emails · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/30a077-emails/b/565344",
       "title": "Emails · PENCIL · zeroheight"
     },
@@ -509,10 +533,6 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/30a077-emails/b/965276",
-      "title": "Emails · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/30a077-emails/b/07f0df",
       "title": "Emails · PENCIL · zeroheight"
     },
     {
@@ -533,10 +553,6 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/30a077-e-mails/b/07f0df",
-      "title": "Emails · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/30a077-emails",
       "title": "Emails · PENCIL · zeroheight"
     },
     {
@@ -564,14 +580,6 @@
       "title": "ICON · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/687730",
-      "title": "Icons · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/296e05",
-      "title": "Icons · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons",
       "title": "Icons · PENCIL · zeroheight"
     },
@@ -580,7 +588,19 @@
       "title": "Icons · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/3913dd",
+      "title": "Icons · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/43aede",
+      "title": "Icons · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/755273",
+      "title": "Icons · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/296e05",
       "title": "Icons · PENCIL · zeroheight"
     },
     {
@@ -588,11 +608,7 @@
       "title": "Icons · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/3913dd",
-      "title": "Icons · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/755273",
+      "url": "https://design.brainly.com/8adfd5f36/p/434bf5-icons/b/687730",
       "title": "Icons · PENCIL · zeroheight"
     },
     {
@@ -656,7 +672,7 @@
       "title": "Illustrations · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/14d415-illustrations/b/8adfd5f36",
+      "url": "https://design.brainly.com/8adfd5f36/p/14d415-illustrations/b/05a231",
       "title": "Illustrations · PENCIL · zeroheight"
     },
     {
@@ -664,11 +680,15 @@
       "title": "Illustrations · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/14d415-illustrations/b/05a231",
+      "url": "https://design.brainly.com/8adfd5f36/p/14d415-illustrations/b/8adfd5f36",
       "title": "Illustrations · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/14d415-illustrations/b/71759e/t/461af2",
+      "title": "Illustrations · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/14d415-illustrations",
       "title": "Illustrations · PENCIL · zeroheight"
     },
     {
@@ -680,24 +700,8 @@
       "title": "Illustrations · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/14d415-illustrations",
-      "title": "Illustrations · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/p/126018-input",
       "title": "INPUT · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/75770e-label",
-      "title": "Label · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/12f403",
-      "title": "Label · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/8adfd5f36",
-      "title": "Label · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/44489e",
@@ -705,10 +709,6 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/8074d0",
-      "title": "Label · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/74fa2c",
       "title": "Label · PENCIL · zeroheight"
     },
     {
@@ -720,11 +720,35 @@
       "title": "Label · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/74fa2c",
+      "title": "Label · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/12f403",
+      "title": "Label · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/75770e-label",
+      "title": "Label · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/75770e-label/b/8adfd5f36",
+      "title": "Label · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/4341fb-label",
       "title": "LABEL · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/n/975ae5",
+      "title": "Landing Pages · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/8050cc-landing-pages",
+      "title": "Landing Pages · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/8050cc-landing-pages/b/525d92",
       "title": "Landing Pages · PENCIL · zeroheight"
     },
     {
@@ -736,19 +760,11 @@
       "title": "Landing Pages · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/8050cc-landing-pages",
-      "title": "Landing Pages · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/8050cc-landing-pages",
       "title": "Landing Pages · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/8050cc-landing-pages/b/683893",
-      "title": "Landing Pages · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/8050cc-landing-pages/b/525d92",
       "title": "Landing Pages · PENCIL · zeroheight"
     },
     {
@@ -780,15 +796,7 @@
       "title": "Links · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo/b/54389c",
-      "title": "Logo · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo/b/09575a",
-      "title": "Logo · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo",
+      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo/b/91e5b2",
       "title": "Logo · PENCIL · zeroheight"
     },
     {
@@ -796,7 +804,15 @@
       "title": "Logo · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo/b/91e5b2",
+      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo",
+      "title": "Logo · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo/b/54389c",
+      "title": "Logo · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/3309c9-logo/b/09575a",
       "title": "Logo · PENCIL · zeroheight"
     },
     {
@@ -836,7 +852,11 @@
       "title": "Merchandise · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/11dfa2-mockups--devices",
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/11dfa2-mockups--devices",
+      "title": "Mockups & Devices · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/11dfa2-mockups--devices/b/66e55f",
       "title": "Mockups & Devices · PENCIL · zeroheight"
     },
     {
@@ -844,7 +864,7 @@
       "title": "Mockups & Devices · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/11dfa2-mockups--devices/b/66e55f",
+      "url": "https://design.brainly.com/8adfd5f36/p/11dfa2-mockups--devices",
       "title": "Mockups & Devices · PENCIL · zeroheight"
     },
     {
@@ -868,19 +888,15 @@
       "title": "Mockups & Devices · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/11dfa2-mockups--devices",
-      "title": "Mockups & Devices · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/p/9393bc-motion",
       "title": "Motion · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/07c008-music-guidelines",
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/07c008-music-guidelines",
       "title": "Music Guidelines · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/07c008-music-guidelines",
+      "url": "https://design.brainly.com/8adfd5f36/p/07c008-music-guidelines",
       "title": "Music Guidelines · PENCIL · zeroheight"
     },
     {
@@ -888,15 +904,11 @@
       "title": "PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/8adfd5f36",
-      "title": "PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/746bba-icons",
-      "title": "PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36",
+      "title": "PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/n/8adfd5f36",
       "title": "PENCIL · zeroheight"
     },
     {
@@ -904,7 +916,15 @@
       "title": "PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/n/8adfd5f36",
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/8adfd5f36",
+      "title": "PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/70668f-shadow--elevation",
+      "title": "PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/746bba-icons",
       "title": "PENCIL · zeroheight"
     },
     {
@@ -936,19 +956,11 @@
       "title": "Photography · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/71f1d8-popover",
-      "title": "Popover · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/71f1d8-popover/b/310ba7",
-      "title": "Popover · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/71f1d8-popover/b/8adfd5f36",
-      "title": "Popover · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/p/71f1d8-popover",
+      "title": "Popover · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/71f1d8-popover/b/089500",
       "title": "Popover · PENCIL · zeroheight"
     },
     {
@@ -956,7 +968,15 @@
       "title": "Popover · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/71f1d8-popover/b/089500",
+      "url": "https://design.brainly.com/8adfd5f36/p/71f1d8-popover/b/310ba7",
+      "title": "Popover · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/71f1d8-popover",
+      "title": "Popover · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/71f1d8-popover/b/8adfd5f36",
       "title": "Popover · PENCIL · zeroheight"
     },
     {
@@ -1028,15 +1048,11 @@
       "title": "SEARCH · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/95f057-select-menu",
-      "title": "Select Menu · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/p/95f057-select-menu/b/06d651",
       "title": "Select Menu · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/95f057-select-menu/b/8adfd5f36",
+      "url": "https://design.brainly.com/8adfd5f36/p/95f057-select-menu",
       "title": "Select Menu · PENCIL · zeroheight"
     },
     {
@@ -1045,6 +1061,10 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/95f057-select-menu/b/494838",
+      "title": "Select Menu · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/95f057-select-menu/b/8adfd5f36",
       "title": "Select Menu · PENCIL · zeroheight"
     },
     {
@@ -1060,10 +1080,6 @@
       "title": "SELECT · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/70668f-shadow--elevation",
-      "title": "Shadow & Elevation · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/70668f-shadow--elevation",
       "title": "Shadow & Elevation · PENCIL · zeroheight"
     },
@@ -1074,6 +1090,22 @@
     {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/42f6ee-slack-theme",
       "title": "Slack Theme · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/107100-social-media-content/b/17522f",
+      "title": "Social Media Content · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/107100-social-media/b/996ac3",
+      "title": "Social Media Content · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/107100-social-media-content/b/8adfd5f36",
+      "title": "Social Media Content · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/107100-social-media/b/8adfd5f36",
+      "title": "Social Media Content · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/107100-social-media-content",
@@ -1089,10 +1121,6 @@
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/107100-social-media-content/b/996ac3",
-      "title": "Social Media Content · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/107100-social-media-content/b/17522f",
       "title": "Social Media Content · PENCIL · zeroheight"
     },
     {
@@ -1144,11 +1172,11 @@
       "title": "Strategy · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/947ee7-strategy/t/20a069",
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/947ee7-strategy",
       "title": "Strategy · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/947ee7-strategy",
+      "url": "https://design.brainly.com/8adfd5f36/p/947ee7-strategy/t/20a069",
       "title": "Strategy · PENCIL · zeroheight"
     },
     {
@@ -1160,15 +1188,15 @@
       "title": "Style Guide · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/937acd-subject-icons",
+      "title": "Subject Icons · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/937acd-subject-icons/t/506c30",
       "title": "Subject Icons · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/937acd-subject-icons/t/8adfd5f36",
-      "title": "Subject Icons · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/937acd-subject-icons",
       "title": "Subject Icons · PENCIL · zeroheight"
     },
     {
@@ -1180,19 +1208,19 @@
       "title": "TEXTAREA · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/17749c",
+      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/374815",
       "title": "Toast · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/8adfd5f36",
-      "title": "Toast · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/98ac3d-toast",
+      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/002cd9",
       "title": "Toast · PENCIL · zeroheight"
     },
     {
       "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast",
+      "title": "Toast · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/17749c",
       "title": "Toast · PENCIL · zeroheight"
     },
     {
@@ -1204,11 +1232,11 @@
       "title": "Toast · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/374815",
+      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/8adfd5f36",
       "title": "Toast · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/98ac3d-toast/b/002cd9",
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/98ac3d-toast",
       "title": "Toast · PENCIL · zeroheight"
     },
     {
@@ -1232,7 +1260,7 @@
       "title": "Tooltip · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/72cd79-tooltip/b/8adfd5f36",
+      "url": "https://design.brainly.com/8adfd5f36/p/72cd79-tooltip/b/55cade",
       "title": "Tooltip · PENCIL · zeroheight"
     },
     {
@@ -1244,7 +1272,7 @@
       "title": "Tooltip · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/72cd79-tooltip/b/55cade",
+      "url": "https://design.brainly.com/8adfd5f36/p/72cd79-tooltip/b/8adfd5f36",
       "title": "Tooltip · PENCIL · zeroheight"
     },
     {
@@ -1256,19 +1284,23 @@
       "title": "Tooltip · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/44cf68-typography/b/889445",
-      "title": "Typography · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/44cf68-typography/b/8adfd5f36",
-      "title": "Typography · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/p/44cf68-typography",
       "title": "Typography · PENCIL · zeroheight"
     },
     {
+      "url": "https://design.brainly.com/8adfd5f36/p/44cf68-typography/b/889445",
+      "title": "Typography · PENCIL · zeroheight"
+    },
+    {
       "url": "https://design.brainly.com/8adfd5f36/p/44cf68-typography/b/65dcb3",
+      "title": "Typography · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/v/0/p/44cf68-typography",
+      "title": "Typography · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/44cf68-typography/b/8adfd5f36",
       "title": "Typography · PENCIL · zeroheight"
     },
     {
@@ -1288,23 +1320,7 @@
       "title": "Typography · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/v/0/p/44cf68-typography",
-      "title": "Typography · PENCIL · zeroheight"
-    },
-    {
       "url": "https://design.brainly.com/8adfd5f36/v/0/p/091f75-ux-motion",
-      "title": "UX Motion · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/5018fa",
-      "title": "UX Motion · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/8adfd5f36",
-      "title": "UX Motion · PENCIL · zeroheight"
-    },
-    {
-      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/6201bd",
       "title": "UX Motion · PENCIL · zeroheight"
     },
     {
@@ -1312,11 +1328,19 @@
       "title": "UX Motion · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/48049b",
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/28ffda",
       "title": "UX Motion · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/28ffda",
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/5018fa",
+      "title": "UX Motion · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion",
+      "title": "UX Motion · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/6201bd",
       "title": "UX Motion · PENCIL · zeroheight"
     },
     {
@@ -1324,7 +1348,19 @@
       "title": "UX Motion · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion",
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/48049b",
+      "title": "UX Motion · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/t/80acf3",
+      "title": "UX Motion · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/t/8adfd5f36",
+      "title": "UX Motion · PENCIL · zeroheight"
+    },
+    {
+      "url": "https://design.brainly.com/8adfd5f36/p/091f75-ux-motion/b/8adfd5f36",
       "title": "UX Motion · PENCIL · zeroheight"
     },
     {
@@ -1336,11 +1372,11 @@
       "title": "What is our Design System? · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/p/084064-who-we-are",
+      "url": "https://design.brainly.com/8adfd5f36/n/429523",
       "title": "Who we are · PENCIL · zeroheight"
     },
     {
-      "url": "https://design.brainly.com/8adfd5f36/n/429523",
+      "url": "https://design.brainly.com/8adfd5f36/p/084064-who-we-are",
       "title": "Who we are · PENCIL · zeroheight"
     },
     {

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "react95",
   "organization": null,
   "design_system": "React95",
@@ -9,12 +9,12 @@
     "https://react95.github.io/React95/"
   ],
   "detail_url": "/systems/react95",
-  "pages_indexed": 27,
+  "pages_indexed": 28,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T05:25:03+00:00",
-  "last_modified": "Wed, 02 Sep 2026 20:02:51 GMT",
+  "last_checked": "2026-10-15T11:26:01+00:00",
+  "last_modified": "Thu, 08 Oct 2026 12:26:50 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -37,8 +37,8 @@
   },
   "github_meta": {
     "license": "NOASSERTION",
-    "stars": 3826,
-    "last_pushed": "2026-09-02T20:02:28Z"
+    "stars": 3837,
+    "last_pushed": "2026-10-15T08:44:55Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -65,6 +65,10 @@
     {
       "url": "https://react95.github.io/React95/iframe.html?id=contract--theme&viewMode=docs",
       "title": "contract--theme"
+    },
+    {
+      "url": "https://react95.github.io/React95/iframe.html?id=cursor--docs&viewMode=docs",
+      "title": "cursor--docs"
     },
     {
       "url": "https://react95.github.io/React95/iframe.html?id=cursor--simple&viewMode=docs",

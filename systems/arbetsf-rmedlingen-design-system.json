@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "arbetsf-rmedlingen-design-system",
   "organization": "Arbetsförmedlingen",
   "design_system": "Design system",
@@ -13,8 +13,8 @@
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-25T02:26:13+00:00",
-  "last_modified": "Thu, 24 Sep 2026 09:56:58 GMT",
+  "last_checked": "2026-10-15T08:30:01+00:00",
+  "last_modified": "Wed, 14 Oct 2026 08:53:37 GMT",
   "sitemap_last_modified": "2026-06-05",
   "resources": {
     "figma": [
@@ -522,15 +522,15 @@
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
+      "url": "https://designsystem.arbetsformedlingen.se/designmonster/komponenter/digi-tools-feedback/oversikt",
+      "title": "Startsida - Arbetsförmedlingen Designsystem"
+    },
+    {
       "url": "https://designsystem.arbetsformedlingen.se/arbetsloshet-och-arbetssokande",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/leverantorstjanster",
-      "title": "Startsida - Arbetsförmedlingen Designsystem"
-    },
-    {
-      "url": "https://designsystem.arbetsformedlingen.se/designmonster/komponenter/digi-tools-feedback/oversikt",
       "title": "Startsida - Arbetsförmedlingen Designsystem"
     },
     {
@@ -590,11 +590,11 @@
       "title": "Titellogotyp - Arbetsförmedlingen Designsystem"
     },
     {
-      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/typografi",
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography/oversikt",
       "title": "Typografi - Arbetsförmedlingen Designsystem"
     },
     {
-      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-typography/oversikt",
+      "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/typografi",
       "title": "Typografi - Arbetsförmedlingen Designsystem"
     },
     {

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "sap-fiori-fundamentals",
   "organization": "SAP",
   "design_system": "Fiori Fundamentals",
@@ -13,7 +13,7 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T05:45:14+00:00",
+  "last_checked": "2026-10-15T11:45:08+00:00",
   "last_modified": "Sat, 23 May 2026 11:20:05 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -41,8 +41,8 @@
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 295,
-    "last_pushed": "2026-09-24T20:05:54Z"
+    "stars": 236,
+    "last_pushed": "2026-10-13T21:29:15Z"
   },
   "npm_meta": null,
   "indexed_pages": [

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "rambler-ratio",
   "organization": "Rambler",
   "design_system": "Ratio",
@@ -13,8 +13,8 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T05:19:28+00:00",
-  "last_modified": "Wed, 15 Jan 2025 11:44:01 GMT",
+  "last_checked": "2026-10-15T11:20:46+00:00",
+  "last_modified": "Wed, 15 Jan 2025 11:44:02 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -25,7 +25,7 @@
   "content_signals": {},
   "github_meta": {
     "license": "MIT",
-    "stars": 189,
+    "stars": 190,
     "last_pushed": "2025-01-15T11:41:06Z"
   },
   "npm_meta": null,

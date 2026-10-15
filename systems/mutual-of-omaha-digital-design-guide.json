@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "mutual-of-omaha-digital-design-guide",
   "organization": "Mutual of Omaha",
   "design_system": "Digital Design Guide",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-08T11:23:11+00:00",
+  "last_checked": "2026-10-15T10:53:57+00:00",
   "last_modified": "Fri, 27 Jun 2025 17:41:19 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -23,10 +23,10 @@
   },
   "unverified_resources": {
     "github": [
+      "https://github.com/babel/babel-loader",
       "https://github.com/postcss/postcss",
-      "https://github.com/postcss/postcss-loader",
       "https://github.com/suitcss/suit",
-      "https://github.com/babel/babel-loader"
+      "https://github.com/postcss/postcss-loader"
     ]
   },
   "content_signals": {

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "gympass-yoga",
   "organization": "Gympass",
   "design_system": "Yoga",
@@ -13,8 +13,8 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T04:01:38+00:00",
-  "last_modified": "Mon, 14 Sep 2026 13:44:37 GMT",
+  "last_checked": "2026-10-15T10:02:02+00:00",
+  "last_modified": "Fri, 09 Oct 2026 20:04:35 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -30,7 +30,7 @@
   "github_meta": {
     "license": "MIT",
     "stars": 247,
-    "last_pushed": "2026-09-14T13:43:57Z"
+    "last_pushed": "2026-10-09T20:03:58Z"
   },
   "npm_meta": null,
   "indexed_pages": [

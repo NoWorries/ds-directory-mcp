@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "indiana-university-rivet",
   "organization": "Indiana University",
   "design_system": "Rivet",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T04:15:35+00:00",
+  "last_checked": "2026-10-15T10:16:50+00:00",
   "last_modified": "Tue, 07 Jul 2026 17:57:05 GMT",
   "sitemap_last_modified": "2026-07-07T17:56:51.237Z",
   "resources": {
@@ -42,7 +42,7 @@
   "npm_meta": {
     "latest_version": "2.9.1",
     "last_published": "2025-06-04T17:43:27.219Z",
-    "weekly_downloads": 903
+    "weekly_downloads": 1266
   },
   "indexed_pages": [
     {

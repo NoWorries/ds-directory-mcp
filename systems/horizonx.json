@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "horizonx",
   "organization": null,
   "design_system": "HorizonX",
@@ -13,9 +13,9 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T06:40:21+00:00",
+  "last_checked": "2026-10-15T12:33:37+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-25",
+  "sitemap_last_modified": "2026-10-15",
   "resources": {
     "agent_instructions": [
       "https://horizonx.so/llms.txt",

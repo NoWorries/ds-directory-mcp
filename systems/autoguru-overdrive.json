@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "autoguru-overdrive",
   "organization": "AutoGuru",
   "design_system": "Overdrive",
@@ -13,8 +13,8 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T02:44:53+00:00",
-  "last_modified": "Thu, 24 Sep 2026 05:24:13 GMT",
+  "last_checked": "2026-10-15T08:45:31+00:00",
+  "last_modified": "Thu, 15 Oct 2026 01:39:17 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "storybook": [
@@ -34,13 +34,13 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/Microsoft/typescript",
-      "https://github.com/storybookjs/mcp",
-      "https://github.com/vanilla-extract-css/vanilla-extract",
-      "https://github.com/grrowl/react-keyed-flatten-children",
-      "https://github.com/storybooks/storybook",
       "https://github.com/seek-oss/treat",
-      "https://github.com/facebook/react"
+      "https://github.com/storybooks/storybook",
+      "https://github.com/storybookjs/mcp",
+      "https://github.com/grrowl/react-keyed-flatten-children",
+      "https://github.com/Microsoft/typescript",
+      "https://github.com/facebook/react",
+      "https://github.com/vanilla-extract-css/vanilla-extract"
     ]
   },
   "content_signals": {
@@ -52,9 +52,9 @@
   },
   "github_meta": null,
   "npm_meta": {
-    "latest_version": "6.0.1",
-    "last_published": "2026-09-24T05:30:19.797Z",
-    "weekly_downloads": 918
+    "latest_version": "6.1.0",
+    "last_published": "2026-10-15T01:39:41.142Z",
+    "weekly_downloads": 166
   },
   "indexed_pages": [
     {
@@ -354,11 +354,11 @@
       "title": "overdrive--docs"
     },
     {
-      "url": "https://overdrive.autoguru.io/contributing",
+      "url": "https://overdrive.autoguru.io/about",
       "title": "Page not found · GitHub Pages"
     },
     {
-      "url": "https://overdrive.autoguru.io/about",
+      "url": "https://overdrive.autoguru.io/contributing",
       "title": "Page not found · GitHub Pages"
     },
     {

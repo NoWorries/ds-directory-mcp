@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "futurelearn-futurelearn-pattern-library",
   "organization": "FutureLearn",
   "design_system": "FutureLearn Pattern Library",
@@ -13,8 +13,8 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-09-25T03:56:23+00:00",
-  "last_modified": "Thu, 24 Sep 2026 13:08:41 GMT",
+  "last_checked": "2026-10-15T09:55:54+00:00",
+  "last_modified": "Thu, 15 Oct 2026 08:58:12 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "storybook": [

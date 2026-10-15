@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "apple-human-interface-guidelines",
   "organization": "Apple",
   "design_system": "Human Interface Guidelines",
@@ -9,12 +9,12 @@
     "https://developer.apple.com/design/human-interface-guidelines/"
   ],
   "detail_url": "/systems/apple-human-interface-guidelines",
-  "pages_indexed": 176,
+  "pages_indexed": 251,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-25T02:28:16+00:00",
-  "last_modified": "Thu, 24 Sep 2026 08:58:27 GMT",
+  "last_checked": "2026-10-15T08:24:07+00:00",
+  "last_modified": "Wed, 14 Oct 2026 13:29:07 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -38,8 +38,8 @@
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 988,
-    "last_pushed": "2026-09-23T22:24:37Z"
+    "stars": 994,
+    "last_pushed": "2026-09-28T20:12:07Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -318,6 +318,306 @@
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines/homekit",
       "title": "HomeKit | Apple Developer Documentation"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/accessibility.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/airplay.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/airplay.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/always-on.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/always-on.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/app-clips.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/app-clips.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/app-icons.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/app-icons.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/apple-in-app-purchase.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/apple-in-app-purchase.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/apple-pay.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/apple-pay.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/augmented-reality.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/augmented-reality.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/branding.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/branding.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/carekit.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/carekit.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/carplay.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/carplay.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/charting-data.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/charting-data.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/collaboration-and-sharing.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/collaboration-and-sharing.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/color.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/color.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/components.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/components.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/dark-mode.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/dark-mode.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/design-principles.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/design-principles.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/drag-and-drop.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/drag-and-drop.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/entering-data.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/entering-data.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/feedback.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/feedback.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/foundations.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/foundations.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/game-center.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/game-center.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/generative-ai.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/generative-ai.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/getting-started.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/getting-started.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/going-full-screen.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/going-full-screen.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/icons.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/icons.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/images.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/images.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/imessage-apps-and-stickers.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/imessage-apps-and-stickers.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/immersive-experiences.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/immersive-experiences.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/inclusion.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/inclusion.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/inputs.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/inputs.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/launching.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/launching.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/layout.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/layout.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/live-photos.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/live-photos.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/loading.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/loading.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/mac-catalyst.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/mac-catalyst.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/machine-learning.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/machine-learning.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/managing-accounts.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/managing-accounts.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/managing-notifications.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/managing-notifications.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/maps.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/maps.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/materials.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/materials.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/modality.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/modality.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/motion.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/motion.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/multitasking.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/multitasking.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/nfc.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/nfc.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/offering-help.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/offering-help.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/onboarding.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/patterns.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/patterns.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/photo-editing.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/photo-editing.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/playing-audio.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/playing-audio.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/playing-haptics.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/playing-haptics.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/playing-video.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/playing-video.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/printing.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/printing.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/ratings-and-reviews.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/ratings-and-reviews.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/researchkit.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/researchkit.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/right-to-left.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/right-to-left.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/settings.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/settings.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sf-symbols.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/sf-symbols.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/shareplay.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/shareplay.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/shazamkit.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/shazamkit.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/siri.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/siri.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sliders.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/sliders.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-layout.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/spatial-layout.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tap-to-pay-on-iphone.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/tap-to-pay-on-iphone.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/technologies.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/technologies.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/toggles.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/toggles.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/typography.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/typography.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/undo-and-redo.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/undo-and-redo.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/voiceover.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/voiceover.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/wallet.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/wallet.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/workouts.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/workouts.md"
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/writing.md",
+      "title": "https://developer.apple.com/design/human-interface-guidelines/writing.md"
     },
     {
       "url": "https://developer.apple.com/design/human-interface-guidelines",

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-14T09:50:30+00:00",
+  "generated_at": "2026-10-15T12:53:20+00:00",
   "id": "vmware-clarity-design-system",
   "organization": "VMware",
   "design_system": "Clarity Design System",
@@ -9,11 +9,11 @@
     "https://clarity.design/"
   ],
   "detail_url": "/systems/vmware-clarity-design-system",
-  "pages_indexed": 275,
+  "pages_indexed": 276,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-25T06:30:42+00:00",
+  "last_checked": "2026-10-15T12:25:00+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -68,11 +68,11 @@
       "title": "Accessibility - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/accessibility",
+      "url": "https://clarity.design/documentation/a11y/code",
       "title": "Accessibility - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/a11y/code",
+      "url": "https://clarity.design/documentation/accessibility",
       "title": "Accessibility - Clarity Design System"
     },
     {
@@ -116,11 +116,11 @@
       "title": "Advanced Tabs - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/tabs-addon/code",
+      "url": "https://clarity.design/documentation/tabs-addon/api",
       "title": "Advanced Tabs - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/tabs-addon/api",
+      "url": "https://clarity.design/documentation/tabs-addon/code",
       "title": "Advanced Tabs - Clarity Design System"
     },
     {
@@ -264,15 +264,19 @@
       "title": "Checkbox - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/checkbox/api",
-      "title": "Checkbox - Clarity Design System"
-    },
-    {
       "url": "https://clarity.design/documentation/checkbox/code",
       "title": "Checkbox - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/checkbox/api",
+      "title": "Checkbox - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/",
+      "title": "Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/theme-builder",
       "title": "Clarity Design System"
     },
     {
@@ -297,6 +301,10 @@
     },
     {
       "url": "https://clarity.design/documentation/datagrid/code",
+      "title": "Datagrid - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/code/column-actions",
       "title": "Datagrid - Clarity Design System"
     },
     {
@@ -420,11 +428,11 @@
       "title": "Date Picker - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/datepicker/api",
+      "url": "https://clarity.design/documentation/datepicker/code",
       "title": "Date Picker - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/datepicker/code",
+      "url": "https://clarity.design/documentation/datepicker/api",
       "title": "Date Picker - Clarity Design System"
     },
     {
@@ -468,11 +476,11 @@
       "title": "Dropdown - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/dropdown/api",
+      "url": "https://clarity.design/documentation/dropdown/code",
       "title": "Dropdown - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/dropdown/code",
+      "url": "https://clarity.design/documentation/dropdown/api",
       "title": "Dropdown - Clarity Design System"
     },
     {
@@ -504,11 +512,11 @@
       "title": "Grid - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/grid/code",
+      "url": "https://clarity.design/documentation/grid/api",
       "title": "Grid - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/grid/api",
+      "url": "https://clarity.design/documentation/grid/code",
       "title": "Grid - Clarity Design System"
     },
     {
@@ -568,11 +576,11 @@
       "title": "Label - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/label/code",
+      "url": "https://clarity.design/documentation/label/api",
       "title": "Label - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/label/api",
+      "url": "https://clarity.design/documentation/label/code",
       "title": "Label - Clarity Design System"
     },
     {
@@ -588,11 +596,11 @@
       "title": "Layouts - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/app-layout/api",
+      "url": "https://clarity.design/documentation/app-layout/code",
       "title": "Layouts - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/app-layout/code",
+      "url": "https://clarity.design/documentation/app-layout/api",
       "title": "Layouts - Clarity Design System"
     },
     {
@@ -600,11 +608,11 @@
       "title": "List - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/list/code",
+      "url": "https://clarity.design/documentation/list/api",
       "title": "List - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/list/api",
+      "url": "https://clarity.design/documentation/list/code",
       "title": "List - Clarity Design System"
     },
     {
@@ -612,11 +620,11 @@
       "title": "Menu - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/menu/api",
+      "url": "https://clarity.design/documentation/menu/code",
       "title": "Menu - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/menu/code",
+      "url": "https://clarity.design/documentation/menu/api",
       "title": "Menu - Clarity Design System"
     },
     {
@@ -680,11 +688,11 @@
       "title": "Popover - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/popover/code",
+      "url": "https://clarity.design/documentation/popover/api",
       "title": "Popover - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/popover/api",
+      "url": "https://clarity.design/documentation/popover/code",
       "title": "Popover - Clarity Design System"
     },
     {
@@ -704,11 +712,11 @@
       "title": "Property View - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/property-view/code",
+      "url": "https://clarity.design/documentation/property-view/api",
       "title": "Property View - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/property-view/api",
+      "url": "https://clarity.design/documentation/property-view/code",
       "title": "Property View - Clarity Design System"
     },
     {
@@ -728,11 +736,11 @@
       "title": "Range Input - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/range/code",
+      "url": "https://clarity.design/documentation/range/api",
       "title": "Range Input - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/range/api",
+      "url": "https://clarity.design/documentation/range/code",
       "title": "Range Input - Clarity Design System"
     },
     {
@@ -820,11 +828,11 @@
       "title": "Table - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/table/code",
+      "url": "https://clarity.design/documentation/table/api",
       "title": "Table - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/table/api",
+      "url": "https://clarity.design/documentation/table/code",
       "title": "Table - Clarity Design System"
     },
     {
@@ -844,16 +852,12 @@
       "title": "Textarea - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/textarea/api",
-      "title": "Textarea - Clarity Design System"
-    },
-    {
       "url": "https://clarity.design/documentation/textarea/code",
       "title": "Textarea - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/theme-builder",
-      "title": "Theme Builder - Clarity Design System"
+      "url": "https://clarity.design/documentation/textarea/api",
+      "title": "Textarea - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/theme-builder/code",
@@ -884,11 +888,11 @@
       "title": "Timeline - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/timeline/api",
+      "url": "https://clarity.design/documentation/timeline/code",
       "title": "Timeline - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/timeline/code",
+      "url": "https://clarity.design/documentation/timeline/api",
       "title": "Timeline - Clarity Design System"
     },
     {
@@ -920,11 +924,11 @@
       "title": "Tooltip - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/tooltip/code",
+      "url": "https://clarity.design/documentation/tooltip/api",
       "title": "Tooltip - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/tooltip/api",
+      "url": "https://clarity.design/documentation/tooltip/code",
       "title": "Tooltip - Clarity Design System"
     },
     {
@@ -952,11 +956,11 @@
       "title": "Typography - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/typography/usage",
+      "url": "https://clarity.design/documentation/typography/code",
       "title": "Typography - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/typography/code",
+      "url": "https://clarity.design/documentation/typography/usage",
       "title": "Typography - Clarity Design System"
     },
     {
@@ -980,11 +984,11 @@
       "title": "Vertical Nav - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/vertical-nav/code",
+      "url": "https://clarity.design/documentation/vertical-nav/api",
       "title": "Vertical Nav - Clarity Design System"
     },
     {
-      "url": "https://clarity.design/documentation/vertical-nav/api",
+      "url": "https://clarity.design/documentation/vertical-nav/code",
       "title": "Vertical Nav - Clarity Design System"
     },
     {
