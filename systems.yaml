@@ -4918,8 +4918,8 @@
     icons:
     - https://nordhealth.design/icons
     - https://nordhealth.design/components/icon
-  hit_max_pages: true
-  crawl_error: ''
+  hit_max_pages: false
+  crawl_error: crawl returned 0 pages
   likely_spa: false
   unverified_resources:
     github:
@@ -4935,12 +4935,12 @@
     - React
     - Vue
     - Web Components
-  etag: W/"6aad149a-ab2e"
-  last_modified: Fri, 18 Sep 2026 10:38:18 GMT
+  etag: '"6adce9aa-0"'
+  last_modified: Sat, 24 Oct 2026 17:23:54 GMT
   sitemap_url: https://nordhealth.design/sitemap.xml
-  last_checked: '2026-09-18T10:47:15+00:00'
+  last_checked: '2026-10-28T10:29:22+00:00'
   likely_unmaintained: false
-  consecutive_crawl_failures: 0
+  consecutive_crawl_failures: 1
   content_signal_sources:
     validation_loop: https://nordhealth.design/
     frameworks:
