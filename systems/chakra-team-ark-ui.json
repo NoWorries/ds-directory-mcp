@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "chakra-team-ark-ui",
   "organization": "Chakra team",
   "design_system": "Ark UI",
@@ -10,10 +10,10 @@
   ],
   "detail_url": "/systems/chakra-team-ark-ui",
   "pages_indexed": 105,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-10-07T11:54:35+00:00",
+  "last_checked": "2026-11-01T12:12:52+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -22,10 +22,10 @@
     ],
     "mcp": [
       "https://ark-ui.com/react/docs/ai/mcp-server",
-      "https://ark-ui.com/docs/ai/mcp-server.mdx",
+      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
       "https://modelcontextprotocol.io/introduction",
-      "https://ark-ui.com/docs/ai/mcp-server",
-      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports"
+      "https://ark-ui.com/docs/ai/mcp-server.mdx",
+      "https://ark-ui.com/docs/ai/mcp-server"
     ],
     "agent_instructions": [
       "https://ark-ui.com/llms.txt",
@@ -47,8 +47,8 @@
   },
   "github_meta": {
     "license": "MIT",
-    "stars": 5408,
-    "last_pushed": "2026-10-07T06:38:05Z"
+    "stars": 5450,
+    "last_pushed": "2026-10-31T08:29:45Z"
   },
   "npm_meta": null,
   "indexed_pages": [

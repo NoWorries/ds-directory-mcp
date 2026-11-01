@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "italian-public-administration-it-designers-italy",
   "organization": "Italian Public Administration",
   "design_system": ".it Designers Italy",
@@ -9,31 +9,31 @@
     "https://designers.italia.it/"
   ],
   "detail_url": "/systems/italian-public-administration-it-designers-italy",
-  "pages_indexed": 167,
+  "pages_indexed": 176,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:41:42+00:00",
-  "last_modified": "Tue, 22 Sep 2026 15:16:43 GMT",
+  "last_checked": "2026-11-01T10:54:44+00:00",
+  "last_modified": "Mon, 05 Oct 2026 15:03:28 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/italia/design-react-kit",
-      "https://github.com/italia/bootstrap-italia",
-      "https://github.com/italia/design-ui-kit",
-      "https://github.com/italia/feedback.designers.italia.it",
-      "https://github.com/italia/designers.italia.it",
-      "https://github.com/italia/design-angular-kit",
       "https://github.com/italia/dev-kit-italia",
+      "https://github.com/italia/designers.italia.it",
+      "https://github.com/italia/feedback.designers.italia.it",
+      "https://github.com/italia/bootstrap-italia",
+      "https://github.com/italia/design-ui-kit-template",
       "https://github.com/italia/design-tokens-italia",
-      "https://github.com/italia/design-ui-kit-template"
+      "https://github.com/italia/design-ui-kit",
+      "https://github.com/italia/design-react-kit",
+      "https://github.com/italia/design-angular-kit"
     ],
     "figma": [
       "https://figma.com/community/file/1105848677422572920/ui-kit-italia",
-      "https://figma.com/proto/FHlE0r9lhfvDR0SgkDRmVi/Comuni---Modello-sito-e-servizi",
       "https://figma.com/proto/1hQobutdZFwlo2Y4mVt9Rl/Musei-civici---Modello-sito",
       "https://figma.com/proto/wsLgwYpYrd9yS9Tqx0Wkjp/ASL---Modello-sito",
-      "https://figma.com/community/file/1105848677422572920"
+      "https://figma.com/community/file/1105848677422572920",
+      "https://figma.com/proto/FHlE0r9lhfvDR0SgkDRmVi/Comuni---Modello-sito-e-servizi"
     ],
     "markdown_docs": [
       "https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md"
@@ -56,11 +56,15 @@
   },
   "github_meta": {
     "license": "BSD-3-Clause",
-    "stars": 179,
-    "last_pushed": "2026-09-10T16:53:53Z"
+    "stars": 14,
+    "last_pushed": "2026-10-29T17:15:38Z"
   },
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://designers.italia.it/normativa/linee-guida-di-design/requisito-4-1",
+      "title": "4.1. Accessibilità - Designers Italia"
+    },
     {
       "url": "https://designers.italia.it/design-system/fondamenti/accessibilita",
       "title": "Accessibilità"
@@ -86,6 +90,10 @@
       "title": "Alert - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/argomenti/analisi-del-contesto",
+      "title": "Analisi del contesto - Designers Italia"
+    },
+    {
       "url": "https://designers.italia.it/risorse-per-progettare/comprendere/analisi-del-contesto",
       "title": "Analisi del contesto - Designers Italia"
     },
@@ -96,6 +104,10 @@
     {
       "url": "https://designers.italia.it/argomenti/architettura-informazione",
       "title": "Architettura informazione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/progetto/piano-attivita/archivio-storico",
+      "title": "Archivio storico - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/argomenti",
@@ -294,11 +306,11 @@
       "title": "Form - Designers Italia"
     },
     {
-      "url": "https://designers.italia.it/argomenti/formazione",
+      "url": "https://designers.italia.it/formazione",
       "title": "Formazione - Designers Italia"
     },
     {
-      "url": "https://designers.italia.it/formazione",
+      "url": "https://designers.italia.it/argomenti/formazione",
       "title": "Formazione - Designers Italia"
     },
     {
@@ -332,6 +344,10 @@
     {
       "url": "https://designers.italia.it/formazione/imparare",
       "title": "Imparare - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/organizzare/impostazione-progetto",
+      "title": "Impostazione progetto - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/design-system/componenti/input",
@@ -430,11 +446,11 @@
       "title": "Navscroll - Designers Italia"
     },
     {
-      "url": "https://designers.italia.it/normativa",
+      "url": "https://designers.italia.it/argomenti/normativa",
       "title": "Normativa - Designers Italia"
     },
     {
-      "url": "https://designers.italia.it/argomenti/normativa",
+      "url": "https://designers.italia.it/normativa",
       "title": "Normativa - Designers Italia"
     },
     {
@@ -546,6 +562,10 @@
       "title": "Progettare - Designers Italia"
     },
     {
+      "url": "https://designers.italia.it/formazione/insegnare/progettare-servizi-pubblici-virtuosi",
+      "title": "Progettare servizi pubblici virtuosi"
+    },
+    {
       "url": "https://designers.italia.it/argomenti/progettazione-contenuti",
       "title": "Progettazione contenuti - Designers Italia"
     },
@@ -580,6 +600,10 @@
     {
       "url": "https://designers.italia.it/design-system/componenti/rating",
       "title": "Rating - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/realizza-un-prototipo-in-alta-fedelta",
+      "title": "Realizza un prototipo in alta fedeltà - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/risorse-per-progettare/realizzare",
@@ -640,6 +664,10 @@
     {
       "url": "https://designers.italia.it/progetto/storia",
       "title": "Storia - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/sviluppo-interfaccia/sviluppa-l-interfaccia-di-un-servizio-digitale",
+      "title": "Sviluppa l'interfaccia di un servizio digitale - Designers Italia"
     },
     {
       "url": "https://designers.italia.it/argomenti/sviluppo-interfaccia",
@@ -728,6 +756,14 @@
     {
       "url": "https://designers.italia.it/progetto/visione-e-missione",
       "title": "Visione e missione - Designers Italia"
+    },
+    {
+      "url": "https://designers.italia.it/formazione/insegnare/visualizzare-dati-della-pa",
+      "title": "Visualizzare dati della PA"
+    },
+    {
+      "url": "https://designers.italia.it/argomenti/visualizzazione-dati",
+      "title": "Visualizzazione dati - Designers Italia"
     }
   ]
 }

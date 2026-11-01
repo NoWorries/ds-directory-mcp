@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "estonia-brand-estonia",
   "organization": "Estonia",
   "design_system": "Brand Estonia",
@@ -9,30 +9,35 @@
     "https://brand.estonia.ee/"
   ],
   "detail_url": "/systems/estonia-brand-estonia",
-  "pages_indexed": 28,
+  "pages_indexed": 50,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:17:17+00:00",
+  "last_checked": "2026-11-01T10:30:50+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
     "figma": [
-      "https://figma.com/design/G4alDnApAMevLkdNKPG4fgRu/%F0%9F%94%B7-Brand---Icons",
+      "https://figma.com/design/A1xWacpiD78gQSVpaXwjLV/%F0%9F%94%B7-Brand---Logos",
+      "https://figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media",
       "https://figma.com/design/27fMG3SrUcYhLhyNTmsuV3/%F0%9F%92%8E-DDS-2.0---WIP",
       "https://figma.com/design/NZMXNJpfAvyw7GkdxaAexw/%F0%9F%94%B7-Brand---Shapes",
-      "https://figma.com/design/n3jbrOBHjKLMKuZ1baDcRb/%F0%9F%94%B7-brand-estonia-%7C-social-media",
-      "https://figma.com/design/A1xWacpiD78gQSVpaXwjLV/%F0%9F%94%B7-Brand---Logos"
+      "https://figma.com/design/G4alDnApAMevLkdNKPG4fgRu/%F0%9F%94%B7-Brand---Icons"
     ]
   },
   "unverified_resources": {},
-  "content_signals": {},
+  "content_signals": {
+    "governance_model": true,
+    "frameworks": [
+      "React"
+    ]
+  },
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
     {
       "url": "https://brand.estonia.ee/inspiration-examples/meet-estonia-area-at-the-latitude59-conference",
-      "title": "\"Meet Estonia\" area at the Latitude59 conference"
+      "title": "\"Meet Estonia\" area at the Latitude59 conference | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/numbers/annual-report/2025/awards",
@@ -47,12 +52,48 @@
       "title": "Brand Estonia annual report 2025"
     },
     {
+      "url": "https://brand.estonia.ee/et",
+      "title": "Brand Estonia | Muutustes oleme edukad"
+    },
+    {
+      "url": "https://brand.estonia.ee/",
+      "title": "Brand Estonia | Succeeding at change is our superpower"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/cleantech",
+      "title": "Cleantech | Brand Estonia"
+    },
+    {
       "url": "https://brand.estonia.ee/guidelines/colors",
-      "title": "Colors"
+      "title": "Colors | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/cookie-policy",
+      "title": "Cookie Policy | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/defence",
+      "title": "Defence | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/digital-marketing",
+      "title": "Digital marketing | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/e-estonia",
+      "title": "e-Estonia | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/inspiration-examples/e-residency-card-kit",
-      "title": "e-Residency card kit"
+      "title": "e-Residency card kit | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/education",
+      "title": "Education | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/electronics",
+      "title": "Electronics | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/numbers",
@@ -60,7 +101,7 @@
     },
     {
       "url": "https://brand.estonia.ee/inspiration-examples/estonia-s-best-companies-awards-gala",
-      "title": "Estonia's best companies awards gala \"Stories that create\""
+      "title": "Estonia's best companies awards gala \"Stories that create\" | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/numbers/annual-report/2025/global-image",
@@ -68,7 +109,19 @@
     },
     {
       "url": "https://brand.estonia.ee/inspiration-examples/estonias-official-website-estonia-ee",
-      "title": "Estonia's official website estonia.ee"
+      "title": "Estonia's official website estonia.ee | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand",
+      "title": "Estonian brand | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/estonian-security",
+      "title": "Estonian security | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/food-and-bevarage",
+      "title": "Food & beverage | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/numbers/annual-report/2025/foreword",
@@ -76,15 +129,35 @@
     },
     {
       "url": "https://brand.estonia.ee/guidelines",
-      "title": "Guidelines"
+      "title": "Guidelines | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/healthtech",
+      "title": "Healthtech | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/icons-and-pictograms",
+      "title": "Icons and pictograms | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/ict",
+      "title": "ICT | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/guidelines/illustrations",
-      "title": "Illustrations"
+      "title": "Illustrations | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/guidelines/imagery",
-      "title": "Imagery"
+      "title": "Imagery | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/industry",
+      "title": "Industry | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/info-and-contacts",
+      "title": "Info & contacts | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/inspiration-examples",
@@ -92,31 +165,39 @@
     },
     {
       "url": "https://brand.estonia.ee/estonian-brand/international-reputation",
-      "title": "International reputation"
+      "title": "International reputation | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/guidelines/logos",
-      "title": "Logos"
+      "title": "Logos | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/machine",
+      "title": "Machine | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/maritime",
+      "title": "Maritime | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/estonian-brand/messages",
-      "title": "Messages"
-    },
-    {
-      "url": "https://brand.estonia.ee/et",
-      "title": "Muutustes oleme edukad"
+      "title": "Messages | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/numbers/annual-report/2025/new-assets",
       "title": "New brand assets"
     },
     {
+      "url": "https://brand.estonia.ee/data-protection-terms",
+      "title": "Personal Data Processing: Data Protection Terms | Brand Estonia"
+    },
+    {
       "url": "https://brand.estonia.ee/inspiration-examples/rooted-in-estonia",
-      "title": "Photo series \"Rooted in Estonia\""
+      "title": "Photo series \"Rooted in Estonia\" | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/guidelines/shapes",
-      "title": "Shapes"
+      "title": "Shapes | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/numbers/annual-report/2025/speaking-engagements",
@@ -127,20 +208,32 @@
       "title": "Sneak peek into 2026"
     },
     {
-      "url": "https://brand.estonia.ee/",
-      "title": "Succeeding at change is our superpower"
-    },
-    {
       "url": "https://brand.estonia.ee/inspiration-examples/the-estonia-introduction-video-normal",
-      "title": "The Estonia introduction video \"Normal\""
+      "title": "The Estonia introduction video \"Normal\" | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/guidelines/tone-of-voice",
-      "title": "Tone of voice"
+      "title": "Tone of voice | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/tourism",
+      "title": "Tourism | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/guidelines/typography",
+      "title": "Typography | Brand Estonia"
     },
     {
       "url": "https://brand.estonia.ee/guidelines/web",
-      "title": "Web"
+      "title": "Web | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/wood",
+      "title": "Wood | Brand Estonia"
+    },
+    {
+      "url": "https://brand.estonia.ee/estonian-brand/messages/work-in-estonia",
+      "title": "Work in Estonia | Brand Estonia"
     }
   ]
 }

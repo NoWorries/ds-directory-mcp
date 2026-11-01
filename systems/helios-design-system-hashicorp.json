@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "helios-design-system-hashicorp",
   "organization": "Helios Design System",
   "design_system": "Hashicorp",
@@ -9,82 +9,80 @@
     "https://helios.hashicorp.design"
   ],
   "detail_url": "/systems/helios-design-system-hashicorp",
-  "pages_indexed": 110,
+  "pages_indexed": 125,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:34:06+00:00",
-  "last_modified": "Wed, 30 Sep 2026 17:18:14 GMT",
-  "sitemap_last_modified": "2026-09-30",
+  "last_checked": "2026-11-01T10:49:27+00:00",
+  "last_modified": "Sat, 31 Oct 2026 09:34:25 GMT",
+  "sitemap_last_modified": "2026-10-30",
   "resources": {
     "github": [
-      "https://github.com/hashicorp/design-system",
-      "https://github.com/hashicorp/react-components"
+      "https://github.com/hashicorp/react-components",
+      "https://github.com/hashicorp/design-system"
     ],
     "figma": [
-      "https://figma.com/design/EEfM1jjqLfUv59eYLopn5x/HDS-A11Y-Helper-UI-Kit",
-      "https://figma.com/design/vqhh0wWZ8PwnRkvh1jk7jB/Utilities-UI-Kit",
-      "https://figma.com/design/k34tT4poC2p1RBQxVwZhW5/-Alpha--Carbon-Charts-Library-Kit-%E2%80%93-Carbon-Design-System--Copy-",
-      "https://figma.com/design/iweq3r2Pi8xiJfD9e6lOhF/HDS-Components-v2.0",
       "https://figma.com/design/uX4OEaJQdWfzULADchjAeN/HDS-Foundations-v2.0",
-      "https://figma.com/design/w0ukydeAsbv6sJirLxZMBo/HDS-Wireframes",
-      "https://figma.com/design/MYiw4kiVpunIMMw0sBkE1t/%E2%9C%8F%EF%B8%8F-HDS-Icons-%5BDevelopment%5D",
       "https://figma.com/design/TLnoT5AYQfy3tZ0H68BgOr/HDS-Icons",
-      "https://figma.com/design/5Pv32j4QiOOD8lkFTD1dxC/HDS-Patterns-v2.0"
+      "https://figma.com/design/vqhh0wWZ8PwnRkvh1jk7jB/Utilities-UI-Kit",
+      "https://figma.com/design/EEfM1jjqLfUv59eYLopn5x/HDS-A11Y-Helper-UI-Kit",
+      "https://figma.com/design/5Pv32j4QiOOD8lkFTD1dxC/HDS-Patterns-v2.0",
+      "https://figma.com/design/w0ukydeAsbv6sJirLxZMBo/HDS-Wireframes",
+      "https://figma.com/design/k34tT4poC2p1RBQxVwZhW5/-Alpha--Carbon-Charts-Library-Kit-%E2%80%93-Carbon-Design-System--Copy-",
+      "https://figma.com/design/iweq3r2Pi8xiJfD9e6lOhF/HDS-Components-v2.0"
     ],
     "markdown_docs": [
       "https://github.com/hashicorp/design-system/blob/main/packages/tokens/CONTRIBUTING.md",
-      "https://github.com/hashicorp/design-system/blob/main/packages/components/README.md",
       "https://github.com/hashicorp/design-system/blob/main/packages/components/CONTRIBUTING.md",
-      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/README.md"
+      "https://github.com/hashicorp/design-system/blob/main/packages/tokens/README.md",
+      "https://github.com/hashicorp/design-system/blob/main/packages/components/README.md"
     ],
     "mcp": [
-      "https://modelcontextprotocol.io/",
-      "https://helios.hashicorp.design/tooling/mcp-server"
+      "https://helios.hashicorp.design/tooling/mcp-server",
+      "https://modelcontextprotocol.io/"
     ],
     "npm": [
       "https://npmjs.com/package/@hashicorp/design-system-mcp"
     ],
     "icons": [
       "https://helios.hashicorp.design/components/icon",
+      "https://carbondesignsystem.com/elements/icons/library",
       "https://helios.hashicorp.design/icons/library"
     ]
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/patterns/form-patterns",
-      "https://github.com/NullVoxPopuli/ember-composable-helpers",
-      "https://github.com/ember-template-lint/ember-template-lint",
-      "https://github.com/ember-cli/ember-page-title",
-      "https://github.com/simplabs/ember-test-selectors",
-      "https://github.com/ember-a11y/ember-a11y-testing",
-      "https://github.com/cibernox/ember-power-select",
-      "https://github.com/ember-a11y/a11y-announcer",
       "https://github.com/josemarluedke/ember-focus-trap",
+      "https://github.com/cibernox/ember-power-select",
+      "https://github.com/NullVoxPopuli/ember-composable-helpers",
       "https://github.com/ember-a11y/ember-a11y-refocus",
-      "https://github.com/ember-intl/ember-intl"
+      "https://github.com/ember-a11y/ember-a11y-testing",
+      "https://github.com/ember-template-lint/ember-template-lint",
+      "https://github.com/ember-a11y/a11y-announcer",
+      "https://github.com/ember-intl/ember-intl",
+      "https://github.com/simplabs/ember-test-selectors",
+      "https://github.com/ember-cli/ember-page-title"
     ]
   },
   "content_signals": {
-    "tokens_format": "Style Dictionary",
     "dark_mode": true,
+    "tokens_format": "Style Dictionary",
     "codemods": true,
     "accessibility_conformance": "WCAG 2.2 AA",
-    "validation_loop": true,
     "frameworks": [
-      "Web Components",
-      "React"
+      "React",
+      "Web Components"
     ]
   },
   "github_meta": {
     "license": "MPL-2.0",
-    "stars": 513,
-    "last_pushed": "2026-09-17T19:29:06Z"
+    "stars": 62,
+    "last_pushed": "2025-12-15T21:50:30Z"
   },
   "npm_meta": {
-    "latest_version": "0.2.1",
-    "last_published": "2026-09-30T17:11:11.557Z",
-    "weekly_downloads": 449
+    "latest_version": "0.2.2",
+    "last_published": "2026-10-07T11:35:00.606Z",
+    "weekly_downloads": 2071
   },
   "indexed_pages": [
     {
@@ -106,6 +104,10 @@
     {
       "url": "https://helios.hashicorp.design/components/table/advanced-table",
       "title": "Advanced Table | Helios Design System | Advanced Table | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/tooling/ai-skills",
+      "title": "AI skills | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/components/alert",
@@ -172,6 +174,14 @@
       "title": "Button | Helios Design System"
     },
     {
+      "url": "https://helios.hashicorp.design/carbonization/for-designers",
+      "title": "Carbonization for designers | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/carbonization/for-engineers",
+      "title": "Carbonization for engineers | Helios Design System"
+    },
+    {
       "url": "https://helios.hashicorp.design/components/card",
       "title": "Card | Helios Design System"
     },
@@ -212,6 +222,10 @@
       "title": "Copy Snippet | Helios Design System"
     },
     {
+      "url": "https://helios.hashicorp.design/testing/markdown/custom-block-extractor-playground",
+      "title": "Custom block extractor playground | Helios Design System"
+    },
+    {
       "url": "https://helios.hashicorp.design/patterns/data-visualization",
       "title": "Data visualization | Helios Design System"
     },
@@ -222,6 +236,10 @@
     {
       "url": "https://helios.hashicorp.design/patterns/description-list-patterns",
       "title": "Description list | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/tooling/design-tooling-figma-plugin",
+      "title": "Design Tooling Figma Plugin | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/utilities/dialog-primitive",
@@ -244,6 +262,10 @@
       "title": "Doc::Banner | Helios Design System"
     },
     {
+      "url": "https://helios.hashicorp.design/testing/components/comparison-group",
+      "title": "Doc::Carbonization::ComparisonGroup | Helios Design System"
+    },
+    {
       "url": "https://helios.hashicorp.design/testing/components/layout",
       "title": "Doc::Layout | Helios Design System"
     },
@@ -254,6 +276,10 @@
     {
       "url": "https://helios.hashicorp.design/foundations/elevation",
       "title": "Elevation | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/error",
+      "title": "Error | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/components/form/file-input",
@@ -286,6 +312,10 @@
     {
       "url": "https://helios.hashicorp.design/foundations",
       "title": "Foundations | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/carbonization/introduction",
+      "title": "From Helios to Carbon | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/getting-started/for-designers",
@@ -324,6 +354,10 @@
       "title": "Key Value Inputs | Helios Design System"
     },
     {
+      "url": "https://helios.hashicorp.design/patterns/language-selection",
+      "title": "Language selection | Helios Design System | Language selection | Helios Design System"
+    },
+    {
       "url": "https://helios.hashicorp.design/layouts/flex",
       "title": "Layout::Flex | Helios Design System"
     },
@@ -358,6 +392,10 @@
     {
       "url": "https://helios.hashicorp.design/testing/markdown/more-complex-tables",
       "title": "More complex tables | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/patterns/new-feature-onboarding",
+      "title": "New feature onboarding | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/about/overview",
@@ -405,7 +443,7 @@
     },
     {
       "url": "https://helios.hashicorp.design/testing/markdown/remove-auto-p-playground",
-      "title": "Remove auto p playground | Helios Design System"
+      "title": "Remove auto p playground | Helios Design System | Remove auto p playground | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/components/reveal",
@@ -488,6 +526,22 @@
       "title": "Textarea | Helios Design System"
     },
     {
+      "url": "https://helios.hashicorp.design/patterns/theme-selection",
+      "title": "Theme selection | Helios Design System | Theme selection | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/theming/theme-context",
+      "title": "ThemeContext | Helios Design System | ThemeContext | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/theming/hds-theming",
+      "title": "Theming service | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/foundations/theming",
+      "title": "Theming | Helios Design System"
+    },
+    {
       "url": "https://helios.hashicorp.design/components/time",
       "title": "Time | Helios Design System | Time | Helios Design System"
     },
@@ -502,6 +556,10 @@
     {
       "url": "https://helios.hashicorp.design/foundations/tokens",
       "title": "Tokens | Helios Design System"
+    },
+    {
+      "url": "https://helios.hashicorp.design/tooling",
+      "title": "Tooling | Helios Design System"
     },
     {
       "url": "https://helios.hashicorp.design/components/tooltip",

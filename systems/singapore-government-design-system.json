@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "singapore-government-design-system",
   "organization": null,
   "design_system": "Singapore Government Design System",
@@ -10,17 +10,17 @@
   ],
   "detail_url": "/systems/singapore-government-design-system",
   "pages_indexed": 146,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-10-07T11:39:26+00:00",
+  "last_checked": "2026-11-01T11:41:09+00:00",
   "last_modified": "Mon, 05 Oct 2026 09:22:01 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "mcp": [
-      "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation",
       "https://designsystem.tech.gov.sg/ai/mcp-server-setup",
-      "https://designsystem.tech.gov.sg/ai/mcp-server"
+      "https://designsystem.tech.gov.sg/ai/mcp-server",
+      "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation"
     ],
     "icons": [
       "https://designsystem.tech.gov.sg/components/icon"

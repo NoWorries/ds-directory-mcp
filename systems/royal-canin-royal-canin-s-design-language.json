@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "royal-canin-royal-canin-s-design-language",
   "organization": "Royal Canin",
   "design_system": "Royal Canin's Design Language",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T11:16:37+00:00",
+  "last_checked": "2026-11-01T11:27:59+00:00",
   "last_modified": "Tue, 26 Sep 2023 16:34:30 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -23,14 +23,14 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/dixonandmoe/rellax",
-      "https://github.com/atomiks/tippyjs",
-      "https://github.com/roadhump/SublimeLinter-eslint",
-      "https://github.com/ganlanyuan/tiny-slider",
-      "https://github.com/leongersen/noUiSlider",
-      "https://github.com/Pikaday/Pikaday",
+      "https://github.com/dbushell/Pikaday",
       "https://github.com/jshjohnson/Choices",
-      "https://github.com/dbushell/Pikaday"
+      "https://github.com/atomiks/tippyjs",
+      "https://github.com/Pikaday/Pikaday",
+      "https://github.com/leongersen/noUiSlider",
+      "https://github.com/ganlanyuan/tiny-slider",
+      "https://github.com/roadhump/SublimeLinter-eslint",
+      "https://github.com/dixonandmoe/rellax"
     ]
   },
   "content_signals": {
@@ -136,15 +136,15 @@
       "title": "Home | Royal Canin Design Language"
     },
     {
-      "url": "https://developer.royalcanin.com/ui-framework/prototypes/hub_product_listing.html",
-      "title": "Home | Royal Canin Design Language"
-    },
-    {
-      "url": "https://developer.royalcanin.com/assets/html-boilerplate.html",
-      "title": "Home | Royal Canin Design Language"
-    },
-    {
       "url": "https://developer.royalcanin.com/ui_assets/layouts/visual-styles/spacers.html",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui_assets/brand_identity/typography.html",
+      "title": "Home | Royal Canin Design Language"
+    },
+    {
+      "url": "https://developer.royalcanin.com/ui-framework/prototypes/hub_product_listing.html",
       "title": "Home | Royal Canin Design Language"
     },
     {
@@ -152,7 +152,7 @@
       "title": "Home | Royal Canin Design Language"
     },
     {
-      "url": "https://developer.royalcanin.com/ui_assets/brand_identity/typography.html",
+      "url": "https://developer.royalcanin.com/assets/html-boilerplate.html",
       "title": "Home | Royal Canin Design Language"
     },
     {

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "neurodiversity-design-system",
   "organization": "Neurodiversity",
   "design_system": "Design system",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:55:06+00:00",
+  "last_checked": "2026-11-01T11:09:31+00:00",
   "last_modified": "Wed, 03 Dec 2025 08:16:31 GMT",
   "sitemap_last_modified": null,
   "resources": {},
@@ -24,6 +24,10 @@
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://neurodiversity.design/about",
+      "title": "About | NDS"
+    },
     {
       "url": "https://neurodiversity.design/animations",
       "title": "Animations | NDS"
@@ -45,20 +49,16 @@
       "title": "Communications | NDS"
     },
     {
-      "url": "https://neurodiversity.design/about",
-      "title": "Contact | NDS"
-    },
-    {
-      "url": "https://neurodiversity.design/personas",
-      "title": "Dev Road Map | NDS"
-    },
-    {
       "url": "https://neurodiversity.design/font",
       "title": "Font | NDS"
     },
     {
       "url": "https://neurodiversity.design/interface",
       "title": "Interface | NDS"
+    },
+    {
+      "url": "https://neurodiversity.design/personas",
+      "title": "Personas | NDS"
     },
     {
       "url": "https://neurodiversity.design/typography",

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "new-zealand-ministry-of-education-design-system",
   "organization": "New Zealand Ministry of Education",
   "design_system": "Design System",
@@ -9,11 +9,11 @@
     "https://designsystem.education.govt.nz/"
   ],
   "detail_url": "/systems/new-zealand-ministry-of-education-design-system",
-  "pages_indexed": 61,
+  "pages_indexed": 32,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:58:09+00:00",
+  "last_checked": "2026-11-01T11:11:55+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -34,15 +34,7 @@
       "title": "Accessibility and usability | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/accessibility",
-      "title": "Accessibility and usability | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/accordions",
-      "title": "Accordions | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components/accordions",
       "title": "Accordions | Design System"
     },
     {
@@ -50,15 +42,7 @@
       "title": "Alert Banner | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/alerts",
-      "title": "Alert Banner | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/anchorlinkmenu",
-      "title": "Anchor Link Menu | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components/anchorlinkmenu",
       "title": "Anchor Link Menu | Design System"
     },
     {
@@ -66,15 +50,7 @@
       "title": "Audio player | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/audio",
-      "title": "Audio player | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/breadcrumb",
-      "title": "Breadcrumb | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components/breadcrumb",
       "title": "Breadcrumb | Design System"
     },
     {
@@ -82,23 +58,11 @@
       "title": "Buttons & Links | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/buttonslinks",
-      "title": "Buttons & Links | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/cards",
       "title": "Cards | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/cards",
-      "title": "Cards | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components",
-      "title": "Components | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components",
       "title": "Components | Design System"
     },
     {
@@ -114,15 +78,7 @@
       "title": "Design System | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/home",
-      "title": "Design System | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/design",
-      "title": "Design | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/design",
       "title": "Design | Design System"
     },
     {
@@ -130,15 +86,7 @@
       "title": "Download | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/download",
-      "title": "Download | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/patterns/filtering",
-      "title": "Filtering | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/patterns/filtering",
       "title": "Filtering | Design System"
     },
     {
@@ -146,15 +94,7 @@
       "title": "Footer | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/footer",
-      "title": "Footer | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/header",
-      "title": "Header | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components/header",
       "title": "Header | Design System"
     },
     {
@@ -162,15 +102,7 @@
       "title": "Iconography | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/design/iconography",
-      "title": "Iconography | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/images",
-      "title": "Images | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components/images",
       "title": "Images | Design System"
     },
     {
@@ -178,15 +110,7 @@
       "title": "Language toggle | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/languagetoggle",
-      "title": "Language toggle | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/design/layout",
-      "title": "Layout | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/design/layout",
       "title": "Layout | Design System"
     },
     {
@@ -194,15 +118,7 @@
       "title": "Navigation Menu | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/nav-menu",
-      "title": "Navigation Menu | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/design/colours",
-      "title": "Our Colours | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/design/colours",
       "title": "Our Colours | Design System"
     },
     {
@@ -210,15 +126,7 @@
       "title": "Our logos | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/design/logos",
-      "title": "Our logos | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/patterns",
-      "title": "Patterns | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/patterns",
       "title": "Patterns | Design System"
     },
     {
@@ -230,15 +138,7 @@
       "title": "Search | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/patterns/search",
-      "title": "Search | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/design/spacing",
-      "title": "Spacing | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/design/spacing",
       "title": "Spacing | Design System"
     },
     {
@@ -246,15 +146,7 @@
       "title": "Tabs | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/components/tabs",
-      "title": "Tabs | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/tooltips",
-      "title": "Tooltips | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components/tooltips",
       "title": "Tooltips | Design System"
     },
     {
@@ -262,15 +154,7 @@
       "title": "Typography | Design System"
     },
     {
-      "url": "https://designsystem.education.govt.nz/index.php/design/typography",
-      "title": "Typography | Design System"
-    },
-    {
       "url": "https://designsystem.education.govt.nz/components/video",
-      "title": "Video player | Design System"
-    },
-    {
-      "url": "https://designsystem.education.govt.nz/index.php/components/video",
       "title": "Video player | Design System"
     }
   ]

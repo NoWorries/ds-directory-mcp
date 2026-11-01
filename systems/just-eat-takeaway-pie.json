@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "just-eat-takeaway-pie",
   "organization": "Just Eat Takeaway",
   "design_system": "PIE",
@@ -10,59 +10,58 @@
   ],
   "detail_url": "/systems/just-eat-takeaway-pie",
   "pages_indexed": 264,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-10-07T11:20:33+00:00",
-  "last_modified": "Mon, 05 Oct 2026 14:54:21 GMT",
+  "last_checked": "2026-11-01T10:55:14+00:00",
+  "last_modified": "Wed, 28 Oct 2026 16:33:40 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/justeat/pie-project",
+      "https://github.com/justeattakeaway/pie",
       "https://github.com/justeattakeaway/fozzie-components",
-      "https://github.com/justeat/pie-design-tokens",
-      "https://github.com/justeattakeaway/pie"
+      "https://github.com/justeat/pie-project"
     ],
     "storybook": [
       "https://storybook.js.org/addons/@storybook/addon-a11y"
     ],
     "figma": [
-      "https://figma.com/design/hvXst0EMuOpwgMcWp6mbib/-BA--Scoober-Logistics-%E2%80%93-Components--PIE-3-",
-      "https://figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8-%5BCore%5D-Web-Components-%5BPIE-3%5D",
-      "https://figma.com/design/WxPDYsTycTVhPac6nCbbgN/-Core--Apps-Component-Documentation--PIE-3-",
-      "https://figma.com/design/KAsRXLmSLSQ8a2JLXg6OsS/-BA--Customer-%E2%80%93-Skip--PIE-3-",
-      "https://figma.com/design/eUOZTTYaTYbmy73i0wpkL9/-Core--Brand-assets--PIE-3-",
-      "https://figma.com/design/W4DEzDRBQOBohZ7yZr3LXf/-BA--Partner-Portal-%E2%80%93-Skip--PIE-3-",
-      "https://figma.com/design/2c3RYLNtwjPhUdrmKlPg8D/-BA--Logistics-Delco---Patterns",
-      "https://figma.com/design/DoilInMsO5L6Rrui7IWgl3",
-      "https://figma.com/design/2JSAh62IcfXyVffR5yT6Sg/-BA--Fintech--PIE-3-",
-      "https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op/-Core--Icons--PIE-3-",
-      "https://figma.com/design/CSxFGnwnBBBNPF6FYeB8qs/-BA--Partner--PIE-3-",
-      "https://figma.com/design/qVVNVoZgeqkQhlMxsrUhd7/Core-AI-Components",
-      "https://figma.com/design/DVKOT2HOucOpWglwIUsVr8/-Core--JET-Brand-Documentation",
       "https://figma.com/design/XK2nYzvIZ0QCATVuccBJUJ/-BA--Partner-Patterns--PIE-3-",
-      "https://figma.com/design/x5tFJvtA7GNxSjHIrybQJl/-BA--Documentation--Customer-%E2%80%93-JE---TA--PIE-2.0-",
-      "https://figma.com/file/Rqz8KHogVsGCS4j0nDueNo/[Core]-Patterns-%E2%9A%AA%EF%B8%8F-[PIE-2.0]",
-      "https://figma.com/design/OOgnT2oNMdGFytj5AanYvt/-Core--Web-Component-Documentation--PIE-3-",
-      "https://figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3.0-",
-      "https://figma.com/design/26iAOwvB5lRVsoHJscqRqs/-Core--Accessibility--PIE-3-",
-      "https://figma.com/design/64d6BFbEaP9tjrDmOCJpQh/%E2%9C%A8--Core--Foundations--PIE-3-",
-      "https://figma.com/design/tGv7rwthRgAOQP0Xx86Bm0/-AI--Foundations--PIE-3-",
-      "https://figma.com/design/r0e4dnGSg9qS8MmdTehw0n/-BA--Internal-Tools-%E2%9A%AA%EF%B8%8F--PIE-3-",
-      "https://figma.com/design/K11XNe5NKsreTkubGEC6z4/-BA--PLO---Skip--%E2%9C%A8-PIE-3.0-",
-      "https://figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8--Core--Web-Components--PIE-3-",
-      "https://figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices",
+      "https://figma.com/design/DVKOT2HOucOpWglwIUsVr8/-Core--JET-Brand-Documentation",
+      "https://figma.com/design/2JSAh62IcfXyVffR5yT6Sg/-BA--Fintech--PIE-3-",
       "https://figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3-",
-      "https://figma.com/design/XoCqFBgXafCrQR6hkuFaRj/-BA--Scoober-Logistics-%E2%80%93-Patterns--PIE-3-",
+      "https://figma.com/design/hvXst0EMuOpwgMcWp6mbib/-BA--Scoober-Logistics-%E2%80%93-Components--PIE-3-",
+      "https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op/-Core--Icons--PIE-3-",
+      "https://figma.com/design/vU0z8Jgaxm5SRDqnk6xY0j/-Core--Illustrations--PIE-3.0-",
       "https://figma.com/design/0olH9rKFUmtbp3R6KmFqm1/Customer---JET---OA-OW-",
-      "https://figma.com/design/Rqz8KHogVsGCS4j0nDueNo/-Core--Patterns--PIE-3-",
-      "https://figma.com/design/3nSkAn3xL6jEOXKt1MePPd/-BA--Logistics-Delco---Components",
-      "https://figma.com/design/7Auqy3S8J787NywZ0gtgZm/-BA--Customer-%E2%80%93-JE---TA--PIE-3-",
-      "https://figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process",
-      "https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op",
+      "https://figma.com/design/x5tFJvtA7GNxSjHIrybQJl/-BA--Documentation--Customer-%E2%80%93-JE---TA--PIE-2.0-",
       "https://figma.com/design/mJiLMfnMfnEYWJh2Njutdq/-Core--Motion--PIE-3-",
-      "https://figma.com/design/pPSC73rPin4csb8DiK1CRr",
-      "https://figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-"
+      "https://figma.com/design/W4DEzDRBQOBohZ7yZr3LXf/-BA--Partner-Portal-%E2%80%93-Skip--PIE-3-",
+      "https://figma.com/design/26iAOwvB5lRVsoHJscqRqs/-Core--Accessibility--PIE-3-",
+      "https://figma.com/design/eAITIXG1I2aIvHgkhyc5ro/3D-devices",
+      "https://figma.com/design/qVVNVoZgeqkQhlMxsrUhd7/Core-AI-Components",
+      "https://figma.com/design/WxPDYsTycTVhPac6nCbbgN/-Core--Apps-Component-Documentation--PIE-3-",
+      "https://figma.com/design/OOgnT2oNMdGFytj5AanYvt/-Core--Web-Component-Documentation--PIE-3-",
+      "https://figma.com/design/KAsRXLmSLSQ8a2JLXg6OsS/-BA--Customer-%E2%80%93-Skip--PIE-3-",
+      "https://figma.com/design/2c3RYLNtwjPhUdrmKlPg8D/-BA--Logistics-Delco---Patterns",
+      "https://figma.com/design/DoilInMsO5L6Rrui7IWgl3/%E2%9C%A8--Core--Apps-Components--PIE-3-",
+      "https://figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8-%5BCore%5D-Web-Components-%5BPIE-3%5D",
+      "https://figma.com/design/Rqz8KHogVsGCS4j0nDueNo/-Core--Patterns--PIE-3-",
+      "https://figma.com/design/XoCqFBgXafCrQR6hkuFaRj/-BA--Scoober-Logistics-%E2%80%93-Patterns--PIE-3-",
+      "https://figma.com/file/BRwqw7B4dm4mVPdvfVLSNY/Process",
+      "https://figma.com/design/tGv7rwthRgAOQP0Xx86Bm0/-AI--Foundations--PIE-3-",
+      "https://figma.com/design/CSxFGnwnBBBNPF6FYeB8qs/-BA--Partner--PIE-3-",
+      "https://figma.com/design/pPSC73rPin4csb8DiK1CRr/%E2%9C%A8--Core--Web-Components--PIE-3-",
+      "https://figma.com/design/64d6BFbEaP9tjrDmOCJpQh/%E2%9C%A8--Core--Foundations--PIE-3-",
+      "https://figma.com/design/k7gPJ4MZRUj4nlZK2hL0Op",
+      "https://figma.com/design/r0e4dnGSg9qS8MmdTehw0n/-BA--Internal-Tools-%E2%9A%AA%EF%B8%8F--PIE-3-",
+      "https://figma.com/design/DoilInMsO5L6Rrui7IWgl3",
+      "https://figma.com/design/7Auqy3S8J787NywZ0gtgZm/-BA--Customer-%E2%80%93-JE---TA--PIE-3-",
+      "https://figma.com/design/K11XNe5NKsreTkubGEC6z4/-BA--PLO---Skip--%E2%9C%A8-PIE-3.0-",
+      "https://figma.com/file/Rqz8KHogVsGCS4j0nDueNo/[Core]-Patterns-%E2%9A%AA%EF%B8%8F-[PIE-2.0]",
+      "https://figma.com/design/3nSkAn3xL6jEOXKt1MePPd/-BA--Logistics-Delco---Components",
+      "https://figma.com/design/eUOZTTYaTYbmy73i0wpkL9/-Core--Brand-assets--PIE-3-",
+      "https://figma.com/design/pPSC73rPin4csb8DiK1CRr"
     ],
     "npm": [
       "https://npmjs.com/package/@justeattakeaway/pie-webc",
@@ -71,8 +70,8 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/google/GTXiLib",
-      "https://github.com/google/Accessibility-Test-Framework-for-Android"
+      "https://github.com/google/Accessibility-Test-Framework-for-Android",
+      "https://github.com/google/GTXiLib"
     ]
   },
   "content_signals": {
@@ -87,13 +86,13 @@
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 41,
-    "last_pushed": "2026-09-17T13:44:35Z"
+    "stars": 42,
+    "last_pushed": "2026-10-30T15:36:59Z"
   },
   "npm_meta": {
-    "latest_version": "0.12.0",
-    "last_published": "2026-10-02T14:29:07.390Z",
-    "weekly_downloads": 3328
+    "latest_version": "1.0.0",
+    "last_published": "2026-10-27T17:54:15.473Z",
+    "weekly_downloads": 4447
   },
   "indexed_pages": [
     {
@@ -249,10 +248,6 @@
       "title": "Components — Button | PIE Design System"
     },
     {
-      "url": "https://pie.design/components/button/code",
-      "title": "Components — Button | PIE Design System"
-    },
-    {
       "url": "https://pie.design/components/button/apps",
       "title": "Components — Button | PIE Design System"
     },
@@ -261,7 +256,15 @@
       "title": "Components — Button | PIE Design System"
     },
     {
+      "url": "https://pie.design/components/button/code",
+      "title": "Components — Button | PIE Design System"
+    },
+    {
       "url": "https://pie.design/components/card",
+      "title": "Components — Card | PIE Design System"
+    },
+    {
+      "url": "https://pie.design/components/card/code",
       "title": "Components — Card | PIE Design System"
     },
     {
@@ -270,10 +273,6 @@
     },
     {
       "url": "https://pie.design/components/card/web",
-      "title": "Components — Card | PIE Design System"
-    },
-    {
-      "url": "https://pie.design/components/card/code",
       "title": "Components — Card | PIE Design System"
     },
     {
@@ -385,7 +384,7 @@
       "title": "Components — Dropdown | PIE Design System"
     },
     {
-      "url": "https://pie.design/components/dropdown/web",
+      "url": "https://pie.design/components/dropdown/ios",
       "title": "Components — Dropdown | PIE Design System"
     },
     {
@@ -393,7 +392,7 @@
       "title": "Components — Dropdown | PIE Design System"
     },
     {
-      "url": "https://pie.design/components/dropdown/ios",
+      "url": "https://pie.design/components/dropdown/web",
       "title": "Components — Dropdown | PIE Design System"
     },
     {
@@ -845,11 +844,11 @@
       "title": "Components — Uploader | PIE Design System"
     },
     {
-      "url": "https://pie.design/components/uploader/web",
+      "url": "https://pie.design/components/uploader/apps",
       "title": "Components — Uploader | PIE Design System"
     },
     {
-      "url": "https://pie.design/components/uploader/apps",
+      "url": "https://pie.design/components/uploader/web",
       "title": "Components — Uploader | PIE Design System"
     },
     {
@@ -881,11 +880,11 @@
       "title": "Designers — Contributing | PIE Design System"
     },
     {
-      "url": "https://pie.design/designers/getting-started",
+      "url": "https://pie.design/designers/getting-started/figma-files",
       "title": "Designers — Getting started | PIE Design System"
     },
     {
-      "url": "https://pie.design/designers/getting-started/figma-files",
+      "url": "https://pie.design/designers/getting-started",
       "title": "Designers — Getting started | PIE Design System"
     },
     {
@@ -1089,11 +1088,11 @@
       "title": "Patterns — Overlay Patterns | PIE Design System"
     },
     {
-      "url": "https://pie.design/patterns/overlay-patterns/android-guidance",
+      "url": "https://pie.design/patterns/overlay-patterns/web-guidance",
       "title": "Patterns — Overlay Patterns | PIE Design System"
     },
     {
-      "url": "https://pie.design/patterns/overlay-patterns/web-guidance",
+      "url": "https://pie.design/patterns/overlay-patterns/android-guidance",
       "title": "Patterns — Overlay Patterns | PIE Design System"
     },
     {
@@ -1129,11 +1128,11 @@
       "title": "Spacing | PIE Design System"
     },
     {
-      "url": "https://pie.design/foundations/spacing/tokens/global",
+      "url": "https://pie.design/foundations/spacing/tokens/alias",
       "title": "Spacing | PIE Design System"
     },
     {
-      "url": "https://pie.design/foundations/spacing/tokens/alias",
+      "url": "https://pie.design/foundations/spacing/tokens/global",
       "title": "Spacing | PIE Design System"
     },
     {
@@ -1141,11 +1140,11 @@
       "title": "Typography | PIE Design System"
     },
     {
-      "url": "https://pie.design/foundations/typography/tokens/global",
+      "url": "https://pie.design/foundations/typography/tokens/alias/wide",
       "title": "Typography | PIE Design System"
     },
     {
-      "url": "https://pie.design/foundations/typography/tokens/alias/wide",
+      "url": "https://pie.design/foundations/typography/tokens/global",
       "title": "Typography | PIE Design System"
     },
     {

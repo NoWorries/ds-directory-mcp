@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "consumer-financial-protection-bureau-cfpb-design-manual",
   "organization": "Consumer Financial Protection Bureau",
   "design_system": "CFPB Design Manual",
@@ -13,8 +13,8 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:09:23+00:00",
-  "last_modified": "Wed, 30 Sep 2026 20:29:37 GMT",
+  "last_checked": "2026-11-01T10:25:31+00:00",
+  "last_modified": "Thu, 29 Oct 2026 20:56:27 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -45,7 +45,7 @@
   "github_meta": {
     "license": "CC0-1.0",
     "stars": 60,
-    "last_pushed": "2026-09-30T21:04:11Z"
+    "last_pushed": "2026-10-29T20:55:45Z"
   },
   "npm_meta": null,
   "indexed_pages": [

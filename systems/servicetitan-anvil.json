@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "servicetitan-anvil",
   "organization": "ServiceTitan",
   "design_system": "Anvil",
@@ -9,54 +9,32 @@
     "https://anvil.servicetitan.com/"
   ],
   "detail_url": "/systems/servicetitan-anvil",
-  "pages_indexed": 454,
-  "coverage_status": "full",
-  "hit_max_pages": false,
+  "pages_indexed": 599,
+  "coverage_status": "partial",
+  "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-10-07T11:51:06+00:00",
-  "last_modified": null,
-  "sitemap_last_modified": "2026-10-06T20:41:27.098Z",
+  "last_checked": "2026-11-01T11:50:04+00:00",
+  "last_modified": "Sun, 01 Nov 2026 11:34:53 GMT",
+  "sitemap_last_modified": "2026-10-29T21:36:51.746Z",
   "resources": {
     "github": [
       "https://github.com/servicetitan/hammer"
     ],
-    "storybook": [
-      "https://chromatic.com/",
-      "https://main--64627e95c8a540f70fd17e9e.chromatic.com/",
-      "https://storybook.js.org/",
-      "https://storybook.js.org/docs/writing-tests/accessibility-testing"
-    ],
     "figma": [
-      "https://figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library",
-      "https://figma.com/design/QEIsArLktLeJAaFvcpw3PO/Carto-Web-Components",
-      "https://figma.com/design/jgymIi7ydk9JE2Q5RM6uLz/%F0%9F%8C%88-Spike--Expanded-Color-Ramps-in-Anvil",
+      "https://figma.com/design/xaNQsvRKczoxu7pj0M6QT8/Anvil2-v3",
+      "https://figma.com/design/QEIsArLktLeJAaFvcpw3PO/AI-Kit-Web-Component-Library",
       "https://figma.com/design/KfMPM2hzHLX6Sr1YGWNXHc/Anvil2",
-      "https://figma.com/proto/xDpwL1pomsuEb4vd8X42PT/Anvil-Color-Accessibility-Guide",
-      "https://figma.com/design/6WeJz8JMm1in6Wb4g0wLP5/Carto-Design-Tokens",
-      "https://figma.com/design/stbqJfKxFAhVDn6HBakePy/Page-Templates"
-    ],
-    "markdown_docs": [
-      "https://github.com/servicetitan/hammer/blob/main/README.md",
-      "https://github.com/servicetitan/anvil2/blob/master/README.md",
-      "https://github.com/servicetitan/hammer/blob/main/packages/anvil2/README.md",
-      "https://github.com/servicetitan/hammer/blob/main/CONTRIBUTING.md",
-      "https://github.com/servicetitan/hammer/tree/master/packages/hammer-react/README.md",
-      "https://github.com/servicetitan/hammer/tree/master/packages/anvil2/README.md"
+      "https://figma.com/design/gjGWnAOnI1kukfzjsUQ6dP/Mobile-Agentic-Component-Library"
     ],
     "agent_instructions": [
       "https://anvil.servicetitan.com/llms.txt",
       "https://anvil.servicetitan.com/llms-full.txt",
       "https://anvil.servicetitan.com/AGENTS.md"
     ],
-    "npm": [
-      "https://npmjs.com/package/@servicetitan/anvil2",
-      "https://npmjs.com/package/@servicetitan/startup"
-    ],
     "icons": [
-      "https://anvil.servicetitan.com/docs/web/components/icon/tokens",
-      "https://anvil.servicetitan.com/docs/web/components/icon/design",
-      "https://anvil.servicetitan.com/docs/web/icons",
-      "https://anvil.servicetitan.com/docs/web/components/icon/code"
+      "https://anvil.servicetitan.com/docs/components/icon/tokens",
+      "https://anvil.servicetitan.com/docs/components/icon/web",
+      "https://anvil.servicetitan.com/docs/icons/lucide"
     ],
     "mcp": [
       "https://anvil.servicetitan.com/.well-known/mcp.json"
@@ -64,17 +42,16 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/dequelabs/axe-core",
       "https://github.com/kentcdodds/match-sorter"
     ]
   },
   "content_signals": {
-    "dark_mode": true,
-    "accessibility_conformance": "WCAG 2.2 AA",
-    "tokens_format": "Figma Variables",
     "prohibition": true,
     "frameworks": [
-      "React"
+      "React",
+      "SwiftUI",
+      "Jetpack Compose",
+      "Web Components"
     ]
   },
   "github_meta": null,
@@ -97,6 +74,14 @@
       "title": "Accessibility - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/action-log/react-native",
+      "title": "Action Log - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/action-log/web",
+      "title": "Action Log - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/action-log/code",
       "title": "Action Log – Code – AI Kit"
     },
@@ -117,8 +102,20 @@
       "title": "Active vs Passive Voice - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/agent-media-card/web",
+      "title": "Agent Media Card - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-media-card/code",
       "title": "Agent Media Card – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/agent-message/react-native",
+      "title": "Agent Message - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/agent-message/web",
+      "title": "Agent Message - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-message/code",
@@ -129,12 +126,24 @@
       "title": "Agent Message – Code – React Native"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/agent-prompt/web",
+      "title": "Agent Prompt - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-prompt/code",
       "title": "Agent Prompt – Code – AI Kit"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-prompt/design",
       "title": "Agent Prompt – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/agent-thinking/react-native",
+      "title": "Agent Thinking - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/agent-thinking/web",
+      "title": "Agent Thinking - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/agent-thinking/code",
@@ -153,8 +162,16 @@
       "title": "AI Kit - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/ai-mark/web",
+      "title": "AI Mark - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/ai-mark/code",
       "title": "AI Mark – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/ai-mark/tokens",
+      "title": "Ai Mark – Tokens"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/utilities/ai-marks",
@@ -169,6 +186,10 @@
       "title": "AI Tooling and Anvil2 - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/alert/web",
+      "title": "Alert - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/alert/code",
       "title": "Alert – Code"
     },
@@ -177,12 +198,28 @@
       "title": "Alert – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/alert/tokens",
+      "title": "Alert – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/alert/tokens",
       "title": "Alert – Tokens"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/filter-bar/beta-changes/wrap-only-overflow-and-breakpoint",
+      "title": "Always-wrap overflow and breakpoint shift - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/filter-bar/beta-changes/wrap-only-overflow-and-breakpoint",
       "title": "Always-wrap overflow and breakpoint shift - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/amcharts",
+      "title": "amCharts (deprecated) - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/announcement/web",
+      "title": "Announcement - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/announcement/code",
@@ -191,6 +228,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/announcement/design",
       "title": "Announcement – Design"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/announcement/tokens",
+      "title": "Announcement – Tokens"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/announcement/tokens",
@@ -217,8 +258,16 @@
       "title": "Anvil2 Icons – Usage"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/app-header/web",
+      "title": "App Header - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/app-header/code",
       "title": "App Header – Code – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/app-shell/web",
+      "title": "App Shell - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/app-shell/code",
@@ -237,12 +286,24 @@
       "title": "Area Charts - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/area",
+      "title": "Area – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/area",
       "title": "Area – Charts - React"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/area",
+      "title": "Area – Charts - React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/area",
       "title": "Area – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/artifact-card/web",
+      "title": "Artifact Card - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/artifact-card/code",
@@ -277,8 +338,16 @@
       "title": "Atlas Header – Code"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/atlas-logo/react-native",
+      "title": "Atlas Logo - React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/react-native/components/atlas-logo/code",
       "title": "Atlas Logo – Code – React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/avatar/web",
+      "title": "Avatar - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/avatar/code",
@@ -289,8 +358,16 @@
       "title": "Avatar – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/avatar/tokens",
+      "title": "Avatar – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/avatar/tokens",
       "title": "Avatar – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/badge/web",
+      "title": "Badge - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/badge/code",
@@ -301,8 +378,16 @@
       "title": "Badge – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/badge/tokens",
+      "title": "Badge – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/badge/tokens",
       "title": "Badge – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/amcharts/bar-charts",
+      "title": "Bar Charts - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts/bar-charts",
@@ -313,8 +398,16 @@
       "title": "Bar Charts - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/bar",
+      "title": "Bar – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/bar",
       "title": "Bar – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/bar",
+      "title": "Bar – Charts - React Native"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/bar",
@@ -329,8 +422,20 @@
       "title": "Bold and Italics - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/beta-changes/boolean-edit-mode",
+      "title": "Boolean Edit Mode - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/data-table/beta-changes/boolean-edit-mode",
       "title": "Boolean Edit Mode - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/bottom-sheet/react-native",
+      "title": "Bottom Sheet - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/bottom-sheet/web",
+      "title": "Bottom Sheet - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/bottom-sheet/code",
@@ -345,6 +450,10 @@
       "title": "BottomSheet – Design – AI Kit"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/breadcrumbs/web",
+      "title": "Breadcrumbs - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/breadcrumbs/code",
       "title": "Breadcrumbs – Code"
     },
@@ -353,8 +462,40 @@
       "title": "Breadcrumbs – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/breadcrumbs/tokens",
+      "title": "Breadcrumbs – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/breadcrumbs/tokens",
       "title": "Breadcrumbs – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences",
+      "title": "Building Agentic Experiences - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/button/react-native",
+      "title": "Button - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/button/web",
+      "title": "Button - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/button/ai-kit",
+      "title": "Button - Web (AI Kit)"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/button-toggle/react-native",
+      "title": "Button Toggle - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/button-toggle/web",
+      "title": "Button Toggle - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/button-toggle/ai-kit",
+      "title": "Button Toggle - Web (AI Kit)"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/button-toggle/code",
@@ -371,6 +512,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/button-toggle/design",
       "title": "Button Toggle – Design"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/button-toggle/tokens",
+      "title": "Button Toggle – Tokens"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/button-toggle/tokens",
@@ -397,8 +542,16 @@
       "title": "Button – Design – AI Kit"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/button/tokens",
+      "title": "Button – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/button/tokens",
       "title": "Button – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/calendar/web",
+      "title": "Calendar - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/calendar/code",
@@ -409,12 +562,28 @@
       "title": "Calendar – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/calendar/tokens",
+      "title": "Calendar – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/calendar/tokens",
       "title": "Calendar – Tokens"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/content/capitalization",
       "title": "Capitalization - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/card/react-native",
+      "title": "Card - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/card/web",
+      "title": "Card - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/card/ai-kit",
+      "title": "Card - Web (AI Kit)"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/card/code",
@@ -437,6 +606,10 @@
       "title": "Card – Design – AI Kit"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/card/tokens",
+      "title": "Card – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/card/tokens",
       "title": "Card – Tokens"
     },
@@ -445,8 +618,16 @@
       "title": "Categorical Color Palette - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/palettes/categorical",
+      "title": "Categorical palette – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/palettes/categorical",
       "title": "Categorical palette – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/palettes/categorical",
+      "title": "Categorical palette – Charts - React Native"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes/categorical",
@@ -457,12 +638,24 @@
       "title": "Changing Content - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/chart",
+      "title": "Chart Component – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/chart",
       "title": "Chart Component – Charts - React"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/chart",
+      "title": "Chart Component – Charts - React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/chart",
       "title": "Chart Component – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts",
+      "title": "Charts"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts",
@@ -477,8 +670,20 @@
       "title": "Charts - React Native"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native",
+      "title": "Charts – React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/web",
+      "title": "Charts – Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/atlas/components/chat-composer-rich/code",
       "title": "Chat Composer Rich – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/chat-history/web",
+      "title": "Chat History - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/chat-history/code",
@@ -487,6 +692,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/patterns/chat-layout",
       "title": "Chat Layout - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/chat-layout/web",
+      "title": "Chat Layout - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/chat-layout/code",
@@ -503,6 +712,18 @@
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/chat-layout/design",
       "title": "ChatLayout – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/checkbox/react-native",
+      "title": "Checkbox - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/checkbox/web",
+      "title": "Checkbox - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/checkbox/ai-kit",
+      "title": "Checkbox - Web (AI Kit)"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/checkbox/code",
@@ -525,8 +746,16 @@
       "title": "Checkbox – Design – AI Kit"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/checkbox/tokens",
+      "title": "Checkbox – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/checkbox/tokens",
       "title": "Checkbox – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/chip/web",
+      "title": "Chip - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/chip/code",
@@ -537,8 +766,16 @@
       "title": "Chip – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/chip/tokens",
+      "title": "Chip – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/chip/tokens",
       "title": "Chip – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/citation/web",
+      "title": "Citation - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/citation/code",
@@ -547,6 +784,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/citation/design",
       "title": "Citation – Design – AI Kit"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/foundations/colors",
+      "title": "Colors - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/colors",
@@ -561,16 +802,32 @@
       "title": "Column Editor - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/beta-changes/column-types",
+      "title": "Column Types and EditConfig - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/data-table/beta-changes/column-types",
       "title": "Column Types and EditConfig - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/combined",
+      "title": "Combined – Charts - React"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/combined",
       "title": "Combined – Charts - React"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/combined",
+      "title": "Combined – Charts - React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/combined",
       "title": "Combined – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/combobox/web",
+      "title": "Combobox - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/combobox/code",
@@ -579,6 +836,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/combobox/design",
       "title": "Combobox – Design"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/combobox/tokens",
+      "title": "Combobox – Tokens"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/combobox/tokens",
@@ -591,6 +852,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/kits/common",
       "title": "Common - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/ai-ux/complex-reasoning-with-ai",
+      "title": "Complex Reasoning with AI - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/ai-ux/complex-reasoning-with-ai",
@@ -637,12 +902,28 @@
       "title": "CSS Utilities - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/beta-changes/custom-edit-mode",
+      "title": "Custom Edit Mode - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/data-table/beta-changes/custom-edit-mode",
       "title": "Custom Edit Mode - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/tokens",
+      "title": "Data Table – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/foundations/data-visualization",
+      "title": "Data Visualization - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/data-visualization",
       "title": "Data Visualization - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/beta-changes/remove-row-activation",
+      "title": "DataTable Remove Row Activation API - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/data-table/beta-changes/remove-row-activation",
@@ -653,6 +934,10 @@
       "title": "Date and Time - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/date-field-range/web",
+      "title": "Date Field Range - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/date-field-range/code",
       "title": "Date Field Range – Code"
     },
@@ -661,12 +946,24 @@
       "title": "Date Field Range – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/date-field-single/web",
+      "title": "Date Field Single - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/date-field-single/code",
       "title": "Date Field Single – Code"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/date-field-single/design",
       "title": "Date Field Single – Design"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/date-field-yearless/web",
+      "title": "Date Field Yearless - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/date-field-yearless-range/web",
+      "title": "Date Field Yearless Range - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/date-field-yearless-range/code",
@@ -689,6 +986,10 @@
       "title": "Date Values - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/days-of-the-week/web",
+      "title": "Days Of The Week - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/days-of-the-week/code",
       "title": "Days Of The Week – Code"
     },
@@ -701,12 +1002,28 @@
       "title": "Decorative Icon - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/decorative-icon/web",
+      "title": "Decorative Icon - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/decorative-icon/code",
       "title": "Decorative Icon – Code – AI Kit"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/design-tokens",
       "title": "Design Tokens - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/details/web",
+      "title": "Details - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/details-beta/web",
+      "title": "Details [Beta] - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/details-beta/beta-changes/summary-label-and-attributes",
+      "title": "Details Summary Label and Attributes - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/details/code",
@@ -717,8 +1034,28 @@
       "title": "Details – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/details/tokens",
+      "title": "Details – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/details/tokens",
       "title": "Details – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/developer-quickstart",
+      "title": "Developer Quickstart - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/dialog/react-native",
+      "title": "Dialog - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/dialog/web",
+      "title": "Dialog - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/dialog/ai-kit",
+      "title": "Dialog - Web (AI Kit)"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/dialog/code",
@@ -741,8 +1078,16 @@
       "title": "Dialog – Design – AI Kit"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/dialog/tokens",
+      "title": "Dialog – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/dialog/tokens",
       "title": "Dialog – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/diff-value/web",
+      "title": "Diff Value - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/diff-value/code",
@@ -753,6 +1098,10 @@
       "title": "DiffValue – Design – AI Kit"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/divider/web",
+      "title": "Divider - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/divider/code",
       "title": "Divider – Code"
     },
@@ -761,8 +1110,20 @@
       "title": "Divider – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/divider/tokens",
+      "title": "Divider – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/divider/tokens",
       "title": "Divider – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/dnd/web",
+      "title": "Dnd - Web"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/dnd-sort/web",
+      "title": "Dnd Sort - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/dnd-sort/code",
@@ -781,6 +1142,14 @@
       "title": "Dnd – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/dnd/tokens",
+      "title": "Dnd – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/amcharts/donut-charts",
+      "title": "Donut Charts - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts/donut-charts",
       "title": "Donut Charts - Anvil2"
     },
@@ -789,12 +1158,24 @@
       "title": "Donut Charts - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/donut",
+      "title": "Donut – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/donut",
       "title": "Donut – Charts - React"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/donut",
+      "title": "Donut – Charts - React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/donut",
       "title": "Donut – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/drawer/web",
+      "title": "Drawer - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/drawer/code",
@@ -805,8 +1186,16 @@
       "title": "Drawer – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/drawer/tokens",
+      "title": "Drawer – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/drawer/tokens",
       "title": "Drawer – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/drilldown/web",
+      "title": "Drilldown - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/drilldown/code",
@@ -817,8 +1206,16 @@
       "title": "Drilldown – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/drilldown/tokens",
+      "title": "Drilldown – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/drilldown/tokens",
       "title": "Drilldown – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/edit-card/web",
+      "title": "Edit Card - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/edit-card/code",
@@ -827,6 +1224,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/edit-card/design",
       "title": "Edit Card – Design"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/edit-card/tokens",
+      "title": "Edit Card – Tokens"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/edit-card/tokens",
@@ -857,6 +1258,10 @@
       "title": "Evidence Disclosure - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/field-label/web",
+      "title": "Field Label - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/field-label/code",
       "title": "Field Label – Code"
     },
@@ -865,8 +1270,16 @@
       "title": "Field Label – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/field-label/tokens",
+      "title": "Field Label – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/field-label/tokens",
       "title": "Field Label – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/field-message/web",
+      "title": "Field Message - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/field-message/code",
@@ -877,12 +1290,20 @@
       "title": "Field Message – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/field-message/tokens",
+      "title": "Field Message – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/field-message/tokens",
       "title": "Field Message – Tokens"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/common/form-fields/field-state",
       "title": "Field state - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/filter-bar/web",
+      "title": "Filter Bar - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/filter-bar/code",
@@ -895,6 +1316,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/patterns/filters",
       "title": "Filters - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/flex/web",
+      "title": "Flex - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/flex/code",
@@ -918,6 +1343,10 @@
     },
     {
       "url": "https://anvil.servicetitan.com/docs/getting-started",
+      "title": "Getting Started"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/amcharts/getting-started",
       "title": "Getting Started - Anvil2"
     },
     {
@@ -933,20 +1362,40 @@
       "title": "Getting Started – React Native"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/blocks/global-navigation",
+      "title": "Global Navigation - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/resources/playbook/governance",
       "title": "Governance - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/grid/web",
+      "title": "Grid - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/grid/code",
       "title": "Grid – Code"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/grouped-bar",
+      "title": "Grouped bar – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/grouped-bar",
       "title": "Grouped bar – Charts - React"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/grouped-bar",
+      "title": "Grouped bar – Charts - React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/grouped-bar",
       "title": "Grouped bar – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/guidance-card/web",
+      "title": "Guidance Card - Web"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/components/guidance-card/code",
@@ -981,6 +1430,10 @@
       "title": "How We Work - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/icon/web",
+      "title": "Icon - Web"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/icon/code",
       "title": "Icon – Code"
     },
@@ -989,8 +1442,16 @@
       "title": "Icon – Design"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/icon/tokens",
+      "title": "Icon – Tokens"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/icon/tokens",
       "title": "Icon – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/foundations/iconography",
+      "title": "Iconography - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/iconography",
@@ -1007,6 +1468,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/kits/illustrations",
       "title": "Illustrations"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/foundations/illustrations",
+      "title": "Illustrations - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/illustrations",
@@ -1081,8 +1546,16 @@
       "title": "Line Charts - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/line",
+      "title": "Line – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/line",
       "title": "Line – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/line",
+      "title": "Line – Charts - React Native"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/line",
@@ -1193,8 +1666,16 @@
       "title": "Menu – Tokens"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/palettes/monochrome",
+      "title": "Monochrome palette – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/palettes/monochrome",
       "title": "Monochrome palette – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/palettes/monochrome",
+      "title": "Monochrome palette – Charts - React Native"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes/monochrome",
@@ -1239,6 +1720,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/patterns/notifications",
       "title": "Notifications - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/beta-changes/number-edit-mode",
+      "title": "Number Edit Mode - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/data-table/beta-changes/number-edit-mode",
@@ -1309,12 +1794,24 @@
       "title": "Pagination – Tokens"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/palettes",
+      "title": "Palettes – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/palettes",
       "title": "Palettes – Charts - React"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/palettes",
+      "title": "Palettes – Charts - React Native"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes",
       "title": "Palettes – Charts - React Native"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/voice-experience/voice-patterns",
+      "title": "Patterns - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/voice-patterns",
@@ -1327,6 +1824,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/patterns/peek",
       "title": "Peek - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/voice-experience/persona-and-voice-guidelines",
+      "title": "Persona and Voice Guidelines - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/persona-and-voice-guidelines",
@@ -1343,6 +1844,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/popover/tokens",
       "title": "Popover – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/voice-experience/voice-principles",
+      "title": "Principles - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/voice-principles",
@@ -1393,6 +1898,10 @@
       "title": "React Native – Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/beta-changes/remove-legacy-edit-props",
+      "title": "Remove Legacy Edit Props - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/data-table/beta-changes/remove-legacy-edit-props",
       "title": "Remove Legacy Edit Props - Anvil2"
     },
@@ -1441,12 +1950,20 @@
       "title": "Select Card – Tokens"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/components/data-table/beta-changes/select-edit-mode",
+      "title": "Select Edit Mode - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/data-table/beta-changes/select-edit-mode",
       "title": "Select Edit Mode - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/select-field/code",
       "title": "Select Field – Code"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/filter-bar/beta-changes/select-filters-rework",
+      "title": "Select Filter Rework - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/filter-bar/beta-changes/select-filters-rework",
@@ -1485,8 +2002,16 @@
       "title": "Semantic Markup - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/palettes/semantic",
+      "title": "Semantic palette – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/palettes/semantic",
       "title": "Semantic palette – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/palettes/semantic",
+      "title": "Semantic palette – Charts - React Native"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/palettes/semantic",
@@ -1569,8 +2094,16 @@
       "title": "Sr Only – Code"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/charts/web/stacked-bar",
+      "title": "Stacked bar – Charts - React"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react/stacked-bar",
       "title": "Stacked bar – Charts - React"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/charts/react-native/stacked-bar",
+      "title": "Stacked bar – Charts - React Native"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/charts-react-native/stacked-bar",
@@ -1653,6 +2186,10 @@
       "title": "Tables - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/terminology",
+      "title": "Terminology - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/web/components/text-field/code",
       "title": "Text Field – Code"
     },
@@ -1721,6 +2258,10 @@
       "title": "Toast – Tokens"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/tone-and-trust",
+      "title": "Tone & Trust - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/tone-and-trust",
       "title": "Tone & Trust - Anvil2"
     },
@@ -1735,6 +2276,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/toolbar/tokens",
       "title": "Toolbar – Tokens"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/components/filter-bar/beta-changes/toolbar-filters-to-filter-bar",
+      "title": "Toolbar.Filters to FilterBar - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/filter-bar/beta-changes/toolbar-filters-to-filter-bar",
@@ -1787,6 +2332,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/web/components/typeahead-text-field/design",
       "title": "Typeahead Text Field – Design"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/foundations/typography",
+      "title": "Typography - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/foundations/typography",
@@ -1865,6 +2414,10 @@
       "title": "useSwipe - Anvil2"
     },
     {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/ai-ux/ux-and-the-five-parts-of-a-moment",
+      "title": "UX and the Five Parts of a Moment - Anvil2"
+    },
+    {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/ai-ux/ux-and-the-five-parts-of-a-moment",
       "title": "UX and the Five Parts of a Moment - Anvil2"
     },
@@ -1875,6 +2428,10 @@
     {
       "url": "https://anvil.servicetitan.com/docs/visit-anvil1",
       "title": "Visit Anvil1 - Anvil2"
+    },
+    {
+      "url": "https://anvil.servicetitan.com/docs/building-agentic-experiences/voice-experience/overview",
+      "title": "Voice Experience - Anvil2"
     },
     {
       "url": "https://anvil.servicetitan.com/docs/kits/ai-kit/voice-experience/overview",

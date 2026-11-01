@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-10-29T10:51:26+00:00",
+  "generated_at": "2026-11-01T12:47:38+00:00",
   "id": "kontur",
   "organization": null,
   "design_system": "Kontur",
@@ -9,16 +9,19 @@
     "https://guides.kontur.ru/"
   ],
   "detail_url": "/systems/kontur",
-  "pages_indexed": 83,
+  "pages_indexed": 85,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-01T10:42:33+00:00",
+  "last_checked": "2026-11-01T11:00:37+00:00",
   "last_modified": null,
-  "sitemap_last_modified": "2026-09-17T10:53:43Z",
+  "sitemap_last_modified": "2026-10-30T08:46:22Z",
   "resources": {
     "icons": [
       "https://guides.kontur.ru/re/sources/icons"
+    ],
+    "agent_instructions": [
+      "https://guides.kontur.ru/llms.txt"
     ]
   },
   "unverified_resources": {},
@@ -30,6 +33,10 @@
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://guides.kontur.ru/llms.txt",
+      "title": "Kontur — llms.txt"
+    },
     {
       "url": "https://guides.kontur.ru/principles/user-research/usabilityspecialist",
       "title": "UX-исследователь — Пользовательские исследования — Принципы — Контур.Гайды"
@@ -103,6 +110,10 @@
       "title": "Иконки продуктов — Библиотеки — Ресурсы — Контур.Гайды"
     },
     {
+      "url": "https://guides.kontur.ru/re/sources/illustrations",
+      "title": "Иллюстрации — Библиотеки — Ресурсы — Контур.Гайды"
+    },
+    {
       "url": "https://guides.kontur.ru/principles/data/inline-editing",
       "title": "Инлайн-редактирование — Данные — Принципы — Контур.Гайды"
     },
@@ -116,7 +127,7 @@
     },
     {
       "url": "https://guides.kontur.ru/principles/interaction/captcha",
-      "title": "Капча — Взаимодействие с клиентом — Принципы — Контур.Гайды"
+      "title": "Капча — Взаимодействие с пользователем — Принципы — Контур.Гайды"
     },
     {
       "url": "https://guides.kontur.ru/components/actions/kebab-menu",
@@ -324,7 +335,7 @@
     },
     {
       "url": "https://guides.kontur.ru/principles/interaction/notifications",
-      "title": "Уведомления — Взаимодействие с клиентом — Принципы — Контур.Гайды"
+      "title": "Уведомления — Взаимодействие с пользователем — Принципы — Контур.Гайды"
     },
     {
       "url": "https://guides.kontur.ru/principles/accessibility/keyboard",
