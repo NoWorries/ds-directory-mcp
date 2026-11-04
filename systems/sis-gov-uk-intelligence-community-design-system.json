@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-02T12:06:46+00:00",
+  "generated_at": "2026-11-04T13:35:20+00:00",
   "id": "sis-gov-uk-intelligence-community-design-system",
   "organization": "SIS Gov UK",
   "design_system": "Intelligence Community Design System",
@@ -10,11 +10,11 @@
   ],
   "detail_url": "/systems/sis-gov-uk-intelligence-community-design-system",
   "pages_indexed": 97,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-11-01T11:45:10+00:00",
-  "last_modified": "Mon, 24 Aug 2026 14:51:52 GMT",
+  "last_checked": "2026-11-04T12:45:13+00:00",
+  "last_modified": "Mon, 24 Aug 2026 14:51:53 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "figma": [

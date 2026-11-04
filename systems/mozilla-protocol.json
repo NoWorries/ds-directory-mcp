@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-02T12:06:46+00:00",
+  "generated_at": "2026-11-04T13:35:20+00:00",
   "id": "mozilla-protocol",
   "organization": "Mozilla",
   "design_system": "Protocol",
@@ -10,10 +10,10 @@
   ],
   "detail_url": "/systems/mozilla-protocol",
   "pages_indexed": 154,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-11-01T11:09:51+00:00",
+  "last_checked": "2026-11-04T12:20:26+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -28,13 +28,13 @@
   },
   "unverified_resources": {
     "github": [
+      "https://help.github.com/articles/cloning-a-repository",
+      "https://help.github.com/articles/creating-and-deleting-branches-within-your-repository",
+      "https://help.github.com/articles/creating-a-pull-request-from-a-fork",
       "https://help.github.com/articles/set-up-git",
       "https://help.github.com/articles/pushing-to-a-remote",
-      "https://help.github.com/articles/creating-a-pull-request-from-a-fork",
-      "https://help.github.com/articles/cloning-a-repository",
       "https://help.github.com/articles/fork-a-repo",
-      "https://help.github.com/articles/editing-files-in-another-users-repository",
-      "https://help.github.com/articles/creating-and-deleting-branches-within-your-repository"
+      "https://help.github.com/articles/editing-files-in-another-users-repository"
     ]
   },
   "content_signals": {
@@ -49,7 +49,7 @@
   "npm_meta": {
     "latest_version": "22.0.0",
     "last_published": "2025-10-03T20:39:48.714Z",
-    "weekly_downloads": 1731
+    "weekly_downloads": 2298
   },
   "indexed_pages": [
     {

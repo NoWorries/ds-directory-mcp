@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-02T12:06:46+00:00",
+  "generated_at": "2026-11-04T13:35:20+00:00",
   "id": "aws-cloudscape-design-system",
   "organization": "AWS",
   "design_system": "Cloudscape Design System",
@@ -10,42 +10,64 @@
   ],
   "detail_url": "/systems/aws-cloudscape-design-system",
   "pages_indexed": 157,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-11-01T10:12:46+00:00",
-  "last_modified": "Fri, 30 Oct 2026 22:48:12 GMT",
+  "last_checked": "2026-11-04T12:08:04+00:00",
+  "last_modified": "Wed, 04 Nov 2026 11:51:38 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
-      "https://github.com/cloudscape-design/components"
+      "https://github.com/cloudscape-design/components",
+      "https://github.com/cloudscape-design/jest-preset"
+    ],
+    "figma": [
+      "https://figma.com/design/fwbGAQCAvHX0rcmxxTTmV8/%5BCDS%5D-Foundations"
     ],
     "markdown_docs": [
-      "https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md"
-    ],
-    "icons": [
-      "https://cloudscape.design/components/icon"
+      "https://github.com/cloudscape-design/components/blob/main/CONTRIBUTING.md",
+      "https://github.com/cloudscape-design/jest-preset/blob/main/README.md"
     ],
     "agent_instructions": [
       "https://cloudscape.design/llms.txt"
+    ],
+    "npm": [
+      "https://npmjs.com/package/@cloudscape-design/global-styles",
+      "https://npmjs.com/package/@cloudscape-design/collection-hooks"
+    ],
+    "icons": [
+      "https://cloudscape.design/components/icon"
     ]
   },
-  "unverified_resources": {},
+  "unverified_resources": {
+    "github": [
+      "https://github.com/NMFR/optimize-css-assets-webpack-plugin",
+      "https://github.com/testing-library/react-testing-library",
+      "https://github.com/modosc/global-jsdom",
+      "https://github.com/webpack-contrib/mini-css-extract-plugin",
+      "https://github.com/csstools/stylelint-use-logical"
+    ],
+    "npm": [
+      "https://npmjs.com/package/normalize.css"
+    ]
+  },
   "content_signals": {
     "dark_mode": true,
+    "tokens_format": "DTCG",
+    "cli_scaffolding": true,
     "frameworks": [
       "React"
     ]
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 2672,
-    "last_pushed": "2026-10-30T18:34:57Z"
+    "stars": 2675,
+    "last_pushed": "2026-11-04T11:38:08Z"
   },
   "npm_meta": {
-    "latest_version": "1.0.110",
-    "last_published": "2026-09-21T12:59:21.630Z",
-    "weekly_downloads": 201816
+    "latest_version": "1.0.72",
+    "last_published": "2026-11-03T15:45:35.103Z",
+    "weekly_downloads": 143632
   },
   "indexed_pages": [
     {

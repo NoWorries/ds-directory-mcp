@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-02T12:06:46+00:00",
+  "generated_at": "2026-11-04T13:35:20+00:00",
   "id": "heroui",
   "organization": null,
   "design_system": "HeroUI",
@@ -10,16 +10,16 @@
   ],
   "detail_url": "/systems/heroui",
   "pages_indexed": 262,
-  "coverage_status": "partial",
-  "hit_max_pages": true,
+  "coverage_status": "full",
+  "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-11-01T12:45:20+00:00",
+  "last_checked": "2026-11-04T13:33:53+00:00",
   "last_modified": null,
   "sitemap_last_modified": "2026-10-30T08:02:01.087Z",
   "resources": {
     "github": [
-      "https://github.com/heroui-inc/heroui-native",
       "https://github.com/heroui-inc/heroui",
+      "https://github.com/heroui-inc/heroui-native",
       "https://github.com/heroui-inc/heroui-mcp"
     ],
     "storybook": [
@@ -30,28 +30,31 @@
       "https://figma.com/community/file/1546526812159103429"
     ],
     "markdown_docs": [
-      "https://heroui.com/react/DESIGN.md",
-      "https://github.com/heroui-inc/heroui-mcp/blob/main/CONTRIBUTING.md",
       "https://github.com/heroui-inc/heroui/blob/main/CONTRIBUTING.md",
-      "https://heroui.com/native/DESIGN.md",
-      "https://github.com/heroui-inc/heroui-native/blob/main/CONTRIBUTING.md"
+      "https://github.com/heroui-inc/heroui-mcp/blob/main/CONTRIBUTING.md",
+      "https://github.com/heroui-inc/heroui-native/blob/main/CONTRIBUTING.md",
+      "https://heroui.com/react/DESIGN.md",
+      "https://heroui.com/native/DESIGN.md"
     ],
     "mcp": [
-      "https://heroui.com/docs/native/getting-started/mcp-server",
-      "https://open-code.ai/docs/en/mcp-servers",
-      "https://heroui.com/en/docs/react/getting-started/mcp-server",
-      "https://heroui.com/docs/react/getting-started/mcp-server",
-      "https://heroui.com/en/docs/native/getting-started/mcp-server",
+      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
       "https://heroui.com/en/docs/react/migration/mcp-server",
       "https://code.visualstudio.com/docs/copilot/customization/mcp-servers",
-      "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
-      "https://heroui.com/en/docs/ui-for-agents/mcp-server"
+      "https://heroui.com/en/docs/react/getting-started/mcp-server",
+      "https://open-code.ai/docs/en/mcp-servers",
+      "https://modelcontextprotocol.io/",
+      "https://heroui.com/docs/native/getting-started/mcp-server",
+      "https://heroui.com/en/docs/native/getting-started/mcp-server",
+      "https://heroui.com/en/docs/ui-for-agents/mcp-server",
+      "https://heroui.com/docs/react/getting-started/mcp-server"
     ],
     "agent_instructions": [
-      "https://heroui.com/llms.txt",
-      "https://heroui.com/native/llms-full.txt",
       "https://heroui.com/native/llms.txt",
-      "https://heroui.com/llms-full.txt"
+      "https://heroui.com/react/llms.txt",
+      "https://heroui.com/native/llms-full.txt",
+      "https://heroui.com/llms-full.txt",
+      "https://heroui.com/llms.txt",
+      "https://heroui.com/react/llms-full.txt"
     ],
     "npm": [
       "https://npmjs.com/package/create-heroui-native-app",
@@ -64,12 +67,13 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/gravity-ui/icons",
-      "https://github.com/saltyaom/m3-ripple"
+      "https://github.com/saltyaom/m3-ripple",
+      "https://github.com/pacocoursey/next-themes",
+      "https://github.com/guilhermerodz/input-otp",
+      "https://github.com/gravity-ui/icons"
     ]
   },
   "content_signals": {
-    "prohibition": true,
     "dark_mode": true,
     "codemods": true,
     "cli_scaffolding": true,
@@ -81,13 +85,13 @@
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 3704,
-    "last_pushed": "2026-10-31T18:05:34Z"
+    "stars": 31088,
+    "last_pushed": "2026-11-04T04:35:08Z"
   },
   "npm_meta": {
     "latest_version": "1.0.8",
     "last_published": "2026-10-21T16:47:33.218Z",
-    "weekly_downloads": 108
+    "weekly_downloads": 99
   },
   "indexed_pages": [
     {
@@ -143,11 +147,11 @@
       "title": "Alert | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/alert",
+      "url": "https://heroui.com/en/docs/react/components/alert",
       "title": "Alert | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/alert",
+      "url": "https://heroui.com/en/docs/react/migration/alert",
       "title": "Alert | HeroUI"
     },
     {
@@ -199,11 +203,11 @@
       "title": "AvatarGroup | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/badge",
+      "url": "https://heroui.com/en/docs/react/components/badge",
       "title": "Badge | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/badge",
+      "url": "https://heroui.com/en/docs/react/migration/badge",
       "title": "Badge | HeroUI"
     },
     {
@@ -275,19 +279,19 @@
       "title": "Checkbox | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/checkbox",
-      "title": "Checkbox | HeroUI"
-    },
-    {
       "url": "https://heroui.com/en/docs/react/components/checkbox",
       "title": "Checkbox | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/checkbox-group",
-      "title": "CheckboxGroup | HeroUI"
+      "url": "https://heroui.com/en/docs/react/migration/checkbox",
+      "title": "Checkbox | HeroUI"
     },
     {
       "url": "https://heroui.com/en/docs/react/components/checkbox-group",
+      "title": "CheckboxGroup | HeroUI"
+    },
+    {
+      "url": "https://heroui.com/en/docs/react/migration/checkbox-group",
       "title": "CheckboxGroup | HeroUI"
     },
     {
@@ -295,11 +299,11 @@
       "title": "Chip | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/chip",
+      "url": "https://heroui.com/en/docs/react/components/chip",
       "title": "Chip | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/chip",
+      "url": "https://heroui.com/en/docs/react/migration/chip",
       "title": "Chip | HeroUI"
     },
     {
@@ -479,11 +483,11 @@
       "title": "Fieldset | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/form",
+      "url": "https://heroui.com/en/docs/react/components/form",
       "title": "Form | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/form",
+      "url": "https://heroui.com/en/docs/react/migration/form",
       "title": "Form | HeroUI"
     },
     {
@@ -511,7 +515,11 @@
       "title": "HeroUI v3 (Previously NextUI) - Beautiful by default, customizable by design."
     },
     {
-      "url": "https://heroui.com/llms.txt",
+      "url": "https://heroui.com/native/llms.txt",
+      "title": "HeroUI — llms.txt"
+    },
+    {
+      "url": "https://heroui.com/react/llms.txt",
       "title": "HeroUI — llms.txt"
     },
     {
@@ -519,11 +527,7 @@
       "title": "HeroUI — llms.txt"
     },
     {
-      "url": "https://heroui.com/native/llms.txt",
-      "title": "HeroUI — llms.txt"
-    },
-    {
-      "url": "https://heroui.com/react/llms.txt",
+      "url": "https://heroui.com/llms.txt",
       "title": "HeroUI — llms.txt"
     },
     {
@@ -563,11 +567,11 @@
       "title": "InputOTP | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/input-otp",
+      "url": "https://heroui.com/en/docs/react/components/input-otp",
       "title": "InputOTP | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/input-otp",
+      "url": "https://heroui.com/en/docs/react/migration/input-otp",
       "title": "InputOTP | HeroUI"
     },
     {
@@ -747,11 +751,11 @@
       "title": "RadioGroup | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/range-calendar",
+      "url": "https://heroui.com/en/docs/react/components/range-calendar",
       "title": "RangeCalendar | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/range-calendar",
+      "url": "https://heroui.com/en/docs/react/migration/range-calendar",
       "title": "RangeCalendar | HeroUI"
     },
     {
@@ -819,11 +823,11 @@
       "title": "Skeleton | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/skeleton",
+      "url": "https://heroui.com/en/docs/react/components/skeleton",
       "title": "Skeleton | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/skeleton",
+      "url": "https://heroui.com/en/docs/react/migration/skeleton",
       "title": "Skeleton | HeroUI"
     },
     {
@@ -855,11 +859,11 @@
       "title": "Spinner | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/spinner",
+      "url": "https://heroui.com/en/docs/react/components/spinner",
       "title": "Spinner | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/spinner",
+      "url": "https://heroui.com/en/docs/react/migration/spinner",
       "title": "Spinner | HeroUI"
     },
     {
@@ -895,11 +899,11 @@
       "title": "Switch | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/migration/table",
+      "url": "https://heroui.com/en/docs/react/components/table",
       "title": "Table | HeroUI"
     },
     {
-      "url": "https://heroui.com/en/docs/react/components/table",
+      "url": "https://heroui.com/en/docs/react/migration/table",
       "title": "Table | HeroUI"
     },
     {
