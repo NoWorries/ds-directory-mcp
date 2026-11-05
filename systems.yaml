@@ -2269,11 +2269,11 @@
   design_system: Predix Design System
   start_urls:
   - https://www.predix-ui.com/
-  pages_indexed: 2
+  pages_indexed: 44
   hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  last_checked: '2026-11-01T10:34:50+00:00'
+  last_checked: '2026-11-05T12:07:51+00:00'
   consecutive_crawl_failures: 0
   unverified_resources: {}
   content_signals: {}
@@ -2281,10 +2281,10 @@
   sitemap_last_modified: '2026-09-16'
   content_signal_sources: {}
   has_localized_docs: false
-  last_modified: Sun, 01 Nov 2026 07:04:12 GMT
+  last_modified: Thu, 05 Nov 2026 07:04:10 GMT
   likely_unmaintained: false
   thin_page_ratio: 0.83
-  render_mode: ''
+  render_mode: spa
 - organization: Github
   design_system: Primer
   start_urls:
