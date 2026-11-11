@@ -408,53 +408,90 @@
   - /patterns/
   - /foundations/
   - /content/
-  pages_indexed: 309
+  pages_indexed: 306
   resources:
+    github:
+    - https://github.com/atlassian-labs/react-resource-router
     storybook:
     - https://atlassian.design/components/storybook-addon-design-system
     icons:
-    - https://atlassian.design/components/icon/examples
-    - https://atlassian.design/components/icon/changelog
     - https://atlassian.design/components/icon
-    - https://atlassian.design/components/icon/icon-tile/usage
-    - https://npmjs.com/package/@atlaskit/icon
-    - https://atlassian.design/components/icon/icon-explorer
-    - https://atlassian.design/components/icon/usage
-    - https://atlassian.design/components/icon/icon-tile
-    - https://bitbucket.org/atlassian/atlassian-frontend-mirror/src/master/design-system/icon
     - https://unpkg.com/@atlaskit/icon/dist
+    - https://atlaskit.atlassian.com/packages/design-system/icon
+    - https://npmjs.com/package/@atlaskit/icon
+    - https://atlassian.design/components/icon/icon-tile/examples
+    - https://atlassian.design/components/icon/icon-tile/code
+    - https://atlassian.design/components/icon/icon-tile
     - https://atlassian.design/components/icon/code
+    - https://atlassian.design/components/icon/usage
+    - https://atlassian.design/components/icon/icon-tile/usage
+    - https://atlassian.design/components/icon/icon-explorer
+    - https://atlassian.design/components/icon/changelog
+    - https://atlassian.design/components/banner/code/packages/design-system/icon
+    - https://atlassian.design/components/icon/examples
+    - https://bitbucket.org/atlassian/atlassian-frontend-mirror/src/master/design-system/icon
     agent_instructions:
     - https://atlassian.design/llms.txt
     - https://atlassian.design/llms-full.txt
-  hit_max_pages: true
+  hit_max_pages: false
   crawl_error: ''
   likely_spa: false
-  etag: '"58dfeef00dddf3af2df491ada5a7aad2"'
-  last_modified: Fri, 30 Oct 2026 01:57:06 GMT
-  last_checked: '2026-11-01T10:10:54+00:00'
+  etag: W/"97d51f884814fa9af375ebe067ce4fb3"
+  last_modified: Wed, 11 Nov 2026 01:58:23 GMT
+  last_checked: '2026-11-11T12:01:59+00:00'
   likely_unmaintained: false
   consecutive_crawl_failures: 0
   unverified_resources:
+    github:
+    - https://github.com/alexreardon/pdnd-react-tailwind
+    - https://github.com/dotnize/pdnd-solid-tailwind
+    - https://github.com/alexreardon/bind-event-listener
+    - https://github.com/alexreardon/pdnd-vanilla-tailwind
+    - https://github.com/frenicohansen/pdnd-vue
+    - https://github.com/frenicohansen/pdnd-nuxt
     npm:
-    - https://npmjs.com/package/@atlaskit/primitives
-    - https://npmjs.com/package/@atlaskit/eslint-plugin-design-system
-    - https://npmjs.com/package/@atlaskit/codemod-cli
+    - https://npmjs.com/package/@atlaskit/flag
+    - https://npmjs.com/package/@atlaskit/heading
+    - https://npmjs.com/package/@atlaskit/dropdown-menu
     - https://npmjs.com/package/@atlaskit/icon
+    - https://npmjs.com/package/@atlaskit/pragmatic-drag-and-drop-hitbox
+    - https://npmjs.com/package/@atlaskit/image
+    - https://npmjs.com/package/@atlaskit/logo
+    - https://npmjs.com/package/@atlaskit/form
     - https://npmjs.com/package/@atlaskit/tokens
+    - https://npmjs.com/package/@atlaskit/avatar
+    - https://npmjs.com/package/@atlaskit/modal-dialog
+    - https://npmjs.com/package/@atlaskit/eslint-plugin-design-system
+    - https://npmjs.com/package/@atlaskit/onboarding
+    - https://npmjs.com/package/@atlaskit/primitives
+    - https://npmjs.com/package/@atlaskit/link
+    - https://npmjs.com/package/@atlaskit/tooltip
+    - https://npmjs.com/package/@atlaskit/css-reset
+    - https://npmjs.com/package/@atlaskit/button
+    - https://npmjs.com/package/@atlaskit/spotlight
+    - https://npmjs.com/package/@atlaskit/menu
+    - https://npmjs.com/package/@atlaskit/empty-state
+    - https://npmjs.com/package/@atlaskit/banner
+    - https://npmjs.com/package/@atlaskit/stylelint-design-system
+    - https://npmjs.com/package/@atlaskit/inline-message
+    - https://npmjs.com/package/@atlaskit/visually-hidden
+    - https://npmjs.com/package/@atlaskit/section-message
+    - https://npmjs.com/package/@atlaskit/object
+    - https://npmjs.com/package/@atlaskit/codemod-cli
+    - https://npmjs.com/package/@atlaskit/app-provider
+    - https://npmjs.com/package/@atlaskit/tile
+    - https://npmjs.com/package/@atlaskit/code
   content_signals:
     dark_mode: true
     codemods: true
-    validation_loop: true
     frameworks:
     - React
   content_signal_sources:
-    dark_mode: https://atlassian.design/foundations/color
-    codemods: https://atlassian.design/foundations/tokens/use-tokens-in-code
-    validation_loop: https://atlassian.design/foundations/tokens/use-tokens-in-code
+    dark_mode: https://atlassian.design/foundations/elevation
+    codemods: https://atlassian.design/components/avatar/migration-guide
     frameworks:
-      React: https://atlassian.design/foundations/iconography
-  thin_page_ratio: 0.59
+      React: https://atlassian.design/components/dropdown-menu/examples
+  thin_page_ratio: 0.39
   has_localized_docs: false
   render_mode: ''
   github_meta:
