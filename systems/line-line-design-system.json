@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "line-line-design-system",
   "organization": "LINE",
   "design_system": "LINE Design System",
@@ -13,7 +13,7 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-15T10:43:29+00:00",
+  "last_checked": "2026-11-15T14:38:35+00:00",
   "last_modified": "Wed, 26 Feb 2025 09:02:07 GMT",
   "sitemap_last_modified": null,
   "resources": {
@@ -35,7 +35,11 @@
   "npm_meta": null,
   "indexed_pages": [
     {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/slider-en",
+      "url": "https://designsystem.line.me/LDSG/components/overlays/snackbar-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/inputs/stepper-en",
       "title": "Components"
     },
     {
@@ -47,63 +51,7 @@
       "title": "Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSG/components/overlays/snackbar-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/stepper-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/overlays/bottom-sheet-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/buttons/action-button-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/text-input-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/checkbox-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/navigations/tab-expanded-tab-list-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/systems/liff-view-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/buttons/icon-button-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/overlays/tooltip-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/navigations/segmented-control-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/buttons/floating-action-button-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/navigations/side-drawer-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/switch-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/pulldown-en",
+      "url": "https://designsystem.line.me/LDSG/components/inputs/slider-en",
       "title": "Components"
     },
     {
@@ -111,47 +59,7 @@
       "title": "Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSG/components/indicators/badge-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/contents/avatar-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/navigations/bottom-navigation-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/contents/image-grid-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/contents/video-player-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/indicators/progress-indicator-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/contents/skeleton-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/indicators/page-indicator-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/overlays/popup-en",
-      "title": "Components"
-    },
-    {
       "url": "https://designsystem.line.me/LDSG/components/overlays/pulldown-menu-en",
-      "title": "Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/components/navigations/footer-en",
       "title": "Components"
     },
     {
@@ -159,11 +67,15 @@
       "title": "Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/radio-button-en",
+      "url": "https://designsystem.line.me/LDSG/components/inputs/switch-en",
       "title": "Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSG/components/inputs/text-area-en",
+      "url": "https://designsystem.line.me/LDSG/components/inputs/text-input-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/buttons/action-button-en",
       "title": "Components"
     },
     {
@@ -171,8 +83,100 @@
       "title": "Components"
     },
     {
+      "url": "https://designsystem.line.me/LDSG/components/buttons/icon-button-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/navigations/segmented-control-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/indicators/badge-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/inputs/checkbox-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/inputs/text-area-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/contents/skeleton-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/inputs/pulldown-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/systems/liff-view-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/buttons/floating-action-button-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/contents/video-player-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/navigations/footer-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/inputs/radio-button-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/overlays/popup-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/contents/avatar-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/indicators/progress-indicator-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/navigations/bottom-navigation-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/overlays/tooltip-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/overlays/bottom-sheet-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/navigations/tab-expanded-tab-list-en",
+      "title": "Components"
+    },
+    {
       "url": "https://designsystem.line.me/LDSG/components/overlays/toast-overlay-en",
       "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/contents/image-grid-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/indicators/page-indicator-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/components/navigations/side-drawer-en",
+      "title": "Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSG/foundation/iconography-ex-en",
+      "title": "Foundation"
     },
     {
       "url": "https://designsystem.line.me/LDSG/foundation/typography-en",
@@ -183,11 +187,7 @@
       "title": "Foundation"
     },
     {
-      "url": "https://designsystem.line.me/LDSG/foundation/iconography-ex-en",
-      "title": "Foundation"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSG/foundation/color-en",
+      "url": "https://designsystem.line.me/LDSG/foundation/layout-en",
       "title": "Foundation"
     },
     {
@@ -195,7 +195,7 @@
       "title": "Foundation"
     },
     {
-      "url": "https://designsystem.line.me/LDSG/foundation/layout-en",
+      "url": "https://designsystem.line.me/LDSG/foundation/color-en",
       "title": "Foundation"
     },
     {
@@ -223,10 +223,6 @@
       "title": "LINE Design System"
     },
     {
-      "url": "https://designsystem.line.me/about/faq-en",
-      "title": "LINE Design System"
-    },
-    {
       "url": "https://designsystem.line.me/about/contact-ex-en",
       "title": "LINE Design System"
     },
@@ -236,6 +232,10 @@
     },
     {
       "url": "https://designsystem.line.me/about/design-principle-en",
+      "title": "LINE Design System"
+    },
+    {
+      "url": "https://designsystem.line.me/about/faq-en",
       "title": "LINE Design System"
     },
     {
@@ -255,15 +255,7 @@
       "title": "LINE Design System for Messenger - Case Studies"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/case-studies/openchat-ex-en",
-      "title": "LINE Design System for Messenger - Case Studies"
-    },
-    {
       "url": "https://designsystem.line.me/LDSM/case-studies/timeline-ex-en",
-      "title": "LINE Design System for Messenger - Case Studies"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/case-studies/home-ex-en",
       "title": "LINE Design System for Messenger - Case Studies"
     },
     {
@@ -271,7 +263,15 @@
       "title": "LINE Design System for Messenger - Case Studies"
     },
     {
+      "url": "https://designsystem.line.me/LDSM/case-studies/home-ex-en",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
       "url": "https://designsystem.line.me/LDSM/case-studies/chats-ex-en",
+      "title": "LINE Design System for Messenger - Case Studies"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/case-studies/openchat-ex-en",
       "title": "LINE Design System for Messenger - Case Studies"
     },
     {
@@ -279,7 +279,27 @@
       "title": "LINE Design System for Messenger - Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/components/banner-ex-en",
+      "url": "https://designsystem.line.me/LDSM/components/fab-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/search-bar-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/checkbox-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/switch-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/checkmark-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/spinner-ex-en",
       "title": "LINE Design System for Messenger - Components"
     },
     {
@@ -287,23 +307,7 @@
       "title": "LINE Design System for Messenger - Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/components/badge-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/text-button-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/chips-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/chatroom-component/flexmessage-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/icon-button-ex-en",
+      "url": "https://designsystem.line.me/LDSM/components/input-ex-en",
       "title": "LINE Design System for Messenger - Components"
     },
     {
@@ -311,39 +315,11 @@
       "title": "LINE Design System for Messenger - Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/components/bottom_sheet-ex-en",
+      "url": "https://designsystem.line.me/LDSM/components/progress_indicator-ex-en",
       "title": "LINE Design System for Messenger - Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/components/fab-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/empty-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/video-player-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/input-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/card-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/tabs-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/bottom_navigation-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/list_header-ex-en",
+      "url": "https://designsystem.line.me/LDSM/components/profile-ex-en",
       "title": "LINE Design System for Messenger - Components"
     },
     {
@@ -351,7 +327,79 @@
       "title": "LINE Design System for Messenger - Components"
     },
     {
+      "url": "https://designsystem.line.me/LDSM/components/card-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/popup-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/badge-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/tooltip-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/empty-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/list_header-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/tabs-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
       "url": "https://designsystem.line.me/LDSM/components/snackbar-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/text-button-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/radiobutton-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/top_navigation-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/banner-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/video-player-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/list-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/bottom_navigation-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/bottom_sheet-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/pagination-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/icon-button-ex-en",
+      "title": "LINE Design System for Messenger - Components"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/components/chips-ex-en",
       "title": "LINE Design System for Messenger - Components"
     },
     {
@@ -363,55 +411,7 @@
       "title": "LINE Design System for Messenger - Components"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/components/profile-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/switch-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/checkbox-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/list-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/search-bar-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/pagination-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/progress_indicator-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/checkmark-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/top_navigation-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/spinner-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/radiobutton-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/popup-ex-en",
-      "title": "LINE Design System for Messenger - Components"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/components/tooltip-ex-en",
+      "url": "https://designsystem.line.me/LDSM/components/chatroom-component/flexmessage-ex-en",
       "title": "LINE Design System for Messenger - Components"
     },
     {
@@ -419,11 +419,7 @@
       "title": "LINE Design System for Messenger - Foundation"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/foundation/color/rainbow-color-ex-en",
-      "title": "LINE Design System for Messenger - Foundation"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/foundation/color/line-semantic-colors-ex-en",
+      "url": "https://designsystem.line.me/LDSM/foundation/iconography/iconography-ex-en",
       "title": "LINE Design System for Messenger - Foundation"
     },
     {
@@ -435,15 +431,19 @@
       "title": "LINE Design System for Messenger - Foundation"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/foundation/graphic-ex-en",
-      "title": "LINE Design System for Messenger - Foundation"
-    },
-    {
-      "url": "https://designsystem.line.me/LDSM/foundation/iconography/iconography-ex-en",
-      "title": "LINE Design System for Messenger - Foundation"
-    },
-    {
       "url": "https://designsystem.line.me/LDSM/foundation/color/line-color-guide-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/color/rainbow-color-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/character-ex-en",
+      "title": "LINE Design System for Messenger - Foundation"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/foundation/color/line-semantic-colors-ex-en",
       "title": "LINE Design System for Messenger - Foundation"
     },
     {
@@ -455,7 +455,7 @@
       "title": "LINE Design System for Messenger - Foundation"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/foundation/character-ex-en",
+      "url": "https://designsystem.line.me/LDSM/foundation/graphic-ex-en",
       "title": "LINE Design System for Messenger - Foundation"
     },
     {
@@ -467,19 +467,19 @@
       "title": "LINE Design System for Messenger - Guidelines"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/ux/selection-ex-en",
-      "title": "LINE Design System for Messenger - Guidelines"
-    },
-    {
       "url": "https://designsystem.line.me/LDSM/ux/navigation-ex-en",
       "title": "LINE Design System for Messenger - Guidelines"
     },
     {
-      "url": "https://designsystem.line.me/LDSM/ux/confirmation-ex-en",
+      "url": "https://designsystem.line.me/LDSM/ux/selection-ex-en",
       "title": "LINE Design System for Messenger - Guidelines"
     },
     {
       "url": "https://designsystem.line.me/LDSM/ux/share-ex-en",
+      "title": "LINE Design System for Messenger - Guidelines"
+    },
+    {
+      "url": "https://designsystem.line.me/LDSM/ux/confirmation-ex-en",
       "title": "LINE Design System for Messenger - Guidelines"
     },
     {

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "palantir-blueprint",
   "organization": "Palantir",
   "design_system": "Blueprint",
@@ -13,8 +13,8 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-15T11:00:21+00:00",
-  "last_modified": "Tue, 22 Sep 2026 14:48:37 GMT",
+  "last_checked": "2026-11-15T14:52:57+00:00",
+  "last_modified": "Fri, 06 Nov 2026 17:15:27 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -44,13 +44,13 @@
   },
   "github_meta": {
     "license": "Apache-2.0",
-    "stars": 22136,
-    "last_pushed": "2026-10-14T18:06:46Z"
+    "stars": 22209,
+    "last_pushed": "2026-11-13T21:25:02Z"
   },
   "npm_meta": {
-    "latest_version": "6.3.0",
-    "last_published": "2026-09-30T18:35:48.156Z",
-    "weekly_downloads": 103994
+    "latest_version": "6.16.0",
+    "last_published": "2026-11-13T17:45:34.967Z",
+    "weekly_downloads": 364660
   },
   "indexed_pages": [
     {

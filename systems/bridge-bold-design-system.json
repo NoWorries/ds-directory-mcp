@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "bridge-bold-design-system",
   "organization": "Bridge",
   "design_system": "Bold design system",
@@ -13,8 +13,8 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-15T08:48:56+00:00",
-  "last_modified": "Thu, 20 Aug 2026 22:00:37 GMT",
+  "last_checked": "2026-11-15T11:52:25+00:00",
+  "last_modified": "Thu, 05 Nov 2026 17:37:44 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "storybook": [
@@ -43,7 +43,7 @@
       "title": "Bold Design System"
     },
     {
-      "url": "https://bold.bridge.ufsc.br/en/about",
+      "url": "https://bold.bridge.ufsc.br/en/resources",
       "title": "Bold Design System"
     },
     {
@@ -51,7 +51,7 @@
       "title": "Bold Design System"
     },
     {
-      "url": "https://bold.bridge.ufsc.br/en/resources",
+      "url": "https://bold.bridge.ufsc.br/en/about",
       "title": "Bold Design System"
     },
     {
@@ -59,11 +59,11 @@
       "title": "Page not found · GitHub Pages"
     },
     {
-      "url": "https://bold.bridge.ufsc.br/en/components",
+      "url": "https://bold.bridge.ufsc.br/en/design-guidelines",
       "title": "Page not found · GitHub Pages"
     },
     {
-      "url": "https://bold.bridge.ufsc.br/en/design-guidelines",
+      "url": "https://bold.bridge.ufsc.br/en/components",
       "title": "Page not found · GitHub Pages"
     }
   ]

@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "vmware-clarity-design-system",
   "organization": "VMware",
   "design_system": "Clarity Design System",
@@ -9,11 +9,11 @@
     "https://clarity.design/"
   ],
   "detail_url": "/systems/vmware-clarity-design-system",
-  "pages_indexed": 276,
+  "pages_indexed": 377,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-10-15T12:25:00+00:00",
+  "last_checked": "2026-11-15T16:17:46+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -29,24 +29,75 @@
       "https://clarity.design/documentation/icons",
       "https://core.clarity.design/foundation/icons/shapes",
       "https://clarity.design/documentation/icons/accessibility",
-      "https://clarity.design/documentation/icons/code"
+      "https://clarity.design/documentation/icons/code",
+      "https://clarity.design/documentation/icons/ai"
     ],
     "github": [
       "https://github.com/vmware-clarity/ng-clarity"
     ],
     "markdown_docs": [
       "https://github.com/vmware-clarity/ng-clarity/blob/main/docs/CONTRIBUTING.md"
+    ],
+    "skills": [
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-progress-bar.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-certificate-viewer.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-stepper.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-icons.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-dropdown.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-header.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-tree-view.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-wizard.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-datagrid.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-collapsible-panel.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-app-layout.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-card-container.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-card.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-button-group.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-alert.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-tabs.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-stack-view.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-badge.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-wizard.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-navigation.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-combobox.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-forms.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-popover.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-tabs.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-modal.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-breadcrumbs.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-timeline.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-signpost.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-drag-and-drop.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-menu.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-vertical-nav.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-side-panel.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-datagrid.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-accordion.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-property-view.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-translate.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-dialog.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-a11y.md",
+      "https://clarity.design/ai/skills/clarity-addons/references/appfx-stepper.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-button.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-tooltip.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-spinner.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-label.md",
+      "https://clarity.design/ai/skills/clarity-angular/references/clr-datepicker.md"
+    ],
+    "agent_instructions": [
+      "https://clarity.design/llms-full.txt",
+      "https://clarity.design/llms.txt"
     ]
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/dw5/Metropolis",
-      "https://github.com/ngx-translate/core"
+      "https://github.com/dw5/Metropolis"
     ]
   },
   "content_signals": {
     "frameworks": [
-      "Angular"
+      "Angular",
+      "React"
     ],
     "dark_mode": true,
     "tokens_format": "DTCG",
@@ -54,8 +105,8 @@
   },
   "github_meta": {
     "license": "NOASSERTION",
-    "stars": 430,
-    "last_pushed": "2026-09-24T12:23:49Z"
+    "stars": 435,
+    "last_pushed": "2026-11-13T16:17:36Z"
   },
   "npm_meta": null,
   "indexed_pages": [
@@ -76,6 +127,14 @@
       "title": "Accessibility - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/a11y/ai",
+      "title": "Accessibility Utilities - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/accordion/ai",
+      "title": "Accordion - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/accordion",
       "title": "Accordion - Clarity Design System"
     },
@@ -86,6 +145,14 @@
     {
       "url": "https://clarity.design/documentation/accordion/code",
       "title": "Accordion - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/addons",
+      "title": "Addons - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-datagrid/ai",
+      "title": "Advanced Datagrid - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/advanced-datagrid",
@@ -100,6 +167,26 @@
       "title": "Advanced Datagrid - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/advanced-stepper",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper-addon/ai",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-stepper/ai",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-stepper/api",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-stepper/code",
+      "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/stepper-addon",
       "title": "Advanced Stepper - Clarity Design System"
     },
@@ -110,6 +197,26 @@
     {
       "url": "https://clarity.design/documentation/stepper-addon/api",
       "title": "Advanced Stepper - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-tabs",
+      "title": "Advanced Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tabs-addon/ai",
+      "title": "Advanced Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-tabs/api",
+      "title": "Advanced Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-tabs/ai",
+      "title": "Advanced Tabs - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-tabs/code",
+      "title": "Advanced Tabs - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/tabs-addon",
@@ -124,6 +231,26 @@
       "title": "Advanced Tabs - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/advanced-wizard",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard-addon/ai",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-wizard/code",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-wizard/ai",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/advanced-wizard/api",
+      "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/wizard-addon",
       "title": "Advanced Wizard - Clarity Design System"
     },
@@ -134,6 +261,14 @@
     {
       "url": "https://clarity.design/documentation/wizard-addon/code",
       "title": "Advanced Wizard - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/pages/ai",
+      "title": "AI Agents - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/alert/ai",
+      "title": "Alert - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/alert",
@@ -148,6 +283,10 @@
       "title": "Alert - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/badge/ai",
+      "title": "Badge - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/badge",
       "title": "Badge - Clarity Design System"
     },
@@ -158,6 +297,10 @@
     {
       "url": "https://clarity.design/documentation/badge/api",
       "title": "Badge - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/breadcrumbs/ai",
+      "title": "Breadcrumbs - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/breadcrumbs",
@@ -188,6 +331,10 @@
       "title": "Breadcrumbs - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/button/ai",
+      "title": "Button - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/button",
       "title": "Button - Clarity Design System"
     },
@@ -198,6 +345,10 @@
     {
       "url": "https://clarity.design/documentation/button/api",
       "title": "Button - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/button-group/ai",
+      "title": "Button Group - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/button-group",
@@ -212,6 +363,10 @@
       "title": "Button Group - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/card/ai",
+      "title": "Card - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/card",
       "title": "Card - Clarity Design System"
     },
@@ -224,6 +379,10 @@
       "title": "Card - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/card-container/ai",
+      "title": "Card Container - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/card-container",
       "title": "Card Container - Clarity Design System"
     },
@@ -234,6 +393,10 @@
     {
       "url": "https://clarity.design/documentation/card-container/code",
       "title": "Card Container - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/certificate-viewer/ai",
+      "title": "Certificate Viewer - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/certificate-viewer",
@@ -284,6 +447,10 @@
       "title": "Color - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/combobox/ai",
+      "title": "Combobox - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/combobox",
       "title": "Combobox - Clarity Design System"
     },
@@ -294,6 +461,10 @@
     {
       "url": "https://clarity.design/documentation/combobox/code",
       "title": "Combobox - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/datagrid/ai",
+      "title": "Datagrid - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/datagrid",
@@ -424,6 +595,10 @@
       "title": "Datalist - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/datepicker/ai",
+      "title": "Date Picker - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/datepicker",
       "title": "Date Picker - Clarity Design System"
     },
@@ -464,12 +639,20 @@
       "title": "Developing - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/drag-and-drop/ai",
+      "title": "Drag and Drop - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/drag-and-drop",
       "title": "Drag and Drop - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/drag-and-drop/code",
       "title": "Drag and Drop - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dropdown/ai",
+      "title": "Dropdown - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/dropdown",
@@ -496,6 +679,10 @@
       "title": "File Picker - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/forms/ai",
+      "title": "Forms - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/forms",
       "title": "Forms - Clarity Design System"
     },
@@ -520,6 +707,10 @@
       "title": "Grid - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/header/ai",
+      "title": "Header - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/header",
       "title": "Header - Clarity Design System"
     },
@@ -530,6 +721,186 @@
     {
       "url": "https://clarity.design/documentation/header/code",
       "title": "Header - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-a11y.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-a11y.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-card-container.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-card-container.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-certificate-viewer.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-certificate-viewer.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-datagrid.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-datagrid.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-dialog.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-dialog.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-drag-and-drop.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-drag-and-drop.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-menu.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-menu.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-property-view.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-property-view.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-stepper.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-stepper.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-tabs.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-tabs.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-translate.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-translate.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-addons/references/appfx-wizard.md",
+      "title": "https://clarity.design/ai/skills/clarity-addons/references/appfx-wizard.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-accordion.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-accordion.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-alert.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-alert.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-app-layout.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-app-layout.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-badge.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-badge.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-breadcrumbs.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-breadcrumbs.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-button-group.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-button-group.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-button.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-button.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-card.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-card.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-collapsible-panel.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-collapsible-panel.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-combobox.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-combobox.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-datagrid.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-datagrid.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-datepicker.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-datepicker.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-dropdown.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-dropdown.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-forms.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-forms.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-header.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-header.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-icons.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-icons.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-label.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-label.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-modal.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-modal.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-navigation.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-navigation.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-popover.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-popover.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-progress-bar.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-progress-bar.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-side-panel.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-side-panel.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-signpost.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-signpost.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-spinner.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-spinner.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-stack-view.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-stack-view.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-stepper.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-stepper.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-tabs.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-tabs.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-timeline.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-timeline.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-tooltip.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-tooltip.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-tree-view.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-tree-view.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-vertical-nav.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-vertical-nav.md"
+    },
+    {
+      "url": "https://clarity.design/ai/skills/clarity-angular/references/clr-wizard.md",
+      "title": "https://clarity.design/ai/skills/clarity-angular/references/clr-wizard.md"
+    },
+    {
+      "url": "https://clarity.design/documentation/icons/ai",
+      "title": "Icons - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/icons",
@@ -572,6 +943,10 @@
       "title": "Introduction - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/label/ai",
+      "title": "Label - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/label",
       "title": "Label - Clarity Design System"
     },
@@ -590,6 +965,10 @@
     {
       "url": "https://clarity.design/documentation/layout-utilities/code",
       "title": "Layout Utilities - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/app-layout/ai",
+      "title": "Layouts - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/app-layout",
@@ -616,6 +995,10 @@
       "title": "List - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/menu/ai",
+      "title": "Menu - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/menu",
       "title": "Menu - Clarity Design System"
     },
@@ -628,6 +1011,10 @@
       "title": "Menu - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/modal/ai",
+      "title": "Modal - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/modal",
       "title": "Modal - Clarity Design System"
     },
@@ -638,6 +1025,10 @@
     {
       "url": "https://clarity.design/documentation/modal/code",
       "title": "Modal - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/dialog/ai",
+      "title": "Multi-Page Dialog - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/dialog",
@@ -654,6 +1045,10 @@
     {
       "url": "https://clarity.design/documentation/multi-step-workflow",
       "title": "Multi-Step Workflow - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/navigation/ai",
+      "title": "Navigation - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/navigation",
@@ -684,6 +1079,10 @@
       "title": "Password - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/popover/ai",
+      "title": "Popover - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/popover",
       "title": "Popover - Clarity Design System"
     },
@@ -696,6 +1095,10 @@
       "title": "Popover - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/progress/ai",
+      "title": "Progress Bar - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/progress",
       "title": "Progress Bar - Clarity Design System"
     },
@@ -706,6 +1109,10 @@
     {
       "url": "https://clarity.design/documentation/progress/code",
       "title": "Progress Bar - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/property-view/ai",
+      "title": "Property View - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/property-view",
@@ -756,6 +1163,10 @@
       "title": "Select - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/side-panel/ai",
+      "title": "Side Panel - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/side-panel",
       "title": "Side Panel - Clarity Design System"
     },
@@ -766,6 +1177,10 @@
     {
       "url": "https://clarity.design/documentation/side-panel/api",
       "title": "Side Panel - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/signpost/ai",
+      "title": "Signpost - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/signpost",
@@ -784,6 +1199,10 @@
       "title": "Spacing - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/spinner/ai",
+      "title": "Spinner - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/spinner",
       "title": "Spinner - Clarity Design System"
     },
@@ -796,6 +1215,10 @@
       "title": "Spinner - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/stack-view/ai",
+      "title": "Stack View - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/stack-view",
       "title": "Stack View - Clarity Design System"
     },
@@ -806,6 +1229,10 @@
     {
       "url": "https://clarity.design/documentation/stack-view/code",
       "title": "Stack View - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/stepper/ai",
+      "title": "Stepper - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/stepper",
@@ -834,6 +1261,10 @@
     {
       "url": "https://clarity.design/documentation/table/code",
       "title": "Table - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tabs/ai",
+      "title": "Tabs - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/tabs",
@@ -884,6 +1315,10 @@
       "title": "Themes - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/timeline/ai",
+      "title": "Timeline - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/timeline",
       "title": "Timeline - Clarity Design System"
     },
@@ -920,6 +1355,10 @@
       "title": "Tokens - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/tooltip/ai",
+      "title": "Tooltip - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/tooltip",
       "title": "Tooltip - Clarity Design System"
     },
@@ -932,12 +1371,20 @@
       "title": "Tooltip - Clarity Design System"
     },
     {
+      "url": "https://clarity.design/documentation/translate/ai",
+      "title": "Translate - Clarity Design System"
+    },
+    {
       "url": "https://clarity.design/documentation/translate",
       "title": "Translate - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/translate/code",
       "title": "Translate - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/tree-view/ai",
+      "title": "Tree View - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/tree-view",
@@ -978,6 +1425,10 @@
     {
       "url": "https://clarity.design/pages/update-to-v18",
       "title": "Update v17 to v18 - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/vertical-nav/ai",
+      "title": "Vertical Nav - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/vertical-nav",
@@ -1150,6 +1601,10 @@
     {
       "url": "https://clarity.design/documentation/vertical-nav/code/lazy-loading-nav-links/electric",
       "title": "Vertical Nav - Clarity Design System"
+    },
+    {
+      "url": "https://clarity.design/documentation/wizard/ai",
+      "title": "Wizard - Clarity Design System"
     },
     {
       "url": "https://clarity.design/documentation/wizard",

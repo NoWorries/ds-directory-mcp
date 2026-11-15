@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "react95",
   "organization": null,
   "design_system": "React95",
@@ -13,8 +13,8 @@
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-15T11:26:01+00:00",
-  "last_modified": "Thu, 08 Oct 2026 12:26:50 GMT",
+  "last_checked": "2026-11-15T15:19:26+00:00",
+  "last_modified": "Thu, 12 Nov 2026 17:19:24 GMT",
   "sitemap_last_modified": null,
   "resources": {
     "github": [
@@ -37,8 +37,8 @@
   },
   "github_meta": {
     "license": "NOASSERTION",
-    "stars": 3837,
-    "last_pushed": "2026-10-15T08:44:55Z"
+    "stars": 3846,
+    "last_pushed": "2026-11-12T17:19:00Z"
   },
   "npm_meta": null,
   "indexed_pages": [

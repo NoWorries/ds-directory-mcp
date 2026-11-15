@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "altinn-altinn-design-system",
   "organization": "Altinn",
   "design_system": "Altinn Design System",
@@ -9,13 +9,13 @@
     "https://docs.altinn.studio/"
   ],
   "detail_url": "/systems/altinn-altinn-design-system",
-  "pages_indexed": 562,
+  "pages_indexed": 710,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-09-25T02:03:02+00:00",
-  "last_modified": "Wed, 23 Sep 2026 12:53:30 GMT",
-  "sitemap_last_modified": "2026-09-23T14:49:18+02:00",
+  "last_checked": "2026-11-15T10:37:16+00:00",
+  "last_modified": "Fri, 13 Nov 2026 09:48:33 GMT",
+  "sitemap_last_modified": "2026-11-13T10:44:09+01:00",
   "resources": {
     "github": [
       "https://github.com/Altinn/app-localtest",
@@ -30,7 +30,14 @@
       "https://github.com/Altinn/altinn-notifications",
       "https://github.com/Altinn/altinn-broker",
       "https://github.com/Altinn/codelists-lib-dotnet",
-      "https://github.com/Altinn/altinn2-convert"
+      "https://github.com/Altinn/altinn2-convert",
+      "https://github.com/Altinn/altinn-resource-registry",
+      "https://github.com/Altinn/altinn-access-management-frontend",
+      "https://github.com/TheTechArch/altinnservicecatalogue",
+      "https://github.com/Altinn/altinn-auth-audit-log",
+      "https://github.com/Altinn/altinn-register",
+      "https://github.com/Altinn/altinn-authorization-tmp",
+      "https://github.com/Altinn/altinn-authentication"
     ],
     "figma": [
       "https://figma.com/community/file/1344307804742953785/altinn-studio-komponenter",
@@ -50,8 +57,10 @@
   },
   "unverified_resources": {
     "github": [
-      "https://github.com/felleslosninger/efm-mocks",
-      "https://github.com/ks-no/fiks-arkiv-specification"
+      "https://github.com/TheTechArch/DigitalPortal",
+      "https://github.com/tus/tus-java-client",
+      "https://github.com/tus/tus-js-client",
+      "https://github.com/TheTechArch/smartbank"
     ]
   },
   "content_signals": {
@@ -61,9 +70,9 @@
     "exemplars": true
   },
   "github_meta": {
-    "license": "BSD-3-Clause",
-    "stars": 21,
-    "last_pushed": "2026-09-24T11:28:34Z"
+    "license": "MIT",
+    "stars": 5,
+    "last_pushed": "2026-11-14T16:02:17Z"
   },
   "npm_meta": {
     "latest_version": "4.2.0",
@@ -76,12 +85,48 @@
       "title": ".NET – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker/about",
+      "title": "About Altinn Broker – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/about",
+      "title": "About Authorization – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/system-user/access-control",
+      "title": "Access control for shared solutions – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/accesslist",
+      "title": "Access lists – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/access-management-ui/persistence",
+      "title": "Access Management UI state and persistence architecture – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/access-management-ui",
+      "title": "Access Management UI – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/access-management",
+      "title": "Access Management – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accessmanagement",
+      "title": "Access management – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/reference/access-management",
       "title": "Access management – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/api/accessmanagement",
       "title": "Access Management – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens",
+      "title": "Access packages for individuals – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/accordion",
@@ -96,8 +141,16 @@
       "title": "ActionButton (Handlingsknapp) – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/administratorrettigheter",
+      "title": "Administrator rights – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/business/adminstreretilganger",
       "title": "Administrere tilganger – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/jordbrukskogbrukjaktfiskeakvakultur",
+      "title": "Agriculture, Forestry, Hunting, Fishing and Aquaculture – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/activity",
@@ -134,6 +187,10 @@
     {
       "url": "https://docs.altinn.studio/en/api",
       "title": "Altinn 3 API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/getting-started/developer-guides/service-owner",
+      "title": "Altinn 3 Broker Developer guide for Service Owner – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/broker",
@@ -300,6 +357,10 @@
       "title": "API-klient for .NET – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/api-scheme/api-user",
+      "title": "API-User – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/apps",
       "title": "App API – Altinn"
     },
@@ -332,12 +393,20 @@
       "title": "App User Interface – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture",
+      "title": "Application architecture – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/multi-app-solution/instructions/app-b",
       "title": "Applikasjon B – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture",
       "title": "Applikasjonsarkitektur – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/system-user/accept-request",
+      "title": "Approve system access – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/administration/access-management/apps",
@@ -354,6 +423,30 @@
     {
       "url": "https://docs.altinn.studio/nb/technology/architecture/components",
       "title": "Architecture Components – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/access-management-ui/patterns",
+      "title": "Architecture patterns in Access Management UI – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/access-management/patterns",
+      "title": "Architecture patterns in Access Management – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/audit-log/patterns",
+      "title": "Architecture patterns in Audit Log – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/authentication/patterns",
+      "title": "Architecture patterns in Authentication – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/register/patterns",
+      "title": "Architecture patterns in Register – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/resource-registry/patterns",
+      "title": "Architecture patterns in Resource Registry – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/architecture/patterns",
@@ -396,6 +489,10 @@
       "title": "Audio – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/audit-log",
+      "title": "Audit Log – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/api/auth",
       "title": "Autentisering – Altinn"
     },
@@ -412,8 +509,40 @@
       "title": "Autentisering – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/authentication/id-porten",
+      "title": "Authenticate with ID-porten – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/api/authentication",
       "title": "Authentication API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/authentication/persistence",
+      "title": "Authentication persistence architecture – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/authentication/maskinporten",
+      "title": "Authentication with Maskinporten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/authentication",
+      "title": "Authentication – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/authentication",
+      "title": "Authentication – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business",
+      "title": "Authorisation areas and access packages – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/rules",
+      "title": "Authorisation rules – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/authorization/persistence",
+      "title": "Authorization and PDP persistence architecture – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/api/authorization",
@@ -422,6 +551,22 @@
     {
       "url": "https://docs.altinn.studio/nb/authorization/reference/system/application-architecture/authorization",
       "title": "Authorization og PDP – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization",
+      "title": "Authorization – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/revisor",
+      "title": "Authorizations for Auditors – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/konkursbo",
+      "title": "Authorizations for Bankruptcy Estates – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/forretningsforer",
+      "title": "Authorizations for Bussineses – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/autosavebehavior",
@@ -478,6 +623,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/concepts/undeploy",
       "title": "Avpublisere apper – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/explanation/basic-concepts",
+      "title": "Basic Concepts – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/broker/reference/terminology",
@@ -568,6 +717,10 @@
       "title": "Bunntekst – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/forholdvedvirksomheten",
+      "title": "Business Affairs – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/button",
       "title": "Button – Altinn"
     },
@@ -588,6 +741,10 @@
       "title": "C# – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker/reference/capabilities",
+      "title": "Capabilities – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/cards",
       "title": "Cards – Altinn"
     },
@@ -600,8 +757,36 @@
       "title": "Checkboxes – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/oppvekstutdanning",
+      "title": "Childhood and Education – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/choose-authentication",
+      "title": "Choose the right integration method – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/client-admin",
+      "title": "Client administration API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/system-user/delegate-clients",
+      "title": "Client Administration – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/system-user/client-delegation",
+      "title": "Client delegation for system vendors – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/handelovernatting",
+      "title": "Commerce, Accommodation and Catering – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/commondefs",
       "title": "Common Component Properties – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/getting-started/common-steps",
+      "title": "Common steps to get Started with Altinn Broker – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/community",
@@ -612,12 +797,68 @@
       "title": "Community – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/components",
+      "title": "Components – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/explanation",
+      "title": "Concepts – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/reference/configuration",
       "title": "Configuration – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/consent",
+      "title": "Consent for data consumers – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/consent",
+      "title": "Consent for Service Owners – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/consent/behalf-of",
+      "title": "Consent on behalf of others – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/consent",
+      "title": "Consent – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/bygganleggeiendom",
+      "title": "Construction, Infrastructure and Real Estate – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/community/contributing",
       "title": "Contribute to the development of Altinn – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/consent/create-resource",
+      "title": "Create and Publish Consent Resource – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/api-scheme/create-apischeme-api",
+      "title": "Create and Publish Delegable API Scheme – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/system-user/create-systemuser",
+      "title": "Create system access – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/create-resource-resource-admin",
+      "title": "Creating and publishing resources in Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/api-scheme/create-apischeme-resource-admin",
+      "title": "Creating and publishing resources in Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/kulturfrivillighet",
+      "title": "Culture and Volunteering – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/kulturidrettfrivillighet",
+      "title": "Culture, sport and volunteering – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/custom",
@@ -696,6 +937,18 @@
       "title": "Definere autorisasjonspolicy – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/api-scheme",
+      "title": "Delegable API resources – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/api-scheme",
+      "title": "Delegable API resources – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/system-user/delete-system-user",
+      "title": "Delete System Access – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/reference/deployment",
       "title": "Deployment of apps to production – Altinn"
     },
@@ -718,6 +971,14 @@
     {
       "url": "https://docs.altinn.studio/en/community/contributing/develop-component",
       "title": "Develop a component – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/getting-started/developer-guides",
+      "title": "Developer guide – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/development-architecture",
+      "title": "Development architecture – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/community/contributing/handbook",
@@ -754,6 +1015,10 @@
     {
       "url": "https://docs.altinn.studio/nb/dialogporten/reference/authorization/dialog-tokens",
       "title": "Dialogtoken – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/referenceimplementations/digitalportal",
+      "title": "Digital Portal - Altinn Reference Implementation – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools/docker",
@@ -816,12 +1081,24 @@
       "title": "Eksternt API – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user",
+      "title": "End user functionality in Altinn Authorization – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/energivannavlopavfall",
+      "title": "Energy, Water, Sewage and Waste – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines/link-to-app",
       "title": "Entering the form – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities",
       "title": "Entiteter – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/miljoulykkesikkerhet",
+      "title": "Environment, Accident and Safety – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines/components/error-message",
@@ -834,6 +1111,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/process/exclusive-gateways",
       "title": "Exclusive Gateways – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/familiefritid",
+      "title": "Family and leisure – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/components/error-message",
@@ -854,6 +1135,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/fiks-arkiv",
       "title": "Fiks Arkiv – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/explanation/life-cycle",
+      "title": "File transfer life-cycle – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines/components/file-upload",
@@ -964,6 +1249,30 @@
       "title": "Generelt – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/service-owner",
+      "title": "Get started as a service owner – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/system-vendor",
+      "title": "Get started as a system vendor – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/getting-started/service-owner",
+      "title": "Get Started with Altinn Broker as a Service Owner – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started",
+      "title": "Getting started with Altinn Authorization – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/getting-started",
+      "title": "Getting Started with Altinn Broker – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/consent",
+      "title": "Getting Started with Consent – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/getting-started",
       "title": "Getting Started – Altinn"
     },
@@ -1032,6 +1341,22 @@
       "title": "Gruppering av felter – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/guardianship",
+      "title": "Guardianship – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/guardianship",
+      "title": "Guardianship – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/getting-started/developer-guides/receive-files",
+      "title": "Guide for receivers – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/getting-started/developer-guides/send-files",
+      "title": "Guide for Sender – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/guidelines",
       "title": "Guidelines – Altinn"
     },
@@ -1058,6 +1383,14 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/header",
       "title": "Header – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/helseomsorg",
+      "title": "Health and care – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/helsepleieomsorgvern",
+      "title": "Health, Care and Protection – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools/helm",
@@ -1144,8 +1477,20 @@
       "title": "Impersonering av brukere – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/industrier",
+      "title": "Industries – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/broker/reference/security",
       "title": "Informasjonssikkerhet – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/information-model",
+      "title": "Information model – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/reference/security",
+      "title": "Information Security – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/link-to-app",
@@ -1238,6 +1583,14 @@
     {
       "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/business/integrasjoner",
       "title": "Integrasjoner – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/generic-access-resource",
+      "title": "Integrate external services with Altinn Authorisation – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/integrations",
+      "title": "Integrations and dependencies – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/dialogporten/user-guides/service-owners/integrating-altinn-apps",
@@ -1380,6 +1733,10 @@
       "title": "Lagring – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker/explanation/very-large-files",
+      "title": "Large Files – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/contributing/add-new-component",
       "title": "Legg til en ny komponent i Studio – Altinn"
     },
@@ -1398,6 +1755,10 @@
     {
       "url": "https://docs.altinn.studio/nb/correspondence/explanation/status-lifecycle/post-published",
       "title": "Livssyklus Etter Publisering – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/nb/broker/explanation/life-cycle",
+      "title": "Livssyklus for filoverføring – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/correspondence/explanation/status-lifecycle/pre-published",
@@ -1430,6 +1791,22 @@
     {
       "url": "https://docs.altinn.studio/nb/correspondence/reference/solution-architecture",
       "title": "Løsningsarkitektur – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/postogarkiv",
+      "title": "Mail and Archive – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/accesslist/manage-accesslists-resource-admin",
+      "title": "Manage Access Lists in Altinn Studio – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/accesslist/manage-accesslist-api",
+      "title": "Manage Access Lists through API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/adminstreretilganger",
+      "title": "Managing Access – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/map",
@@ -1564,12 +1941,20 @@
       "title": "Nedtrekksliste – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/onboarding",
+      "title": "New developer in Altinn Authorization – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/nginx",
       "title": "Nginx – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools/node-js",
       "title": "Node.js – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/notifications",
+      "title": "Notifications – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/number",
@@ -1606,6 +1991,10 @@
     {
       "url": "https://docs.altinn.studio/en/api/apps/spec",
       "title": "OpenAPI (swagger) for Apps – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/api/broker/spec",
+      "title": "OpenAPI (swagger) for Broker – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/api/storage/spec",
@@ -1680,12 +2069,20 @@
       "title": "OrganisationLookup – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/andretjenesteytende",
+      "title": "Other Service Industries – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/correspondence/transition",
       "title": "Overgangs- og migreringsløsning – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/texts/translation",
       "title": "Oversettelse av tekster – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/broker/getting-started/developer-guides/send-files",
+      "title": "Page not found · GitHub Pages"
     },
     {
       "url": "https://docs.altinn.studio/nb/status-migration",
@@ -1716,6 +2113,10 @@
       "title": "Patenter, sertifikater og attester – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/patentersertifikaterattester",
+      "title": "Patents, certificates, and attestations – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/subform-pdf",
       "title": "PDF underskjema – Altinn"
     },
@@ -1736,6 +2137,14 @@
       "title": "PersonLookup – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/personale",
+      "title": "Personnel – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/planbyggeiendom",
+      "title": "Plan, building and property – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/accesspackages/business/postogarkiv",
       "title": "Post og arkiv – Altinn"
     },
@@ -1750,6 +2159,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/messagebox/presentationfields",
       "title": "Presentasjonsfelter – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/privatperson",
+      "title": "Privatperson – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/process/actions/process-actions",
@@ -1832,6 +2245,10 @@
       "title": "Radioknapp – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker/reference/rate-limits",
+      "title": "Rate Limits – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/react",
       "title": "React – Altinn"
     },
@@ -1856,12 +2273,32 @@
       "title": "Referanseoppslag – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker/reference",
+      "title": "Reference documentation – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/referenceimplementations/systemuserapi",
+      "title": "Reference Implementation System User API – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference",
+      "title": "Reference – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/reference",
       "title": "Reference – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/authorization/rules",
       "title": "Regelbibliotek – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/register/persistence",
+      "title": "Register persistence architecture – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/register",
+      "title": "Register – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/fields/grouping/repeating",
@@ -1876,16 +2313,40 @@
       "title": "Resource Registry API – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/resource-registry/persistence",
+      "title": "Resource Registry persistence architecture – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/application-architecture/resource-registry",
+      "title": "Resource Registry – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/resourceadministration/studio",
+      "title": "Ressurs Admin Altinn Studio – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/authorization/what-do-you-get/resourceadministration",
       "title": "Ressursadministrasjon – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/resourceadministration",
+      "title": "Ressursadministration i Altinn Studio – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/monitoring/references",
       "title": "Ressurser – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker/reference/tus",
+      "title": "Resumable uploads (TUS) – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines",
       "title": "Retningslinjer – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/consent/retrieve-token",
+      "title": "Retrieve consent token – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/community/roadmap",
@@ -1902,6 +2363,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/authorization/guidelines_authorization/roles_and_rights/roles_ske",
       "title": "Roller fra Skatteetaten – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/operations/runtime-architecture",
+      "title": "Runtime architecture – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/authorization/guides/resource-owner/consent",
@@ -1924,8 +2389,24 @@
       "title": "Secrets – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/security",
+      "title": "Security and trust – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/process/actions/serveraction",
       "title": "Server Action – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/referenceimplementations/servicecatalogue",
+      "title": "Service Catalogue - Altinn Reference Implementation – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner",
+      "title": "Service owner – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/system-user/setup-client-relationship",
+      "title": "Set up client relationship – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/dialogporten/reference/entities/seen",
@@ -1940,8 +2421,20 @@
       "title": "Sette opp klientforhold – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/generic-access-resource/integrating-link-service",
+      "title": "Setting up integration with Altinn Authorization from external services – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/maskinportenclient",
+      "title": "Setting up Maskinporten client – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/settings",
       "title": "Settings og miljøvariabler – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/system-user/userscenarios/setupguidance",
+      "title": "Setup guidance for system users – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/pages",
@@ -1966,6 +2459,14 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/integration/sbs",
       "title": "Sluttbrukersystemer – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/referenceimplementations/smartcloud",
+      "title": "SmartCloud - Altinn Reference Implementation – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/reference/solution-architecture",
+      "title": "Solution Architecture – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/technology/solutions",
@@ -1994,6 +2495,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/options/sources/static",
       "title": "Statiske svaralternativer og enkle kodelister – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/status",
+      "title": "Status and planned tasks - Altinn Authorization – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/dialogporten/status-migration",
@@ -2026,6 +2531,42 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/summary2",
       "title": "Summary2 – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/end-user/system-user",
+      "title": "System access guide for end users – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/referenceimplementations/systemadmin",
+      "title": "System Admin - Reference Implementations – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/architecture",
+      "title": "System architecture – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system",
+      "title": "System documentation – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/reference/system-interfaces",
+      "title": "System Interfaces – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/system-user/systemregistration",
+      "title": "System Registration – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/systemuser",
+      "title": "System User – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/systemuser",
+      "title": "System User – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor",
+      "title": "System vendor – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/authorization/reference/system/architecture",
@@ -2064,6 +2605,14 @@
       "title": "Taushetsbelagt post – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/skattavgiftbankforsikring",
+      "title": "Tax, levy, bank and insurance – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/flows",
+      "title": "Technical flows – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/technology",
       "title": "Technology – Altinn"
     },
@@ -2088,6 +2637,10 @@
       "title": "Telemetri-register – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/broker/reference/terminology",
+      "title": "Terminology – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/terraform",
       "title": "Terraform – Altinn"
     },
@@ -2102,6 +2655,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/configuration/authorization/guidelines_authorization/test_authorization_application",
       "title": "Test av autorisasjonsregler – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/getting-started/quiz",
+      "title": "Test your knowledge of Altinn Authorization – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/testing/local/testusers",
@@ -2126,6 +2683,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/ux/components/text",
       "title": "Text – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/development-architecture/xacml-decision-model",
+      "title": "The XACML decision model – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/administration/access-management",
@@ -2188,8 +2749,20 @@
       "title": "Tools and frameworks – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/reference/system/flows/authorization-decision",
+      "title": "Trace an authorisation decision end to end – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/nb/technology/tools/traefik",
       "title": "Traefik – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/business/transportoglagring",
+      "title": "Transport and Storage – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/system-user/troubleshooting/errors/mp-303-error",
+      "title": "Troubleshooting: invalid_altinn_customer_configuration (MP-303) – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/technology/tools/typescript",
@@ -2220,8 +2793,16 @@
       "title": "User guides – Altinn"
     },
     {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/system-user/userscenarios",
+      "title": "User scenarios for system user – Altinn"
+    },
+    {
       "url": "https://docs.altinn.studio/en/altinn-studio/v8/guides/design/usertest",
       "title": "User testing – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/system-vendor/system-user/usetoken",
+      "title": "Using System User – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/nb/correspondence/explanation/attachment-expiry",
@@ -2234,6 +2815,10 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/guides/development",
       "title": "Utvikling – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/guides/resource-owner/consent/validate-concent",
+      "title": "Validate consent tokens – Altinn"
     },
     {
       "url": "https://docs.altinn.studio/en/api/apps/validation",
@@ -2318,6 +2903,22 @@
     {
       "url": "https://docs.altinn.studio/nb/altinn-studio/v8/reference/monitoring/visualisation",
       "title": "Visualisering – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/broker/what-do-you-get",
+      "title": "What do you get? – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get",
+      "title": "What do you get? – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/what-do-you-get/accesspackages/citizens/arbeidslivskoleutdanning",
+      "title": "Working life, school and education – Altinn"
+    },
+    {
+      "url": "https://docs.altinn.studio/en/authorization/reference/xacml",
+      "title": "XACML - Altinn Studio – Altinn"
     }
   ]
 }

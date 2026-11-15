@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "elia-group-nova",
   "organization": "Elia Group",
   "design_system": "Nova",
@@ -9,11 +9,11 @@
     "https://nova.eliagroup.io/"
   ],
   "detail_url": "/systems/elia-group-nova",
-  "pages_indexed": 105,
+  "pages_indexed": 122,
   "coverage_status": "full",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-15T09:53:35+00:00",
+  "last_checked": "2026-11-15T13:33:21+00:00",
   "last_modified": null,
   "sitemap_last_modified": null,
   "resources": {
@@ -45,11 +45,17 @@
       "Web Components"
     ],
     "dark_mode": true,
-    "tokens_format": "Figma Variables"
+    "tokens_format": "Figma Variables",
+    "accessibility_conformance": "WCAG 2.1 AA",
+    "exemplars": true
   },
   "github_meta": null,
   "npm_meta": null,
   "indexed_pages": [
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/100-stacked-column-chart-NlQlUnZL",
+      "title": "Nova Design System | 100% Stacked Column Chart| Made by and for Elia Group"
+    },
     {
       "url": "https://nova.eliagroup.io/latest/components/accordion-uGfb3JAP",
       "title": "Nova Design System | Accordion| Made by and for Elia Group"
@@ -119,6 +125,10 @@
       "title": "Nova Design System | Catalogue| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/chart-foundations-Tq1MGEeI",
+      "title": "Nova Design System | Chart foundations| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/data-vizualization/overview/chart-quality-jDrhoazo",
       "title": "Nova Design System | Chart Quality  | Overview| Made by and for Elia Group"
     },
@@ -183,6 +193,10 @@
       "title": "Nova Design System | Datatable| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/components/forms/date-time-U2NHAsXK",
+      "title": "Nova Design System | Date time| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/components/forms/daterange-PaWdhRP3",
       "title": "Nova Design System | Daterange| Made by and for Elia Group"
     },
@@ -211,12 +225,24 @@
       "title": "Nova Design System | Dropdown| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/components/environment-indicator-pIRtltmG",
+      "title": "Nova Design System | Environment indicator| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/eu-english-X55uMYit",
       "title": "Nova Design System | EU English| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/explaining-comples-concepts-TMVVuoy7",
       "title": "Nova Design System | Explaining Comples Concepts| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/field-architecture-h0Bht9wm",
+      "title": "Nova Design System | Field architecture| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/file-upload-AaVS7qLs",
+      "title": "Nova Design System | File upload| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/designing/get-started-9AdPZm0H",
@@ -279,12 +305,20 @@
       "title": "Nova Design System | Menu| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/components/forms/month-uFoC6h56",
+      "title": "Nova Design System | Month| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/components/forms/multi-select-E485M194",
       "title": "Nova Design System | Multi select| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/foundations/tokens/naming-convention-f2ogyHdk",
       "title": "Nova Design System | Naming Convention| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/navbar-LFI4SAuK",
+      "title": "Nova Design System | Navbar| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/components/notification-LevhgMa1",
@@ -311,10 +345,6 @@
       "title": "Nova Design System | Number| Made by and for Elia Group"
     },
     {
-      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/patterns/overview-dSii9R9r",
-      "title": "Nova Design System | Overview| Made by and for Elia Group"
-    },
-    {
       "url": "https://nova.eliagroup.io/latest/foundations/writing/overview-noMgl4uE",
       "title": "Nova Design System | Overview| Made by and for Elia Group"
     },
@@ -323,8 +353,20 @@
       "title": "Nova Design System | Overview| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/patterns-and-templates/patterns/overview-dSii9R9r",
+      "title": "Nova Design System | Overview| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/overview-XKOxH6fl",
       "title": "Nova Design System | Overview| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/pagination-nav-PWgMN0ZD",
+      "title": "Nova Design System | Pagination nav| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/pagination-table-qGRk3t3K",
+      "title": "Nova Design System | Pagination table| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/components/discontinued/panel-6gPMqbnr",
@@ -347,8 +389,16 @@
       "title": "Nova Design System | Popover| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/components/progress-bar-XrzkcWCq",
+      "title": "Nova Design System | Progress bar| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/foundations/writing/core-guidelines/punctuation-g1uqwtKv",
       "title": "Nova Design System | Punctuation| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/forms/quarter-a14cYKHN",
+      "title": "Nova Design System | Quarter| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/foundations/writing/references/quick-reference-EEYULhQD",
@@ -357,6 +407,10 @@
     {
       "url": "https://nova.eliagroup.io/latest/components/forms/radio-2TtBGIkR",
       "title": "Nova Design System | Radio| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/scatter-plot-jhWz2mgC",
+      "title": "Nova Design System | Scatter Plot| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/components/forms/select-X6ta7kd3",
@@ -383,12 +437,24 @@
       "title": "Nova Design System | Stack [discontinued]| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/data-vizualization/stacked-area-chart-v43tO2pw",
+      "title": "Nova Design System | Stacked Area Chart| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/components/status-indicator-238ka5Lf",
       "title": "Nova Design System | Status indicator| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/components/stepper-8J9MKvtK",
+      "title": "Nova Design System | Stepper| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/foundations/tokens/variables-and-utility-classes/summary-7C3AY0eO",
       "title": "Nova Design System | Summary| Made by and for Elia Group"
+    },
+    {
+      "url": "https://nova.eliagroup.io/latest/components/tabs-5Ut7oJYf",
+      "title": "Nova Design System | Tabs| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/designing/tutorials/templates-tz8uMezW",
@@ -399,12 +465,16 @@
       "title": "Nova Design System | Text area| Made by and for Elia Group"
     },
     {
+      "url": "https://nova.eliagroup.io/latest/components/discontinued/text-jrD88ixS",
+      "title": "Nova Design System | Text| Made by and for Elia Group"
+    },
+    {
       "url": "https://nova.eliagroup.io/latest/components/forms/text-gem0OLzC",
       "title": "Nova Design System | Text| Made by and for Elia Group"
     },
     {
-      "url": "https://nova.eliagroup.io/latest/components/discontinued/text-jrD88ixS",
-      "title": "Nova Design System | Text| Made by and for Elia Group"
+      "url": "https://nova.eliagroup.io/latest/components/forms/time-range-w2sm9Vjq",
+      "title": "Nova Design System | Time range| Made by and for Elia Group"
     },
     {
       "url": "https://nova.eliagroup.io/latest/components/forms/time-MyFsvvru",

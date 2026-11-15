@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "arbetsf-rmedlingen-design-system",
   "organization": "Arbetsförmedlingen",
   "design_system": "Design system",
@@ -9,17 +9,18 @@
     "https://designsystem.arbetsformedlingen.se/"
   ],
   "detail_url": "/systems/arbetsf-rmedlingen-design-system",
-  "pages_indexed": 155,
+  "pages_indexed": 159,
   "coverage_status": "partial",
   "hit_max_pages": true,
   "likely_spa": false,
-  "last_checked": "2026-10-15T08:30:01+00:00",
-  "last_modified": "Wed, 14 Oct 2026 08:53:37 GMT",
+  "last_checked": "2026-11-15T10:58:31+00:00",
+  "last_modified": "Wed, 11 Nov 2026 09:42:24 GMT",
   "sitemap_last_modified": "2026-06-05",
   "resources": {
     "figma": [
       "https://figma.com/proto/7MqaS4tRZZrA2rk8f0W3me/UI-kit-guider",
-      "https://figma.com/community/file/1415694540311931262/af-icons"
+      "https://figma.com/community/file/1415694540311931262/af-icons",
+      "https://figma.com/design/7MqaS4tRZZrA2rk8f0W3me/UI-kit-guider"
     ]
   },
   "unverified_resources": {},
@@ -36,6 +37,10 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/agentiva-tjanster",
       "title": "Agentiva tjänster och artificiell intelligens - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/tjanstekomponenter/kompetensvaljare",
+      "title": "Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/tjanstekomponenter/yrkesvaljare",
@@ -64,6 +69,10 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-navigation-breadcrumbs/oversikt",
       "title": "Brödsmulor - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kom-i-gang/borja-anvanda-designsystemet",
+      "title": "Börja använda designsystemet - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-quote/oversikt",
@@ -212,6 +221,10 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/grafisk-profil/illustrationer",
       "title": "Illustrationer - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/kom-i-gang/implementera-morkt-lage",
+      "title": "Implementera mörkt läge - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/indikatorer",
@@ -552,6 +565,10 @@
     {
       "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-badge-status/oversikt",
       "title": "Statusindikator - Arbetsförmedlingen Designsystem"
+    },
+    {
+      "url": "https://designsystem.arbetsformedlingen.se/komponenter/digi-media-svg/oversikt",
+      "title": "SVG-visare - Arbetsförmedlingen Designsystem"
     },
     {
       "url": "https://designsystem.arbetsformedlingen.se/designmonster/sok-och-sokfilter",

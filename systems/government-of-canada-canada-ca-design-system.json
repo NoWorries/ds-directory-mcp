@@ -1,6 +1,6 @@
 {
   "$schema": "../design-system.schema.json#/$defs/system",
-  "generated_at": "2026-11-12T12:25:40+00:00",
+  "generated_at": "2026-11-15T16:36:12+00:00",
   "id": "government-of-canada-canada-ca-design-system",
   "organization": "Government of Canada",
   "design_system": "Canada.ca design system",
@@ -13,9 +13,9 @@
   "coverage_status": "partial",
   "hit_max_pages": false,
   "likely_spa": false,
-  "last_checked": "2026-10-15T10:01:54+00:00",
-  "last_modified": "Wed, 14 Oct 2026 23:20:35 GMT",
-  "sitemap_last_modified": "2026-10-14T13:49:14.808-04:00",
+  "last_checked": "2026-11-15T13:55:34+00:00",
+  "last_modified": "Thu, 29 Oct 2026 02:19:44 GMT",
+  "sitemap_last_modified": "2026-11-13T15:45:58.471-05:00",
   "resources": {
     "agent_instructions": [
       "https://www.canada.ca/llms.txt",
